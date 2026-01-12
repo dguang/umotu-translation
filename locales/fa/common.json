@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "۱۰ دلار در روز، برای همه در همه جا"
+  },
+  "navigation": {
+    "home": "خانه",
+    "wallet": "کیف پول",
+    "miniapps": "مینی‌اپ‌ها",
+    "back": "بازگشت",
+    "scan": "اسکن",
+    "settings": "تنظیمات",
+    "close": "بستن"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "انسان‌های تأییدشده",
+      "umtPrice": "قیمت UMT"
+    },
+    "quickActions": {
+      "news": "اخبار",
+      "vote": "حکومت‌داری",
+      "governance": "حکومت‌داری",
+      "learn": "یادگیری",
+      "network": "شبکه"
+    },
+    "setupProgress": {
+      "title": "پیشرفت راه‌اندازی",
+      "steps": {
+        "language": "زبان",
+        "wallet": "کیف پول",
+        "verifyHuman": "تأیید انسان",
+        "complete": "کامل"
+      },
+      "continue": "ادامه",
+      "changeChoice": "تغییر انتخاب",
+      "requiresLanguage": "ابتدا زبان را انتخاب کنید",
+      "requiresWallet": "ابتدا کیف پول را ایجاد کنید"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "پاداش‌های روزانه",
+      "totalEarned": "کل کسب‌شده",
+      "lastClaimed": "آخرین دریافت",
+      "never": "هرگز",
+      "configure": "پیکربندی",
+      "loading": "در حال بارگذاری پاداش‌ها...",
+      "noWallet": "بدون کیف پول",
+      "autoClaim": {
+        "label": "دریافت خودکار:",
+        "active": "فعال",
+        "setupNow": "اکنون تنظیم کنید",
+        "expired": "منقضی شده",
+        "tapToSetup": "برای فعال کردن پاداش روزانه خودکار ضربه بزنید"
+      }
+    },
+    "sentinel": {
+      "title": "درآمد Sentinel",
+      "manage": "مدیریت",
+      "loading": "در حال بارگذاری...",
+      "status": "وضعیت",
+      "statuses": {
+        "notBonded": "باند نشده",
+        "bonded": "باند شده",
+        "unbonding": "در حال آزادسازی"
+      },
+      "claimable": "قابل دریافت",
+      "accruing": "در حال انباشت",
+      "bonded": "باند شده"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "پاداش روزانه خودکار",
+      "description": "فعال کردن <bold>دریافت خودکار</bold> برای دریافت خودکار پاداش UBI روزانه ۱۰ دلاری — بدون نیاز به دریافت دستی!",
+      "benefits": {
+        "midnight": "در نیمه‌شب به وقت محلی شما دریافت می‌شود",
+        "lowerFees": "۸۰٪ کارمزد گاز کمتر (با کاربران دیگر دسته‌ای)",
+        "disable": "هرزمان در تنظیمات می‌توانید غیرفعال کنید"
+      },
+      "notice": "یک پیام مجوز یک‌بار امضا می‌کنید که اجازه می‌دهد رله به نمایندگی شما دریافت کند. هیچ کلید خصوصی به اشتراک گذاشته نمی‌شود.",
+      "maybeLater": "بعداً",
+      "enableNow": "اکنون فعال کنید"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "تنظیمات دریافت خودکار",
+      "description": "پاداش‌های روزانه را به طور خودکار دریافت کنید.",
+      "checking": "در حال بررسی وضعیت...",
+      "status": "وضعیت",
+      "enabled": "فعال",
+      "disabled": "غیرفعال",
+      "lastClaimed": "آخرین دریافت",
+      "neverClaimed": "هرگز",
+      "nextClaim": "دریافت بعدی",
+      "expiresAt": "منقضی می‌شود در",
+      "timezone": "منطقه زمانی",
+      "preferredHour": "ساعت ترجیحی",
+      "preferredHourHint": "انتخاب کنید که دریافت خودکار چه زمانی اجرا شود",
+      "enableButton": "فعال کردن دریافت خودکار",
+      "disableButton": "غیرفعال کردن دریافت خودکار",
+      "enabling": "در حال فعال‌سازی...",
+      "disabling": "در حال غیرفعال‌سازی...",
+      "enableSuccess": "دریافت خودکار فعال شد!",
+      "enableError": "فعال‌سازی ناموفق",
+      "disableSuccess": "دریافت خودکار غیرفعال شد",
+      "disableError": "غیرفعال‌سازی ناموفق",
+      "updateButton": "به‌روزرسانی تنظیمات",
+      "updating": "در حال به‌روزرسانی..."
+    },
+    "manual": {
+      "title": "دریافت دستی",
+      "description": "اگر زودتر به وجه نیاز دارید، پاداش بعدی موجود را همین حالا دریافت کنید. دریافت دستی از گس کیف پول شما استفاده می‌کند. دریافت خودکار ارزان‌تر است اگر صبر کنید. اگر کیف پول شما شارژ نیست، قبل از دریافت دستی، دریافت خودکار را فعال کنید یا گس نیتیو اضافه کنید.",
+      "dayLabel": "روز پاداش",
+      "claimButton": "اکنون دریافت کنید",
+      "claiming": "در حال دریافت...",
+      "success": "دریافت ارسال شد",
+      "successWithId": "دریافت ارسال شد (شناسه: {{id}})",
+      "error": "دریافت ناموفق",
+      "noProof": "مدرک پاداش هنوز منتشر نشده است. پس از فعال شدن عکس فوری امروز دوباره امتحان کنید.",
+      "unauthorized": "مجوز رله‌کننده ناموفق بود. لطفاً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "روزهای پاداش موجود: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "پوشش: {{start}} تا {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} بیشتر بعد از این دسته",
+      "batchSuccess": "{{count}} روز با موفقیت دریافت شد",
+      "claimingProgress": "در حال دریافت {{claimed}}/{{total}}...",
+      "claimAllButton": "دریافت همه {{count}} روز"
+    },
+    "timezone": {
+      "title": "انتخاب منطقه زمانی",
+      "search": "جستجوی منطقه زمانی...",
+      "current": "انتخاب فعلی",
+      "searchResults": "نتایج جستجو",
+      "noResults": "نتیجه‌ای یافت نشد",
+      "detected": "تشخیص داده شده",
+      "popular": "مناطق زمانی محبوب",
+      "regions": {
+        "Americas": "آمریکا",
+        "Europe": "اروپا",
+        "Asia": "آسیا",
+        "Africa": "آفریقا",
+        "Oceania": "اقیانوسیه"
+      }
+    },
+    "payout": {
+      "title": "ترجیح پرداخت",
+      "description": "ارز پرداخت ترجیحی خود را انتخاب کنید.",
+      "current": "فعلی",
+      "saved": "ذخیره شد",
+      "saveError": "خطا در ذخیره",
+      "showMore": "نمایش بیشتر ({{count}})",
+      "showLess": "نمایش کمتر",
+      "native": "توکن بومی",
+      "stablecoin": "استیبل‌کوین",
+      "popular": "محبوب",
+      "allCurrencies": "همه ارزها"
+    }
+  },
+  "wallet": {
+    "title": "کیف پول",
+    "testnetNotice": "توکن‌های تست‌نت ارزش واقعی ندارند",
+    "totalBalance": "کل موجودی",
+    "balance": "موجودی",
+    "address": "آدرس",
+    "copyAddress": "کپی آدرس",
+    "addressCopied": "آدرس کپی شد",
+    "receive": "دریافت",
+    "send": "ارسال",
+    "swap": "معاوضه",
+    "swapComingSoon": "معاوضه به زودی",
+    "history": "تاریخچه",
+    "tokens": "توکن‌ها",
+    "collectibles": "کلکسیون‌ها",
+    "noTokens": "هیچ توکنی پیکربندی نشده",
+    "nativeToken": "توکن بومی",
+    "loading": "در حال بارگذاری...",
+    "refreshing": "در حال تازه‌سازی...",
+    "balancesUpdated": "موجودی‌ها به‌روزرسانی شد",
+    "menu": {
+      "manageTokens": "مدیریت توکن‌ها",
+      "addressBook": "دفتر آدرس",
+      "walletSettings": "تنظیمات کیف پول",
+      "showBalances": "نمایش موجودی‌ها",
+      "hideBalances": "پنهان کردن موجودی‌ها",
+      "showZeroTokens": "نمایش توکن‌های صفر",
+      "hideZeroTokens": "پنهان کردن توکن‌های صفر",
+      "refresh": "تازه‌سازی"
+    },
+    "manageTokens": {
+      "title": "مدیریت توکن‌ها",
+      "info": "توکن‌های ERC-20 سفارشی اضافه کنید. توکن‌های سیستمی به طور پیش‌فرض شامل هستند.",
+      "addToken": "اضافه کردن توکن",
+      "adding": "در حال اضافه کردن...",
+      "contractAddress": "آدرس قرارداد توکن (0x...)",
+      "autoFetch": "نماد و اعشار به طور خودکار دریافت می‌شوند",
+      "customTokens": "توکن‌های سفارشی",
+      "noCustomTokens": "هنوز توکن سفارشی اضافه نشده.",
+      "addUsingForm": "با فرم بالا توکن اضافه کنید.",
+      "systemToken": "این توکن سیستمی است و قبلاً شامل شده.",
+      "fetchingMetadata": "در حال دریافت متادیتا توکن...",
+      "addedSuccess": "توکن با موفقیت اضافه شد",
+      "enterValidAddress": "آدرس توکن معتبر وارد کنید",
+      "save": "ذخیره"
+    },
+    "addressBook": {
+      "title": "دفتر آدرس",
+      "addContact": "اضافه کردن مخاطب",
+      "nameLabel": "نام یا برچسب",
+      "walletAddress": "آدرس کیف پول (0x...)",
+      "savedContacts": "مخاطبان ذخیره‌شده",
+      "noContacts": "هنوز مخاطبی ذخیره نشده.",
+      "addForQuickSending": "مخاطبان را برای ارسال سریع اضافه کنید.",
+      "enterValidAddress": "آدرس معتبر وارد کنید",
+      "addLabel": "اضافه کردن برچسب",
+      "save": "ذخیره"
+    },
+    "settings": {
+      "title": "تنظیمات کیف پول",
+      "export": {
+        "title": "صادر کردن کیف پول",
+        "description": "هرگز عبارت بازیابی یا کلید خصوصی خود را با کسی به اشتراک نگذارید. آن‌ها را به طور امن آفلاین ذخیره کنید.",
+        "recoveryPhrase": "عبارت بازیابی",
+        "recoveryPhraseNotAvailable": "عبارت بازیابی در دسترس نیست (با کلید خصوصی وارد شده)",
+        "privateKey": "کلید خصوصی",
+        "privateKeyWarning": "کلید خصوصی (محرمانه نگه دارید!)",
+        "showPhrase": "نمایش عبارت بازیابی",
+        "showKey": "نمایش کلید خصوصی",
+        "warning": "هرگز عبارت بازیابی یا کلید خصوصی خود را با کسی به اشتراک نگذارید.",
+        "copy": "کپی",
+        "copied": "کپی شد!",
+        "hide": "پنهان",
+        "clipboardWarning": "کلیپ‌بورد ممکن است توسط اپ‌های دیگر خوانده شود. در ۳۰ ثانیه پاک می‌شود.",
+        "verifyForKey": "برای نمایش کلید خصوصی تأیید کنید",
+        "verifyForSeed": "برای نمایش عبارت بازیابی تأیید کنید",
+        "verifyDescription": "رمز عبور یا پین خود را وارد کنید تا اطلاعات حساس کیف پول نمایش داده شود."
+      },
+      "import": {
+        "title": "وارد کردن کیف پول",
+        "description": "وارد کردن کیف پول فعلی را جایگزین می‌کند. ابتدا از کیف پول موجود پشتیبان بگیرید. پس از وارد کردن نیاز به تأیید مجدد PoH دارید.",
+        "byPhrase": "عبارت بازیابی",
+        "byPrivateKey": "کلید خصوصی",
+        "phrasePlaceholder": "عبارت ۱۲ یا ۲۴ کلمه‌ای وارد کنید…",
+        "keyPlaceholder": "کلید خصوصی 0x… وارد کنید",
+        "importButton": "وارد کردن کیف پول",
+        "importing": "در حال وارد کردن...",
+        "success": "کیف پول با موفقیت وارد شد!"
+      },
+      "dangerZone": {
+        "title": "منطقه خطر",
+        "description": "این اقدامات قابل بازگشت نیستند. مطمئن شوید پشتیبان گرفته‌اید.",
+        "forgetWallet": "فراموش کردن کیف پول",
+        "forgetDescription": "کیف پول را از این دستگاه حذف کنید. مطمئن شوید عبارت بازیابی پشتیبان گرفته شده.",
+        "confirmTitle": "فراموش کردن کیف پول؟",
+        "confirmMessage": "این کار کیف پول را از دستگاه حذف می‌کند. ابتدا پشتیبان بگیرید.",
+        "cancel": "لغو",
+        "confirm": "فراموش کردن کیف پول",
+        "walletForgotten": "کیف پول فراموش شد",
+        "unableToForget": "نمی‌توان کیف پول را فراموش کرد",
+        "resetWallet": "بازنشانی کیف پول",
+        "resetDescription": "تمام داده‌های کیف پول را پاک کنید و از نو شروع کنید."
+      },
+      "authPrompt": "برای نمایش کلید خصوصی احراز هویت کنید"
+    }
+  },
+  "reset": {
+    "title": "بازنشانی کیف پول",
+    "dangerTitle": "این اقدام قابل بازگشت نیست!",
+    "warning1": "بازنشانی کیف پول به طور دائم حذف می‌کند:",
+    "bullet1": "کیف پول و کلیدهای خصوصی شما",
+    "bullet2": "عبارت بازیابی شما",
+    "bullet3": "تمام تنظیمات و ترجیحات اپ",
+    "bullet4": "تاریخچه تراکنش‌ها",
+    "recoveryNote": "اگر عبارت بازیابی ۱۲ کلمه‌ای دارید، می‌توانید پس از بازنشانی کیف پول را بازیابی کنید.",
+    "continueButton": "متوجه شدم، ادامه",
+    "confirmTitle": "تأیید بازنشانی",
+    "confirmDescription": "برای تأیید حذف تمام داده‌های کیف پول، «RESET» را تایپ کنید.",
+    "placeholder": "RESET را تایپ کنید",
+    "typeMismatch": "لطفاً RESET را تایپ کنید",
+    "resetButton": "بازنشانی دائمی کیف پول",
+    "resettingTitle": "در حال بازنشانی...",
+    "resettingDescription": "در حال پاک کردن تمام داده‌های کیف پول. لطفاً صبر کنید...",
+    "completeTitle": "بازنشانی کامل شد",
+    "completeDescription": "کیف پول شما بازنشانی شد. اکنون می‌توانید کیف پول جدید ایجاد یا موجود را وارد کنید.",
+    "startFresh": "از نو شروع کنید",
+    "error": "بازنشانی کیف پول ناموفق. دوباره امتحان کنید."
+  },
+  "export": {
+    "verifyTitle": "تأیید هویت",
+    "verifyDescription": "رمز عبور خود را برای صادر کردن کیف پول وارد کنید.",
+    "verify": "تأیید",
+    "verificationFailed": "تأیید ناموفق",
+    "passphraseTitle": "تنظیم عبارت عبور صادراتی",
+    "passphraseDescription": "یک عبارت عبور قوی برای رمزنگاری پشتیبان انتخاب کنید. برای وارد کردن پشتیبان بعداً به آن نیاز دارید.",
+    "enterPassphrase": "عبارت عبور وارد کنید",
+    "passphraseTooWeak": "عبارت عبور خیلی ضعیف است. حداقل ۸ کاراکتر استفاده کنید.",
+    "includeSeed": "شامل عبارت بازیابی",
+    "includeSeedDescription": "برای پشتیبان کامل توصیه می‌شود",
+    "confirmTitle": "تأیید عبارت عبور",
+    "confirmDescription": "برای تأیید، عبارت عبور را دوباره وارد کنید.",
+    "confirmPassphrase": "تأیید عبارت عبور",
+    "passphraseMismatch": "عبارت‌های عبور مطابقت ندارند",
+    "warning": "این پشتیبان را امن ذخیره کنید. هر کسی با دسترسی به فایل و عبارت عبور می‌تواند به کیف پول دسترسی داشته باشد.",
+    "exportNow": "صادر کردن کیف پول",
+    "exportingTitle": "در حال صادر کردن...",
+    "exportingDescription": "در حال رمزنگاری و آماده‌سازی پشتیبان کیف پول...",
+    "successTitle": "صادر کردن کامل شد",
+    "successDescription": "پشتیبان رمزنگاری‌شده کیف پول ایجاد شد. آن را امن ذخیره کنید.",
+    "rememberPassphrase": "عبارت عبور صادراتی را به خاطر بسپارید - برای وارد کردن این پشتیبان نیاز است.",
+    "errorTitle": "صادر کردن ناموفق",
+    "failed": "صادر کردن ناموفق. دوباره امتحان کنید.",
+    "tryAgain": "دوباره امتحان کنید",
+    "exportKeystore": "صادر کردن پشتیبان رمزنگاری‌شده",
+    "exportKeystoreDesc": "ذخیره فایل keystore رمزنگاری‌شده"
+  },
+  "security": {
+    "title": "امنیت کیف پول",
+    "subtitle": "رمز عبور یا پین برای حفاظت از کیف پول تنظیم کنید",
+    "checkingDevice": "در حال بررسی امنیت دستگاه...",
+    "passwordOption": "رمز عبور",
+    "passwordDesc": "۸+ کاراکتر، حروف و اعداد",
+    "pinOption": "پین ۶ رقمی",
+    "pinDesc": "سریع و آسان برای به خاطر سپردن",
+    "enterPin": "پین ۶ رقمی وارد کنید",
+    "confirmPin": "پین را تأیید کنید",
+    "enterPassword": "رمز عبور وارد کنید",
+    "confirmPassword": "رمز عبور را تأیید کنید",
+    "enableBiometrics": "{{type}} را فعال کنید؟",
+    "biometricsDesc": "برای باز کردن سریع از {{type}} استفاده کنید. بعداً در تنظیمات می‌توانید تغییر دهید.",
+    "enableBiometricsButton": "{{type}} را فعال کنید",
+    "enableBiometricsPrompt": "برای فعال کردن باز کردن بیومتریک احراز هویت کنید",
+    "skipBiometrics": "فعلاً رد شوید",
+    "setupComplete": "راه‌اندازی کامل شد!",
+    "walletSecured": "کیف پول شما اکنون امن است!",
+    "continue": "ادامه",
+    "passwordTooWeak": "رمز عبور خیلی ضعیف است. لطفاً پیشنهادها را دنبال کنید.",
+    "pinMismatch": "پین‌ها مطابقت ندارند",
+    "passwordMismatch": "رمزهای عبور مطابقت ندارند",
+    "setupError": "راه‌اندازی ناموفق. دوباره امتحان کنید.",
+    "passwordTitle": "رمز عبور",
+    "passwordDescription": "۸+ کاراکتر، امنیت قوی‌تر",
+    "pinTitle": "پین ۶ رقمی",
+    "pinDescription": "دسترسی سریع، آسان برای به خاطر سپردن"
+  },
+  "lock": {
+    "title": "باز کردن Umotu",
+    "lockedOut": "قفل شده",
+    "tooManyAttempts": "تلاش‌های زیاد. دوباره در {{time}} امتحان کنید.",
+    "attemptsRemaining": "{{count}} تلاش باقی‌مانده",
+    "enterPassword": "رمز عبور وارد کنید",
+    "unlock": "باز کردن",
+    "wrongPin": "پین اشتباه",
+    "wrongPassword": "رمز عبور اشتباه",
+    "verificationError": "تأیید ناموفق",
+    "biometricsPrompt": "کیف پول خود را باز کنید",
+    "unlockWithFaceId": "با Face ID باز کنید؟",
+    "unlockWithFingerprint": "با اثر انگشت باز کنید؟",
+    "forgotPassword": "رمز عبور فراموش شده؟"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "دستگاه پشتیبانی‌نشده",
+    "emulatorMessage": "این اپ به دلایل امنیتی روی امولاتورها اجرا نمی‌شود.",
+    "rootedTitle": "هشدار امنیتی",
+    "exitApp": "خروج",
+    "continueAnyway": "به هر حال ادامه"
+  },
+  "settingsSecurity": {
+    "title": "امنیت",
+    "autoLock": "قفل خودکار",
+    "autoLockDesc": "پس از عدم فعالیت کیف پول را قفل کنید",
+    "faceId": "Face ID",
+    "fingerprint": "اثر انگشت",
+    "biometricsDesc": "باز کردن سریع با بیومتریک",
+    "changePin": "تغییر پین",
+    "changePassword": "تغییر رمز عبور",
+    "changeDesc": "اعتبارنامه امنیتی خود را به‌روزرسانی کنید",
+    "enableBiometrics": "فعال کردن باز کردن بیومتریک",
+    "enterCurrent": "فعلی {{type}} را وارد کنید",
+    "enterNew": "جدید {{type}} را وارد کنید",
+    "confirmNew": "جدید {{type}} را تأیید کنید",
+    "currentPassword": "رمز عبور فعلی",
+    "newPassword": "رمز عبور جدید",
+    "confirmNewPassword": "رمز عبور جدید را تأیید کنید",
+    "changeNow": "اکنون تغییر دهید",
+    "success": "موفقیت",
+    "pinChanged": "پین با موفقیت تغییر کرد",
+    "passwordChanged": "رمز عبور با موفقیت تغییر کرد",
+    "changeFailed": "تغییر اعتبارنامه ناموفق",
+    "autoLockOptions": {
+      "immediately": "فوری",
+      "after1min": "پس از ۱ دقیقه",
+      "after5min": "پس از ۵ دقیقه",
+      "after15min": "پس از ۱۵ دقیقه",
+      "after1hour": "پس از ۱ ساعت",
+      "never": "هرگز"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "لطفاً صبر کنید",
+    "cooldownMessage": "برای امنیت، می‌توانید کلیدها را دوباره در {{time}} نمایش دهید.",
+    "cooldownReason": "این کار مانع دسترسی سریع اپ‌های مخرب به کلیدها می‌شود."
+  },
+  "passwordVerify": {
+    "title": "تأیید هویت",
+    "description": "رمز عبور یا پین خود را برای نمایش اطلاعات حساس کیف پول وارد کنید",
+    "verify": "تأیید"
+  },
+  "passwordValidation": {
+    "veryWeak": "خیلی ضعیف",
+    "weak": "ضعیف",
+    "fair": "متوسط",
+    "good": "خوب",
+    "strong": "قوی",
+    "tooShort": "رمز عبور باید حداقل ۸ کاراکتر باشد",
+    "commonPassword": "این رمز عبور رایج است",
+    "lengthSuggestion": "برای امنیت بهتر حداقل ۱۲ کاراکتر استفاده کنید",
+    "mixedCaseSuggestion": "حروف بزرگ و کوچک مخلوط کنید",
+    "numberSuggestion": "اعداد اضافه کنید",
+    "specialCharSuggestion": "کاراکترهای ویژه (!@#$%) اضافه کنید"
+  },
+  "forgot": {
+    "title": "بازنشانی اعتبارنامه",
+    "warning": "برای بازنشانی رمز عبور یا پین، نیاز به وارد کردن عبارت بازیابی کیف پول دارید. این اثبات مالکیت است.",
+    "warningText": "هرگز عبارت بازیابی را با کسی به اشتراک نگذارید.",
+    "continue": "متوجه شدم، ادامه",
+    "enterSeed": "عبارت بازیابی وارد کنید",
+    "seedDescription": "عبارت بازیابی ۱۲ یا ۲۴ کلمه‌ای را وارد کنید. کلمات را با فضای جدا کنید.",
+    "seedPlaceholder": "عبارت بازیابی وارد کنید...",
+    "verifySeed": "تأیید عبارت بازیابی",
+    "invalidSeed": "لطفاً عبارت بازیابی معتبر ۱۲ یا ۲۴ کلمه‌ای وارد کنید",
+    "chooseMethod": "روش امنیتی انتخاب کنید",
+    "methodDescription": "چگونه می‌خواهید کیف پول را امن کنید؟",
+    "newPassword": "ایجاد رمز عبور جدید",
+    "newPin": "ایجاد پین جدید",
+    "newPasswordDesc": "رمز عبور قوی انتخاب کنید (۸+ کاراکتر)",
+    "newPinDesc": "پین ۶ رقمی وارد کنید",
+    "confirmPassword": "تأیید رمز عبور",
+    "confirmPin": "تأیید پین",
+    "confirmPasswordDesc": "رمز عبور را دوباره وارد کنید",
+    "confirmPinDesc": "پین را دوباره وارد کنید",
+    "resetNow": "اکنون بازنشانی",
+    "complete": "بازنشانی کامل شد",
+    "completeDescription": "اعتبارنامه شما بازنشانی شد. اکنون می‌توانید با رمز عبور یا پین جدید کیف پول را باز کنید.",
+    "unlockNow": "باز کردن کیف پول",
+    "passwordTooWeak": "رمز عبور خیلی ضعیف است. رمز قوی‌تر انتخاب کنید.",
+    "passwordMismatch": "رمزهای عبور مطابقت ندارند",
+    "pinMismatch": "پین‌ها مطابقت ندارند",
+    "resetFailed": "بازنشانی اعتبارنامه ناموفق. عبارت بازیابی را بررسی کنید.",
+    "resetError": "خطایی رخ داد. دوباره امتحان کنید."
+  },
+  "send": {
+    "title": "ارسال",
+    "selectToken": "انتخاب توکن",
+    "selectTokenInfo": "توکن برای ارسال انتخاب کنید. فقط توکن‌های با موجودی نمایش داده می‌شوند.",
+    "noTokensWithBalance": "هیچ توکنی با موجودی",
+    "addTokensFirst": "ابتدا توکن به کیف پول اضافه کنید",
+    "enterAmount": "مقدار وارد کنید",
+    "enterRecipient": "گیرنده وارد کنید",
+    "review": "بررسی",
+    "amount": "مقدار",
+    "recipient": "گیرنده",
+    "recipientPlaceholder": "آدرس کیف پول 0x...",
+    "networkFee": "کارمزد شبکه",
+    "gasToken": "پرداخت گاز با",
+    "payingWith": "پرداخت با",
+    "payGasWith": "پرداخت گاز با",
+    "nativeGas": "UMT (بومی)",
+    "stableGas": "گاز استیبل",
+    "selectStable": "استیبل انتخاب کنید",
+    "max": "حداکثر",
+    "next": "بعدی",
+    "continue": "ادامه",
+    "confirm": "تأیید ارسال",
+    "confirmSend": "تأیید ارسال",
+    "sending": "در حال ارسال...",
+    "failed": "تراکنش ناموفق",
+    "viewInExplorer": "در اکسپلورر ببینید",
+    "done": "انجام شد",
+    "cancel": "لغو",
+    "send": "ارسال",
+    "balance": "موجودی",
+    "available": "در دسترس",
+    "to": "به",
+    "network": "شبکه",
+    "step": "گام",
+    "estimating": "در حال تخمین...",
+    "umtNative": "UMT (بومی)",
+    "txSpeed": "سرعت تراکنش",
+    "transactionSpeed": "سرعت تراکنش",
+    "speed": {
+      "slow": "کند",
+      "normal": "عادی",
+      "fast": "سریع"
+    },
+    "gasNotice": {
+      "stablecoin": "گاز با استیبل‌کوین پرداخت می‌شود.",
+      "reserved": "{{amount}} {{symbol}} برای گاز رزرو کردیم؛ حداکثر می‌توانید {{max}} ارسال کنید."
+    },
+    "errors": {
+      "invalidAddress": "آدرس گیرنده نامعتبر",
+      "invalidAmount": "مقدار معتبر وارد کنید",
+      "insufficientBalance": "موجودی ناکافی",
+      "insufficientGas": "موجودی ناکافی برای گاز",
+      "insufficientGasWithHint": "موجودی ناکافی برای گاز. UMT یا استیبل‌کوین پشتیبانی‌شده اضافه کنید.",
+      "notEnoughForGas": "موجودی کافی برای پوشش گاز نیست",
+      "noStableGas": "UMT کافی برای گاز نیست و هیچ استیبل پشتیبانی‌شده نمی‌تواند پوشش دهد.",
+      "permitFailed": "مجوز یا تأیید برای توکن گاز ناموفق",
+      "relayNotConfigured": "رله گاز استیبل پیکربندی نشده",
+      "transactionReverted": "تراکنش روی زنجیره برگشت خورد.",
+      "approvalNeeded": "توکن گاز نیاز به تأیید دارد اما UMT برای تأیید موجود نیست. مقدار کمی UMT اضافه کنید یا از توکن پشتیبانی‌شده مجوز استفاده کنید."
+    },
+    "addressBook": {
+      "title": "دفترچه آدرس",
+      "addNew": "افزودن جدید",
+      "noContacts": "آدرس ذخیره‌شده‌ای نیست",
+      "saveForQuickAccess": "آدرس‌ها را برای دسترسی سریع ذخیره کنید",
+      "editContact": "ویرایش مخاطب",
+      "deleteContact": "حذف مخاطب",
+      "addressNotSaved": "آدرس ذخیره نشده",
+      "addLabel": "افزودن برچسب",
+      "enterValidAddress": "ابتدا آدرس معتبر وارد کنید",
+      "saved": "ذخیره شد",
+      "save": "ذخیره"
+    },
+    "success": {
+      "title": "تراکنش ارسال شد!",
+      "hash": "هش",
+      "viewInExplorer": "در اکسپلورر ببینید",
+      "close": "بستن"
+    },
+    "batch": {
+      "mode": "حالت دسته‌ای",
+      "singleMode": "گیرنده تکی",
+      "addRecipient": "افزودن گیرندگان",
+      "noRecipients": "هنوز گیرنده‌ای اضافه نشده",
+      "addFromTagOrBook": "افزودن از برچسب یا دفترچه",
+      "invalidAddress": "آدرس نامعتبر: {{address}}",
+      "invalidAmount": "مبلغ نامعتبر برای {{recipient}}",
+      "totalExceedsBalance": "مجموع از موجودی بیشتر است",
+      "sendingTo": "ارسال به {{count}} گیرنده",
+      "sendingTo_plural": "ارسال به {{count}} گیرنده",
+      "recipients": "گیرندگان",
+      "addresses": "{{count}} آدرس",
+      "addresses_plural": "{{count}} آدرس",
+      "addByTag": "افزودن با برچسب",
+      "noTags": "هنوز برچسبی نیست",
+      "createFirstTag": "اولین برچسب را در دفترچه آدرس بسازید",
+      "addFromTag": "افزودن از برچسب",
+      "selectTag": "انتخاب برچسب",
+      "remove": "حذف",
+      "sendAll": "ارسال همه ({{count}})",
+      "batchSend": "ارسال دسته‌ای",
+      "badge": "دسته",
+      "successFail": "{{success}} موفق، {{fail}} ناموفق",
+      "successful": "موفق",
+      "sentStatus": "ارسال شد",
+      "failedStatus": "ناموفق",
+      "details": "جزئیات انتقال دسته‌ای",
+      "total": "مجموع",
+      "tagPicker": {
+        "title": "انتخاب برچسب",
+        "noTags": "برچسبی موجود نیست",
+        "createHint": "ابتدا برچسب‌ها را به مخاطبین در دفترچه اضافه کنید"
+      },
+      "tags": {
+        "manage": "مدیریت برچسب‌ها",
+        "add": "افزودن برچسب",
+        "remove": "حذف برچسب",
+        "create": "ساخت برچسب",
+        "newTag": "نام برچسب جدید",
+        "addToContact": "افزودن برچسب به مخاطب"
+      }
+    }
+  },
+  "receive": {
+    "title": "دریافت",
+    "yourAddress": "آدرس کیف پول شما",
+    "scanQR": "QR کد را برای دریافت اسکن کنید",
+    "copyAddress": "کپی آدرس",
+    "share": "اشتراک‌گذاری"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "پرداخت",
+      "myQr": "QR من"
+    },
+    "pay": {
+      "title": "پرداخت",
+      "description": "QR کد دوست خود را برای پرداخت مستقیم به کیف پولش اسکن کنید",
+      "allowCamera": "اجازه دوربین",
+      "requesting": "در حال درخواست...",
+      "openSettings": "باز کردن تنظیمات",
+      "sendTo": "ارسال به",
+      "amount": "مقدار",
+      "rescan": "اسکن مجدد",
+      "continue": "ادامه"
+    },
+    "receive": {
+      "title": "دریافت",
+      "description": "این QR کد را برای ارسال پرداخت به این آدرس اسکن کنید",
+      "tapToCopy": "برای کپی آدرس ضربه بزنید",
+      "copied": "در کلیپ‌بورد کپی شد!"
+    }
+  },
+  "history": {
+    "title": "تاریخچه تراکنش",
+    "sent": "ارسال‌شده",
+    "received": "دریافت‌شده",
+    "token": "توکن",
+    "external": "خارجی",
+    "to": "به: ",
+    "from": "از: ",
+    "viewInExplorer": "در اکسپلورر ببینید",
+    "empty": {
+      "title": "هنوز تراکنشی ندارید",
+      "description": "تاریخچه تراکنش پس از ارسال یا دریافت توکن اینجا ظاهر می‌شود."
+    },
+    "status": {
+      "confirmed": "تأییدشده",
+      "pending": "در انتظار",
+      "failed": "ناموفق"
+    },
+    "details": {
+      "title": "جزئیات تراکنش",
+      "status": "وضعیت",
+      "type": "نوع",
+      "to": "به",
+      "from": "از",
+      "token": "توکن",
+      "block": "بلاک",
+      "gasCost": "هزینه گاز",
+      "hash": "هش",
+      "source": "منبع",
+      "balanceDetected": "تغییر موجودی تشخیص داده شد",
+      "inferredNote": "این تراکنش از تغییر موجودی تشخیص داده شد. جزئیات دقیق روی زنجیره در دسترس نیست."
+    },
+    "time": {
+      "justNow": "همین حالا",
+      "minsAgo": "{{count}} دقیقه پیش",
+      "hoursAgo": "{{count}} ساعت پیش",
+      "daysAgo": "{{count}} روز پیش"
+    }
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "account": {
+      "title": "حساب و ظاهر",
+      "walletAddress": "آدرس کیف پول",
+      "copy": "کپی",
+      "copied": "کپی شد"
+    },
+    "theme": {
+      "title": "تم",
+      "light": "روشن",
+      "dark": "تیره",
+      "system": "سیستم"
+    },
+    "language": {
+      "title": "زبان",
+      "select": "انتخاب زبان",
+      "current": "فعلی"
+    },
+    "display": {
+      "title": "نمایش",
+      "description": "ظاهر صفحه خانه را سفارشی کنید.",
+      "showSentinelCard": "نمایش کارت درآمد Sentinel",
+      "showSentinelCardDesc": "درآمد را در صفحه خانه نمایش دهید",
+      "showDailyRewardsCard": "نمایش کارت پاداش روزانه",
+      "on": "روشن",
+      "off": "خاموش",
+      "sentinelSettings": "تنظیمات Sentinel",
+      "sentinelSettingsDesc": "مدیریت باند، پاداش و دریافت خودکار"
+    },
+    "sentinelDisplay": {
+      "title": "نمایش Sentinel",
+      "showSentinelCard": "نمایش کارت Sentinel",
+      "showSentinelCardDesc": "کارت درآمد sentinel را در صفحه خانه نمایش دهید",
+      "sentinelSettings": "تنظیمات Sentinel",
+      "sentinelSettingsDesc": "پیکربندی نود sentinel و پاداش‌ها"
+    },
+    "verification": {
+      "title": "تأیید",
+      "description": "با Inlyf انسانیت خود را تأیید کنید تا پاداش روزانه باز شود. بررسی زنده سریع؛ دوره‌ای تکرار کنید.",
+      "open": "شروع تأیید",
+      "refresh": "تازه‌سازی تأیید",
+      "status": "وضعیت",
+      "verified": "تأییدشده",
+      "notVerified": "تأییدنشده",
+      "expiresOn": "منقضی می‌شود در",
+      "daysRemaining": "روز باقی‌مانده",
+      "upToDate": "تأیید به‌روز است",
+      "refreshAvailableIn": "تازه‌سازی در {{days}} روز دیگر"
+    },
+    "network": {
+      "title": "شبکه",
+      "description": "اتصال شبکه بلاکچین را پیکربندی کنید.",
+      "testnet": "تست‌نت",
+      "mainnet": "مین‌نت (به زودی)",
+      "rpcEndpoint": "اندپوینت RPC",
+      "pingRpc": "پینگ RPC",
+      "testing": "در حال تست...",
+      "rpcOk": "RPC OK",
+      "rpcError": "خطای RPC",
+      "save": "ذخیره",
+      "saved": "تنظیمات ذخیره شد",
+      "connectionStatus": "وضعیت اتصال",
+      "connected": "متصل",
+      "disconnected": "قطع"
+    },
+    "cache": {
+      "title": "کش",
+      "description": "کش را پاک کنید تا اطلاعات توکن و قرارداد تازه شود.",
+      "clearCache": "پاک کردن کش",
+      "cacheCleared": "کش پاک شد! برای اعمال ری‌استارت کنید."
+    },
+    "chainGuardian": {
+      "title": "نگهبان زنجیره",
+      "description": "با آنلاین نگه داشتن گوشی به امنیت بلاکچین کمک کنید. برای حفظ صلاحیت دریافت پاداش، روزانه حداقل یک کار نمونه‌برداری را تکمیل کنید.",
+      "wifiOnly": "فقط WiFi",
+      "wifiOnlyHint": "صرفه‌جویی در دیتا موبایل",
+      "minBattery": "حداقل باتری",
+      "minBatteryHint": "زیر این سطح اجرا نمی‌شود",
+      "background": "اجرا در پس‌زمینه",
+      "backgroundHint": "حتی وقتی اپ بسته است کار می‌کند",
+      "lastSample": "آخرین فعالیت",
+      "noSamples": "هنوز فعالیتی. اپ را باز نگه دارید تا شروع شود.",
+      "staleWarning": "امروز دیده نشده — اپ را باز کنید تا ادامه یابد.",
+      "androidBatteryWarning": "بهینه‌سازی باتری ممکن است مانع نمونه‌برداری شود",
+      "androidBatteryHint": "به تنظیمات → اپ‌ها → Umotu → باتری → «نامحدود» انتخاب کنید.",
+      "openSettings": "برای باز کردن تنظیمات ضربه بزنید",
+      "tip": "«اجرا در پس‌زمینه» را برای بهترین پتانسیل درآمد فعال کنید.",
+      "runNow": "اکنون اجرا",
+      "running": "در حال اجرا…",
+      "lastError": "آخرین خطا",
+      "status": {
+        "active": "فعال",
+        "inactive": "غیرفعال",
+        "paused": "موقتاً متوقف"
+      }
+    },
+    "permissions": {
+      "title": "مجوزها",
+      "description": "مینی‌اپ‌های متصل و مجوزهایشان را مدیریت کنید.",
+      "openMiniApps": "باز کردن مینی‌اپ‌ها",
+      "manageConnections": "مدیریت",
+      "noConnections": "بدون اتصال",
+      "revokeAccess": "لغو دسترسی",
+      "lastUsed": "آخرین استفاده"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "به Umotu خوش آمدید",
+      "subtitle": "۱۰ دلار در روز، برای همه در همه جا",
+      "getStarted": "شروع کنید"
+    },
+    "language": {
+      "title": "زبان خود را انتخاب کنید",
+      "continue": "ادامه"
+    },
+    "wallet": {
+      "title": "کیف پول شما",
+      "createNew": "ایجاد کیف پول جدید",
+      "importExisting": "وارد کردن موجود",
+      "creating": "در حال ایجاد کیف پول..."
+    },
+    "verify": {
+      "title": "تأیید انسان بودن",
+      "description": "برای دریافت پاداش روزانه، منحصربه‌فرد بودن خود را تأیید کنید.",
+      "continue": "ادامه"
+    }
+  },
+  "poh": {
+    "subtitle": "باز کردن پاداش روزانه",
+    "description": "با Inlyf زنده بودن را تأیید کنید تا پاداش باز شود. هیچ بیومتریکی روی زنجیره ذخیره نمی‌شود؛ فقط اعتبار کوتاه‌مدت صادر می‌شود.",
+    "howItWorks": "چگونه کار می‌کند",
+    "howItWorksDesc": "بررسی زنده کوتاه (اسکن صورت) تأیید می‌کند انسان هستید. اعتبار ~۹۰ روزه و هرزمان قابل تازه‌سازی.",
+    "adultQuestion": "آیا بزرگسال (۱۸+) هستید؟",
+    "yesAdult": "بله، ۱۸+",
+    "noMinor": "خیر / خردسال",
+    "selectAge": "لطفاً گزینه انتخاب کنید",
+    "verifying": "در حال تأیید...",
+    "startVerification": "شروع تأیید",
+    "skipForNow": "فعلاً رد شوید",
+    "status": {
+      "notVerified": "هنوز تأیید نشده.",
+      "notVerifiedDetail": "تأیید را شروع کنید تا پاداش باز شود.",
+      "unavailable": "وضعیت در دسترس نیست.",
+      "verified": "شما تأیید شده‌اید.",
+      "validFor": "معتبر برای ~{{days}} روز",
+      "validFor_plural": "معتبر برای ~{{days}} روز",
+      "expired": "تأیید منقضی یا یافت نشد.",
+      "expiredDetail": "بررسی زنده را دوباره اجرا کنید تا اعتبار تازه شود."
+    }
+  },
+  "sentinelSettings": {
+    "header": "به استخر Sentinel بپیوندید تا به نهایی‌سازی بلاک‌ها کمک کنید. حداقل مقدار باند کنید، دستگاه را آنلاین نگه دارید و پاداش بگیرید.",
+    "loading": "در حال بارگذاری داده sentinel...",
+    "unavailable": "ماژول Sentinel در دسترس نیست",
+    "yourStatus": "وضعیت شما",
+    "wallet": "کیف پول",
+    "bondedAmount": "مقدار باند شده",
+    "minimumBond": "حداقل باند",
+    "status": {
+      "notBonded": "باند نشده",
+      "bonded": "باند شده",
+      "unbonding": "در حال آزادسازی (در دسترس {{date}})"
+    },
+    "rewards": {
+      "title": "پاداش‌ها",
+      "claimableNow": "اکنون قابل دریافت",
+      "accruing": "در حال انباشت",
+      "totalClaimed": "کل دریافت‌شده",
+      "claiming": "در حال دریافت...",
+      "claimRewards": "دریافت پاداش‌ها"
+    },
+    "bond": {
+      "createTitle": "ایجاد باند",
+      "topUpTitle": "افزایش باند",
+      "createDescription": "UMT باند کنید تا به کمیته sentinel بپیوندید و درآمد کسب کنید.",
+      "topUpDescription": "سهم خود را افزایش دهید تا سهم بیشتری از پاداش بگیرید.",
+      "amountLabel": "مقدار (UMT)",
+      "processing": "در حال پردازش...",
+      "bond": "باند",
+      "topUp": "افزایش",
+      "tx": "تراکنش"
+    },
+    "autoClaim": {
+      "title": "دریافت خودکار",
+      "description": "اجازه دهید رله پاداش‌های sentinel را هنگام انباشت خودکار دریافت کند.",
+      "checking": "در حال بررسی...",
+      "enabled": "فعال",
+      "disabled": "غیرفعال",
+      "expires": "منقضی می‌شود",
+      "processing": "در حال پردازش...",
+      "enable": "فعال کردن دریافت خودکار",
+      "disable": "غیرفعال کردن دریافت خودکار"
+    },
+    "activity": {
+      "title": "فعالیت اخیر",
+      "claims": "دریافت‌ها",
+      "slashes": "جریمه‌ها",
+      "noClaims": "بدون دریافت در {{blocks}}k بلاک اخیر.",
+      "noSlashes": "بدون جریمه در پنجره اخیر.",
+      "unknown": "نامشخص"
+    },
+    "errors": {
+      "configureEnv": "متغیرهای محیطی RPC + قرارداد sentinel را پیکربندی کنید.",
+      "noWallet": "کیف پول ایجاد یا وارد کنید تا به کمیته sentinel بپیوندید.",
+      "loadFailed": "بارگذاری داده sentinel ناموفق."
+    },
+    "toast": {
+      "rewardsClaimed": "پاداش‌های sentinel دریافت شد.",
+      "noRewards": "پاداش در انتظاری برای دریافت نیست.",
+      "claimFailed": "دریافت ناموفق.",
+      "autoClaimEnabled": "دریافت خودکار sentinel فعال شد",
+      "autoClaimDisabled": "دریافت خودکار sentinel غیرفعال شد",
+      "autoClaimFailed": "تغییر دریافت خودکار ناموفق",
+      "configureBondAddress": "آدرس باند sentinel را پیکربندی کنید",
+      "rpcNotSet": "RPC تنظیم نشده",
+      "minBondUnavailable": "حداقل باند در دسترس نیست",
+      "enterBondAmount": "مقدار باند وارد کنید",
+      "minBondRequired": "باند اولیه باید حداقل {{amount}} UMT باشد",
+      "topUpGreaterThanZero": "مقدار افزایش باید بیشتر از ۰ باشد",
+      "insufficientBalance": "موجودی ناکافی برای باند + گاز",
+      "bondSubmitted": "تراکنش باند ارسال شد",
+      "topUpSubmitted": "تراکنش افزایش ارسال شد",
+      "bondConfirmed": "باند تأیید شد",
+      "topUpConfirmed": "افزایش تأیید شد",
+      "bondReverted": "باند روی زنجیره برگشت خورد",
+      "bondFailed": "باند ناموفق"
+    }
+  },
+  "miniapps": {
+    "title": "مینی‌اپ‌ها",
+    "subtitle": "اپ‌های ساخته‌شده روی Umotu را کاوش کنید",
+    "explore": "اپ‌های ساخته‌شده روی Umotu را کاوش کنید",
+    "noApps": "هنوز اپی در دسترس نیست",
+    "browseByCategory": "بر اساس دسته مرور کنید",
+    "appsCount": "{{count}} اپ",
+    "featured": "ویژه",
+    "comingSoon": "به زودی",
+    "liveApps": "اپ‌های زنده",
+    "available": "در دسترس",
+    "pohDescription": "با Inlyf انسانیت خود را تأیید کنید تا پاداش روزانه باز شود.",
+    "vision": {
+      "title": "چشم‌انداز ما",
+      "tagline": "۱۰ دلار در روز، برای همه در همه جا",
+      "description": "Umotu زیرساختی می‌سازد برای جهانی که همه بتوانند در اقتصاد جهانی مشارکت کنند—صرف‌نظر از محل زندگی یا بانک.",
+      "readMore": "خواندن چشم‌انداز کامل",
+      "pillars": {
+        "title": "سه اصل اصلی",
+        "ubi": {
+          "title": "۱۰ دلار در روز، برای همه در همه جا",
+          "description": "درآمد پایه جهانی به عنوان پاداش کسب‌شده برای امنیت شبکه. هر کسی با گوشی می‌تواند مشارکت کند و کسب درآمد."
+        },
+        "capital": {
+          "title": "سرمایه آزادانه حرکت می‌کند",
+          "description": "اصطکاک نزدیک به صفر برای پرداخت و انتقال—مرزی یا محلی. کسب‌وکارها ~۰.۱٪ برای هزینه پلتفرم پرداخت می‌کنند، افراد هیچ."
+        },
+        "sovereignty": {
+          "title": "احترام به حاکمیت پولی",
+          "description": "ما ارزهای فیات را جایگزین نمی‌کنیم—آن‌ها را بهتر می‌کنیم. بانک‌ها استیبل‌کوین‌های متصل به ارز محلی صادر می‌کنند. سیاست پولی با دسترسی گسترده‌تر و اصطکاک کمتر مؤثرتر می‌شود."
+        }
+      },
+      "notReplacing": "Umotu با بانک‌های مرکزی رقابت نمی‌کند. ما زیرساخت بهتر برای ارزهای فیات می‌سازیم: اصطکاک کمتر، دسترسی جهانی، کارایی و تاب‌آوری بازار بهتر."
+    },
+    "building": {
+      "title": "در حال ساخت اکوسیستم هستیم",
+      "description": "این اپ‌ها نشان‌دهنده امکانات روی Umotu هستند. برخی آماده، برخی به زودی. توسعه‌دهندگان جهانی دعوت به ساخت و راه‌اندازی روی پلتفرم ما هستند.",
+      "developerDocs": "مستندات توسعه‌دهنده"
+    },
+    "categories": {
+      "payments": {
+        "name": "پرداخت و مالی",
+        "apps": {
+          "sendMoney": {
+            "name": "ارسال پول",
+            "description": "UMT یا استیبل‌کوین را فوری به هر کسی در جهان ارسال کنید—بدون بانک.",
+            "example": "۲۰ دلار به خانواده در خارج در ثانیه ارسال کنید، نه روزها. بدون هزینه پنهان."
+          },
+          "billPay": {
+            "name": "پرداخت قبض",
+            "description": "آبونمان، تلفن، اینترنت و بیشتر را مستقیم از کیف پول پرداخت کنید."
+          },
+          "savings": {
+            "name": "دایره‌های پس‌انداز",
+            "description": "پس‌انداز چرخشی سنتی (تونتین، چیت فاند) با قراردادهای هوشمند بدون اعتماد."
+          },
+          "microLoans": {
+            "name": "وام‌های خرد",
+            "description": "وام همتا به همتا پشتیبان‌شده با انسانیت تأییدشده و اعتبار."
+          }
+        }
+      },
+      "transport": {
+        "name": "حمل‌ونقل و تحویل",
+        "apps": {
+          "rideSharing": {
+            "name": "اشتراک سواری",
+            "description": "سواری با پرداخت کریپتو رزرو کنید. رانندگان بیشتر نگه می‌دارند، مسافران کمتر پرداخت می‌کنند—بدون واسطه ۳۰٪.",
+            "example": "سواری تاکسی در لاگوس ₦۸۰۰ هزینه دارد. راننده ₦۷۹۹.۲ به جای ₦۵۶۰ دریافت می‌کند."
+          },
+          "delivery": {
+            "name": "تحویل",
+            "description": "غذا، مواد غذایی یا بسته سفارش دهید. پیک‌ها دستمزد عادلانه در توکن استیبل دریافت می‌کنند.",
+            "example": "ناهار سفارش دهید، با استیبل‌کوین محلی پرداخت کنید، پیک فوری پرداخت می‌شود."
+          },
+          "publicTransit": {
+            "name": "حمل‌ونقل عمومی",
+            "description": "اتوبوس، مترو و قطار با ضربه پرداخت کنید. نیازی به خرید کارت نیست."
+          }
+        }
+      },
+      "travel": {
+        "name": "سفر و مهمان‌نوازی",
+        "apps": {
+          "hotels": {
+            "name": "هتل و اقامت",
+            "description": "اقامتگاه جهانی رزرو کنید. میزبانان استیبل‌کوین قبول می‌کنند، مهمانان در هزینه صرفه‌جویی می‌کنند.",
+            "example": "اتاق در بالی ۴۰ دلار/شب رزرو کنید. میزبان ۳۹.۹۶ دلار دریافت می‌کند."
+          },
+          "flights": {
+            "name": "پروازها",
+            "description": "پرواز جستجو و رزرو کنید. با کریپتو پرداخت کنید، پاداش UMT بگیرید."
+          },
+          "tours": {
+            "name": "تورهای محلی",
+            "description": "تجربه با راهنمای محلی رزرو کنید. پرداخت مستقیم به آن‌ها."
+          }
+        }
+      },
+      "commerce": {
+        "name": "خرید و تجارت",
+        "apps": {
+          "localMarket": {
+            "name": "بازار محلی",
+            "description": "محلی بخرید و بفروشید. پرداخت QR تجارت خیابانی را آسان می‌کند.",
+            "example": "فروشنده در جاکارتا USDC قبول می‌کند. مشتری پرداخت می‌کند، فروشنده فوری وجه می‌بیند."
+          },
+          "ecommerce": {
+            "name": "تجارت الکترونیک",
+            "description": "از فروشندگان جهانی آنلاین بخرید. بدون هزینه کارت، بدون چارجبک.",
+            "example": "الکترونیک از شنژن بخرید. با استیبل‌کوین پرداخت کنید، ۳٪ نسبت به کارت صرفه‌جویی."
+          },
+          "marketplace": {
+            "name": "بازار همتا",
+            "description": "کالا لیست کنید، از دیگران بخرید. escrow هر دو طرف را حفاظت می‌کند."
+          }
+        }
+      },
+      "services": {
+        "name": "خدمات و کار",
+        "apps": {
+          "remittance": {
+            "name": "حواله",
+            "description": "پول به خانه ارسال کنید. گیرندگان می‌توانند به ارز محلی نقد یا دیجیتال نگه دارند.",
+            "example": "۲۰۰ دلار از آمریکا به فیلیپین ارسال کنید. گیرنده بیش از ₱۱۰,۴۰۰ به جای ₱۱۱,۰۰۰+ دریافت می‌کند."
+          },
+          "freelance": {
+            "name": "کار فریلنس",
+            "description": "برای کار گیگ فوری پرداخت شوید. بدون انتظار ۳۰ روزه بانکی."
+          },
+          "homeServices": {
+            "name": "خدمات خانگی",
+            "description": "لوله‌کش، برقکار، نظافتچی استخدام کنید. فقط پس از انجام کار پرداخت کنید."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "کسب‌وکار خود را روی Umotu بسازید",
+      "subtitle": "اپ‌هایی با پرداخت встроенный راه‌اندازی کنید",
+      "description": "اپ‌هایی ایجاد کنید که به اکوسیستم Umotu دسترسی دارند—میلیون‌ها انسان تأییدشده با درآمد روزانه، آماده تراکنش. بدون دردسر ادغام پرداخت.",
+      "benefits": {
+        "noFees": "کارمزد پردازش پرداخت نزدیک به صفر—۹۹.۹٪ درآمد نگه دارید",
+        "verifiedUsers": "همه کاربران انسان تأییدشده—بدون بات یا تقلب",
+        "globalReach": "از روز اول به کاربران در ۱۹۰+ کشور دسترسی",
+        "instantPayments": "تسویه فوری—بدون تأخیر ۳۰ روزه پرداخت"
+      },
+      "exampleTitle": "مورد استفاده",
+      "exampleText": "اپ اشتراک سواری روی Umotu ۹۹.۹٪ کرایه را نگه می‌دارد در مقابل ۷۰٪ در پلتفرم‌های سنتی. رانندگان بیشتر، مسافران کمتر پرداخت.",
+      "docsButton": "خواندن مستندات",
+      "buildButton": "شروع ساخت"
+    },
+    "bank": {
+      "title": "بانک هستید؟",
+      "subtitle": "استیبل‌کوین روی Umotu صادر کنید",
+      "description": "نهادهای مالی مجاز می‌توانند استیبل‌کوین ارز محلی روی Umotu صادر کنند و به اقتصاد UBI رو به رشد با میلیون‌ها کاربر دسترسی یابند.",
+      "benefits": {
+        "reserves": "درآمد از ذخایر: سرمایه‌گذاری در اوراق و دارایی کم‌ریسک",
+        "mintRedeem": "کارمزد ضرب/بازخرید: معمولاً ۰.۱٪ در تبدیل فیات ↔ استیبل‌کوین",
+        "users": "دسترسی به میلیون‌ها دریافت‌کننده فعال روزانه UBI",
+        "global": "گسترش فراتر از مرزها فوری",
+        "custody": "ذخایر شما، نگهداری شما: کنترل کامل بر دارایی‌های پشتیبان"
+      },
+      "revenueModel": "چگونه صادرکنندگان درآمد دارند",
+      "revenueNote": "مانند تتر و دیگر صادرکنندگان عمده، درآمد از بازده ذخایر و کارمزد تبدیل. با میلیون‌ها کاربر دریافت‌کننده روزانه UBI، حجم ضرب/بازخرید قابل توجه.",
+      "futureNote": "صادرکنندگان ممکن است در آینده سهم کارمزد تراکنش دریافت کنند با تکامل پروتکل.",
+      "learnMore": "بیشتر بدانید",
+      "applyButton": "اکنون درخواست دهید"
+    }
+  },
+  "news": {
+    "title": "اخبار و به‌روزرسانی‌ها",
+    "description": "با آخرین اعلامیه‌ها، نکات و هشدارهای امنیتی از تیم Umotu به‌روز بمانید.",
+    "empty": "در حال حاضر خبری نیست",
+    "unread": "جدید",
+    "unreadCount": "{{count}} جدید",
+    "markAsRead": "خوانده‌شده علامت‌گذاری کنید",
+    "types": {
+      "announcement": "اعلامیه",
+      "tip": "نکته",
+      "security": "امنیتی",
+      "airdrop": "ایردراپ",
+      "update": "به‌روزرسانی"
+    }
+  },
+  "governance": {
+    "title": "حکومت‌داری",
+    "subtitle": "آینده Umotu را شکل دهید",
+    "description": {
+      "title": "صدای شما مهم است",
+      "body": "با رأی به پیشنهادهای جامعه در آینده Umotu کمک کنید. بنیاد Umotu این رأی‌ها را سازمان‌دهی می‌کند، اما جامعه تصمیم می‌گیرد."
+    },
+    "empty": "پیشنهاد فعالی نیست",
+    "emptyHint": "بعداً برای تصمیم‌های جامعه جدید چک کنید.",
+    "newPolls": "جدید",
+    "newPollsCount": "{{count}} جدید",
+    "vote": "رأی",
+    "votes": "رأی",
+    "endsIn": "پایان در {{time}}",
+    "ended": "پایان یافته",
+    "tapToVote": "برای رأی دادن گزینه بالا ضربه بزنید",
+    "submitting": "در حال ارسال رأی...",
+    "alreadyVoted": {
+      "title": "قبلاً رأی داده‌اید",
+      "message": "شما قبلاً در این پیشنهاد رأی داده‌اید."
+    },
+    "confirm": {
+      "title": "تأیید رأی",
+      "message": "رأی برای",
+      "note": "این اقدام قابل بازگشت نیست.",
+      "submit": "ارسال رأی"
+    },
+    "success": {
+      "title": "رأی ارسال شد!",
+      "message": "از مشارکت در حکومت‌داری جامعه سپاسگزاریم."
+    },
+    "error": {
+      "title": "رأی ناموفق",
+      "message": "ارسال رأی ناموفق. دوباره امتحان کنید."
+    }
+  },
+  "learn": {
+    "title": "یادگیری",
+    "subtitle": "همه چیز درباره Umotu",
+    "featured": "ویژه",
+    "whatIs": {
+      "title": "Umotu چیست؟",
+      "subtitle": "۱۰ دلار در روز، برای همه در همه جا",
+      "intro": "Umotu هدف دارد هر کسی با گوشی هوشمند حدود ۱۰ دلار در روز کسب کند. بدون سخت‌افزار گران، مهارت خاص، مرز.",
+      "howDifferent": "چگونه متفاوت است؟",
+      "noMiddleman": "بدون واسطه: مستقیم با شبکه تعامل—بدون نیاز به حساب بانکی",
+      "globalAccess": "دسترسی جهانی: هرجا اینترنت باشد کار می‌کند",
+      "youOwnIt": "مالک آن شما هستید: کیف پول، کلیدها، کنترل شما",
+      "vision": "چشم‌انداز",
+      "visionText": "میلیاردها نفر می‌توانند دفتر عمومی را صادق نگه دارند و برای آن کسب درآمد. در Umotu، گوشی‌ها بررسی‌های سبک انجام می‌دهند که شبکه را قابل اعتماد می‌کند.",
+      "nameOrigin": "منشأ نام",
+      "nameOriginText": "Umotu از Paʻumotu، زبان پلی‌نزی الهام گرفته. با احترام از نام استفاده می‌کنیم تا یادآوری ساخت برای مردم عادی."
+    },
+    "earn": {
+      "title": "چگونه کسب درآمد کنید",
+      "subtitle": "گوشی شما کار می‌کند؛ شما پرداخت می‌شوید",
+      "intro": "گوشی شما وظایف کوچک برای کمک به همه انجام می‌دهد—سپس پاداش می‌گیرید.",
+      "steps": "سه گام ساده",
+      "step1": "۱) انسان بودن را اثبات کنید: بررسی زنده سریع (و گاه تازه‌سازی) اطمینان می‌دهد هر نفر یک حساب.",
+      "step2": "۲) به شبکه کمک کنید: گوشی در پس‌زمینه نمونه‌برداری DA و بررسی‌های سبک دیگر اجرا می‌کند.",
+      "step3": "۳) پاداش روزانه بگیرید: برای این کار پرداخت می‌شوید، هدف حدود ۱۰ دلار در روز بسته به سیاست شبکه.",
+      "localCurrency": "پرداخت در ارز محلی",
+      "localCurrencyText": "توکن پرداخت انتخاب کنید: استیبل‌کوین‌های ارز محلی (در دسترس) یا UMT. مقدار هدف ~۱۰ دلار ارزش و ممکن است با مشارکت و شرایط بازار تنظیم شود."
+    },
+    "whereMoney": {
+      "title": "۱۰ دلار از کجا می‌آید؟",
+      "subtitle": "شما کسب می‌کنید چون کار انجام می‌دهید",
+      "intro": "سؤال شماره ۱. پاسخ کوتاه: چون خدمتی که شبکه نیاز دارد ارائه می‌دهید.",
+      "realWork": "گوشی شما کار واقعی انجام می‌دهد",
+      "realWork1": "نمونه‌برداری دسترسی داده: گوشی چک می‌کند داده بلاک در دسترس و درست است",
+      "realWork2": "مشارکت انسانی: اثبات یک‌نفر-یک‌حساب برای جلوگیری از بات و اسپم",
+      "realWork3": "این وظایف همه را حفاظت می‌کند؛ بدون آن‌ها شبکه ضعیف می‌شود",
+      "valueSource": "دو منبع ارزش",
+      "utility": "کاربرد: پرداخت سریع کم‌هزینه که مردم انتخاب می‌کنند",
+      "consensus": "اجماع: ارزشی که با توانایی بیشتر مردم برای تأیید و توافق بر قوانین رشد می‌کند",
+      "distribution": "چگونه پاداش توزیع می‌شود",
+      "newTokens": "توکن‌های UMT جدید ایجاد و با شرکت‌کنندگان گوشی تأییدشده به اشتراک گذاشته می‌شود (نه با اعتبارسنج‌ها)",
+      "fees": "بخشی از کارمزدها و پیشنهادهای سازنده با sentinelهای گوشی برای نهایی‌سازی بلاک‌ها به اشتراک گذاشته می‌شود",
+      "treasury": "بخش کوچک برای نگهداری و برنامه‌های پایداری",
+      "whyDifferent": "چرا متفاوت است",
+      "btcProblem": "بیت‌کوین به ماینرهای تخصصی (سرمایه‌بر) پاداش می‌دهد",
+      "ethProblem": "اتریوم به استیکرهای بزرگ (سرمایه‌بر) پاداش می‌دهد",
+      "umotuSolution": "Umotu به گوشی‌های عادی (هزینه عملی کم) پاداش می‌دهد",
+      "conclusion": "اهدایی نیست: برای کاری که زیرساخت مالی مشترک را صادق و مفید نگه می‌دارد پرداخت می‌شوید."
+    },
+    "security": {
+      "title": "امنیت کیف پول",
+      "subtitle": "پول خود را حفاظت کنید",
+      "intro": "کیف پول شما مانند گاوصندوق دیجیتال است که فقط شما کنترل می‌کنید.",
+      "recovery": "۱۲ کلمه و کلید خصوصی شما",
+      "recoveryText": "۱۲ کلمه مخفی (عبارت بازیابی) و کلید خصوصی هر دو کیف پول را باز می‌کنند. هر کسی یکی داشته باشد می‌تواند وجوه را جابه‌جا کند.",
+      "rules": "قوانین طلایی",
+      "rule1": "هرگز ۱۲ کلمه یا کلید خصوصی را با کسی به اشتراک نگذارید—حتی contributors Umotu.",
+      "rule2": "۱۲ کلمه را روی کاغذ بنویسید و آفلاین ذخیره کنید. در اسکرین‌شات، عکس یا نوت ابری ذخیره نکنید.",
+      "rule3": "اگر کلید خصوصی صادر کردید، آفلاین نگه دارید (کاغذ، سخت‌افزار یا مدیر رمزنگاری قابل اعتماد).",
+      "rule4": "اگر ۱۲ کلمه و کلید خصوصی را گم کنید، هیچ‌کس نمی‌تواند کیف پول را بازیابی کند.",
+      "warning": "مهم",
+      "warningText": "کلید خصوصی دسترسی کامل می‌دهد. نمایش یا کپی به اپ‌های دیگر ممکن است وجوه را در معرض خطر قرار دهد. فقط اگر ریسک را درک می‌کنید صادر کنید.",
+      "reveal": "نمایش / صادر کردن کلید خصوصی",
+      "revealText": "در تنظیمات کیف پول می‌توانید کلید خصوصی را نمایش یا صادر کنید. بیومتریک/پین نیاز داریم، فقط چند ثانیه نمایش، هرگز آپلود نمی‌شود. برای موجودی بزرگ از کیف سخت‌افزاری استفاده کنید.",
+      "bestPractices": "بهترین روش‌ها",
+      "best1": "قفل صفحه و بیومتریک روی گوشی فعال کنید.",
+      "best2": "اپ را به‌روز نگه دارید تا آخرین فیکس‌های امنیتی بگیرید.",
+      "best3": "کیف جدا برای پس‌انداز بزرگ استفاده کنید؛ مقدار کم روی گوشی برای استفاده روزانه.",
+      "scamBannerTitle": "هیچ‌کس معتبر درخواست نمی‌کند",
+      "scamBannerText": "اگر کسی ۱۲ کلمه یا کلید خصوصی بخواهد، کلاهبرداری است."
+    },
+    "stablecoins": {
+      "title": "درک استیبل‌کوین‌ها",
+      "subtitle": "پول دیجیتال که ارز محلی را دنبال می‌کند",
+      "intro": "استیبل‌کوین‌ها توکن‌های دیجیتال طراحی‌شده برای دنبال کردن پول عادی (مانند USD، ZAR، NGN).",
+      "examples": "نمونه‌ها",
+      "example1": "۱ ZAR1 ≈ ۱ راند آفریقای جنوبی",
+      "example2": "۱ USD1 ≈ ۱ دلار آمریکا",
+      "example3": "۱ NGN1 ≈ ۱ نایرا نیجریه",
+      "backed": "صادرشده توسط شرکا",
+      "backedText": "استیبل‌کوین‌های Umotu توسط شرکای تنظیم‌شده صادر و برای حفظ ارزش ۱:۱ با ذخایر طراحی شده‌اند. صادرکنندگان اثبات ذخایر و شرایط بازخرید منتشر می‌کنند.",
+      "convert": "تبدیل به نقدی",
+      "convertText": "از طریق بانک/صرافی شریک، یا مستقیم جایی که قبول می‌کنند خرج کنید."
+    },
+    "economics": {
+      "title": "اقتصاد UMT",
+      "subtitle": "چه کسی چه می‌گیرد و چرا",
+      "intro": "UMT عرضه ثابت ۱۰۰ میلیارد توکن دارد. بیشتر آن به کاربران گوشی عادی که شبکه را صادق نگه می‌دارند پرداخت می‌شود.",
+      "supply": "عرضه و توزیع",
+      "supplyBullets": [
+        "بیشتر عرضه توکن برای شرکت‌کنندگان تلفن همراه در طول زمان رزرو شده و از طریق کنترل‌کننده انتشار آزاد می‌شود. کنترل‌کننده انتشار، صدور روزانه را به حداکثر 0.01% از عرضه باقی‌مانده محدود می‌کند و پایداری بلندمدت را تضمین می‌کند. طبق این برنامه، حدود 68% از کل عرضه پس از 10 سال و حدود 15% پس از 50 سال باقی می‌ماند.",
+        "بخش کوچکی از عرضه در زمان راه‌اندازی برای اهداف خاص ایجاد می‌شود، از جمله ایردراپ کاربران اولیه، فروش اجتماعی، تخصیص بنیاد و ذخیره اضطراری و غیره."
+      ],
+      "premine": "تخصیص راه‌اندازی (موقت، ممکن است در زمان راه‌اندازی شبکه اصلی تغییر کند)",
+      "premineTable": [
+        {
+          "label": "ایردراپ کاربر",
+          "value": "۱.۰٪"
+        },
+        {
+          "label": "فروش جامعه",
+          "value": "۰.۶٪"
+        },
+        {
+          "label": "بنیاد Umotu (تایم‌لاک)",
+          "value": "۰.۲٪"
+        },
+        {
+          "label": "صندوق اضطراری (حکومت‌داری)",
+          "value": "۰.۲٪"
+        }
+      ],
+      "emissions": "پاداش روزانه برای گوشی‌ها",
+      "emissionsText": "هر روز شبکه حداکثر ۰.۰۱٪ از استخر انتشار باقی‌مانده منتشر می‌کند. برای هدف ~۱۰ دلار در روز برای گوشی‌های تأییدشده بودجه‌بندی می‌شود، با تنظیم مشارکت و شرایط بازار.",
+      "fees": "کارمزدها و Sentinelها",
+      "feesText": "کمک‌کنندگان Sentinel (اختیاری، پیشرفته) سهم کارمزد تراکنش و پیشنهادهای سازنده می‌گیرند. جدا از انتشار روزانه.",
+      "transparency": "شفافیت",
+      "transparencyText": "زمان‌بندی وستینگ و کیف‌ها عمومی. سقف انتشار روزانه و پرداخت‌های واقعی در اپ منتشر می‌شود.",
+      "disclaimerTitle": "یادآوری ساده",
+      "disclaimerText": "این مشاوره سرمایه‌گذاری نیست. پاداش به سیاست شبکه و مشارکت بستگی دارد. اپ درآمد ثابت تضمین نمی‌کند."
+    },
+    "contribute": {
+      "title": "چگونه مشارکت کنید",
+      "subtitle": "در ساخت Umotu کمک کنید",
+      "intro": "Umotu منبع‌باز و جامعه‌محور است. همه می‌توانند کمک کنند—کد، ترجمه یا بازخورد.",
+      "waysTitle": "روش‌های مشارکت",
+      "code": {
+        "title": "کد را بهبود دهید",
+        "text": "باگ فیکس، ویژگی اضافه، تست بنویسید یا PR بررسی کنید. ریپوهای گیت‌هاب برای اپ، قراردادهای هوشمند و بک‌اند چک کنید.",
+        "cta": "دیدن گیت‌هاب",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "در ترجمه کمک کنید",
+        "text": "اپ را در زبان خود طبیعی کنید. فایل‌های i18n را ویرایش و هر صفحه تست کنید. ویرایش شما به میلیون‌ها کمک می‌کند.",
+        "cta": "راهنمای ترجمه",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "لیست کلمات BIP-39 گسترش دهید",
+        "text": "لیست کلمات جدید یا بهبود پیشنهاد دهید تا بیشتر مردم عبارت بازیابی را به زبان مادری ببینند.",
+        "cta": "دیدن BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "به حکومت‌داری بپیوندید",
+        "text": "پیشنهاد بخوانید، بحث کنید و در اپ رأی دهید. صدای شما در پارامترهای شبکه و تخصیص کمک می‌کند.",
+        "cta": "باز کردن حکومت‌داری",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "خبر را پخش کنید",
+        "text": "به دوستان بگویید، آموزش بنویسید، شورت منتشر کنید، سؤال جواب دهید. جامعه قوی‌تر یعنی شبکه قوی‌تر برای همه.",
+        "cta": "اشتراک Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "تمام مشارکت‌ها داوطلبانه. هیچ استخدام رسمی یا جبران مگر در پیشنهاد کمک مشخص."
+    },
+    "decentralization": {
+      "title": "چرا غیرمتمرکز",
+      "subtitle": "بدون نقطه کنترل تک",
+      "intro": "غیرمتمرکز یعنی هیچ شرکت یا دولتی نمی‌تواند شبکه را خاموش یا وجوه را مصادره کند.",
+      "benefits": "مزایا برای شما",
+      "benefit1": "همیشه روشن: ۲۴/۷ در دسترس",
+      "benefit2": "کارمزد کمتر: کارمزد شبکه کوچک به جای ۳–۵٪ کارت",
+      "benefit3": "بدون مرز: ارزش جهانی ارسال",
+      "benefit4": "مقاوم به سانسور: کلیدهای شما، پول شما",
+      "benefit5": "شفاف: هر کسی می‌تواند سیستم را تأیید کند",
+      "howWorks": "چگونه کار می‌کند",
+      "howWorksText": "اعتبارسنج‌ها هر ~۲ ثانیه بلاک پیشنهاد می‌کنند. گوشی‌ها (مانند شما) با بررسی سبک تأیید و نهایی می‌کنند. بسیاری مشارکت کوچک امنیت قوی می‌سازد."
+    },
+    "noCompany": {
+      "title": "بدون شرکت، بدون مشتری",
+      "subtitle": "مدل را درک کنید",
+      "intro": "هیچ 'Umotu, Inc.' پروتکل را کنترل نمی‌کند. Umotu مجموعه قوانین باز است که هر کسی می‌تواند استفاده کند.",
+      "notCompany": "Umotu چیست نیست",
+      "notCompany1": "شرکت با حساب مشتری نیست",
+      "notCompany2": "بانک یا انتقال‌دهنده پول نیست",
+      "notCompany3": "توسط هیچ نهاد تک کنترل نمی‌شود",
+      "notCompany4": "نمی‌تواند تراکنش برگرداند",
+      "whatIs": "Umotu چیست",
+      "whatIs1": "پروتکل: مانند ایمیل یا وب—قوانین باز، قابل تعامل",
+      "whatIs2": "گوشی‌اول: با کمک گوشی‌های هوشمند عادی اجرا می‌شود",
+      "whatIs3": "جامعه‌محور: شما شرکت‌کننده هستید، نه مشتری",
+      "foundation": "بنیاد Umotu",
+      "foundationIntro": "غیرانتفاعی که اکوسیستم را پشتیبانی می‌کند (اپ مرجع، مستندات، برنامه‌های جامعه) اما پروتکل را کنترل نمی‌کند.",
+      "foundationTask1": "اپ موبایل و اکسپلورر را به عنوان پیاده‌سازی مرجع نگهداری می‌کند",
+      "foundationTask2": "برخی زیرساخت عمومی اجرا می‌کند (دیگران می‌توانند خود اجرا کنند)",
+      "foundationTask3": "حکومت‌داری جامعه هماهنگ می‌کند (اخبار، رأی)",
+      "foundationTask4": "استیبل‌کوین‌های پشتیبانی‌شده بررسی و لیست می‌کند",
+      "foundationTask5": "راهنماهای آموزش و ایمنی منتشر می‌کند",
+      "foundationNote": "بنیاد به کیف پول دسترسی ندارد و نمی‌تواند تراکنش برگرداند."
+    },
+    "scamPrevention": {
+      "title": "اجتناب از کلاهبرداری",
+      "subtitle": "خود را حفاظت کنید",
+      "intro": "بنیاد Umotu هرگز DM نمی‌دهد. هر کسی ادعا کند 'پشتیبانی' کلاهبردار است.",
+      "redFlags": "علائم قرمز",
+      "redFlag1": "کسی ادعا کند پشتیبانی مشتری",
+      "redFlag2": "لینک برای 'تأیید' یا 'ارتقا' حساب",
+      "redFlag3": "درخواست ۱۲ کلمه یا کلید خصوصی",
+      "redFlag4": "وعده توکن bonus اگر وجه ارسال کنید",
+      "redFlag5": "اپ یا سایت درخواست 'فعال' کردن پاداش",
+      "truth": "حقیقت",
+      "truth1": "پشتیبانی مشتری که کیف پول ریست کند وجود ندارد",
+      "truth2": "تمام به‌روزرسانی‌های رسمی در این اپ ظاهر می‌شود",
+      "truth3": "هیچ‌کس از Umotu عبارت بازیابی یا کلید خصوصی درخواست نمی‌کند",
+      "truth4": "این اپ را فقط از اپ استور رسمی یا گوگل پلی دانلود کنید",
+      "whatToDo": "اگر کسی تماس گرفت",
+      "action1": "پاسخ ندهید",
+      "action2": "لینک کلیک نکنید",
+      "action3": "اطلاعات به اشتراک نگذارید",
+      "action4": "بلاک و گزارش"
+    },
+    "airdrop": {
+      "title": "ایردراپ تست‌نت",
+      "subtitle": "کاربران اولیه شناخته می‌شوند",
+      "intro": "شما اولیه هستید! Umotu در تست‌نت. شرکت‌کنندگان فعال تست‌نت ممکن است در راه‌اندازی مین‌نت تخصیص دریافت کنند.",
+      "howToQualify": "چگونه واجد شوید",
+      "step1": "در اپ کیف پول ایجاد کنید",
+      "step2": "تأیید انسانی (Proof of Human) کامل کنید",
+      "step3": "در تست‌نت اپ را منظم استفاده کنید",
+      "whenAirdrop": "ایردراپ کی است؟",
+      "whyTestnet": "تست‌نت ضروری: کاربران امنیت کیف پول یاد می‌گیرند، سیستم برای امنیت، استحکام و کارایی تست می‌شود قبل مین‌نت.",
+      "timeline": "مین‌نت انتظار Q1 یا Q2 ۲۰۲۶. ایردراپ حدود همان زمان.",
+      "howMuch": "چقدر دریافت می‌کنید؟",
+      "totalPool": "استخر ایردراپ کل: ۱,۰۰۰,۰۰۰,۰۰۰ UMT. سهم شما به شرکت‌کنندگان کل و قیمت UMT در راه‌اندازی بستگی دارد.",
+      "scenario2": "۱M کاربر: ~۱,۰۰۰ UMT هر کاربر، قیمت انتظار ~۱ دلار، ارزش ایردراپ ~۱,۰۰۰ دلار",
+      "scenario3": "۱۰M کاربر: ~۱۰۰ UMT هر کاربر، قیمت انتظار ~۲۰ دلار، ارزش ایردراپ ~۲,۰۰۰ دلار",
+      "scenario4": "۱۰۰M کاربر: ~۱۰ UMT هر کاربر، قیمت انتظار ~۳۰۰ دلار، ارزش ایردراپ ~۳,۰۰۰ دلار",
+      "disclaimer": "این پیش‌بینی فقط، نه تضمین. ارزش واقعی به شرایط بازار و قوانین برنامه بستگی دارد.",
+      "whatYouGet": "چه دریافت می‌کنید",
+      "reward": "در مین‌نت، کیف تست‌نت ممکن است توکن واقعی بر اساس مشارکت و قوانین برنامه دریافت کند. کاربران اولیه و فعال‌تر اولویت.",
+      "note": "توکن‌های تست‌نت ارزش ندارند. هر تخصیص مین‌نت توسط سیاست برنامه در راه‌اندازی تعیین می‌شود. تمام اخبار ایردراپ فقط در این اپ منتشر می‌شود."
+    },
+    "gettingStarted": {
+      "title": "شروع سریع",
+      "subtitle": "پنج دقیقه اول شما",
+      "intro": "راه‌اندازی سریع شما:",
+      "checklist": "چک‌لیست راه‌اندازی",
+      "check1": "۱) زبان انتخاب کنید (انجام شد!)",
+      "check2": "۲) کیف پول ایجاد یا وارد کنید",
+      "check3": "۳) مهم: ۱۲ کلمه را روی کاغذ بنویسید",
+      "check4": "۴) تأیید انسانی کامل کنید (اسکن سریع)",
+      "check5": "۵) اپ را اجرا نگه دارید تا پاداش روزانه بگیرید",
+      "tips": "نکات حرفه‌ای",
+      "tip1": "دسترسی پس‌زمینه اجازه دهید تا بررسی‌ها اجرا شود",
+      "tip2": "روزانه چک کنید تا پاداش ببینید",
+      "tip3": "دوستان دعوت کنید—کاربران بیشتر شبکه قوی‌تر"
+    }
+  },
+  "common": {
+    "loading": "در حال بارگذاری...",
+    "error": "خطا",
+    "retry": "دوباره امتحان",
+    "cancel": "لغو",
+    "save": "ذخیره",
+    "done": "انجام شد",
+    "continue": "ادامه",
+    "confirm": "تأیید",
+    "yes": "بله",
+    "no": "خیر",
+    "ok": "تأیید",
+    "success": "موفقیت",
+    "failed": "ناموفق",
+    "copied": "کپی شد!",
+    "pullToRefresh": "برای تازه‌سازی بکشید",
+    "notSet": "تنظیم نشده"
+  },
+  "errors": {
+    "networkError": "خطای شبکه. اتصال را چک کنید.",
+    "genericError": "مشکل رخ داد. دوباره امتحان کنید.",
+    "walletNotFound": "کیف پول یافت نشد",
+    "transactionFailed": "تراکنش ناموفق",
+    "invalidInput": "ورودی نامعتبر"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "دلار"
+  },
+  "onboard_welcome": "به Umotu خوش آمدید",
+  "onboard_wallet_title": "کیف پول خود را راه‌اندازی کنید",
+  "onboard_wallet_explain": "کیف پول ایجاد یا وارد کنید تا پاداش دریافت کنید.",
+  "wallet_create": "ایجاد کیف پول جدید",
+  "wallet_import": "وارد کردن کیف پول",
+  "wallet_import_explain": "عبارت بازیابی ۱۲ کلمه‌ای وارد کنید",
+  "wallet_created": "کیف پول آماده",
+  "wallet_save": "ذخیره در دستگاه",
+  "wallet_backup_title": "پشتیبان از عبارت بازیابی",
+  "wallet_backup_explain": "این ۱۲ کلمه را به ترتیب بنویسید. تنها راه بازیابی کیف پول اگر دستگاه گم شود.",
+  "wallet_backup_warning": "هرگز عبارت بازیابی را به اشتراک نگذارید. هر کسی با این کلمات به وجوه دسترسی دارد.",
+  "wallet_backup_confirm": "عبارت بازیابی را نوشته‌ام",
+  "wallet_backup_done": "عبارت را ذخیره کردم",
+  "wallet_save_first": "ابتدا عبارت بازیابی را ذخیره کنید",
+  "poh_title": "تأیید انسان",
+  "continue": "ادامه",
+  "or": "یا",
+  "seedReveal": {
+    "title": "عبارت بازیابی",
+    "intro": "عبارت بازیابی تنها راه بازیابی کیف پول اگر به دستگاه دسترسی از دست دهید. بنویسید و امن آفلاین ذخیره کنید.",
+    "displayLanguage": "نمایش در {{language}}",
+    "hiddenMsg": "عبارت برای امنیت پنهان است. برای نمایش ضربه بزنید.",
+    "showButton": "نمایش عبارت",
+    "noScreenshot": "هرگز از عبارت بازیابی اسکرین‌شات نگیرید.",
+    "checkTitle": "تأیید پشتیبان",
+    "checkPrompt": "کلمات زیر را وارد کنید تا تأیید کنید درست نوشته‌اید:",
+    "checkWordN": "کلمه #{{n}}",
+    "checkIncorrect": "یک یا چند کلمه اشتباه. پشتیبان را چک کنید.",
+    "ackWritten": "عبارت بازیابی را نوشته‌ام",
+    "ackCannotRecover": "متوجهم Umotu نمی‌تواند کیف پول را بازیابی کند",
+    "cancel": "لغو",
+    "continue": "ذخیره کردم"
+  }
+}

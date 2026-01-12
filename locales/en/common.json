@@ -1,0 +1,1442 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "$10 a day, everyone everywhere"
+  },
+  "navigation": {
+    "home": "Home",
+    "wallet": "Wallet",
+    "miniapps": "MiniApps",
+    "back": "Back",
+    "scan": "Scan",
+    "settings": "Settings",
+    "close": "Close"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Verified Humans",
+      "umtPrice": "UMT Price"
+    },
+    "quickActions": {
+      "news": "News",
+      "vote": "Governance",
+      "governance": "Governance",
+      "learn": "Learn",
+      "network": "Network"
+    },
+    "setupProgress": {
+      "title": "Setup Progress",
+      "steps": {
+        "language": "Language",
+        "wallet": "Wallet",
+        "verifyHuman": "Verify Human",
+        "complete": "Complete",
+        "dailySampling": "Enable Daily Sampling",
+        "dailySamplingHint": "Required: 1 sample/day for rewards"
+      },
+      "continue": "Continue",
+      "changeChoice": "Change choice",
+      "requiresLanguage": "Select language first",
+      "requiresWallet": "Create wallet first"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Daily Rewards",
+      "totalEarned": "Total Earned",
+      "lastClaimed": "Last Claimed",
+      "never": "Never",
+      "configure": "Configure",
+      "loading": "Loading earnings...",
+      "noWallet": "No wallet",
+      "autoClaim": {
+        "label": "Auto-claim:",
+        "active": "Active",
+        "setupNow": "Set up now",
+        "expired": "Expired",
+        "tapToSetup": "Tap to enable automatic daily rewards"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel Earnings",
+      "manage": "Manage",
+      "loading": "Loading...",
+      "status": "Status",
+      "statuses": {
+        "notBonded": "Not bonded",
+        "bonded": "Bonded",
+        "unbonding": "Unbonding"
+      },
+      "claimable": "Claimable",
+      "accruing": "Accruing",
+      "bonded": "Bonded"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Automatic Daily Rewards",
+      "description": "Enable <bold>auto-claim</bold> to receive your $10 daily UBI reward automatically—no manual claiming needed!",
+      "benefits": {
+        "midnight": "Claims at midnight in your timezone",
+        "lowerFees": "80% lower gas fees (batched with other users)",
+        "disable": "You can disable anytime in Settings"
+      },
+      "notice": "You'll sign a one-time authorization message that lets our relay claim on your behalf. No private keys are shared.",
+      "maybeLater": "Maybe Later",
+      "enableNow": "Enable Now"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Auto-Claim Settings",
+      "description": "Automatically claim your daily rewards.",
+      "checking": "Checking status...",
+      "status": "Status",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "lastClaimed": "Last Claimed",
+      "neverClaimed": "Never",
+      "nextClaim": "Next Claim",
+      "expiresAt": "Expires At",
+      "timezone": "Timezone",
+      "preferredHour": "Preferred Hour",
+      "preferredHourHint": "Choose when auto-claim should run",
+      "enableButton": "Enable Auto-Claim",
+      "disableButton": "Disable Auto-Claim",
+      "enabling": "Enabling...",
+      "disabling": "Disabling...",
+      "enableSuccess": "Auto-claim enabled!",
+      "enableError": "Failed to enable",
+      "disableSuccess": "Auto-claim disabled",
+      "disableError": "Failed to disable",
+      "updateButton": "Update Settings",
+      "updating": "Updating..."
+    },
+    "manual": {
+      "title": "Manual claim",
+      "description": "If you need funds sooner, claim the next available reward now. Manual claims use your wallet’s gas. Auto-claim stays cheaper if you wait. If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "availableDays": "Available reward days: {{days}}",
+      "availableRange": "Coverage: {{start}} to {{end}}",
+      "remainingAfter": "+{{days}} more after this batch",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "claimButton": "Claim now",
+      "claiming": "Claiming...",
+      "success": "Claim submitted",
+      "successWithId": "Claim submitted (id: {{id}})",
+      "batchSuccess": "{{count}} days claimed successfully",
+      "claimingProgress": "Claiming {{claimed}}/{{total}}...",
+      "claimingDay": "Processing day {{day}}",
+      "claimAllButton": "Claim all {{count}} days",
+      "error": "Failed to claim",
+      "noProof": "Reward proof not published yet. Try again after today’s snapshot is live.",
+      "unauthorized": "Relayer authorization failed. Please try again or contact support.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable"
+    },
+    "timezone": {
+      "title": "Select Timezone",
+      "search": "Search timezone...",
+      "current": "Current Selection",
+      "searchResults": "Search Results",
+      "noResults": "No results found",
+      "detected": "Detected",
+      "popular": "Popular Timezones",
+      "regions": {
+        "Americas": "Americas",
+        "Europe": "Europe",
+        "Asia": "Asia",
+        "Africa": "Africa",
+        "Oceania": "Oceania"
+      }
+    },
+    "payout": {
+      "title": "Payout Preference",
+      "description": "Choose your preferred payout currency.",
+      "current": "Current",
+      "saved": "Saved",
+      "saveError": "Error saving",
+      "showMore": "Show More ({{count}})",
+      "showLess": "Show Less",
+      "native": "Native Token",
+      "stablecoin": "Stablecoin",
+      "popular": "Popular",
+      "allCurrencies": "All Currencies"
+    }
+  },
+  "wallet": {
+    "title": "Wallet",
+    "testnetNotice": "Testnet tokens have no real value",
+    "totalBalance": "Total Balance",
+    "balance": "Balance",
+    "address": "Address",
+    "copyAddress": "Copy Address",
+    "addressCopied": "Address copied",
+    "receive": "Receive",
+    "send": "Send",
+    "swap": "Swap",
+    "swapComingSoon": "Swap coming soon",
+    "history": "History",
+    "tokens": "Tokens",
+    "collectibles": "Collectibles",
+    "noTokens": "No tokens configured",
+    "nativeToken": "Native Token",
+    "loading": "Loading...",
+    "refreshing": "Refreshing...",
+    "balancesUpdated": "Balances updated",
+    "menu": {
+      "manageTokens": "Manage Tokens",
+      "addressBook": "Address Book",
+      "walletSettings": "Wallet Settings",
+      "showBalances": "Show Balances",
+      "hideBalances": "Hide Balances",
+      "showZeroTokens": "Show Zero Tokens",
+      "hideZeroTokens": "Hide Zero Tokens",
+      "refresh": "Refresh"
+    },
+    "manageTokens": {
+      "title": "Manage Tokens",
+      "info": "Add custom ERC-20 tokens. System tokens are included by default.",
+      "addToken": "Add Token",
+      "adding": "Adding...",
+      "contractAddress": "Token contract address (0x...)",
+      "autoFetch": "Symbol and decimals are fetched automatically",
+      "customTokens": "Custom Tokens",
+      "noCustomTokens": "No custom tokens added yet.",
+      "addUsingForm": "Add a token using the form above.",
+      "systemToken": "This token is a system token and is already included.",
+      "fetchingMetadata": "Fetching token metadata...",
+      "addedSuccess": "Token added successfully",
+      "enterValidAddress": "Enter a valid token address",
+      "save": "Save"
+    },
+    "addressBook": {
+      "title": "Address Book",
+      "addContact": "Add Contact",
+      "nameLabel": "Name or label",
+      "walletAddress": "Wallet address (0x...)",
+      "savedContacts": "Saved Contacts",
+      "noContacts": "No contacts saved yet.",
+      "addForQuickSending": "Add contacts for quick sending.",
+      "enterValidAddress": "Enter a valid address",
+      "addLabel": "Add a label",
+      "save": "Save",
+      "editContact": "Edit Contact",
+      "tags": "Tags",
+      "noTagsYet": "No tags added yet",
+      "newTagPlaceholder": "Enter tag name...",
+      "addTag": "Add",
+      "existingTags": "Or add existing tag:",
+      "deleteContact": "Delete Contact"
+    },
+    "settings": {
+      "title": "Wallet Settings",
+      "export": {
+        "title": "Export Wallet",
+        "description": "Never share your recovery phrase or private key. Store them securely offline.",
+        "recoveryPhrase": "Recovery Phrase",
+        "recoveryPhraseNotAvailable": "Recovery phrase not available (imported via private key)",
+        "privateKey": "Private Key",
+        "privateKeyWarning": "Private Key (keep secret!)",
+        "showPhrase": "Show Recovery Phrase",
+        "showKey": "Show Private Key",
+        "warning": "Never share your recovery phrase or private key with anyone.",
+        "copy": "Copy",
+        "copied": "Copied!",
+        "hide": "Hide",
+        "clipboardWarning": "Clipboard can be read by other apps. It will be auto-cleared in 30s.",
+        "verifyForKey": "Verify to Show Private Key",
+        "verifyForSeed": "Verify to Show Recovery Phrase",
+        "verifyDescription": "Enter your password or PIN to reveal sensitive wallet information."
+      },
+      "import": {
+        "title": "Import Wallet",
+        "description": "Importing replaces the current wallet. Make sure you have backed up the existing one first. Please note you will need to reverify PoH status after importing.",
+        "byPhrase": "Recovery Phrase",
+        "byPrivateKey": "Private Key",
+        "phrasePlaceholder": "Enter 12 or 24 word phrase…",
+        "keyPlaceholder": "Enter 0x… private key",
+        "importButton": "Import Wallet",
+        "importing": "Importing...",
+        "success": "Wallet imported successfully!"
+      },
+      "dangerZone": {
+        "title": "Danger Zone",
+        "description": "These actions cannot be undone. Make sure you have backed up your wallet.",
+        "forgetWallet": "Forget Wallet",
+        "forgetDescription": "Remove wallet from this device. Make sure you have backed up your recovery phrase.",
+        "confirmTitle": "Forget Wallet?",
+        "confirmMessage": "This will remove your wallet from this device. Make sure you have backed up your recovery phrase first.",
+        "cancel": "Cancel",
+        "confirm": "Forget Wallet",
+        "walletForgotten": "Wallet forgotten",
+        "unableToForget": "Unable to forget wallet",
+        "resetWallet": "Reset Wallet",
+        "resetDescription": "Completely erase all wallet data and start fresh."
+      },
+      "authPrompt": "Authenticate to reveal private key"
+    }
+  },
+  "reset": {
+    "title": "Reset Wallet",
+    "dangerTitle": "This action cannot be undone!",
+    "warning1": "Resetting your wallet will permanently delete:",
+    "bullet1": "Your wallet and private keys",
+    "bullet2": "Your recovery phrase",
+    "bullet3": "All app settings and preferences",
+    "bullet4": "Transaction history",
+    "recoveryNote": "If you have your 12-word recovery phrase, you can recover your wallet after reset.",
+    "continueButton": "I Understand, Continue",
+    "confirmTitle": "Confirm Reset",
+    "confirmDescription": "Type \"RESET\" below to confirm you want to delete all wallet data.",
+    "placeholder": "Type RESET",
+    "typeMismatch": "Please type RESET to confirm",
+    "resetButton": "Reset Wallet Forever",
+    "resettingTitle": "Resetting...",
+    "resettingDescription": "Clearing all wallet data. Please wait...",
+    "completeTitle": "Reset Complete",
+    "completeDescription": "Your wallet has been reset. You can now set up a new wallet or import an existing one.",
+    "startFresh": "Start Fresh",
+    "error": "Failed to reset wallet. Please try again."
+  },
+  "export": {
+    "verifyTitle": "Verify Identity",
+    "verifyDescription": "Enter your password to export your wallet.",
+    "verify": "Verify",
+    "verificationFailed": "Verification failed",
+    "passphraseTitle": "Set Export Passphrase",
+    "passphraseDescription": "Choose a strong passphrase to encrypt your backup. You will need this passphrase to import the wallet later.",
+    "enterPassphrase": "Enter passphrase",
+    "passphraseTooWeak": "Passphrase is too weak. Use at least 8 characters.",
+    "includeSeed": "Include Recovery Phrase",
+    "includeSeedDescription": "Recommended for complete backup",
+    "confirmTitle": "Confirm Passphrase",
+    "confirmDescription": "Re-enter your passphrase to confirm.",
+    "confirmPassphrase": "Confirm passphrase",
+    "passphraseMismatch": "Passphrases do not match",
+    "warning": "Store this backup securely. Anyone with access to this file and passphrase can access your wallet.",
+    "exportNow": "Export Wallet",
+    "exportingTitle": "Exporting...",
+    "exportingDescription": "Encrypting and preparing your wallet backup...",
+    "successTitle": "Export Complete",
+    "successDescription": "Your encrypted wallet backup has been created. Store it securely.",
+    "rememberPassphrase": "Remember your export passphrase - you will need it to import this backup.",
+    "errorTitle": "Export Failed",
+    "failed": "Export failed. Please try again.",
+    "tryAgain": "Try Again",
+    "exportKeystore": "Export Encrypted Backup",
+    "exportKeystoreDesc": "Save encrypted keystore file"
+  },
+  "security": {
+    "title": "Secure Your Wallet",
+    "subtitle": "Set up a password or PIN to protect your wallet",
+    "checkingDevice": "Checking device security...",
+    "passwordOption": "Password",
+    "passwordDesc": "8+ characters, letters and numbers",
+    "pinOption": "6-Digit PIN",
+    "pinDesc": "Quick and easy to remember",
+    "enterPin": "Enter a 6-digit PIN",
+    "confirmPin": "Confirm your PIN",
+    "enterPassword": "Enter a password",
+    "confirmPassword": "Confirm password",
+    "enableBiometrics": "Enable {{type}}?",
+    "biometricsDesc": "Use {{type}} for quick unlock. You can change this later in Settings.",
+    "enableBiometricsButton": "Enable {{type}}",
+    "enableBiometricsPrompt": "Authenticate to enable biometric unlock",
+    "skipBiometrics": "Skip for now",
+    "setupComplete": "Setup Complete!",
+    "walletSecured": "Your wallet is now secured!",
+    "continue": "Continue",
+    "passwordTooWeak": "Password is too weak. Please follow the suggestions.",
+    "pinMismatch": "PINs don't match",
+    "passwordMismatch": "Passwords don't match",
+    "setupError": "Setup failed. Please try again.",
+    "passwordTitle": "Password",
+    "passwordDescription": "8+ characters, stronger security",
+    "pinTitle": "6-Digit PIN",
+    "pinDescription": "Quick access, easy to remember"
+  },
+  "lock": {
+    "title": "Unlock Umotu",
+    "lockedOut": "Locked Out",
+    "tooManyAttempts": "Too many attempts. Try again in {{time}}.",
+    "attemptsRemaining": "{{count}} attempts remaining",
+    "enterPassword": "Enter password",
+    "unlock": "Unlock",
+    "wrongPin": "Incorrect PIN",
+    "wrongPassword": "Incorrect password",
+    "verificationError": "Verification failed",
+    "biometricsPrompt": "Unlock your wallet",
+    "unlockWithFaceId": "Unlock with Face ID?",
+    "unlockWithFingerprint": "Unlock with fingerprint?",
+    "forgotPassword": "Forgot password?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Unsupported Device",
+    "emulatorMessage": "This app cannot run on emulators for security reasons.",
+    "rootedTitle": "Security Warning",
+    "exitApp": "Exit",
+    "continueAnyway": "Continue Anyway"
+  },
+  "settingsSecurity": {
+    "title": "Security",
+    "autoLock": "Auto-Lock",
+    "autoLockDesc": "Lock wallet after inactivity",
+    "faceId": "Face ID",
+    "fingerprint": "Fingerprint",
+    "biometricsDesc": "Quick unlock with biometrics",
+    "changePin": "Change PIN",
+    "changePassword": "Change Password",
+    "changeDesc": "Update your security credentials",
+    "enableBiometrics": "Enable biometric unlock",
+    "enterCurrent": "Enter current {{type}}",
+    "enterNew": "Enter new {{type}}",
+    "confirmNew": "Confirm new {{type}}",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmNewPassword": "Confirm new password",
+    "changeNow": "Change Now",
+    "success": "Success",
+    "pinChanged": "PIN changed successfully",
+    "passwordChanged": "Password changed successfully",
+    "changeFailed": "Failed to change credentials",
+    "autoLockOptions": {
+      "immediately": "Immediately",
+      "after1min": "After 1 minute",
+      "after5min": "After 5 minutes",
+      "after15min": "After 15 minutes",
+      "after1hour": "After 1 hour",
+      "never": "Never"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Please Wait",
+    "cooldownMessage": "For security, you can reveal your keys again in {{time}}.",
+    "cooldownReason": "This prevents malicious apps from rapidly accessing your keys."
+  },
+  "passwordVerify": {
+    "title": "Verify Identity",
+    "description": "Enter your password or PIN to reveal sensitive wallet information",
+    "verify": "Verify"
+  },
+  "passwordValidation": {
+    "veryWeak": "Very weak",
+    "weak": "Weak",
+    "fair": "Fair",
+    "good": "Good",
+    "strong": "Strong",
+    "tooShort": "Password must be at least 8 characters",
+    "commonPassword": "This is a commonly used password",
+    "lengthSuggestion": "Use at least 12 characters for better security",
+    "mixedCaseSuggestion": "Mix uppercase and lowercase letters",
+    "numberSuggestion": "Add some numbers",
+    "specialCharSuggestion": "Add special characters (!@#$%)"
+  },
+  "forgot": {
+    "title": "Reset Credentials",
+    "warning": "To reset your password or PIN, you will need to enter your wallet seed phrase. This proves you own the wallet.",
+    "warningText": "Never share your seed phrase with anyone.",
+    "continue": "I Understand, Continue",
+    "enterSeed": "Enter Seed Phrase",
+    "seedDescription": "Enter your 12 or 24 word seed phrase. Separate each word with a space.",
+    "seedPlaceholder": "Enter seed phrase...",
+    "verifySeed": "Verify Seed Phrase",
+    "invalidSeed": "Please enter a valid 12 or 24 word seed phrase",
+    "chooseMethod": "Choose Security Method",
+    "methodDescription": "How would you like to secure your wallet?",
+    "newPassword": "Create New Password",
+    "newPin": "Create New PIN",
+    "newPasswordDesc": "Choose a strong password (8+ characters)",
+    "newPinDesc": "Enter a 6-digit PIN",
+    "confirmPassword": "Confirm Password",
+    "confirmPin": "Confirm PIN",
+    "confirmPasswordDesc": "Re-enter your password to confirm",
+    "confirmPinDesc": "Re-enter your PIN to confirm",
+    "resetNow": "Reset Now",
+    "complete": "Reset Complete",
+    "completeDescription": "Your credentials have been reset. You can now unlock your wallet with your new password or PIN.",
+    "unlockNow": "Unlock Wallet",
+    "passwordTooWeak": "Password is too weak. Please choose a stronger password.",
+    "passwordMismatch": "Passwords do not match",
+    "pinMismatch": "PINs do not match",
+    "resetFailed": "Failed to reset credentials. Please verify your seed phrase.",
+    "resetError": "An error occurred. Please try again."
+  },
+  "send": {
+    "title": "Send",
+    "selectToken": "Select Token",
+    "selectTokenInfo": "Select a token to send. Only tokens with balance are shown.",
+    "noTokensWithBalance": "No tokens with balance",
+    "addTokensFirst": "Add tokens to your wallet first",
+    "enterAmount": "Enter Amount",
+    "enterRecipient": "Enter Recipient",
+    "review": "Review",
+    "amount": "Amount",
+    "recipient": "Recipient",
+    "recipientPlaceholder": "0x... wallet address",
+    "networkFee": "Network Fee",
+    "gasToken": "Pay gas with",
+    "payingWith": "Paying With",
+    "payGasWith": "Pay Gas With",
+    "nativeGas": "UMT (native)",
+    "stableGas": "Stable Gas",
+    "selectStable": "Select stable",
+    "max": "Max",
+    "next": "Next",
+    "continue": "Continue",
+    "confirm": "Confirm Send",
+    "confirmSend": "Confirm Send",
+    "sending": "Sending...",
+    "failed": "Transaction Failed",
+    "viewInExplorer": "View in Explorer",
+    "done": "Done",
+    "cancel": "Cancel",
+    "send": "Send",
+    "balance": "Balance",
+    "available": "Available",
+    "to": "To",
+    "network": "Network",
+    "step": "Step",
+    "estimating": "Estimating…",
+    "umtNative": "UMT (native)",
+    "txSpeed": "Transaction Speed",
+    "transactionSpeed": "Transaction Speed",
+    "speed": {
+      "slow": "Slow",
+      "normal": "Normal",
+      "fast": "Fast"
+    },
+    "gasNotice": {
+      "stablecoin": "Gas will be paid with stablecoin.",
+      "reserved": "We reserved {{amount}} {{symbol}} for gas; you can send at most {{max}}."
+    },
+    "errors": {
+      "invalidAddress": "Invalid recipient address",
+      "invalidAmount": "Enter a valid amount",
+      "insufficientBalance": "Insufficient balance",
+      "insufficientGas": "Insufficient balance for gas",
+      "insufficientGasWithHint": "Insufficient balance for gas. Add UMT or a supported stablecoin.",
+      "notEnoughForGas": "Not enough balance to cover gas",
+      "noStableGas": "Not enough UMT for gas and no supported stable can cover it.",
+      "permitFailed": "Permit or approval failed for gas token",
+      "relayNotConfigured": "Stable gas relay not configured",
+      "transactionReverted": "Transaction reverted on-chain.",
+      "approvalNeeded": "Gas token needs approval but no UMT available for approval. Add a small amount of UMT or use a permit-supported token."
+    },
+    "addressBook": {
+      "title": "Address Book",
+      "addNew": "Add New",
+      "noContacts": "No saved addresses",
+      "saveForQuickAccess": "Save addresses for quick access",
+      "editContact": "Edit Contact",
+      "deleteContact": "Delete Contact",
+      "addressNotSaved": "Address not saved",
+      "addLabel": "Add a label",
+      "enterValidAddress": "Enter a valid address first",
+      "saved": "Saved",
+      "save": "Save"
+    },
+    "batch": {
+      "mode": "Batch Mode",
+      "singleMode": "Single Recipient",
+      "addRecipient": "Add recipients",
+      "noRecipients": "No recipients added yet",
+      "addFromTagOrBook": "Add from tag or address book",
+      "invalidAddress": "Invalid address: {{address}}",
+      "invalidAmount": "Invalid amount for {{recipient}}",
+      "totalExceedsBalance": "Total amount exceeds balance",
+      "sendingTo": "Sending to {{count}} recipient",
+      "sendingTo_plural": "Sending to {{count}} recipients",
+      "recipients": "Recipients",
+      "addresses": "{{count}} address",
+      "addresses_plural": "{{count}} addresses",
+      "addByTag": "Add by tag",
+      "noTags": "No tags yet",
+      "createFirstTag": "Create your first tag in the address book",
+      "addFromTag": "Add from tag",
+      "selectTag": "Select a tag",
+      "remove": "Remove",
+      "sendAll": "Send All ({{count}})",
+      "batchSend": "Batch Send",
+      "badge": "BATCH",
+      "successFail": "{{success}} succeeded, {{fail}} failed",
+      "successful": "Successful",
+      "sentStatus": "Sent",
+      "failedStatus": "Failed",
+      "details": "Batch Transfer Details",
+      "total": "Total",
+      "tagPicker": {
+        "title": "Select Tag",
+        "noTags": "No tags available",
+        "createHint": "Add tags to contacts in the address book first"
+      },
+      "tags": {
+        "manage": "Manage Tags",
+        "add": "Add Tag",
+        "remove": "Remove Tag",
+        "create": "Create Tag",
+        "newTag": "New tag name",
+        "addToContact": "Add tag to contact"
+      }
+    },
+    "success": {
+      "title": "Transaction Sent!",
+      "hash": "Hash",
+      "viewInExplorer": "View in Explorer",
+      "close": "Close"
+    }
+  },
+  "receive": {
+    "title": "Receive",
+    "yourAddress": "Your Wallet Address",
+    "scanQR": "Scan QR code to receive",
+    "copyAddress": "Copy Address",
+    "share": "Share"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Pay",
+      "myQr": "My QR"
+    },
+    "pay": {
+      "title": "Pay",
+      "description": "Scan your friend's QR code to pay directly into their wallet",
+      "allowCamera": "Allow Camera",
+      "requesting": "Requesting…",
+      "openSettings": "Open Settings",
+      "sendTo": "Send to",
+      "amount": "Amount",
+      "rescan": "Rescan",
+      "continue": "Continue"
+    },
+    "receive": {
+      "title": "Receive",
+      "description": "Scan this QR code to send payments to this address",
+      "tapToCopy": "Tap to copy address",
+      "copied": "Copied to clipboard!"
+    }
+  },
+  "history": {
+    "title": "Transaction History",
+    "sent": "Sent",
+    "received": "Received",
+    "token": "Token",
+    "external": "External",
+    "to": "To: ",
+    "from": "From: ",
+    "viewInExplorer": "View in Explorer",
+    "empty": {
+      "title": "No Transactions Yet",
+      "description": "Your transaction history will appear here once you send or receive tokens."
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "failed": "Failed"
+    },
+    "details": {
+      "title": "Transaction Details",
+      "status": "Status",
+      "type": "Type",
+      "to": "To",
+      "from": "From",
+      "address": "Address",
+      "token": "Token",
+      "block": "Block",
+      "gasCost": "Gas Cost",
+      "hash": "Hash",
+      "source": "Source",
+      "balanceDetected": "Balance detected",
+      "inferredNote": "This transaction was detected from a balance change. The exact on-chain details are not available."
+    },
+    "batch": {
+      "title": "Batch Transfer Details",
+      "badge": "BATCH",
+      "send": "Batch Send",
+      "recipients": "Recipients",
+      "recipientCount": "{{count}} recipient",
+      "recipientCount_plural": "{{count}} recipients",
+      "successful": "Successful",
+      "successOf": "{{success}} of {{total}}",
+      "sentStatus": "Sent",
+      "failedStatus": "Failed"
+    },
+    "time": {
+      "justNow": "Just now",
+      "minsAgo": "{{count}}m ago",
+      "hoursAgo": "{{count}}h ago",
+      "daysAgo": "{{count}}d ago"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "account": {
+      "title": "Account & Appearance",
+      "walletAddress": "Wallet Address",
+      "copy": "Copy",
+      "copied": "Copied"
+    },
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "language": {
+      "title": "Language",
+      "select": "Select Language",
+      "current": "Current"
+    },
+    "display": {
+      "title": "Display",
+      "description": "Customize your home screen appearance.",
+      "showSentinelCard": "Show Sentinel Earnings Card",
+      "showSentinelCardDesc": "Show earnings on home screen",
+      "showDailyRewardsCard": "Show Daily Rewards Card",
+      "on": "ON",
+      "off": "OFF",
+      "sentinelSettings": "Sentinel Settings",
+      "sentinelSettingsDesc": "Manage bond, rewards & auto-claim"
+    },
+    "sentinelDisplay": {
+      "title": "Sentinel Display",
+      "showSentinelCard": "Show Sentinel Card",
+      "showSentinelCardDesc": "Display sentinel earnings card on home screen",
+      "sentinelSettings": "Sentinel Settings",
+      "sentinelSettingsDesc": "Configure sentinel node and rewards"
+    },
+    "verification": {
+      "title": "Verification",
+      "description": "Verify your humanity with Inlyf to unlock daily rewards. A quick liveness check; re-verify periodically.",
+      "open": "Start Verification",
+      "refresh": "Refresh Verification",
+      "status": "Status",
+      "verified": "Verified",
+      "notVerified": "Not Verified",
+      "expiresOn": "Expires on",
+      "daysRemaining": "Days remaining",
+      "upToDate": "Verification up to date",
+      "refreshAvailableIn": "Refresh available in {{days}} days"
+    },
+    "network": {
+      "title": "Network",
+      "description": "Configure blockchain network connection.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (coming soon)",
+      "rpcEndpoint": "RPC Endpoint",
+      "pingRpc": "Ping RPC",
+      "testing": "Testing...",
+      "rpcOk": "RPC OK",
+      "rpcError": "RPC Error",
+      "save": "Save",
+      "saved": "Settings saved",
+      "connectionStatus": "Connection Status",
+      "connected": "Connected",
+      "disconnected": "Disconnected"
+    },
+    "cache": {
+      "title": "Cache",
+      "description": "Clear cached data to refresh token and contract information.",
+      "clearCache": "Clear Cache",
+      "cacheCleared": "Cache cleared! Restart to apply."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Help secure the blockchain by keeping your phone online. Complete at least one sampling job per day to stay eligible for rewards.",
+      "wifiOnly": "WiFi Only",
+      "wifiOnlyHint": "Saves mobile data",
+      "minBattery": "Minimum Battery",
+      "minBatteryHint": "Won't run below this level",
+      "background": "Run in Background",
+      "backgroundHint": "Works even when app is closed",
+      "lastSample": "Last Activity",
+      "noSamples": "No activity yet. Keep the app open to start.",
+      "staleWarning": "Not seen today — reopen the app to resume.",
+      "androidBatteryWarning": "Battery optimization may prevent sampling",
+      "androidBatteryHint": "Go to Settings → Apps → Umotu → Battery → select \"Unrestricted\" to allow background sampling.",
+      "openSettings": "Tap to open settings",
+      "tip": "Enable \"Run in Background\" for the best earning potential.",
+      "runNow": "Run now",
+      "running": "Running…",
+      "lastError": "Last error",
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "paused": "Paused"
+      }
+    },
+    "permissions": {
+      "title": "Permissions",
+      "description": "Manage connected Mini Apps and their permissions.",
+      "openMiniApps": "Open Mini Apps",
+      "manageConnections": "Manage",
+      "noConnections": "No connected apps",
+      "revokeAccess": "Revoke Access",
+      "lastUsed": "Last used"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Welcome to Umotu",
+      "subtitle": "$10 a day, everyone everywhere",
+      "getStarted": "Get Started"
+    },
+    "language": {
+      "title": "Choose Your Language",
+      "continue": "Continue"
+    },
+    "wallet": {
+      "title": "Your Wallet",
+      "createNew": "Create New Wallet",
+      "importExisting": "Import Existing",
+      "creating": "Creating wallet..."
+    },
+    "verify": {
+      "title": "Verify You're Human",
+      "description": "To receive daily rewards, verify that you're a unique human.",
+      "continue": "Continue"
+    }
+  },
+  "poh": {
+    "subtitle": "Unlock daily rewards",
+    "description": "Verify liveness with Inlyf to unlock rewards. No biometrics are stored on-chain; only a short-lived credential is issued.",
+    "howItWorks": "How it works",
+    "howItWorksDesc": "A short liveness check (face scan) verifies you are human. Your credential lasts 90 days and can be refreshed anytime.",
+    "adultQuestion": "Are you an adult (18+)?",
+    "yesAdult": "Yes, 18+",
+    "noMinor": "No / Minor",
+    "selectAge": "Please select an option",
+    "verifying": "Verifying...",
+    "startVerification": "Start Verification",
+    "skipForNow": "Skip for now",
+    "status": {
+      "notVerified": "Not verified yet.",
+      "notVerifiedDetail": "Start verification to unlock rewards.",
+      "unavailable": "Status unavailable.",
+      "verified": "You are verified.",
+      "validFor": "Valid for ~{{days}} day",
+      "validFor_plural": "Valid for ~{{days}} days",
+      "expired": "Verification expired or not found.",
+      "expiredDetail": "Re-run liveness to refresh your credential."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Join the Sentinel pool to help finalize blocks. Bond at least the minimum amount, keep your device online, and earn rewards.",
+    "loading": "Loading sentinel data...",
+    "unavailable": "Sentinel module unavailable",
+    "yourStatus": "Your Status",
+    "wallet": "Wallet",
+    "bondedAmount": "Bonded Amount",
+    "minimumBond": "Minimum Bond",
+    "status": {
+      "notBonded": "Not bonded",
+      "bonded": "Bonded",
+      "unbonding": "Unbonding (available {{date}})"
+    },
+    "rewards": {
+      "title": "Rewards",
+      "claimableNow": "Claimable Now",
+      "accruing": "Accruing",
+      "totalClaimed": "Total Claimed",
+      "claiming": "Claiming...",
+      "claimRewards": "Claim Rewards"
+    },
+    "bond": {
+      "createTitle": "Create Bond",
+      "topUpTitle": "Top Up Bond",
+      "createDescription": "Bond UMT to join the sentinel committee and start earning.",
+      "topUpDescription": "Increase your stake to earn a larger share of rewards.",
+      "amountLabel": "Amount (UMT)",
+      "processing": "Processing...",
+      "bond": "Bond",
+      "topUp": "Top Up",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Auto-Claim",
+      "description": "Let the relayer automatically claim your sentinel rewards when they accrue.",
+      "checking": "Checking...",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "expires": "Expires",
+      "processing": "Processing...",
+      "enable": "Enable Auto-Claim",
+      "disable": "Disable Auto-Claim"
+    },
+    "activity": {
+      "title": "Recent Activity",
+      "claims": "Claims",
+      "slashes": "Slashes",
+      "noClaims": "No claims in the last {{blocks}}k blocks.",
+      "noSlashes": "No slash events in the recent window.",
+      "unknown": "unknown"
+    },
+    "errors": {
+      "configureEnv": "Configure RPC + sentinel contract env vars.",
+      "noWallet": "Create or import a wallet to join the sentinel committee.",
+      "loadFailed": "Failed to load sentinel data."
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel rewards claimed.",
+      "noRewards": "No pending rewards to claim.",
+      "claimFailed": "Claim failed.",
+      "autoClaimEnabled": "Sentinel auto-claim enabled",
+      "autoClaimDisabled": "Sentinel auto-claim disabled",
+      "autoClaimFailed": "Auto-claim toggle failed",
+      "configureBondAddress": "Configure sentinel bond address",
+      "rpcNotSet": "RPC not set",
+      "minBondUnavailable": "Min bond unavailable",
+      "enterBondAmount": "Enter a bond amount",
+      "minBondRequired": "Initial bond must be at least {{amount}} UMT",
+      "topUpGreaterThanZero": "Top-up amount must be greater than 0",
+      "insufficientBalance": "Insufficient balance for bond + gas",
+      "bondSubmitted": "Bond transaction submitted",
+      "topUpSubmitted": "Top-up transaction submitted",
+      "bondConfirmed": "Bond confirmed",
+      "topUpConfirmed": "Top-up confirmed",
+      "bondReverted": "Bond reverted on-chain",
+      "bondFailed": "Bond failed"
+    }
+  },
+  "miniapps": {
+    "title": "MiniApps",
+    "subtitle": "Explore apps built on Umotu",
+    "explore": "Explore apps built on Umotu",
+    "noApps": "No apps available yet",
+    "browseByCategory": "Browse by Category",
+    "appsCount": "{{count}} apps",
+    "featured": "FEATURED",
+    "comingSoon": "Coming Soon",
+    "liveApps": "Live Apps",
+    "available": "AVAILABLE",
+    "pohDescription": "Verify your humanity with Inlyf to unlock daily rewards.",
+    "vision": {
+      "title": "Our Vision",
+      "tagline": "$10 a day, everyone everywhere",
+      "description": "Umotu is building infrastructure for a world where everyone can participate in the global economy—regardless of where they live or which bank they use.",
+      "readMore": "Read Full Vision",
+      "pillars": {
+        "title": "Three Core Principles",
+        "ubi": {
+          "title": "$10/Day, Everyone Everywhere",
+          "description": "Universal basic income as earned rewards for securing the network. Anyone with a phone can participate and earn."
+        },
+        "capital": {
+          "title": "Capital Moves Freely",
+          "description": "Near-zero friction for payments and transfers—cross-border or local. Businesses pay ~0.1% to cover platform costs, individuals pay nothing."
+        },
+        "sovereignty": {
+          "title": "Respect Monetary Sovereignty",
+          "description": "We don't replace fiat currencies—we make them work better. Banks issue stablecoins pegged to their local currency. Monetary policy becomes more effective with broader reach and less friction."
+        }
+      },
+      "notReplacing": "Umotu isn't competing with central banks. We're building better infrastructure for fiat currencies: less friction, global access, and improved market efficiency and resilience."
+    },
+    "building": {
+      "title": "We're Building the Ecosystem",
+      "description": "These apps showcase what's possible on Umotu. Some are ready now, others are coming soon. Developers worldwide are invited to build and launch on our platform.",
+      "developerDocs": "Developer Docs"
+    },
+    "categories": {
+      "payments": {
+        "name": "Payments & Finance",
+        "apps": {
+          "sendMoney": {
+            "name": "Send Money",
+            "description": "Send UMT or stablecoins instantly to anyone, anywhere in the world—no banks needed.",
+            "example": "Send $20 to your family abroad in seconds, not days. Zero hidden fees."
+          },
+          "billPay": {
+            "name": "Bill Pay",
+            "description": "Pay utilities, phone, internet, and more directly from your wallet."
+          },
+          "savings": {
+            "name": "Savings Circles",
+            "description": "Traditional rotating savings (tontine, chit fund) made trustless with smart contracts."
+          },
+          "microLoans": {
+            "name": "Micro Loans",
+            "description": "Peer-to-peer lending backed by your verified humanity and reputation."
+          }
+        }
+      },
+      "transport": {
+        "name": "Transport & Delivery",
+        "apps": {
+          "rideSharing": {
+            "name": "Ride Sharing",
+            "description": "Book rides paid in crypto. Drivers keep more, riders pay less—no middleman taking 30%.",
+            "example": "A taxi ride in Lagos costs ₦800. Driver gets ₦799.2 instead of ₦560."
+          },
+          "delivery": {
+            "name": "Delivery",
+            "description": "Order food, groceries, or packages. Couriers earn fair wages in stable tokens.",
+            "example": "Order lunch, pay in your local stablecoin, courier gets paid instantly."
+          },
+          "publicTransit": {
+            "name": "Public Transit",
+            "description": "Pay for buses, metros, and trains with a tap. No need to buy fare cards."
+          }
+        }
+      },
+      "travel": {
+        "name": "Travel & Hospitality",
+        "apps": {
+          "hotels": {
+            "name": "Hotels & Stays",
+            "description": "Book accommodations worldwide. Hosts accept stablecoins, guests save on fees.",
+            "example": "Book a room in Bali for $40/night. Host receives $39.96."
+          },
+          "flights": {
+            "name": "Flights",
+            "description": "Search and book flights. Pay in crypto, earn UMT rewards."
+          },
+          "tours": {
+            "name": "Local Tours",
+            "description": "Book experiences with local guides. Payments go directly to them."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Shopping & Commerce",
+        "apps": {
+          "localMarket": {
+            "name": "Local Market",
+            "description": "Buy and sell locally. QR-based payments make street commerce seamless.",
+            "example": "A vendor in Jakarta accepts USDC. Customer pays, vendor sees funds instantly."
+          },
+          "ecommerce": {
+            "name": "E-commerce",
+            "description": "Shop online from merchants worldwide. No card fees, no chargebacks.",
+            "example": "Buy electronics from Shenzhen. Pay in stablecoins, save 3% vs credit card."
+          },
+          "marketplace": {
+            "name": "Peer Marketplace",
+            "description": "List items for sale, buy from others. Escrow protects both parties."
+          }
+        }
+      },
+      "services": {
+        "name": "Services & Work",
+        "apps": {
+          "remittance": {
+            "name": "Remittance",
+            "description": "Send money home. Recipients can cash out to local currency or keep it digital.",
+            "example": "Send $200 from USA to Philippines. Recipient gets ₱11,000+ instead of ₱10,400."
+          },
+          "freelance": {
+            "name": "Freelance Work",
+            "description": "Get paid for gig work instantly. No waiting 30 days for bank transfers."
+          },
+          "homeServices": {
+            "name": "Home Services",
+            "description": "Hire plumbers, electricians, cleaners. Pay only when the job is done."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Build Your Business on Umotu",
+      "subtitle": "Launch apps with built-in payments",
+      "description": "Create apps that tap into the Umotu ecosystem—millions of verified humans with daily income, ready to transact. No payment integration headaches.",
+      "benefits": {
+        "noFees": "Almost Zero payment processing fees—keep 99.9% of revenue",
+        "verifiedUsers": "All users are verified humans—no bots or fraud",
+        "globalReach": "Reach users in 190+ countries from day one",
+        "instantPayments": "Instant settlements—no 30-day payment delays"
+      },
+      "exampleTitle": "Use Case",
+      "exampleText": "A ride-sharing app on Umotu keeps 99.9% of fares vs 70% on traditional platforms. Drivers earn more, riders pay less.",
+      "docsButton": "Read Docs",
+      "buildButton": "Start Building"
+    },
+    "bank": {
+      "title": "Are You a Bank?",
+      "subtitle": "Issue stablecoins on Umotu",
+      "description": "Licensed financial institutions can issue local currency stablecoins on Umotu and tap into a growing UBI economy with millions of users.",
+      "benefits": {
+        "reserves": "Earn yield on reserves: invest in bonds and low-risk assets",
+        "mintRedeem": "Charge mint/redeem fees: typically 0.1% on fiat ↔ stablecoin conversions",
+        "users": "Access millions of daily active UBI recipients",
+        "global": "Expand your reach beyond borders instantly",
+        "custody": "Your reserves, your custody: full control over backing assets"
+      },
+      "revenueModel": "How Issuers Earn",
+      "revenueNote": "Like Tether and other major issuers, revenue comes from reserve yield and conversion fees. With millions of users receiving daily UBI, mint/redeem volume can be substantial.",
+      "futureNote": "Issuers may also receive a share of transaction fees in the future as the protocol evolves.",
+      "learnMore": "Learn More",
+      "applyButton": "Apply Now"
+    }
+  },
+  "news": {
+    "title": "News & Updates",
+    "description": "Stay updated with the latest announcements, tips, and security alerts from the Umotu team.",
+    "empty": "No news at the moment",
+    "unread": "New",
+    "unreadCount": "{{count}} new",
+    "markAsRead": "Mark as read",
+    "types": {
+      "announcement": "Announcement",
+      "tip": "Tip",
+      "security": "Security",
+      "airdrop": "Airdrop",
+      "update": "Update"
+    }
+  },
+  "governance": {
+    "title": "Governance",
+    "subtitle": "Shape the future of Umotu",
+    "description": {
+      "title": "Your Voice Matters",
+      "body": "Help shape the future of Umotu by voting on community proposals. The Umotu Foundation organizes these votes, but the community decides."
+    },
+    "empty": "No active proposals",
+    "emptyHint": "Check back later for new community decisions to vote on.",
+    "newPolls": "New",
+    "newPollsCount": "{{count}} new",
+    "vote": "vote",
+    "votes": "votes",
+    "endsIn": "Ends in {{time}}",
+    "ended": "Ended",
+    "tapToVote": "Tap an option above to cast your vote",
+    "submitting": "Submitting vote...",
+    "alreadyVoted": {
+      "title": "Already Voted",
+      "message": "You have already voted in this proposal."
+    },
+    "confirm": {
+      "title": "Confirm Vote",
+      "message": "Vote for",
+      "note": "This action cannot be undone.",
+      "submit": "Submit Vote"
+    },
+    "success": {
+      "title": "Vote Submitted!",
+      "message": "Thank you for participating in community governance."
+    },
+    "error": {
+      "title": "Vote Failed",
+      "message": "Failed to submit vote. Please try again."
+    }
+  },
+  "learn": {
+    "title": "Learn",
+    "subtitle": "Everything you need to know about Umotu",
+    "featured": "FEATURED",
+    "whatIs": {
+      "title": "What is Umotu?",
+      "subtitle": "$10 a day, everyone everywhere",
+      "intro": "Umotu aims to let anyone earn about $10/day using just a smartphone. No expensive hardware, no special skills, no borders.",
+      "howDifferent": "How is it different?",
+      "noMiddleman": "No middleman: You interact directly with the network—no bank account required",
+      "globalAccess": "Global access: Works anywhere with internet",
+      "youOwnIt": "You own it: Your wallet, your keys, your control",
+      "vision": "The Vision",
+      "visionText": "Billions of people can help keep a public ledger honest and earn for it. On Umotu, phones do lightweight checks that make the network trustworthy.",
+      "nameOrigin": "The Name",
+      "nameOriginText": "Umotu takes inspiration from Paʻumotu, a Polynesian language. We use the name respectfully as a reminder to build for everyday people."
+    },
+    "earn": {
+      "title": "How You Earn",
+      "subtitle": "Your phone works; you get paid",
+      "intro": "Your phone performs tiny tasks that help everyone—then you get rewarded.",
+      "steps": "Three Simple Steps",
+      "step1": "1) Prove you're human: a quick liveness check (and occasional refresh) ensures each person has one account.",
+      "step2": "2) Help the network: your phone runs Data Availability (DA) sampling and other lightweight checks in the background.",
+      "step3": "3) Earn daily rewards: you’re paid for this work, with a target around $10/day depending on network policy.",
+      "localCurrency": "Paid in Your Currency",
+      "localCurrencyText": "Choose a payout token: local-currency stablecoins (where available) or UMT. Amounts target ~$10 USD value and may adjust with participation and market conditions."
+    },
+    "whereMoney": {
+      "title": "Where Does $10 Come From?",
+      "subtitle": "You earn because you do work",
+      "intro": "It’s the #1 question. The short answer: because you provide a service the network needs.",
+      "realWork": "Your Phone Does Real Work",
+      "realWork1": "Data Availability Sampling: your phone checks that block data is available and correct",
+      "realWork2": "Human Participation: you prove one-person-one-account to stop bots and spam",
+      "realWork3": "These tasks protect everyone; without them the network weakens",
+      "valueSource": "Two Sources of Value",
+      "utility": "Utility: fast, low-fee payments people choose to use",
+      "consensus": "Consensus: value that grows as more people can verify and agree on the rules",
+      "distribution": "How Rewards Are Distributed",
+      "newTokens": "New UMT tokens are created and shared with verified phone participants (not with validators)",
+      "fees": "A portion of fees and builder bids is shared with phone sentinels for finalizing blocks",
+      "treasury": "A small portion funds ongoing maintenance and stability programs",
+      "whyDifferent": "Why This Is Different",
+      "btcProblem": "Bitcoin rewards specialized miners (capital-intensive)",
+      "ethProblem": "Ethereum rewards large stakers (capital-intensive)",
+      "umotuSolution": "Umotu rewards everyday phones (low practical cost to participate)",
+      "conclusion": "It’s not a giveaway: you’re paid for work that keeps a shared financial infrastructure honest and useful."
+    },
+    "security": {
+      "title": "Wallet Security",
+      "subtitle": "Protect your money",
+      "intro": "Your wallet is like a digital vault that only you control.",
+      "recovery": "Your 12 Words & Private Key",
+      "recoveryText": "Your 12 secret words (recovery phrase) and your private key both unlock your wallet. Anyone who has either can move your funds.",
+      "rules": "Golden Rules",
+      "rule1": "NEVER share your 12 words or private key with anyone—not even Umotu contributors.",
+      "rule2": "Write your 12 words on paper and store them offline. Do not store them in screenshots, photos, or cloud notes.",
+      "rule3": "If you export your private key, keep it offline (paper, hardware, or an encrypted manager you fully trust).",
+      "rule4": "If you lose your 12 words and private key, no one can recover your wallet.",
+      "warning": "Important",
+      "warningText": "Your private key grants full access. Revealing or copying it to other apps can expose your funds. Only export if you understand the risk.",
+      "reveal": "Reveal / Export Private Key",
+      "revealText": "You can reveal or export your private key in Wallet Settings. We require biometrics/PIN, show it only for a few seconds, and never upload it. Consider using a hardware wallet for large balances.",
+      "bestPractices": "Best Practices",
+      "best1": "Enable screen lock & biometrics on your phone.",
+      "best2": "Keep the app updated to get the latest security fixes.",
+      "best3": "Use a separate wallet for large savings; keep small amounts on your phone for daily use.",
+      "scamBannerTitle": "No One Legit Will Ask",
+      "scamBannerText": "If anyone asks for your 12 words or private key, it’s a scam."
+    },
+    "stablecoins": {
+      "title": "Understanding Stablecoins",
+      "subtitle": "Digital money that tracks local currency",
+      "intro": "Stablecoins are digital tokens designed to track regular money (like USD, ZAR, NGN).",
+      "examples": "Examples",
+      "example1": "1 ZAR1 ≈ 1 South African Rand",
+      "example2": "1 USD1 ≈ 1 US Dollar",
+      "example3": "1 NGN1 ≈ 1 Nigerian Naira",
+      "backed": "Issued by Partners",
+      "backedText": "Stablecoins on Umotu are issued by regulated partners and designed to hold a 1:1 value with reserves. Issuers publish proof-of-reserves and redemption terms.",
+      "convert": "Converting to Cash",
+      "convertText": "Convert through partner banks/exchanges, or spend directly where accepted."
+    },
+    "economics": {
+      "title": "UMT Economics",
+      "subtitle": "Who gets what and why",
+      "intro": "UMT has a fixed supply of 100 billion tokens. Most of it is paid to everyday phone users who help keep the network honest.",
+      "supply": "Supply & Distribution",
+      "supplyBullets": [
+        "The vast majority of the token supply is reserved for phone participants over time and is released through the Emission Controller. The Emission Controller caps daily issuance at no more than 0.01% of the remaining supply, ensuring long-term sustainability. Under this schedule, approximately 68% of the total supply remains after 10 years, and about 15% remains after 50 years.",
+         "A small portion of the supply is created at launch for specific purposes, including an early user airdrop, a community sale, the foundation allocation, and an emergency reserve etc."
+      ],
+      "premine": "Launch Allocation (tentative, subject to change at mainnet launch)",
+      "premineTable": [
+        {
+          "label": "User Airdrop",
+          "value": "1.0%"
+        },
+        {
+          "label": "Community Sale",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu Foundation (timelocked)",
+          "value": "0.2%"
+        },
+        {
+          "label": "Emergency Fund (governed)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "Daily Rewards for Phones",
+      "emissionsText": "Each day the network can emit at most 0.01% of the remaining emissions pool. We budget that amount so verified phones target about $10/day, adjusting with how many people participate and market conditions.",
+      "fees": "Fees & Sentinels",
+      "feesText": "Sentinel helpers (optional, advanced) earn a share of transaction fees and builder bids. This is separate from daily emissions.",
+      "transparency": "Transparency",
+      "transparencyText": "Vesting schedules and wallets are public. Daily emission caps and realized payouts are posted in the app.",
+      "disclaimerTitle": "Plain-Language Reminder",
+      "disclaimerText": "This is not investment advice. Rewards depend on network policy and participation. The app does not guarantee a fixed income."
+    },
+    "contribute": {
+      
+      "title": "How to Contribute",
+      "subtitle": "Help build Umotu",
+      "intro": "Umotu is open source and community-driven. Everyone can help—whether you code, translate, or simply share feedback.",
+      "waysTitle": "Ways to Contribute",
+      "code": {
+        "title": "Improve the Code",
+        "text": "Fix bugs, add features, write tests, or review pull requests. Check our GitHub repos for the app, smart contracts, and backend services.",
+        "cta": "View GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Help with Translations",
+        "text": "Make the app feel natural in your language. Edit the i18n locale files and test every screen. Your edits help millions.",
+        "cta": "Translation Guide",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "Expand BIP-39 Languages",
+        "text": "Propose new or improved wordlists so more people can see their 12-word recovery phrase in their native language.",
+        "cta": "See BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Join Governance",
+        "text": "Read proposals, discuss openly, and vote in the app. Your voice helps guide network parameters and grant allocations.",
+        "cta": "Open Governance",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Spread the Word",
+        "text": "Tell friends, write tutorials, publish shorts, answer questions. A stronger community means a stronger network for everyone.",
+        "cta": "Share Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "All contributions are voluntary. There is no formal employment or compensation unless specified in a grant proposal."
+    },
+    "decentralization": {
+      "title": "Why Decentralization",
+      "subtitle": "No single point of control",
+      "intro": "Decentralization means no single company or government can shut the network down or confiscate your funds.",
+      "benefits": "Benefits for You",
+      "benefit1": "Always on: 24/7 availability",
+      "benefit2": "Lower fees: small network fees instead of 3–5% card fees",
+      "benefit3": "No borders: send value globally",
+      "benefit4": "Censorship-resistant: your keys, your money",
+      "benefit5": "Transparent: anyone can verify how the system works",
+      "howWorks": "How It Works",
+      "howWorksText": "Validators propose blocks every ~2 seconds. Phones (like yours) verify and finalize with lightweight checks. Many small contributions add up to strong security."
+    },
+    "noCompany": {
+      "title": "No Company, No Customers",
+      "subtitle": "Understand the model",
+      "intro": "There is no 'Umotu, Inc.' controlling the protocol. Umotu is an open set of rules anyone can use.",
+      "notCompany": "What Umotu is NOT",
+      "notCompany1": "NOT a company with customer accounts",
+      "notCompany2": "NOT a bank or money transmitter",
+      "notCompany3": "NOT controlled by any single entity",
+      "notCompany4": "NOT able to reverse transactions",
+      "whatIs": "What Umotu IS",
+      "whatIs1": "A protocol: like email or the web—open, interoperable rules",
+      "whatIs2": "Phone-first: runs with help from everyday smartphones",
+      "whatIs3": "Community-driven: you are a participant, not a customer",
+      "foundation": "The Umotu Foundation",
+      "foundationIntro": "A nonprofit that supports the ecosystem (reference apps, docs, community programs) but does not control the protocol.",
+      "foundationTask1": "Maintains the mobile app & explorer as reference implementations",
+      "foundationTask2": "Operates some public infrastructure (others can run theirs)",
+      "foundationTask3": "Coordinates community governance (news, votes)",
+      "foundationTask4": "Reviews and lists supported stablecoins",
+      "foundationTask5": "Publishes education & safety guides",
+      "foundationNote": "The Foundation cannot access your wallet and cannot reverse transactions."
+    },
+    "scamPrevention": {
+      "title": "Avoid Scams",
+      "subtitle": "Protect yourself",
+      "intro": "The Umotu Foundation will NEVER DM you. Anyone pretending to be 'support' is a scammer.",
+      "redFlags": "Red Flags",
+      "redFlag1": "Someone claiming to be customer support",
+      "redFlag2": "Links to 'verify' or 'upgrade' your account",
+      "redFlag3": "Requests for your 12-word phrase or private key",
+      "redFlag4": "Promises of bonus tokens if you send funds",
+      "redFlag5": "Apps or sites asking you to 'activate' rewards",
+      "truth": "The Truth",
+      "truth1": "There is no customer support that can reset your wallet",
+      "truth2": "All official updates appear in this app",
+      "truth3": "No one from Umotu will ask for your recovery phrase or private key",
+      "truth4": "Download this app only from the official Apple Store or Google Play",
+      "whatToDo": "If Someone Contacts You",
+      "action1": "Do not respond",
+      "action2": "Do not click links",
+      "action3": "Do not share information",
+      "action4": "Block and report"
+    },
+    "airdrop": {
+      "title": "Testnet Airdrop",
+      "subtitle": "Early users get recognized",
+      "intro": "You're early! Umotu is in testnet. Active testnet participants may receive an allocation when mainnet launches.",
+      "howToQualify": "How to Qualify",
+      "step1": "Create a wallet in the app",
+      "step2": "Complete human verification (Proof of Human)",
+      "step3": "Use the app regularly during testnet",
+      "whenAirdrop": "When is the Airdrop?",
+      "whyTestnet": "Testnet is essential: users learn wallet security, and the system is tested for security, robustness, and efficiency before mainnet.",
+      "timeline": "Mainnet is expected in Q1 or Q2 of 2026. The airdrop will happen around the same time mainnet launches.",
+      "howMuch": "How Much Will I Get?",
+      "totalPool": "Total airdrop pool: 1,000,000,000 UMT tokens. Your share depends on total participants and UMT price at launch.",
+      "scenario2": "1M users: ~1,000 UMT per user, expected price ~$1, airdrop value ~$1,000",
+      "scenario3": "10M users: ~100 UMT per user, expected price ~$20, airdrop value ~$2,000",
+      "scenario4": "100M users: ~10 UMT per user, expected price ~$300, airdrop value ~$3,000",
+      "disclaimer": "These are projections only, not guarantees. Actual values depend on market conditions and program rules.",
+      "whatYouGet": "What You Get",
+      "reward": "At mainnet, your testnet wallet may receive real tokens based on participation and program rules. Earlier and more active users are prioritized.",
+      "note": "Note: Testnet tokens have no value. Any mainnet allocation is determined by program policy at launch. All news about airdrop will be published only in this app."
+    },
+    "gettingStarted": {
+      "title": "Getting Started",
+      "subtitle": "Your first five minutes",
+      "intro": "Here’s your quick setup:",
+      "checklist": "Setup Checklist",
+      "check1": "1) Pick your language (done!)",
+      "check2": "2) Create or import a wallet",
+      "check3": "3) IMPORTANT: Write down your 12 words on paper",
+      "check4": "4) Complete human verification (quick scan)",
+      "check5": "5) Keep the app running to earn daily rewards",
+      "tips": "Pro Tips",
+      "tip1": "Allow background access so checks can run",
+      "tip2": "Check back daily to see rewards",
+      "tip3": "Invite friends—more users make the network stronger"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "done": "Done",
+    "continue": "Continue",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "success": "Success",
+    "failed": "Failed",
+    "copied": "Copied!",
+    "pullToRefresh": "Pull to refresh",
+    "notSet": "Not set"
+  },
+  "errors": {
+    "networkError": "Network error. Please check your connection.",
+    "genericError": "Something went wrong. Please try again.",
+    "walletNotFound": "Wallet not found",
+    "transactionFailed": "Transaction failed",
+    "invalidInput": "Invalid input"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Welcome to Umotu",
+  "onboard_wallet_title": "Set up your wallet",
+  "onboard_wallet_explain": "Create or import a wallet to receive rewards.",
+  "wallet_create": "Create New Wallet",
+  "wallet_import": "Import Wallet",
+  "wallet_import_explain": "Enter your 12-word recovery phrase",
+  "wallet_created": "Wallet Ready",
+  "wallet_save": "Save to Device",
+  "wallet_backup_title": "Backup Your Recovery Phrase",
+  "wallet_backup_explain": "Write down these 12 words in order. This is the ONLY way to recover your wallet if you lose your device.",
+  "wallet_backup_warning": "Never share your recovery phrase. Anyone with these words can access your funds.",
+  "wallet_backup_confirm": "I have written down my recovery phrase",
+  "wallet_backup_done": "I've Saved My Phrase",
+  "wallet_save_first": "Please save your recovery phrase first",
+  "poh_title": "Verify Human",
+  "continue": "Continue",
+  "or": "OR",
+  "seedReveal": {
+    "title": "Recovery Phrase",
+    "intro": "Your recovery phrase is the only way to restore your wallet if you lose access to this device. Write it down and store it securely offline.",
+    "displayLanguage": "Displayed in {{language}}",
+    "hiddenMsg": "Your phrase is hidden for security. Tap below to reveal it.",
+    "showButton": "Reveal Phrase",
+    "noScreenshot": "Never take a screenshot of your recovery phrase.",
+    "checkTitle": "Verify Your Backup",
+    "checkPrompt": "Enter the words below to confirm you've written them down correctly:",
+    "checkWordN": "Word #{{n}}",
+    "checkIncorrect": "One or more words are incorrect. Please check your backup.",
+    "ackWritten": "I have written down my recovery phrase",
+    "ackCannotRecover": "I understand Umotu cannot recover my wallet",
+    "cancel": "Cancel",
+    "continue": "I've Saved It"
+  }
+}

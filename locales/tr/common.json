@@ -1,0 +1,1418 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "Günde 10 dolar, herkes için her yerde"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "wallet": "Cüzdan",
+    "miniapps": "Mini Uygulamalar",
+    "back": "Geri",
+    "scan": "Tara",
+    "settings": "Ayarlar",
+    "close": "Kapat"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Doğrulanmış İnsanlar",
+      "umtPrice": "UMT Fiyatı"
+    },
+    "quickActions": {
+      "news": "Haberler",
+      "vote": "Yönetim",
+      "governance": "Yönetim",
+      "learn": "Öğren",
+      "network": "Ağ"
+    },
+    "setupProgress": {
+      "title": "Kurulum İlerlemesi",
+      "steps": {
+        "language": "Dil",
+        "wallet": "Cüzdan",
+        "verifyHuman": "İnsan Doğrula",
+        "complete": "Tamamlandı"
+      },
+      "continue": "Devam Et",
+      "changeChoice": "Seçimi değiştir",
+      "requiresLanguage": "Önce dil seçin",
+      "requiresWallet": "Önce cüzdan oluşturun"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Günlük Ödüller",
+      "totalEarned": "Toplam Kazanılan",
+      "lastClaimed": "Son Talep Edilen",
+      "never": "Asla",
+      "configure": "Yapılandır",
+      "loading": "Kazançlar yükleniyor...",
+      "noWallet": "Cüzdan yok",
+      "autoClaim": {
+        "label": "Otomatik talep:",
+        "active": "Aktif",
+        "setupNow": "Şimdi kur",
+        "expired": "Süresi dolmuş",
+        "tapToSetup": "Otomatik günlük ödülleri etkinleştirmek için dokunun"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel Kazançları",
+      "manage": "Yönet",
+      "loading": "Yükleniyor...",
+      "status": "Durum",
+      "statuses": {
+        "notBonded": "Bağlanmamış",
+        "bonded": "Bağlanmış",
+        "unbonding": "Bağ çözülüyor"
+      },
+      "claimable": "Talep Edilebilir",
+      "accruing": "Biriken",
+      "bonded": "Bağlanmış"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Otomatik Günlük Ödüller",
+      "description": "<bold>Otomatik talep</bold> özelliğini etkinleştirerek $10 günlük UBI ödülünüzü otomatik olarak alın—manuel talep gerekmez!",
+      "benefits": {
+        "midnight": "Saat gece yarısında zaman diliminize göre talep eder",
+        "lowerFees": "%80 daha düşük gaz ücretleri (diğer kullanıcılarla toplu)",
+        "disable": "Ayarlar'dan istediğiniz zaman devre dışı bırakabilirsiniz"
+      },
+      "notice": "Bizim relay'in sizin adınıza talep etmesine izin veren tek seferlik bir yetkilendirme mesajı imzalayacaksınız. Özel anahtarlar paylaşılmaz.",
+      "maybeLater": "Belki Sonra",
+      "enableNow": "Şimdi Etkinleştir"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Otomatik Talep Ayarları",
+      "description": "Günlük ödüllerinizi otomatik olarak talep edin.",
+      "checking": "Durum kontrol ediliyor...",
+      "status": "Durum",
+      "enabled": "Etkin",
+      "disabled": "Devre Dışı",
+      "lastClaimed": "Son Talep Edilen",
+      "neverClaimed": "Asla",
+      "nextClaim": "Sonraki Talep",
+      "expiresAt": "Son Kullanma Tarihi",
+      "timezone": "Zaman Dilimi",
+      "preferredHour": "Tercih Edilen Saat",
+      "preferredHourHint": "Otomatik talebin ne zaman çalışacağını seçin",
+      "enableButton": "Otomatik Talebi Etkinleştir",
+      "disableButton": "Otomatik Talebi Devre Dışı Bırak",
+      "enabling": "Etkinleştiriliyor...",
+      "disabling": "Devre dışı bırakılıyor...",
+      "enableSuccess": "Otomatik talep etkinleştirildi!",
+      "enableError": "Etkinleştirilemedi",
+      "disableSuccess": "Otomatik talep devre dışı bırakıldı",
+      "disableError": "Devre dışı bırakılamadı",
+      "updateButton": "Ayarları Güncelle",
+      "updating": "Güncelleniyor..."
+    },
+    "manual": {
+      "title": "Manuel Talep",
+      "description": "Fonlara daha erken ihtiyacınız varsa, mevcut sonraki ödülü şimdi talep edin. Manuel talepler cüzdanınızın gazını kullanır. Beklerseniz otomatik talep daha ucuz kalır. Cüzdanınız fonlanmamışsa, manuel talepten önce otomatik talebi etkinleştirin veya yerel gaz ekleyin.",
+      "dayLabel": "Ödül günü",
+      "claimButton": "Şimdi Talep Et",
+      "claiming": "Talep ediliyor...",
+      "success": "Talep gönderildi",
+      "successWithId": "Talep gönderildi (id: {{id}})",
+      "error": "Talep başarısız",
+      "noProof": "Ödül kanıtı henüz yayınlanmadı. Bugünün anlık görüntüsü canlı olduktan sonra tekrar deneyin.",
+      "unauthorized": "Aktarıcı yetkilendirmesi başarısız. Lütfen tekrar deneyin veya destekle iletişime geçin.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "Mevcut ödül günleri: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "Kapsam: {{start}} - {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "Bu partiden sonra +{{days}} daha",
+      "batchSuccess": "{{count}} gün başarıyla talep edildi",
+      "claimingProgress": "Talep ediliyor {{claimed}}/{{total}}...",
+      "claimAllButton": "Tüm {{count}} günü talep et"
+    },
+    "timezone": {
+      "title": "Zaman Dilimi Seç",
+      "search": "Zaman dilimi ara...",
+      "current": "Mevcut Seçim",
+      "searchResults": "Arama Sonuçları",
+      "noResults": "Sonuç bulunamadı",
+      "detected": "Algılandı",
+      "popular": "Popüler Zaman Dilimleri",
+      "regions": {
+        "Americas": "Amerika",
+        "Europe": "Avrupa",
+        "Asia": "Asya",
+        "Africa": "Afrika",
+        "Oceania": "Okyanusya"
+      }
+    },
+    "payout": {
+      "title": "Ödeme Tercihi",
+      "description": "Tercih ettiğiniz ödeme para birimini seçin.",
+      "current": "Mevcut",
+      "saved": "Kaydedildi",
+      "saveError": "Kaydetme hatası",
+      "showMore": "Daha Fazla Göster ({{count}})",
+      "showLess": "Daha Az Göster",
+      "native": "Yerel Token",
+      "stablecoin": "Stablecoin",
+      "popular": "Popüler",
+      "allCurrencies": "Tüm Para Birimleri"
+    }
+  },
+  "wallet": {
+    "title": "Cüzdan",
+    "testnetNotice": "Testnet token'larının gerçek değeri yoktur",
+    "totalBalance": "Toplam Bakiye",
+    "balance": "Bakiye",
+    "address": "Adres",
+    "copyAddress": "Adresi Kopyala",
+    "addressCopied": "Adres kopyalandı",
+    "receive": "Al",
+    "send": "Gönder",
+    "swap": "Takas",
+    "swapComingSoon": "Takas yakında geliyor",
+    "history": "Geçmiş",
+    "tokens": "Token'lar",
+    "collectibles": "Koleksiyonlar",
+    "noTokens": "Yapılandırılmış token yok",
+    "nativeToken": "Yerel Token",
+    "loading": "Yükleniyor...",
+    "refreshing": "Yenileniyor...",
+    "balancesUpdated": "Bakiyeler güncellendi",
+    "menu": {
+      "manageTokens": "Token'ları Yönet",
+      "addressBook": "Adres Defteri",
+      "walletSettings": "Cüzdan Ayarları",
+      "showBalances": "Bakiyeleri Göster",
+      "hideBalances": "Bakiyeleri Gizle",
+      "showZeroTokens": "Sıfır Token'ları Göster",
+      "hideZeroTokens": "Sıfır Token'ları Gizle",
+      "refresh": "Yenile"
+    },
+    "manageTokens": {
+      "title": "Token'ları Yönet",
+      "info": "Özel ERC-20 token'ları ekleyin. Sistem token'ları varsayılan olarak dahil edilir.",
+      "addToken": "Token Ekle",
+      "adding": "Ekleniyor...",
+      "contractAddress": "Token sözleşme adresi (0x...)",
+      "autoFetch": "Sembol ve ondalıklar otomatik olarak alınır",
+      "customTokens": "Özel Token'lar",
+      "noCustomTokens": "Henüz özel token eklenmemiş.",
+      "addUsingForm": "Yukarıdaki formu kullanarak token ekleyin.",
+      "systemToken": "Bu token bir sistem token'ıdır ve zaten dahil edilmiştir.",
+      "fetchingMetadata": "Token meta verisi alınıyor...",
+      "addedSuccess": "Token başarıyla eklendi",
+      "enterValidAddress": "Geçerli bir token adresi girin",
+      "save": "Kaydet"
+    },
+    "addressBook": {
+      "title": "Adres Defteri",
+      "addContact": "Kişi Ekle",
+      "nameLabel": "İsim veya etiket",
+      "walletAddress": "Cüzdan adresi (0x...)",
+      "savedContacts": "Kaydedilen Kişiler",
+      "noContacts": "Henüz kaydedilen kişi yok.",
+      "addForQuickSending": "Hızlı gönderme için kişi ekleyin.",
+      "enterValidAddress": "Geçerli bir adres girin",
+      "addLabel": "Etiket ekle",
+      "save": "Kaydet"
+    },
+    "settings": {
+      "title": "Cüzdan Ayarları",
+      "export": {
+        "title": "Cüzdanı Dışa Aktar",
+        "description": "Kurtarma ifadelerinizi veya özel anahtarınızı asla paylaşmayın. Çevrimdışı güvenli bir şekilde saklayın.",
+        "recoveryPhrase": "Kurtarma İfadesi",
+        "recoveryPhraseNotAvailable": "Kurtarma ifadesi mevcut değil (özel anahtar ile içe aktarılmış)",
+        "privateKey": "Özel Anahtar",
+        "privateKeyWarning": "Özel Anahtar (gizli tutun!)",
+        "showPhrase": "Kurtarma İfadesini Göster",
+        "showKey": "Özel Anahtarı Göster",
+        "warning": "Kurtarma ifadenizi veya özel anahtarınızı kimseyle paylaşmayın.",
+        "copy": "Kopyala",
+        "copied": "Kopyalandı!",
+        "hide": "Gizle",
+        "clipboardWarning": "Pano diğer uygulamalar tarafından okunabilir. 30 saniye içinde otomatik olarak temizlenecek.",
+        "verifyForKey": "Özel Anahtarı Göster için Doğrula",
+        "verifyForSeed": "Kurtarma İfadesini Göster için Doğrula",
+        "verifyDescription": "Hassas cüzdan bilgilerini göstermek için şifrenizi veya PIN'inizi girin."
+      },
+      "import": {
+        "title": "Cüzdanı İçe Aktar",
+        "description": "İçe aktarma mevcut cüzdanı değiştirir. Önce mevcut olanı yedeklediğinizden emin olun. İçe aktarmadan sonra PoH durumunu yeniden doğrulamanız gerekeceğini lütfen unutmayın.",
+        "byPhrase": "Kurtarma İfadesi",
+        "byPrivateKey": "Özel Anahtar",
+        "phrasePlaceholder": "12 veya 24 kelimelik ifadeyi girin…",
+        "keyPlaceholder": "0x… özel anahtarı girin",
+        "importButton": "Cüzdanı İçe Aktar",
+        "importing": "İçe aktarılıyor...",
+        "success": "Cüzdan başarıyla içe aktarıldı!"
+      },
+      "dangerZone": {
+        "title": "Tehlike Bölgesi",
+        "description": "Bu işlemler geri alınamaz. Cüzdanınızı yedeklediğinizden emin olun.",
+        "forgetWallet": "Cüzdanı Unut",
+        "forgetDescription": "Cüzdanı bu cihazdan kaldırın. Kurtarma ifadenizi yedeklediğinizden emin olun.",
+        "confirmTitle": "Cüzdanı Unut?",
+        "confirmMessage": "Bu işlem cüzdanınızı bu cihazdan kaldıracak. Önce kurtarma ifadenizi yedeklediğinizden emin olun.",
+        "cancel": "İptal",
+        "confirm": "Cüzdanı Unut",
+        "walletForgotten": "Cüzdan unutuldu",
+        "unableToForget": "Cüzdan unutulamadı",
+        "resetWallet": "Cüzdanı Sıfırla",
+        "resetDescription": "Tüm cüzdan verilerini tamamen silin ve baştan başlayın."
+      },
+      "authPrompt": "Özel anahtarı göstermek için kimlik doğrulayın"
+    }
+  },
+  "reset": {
+    "title": "Cüzdanı Sıfırla",
+    "dangerTitle": "Bu işlem geri alınamaz!",
+    "warning1": "Cüzdanınızı sıfırlamak kalıcı olarak siler:",
+    "bullet1": "Cüzdanınızı ve özel anahtarlarınızı",
+    "bullet2": "Kurtarma ifadenizi",
+    "bullet3": "Tüm uygulama ayarlarını ve tercihleri",
+    "bullet4": "İşlem geçmişini",
+    "recoveryNote": "12 kelimelik kurtarma ifadeniz varsa, sıfırlamadan sonra cüzdanınızı kurtarabilirsiniz.",
+    "continueButton": "Anladım, Devam Et",
+    "confirmTitle": "Sıfırlamayı Onayla",
+    "confirmDescription": "Tüm cüzdan verilerini silmek istediğinizi onaylamak için aşağıya \"RESET\" yazın.",
+    "placeholder": "RESET yazın",
+    "typeMismatch": "Onaylamak için RESET yazın",
+    "resetButton": "Cüzdanı Kalıcı Olarak Sıfırla",
+    "resettingTitle": "Sıfırlanıyor...",
+    "resettingDescription": "Tüm cüzdan verileri temizleniyor. Lütfen bekleyin...",
+    "completeTitle": "Sıfırlama Tamamlandı",
+    "completeDescription": "Cüzdanınız sıfırlandı. Şimdi yeni bir cüzdan oluşturabilir veya mevcut birini içe aktarabilirsiniz.",
+    "startFresh": "Baştan Başla",
+    "error": "Cüzdan sıfırlanamadı. Lütfen tekrar deneyin."
+  },
+  "export": {
+    "verifyTitle": "Kimlik Doğrula",
+    "verifyDescription": "Cüzdanınızı dışa aktarmak için şifrenizi girin.",
+    "verify": "Doğrula",
+    "verificationFailed": "Doğrulama başarısız",
+    "passphraseTitle": "Dışa Aktarma Parolası Ayarla",
+    "passphraseDescription": "Yedeklemenizi şifrelemek için güçlü bir parola seçin. Bu yedeği daha sonra içe aktarmak için bu parolaya ihtiyacınız olacak.",
+    "enterPassphrase": "Parola girin",
+    "passphraseTooWeak": "Parola çok zayıf. En az 8 karakter kullanın.",
+    "includeSeed": "Kurtarma İfadesini Dahil Et",
+    "includeSeedDescription": "Tam yedekleme için önerilir",
+    "confirmTitle": "Parolayı Onayla",
+    "confirmDescription": "Parolayı onaylamak için yeniden girin.",
+    "confirmPassphrase": "Parolayı onayla",
+    "passphraseMismatch": "Parolalar eşleşmiyor",
+    "warning": "Bu yedeği güvenli bir şekilde saklayın. Dosya ve parolaya erişimi olan herkes cüzdanınıza erişebilir.",
+    "exportNow": "Cüzdanı Dışa Aktar",
+    "exportingTitle": "Dışa aktarılıyor...",
+    "exportingDescription": "Cüzdan yedeğiniz şifreleniyor ve hazırlanıyor...",
+    "successTitle": "Dışa Aktarma Tamamlandı",
+    "successDescription": "Şifreli cüzdan yedeğiniz oluşturuldu. Güvenli bir şekilde saklayın.",
+    "rememberPassphrase": "Dışa aktarma parolanızı hatırlayın - bu yedeği içe aktarmak için ihtiyacınız olacak.",
+    "errorTitle": "Dışa Aktarma Başarısız",
+    "failed": "Dışa aktarma başarısız. Lütfen tekrar deneyin.",
+    "tryAgain": "Tekrar Dene",
+    "exportKeystore": "Şifreli Yedek Dışa Aktar",
+    "exportKeystoreDesc": "Şifreli keystore dosyasını kaydet"
+  },
+  "security": {
+    "title": "Cüzdanınızı Güvenli Hale Getirin",
+    "subtitle": "Cüzdanınızı korumak için parola veya PIN kurun",
+    "checkingDevice": "Cihaz güvenliği kontrol ediliyor...",
+    "passwordOption": "Parola",
+    "passwordDesc": "8+ karakter, harf ve rakam",
+    "pinOption": "6 Haneli PIN",
+    "pinDesc": "Hızlı ve hatırlaması kolay",
+    "enterPin": "6 haneli PIN girin",
+    "confirmPin": "PIN'inizi onaylayın",
+    "enterPassword": "Parola girin",
+    "confirmPassword": "Parolayı onaylayın",
+    "enableBiometrics": "{{type}} etkinleştirilsin mi?",
+    "biometricsDesc": "Hızlı açma için {{type}} kullanın. Bunu daha sonra Ayarlar'dan değiştirebilirsiniz.",
+    "enableBiometricsButton": "{{type}} Etkinleştir",
+    "enableBiometricsPrompt": "Biyometrik açmayı etkinleştirmek için kimlik doğrulayın",
+    "skipBiometrics": "Şimdi atla",
+    "setupComplete": "Kurulum Tamamlandı!",
+    "walletSecured": "Cüzdanınız artık güvenli!",
+    "continue": "Devam Et",
+    "passwordTooWeak": "Parola çok zayıf. Lütfen önerilere uyun.",
+    "pinMismatch": "PIN'ler eşleşmiyor",
+    "passwordMismatch": "Parolalar eşleşmiyor",
+    "setupError": "Kurulum başarısız. Lütfen tekrar deneyin.",
+    "passwordTitle": "Parola",
+    "passwordDescription": "8+ karakter, daha güçlü güvenlik",
+    "pinTitle": "6 Haneli PIN",
+    "pinDescription": "Hızlı erişim, hatırlaması kolay"
+  },
+  "lock": {
+    "title": "Umotu'yu Aç",
+    "lockedOut": "Kilitlendiniz",
+    "tooManyAttempts": "Çok fazla deneme. {{time}} sonra tekrar deneyin.",
+    "attemptsRemaining": "{{count}} deneme kaldı",
+    "enterPassword": "Parola girin",
+    "unlock": "Aç",
+    "wrongPin": "Yanlış PIN",
+    "wrongPassword": "Yanlış parola",
+    "verificationError": "Doğrulama başarısız",
+    "biometricsPrompt": "Cüzdanınızı açın",
+    "unlockWithFaceId": "Face ID ile aç?",
+    "unlockWithFingerprint": "Parmak izi ile aç?",
+    "forgotPassword": "Parolayı unuttunuz mu?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Desteklenmeyen Cihaz",
+    "emulatorMessage": "Güvenlik nedenleriyle bu uygulama emülatörlerde çalışamaz.",
+    "exitApp": "Çık",
+    "continueAnyway": "Yine de Devam Et"
+  },
+  "settingsSecurity": {
+    "title": "Güvenlik",
+    "autoLock": "Otomatik Kilitleme",
+    "autoLockDesc": "Etkinlik olmaması durumunda cüzdanı kilitle",
+    "faceId": "Face ID",
+    "fingerprint": "Parmak İzi",
+    "biometricsDesc": "Biyometri ile hızlı açma",
+    "changePin": "PIN'i Değiştir",
+    "changePassword": "Parolayı Değiştir",
+    "changeDesc": "Güvenlik kimlik bilgilerinizi güncelleyin",
+    "enableBiometrics": "Biyometrik açmayı etkinleştir",
+    "enterCurrent": "Mevcut {{type}} girin",
+    "enterNew": "Yeni {{type}} girin",
+    "confirmNew": "Yeni {{type}} onaylayın",
+    "currentPassword": "Mevcut parola",
+    "newPassword": "Yeni parola",
+    "confirmNewPassword": "Yeni parolayı onaylayın",
+    "changeNow": "Şimdi Değiştir",
+    "success": "Başarılı",
+    "pinChanged": "PIN başarıyla değiştirildi",
+    "passwordChanged": "Parola başarıyla değiştirildi",
+    "changeFailed": "Kimlik bilgileri değiştirilemedi",
+    "autoLockOptions": {
+      "immediately": "Hemen",
+      "after1min": "1 dakika sonra",
+      "after5min": "5 dakika sonra",
+      "after15min": "15 dakika sonra",
+      "after1hour": "1 saat sonra",
+      "never": "Asla"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Lütfen Bekleyin",
+    "cooldownMessage": "Güvenlik için anahtarlarınızı {{time}} sonra tekrar gösterebilirsiniz.",
+    "cooldownReason": "Bu, kötü niyetli uygulamaların anahtarlarınıza hızlı erişimini engeller."
+  },
+  "passwordVerify": {
+    "title": "Kimlik Doğrula",
+    "description": "Hassas cüzdan bilgilerini göstermek için parolanızı veya PIN'inizi girin",
+    "verify": "Doğrula"
+  },
+  "passwordValidation": {
+    "veryWeak": "Çok zayıf",
+    "weak": "Zayıf",
+    "fair": "Orta",
+    "good": "İyi",
+    "strong": "Güçlü",
+    "tooShort": "Parola en az 8 karakter olmalı",
+    "commonPassword": "Bu yaygın kullanılan bir parola",
+    "lengthSuggestion": "Daha iyi güvenlik için en az 12 karakter kullanın",
+    "mixedCaseSuggestion": "Büyük ve küçük harf karıştırın",
+    "numberSuggestion": "Bazı rakamlar ekleyin",
+    "specialCharSuggestion": "Özel karakterler ekleyin (!@#$%)"
+  },
+  "forgot": {
+    "title": "Kimlik Bilgilerini Sıfırla",
+    "warning": "Parola veya PIN'inizi sıfırlamak için cüzdan tohum ifadenizi girmeniz gerekir. Bu, cüzdanın sahibi olduğunuzu kanıtlar.",
+    "warningText": "Tohum ifadenizi kimseyle paylaşmayın.",
+    "continue": "Anladım, Devam Et",
+    "enterSeed": "Tohum İfadesini Girin",
+    "seedDescription": "12 veya 24 kelimelik tohum ifadenizi girin. Her kelimeyi boşlukla ayırın.",
+    "seedPlaceholder": "Tohum ifadesini girin...",
+    "verifySeed": "Tohum İfadesini Doğrula",
+    "invalidSeed": "Lütfen geçerli bir 12 veya 24 kelimelik tohum ifadesi girin",
+    "chooseMethod": "Güvenlik Yöntemi Seçin",
+    "methodDescription": "Cüzdanınızı nasıl güvene almak istersiniz?",
+    "newPassword": "Yeni Parola Oluştur",
+    "newPin": "Yeni PIN Oluştur",
+    "newPasswordDesc": "Güçlü bir parola seçin (8+ karakter)",
+    "newPinDesc": "6 haneli PIN girin",
+    "confirmPassword": "Parolayı Onayla",
+    "confirmPin": "PIN'i Onayla",
+    "confirmPasswordDesc": "Parolanızı onaylamak için yeniden girin",
+    "confirmPinDesc": "PIN'inizi onaylamak için yeniden girin",
+    "resetNow": "Şimdi Sıfırla",
+    "complete": "Sıfırlama Tamamlandı",
+    "completeDescription": "Kimlik bilgileriniz sıfırlandı. Artık yeni parolanız veya PIN'inizle cüzdanınızı açabilirsiniz.",
+    "unlockNow": "Cüzdanı Aç",
+    "passwordTooWeak": "Parola çok zayıf. Lütfen daha güçlü bir parola seçin.",
+    "passwordMismatch": "Parolalar eşleşmiyor",
+    "pinMismatch": "PIN'ler eşleşmiyor",
+    "resetFailed": "Kimlik bilgileri sıfırlanamadı. Lütfen tohum ifadenizi doğrulayın.",
+    "resetError": "Bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "send": {
+    "title": "Gönder",
+    "selectToken": "Token Seç",
+    "selectTokenInfo": "Göndermek için token seçin. Sadece bakiyesi olan token'lar gösterilir.",
+    "noTokensWithBalance": "Bakiyesi olan token yok",
+    "addTokensFirst": "Önce cüzdanınıza token ekleyin",
+    "enterAmount": "Tutar Girin",
+    "enterRecipient": "Alıcı Girin",
+    "review": "İncele",
+    "amount": "Tutar",
+    "recipient": "Alıcı",
+    "recipientPlaceholder": "0x... cüzdan adresi",
+    "networkFee": "Ağ Ücreti",
+    "gasToken": "Gaz ödemesi için",
+    "payingWith": "Ödeme Yapılıyor",
+    "payGasWith": "Gaz Ödemesi İçin",
+    "nativeGas": "UMT (yerel)",
+    "stableGas": "Stable Gaz",
+    "selectStable": "Stable seç",
+    "max": "Maks",
+    "next": "İleri",
+    "continue": "Devam Et",
+    "confirm": "Gönderiyi Onayla",
+    "confirmSend": "Gönderiyi Onayla",
+    "sending": "Gönderiliyor...",
+    "failed": "İşlem Başarısız",
+    "viewInExplorer": "Keşifçide Görüntüle",
+    "done": "Tamam",
+    "cancel": "İptal",
+    "send": "Gönder",
+    "balance": "Bakiye",
+    "available": "Mevcut",
+    "to": "Kime",
+    "network": "Ağ",
+    "step": "Adım",
+    "estimating": "Tahmin ediliyor…",
+    "umtNative": "UMT (yerel)",
+    "txSpeed": "İşlem Hızı",
+    "transactionSpeed": "İşlem Hızı",
+    "speed": {
+      "slow": "Yavaş",
+      "normal": "Normal",
+      "fast": "Hızlı"
+    },
+    "gasNotice": {
+      "stablecoin": "Gaz stablecoin ile ödenecek.",
+      "reserved": "Gaz için {{amount}} {{symbol}} ayırdık; en fazla {{max}} gönderebilirsiniz."
+    },
+    "errors": {
+      "invalidAddress": "Geçersiz alıcı adresi",
+      "invalidAmount": "Geçerli bir tutar girin",
+      "insufficientBalance": "Yetersiz bakiye",
+      "insufficientGas": "Gaz için yetersiz bakiye",
+      "insufficientGasWithHint": "Gaz için yetersiz bakiye. UMT veya desteklenen bir stablecoin ekleyin.",
+      "notEnoughForGas": "Gazı karşılayacak kadar bakiye yok",
+      "noStableGas": "Gaz için yeterli UMT yok ve desteklenen stable bunu karşılayamıyor.",
+      "permitFailed": "Gaz token'ı için izin veya onay başarısız",
+      "relayNotConfigured": "Stable gaz relay'i yapılandırılmamış",
+      "transactionReverted": "İşlem zincir üzerinde geri alındı.",
+      "approvalNeeded": "Gaz token'ı onay gerektiriyor ancak onay için UMT yok. Küçük miktarda UMT ekleyin veya izin destekli token kullanın."
+    },
+    "addressBook": {
+      "title": "Adres Defteri",
+      "addNew": "Yeni Ekle",
+      "noContacts": "Kayıtlı adres yok",
+      "saveForQuickAccess": "Hızlı erişim için adresleri kaydedin",
+      "editContact": "Kişiyi Düzenle",
+      "deleteContact": "Kişiyi Sil",
+      "addressNotSaved": "Adres kaydedilmedi",
+      "addLabel": "Etiket ekle",
+      "enterValidAddress": "Önce geçerli bir adres girin",
+      "saved": "Kaydedildi",
+      "save": "Kaydet"
+    },
+    "success": {
+      "title": "İşlem Gönderildi!",
+      "hash": "Hash",
+      "viewInExplorer": "Keşifçide Görüntüle",
+      "close": "Kapat"
+    },
+    "batch": {
+      "mode": "Toplu Mod",
+      "singleMode": "Tek Alıcı",
+      "addRecipient": "Alıcı ekle",
+      "noRecipients": "Henüz alıcı eklenmedi",
+      "addFromTagOrBook": "Etiketten veya defterden ekle",
+      "invalidAddress": "Geçersiz adres: {{address}}",
+      "invalidAmount": "{{recipient}} için geçersiz tutar",
+      "totalExceedsBalance": "Toplam bakiyeyi aşıyor",
+      "sendingTo": "{{count}} alıcıya gönderiliyor",
+      "sendingTo_plural": "{{count}} alıcıya gönderiliyor",
+      "recipients": "Alıcılar",
+      "addresses": "{{count}} adres",
+      "addresses_plural": "{{count}} adres",
+      "addByTag": "Etikete göre ekle",
+      "noTags": "Henüz etiket yok",
+      "createFirstTag": "Adres defterinde ilk etiketinizi oluşturun",
+      "addFromTag": "Etiketten ekle",
+      "selectTag": "Etiket seç",
+      "remove": "Kaldır",
+      "sendAll": "Tümünü Gönder ({{count}})",
+      "batchSend": "Toplu Gönder",
+      "badge": "TOPLU",
+      "successFail": "{{success}} başarılı, {{fail}} başarısız",
+      "successful": "Başarılı",
+      "sentStatus": "Gönderildi",
+      "failedStatus": "Başarısız",
+      "details": "Toplu Transfer Detayları",
+      "total": "Toplam",
+      "tagPicker": {
+        "title": "Etiket Seç",
+        "noTags": "Kullanılabilir etiket yok",
+        "createHint": "Önce defterdeki kişilere etiket ekleyin"
+      },
+      "tags": {
+        "manage": "Etiketleri Yönet",
+        "add": "Etiket Ekle",
+        "remove": "Etiketi Kaldır",
+        "create": "Etiket Oluştur",
+        "newTag": "Yeni etiket adı",
+        "addToContact": "Kişiye etiket ekle"
+      }
+    }
+  },
+  "receive": {
+    "title": "Al",
+    "yourAddress": "Cüzdan Adresiniz",
+    "scanQR": "Almak için QR kodu tarayın",
+    "copyAddress": "Adresi Kopyala",
+    "share": "Paylaş"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Öde",
+      "myQr": "QR'ım"
+    },
+    "pay": {
+      "title": "Öde",
+      "description": "Arkadaşınızın QR kodunu tarayarak doğrudan cüzdanına ödeme yapın",
+      "allowCamera": "Kameraya İzin Ver",
+      "requesting": "İstek gönderiliyor…",
+      "openSettings": "Ayarları Aç",
+      "sendTo": "Gönderilecek",
+      "amount": "Tutar",
+      "rescan": "Yeniden Tara",
+      "continue": "Devam Et"
+    },
+    "receive": {
+      "title": "Al",
+      "description": "Bu QR kodu tarayarak bu adrese ödeme gönderin",
+      "tapToCopy": "Adresi kopyalamak için dokunun",
+      "copied": "Panoya kopyalandı!"
+    }
+  },
+  "history": {
+    "title": "İşlem Geçmişi",
+    "sent": "Gönderildi",
+    "received": "Alındı",
+    "token": "Token",
+    "external": "Dış",
+    "to": "Kime: ",
+    "from": "Kimden: ",
+    "viewInExplorer": "Keşifçide Görüntüle",
+    "empty": {
+      "title": "Henüz İşlem Yok",
+      "description": "Token gönderdiğiniz veya aldığınızda işlem geçmişiniz burada görünecek."
+    },
+    "status": {
+      "confirmed": "Onaylandı",
+      "pending": "Beklemede",
+      "failed": "Başarısız"
+    },
+    "details": {
+      "title": "İşlem Ayrıntıları",
+      "status": "Durum",
+      "type": "Tür",
+      "to": "Kime",
+      "from": "Kimden",
+      "token": "Token",
+      "block": "Blok",
+      "gasCost": "Gaz Maliyeti",
+      "hash": "Hash",
+      "source": "Kaynak",
+      "balanceDetected": "Bakiye algılandı",
+      "inferredNote": "Bu işlem bakiye değişikliğinden algılandı. Tam zincir üstü ayrıntılar mevcut değil."
+    },
+    "time": {
+      "justNow": "Az önce",
+      "minsAgo": "{{count}} dk önce",
+      "hoursAgo": "{{count}} sa önce",
+      "daysAgo": "{{count}} g önce"
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "account": {
+      "title": "Hesap & Görünüm",
+      "walletAddress": "Cüzdan Adresi",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı"
+    },
+    "theme": {
+      "title": "Tema",
+      "light": "Açık",
+      "dark": "Koyu",
+      "system": "Sistem"
+    },
+    "language": {
+      "title": "Dil",
+      "select": "Dil Seç",
+      "current": "Mevcut"
+    },
+    "display": {
+      "title": "Görünüm",
+      "description": "Ana ekran görünümünüzü özelleştirin.",
+      "showSentinelCard": "Sentinel Kazanç Kartını Göster",
+      "showSentinelCardDesc": "Ana ekranda kazançları göster",
+      "showDailyRewardsCard": "Günlük Ödül Kartını Göster",
+      "on": "AÇIK",
+      "off": "KAPALI",
+      "sentinelSettings": "Sentinel Ayarları",
+      "sentinelSettingsDesc": "Bağlama, ödüller ve otomatik talep yönet"
+    },
+    "sentinelDisplay": {
+      "title": "Sentinel Görünümü",
+      "showSentinelCard": "Sentinel Kartını Göster",
+      "showSentinelCardDesc": "Ana ekranda sentinel kazanç kartını göster",
+      "sentinelSettings": "Sentinel Ayarları",
+      "sentinelSettingsDesc": "Sentinel düğümünü ve ödülleri yapılandır"
+    },
+    "verification": {
+      "title": "Doğrulama",
+      "description": "Günlük ödülleri açmak için Inlyf ile insanlığınızı doğrulayın. Kısa bir canlılık kontrolü; periyodik olarak yenileyin.",
+      "open": "Doğrulamayı Başlat",
+      "refresh": "Doğrulamayı Yenile",
+      "status": "Durum",
+      "verified": "Doğrulanmış",
+      "notVerified": "Doğrulanmamış",
+      "expiresOn": "Son tarih",
+      "daysRemaining": "Kalan gün",
+      "upToDate": "Doğrulama güncel",
+      "refreshAvailableIn": "{{days}} gün sonra yenileme mümkün"
+    },
+    "network": {
+      "title": "Ağ",
+      "description": "Blockchain ağ bağlantısını yapılandırın.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (yakında)",
+      "rpcEndpoint": "RPC Uç Noktası",
+      "pingRpc": "RPC Ping",
+      "testing": "Test ediliyor...",
+      "rpcOk": "RPC TAMAM",
+      "rpcError": "RPC HATASI",
+      "save": "Kaydet",
+      "saved": "Ayarlar kaydedildi",
+      "connectionStatus": "Bağlantı Durumu",
+      "connected": "Bağlandı",
+      "disconnected": "Bağlantı Kesildi"
+    },
+    "cache": {
+      "title": "Önbellek",
+      "description": "Token ve sözleşme bilgilerini yenilemek için önbelleği temizleyin.",
+      "clearCache": "Önbelleği Temizle",
+      "cacheCleared": "Önbellek temizlendi! Değişiklikleri uygulamak için yeniden başlatın."
+    },
+    "chainGuardian": {
+      "title": "Zincir Koruyucusu",
+      "description": "Telefonunuzu çevrimiçi tutarak blockchain'in güvenliğini sağlamaya yardım edin. Ödüller için uygun kalmak için günde en az bir örnekleme işi tamamlayın.",
+      "wifiOnly": "Sadece WiFi",
+      "wifiOnlyHint": "Mobil veri tasarrufu sağlar",
+      "minBattery": "Minimum Pil",
+      "minBatteryHint": "Bu seviyenin altında çalışmaz",
+      "background": "Arka Planda Çalıştır",
+      "backgroundHint": "Uygulama kapalıyken bile çalışır",
+      "lastSample": "Son Etkinlik",
+      "noSamples": "Henüz etkinlik yok. Başlatmak için uygulamayı açık tutun.",
+      "staleWarning": "Bugün görülmedi — uygulamayı yeniden açarak devam edin.",
+      "androidBatteryWarning": "Pil optimizasyonu örneklemeyi engelleyebilir",
+      "androidBatteryHint": "Ayarlar → Uygulamalar → Umotu → Pil → \"Kısıtlanmamış\" seçerek arka plan örneklemeye izin verin.",
+      "openSettings": "Ayarları açmak için dokunun",
+      "tip": "En iyi kazanç için \"Arka Planda Çalıştır\" özelliğini etkinleştirin.",
+      "runNow": "Şimdi Çalıştır",
+      "running": "Çalışıyor…",
+      "lastError": "Son hata",
+      "status": {
+        "active": "Aktif",
+        "inactive": "Etkin Değil",
+        "paused": "Duraklatılmış"
+      }
+    },
+    "permissions": {
+      "title": "İzinler",
+      "description": "Bağlı Mini Uygulamaları ve izinlerini yönetin.",
+      "openMiniApps": "Mini Uygulamaları Aç",
+      "manageConnections": "Yönet",
+      "noConnections": "Bağlı uygulama yok",
+      "revokeAccess": "Erişimi İptal Et",
+      "lastUsed": "Son kullanım"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Umotu'ya Hoş Geldiniz",
+      "subtitle": "Günde 10 dolar, herkes için her yerde",
+      "getStarted": "Başla"
+    },
+    "language": {
+      "title": "Dil Seçin",
+      "continue": "Devam Et"
+    },
+    "wallet": {
+      "title": "Cüzdanınız",
+      "createNew": "Yeni Cüzdan Oluştur",
+      "importExisting": "Mevcut Olanı İçe Aktar",
+      "creating": "Cüzdan oluşturuluyor..."
+    },
+    "verify": {
+      "title": "İnsan Olduğunuzu Doğrulayın",
+      "description": "Günlük ödülleri almak için benzersiz bir insan olduğunuzu doğrulayın.",
+      "continue": "Devam Et"
+    }
+  },
+  "poh": {
+    "subtitle": "Günlük ödülleri aç",
+    "description": "Ödülleri açmak için Inlyf ile canlılık doğrulayın. Biyometrik veriler zincire kaydedilmez; sadece kısa süreli kimlik verilir.",
+    "howItWorks": "Nasıl çalışır",
+    "howItWorksDesc": "Kısa bir canlılık kontrolü (yüz taraması) insan olduğunuzu doğrular. Kimliğiniz 90 gün geçerlidir ve istediğiniz zaman yenilenebilir.",
+    "adultQuestion": "Yetişkin misiniz (18+)?",
+    "yesAdult": "Evet, 18+",
+    "noMinor": "Hayır / Reşit Değilim",
+    "selectAge": "Lütfen bir seçenek seçin",
+    "verifying": "Doğrulanıyor...",
+    "startVerification": "Doğrulamayı Başlat",
+    "skipForNow": "Şimdi atla",
+    "status": {
+      "notVerified": "Henüz doğrulanmadı.",
+      "notVerifiedDetail": "Ödülleri açmak için doğrulamayı başlatın.",
+      "unavailable": "Durum mevcut değil.",
+      "verified": "Doğrulandınız.",
+      "validFor": "~{{days}} gün geçerli",
+      "validFor_plural": "~{{days}} gün geçerli",
+      "expired": "Doğrulama süresi dolmuş veya bulunamadı.",
+      "expiredDetail": "Kimliğinizi yenilemek için canlılık kontrolünü yeniden çalıştırın."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Blokları sonlandırmaya yardım etmek için Sentinel havuzuna katılın. En az minimum miktarı bağlayın, cihazınızı çevrimiçi tutun ve ödül kazanın.",
+    "loading": "Sentinel verileri yükleniyor...",
+    "unavailable": "Sentinel modülü mevcut değil",
+    "yourStatus": "Durumunuz",
+    "wallet": "Cüzdan",
+    "bondedAmount": "Bağlanmış Tutar",
+    "minimumBond": "Minimum Bağ",
+    "status": {
+      "notBonded": "Bağlanmamış",
+      "bonded": "Bağlanmış",
+      "unbonding": "Bağ çözülüyor ({{date}} tarihinde kullanılabilir)"
+    },
+    "rewards": {
+      "title": "Ödüller",
+      "claimableNow": "Şimdi Talep Edilebilir",
+      "accruing": "Biriken",
+      "totalClaimed": "Toplam Talep Edilen",
+      "claiming": "Talep ediliyor...",
+      "claimRewards": "Ödülleri Talep Et"
+    },
+    "bond": {
+      "createTitle": "Bağ Oluştur",
+      "topUpTitle": "Bağı Artır",
+      "createDescription": "Sentinel komitesine katılmak ve kazanmaya başlamak için UMT bağlayın.",
+      "topUpDescription": "Ödül payınızı artırmak için bağınızı artırın.",
+      "amountLabel": "Tutar (UMT)",
+      "processing": "İşleniyor...",
+      "bond": "Bağla",
+      "topUp": "Artır",
+      "tx": "İşlem"
+    },
+    "autoClaim": {
+      "title": "Otomatik Talep",
+      "description": "Relay'in sentinel ödüllerinizi biriktikçe otomatik talep etmesine izin verin.",
+      "checking": "Kontrol ediliyor...",
+      "enabled": "Etkin",
+      "disabled": "Devre Dışı",
+      "expires": "Son tarih",
+      "processing": "İşleniyor...",
+      "enable": "Otomatik Talebi Etkinleştir",
+      "disable": "Otomatik Talebi Devre Dışı Bırak"
+    },
+    "activity": {
+      "title": "Son Etkinlikler",
+      "claims": "Talepler",
+      "slashes": "Cezalar",
+      "noClaims": "Son {{blocks}}k blokta talep yok.",
+      "noSlashes": "Son dönemde ceza olayı yok.",
+      "unknown": "bilinmiyor"
+    },
+    "errors": {
+      "configureEnv": "RPC + sentinel sözleşme ortam değişkenlerini yapılandırın.",
+      "noWallet": "Sentinel komitesine katılmak için cüzdan oluşturun veya içe aktarın.",
+      "loadFailed": "Sentinel verileri yüklenemedi."
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel ödülleri talep edildi.",
+      "noRewards": "Talep edilecek bekleyen ödül yok.",
+      "claimFailed": "Talep başarısız.",
+      "autoClaimEnabled": "Sentinel otomatik talep etkinleştirildi",
+      "autoClaimDisabled": "Sentinel otomatik talep devre dışı bırakıldı",
+      "autoClaimFailed": "Otomatik talep geçişi başarısız",
+      "configureBondAddress": "Sentinel bağ adresini yapılandırın",
+      "rpcNotSet": "RPC ayarlanmamış",
+      "minBondUnavailable": "Minimum bağ mevcut değil",
+      "enterBondAmount": "Bağ tutarı girin",
+      "minBondRequired": "İlk bağ en az {{amount}} UMT olmalı",
+      "topUpGreaterThanZero": "Artırma tutarı 0'dan büyük olmalı",
+      "insufficientBalance": "Bağ + gaz için yetersiz bakiye",
+      "bondSubmitted": "Bağ işlemi gönderildi",
+      "topUpSubmitted": "Artırma işlemi gönderildi",
+      "bondConfirmed": "Bağ onaylandı",
+      "topUpConfirmed": "Artırma onaylandı",
+      "bondReverted": "Bağ zincir üzerinde geri alındı",
+      "bondFailed": "Bağ başarısız"
+    }
+  },
+  "miniapps": {
+    "title": "Mini Uygulamalar",
+    "subtitle": "Umotu üzerinde inşa edilmiş uygulamaları keşfedin",
+    "explore": "Umotu üzerinde inşa edilmiş uygulamaları keşfedin",
+    "noApps": "Henüz uygulama yok",
+    "browseByCategory": "Kategoriye Göz At",
+    "appsCount": "{{count}} uygulama",
+    "featured": "ÖNE ÇIKAN",
+    "comingSoon": "Yakında",
+    "liveApps": "Canlı Uygulamalar",
+    "available": "MEVCUT",
+    "pohDescription": "Günlük ödülleri açmak için Inlyf ile insanlığınızı doğrulayın.",
+    "vision": {
+      "title": "Vizyonumuz",
+      "tagline": "Günde 10 dolar, herkes için her yerde",
+      "description": "Umotu, herkesin küresel ekonomiye katılabileceği bir altyapı inşa ediyor—nerede yaşadığı veya hangi bankayı kullandığı fark etmeksizin.",
+      "readMore": "Tam Vizyonu Oku",
+      "pillars": {
+        "title": "Üç Temel İlke",
+        "ubi": {
+          "title": "Günde 10 Dolar, Herkes İçin Her Yerde",
+          "description": "Ağı güvence altına alma karşılığında evrensel temel gelir. Telefonu olan herkes katılabilir ve kazanabilir."
+        },
+        "capital": {
+          "title": "Sermaye Serbest Hareket Eder",
+          "description": "Ödemeler ve transferler için neredeyse sıfır sürtünme—sınır ötesi veya yerel. İşletmeler platform maliyetlerini karşılamak için ~%0.1 öder, bireyler hiçbir şey ödemez."
+        },
+        "sovereignty": {
+          "title": "Para Egemenliğine Saygı",
+          "description": "Geleneksel para birimlerini değiştirmiyoruz—onları daha iyi hale getiriyoruz. Bankalar yerel para birimlerine sabitlenmiş stablecoin'ler çıkarır. Para politikası daha geniş erişim ve daha az sürtünmeyle daha etkili olur."
+        }
+      },
+      "notReplacing": "Umotu merkez bankalarıyla rekabet etmiyor. Geleneksel para birimleri için daha iyi altyapı inşa ediyoruz: daha az sürtünme, küresel erişim ve iyileştirilmiş piyasa verimliliği ve dayanıklılık."
+    },
+    "building": {
+      "title": "Ekosistemi İnşa Ediyoruz",
+      "description": "Bu uygulamalar Umotu'da neler mümkün olduğunu gösteriyor. Bazıları şimdi hazır, diğerleri yakında geliyor. Dünya çapındaki geliştiriciler platformumuzda inşa etmeye ve başlatmaya davetli.",
+      "developerDocs": "Geliştirici Belgeleri"
+    },
+    "categories": {
+      "payments": {
+        "name": "Ödemeler & Finans",
+        "apps": {
+          "sendMoney": {
+            "name": "Para Gönder",
+            "description": "UMT veya stablecoin'leri dünyanın herhangi bir yerine anında gönderin—banka gerekmez.",
+            "example": "Ailenize yurtdışına 20 doları saniyeler içinde gönderin, günler değil. Gizli ücret yok."
+          },
+          "billPay": {
+            "name": "Fatura Ödeme",
+            "description": "Faturaları, telefonu, interneti ve daha fazlasını doğrudan cüzdanınızdan ödeyin."
+          },
+          "savings": {
+            "name": "Tasarruf Çemberleri",
+            "description": "Geleneksel döner tasarruf (tontine, chit fund) akıllı sözleşmelerle güvenilir hale getirildi."
+          },
+          "microLoans": {
+            "name": "Mikro Krediler",
+            "description": "Doğrulanmış insanlığınız ve itibarınızla desteklenen eşler arası borç verme."
+          }
+        }
+      },
+      "transport": {
+        "name": "Ulaşım & Teslimat",
+        "apps": {
+          "rideSharing": {
+            "name": "Paylaşımlı Ulaşım",
+            "description": "Kripto ile ödenen yolculuklar rezervasyonu yapın. Sürücüler daha fazla kazanır, yolcular daha az öder—%30 alan aracı yok.",
+            "example": "Lagos'ta taksi yolculuğu ₦800. Sürücü ₦560 yerine ₦799.2 alır."
+          },
+          "delivery": {
+            "name": "Teslimat",
+            "description": "Yemek, market veya paket sipariş edin. Kuryeler stable token'larda adil ücret alır.",
+            "example": "Öğle yemeği sipariş edin, yerel stablecoin ile ödeyin, kurye anında ücretini alır."
+          },
+          "publicTransit": {
+            "name": "Toplu Taşıma",
+            "description": "Otobüs, metro ve tren ücretlerini dokunarak ödeyin. Bilet kartı almaya gerek yok."
+          }
+        }
+      },
+      "travel": {
+        "name": "Seyahat & Konaklama",
+        "apps": {
+          "hotels": {
+            "name": "Oteller & Konaklama",
+            "description": "Dünya çapında konaklama rezervasyonu yapın. Ev sahipleri stablecoin kabul eder, misafirler ücretlerden tasarruf eder.",
+            "example": "Bali'de gecelik 40 dolarlık oda rezervasyonu yapın. Ev sahibi 39.96 dolar alır."
+          },
+          "flights": {
+            "name": "Uçuşlar",
+            "description": "Uçuş ara ve rezervasyon yap. Kripto ile öde, UMT ödülü kazan."
+          },
+          "tours": {
+            "name": "Yerel Turlar",
+            "description": "Yerel rehberlerle deneyim rezervasyonu yapın. Ödemeler doğrudan onlara gider."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Alışveriş & Ticaret",
+        "apps": {
+          "localMarket": {
+            "name": "Yerel Pazar",
+            "description": "Yerel alım satım yapın. QR tabanlı ödemeler sokak ticaretini sorunsuz hale getirir.",
+            "example": "Cakarta'da bir satıcı USDC kabul eder. Müşteri öder, satıcı fonları anında görür."
+          },
+          "ecommerce": {
+            "name": "E-Ticaret",
+            "description": "Dünya çapındaki tüccarlardan çevrimiçi alışveriş yapın. Kart ücreti yok, iade yok.",
+            "example": "Shenzhen'den elektronik alın. Stablecoin ile ödeyin, kredi kartına göre %3 tasarruf edin."
+          },
+          "marketplace": {
+            "name": "Eşler Arası Pazar Yeri",
+            "description": "Ürünleri satışa çıkarın, başkalarından alın. Escrow her iki tarafı korur."
+          }
+        }
+      },
+      "services": {
+        "name": "Hizmetler & İş",
+        "apps": {
+          "remittance": {
+            "name": "Havale",
+            "description": "Eve para gönderin. Alıcılar yerel para birimine çevirebilir veya dijital tutabilir.",
+            "example": "ABD'den Filipinler'e 200 dolar gönderin. Alıcı ₱10,400 yerine ₱11,000+ alır."
+          },
+          "freelance": {
+            "name": "Serbest Çalışma",
+            "description": "Gig işleri için anında ücret alın. Banka transferi için 30 gün beklemeyin."
+          },
+          "homeServices": {
+            "name": "Ev Hizmetleri",
+            "description": "Tesisatçı, elektrikçi, temizlikçi tutun. İş tamamlandığında ödeme yapın."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "İşinizi Umotu Üzerinde İnşa Edin",
+      "subtitle": "Dahili ödemelerle uygulamalar başlatın",
+      "description": "Umotu ekosistemine erişen uygulamalar yaratın—günlük geliri olan milyonlarca doğrulanmış insan, işlem yapmaya hazır. Ödeme entegrasyonu sorunu yok.",
+      "benefits": {
+        "noFees": "Neredeyse sıfır ödeme işlem ücreti—gelirin %99.9'unu tutun",
+        "verifiedUsers": "Tüm kullanıcılar doğrulanmış insan—bot veya sahtekarlık yok",
+        "globalReach": "İlk günden 190+ ülkede kullanıcılara ulaşın",
+        "instantPayments": "Anında yerleşim—30 gün ödeme gecikmesi yok"
+      },
+      "exampleTitle": "Kullanım Örneği",
+      "exampleText": "Umotu'daki bir paylaşımlı ulaşım uygulaması geleneksel platformlardaki %70 yerine ücretlerin %99.9'unu tutar. Sürücüler daha fazla kazanır, yolcular daha az öder.",
+      "docsButton": "Belgeleri Oku",
+      "buildButton": "İnşa Etmeye Başla"
+    },
+    "bank": {
+      "title": "Banka mısınız?",
+      "subtitle": "Umotu'da stablecoin çıkarın",
+      "description": "Lisanslı finansal kurumlar Umotu'da yerel para birimi stablecoin'leri çıkarabilir ve milyonlarca kullanıcılı büyüyen UBI ekonomisine erişebilir.",
+      "benefits": {
+        "reserves": "Rezervlerden getiri kazanın: tahvil ve düşük riskli varlıklara yatırım yapın",
+        "mintRedeem": "Çıkarma/itfa ücretleri alın: genellikle fiat ↔ stablecoin dönüşümlerinde %0.1",
+        "users": "Milyonlarca günlük aktif UBI alıcısına erişin",
+        "global": "Sınırları anında aşarak erişiminizi genişletin",
+        "custody": "Rezervleriniz, sizin saklamanız: destek varlıkları üzerinde tam kontrol"
+      },
+      "revenueModel": "Çıkarıcılar Nasıl Kazanır",
+      "revenueNote": "Tether ve diğer büyük çıkarıcılar gibi, gelir rezerv getirisi ve dönüşüm ücretlerinden gelir. Günlük UBI alan milyonlarca kullanıcıyla çıkarma/itfa hacmi önemli olabilir.",
+      "futureNote": "Protokol geliştikçe çıkarıcılar gelecekte işlem ücretlerinden pay alabilir.",
+      "learnMore": "Daha Fazla Bilgi",
+      "applyButton": "Şimdi Başvur"
+    }
+  },
+  "news": {
+    "title": "Haberler & Güncellemeler",
+    "description": "Umotu ekibinden en son duyurular, ipuçları ve güvenlik uyarılarıyla güncel kalın.",
+    "empty": "Şu anda haber yok",
+    "unread": "Yeni",
+    "unreadCount": "{{count}} yeni",
+    "markAsRead": "Okundu olarak işaretle",
+    "types": {
+      "announcement": "Duyuru",
+      "tip": "İpucu",
+      "security": "Güvenlik",
+      "airdrop": "Airdrop",
+      "update": "Güncelleme"
+    }
+  },
+  "governance": {
+    "title": "Yönetim",
+    "subtitle": "Umotu'nun geleceğini şekillendirin",
+    "description": {
+      "title": "Sesiniz Önemli",
+      "body": "Topluluk tekliflerine oy vererek Umotu'nun geleceğini şekillendirmeye yardım edin. Umotu Vakfı bu oylamaları organize eder, ancak karar topluluğa aittir."
+    },
+    "empty": "Aktif teklif yok",
+    "emptyHint": "Yeni topluluk kararları için daha sonra kontrol edin.",
+    "newPolls": "Yeni",
+    "newPollsCount": "{{count}} yeni",
+    "vote": "oy",
+    "votes": "oy",
+    "endsIn": "{{time}} içinde sona erer",
+    "ended": "Bitti",
+    "tapToVote": "Oy vermek için yukarıdaki bir seçeneğe dokunun",
+    "submitting": "Oy gönderiliyor...",
+    "alreadyVoted": {
+      "title": "Zaten Oy Verdiniz",
+      "message": "Bu teklifte zaten oy kullandınız."
+    },
+    "confirm": {
+      "title": "Oy'u Onayla",
+      "message": "Oy verilecek",
+      "note": "Bu işlem geri alınamaz.",
+      "submit": "Oy'u Gönder"
+    },
+    "success": {
+      "title": "Oy Gönderildi!",
+      "message": "Topluluk yönetimine katıldığınız için teşekkürler."
+    },
+    "error": {
+      "title": "Oy Başarısız",
+      "message": "Oy gönderilemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "learn": {
+    "title": "Öğren",
+    "subtitle": "Umotu hakkında bilmeniz gereken her şey",
+    "featured": "ÖNE ÇIKAN",
+    "whatIs": {
+      "title": "Umotu Nedir?",
+      "subtitle": "Günde 10 dolar, herkes için her yerde",
+      "intro": "Umotu, sadece bir akıllı telefon kullanarak herkesin günde yaklaşık 10 dolar kazanmasını hedefler. Pahalı donanım, özel beceri veya sınır yok.",
+      "howDifferent": "Nasıl farklı?",
+      "noMiddleman": "Aracı yok: Doğrudan ağ ile etkileşim—banka hesabı gerekmez",
+      "globalAccess": "Küresel erişim: İnternet olan her yerde çalışır",
+      "youOwnIt": "Sizin malınız: Cüzdanınız, anahtarlarınız, kontrolünüz",
+      "vision": "Vizyon",
+      "visionText": "Milyarlarca insan ortak bir defteri dürüst tutmaya yardım edebilir ve bunun için kazanabilir. Umotu'da telefonlar ağı güvenilir kılan hafif kontroller yapar.",
+      "nameOrigin": "İsim Kökeni",
+      "nameOriginText": "Umotu, Polinezya dili Paʻumotu'dan ilham alır. İsimi saygıyla kullanıyoruz; sıradan insanlar için inşa etmeyi hatırlatıcı olarak."
+    },
+    "earn": {
+      "title": "Nasıl Kazanırsınız",
+      "subtitle": "Telefonunuz çalışır; siz ödeme alırsınız",
+      "intro": "Telefonunuz herkese yardım eden küçük görevler yapar—sonra ödül alırsınız.",
+      "steps": "Üç Basit Adım",
+      "step1": "1) İnsan olduğunuzu kanıtlayın: hızlı bir canlılık kontrolü (ve ara sıra yenileme) her kişinin tek hesap sahibi olmasını sağlar.",
+      "step2": "2) Ağa yardım edin: telefonunuz arka planda Veri Kullanılabilirliği (DA) örneklemesi ve diğer hafif kontroller çalıştırır.",
+      "step3": "3) Günlük ödül kazanın: bu iş için ödeme alırsınız, ağ politikasına göre günde yaklaşık 10 dolar hedeflenir.",
+      "localCurrency": "Kendi Para Biriminizde Ödenir",
+      "localCurrencyText": "Ödeme token'ı seçin: yerel para birimi stablecoin'leri (mevcutsa) veya UMT. Tutarlar ~10 USD değerini hedefler ve katılım ile piyasa koşullarına göre ayarlanabilir."
+    },
+    "whereMoney": {
+      "title": "$10 Nereden Geliyor?",
+      "subtitle": "Çünkü iş yapıyorsunuz",
+      "intro": "#1 soru bu. Kısa cevap: çünkü ağın ihtiyaç duyduğu bir hizmet sağlıyorsunuz.",
+      "realWork": "Telefonunuz Gerçek İş Yapar",
+      "realWork1": "Veri Kullanılabilirliği Örneklemesi: telefonunuz blok verisinin mevcut ve doğru olduğunu kontrol eder",
+      "realWork2": "İnsan Katılımı: bir kişi-bir hesap kuralını bot ve spam'i önlemek için kanıtlarsınız",
+      "realWork3": "Bu görevler herkesi korur; olmadan ağ zayıflar",
+      "valueSource": "Değerin İki Kaynağı",
+      "utility": "Kullanım: insanlar tarafından seçilen hızlı, düşük ücretli ödemeler",
+      "consensus": "Uzlaşı: daha fazla insanın kuralları doğrulayıp anlaşabileceği değer artışı",
+      "distribution": "Ödüller Nasıl Dağıtılır",
+      "newTokens": "Yeni UMT token'ları oluşturulur ve doğrulanmış telefon katılımcılarıyla paylaşılır (doğrulayıcılarla değil)",
+      "fees": "İşlem ücretleri ve inşacı tekliflerinin bir kısmı blokları sonlandıran telefon sentinel'larıyla paylaşılır",
+      "treasury": "Küçük bir kısım devam eden bakım ve istikrar programlarını finanse eder",
+      "whyDifferent": "Neden Farklı",
+      "btcProblem": "Bitcoin uzmanlaşmış madencilere ödül verir (sermaye yoğun)",
+      "ethProblem": "Ethereum büyük stake edenlere ödül verir (sermaye yoğun)",
+      "umotuSolution": "Umotu sıradan telefonlara ödül verir (katılım için düşük pratik maliyet)",
+      "conclusion": "Bağış değil: paylaşılan finansal altyapıyı dürüst ve kullanışlı tutan iş için ödeme alıyorsunuz."
+    },
+    "security": {
+      "title": "Cüzdan Güvenliği",
+      "subtitle": "Paranızı koruyun",
+      "intro": "Cüzdanınız sadece sizin kontrol ettiğiniz dijital bir kasa gibidir.",
+      "recovery": "12 Kelimeniz & Özel Anahtarınız",
+      "recoveryText": "12 gizli kelimeniz (kurtarma ifadesi) ve özel anahtarınız cüzdanınızı açar. Bunlardan birine sahip olan herkes fonlarınızı taşıyabilir.",
+      "rules": "Altın Kurallar",
+      "rule1": "12 kelimenizi veya özel anahtarınızı ASLA kimseyle paylaşmayın—Umotu katkıda bulunanlarla bile.",
+      "rule2": "12 kelimenizi kağıda yazın ve çevrimdışı saklayın. Ekran görüntüsü, fotoğraf veya bulut notlarında saklamayın.",
+      "rule3": "Özel anahtarınızı dışa aktarırsanız, çevrimdışı saklayın (kağıt, donanım veya tamamen güvendiğiniz şifreli yönetici).",
+      "rule4": "12 kelime ve özel anahtarınızı kaybederseniz kimse cüzdanınızı kurtaramaz.",
+      "warning": "Önemli",
+      "warningText": "Özel anahtar tam erişim sağlar. Göstermek veya diğer uygulamalara kopyalamak fonlarınızı riske atar. Riski anladığınız sürece dışa aktarın.",
+      "reveal": "Özel Anahtarı Göster / Dışa Aktar",
+      "revealText": "Cüzdan Ayarları'ndan özel anahtarınızı gösterebilir veya dışa aktarabilirsiniz. Biyometri/PIN isteriz, sadece birkaç saniye gösteririz ve asla yüklemeyiz. Büyük bakiyeler için donanım cüzdan düşünün.",
+      "bestPractices": "En İyi Uygulamalar",
+      "best1": "Telefonunuzda ekran kilidi & biyometri etkinleştirin.",
+      "best2": "En son güvenlik düzeltmelerini almak için uygulamayı güncel tutun.",
+      "best3": "Büyük tasarruflar için ayrı cüzdan kullanın; günlük kullanım için telefonda küçük miktarlar tutun.",
+      "scamBannerTitle": "Meşru Kimse Sormaz",
+      "scamBannerText": "Kimse 12 kelimenizi veya özel anahtarınızı isterse dolandırıcılık."
+    },
+    "stablecoins": {
+      "title": "Stablecoin'leri Anlama",
+      "subtitle": "Yerel para birimini takip eden dijital para",
+      "intro": "Stablecoin'ler normal para birimlerini (USD, ZAR, NGN gibi) takip etmek için tasarlanmış dijital token'lardır.",
+      "examples": "Örnekler",
+      "example1": "1 ZAR1 ≈ 1 Güney Afrika Randı",
+      "example2": "1 USD1 ≈ 1 ABD Doları",
+      "example3": "1 NGN1 ≈ 1 Nijerya Nairası",
+      "backed": "Ortaklar Tarafından Çıkarılır",
+      "backedText": "Umotu'daki stablecoin'ler düzenlenmiş ortaklar tarafından çıkarılır ve rezervlerle 1:1 değer tutmak için tasarlanır. Çıkarıcılar rezerv kanıtı ve itfa şartlarını yayınlar.",
+      "convert": "Nakde Çevirme",
+      "convertText": "Ortak bankalar/borsalar aracılığıyla çevirin veya kabul edilen yerlerde doğrudan harcayın."
+    },
+    "economics": {
+      "title": "UMT Ekonomisi",
+      "subtitle": "Kim ne alır ve neden",
+      "intro": "UMT'nin sabit 100 milyar token arzı vardır. Çoğu ağı dürüst tutmaya yardım eden sıradan telefon kullanıcılarına ödenir.",
+      "supply": "Arz & Dağıtım",
+      "supplyBullets": [
+        "Token arzının büyük çoğunluğu zaman içinde telefon katılımcıları için ayrılmıştır ve Emisyon Kontrolörü aracılığıyla serbest bırakılır. Emisyon Kontrolörü, günlük ihracı kalan arzın %0,01'inden fazla olmayacak şekilde sınırlandırarak uzun vadeli sürdürülebilirliği sağlar. Bu programa göre, 10 yıl sonra toplam arzın yaklaşık %68'i ve 50 yıl sonra yaklaşık %15'i kalır.",
+        "Arzın küçük bir kısmı, erken kullanıcı airdrop'u, topluluk satışı, vakıf tahsisi ve acil durum rezervi gibi belirli amaçlar için lansmanda oluşturulur."
+      ],
+      "premine": "Lansman Tahsisi (geçici, mainnet lansmanında değişebilir)",
+      "premineTable": [
+        {
+          "label": "Kullanıcı Airdrop",
+          "value": "%1.0"
+        },
+        {
+          "label": "Topluluk Satışı",
+          "value": "%0.6"
+        },
+        {
+          "label": "Umotu Vakfı (zaman kilitli)",
+          "value": "%0.2"
+        },
+        {
+          "label": "Acil Durum Fonu (yönetilen)",
+          "value": "%0.2"
+        }
+      ],
+      "emissions": "Telefonlar İçin Günlük Ödüller",
+      "emissionsText": "Her gün ağ kalan emisyon havuzunun en fazla %0.01'ini salabilir. Bu miktarı doğrulanmış telefonların günde yaklaşık 10 dolar hedeflemesi için bütçelendiririz, katılım ve piyasa koşullarına göre ayarlanır.",
+      "fees": "Ücretler & Sentinel'lar",
+      "feesText": "Sentinel yardımcıları (isteğe bağlı, ileri seviye) işlem ücretleri ve inşacı tekliflerinden pay alır. Bu günlük emisyonlardan ayrıdır.",
+      "transparency": "Şeffaflık",
+      "transparencyText": "Açılma programları ve cüzdanlar kamuya açıktır. Günlük emisyon sınırları ve gerçekleşen ödemeler uygulamada yayınlanır.",
+      "disclaimerTitle": "Basit Dil Hatırlatma",
+      "disclaimerText": "Bu yatırım tavsiyesi değildir. Ödüller ağ politikası ve katılıma bağlıdır. Uygulama sabit gelir garanti etmez."
+    },
+    "contribute": {
+      "title": "Nasıl Katkıda Bulunursunuz",
+      "subtitle": "Umotu'yu inşa etmeye yardım edin",
+      "intro": "Umotu açık kaynak ve topluluk odaklıdır. Herkes yardım edebilir—kod yazsanız, çeviri yapsanız veya sadece geri bildirim verseniz.",
+      "waysTitle": "Katkı Yolları",
+      "code": {
+        "title": "Kodu İyileştir",
+        "text": "Hata düzelt, özellik ekle, test yaz veya pull request incele. Uygulama, akıllı sözleşmeler ve arka uç hizmetleri için GitHub repos'larımıza bakın.",
+        "cta": "GitHub'ı Görüntüle",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Çevirilere Yardım Et",
+        "text": "Uygulamayı kendi dilinizde doğal hale getirin. i18n locale dosyalarını düzenleyin ve her ekranı test edin. Düzenlemeleriniz milyonlara yardım eder.",
+        "cta": "Çeviri Rehberi",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "BIP-39 Dilleri Genişlet",
+        "text": "Daha fazla insanın 12 kelimelik kurtarma ifadesini ana dilinde görmesi için yeni veya iyileştirilmiş kelime listeleri önerin.",
+        "cta": "BIP-39'a Bak",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Yönetime Katıl",
+        "text": "Teklifleri oku, açıkça tartış ve uygulamada oy ver. Sesiniz ağ parametrelerini ve hibe tahsislerini yönlendirmeye yardım eder.",
+        "cta": "Yönetimi Aç",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Sözü Yay",
+        "text": "Arkadaşlara anlat, eğitim videoları yaz, kısa videolar yayınla, sorulara cevap ver. Daha güçlü topluluk herkes için daha güçlü ağ anlamına gelir.",
+        "cta": "Umotu'yu Paylaş",
+        "url": "https://umotu.com"
+      },
+      "note": "Tüm katkılar gönüllüdür. Hibe teklifinde belirtilmedikçe resmi istihdam veya tazminat yoktur."
+    },
+    "decentralization": {
+      "title": "Neden Merkeziyetsizlik",
+      "subtitle": "Tek bir kontrol noktası yok",
+      "intro": "Merkeziyetsizlik, tek bir şirket veya hükümetin ağı kapatamayacağı veya fonlarınızı ele geçiremeyeceği anlamına gelir.",
+      "benefits": "Sizin İçin Faydalar",
+      "benefit1": "Her zaman açık: 7/24 erişim",
+      "benefit2": "Daha düşük ücretler: %3–5 kart ücreti yerine küçük ağ ücretleri",
+      "benefit3": "Sınırsız: değeri küresel gönderin",
+      "benefit4": "Sansüre dayanıklı: anahtarlarınız, paranız sizin",
+      "benefit5": "Şeffaf: herkes sistemin nasıl çalıştığını doğrulayabilir",
+      "howWorks": "Nasıl Çalışır",
+      "howWorksText": "Doğrulayıcılar her ~2 saniyede blok önerir. Telefonlar (sizinki gibi) hafif kontrollerle doğrular ve sonlandırır. Birçok küçük katkı güçlü güvenlik sağlar."
+    },
+    "noCompany": {
+      "title": "Şirket Yok, Müşteri Yok",
+      "subtitle": "Modeli anlayın",
+      "intro": "Protokolü kontrol eden 'Umotu A.Ş.' yoktur. Umotu herkesin kullanabileceği açık bir kural setidir.",
+      "notCompany": "Umotu NE DEĞİLDİR",
+      "notCompany1": "Müşteri hesabı olan şirket DEĞİL",
+      "notCompany2": "Banka veya para transferi şirketi DEĞİL",
+      "notCompany3": "Tek bir varlık tarafından kontrol EDİLMEZ",
+      "notCompany4": "İşlemleri geri ALAMAZ",
+      "whatIs": "Umotu NEDİR",
+      "whatIs1": "Protokol: e-posta veya web gibi—açık, birlikte çalışabilir kurallar",
+      "whatIs2": "Telefon öncelikli: sıradan akıllı telefonların yardımıyla çalışır",
+      "whatIs3": "Topluluk odaklı: katılımcısınız, müşteri değil",
+      "foundation": "Umotu Vakfı",
+      "foundationIntro": "Ekosistemi destekleyen kar amacı gütmeyen (referans uygulamalar, belgeler, topluluk programları) ancak protokolü kontrol etmez.",
+      "foundationTask1": "Mobil uygulama & keşifçiyi referans uygulama olarak sürdürür",
+      "foundationTask2": "Bazı kamu altyapısını işletir (başkaları kendi çalıştırabilir)",
+      "foundationTask3": "Topluluk yönetimini koordine eder (haberler, oylar)",
+      "foundationTask4": "Desteklenen stablecoin'leri inceler ve listeler",
+      "foundationTask5": "Eğitim & güvenlik rehberleri yayınlar",
+      "foundationNote": "Vakıf cüzdanınıza erişemez ve işlemleri geri alamaz."
+    },
+    "scamPrevention": {
+      "title": "Dolandırıcılıktan Kaçının",
+      "subtitle": "Kendinizi koruyun",
+      "intro": "Umotu Vakfı ASLA size DM atmaz. 'Destek' olduğunu iddia eden herkes dolandırıcıdır.",
+      "redFlags": "Kırmızı Bayraklar",
+      "redFlag1": "Müşteri desteği olduğunu iddia eden biri",
+      "redFlag2": "'Doğrula' veya 'yükselt' bağlantıları",
+      "redFlag3": "12 kelime ifadeniz veya özel anahtarınız talebi",
+      "redFlag4": "Fon gönderirseniz bonus token vaadi",
+      "redFlag5": "Ödülleri 'aktifleştir' isteyen uygulamalar veya siteler",
+      "truth": "Gerçek",
+      "truth1": "Cüzdanınızı sıfırlayabilecek müşteri desteği yok",
+      "truth2": "Tüm resmi güncellemeler bu uygulamada görünür",
+      "truth3": "Umotu'dan kimse kurtarma ifadenizi veya özel anahtarınızı istemez",
+      "truth4": "Bu uygulamayı sadece resmi Apple Store veya Google Play'den indirin",
+      "whatToDo": "Biri Size Ulaşırsa",
+      "action1": "Cevap vermeyin",
+      "action2": "Bağlantılara tıklamayın",
+      "action3": "Bilgi paylaşmayın",
+      "action4": "Engelleyin ve rapor edin"
+    },
+    "airdrop": {
+      "title": "Testnet Airdrop",
+      "subtitle": "Erken kullanıcılar tanınır",
+      "intro": "Erkensiniz! Umotu testnet aşamasında. Aktif testnet katılımcıları mainnet başladığında tahsis alabilir.",
+      "howToQualify": "Nasıl Hak Kazanılır",
+      "step1": "Uygulamada cüzdan oluşturun",
+      "step2": "İnsan doğrulamayı tamamlayın (Proof of Human)",
+      "step3": "Testnet sırasında uygulamayı düzenli kullanın",
+      "whenAirdrop": "Airdrop Ne Zaman?",
+      "whyTestnet": "Testnet zorunludur: kullanıcılar cüzdan güvenliğini öğrenir ve sistem mainnet öncesi güvenlik, sağlamlık ve verimlilik için test edilir.",
+      "timeline": "Mainnet 2026'nın 1. veya 2. çeyreğinde bekleniyor. Airdrop mainnet başlangıcı civarında olacak.",
+      "howMuch": "Ne Kadar Alacağım?",
+      "totalPool": "Toplam airdrop havuzu: 1.000.000.000 UMT token. Payınız toplam katılımcı ve başlangıçtaki UMT fiyatına bağlı.",
+      "scenario2": "1M kullanıcı: kullanıcı başına ~1.000 UMT, beklenen fiyat ~$1, airdrop değeri ~$1.000",
+      "scenario3": "10M kullanıcı: kullanıcı başına ~100 UMT, beklenen fiyat ~$20, airdrop değeri ~$2.000",
+      "scenario4": "100M kullanıcı: kullanıcı başına ~10 UMT, beklenen fiyat ~$300, airdrop değeri ~$3.000",
+      "disclaimer": "Bunlar sadece projeksiyonlardır, garanti değildir. Gerçek değerler piyasa koşulları ve program kurallarına bağlıdır.",
+      "whatYouGet": "Ne Alırsınız",
+      "reward": "Mainnet'te testnet cüzdanınız katılım ve program kurallarına göre gerçek token alabilir. Daha erken ve daha aktif kullanıcılar önceliklidir.",
+      "note": "Not: Testnet token'larının değeri yoktur. Mainnet tahsisi başlangıçtaki program politikasına göre belirlenir. Airdrop ile ilgili tüm haberler sadece bu uygulamada yayınlanır."
+    },
+    "gettingStarted": {
+      "title": "Başlangıç",
+      "subtitle": "İlk beş dakikanız",
+      "intro": "Hızlı kurulumunuz burada:",
+      "checklist": "Kurulum Kontrol Listesi",
+      "check1": "1) Dil seçin (tamam!)",
+      "check2": "2) Cüzdan oluşturun veya içe aktarın",
+      "check3": "3) ÖNEMLİ: 12 kelimenizi kağıda yazın",
+      "check4": "4) İnsan doğrulamayı tamamlayın (hızlı tarama)",
+      "check5": "5) Günlük ödül kazanmak için uygulamayı çalışır tutun",
+      "tips": "Profesyonel İpuçları",
+      "tip1": "Kontrollerin çalışması için arka plan erişimine izin verin",
+      "tip2": "Ödülleri görmek için günlük kontrol edin",
+      "tip3": "Arkadaşlarınızı davet edin—daha fazla kullanıcı ağı daha güçlü kılar"
+    }
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "retry": "Tekrar Dene",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "done": "Tamam",
+    "continue": "Devam Et",
+    "confirm": "Onayla",
+    "yes": "Evet",
+    "no": "Hayır",
+    "ok": "TAMAM",
+    "success": "Başarılı",
+    "failed": "Başarısız",
+    "copied": "Kopyalandı!",
+    "pullToRefresh": "Yenilemek için aşağı çekin",
+    "notSet": "Ayarlanmamış"
+  },
+  "errors": {
+    "networkError": "Ağ hatası. Lütfen bağlantınızı kontrol edin.",
+    "genericError": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin.",
+    "walletNotFound": "Cüzdan bulunamadı",
+    "transactionFailed": "İşlem başarısız",
+    "invalidInput": "Geçersiz giriş"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Umotu'ya Hoş Geldiniz",
+  "onboard_wallet_title": "Cüzdanınızı kurun",
+  "onboard_wallet_explain": "Ödülleri almak için cüzdan oluşturun veya içe aktarın.",
+  "wallet_create": "Yeni Cüzdan Oluştur",
+  "wallet_import": "Cüzdanı İçe Aktar",
+  "wallet_import_explain": "12 kelimelik kurtarma ifadenizi girin",
+  "wallet_created": "Cüzdan Hazır",
+  "wallet_save": "Cihaza Kaydet",
+  "wallet_backup_title": "Kurtarma İfadenizi Yedekleyin",
+  "wallet_backup_explain": "Bu 12 kelimeyi sırayla yazın. Cihazınızı kaybederseniz cüzdanınızı kurtarmanın TEK yolu budur.",
+  "wallet_backup_warning": "Kurtarma ifadenizi asla paylaşmayın. Bu kelimelere sahip olan herkes fonlarınıza erişebilir.",
+  "wallet_backup_confirm": "Kurtarma ifademi yazdım",
+  "wallet_backup_done": "İfademi Kaydettim",
+  "wallet_save_first": "Lütfen önce kurtarma ifadenizi kaydedin",
+  "poh_title": "İnsan Doğrula",
+  "continue": "Devam Et",
+  "or": "VEYA",
+  "seedReveal": {
+    "title": "Kurtarma İfadesi",
+    "intro": "Kurtarma ifadeniz bu cihaza erişiminizi kaybederseniz cüzdanınızı geri yüklemenin tek yoludur. Çevrimdışı güvenli bir şekilde yazın ve saklayın.",
+    "displayLanguage": "{{language}} dilinde gösteriliyor",
+    "hiddenMsg": "Güvenlik için ifadeniz gizli. Göstermek için aşağıya dokunun.",
+    "showButton": "İfadeyi Göster",
+    "noScreenshot": "Kurtarma ifadenizin ekran görüntüsünü asla almayın.",
+    "checkTitle": "Yedeğinizi Doğrulayın",
+    "checkPrompt": "Yazdıklarınızı doğru kontrol etmek için aşağıdaki kelimeleri girin:",
+    "checkWordN": "Kelime #{{n}}",
+    "checkIncorrect": "Bir veya daha fazla kelime yanlış. Lütfen yedeğinizi kontrol edin.",
+    "ackWritten": "Kurtarma ifademi yazdım",
+    "ackCannotRecover": "Umotu'nun cüzdanımı kurtaramayacağını anlıyorum",
+    "cancel": "İptal",
+    "continue": "Kaydettim"
+  }
+}

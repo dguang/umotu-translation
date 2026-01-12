@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "प्रतिदिन $10, हर जगह हर कोई"
+  },
+  "navigation": {
+    "home": "होम",
+    "wallet": "वॉलेट",
+    "miniapps": "मिनीऐप्स",
+    "back": "पीछे",
+    "scan": "स्कैन",
+    "settings": "सेटिंग्स",
+    "close": "बंद करें"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "सत्यापित मनुष्य",
+      "umtPrice": "UMT मूल्य"
+    },
+    "quickActions": {
+      "news": "समाचार",
+      "vote": "शासन",
+      "governance": "शासन",
+      "learn": "सीखें",
+      "network": "नेटवर्क"
+    },
+    "setupProgress": {
+      "title": "सेटअप प्रगति",
+      "steps": {
+        "language": "भाषा",
+        "wallet": "वॉलेट",
+        "verifyHuman": "मनुष्य सत्यापन",
+        "complete": "पूर्ण"
+      },
+      "continue": "जारी रखें",
+      "changeChoice": "विकल्प बदलें",
+      "requiresLanguage": "पहले भाषा चुनें",
+      "requiresWallet": "पहले वॉलेट बनाएं"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "दैनिक पुरस्कार",
+      "totalEarned": "कुल कमाई",
+      "lastClaimed": "अंतिम दावा",
+      "never": "कभी नहीं",
+      "configure": "कॉन्फ़िगर करें",
+      "loading": "कमाई लोड हो रही है...",
+      "noWallet": "कोई वॉलेट नहीं",
+      "autoClaim": {
+        "label": "ऑटो-क्लेम:",
+        "active": "सक्रिय",
+        "setupNow": "अभी सेटअप करें",
+        "expired": "समाप्त",
+        "tapToSetup": "स्वचालित दैनिक पुरस्कार सक्षम करने के लिए टैप करें"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel कमाई",
+      "manage": "प्रबंधित करें",
+      "loading": "लोड हो रहा है...",
+      "status": "स्थिति",
+      "statuses": {
+        "notBonded": "बॉन्ड नहीं किया",
+        "bonded": "बॉन्ड किया",
+        "unbonding": "अनबॉन्डिंग"
+      },
+      "claimable": "दावा योग्य",
+      "accruing": "संचित हो रहा",
+      "bonded": "बॉन्ड किया"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "स्वचालित दैनिक पुरस्कार",
+      "description": "<bold>ऑटो-क्लेम</bold> सक्षम करें ताकि आपका $10 दैनिक UBI पुरस्कार स्वचालित रूप से प्राप्त हो—मैनुअल दावा की आवश्यकता नहीं!",
+      "benefits": {
+        "midnight": "आपके समय क्षेत्र में आधी रात को दावा",
+        "lowerFees": "80% कम गैस शुल्क (अन्य उपयोगकर्ताओं के साथ बैच)",
+        "disable": "सेटिंग्स में कभी भी अक्षम कर सकते हैं"
+      },
+      "notice": "आप एक बार का अधिकृत संदेश साइन करेंगे जो हमारे रिले को आपके लिए दावा करने की अनुमति देता है। प्राइवेट की साझा नहीं की जाती।",
+      "maybeLater": "शायद बाद में",
+      "enableNow": "अभी सक्षम करें"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "ऑटो-क्लेम सेटिंग्स",
+      "description": "दैनिक पुरस्कार स्वचालित रूप से दावा करें।",
+      "checking": "स्थिति जांच रही है...",
+      "status": "स्थिति",
+      "enabled": "सक्षम",
+      "disabled": "अक्षम",
+      "lastClaimed": "अंतिम दावा",
+      "neverClaimed": "कभी नहीं",
+      "nextClaim": "अगला दावा",
+      "expiresAt": "समाप्ति समय",
+      "timezone": "समय क्षेत्र",
+      "preferredHour": "पसंदीदा घंटा",
+      "preferredHourHint": "ऑटो-क्लेम कब चलना चाहिए चुनें",
+      "enableButton": "ऑटो-क्लेम सक्षम करें",
+      "disableButton": "ऑटो-क्लेम अक्षम करें",
+      "enabling": "सक्षम कर रहे हैं...",
+      "disabling": "अक्षम कर रहे हैं...",
+      "enableSuccess": "ऑटो-क्लेम सक्षम!",
+      "enableError": "सक्षम करने में विफल",
+      "disableSuccess": "ऑटो-क्लेम अक्षम",
+      "disableError": "अक्षम करने में विफल",
+      "updateButton": "सेटिंग्स अपडेट करें",
+      "updating": "अपडेट कर रहे हैं..."
+    },
+    "manual": {
+      "title": "मैनुअल दावा",
+      "description": "यदि आपको जल्दी धन की आवश्यकता है, तो अभी अगला उपलब्ध पुरस्कार प्राप्त करें। मैनुअल दावे आपके वॉलेट के गैस का उपयोग करते हैं। यदि आप प्रतीक्षा करते हैं तो ऑटो-क्लेम सस्ता रहता है। यदि आपका वॉलेट अनफंडेड है, तो मैनुअल दावे से पहले ऑटो-क्लेम सक्षम करें या नेटिव गैस जोड़ें।",
+      "dayLabel": "पुरस्कार दिन",
+      "claimButton": "अभी दावा करें",
+      "claiming": "दावा कर रहे हैं...",
+      "success": "दावा सबमिट किया गया",
+      "successWithId": "दावा सबमिट किया गया (id: {{id}})",
+      "error": "दावा करने में विफल",
+      "noProof": "पुरस्कार प्रमाण अभी तक प्रकाशित नहीं हुआ है। आज का स्नैपशॉट लाइव होने के बाद पुनः प्रयास करें।",
+      "unauthorized": "रिलेयर प्राधिकरण विफल। कृपया पुनः प्रयास करें या सहायता से संपर्क करें।",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "उपलब्ध पुरस्कार दिन: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "कवरेज: {{start}} से {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "इस बैच के बाद +{{days}} और",
+      "batchSuccess": "{{count}} दिन सफलतापूर्वक क्लेम किए गए",
+      "claimingProgress": "क्लेम हो रहा है {{claimed}}/{{total}}...",
+      "claimAllButton": "सभी {{count}} दिन क्लेम करें"
+    },
+    "timezone": {
+      "title": "समय क्षेत्र चुनें",
+      "search": "समय क्षेत्र खोजें...",
+      "current": "वर्तमान चयन",
+      "searchResults": "खोज परिणाम",
+      "noResults": "कोई परिणाम नहीं",
+      "detected": "पता लगाया",
+      "popular": "लोकप्रिय समय क्षेत्र",
+      "regions": {
+        "Americas": "अमेरिका",
+        "Europe": "यूरोप",
+        "Asia": "एशिया",
+        "Africa": "अफ्रीका",
+        "Oceania": "ओशिनिया"
+      }
+    },
+    "payout": {
+      "title": "भुगतान वरीयता",
+      "description": "पसंदीदा भुगतान मुद्रा चुनें।",
+      "current": "वर्तमान",
+      "saved": "सहेजा गया",
+      "saveError": "सहेजने में त्रुटि",
+      "showMore": "और दिखाएं ({{count}})",
+      "showLess": "कम दिखाएं",
+      "native": "नेटिव टोकन",
+      "stablecoin": "स्टेबलकॉइन",
+      "popular": "लोकप्रिय",
+      "allCurrencies": "सभी मुद्राएं"
+    }
+  },
+  "wallet": {
+    "title": "वॉलेट",
+    "testnetNotice": "टेस्टनेट टोकन का कोई वास्तविक मूल्य नहीं",
+    "totalBalance": "कुल बैलेंस",
+    "balance": "बैलेंस",
+    "address": "पता",
+    "copyAddress": "पता कॉपी करें",
+    "addressCopied": "पता कॉपी किया गया",
+    "receive": "प्राप्त करें",
+    "send": "भेजें",
+    "swap": "स्वैप",
+    "swapComingSoon": "स्वैप जल्द आ रहा है",
+    "history": "इतिहास",
+    "tokens": "टोकन",
+    "collectibles": "संग्रहणीय वस्तुएं",
+    "noTokens": "कोई टोकन कॉन्फ़िगर नहीं",
+    "nativeToken": "नेटिव टोकन",
+    "loading": "लोड हो रहा है...",
+    "refreshing": "रिफ्रेश कर रहे हैं...",
+    "balancesUpdated": "बैलेंस अपडेट किए गए",
+    "menu": {
+      "manageTokens": "टोकन प्रबंधित करें",
+      "addressBook": "एड्रेस बुक",
+      "walletSettings": "वॉलेट सेटिंग्स",
+      "showBalances": "बैलेंस दिखाएं",
+      "hideBalances": "बैलेंस छिपाएं",
+      "showZeroTokens": "शून्य टोकन दिखाएं",
+      "hideZeroTokens": "शून्य टोकन छिपाएं",
+      "refresh": "रिफ्रेश"
+    },
+    "manageTokens": {
+      "title": "टोकन प्रबंधित करें",
+      "info": "कस्टम ERC-20 टोकन जोड़ें। सिस्टम टोकन डिफ़ॉल्ट रूप से शामिल हैं।",
+      "addToken": "टोकन जोड़ें",
+      "adding": "जोड़ रहे हैं...",
+      "contractAddress": "टोकन कॉन्ट्रैक्ट पता (0x...)",
+      "autoFetch": "सिंबल और डेसिमल स्वचालित प्राप्त होते हैं",
+      "customTokens": "कस्टम टोकन",
+      "noCustomTokens": "अभी कोई कस्टम टोकन नहीं जोड़ा गया।",
+      "addUsingForm": "ऊपर फॉर्म से टोकन जोड़ें।",
+      "systemToken": "यह सिस्टम टोकन है और पहले से शामिल है।",
+      "fetchingMetadata": "टोकन मेटाडेटा प्राप्त कर रहे हैं...",
+      "addedSuccess": "टोकन सफलतापूर्वक जोड़ा गया",
+      "enterValidAddress": "वैध टोकन पता दर्ज करें",
+      "save": "सहेजें"
+    },
+    "addressBook": {
+      "title": "एड्रेस बुक",
+      "addContact": "संपर्क जोड़ें",
+      "nameLabel": "नाम या लेबल",
+      "walletAddress": "वॉलेट पता (0x...)",
+      "savedContacts": "सहेजे संपर्क",
+      "noContacts": "कोई संपर्क सहेजा नहीं गया।",
+      "addForQuickSending": "त्वरित भेजने के लिए संपर्क जोड़ें।",
+      "enterValidAddress": "वैध पता दर्ज करें",
+      "addLabel": "लेबल जोड़ें",
+      "save": "सहेजें"
+    },
+    "settings": {
+      "title": "वॉलेट सेटिंग्स",
+      "export": {
+        "title": "वॉलेट निर्यात करें",
+        "description": "रिकवरी फ्रेज़ या प्राइवेट की कभी साझा न करें। उन्हें सुरक्षित ऑफ़लाइन रखें।",
+        "recoveryPhrase": "रिकवरी फ्रेज़",
+        "recoveryPhraseNotAvailable": "रिकवरी फ्रेज़ उपलब्ध नहीं (प्राइवेट की से आयात)",
+        "privateKey": "प्राइवेट की",
+        "privateKeyWarning": "प्राइवेट की (गुप्त रखें!)",
+        "showPhrase": "रिकवरी फ्रेज़ दिखाएं",
+        "showKey": "प्राइवेट की दिखाएं",
+        "warning": "रिकवरी फ्रेज़ या प्राइवेट की किसी से साझा न करें।",
+        "copy": "कॉपी",
+        "copied": "कॉपी किया गया!",
+        "hide": "छिपाएं",
+        "clipboardWarning": "क्लिपबोर्ड अन्य ऐप्स पढ़ सकते हैं। 30 सेकंड में स्वचालित साफ हो जाएगा।",
+        "verifyForKey": "प्राइवेट की दिखाने के लिए सत्यापित करें",
+        "verifyForSeed": "रिकवरी फ्रेज़ दिखाने के लिए सत्यापित करें",
+        "verifyDescription": "संवेदनशील जानकारी दिखाने के लिए पासवर्ड या PIN दर्ज करें।"
+      },
+      "import": {
+        "title": "वॉलेट आयात करें",
+        "description": "आयात से वर्तमान वॉलेट बदल जाएगा। पहले बैकअप लें। आयात के बाद PoH स्थिति फिर सत्यापित करें।",
+        "byPhrase": "रिकवरी फ्रेज़ से",
+        "byPrivateKey": "प्राइवेट की से",
+        "phrasePlaceholder": "12 या 24 शब्द फ्रेज़ दर्ज करें…",
+        "keyPlaceholder": "0x… प्राइवेट की दर्ज करें",
+        "importButton": "वॉलेट आयात करें",
+        "importing": "आयात कर रहे हैं...",
+        "success": "वॉलेट सफलतापूर्वक आयात किया गया!"
+      },
+      "dangerZone": {
+        "title": "खतरनाक क्षेत्र",
+        "description": "ये क्रियाएं पूर्ववत नहीं की जा सकतीं। वॉलेट बैकअप सुनिश्चित करें।",
+        "forgetWallet": "वॉलेट भूल जाएं",
+        "forgetDescription": "इस डिवाइस से वॉलेट हटाएं। रिकवरी फ्रेज़ बैकअप लें।",
+        "confirmTitle": "वॉलेट भूल जाएं?",
+        "confirmMessage": "यह डिवाइस से वॉलेट हटा देगा। पहले रिकवरी फ्रेज़ बैकअप लें।",
+        "cancel": "रद्द करें",
+        "confirm": "वॉलेट भूल जाएं",
+        "walletForgotten": "वॉलेट भुला दिया गया",
+        "unableToForget": "वॉलेट भूलने में असमर्थ",
+        "resetWallet": "वॉलेट रीसेट करें",
+        "resetDescription": "सभी वॉलेट डेटा पूरी तरह मिटाएं और नया शुरू करें।"
+      },
+      "authPrompt": "प्राइवेट की प्रकट करने के लिए प्रमाणीकरण करें"
+    }
+  },
+  "reset": {
+    "title": "वॉलेट रीसेट करें",
+    "dangerTitle": "यह क्रिया पूर्ववत नहीं की जा सकती!",
+    "warning1": "वॉलेट रीसेट करने से स्थायी रूप से नष्ट हो जाएगा:",
+    "bullet1": "आपका वॉलेट और प्राइवेट की",
+    "bullet2": "आपकी रिकवरी फ्रेज़",
+    "bullet3": "सभी ऐप सेटिंग्स और वरीयताएं",
+    "bullet4": "लेन-देन इतिहास",
+    "recoveryNote": "यदि आपके पास 12-शब्द रिकवरी फ्रेज़ है, तो रीसेट के बाद वॉलेट पुनः प्राप्त कर सकते हैं।",
+    "continueButton": "मैं समझता हूं, जारी रखें",
+    "confirmTitle": "रीसेट पुष्टि करें",
+    "confirmDescription": "सभी वॉलेट डेटा मिटाने की पुष्टि के लिए नीचे \"RESET\" टाइप करें।",
+    "placeholder": "RESET टाइप करें",
+    "typeMismatch": "पुष्टि के लिए RESET टाइप करें",
+    "resetButton": "वॉलेट हमेशा के लिए रीसेट करें",
+    "resettingTitle": "रीसेट कर रहे हैं...",
+    "resettingDescription": "सभी वॉलेट डेटा साफ कर रहे हैं। कृपया प्रतीक्षा करें...",
+    "completeTitle": "रीसेट पूर्ण",
+    "completeDescription": "आपका वॉलेट रीसेट हो गया है। अब नया वॉलेट सेटअप करें या मौजूदा आयात करें।",
+    "startFresh": "नया शुरू करें",
+    "error": "वॉलेट रीसेट करने में विफल। पुनः प्रयास करें।"
+  },
+  "export": {
+    "verifyTitle": "पहचान सत्यापित करें",
+    "verifyDescription": "वॉलेट निर्यात करने के लिए अपना पासवर्ड दर्ज करें।",
+    "verify": "सत्यापित करें",
+    "verificationFailed": "सत्यापन विफल",
+    "passphraseTitle": "निर्यात पासफ्रेज़ सेट करें",
+    "passphraseDescription": "बैकअप एन्क्रिप्ट करने के लिए मजबूत पासफ्रेज़ चुनें। बाद में आयात के लिए इसकी आवश्यकता होगी।",
+    "enterPassphrase": "पासफ्रेज़ दर्ज करें",
+    "passphraseTooWeak": "पासफ्रेज़ बहुत कमजोर है। कम से कम 8 अक्षर उपयोग करें।",
+    "includeSeed": "रिकवरी फ्रेज़ शामिल करें",
+    "includeSeedDescription": "पूर्ण बैकअप के लिए अनुशंसित",
+    "confirmTitle": "पासफ्रेज़ पुष्टि करें",
+    "confirmDescription": "पुष्टि के लिए पासफ्रेज़ फिर दर्ज करें।",
+    "confirmPassphrase": "पासफ्रेज़ पुष्टि करें",
+    "passphraseMismatch": "पासफ्रेज़ मेल नहीं खाते",
+    "warning": "इस बैकअप को सुरक्षित रखें। फ़ाइल और पासफ्रेज़ वाले किसी को भी आपके वॉलेट तक पहुंच मिल सकती है।",
+    "exportNow": "वॉलेट निर्यात करें",
+    "exportingTitle": "निर्यात कर रहे हैं...",
+    "exportingDescription": "वॉलेट बैकअप एन्क्रिप्ट और तैयार कर रहे हैं...",
+    "successTitle": "निर्यात पूर्ण",
+    "successDescription": "आपका एन्क्रिप्टेड वॉलेट बैकअप तैयार है। इसे सुरक्षित रखें।",
+    "rememberPassphrase": "निर्यात पासफ्रेज़ याद रखें - इस बैकअप आयात के लिए आवश्यक होगा।",
+    "errorTitle": "निर्यात विफल",
+    "failed": "निर्यात विफल। पुनः प्रयास करें।",
+    "tryAgain": "पुनः प्रयास करें",
+    "exportKeystore": "एन्क्रिप्टेड बैकअप निर्यात करें",
+    "exportKeystoreDesc": "एन्क्रिप्टेड कीस्टोर फ़ाइल सहेजें"
+  },
+  "security": {
+    "title": "अपने वॉलेट को सुरक्षित करें",
+    "subtitle": "वॉलेट सुरक्षित करने के लिए पासवर्ड या PIN सेटअप करें",
+    "checkingDevice": "डिवाइस सुरक्षा जांच रहे हैं...",
+    "passwordOption": "पासवर्ड",
+    "passwordDesc": "8+ अक्षर, अक्षर और संख्याएं",
+    "pinOption": "6-अंकीय PIN",
+    "pinDesc": "त्वरित और याद रखने में आसान",
+    "enterPin": "6-अंकीय PIN दर्ज करें",
+    "confirmPin": "अपना PIN पुष्टि करें",
+    "enterPassword": "पासवर्ड दर्ज करें",
+    "confirmPassword": "पासवर्ड पुष्टि करें",
+    "enableBiometrics": "{{type}} सक्षम करें?",
+    "biometricsDesc": "त्वरित अनलॉक के लिए {{type}} उपयोग करें। बाद में सेटिंग्स में बदल सकते हैं।",
+    "enableBiometricsButton": "{{type}} सक्षम करें",
+    "enableBiometricsPrompt": "बायोमेट्रिक अनलॉक सक्षम करने के लिए प्रमाणित करें",
+    "skipBiometrics": "अभी छोड़ें",
+    "setupComplete": "सेटअप पूर्ण!",
+    "walletSecured": "आपका वॉलेट अब सुरक्षित है!",
+    "continue": "जारी रखें",
+    "passwordTooWeak": "पासवर्ड बहुत कमजोर है। सुझावों का पालन करें।",
+    "pinMismatch": "PIN मेल नहीं खाते",
+    "passwordMismatch": "पासवर्ड मेल नहीं खाते",
+    "setupError": "सेटअप विफल। पुनः प्रयास करें।",
+    "passwordTitle": "पासवर्ड",
+    "passwordDescription": "8+ अक्षर, मजबूत सुरक्षा",
+    "pinTitle": "6-अंकीय PIN",
+    "pinDescription": "त्वरित पहुंच, याद रखने में आसान"
+  },
+  "lock": {
+    "title": "Umotu अनलॉक करें",
+    "lockedOut": "लॉक आउट",
+    "tooManyAttempts": "बहुत अधिक प्रयास। {{time}} में पुनः प्रयास करें।",
+    "attemptsRemaining": "{{count}} प्रयास शेष",
+    "enterPassword": "पासवर्ड दर्ज करें",
+    "unlock": "अनलॉक",
+    "wrongPin": "गलत PIN",
+    "wrongPassword": "गलत पासवर्ड",
+    "verificationError": "सत्यापन विफल",
+    "biometricsPrompt": "अपना वॉलेट अनलॉक करें",
+    "unlockWithFaceId": "Face ID से अनलॉक करें?",
+    "unlockWithFingerprint": "फिंगरप्रिंट से अनलॉक करें?",
+    "forgotPassword": "पासवर्ड भूल गए?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "असमर्थित डिवाइस",
+    "emulatorMessage": "सुरक्षा कारणों से यह ऐप एमुलेटर पर नहीं चल सकता।",
+    "rootedTitle": "सुरक्षा चेतावनी",
+    "exitApp": "बाहर निकलें",
+    "continueAnyway": "फिर भी जारी रखें"
+  },
+  "settingsSecurity": {
+    "title": "सुरक्षा",
+    "autoLock": "ऑटो-लॉक",
+    "autoLockDesc": "निष्क्रियता के बाद वॉलेट लॉक करें",
+    "faceId": "Face ID",
+    "fingerprint": "फिंगरप्रिंट",
+    "biometricsDesc": "बायोमेट्रिक से त्वरित अनलॉक",
+    "changePin": "PIN बदलें",
+    "changePassword": "पासवर्ड बदलें",
+    "changeDesc": "सुरक्षा क्रेडेंशियल अपडेट करें",
+    "enableBiometrics": "बायोमेट्रिक अनलॉक सक्षम करें",
+    "enterCurrent": "वर्तमान {{type}} दर्ज करें",
+    "enterNew": "नया {{type}} दर्ज करें",
+    "confirmNew": "नया {{type}} पुष्टि करें",
+    "currentPassword": "वर्तमान पासवर्ड",
+    "newPassword": "नया पासवर्ड",
+    "confirmNewPassword": "नया पासवर्ड पुष्टि करें",
+    "changeNow": "अब बदलें",
+    "success": "सफल",
+    "pinChanged": "PIN सफलतापूर्वक बदला गया",
+    "passwordChanged": "पासवर्ड सफलतापूर्वक बदला गया",
+    "changeFailed": "क्रेडेंशियल बदलने में विफल",
+    "autoLockOptions": {
+      "immediately": "तुरंत",
+      "after1min": "1 मिनट बाद",
+      "after5min": "5 मिनट बाद",
+      "after15min": "15 मिनट बाद",
+      "after1hour": "1 घंटा बाद",
+      "never": "कभी नहीं"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "कृपया प्रतीक्षा करें",
+    "cooldownMessage": "सुरक्षा के लिए, आप {{time}} में फिर की प्रकट कर सकते हैं।",
+    "cooldownReason": "यह दुष्ट ऐप्स को तेजी से की एक्सेस करने से रोकता है।"
+  },
+  "passwordVerify": {
+    "title": "पहचान सत्यापित करें",
+    "description": "संवेदनशील वॉलेट जानकारी प्रकट करने के लिए पासवर्ड या PIN दर्ज करें",
+    "verify": "सत्यापित करें"
+  },
+  "passwordValidation": {
+    "veryWeak": "बहुत कमजोर",
+    "weak": "कमजोर",
+    "fair": "मध्यम",
+    "good": "अच्छा",
+    "strong": "मजबूत",
+    "tooShort": "पासवर्ड कम से कम 8 अक्षर का होना चाहिए",
+    "commonPassword": "यह सामान्य रूप से उपयोग किया जाने वाला पासवर्ड है",
+    "lengthSuggestion": "बेहतर सुरक्षा के लिए कम से कम 12 अक्षर उपयोग करें",
+    "mixedCaseSuggestion": "बड़े और छोटे अक्षर मिश्रित करें",
+    "numberSuggestion": "कुछ संख्याएं जोड़ें",
+    "specialCharSuggestion": "विशेष अक्षर जोड़ें (!@#$%)"
+  },
+  "forgot": {
+    "title": "क्रेडेंशियल रीसेट करें",
+    "warning": "पासवर्ड या PIN रीसेट करने के लिए, वॉलेट सीड फ्रेज़ दर्ज करना होगा। यह साबित करता है कि आप वॉलेट के मालिक हैं।",
+    "warningText": "अपनी सीड फ्रेज़ कभी किसी से साझा न करें।",
+    "continue": "मैं समझता हूं, जारी रखें",
+    "enterSeed": "सीड फ्रेज़ दर्ज करें",
+    "seedDescription": "अपनी 12 या 24 शब्द सीड फ्रेज़ दर्ज करें। प्रत्येक शब्द को स्पेस से अलग करें।",
+    "seedPlaceholder": "सीड फ्रेज़ दर्ज करें...",
+    "verifySeed": "सीड फ्रेज़ सत्यापित करें",
+    "invalidSeed": "वैध 12 या 24 शब्द सीड फ्रेज़ दर्ज करें",
+    "chooseMethod": "सुरक्षा विधि चुनें",
+    "methodDescription": "वॉलेट सुरक्षित करने के लिए कौन सी विधि चाहते हैं?",
+    "newPassword": "नया पासवर्ड बनाएं",
+    "newPin": "नया PIN बनाएं",
+    "newPasswordDesc": "मजबूत पासवर्ड चुनें (8+ अक्षर)",
+    "newPinDesc": "6-अंकीय PIN दर्ज करें",
+    "confirmPassword": "पासवर्ड पुष्टि करें",
+    "confirmPin": "PIN पुष्टि करें",
+    "confirmPasswordDesc": "पुष्टि के लिए पासवर्ड फिर दर्ज करें",
+    "confirmPinDesc": "पुष्टि के लिए PIN फिर दर्ज करें",
+    "resetNow": "अब रीसेट करें",
+    "complete": "रीसेट पूर्ण",
+    "completeDescription": "आपके क्रेडेंशियल रीसेट हो गए हैं। अब नए पासवर्ड या PIN से वॉलेट अनलॉक कर सकते हैं।",
+    "unlockNow": "वॉलेट अनलॉक करें",
+    "passwordTooWeak": "पासवर्ड बहुत कमजोर है। मजबूत पासवर्ड चुनें।",
+    "passwordMismatch": "पासवर्ड मेल नहीं खाते",
+    "pinMismatch": "PIN मेल नहीं खाते",
+    "resetFailed": "क्रेडेंशियल रीसेट करने में विफल। सीड फ्रेज़ सत्यापित करें।",
+    "resetError": "त्रुटि हुई। पुनः प्रयास करें।"
+  },
+  "send": {
+    "title": "भेजें",
+    "selectToken": "टोकन चुनें",
+    "selectTokenInfo": "भेजने के लिए टोकन चुनें। केवल बैलेंस वाले टोकन दिखाए जाते हैं।",
+    "noTokensWithBalance": "बैलेंस वाला कोई टोकन नहीं",
+    "addTokensFirst": "पहले वॉलेट में टोकन जोड़ें",
+    "enterAmount": "राशि दर्ज करें",
+    "enterRecipient": "प्राप्तकर्ता दर्ज करें",
+    "review": "समीक्षा",
+    "amount": "राशि",
+    "recipient": "प्राप्तकर्ता",
+    "recipientPlaceholder": "0x... वॉलेट पता",
+    "networkFee": "नेटवर्क शुल्क",
+    "gasToken": "गैस भुगतान के लिए",
+    "payingWith": "भुगतान कर रहे हैं",
+    "payGasWith": "गैस भुगतान",
+    "nativeGas": "UMT (नेटिव)",
+    "stableGas": "स्टेबल गैस",
+    "selectStable": "स्टेबल चुनें",
+    "max": "अधिकतम",
+    "next": "अगला",
+    "continue": "जारी रखें",
+    "confirm": "भेजें पुष्टि करें",
+    "confirmSend": "भेजें पुष्टि करें",
+    "sending": "भेज रहे हैं...",
+    "failed": "लेन-देन विफल",
+    "viewInExplorer": "एक्सप्लोरर में देखें",
+    "done": "पूर्ण",
+    "cancel": "रद्द करें",
+    "send": "भेजें",
+    "balance": "बैलेंस",
+    "available": "उपलब्ध",
+    "to": "को",
+    "network": "नेटवर्क",
+    "step": "चरण",
+    "estimating": "अनुमान लगा रहे हैं…",
+    "umtNative": "UMT (नेटिव)",
+    "txSpeed": "लेन-देन गति",
+    "transactionSpeed": "लेन-देन गति",
+    "speed": {
+      "slow": "धीमा",
+      "normal": "सामान्य",
+      "fast": "त्वरित"
+    },
+    "gasNotice": {
+      "stablecoin": "गैस स्टेबलकॉइन से भुगतान होगी।",
+      "reserved": "गैस के लिए {{amount}} {{symbol}} आरक्षित; अधिकतम {{max}} भेज सकते हैं।"
+    },
+    "errors": {
+      "invalidAddress": "अमान्य प्राप्तकर्ता पता",
+      "invalidAmount": "वैध राशि दर्ज करें",
+      "insufficientBalance": "अपर्याप्त बैलेंस",
+      "insufficientGas": "गैस के लिए अपर्याप्त बैलेंस",
+      "insufficientGasWithHint": "गैस के लिए अपर्याप्त बैलेंस। UMT या समर्थित स्टेबलकॉइन जोड़ें।",
+      "notEnoughForGas": "गैस कवर करने के लिए पर्याप्त बैलेंस नहीं",
+      "noStableGas": "गैस के लिए पर्याप्त UMT नहीं और कोई समर्थित स्टेबल इसे कवर नहीं कर सकता।",
+      "permitFailed": "गैस टोकन के लिए परमिट या अनुमोदन विफल",
+      "relayNotConfigured": "स्टेबल गैस रिले कॉन्फ़िगर नहीं",
+      "transactionReverted": "लेन-देन ऑन-चेन रिवर्ट हो गया।",
+      "approvalNeeded": "गैस टोकन को अनुमोदन चाहिए लेकिन अनुमोदन के लिए UMT उपलब्ध नहीं। थोड़ा UMT जोड़ें या परमिट-समर्थित टोकन उपयोग करें।"
+    },
+    "addressBook": {
+      "title": "पता पुस्तिका",
+      "addNew": "नया जोड़ें",
+      "noContacts": "कोई सहेजे गए पते नहीं",
+      "saveForQuickAccess": "त्वरित पहुंच के लिए पते सहेजें",
+      "editContact": "संपर्क संपादित करें",
+      "deleteContact": "संपर्क हटाएं",
+      "addressNotSaved": "पता सहेजा नहीं गया",
+      "addLabel": "लेबल जोड़ें",
+      "enterValidAddress": "पहले एक वैध पता दर्ज करें",
+      "saved": "सहेजा गया",
+      "save": "सहेजें"
+    },
+    "success": {
+      "title": "लेन-देन भेजा गया!",
+      "hash": "हैश",
+      "viewInExplorer": "एक्सप्लोरर में देखें",
+      "close": "बंद करें"
+    },
+    "batch": {
+      "mode": "बैच मोड",
+      "singleMode": "एकल प्राप्तकर्ता",
+      "addRecipient": "प्राप्तकर्ता जोड़ें",
+      "noRecipients": "अभी तक कोई प्राप्तकर्ता नहीं जोड़ा गया",
+      "addFromTagOrBook": "टैग या पुस्तिका से जोड़ें",
+      "invalidAddress": "अमान्य पता: {{address}}",
+      "invalidAmount": "{{recipient}} के लिए अमान्य राशि",
+      "totalExceedsBalance": "कुल शेष से अधिक है",
+      "sendingTo": "{{count}} प्राप्तकर्ता को भेज रहा है",
+      "sendingTo_plural": "{{count}} प्राप्तकर्ताओं को भेज रहा है",
+      "recipients": "प्राप्तकर्ता",
+      "addresses": "{{count}} पता",
+      "addresses_plural": "{{count}} पते",
+      "addByTag": "टैग से जोड़ें",
+      "noTags": "अभी तक कोई टैग नहीं",
+      "createFirstTag": "पता पुस्तिका में अपना पहला टैग बनाएं",
+      "addFromTag": "टैग से जोड़ें",
+      "selectTag": "टैग चुनें",
+      "remove": "हटाएं",
+      "sendAll": "सभी भेजें ({{count}})",
+      "batchSend": "बैच भेजें",
+      "badge": "बैच",
+      "successFail": "{{success}} सफल, {{fail}} विफल",
+      "successful": "सफल",
+      "sentStatus": "भेजा गया",
+      "failedStatus": "विफल",
+      "details": "बैच स्थानांतरण विवरण",
+      "total": "कुल",
+      "tagPicker": {
+        "title": "टैग चुनें",
+        "noTags": "कोई टैग उपलब्ध नहीं",
+        "createHint": "पहले पुस्तिका में संपर्कों में टैग जोड़ें"
+      },
+      "tags": {
+        "manage": "टैग प्रबंधित करें",
+        "add": "टैग जोड़ें",
+        "remove": "टैग हटाएं",
+        "create": "टैग बनाएं",
+        "newTag": "नया टैग नाम",
+        "addToContact": "संपर्क में टैग जोड़ें"
+      }
+    }
+  },
+  "receive": {
+    "title": "प्राप्त करें",
+    "yourAddress": "आपका वॉलेट पता",
+    "scanQR": "प्राप्त करने के लिए QR कोड स्कैन करें",
+    "copyAddress": "पता कॉपी करें",
+    "share": "साझा करें"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "भुगतान",
+      "myQr": "मेरा QR"
+    },
+    "pay": {
+      "title": "भुगतान",
+      "description": "दोस्त के QR कोड स्कैन करके सीधे उनके वॉलेट में भुगतान करें",
+      "allowCamera": "कैमरा अनुमति दें",
+      "requesting": "अनुरोध कर रहे हैं…",
+      "openSettings": "सेटिंग्स खोलें",
+      "sendTo": "भेजें को",
+      "amount": "राशि",
+      "rescan": "फिर स्कैन करें",
+      "continue": "जारी रखें"
+    },
+    "receive": {
+      "title": "प्राप्त करें",
+      "description": "इस पते पर भुगतान भेजने के लिए इस QR कोड स्कैन करें",
+      "tapToCopy": "पता कॉपी करने के लिए टैप करें",
+      "copied": "क्लिपबोर्ड पर कॉपी किया गया!"
+    }
+  },
+  "history": {
+    "title": "लेन-देन इतिहास",
+    "sent": "भेजा",
+    "received": "प्राप्त",
+    "token": "टोकन",
+    "external": "बाहरी",
+    "to": "को: ",
+    "from": "से: ",
+    "viewInExplorer": "एक्सप्लोरर में देखें",
+    "empty": {
+      "title": "अभी कोई लेन-देन नहीं",
+      "description": "टोकन भेजने या प्राप्त करने पर आपका लेन-देन इतिहास यहां दिखेगा।"
+    },
+    "status": {
+      "confirmed": "पुष्टि किया गया",
+      "pending": "लंबित",
+      "failed": "विफल"
+    },
+    "details": {
+      "title": "लेन-देन विवरण",
+      "status": "स्थिति",
+      "type": "प्रकार",
+      "to": "को",
+      "from": "से",
+      "token": "टोकन",
+      "block": "ब्लॉक",
+      "gasCost": "गैस लागत",
+      "hash": "हैश",
+      "source": "स्रोत",
+      "balanceDetected": "बैलेंस पता लगा",
+      "inferredNote": "यह लेन-देन बैलेंस परिवर्तन से पता लगा। सटीक ऑन-चेन विवरण उपलब्ध नहीं।"
+    },
+    "time": {
+      "justNow": "अभी",
+      "minsAgo": "{{count}} मिनट पहले",
+      "hoursAgo": "{{count}} घंटे पहले",
+      "daysAgo": "{{count}} दिन पहले"
+    }
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "account": {
+      "title": "खाता और रूप",
+      "walletAddress": "वॉलेट पता",
+      "copy": "कॉपी",
+      "copied": "कॉपी किया गया"
+    },
+    "theme": {
+      "title": "थीम",
+      "light": "लाइट",
+      "dark": "डार्क",
+      "system": "सिस्टम"
+    },
+    "language": {
+      "title": "भाषा",
+      "select": "भाषा चुनें",
+      "current": "वर्तमान"
+    },
+    "display": {
+      "title": "डिस्प्ले",
+      "description": "होम स्क्रीन रूप अनुकूलित करें।",
+      "showSentinelCard": "Sentinel कमाई कार्ड दिखाएं",
+      "showSentinelCardDesc": "होम स्क्रीन पर कमाई दिखाएं",
+      "showDailyRewardsCard": "दैनिक पुरस्कार कार्ड दिखाएं",
+      "on": "चालू",
+      "off": "बंद",
+      "sentinelSettings": "Sentinel सेटिंग्स",
+      "sentinelSettingsDesc": "बॉन्ड, पुरस्कार और ऑटो-क्लेम प्रबंधित करें"
+    },
+    "sentinelDisplay": {
+      "title": "Sentinel डिस्प्ले",
+      "showSentinelCard": "Sentinel कार्ड दिखाएं",
+      "showSentinelCardDesc": "होम स्क्रीन पर sentinel कमाई कार्ड दिखाएं",
+      "sentinelSettings": "Sentinel सेटिंग्स",
+      "sentinelSettingsDesc": "sentinel नोड और पुरस्कार कॉन्फ़िगर करें"
+    },
+    "verification": {
+      "title": "सत्यापन",
+      "description": "दैनिक पुरस्कार अनलॉक करने के लिए Inlyf से अपनी मानवता सत्यापित करें। त्वरित लाइवनेस जांच; समय-समय पर फिर करें।",
+      "open": "सत्यापन शुरू करें",
+      "refresh": "सत्यापन रिफ्रेश करें",
+      "status": "स्थिति",
+      "verified": "सत्यापित",
+      "notVerified": "सत्यापित नहीं",
+      "expiresOn": "समाप्ति तिथि",
+      "daysRemaining": "शेष दिन",
+      "upToDate": "सत्यापन अपडेट है",
+      "refreshAvailableIn": "{{days}} दिनों में रिफ्रेश उपलब्ध"
+    },
+    "network": {
+      "title": "नेटवर्क",
+      "description": "ब्लॉकचेन नेटवर्क कनेक्शन कॉन्फ़िगर करें।",
+      "testnet": "टेस्टनेट",
+      "mainnet": "मेननेट (जल्द आ रहा)",
+      "rpcEndpoint": "RPC एंडपॉइंट",
+      "pingRpc": "RPC पिंग",
+      "testing": "जांच रहे हैं...",
+      "rpcOk": "RPC ठीक",
+      "rpcError": "RPC त्रुटि",
+      "save": "सहेजें",
+      "saved": "सेटिंग्स सहेजी गई",
+      "connectionStatus": "कनेक्शन स्थिति",
+      "connected": "कनेक्टेड",
+      "disconnected": "डिस्कनेक्टेड"
+    },
+    "cache": {
+      "title": "कैश",
+      "description": "टोकन और कॉन्ट्रैक्ट जानकारी रिफ्रेश करने के लिए कैश साफ करें।",
+      "clearCache": "कैश साफ करें",
+      "cacheCleared": "कैश साफ! लागू करने के लिए रीस्टार्ट करें।"
+    },
+    "chainGuardian": {
+      "title": "चेन गार्जियन",
+      "description": "अपने फोन को ऑनलाइन रखकर ब्लॉकचेन सुरक्षित करने में मदद करें। पुरस्कारों के लिए पात्र बने रहने के लिए प्रतिदिन कम से कम एक सैंपलिंग कार्य पूरा करें।",
+      "wifiOnly": "केवल WiFi",
+      "wifiOnlyHint": "मोबाइल डेटा बचाता है",
+      "minBattery": "न्यूनतम बैटरी",
+      "minBatteryHint": "इस स्तर से नीचे नहीं चलेगा",
+      "background": "बैकग्राउंड में चलाएं",
+      "backgroundHint": "ऐप बंद होने पर भी काम करता है",
+      "lastSample": "अंतिम गतिविधि",
+      "noSamples": "अभी कोई गतिविधि नहीं। शुरू करने के लिए ऐप खुला रखें।",
+      "staleWarning": "आज नहीं देखा — कमाई फिर शुरू करने के लिए ऐप फिर खोलें।",
+      "androidBatteryWarning": "बैटरी ऑप्टिमाइज़ेशन सैंपलिंग रोक सकता है",
+      "androidBatteryHint": "सेटिंग्स → ऐप्स → Umotu → बैटरी → \"अनरिस्ट्रिक्टेड\" चुनें बैकग्राउंड सैंपलिंग अनुमति दें।",
+      "openSettings": "सेटिंग्स खोलने के लिए टैप करें",
+      "tip": "सर्वोत्तम कमाई के लिए \"बैकग्राउंड में चलाएं\" सक्षम करें।",
+      "runNow": "अब चलाएं",
+      "running": "चल रहा है…",
+      "lastError": "अंतिम त्रुटि",
+      "status": {
+        "active": "सक्रिय",
+        "inactive": "निष्क्रिय",
+        "paused": "रोका गया"
+      }
+    },
+    "permissions": {
+      "title": "अनुमतियां",
+      "description": "कनेक्टेड मिनी ऐप्स और उनकी अनुमतियां प्रबंधित करें।",
+      "openMiniApps": "मिनी ऐप्स खोलें",
+      "manageConnections": "प्रबंधित करें",
+      "noConnections": "कोई कनेक्टेड ऐप नहीं",
+      "revokeAccess": "पहुंच रद्द करें",
+      "lastUsed": "अंतिम उपयोग"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Umotu में स्वागत है",
+      "subtitle": "प्रतिदिन $10, हर जगह हर कोई",
+      "getStarted": "शुरू करें"
+    },
+    "language": {
+      "title": "अपनी भाषा चुनें",
+      "continue": "जारी रखें"
+    },
+    "wallet": {
+      "title": "आपका वॉलेट",
+      "createNew": "नया वॉलेट बनाएं",
+      "importExisting": "मौजूदा आयात करें",
+      "creating": "वॉलेट बना रहे हैं..."
+    },
+    "verify": {
+      "title": "मनुष्य सत्यापित करें",
+      "description": "दैनिक पुरस्कार प्राप्त करने के लिए, खुद को अद्वितीय मनुष्य सत्यापित करें।",
+      "continue": "जारी रखें"
+    }
+  },
+  "poh": {
+    "subtitle": "दैनिक पुरस्कार अनलॉक करें",
+    "description": "पुरस्कार अनलॉक करने के लिए Inlyf से लाइवनेस सत्यापित करें। बायोमेट्रिक्स ऑन-चेन स्टोर नहीं होते; केवल अल्पकालिक क्रेडेंशियल जारी होता है।",
+    "howItWorks": "यह कैसे काम करता है",
+    "howItWorksDesc": "संक्षिप्त लाइवनेस जांच (चेहरा स्कैन) से आप मनुष्य सत्यापित होते हैं। क्रेडेंशियल 90 दिन वैध और कभी भी रिफ्रेश कर सकते हैं।",
+    "adultQuestion": "क्या आप वयस्क (18+) हैं?",
+    "yesAdult": "हाँ, 18+",
+    "noMinor": "नहीं / नाबालिग",
+    "selectAge": "विकल्प चुनें",
+    "verifying": "सत्यापित कर रहे हैं...",
+    "startVerification": "सत्यापन शुरू करें",
+    "skipForNow": "अभी छोड़ें",
+    "status": {
+      "notVerified": "अभी सत्यापित नहीं।",
+      "notVerifiedDetail": "पुरस्कार अनलॉक करने के लिए सत्यापन शुरू करें।",
+      "unavailable": "स्थिति उपलब्ध नहीं।",
+      "verified": "आप सत्यापित हैं।",
+      "validFor": "~{{days}} दिन वैध",
+      "validFor_plural": "~{{days}} दिन वैध",
+      "expired": "सत्यापन समाप्त या नहीं मिला।",
+      "expiredDetail": "क्रेडेंशियल रिफ्रेश करने के लिए लाइवनेस फिर चलाएं।"
+    }
+  },
+  "sentinelSettings": {
+    "header": "ब्लॉक फाइनलाइज़ करने में मदद के लिए Sentinel पूल जॉइन करें। न्यूनतम राशि बॉन्ड करें, डिवाइस ऑनलाइन रखें, और पुरस्कार कमाएं।",
+    "loading": "sentinel डेटा लोड हो रहा है...",
+    "unavailable": "Sentinel मॉड्यूल उपलब्ध नहीं",
+    "yourStatus": "आपकी स्थिति",
+    "wallet": "वॉलेट",
+    "bondedAmount": "बॉन्ड राशि",
+    "minimumBond": "न्यूनतम बॉन्ड",
+    "status": {
+      "notBonded": "बॉन्ड नहीं किया",
+      "bonded": "बॉन्ड किया",
+      "unbonding": "अनबॉन्डिंग ({{date}} उपलब्ध)"
+    },
+    "rewards": {
+      "title": "पुरस्कार",
+      "claimableNow": "अब दावा योग्य",
+      "accruing": "संचित हो रहा",
+      "totalClaimed": "कुल दावा किया",
+      "claiming": "दावा कर रहे हैं...",
+      "claimRewards": "पुरस्कार दावा करें"
+    },
+    "bond": {
+      "createTitle": "बॉन्ड बनाएं",
+      "topUpTitle": "बॉन्ड बढ़ाएं",
+      "createDescription": "sentinel कमिटी जॉइन करने और कमाई शुरू करने के लिए UMT बॉन्ड करें।",
+      "topUpDescription": "पुरस्कार का बड़ा हिस्सा कमाने के लिए स्टेक बढ़ाएं।",
+      "amountLabel": "राशि (UMT)",
+      "processing": "प्रोसेस कर रहे हैं...",
+      "bond": "बॉन्ड",
+      "topUp": "बढ़ाएं",
+      "tx": "लेन-देन"
+    },
+    "autoClaim": {
+      "title": "ऑटो-क्लेम",
+      "description": "sentinel पुरस्कार संचित होने पर रिले स्वचालित दावा करे।",
+      "checking": "जांच रहे हैं...",
+      "enabled": "सक्षम",
+      "disabled": "अक्षम",
+      "expires": "समाप्ति",
+      "processing": "प्रोसेस कर रहे हैं...",
+      "enable": "ऑटो-क्लेम सक्षम करें",
+      "disable": "ऑटो-क्लेम अक्षम करें"
+    },
+    "activity": {
+      "title": "हाल की गतिविधि",
+      "claims": "दावा",
+      "slashes": "स्लैश",
+      "noClaims": "पिछले {{blocks}}k ब्लॉक में कोई दावा नहीं।",
+      "noSlashes": "हाल के विंडो में कोई स्लैश घटना नहीं।",
+      "unknown": "अज्ञात"
+    },
+    "errors": {
+      "configureEnv": "RPC + sentinel कॉन्ट्रैक्ट env वेरिएबल कॉन्फ़िगर करें।",
+      "noWallet": "sentinel कमिटी जॉइन करने के लिए वॉलेट बनाएं या आयात करें।",
+      "loadFailed": "sentinel डेटा लोड करने में विफल।"
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel पुरस्कार दावा किया गया।",
+      "noRewards": "दावा करने के लिए लंबित पुरस्कार नहीं।",
+      "claimFailed": "दावा विफल।",
+      "autoClaimEnabled": "Sentinel ऑटो-क्लेम सक्षम",
+      "autoClaimDisabled": "Sentinel ऑटो-क्लेम अक्षम",
+      "autoClaimFailed": "ऑटो-क्लेम टॉगल विफल",
+      "configureBondAddress": "sentinel बॉन्ड पता कॉन्फ़िगर करें",
+      "rpcNotSet": "RPC सेट नहीं",
+      "minBondUnavailable": "न्यूनतम बॉन्ड उपलब्ध नहीं",
+      "enterBondAmount": "बॉन्ड राशि दर्ज करें",
+      "minBondRequired": "प्रारंभिक बॉन्ड कम से कम {{amount}} UMT होना चाहिए",
+      "topUpGreaterThanZero": "बढ़ाने की राशि 0 से अधिक होनी चाहिए",
+      "insufficientBalance": "बॉन्ड + गैस के लिए अपर्याप्त बैलेंस",
+      "bondSubmitted": "बॉन्ड लेन-देन सबमिट किया गया",
+      "topUpSubmitted": "बढ़ाने का लेन-देन सबमिट किया गया",
+      "bondConfirmed": "बॉन्ड पुष्टि हुआ",
+      "topUpConfirmed": "बढ़ाने पुष्टि हुआ",
+      "bondReverted": "बॉन्ड ऑन-चेन रिवर्ट हो गया",
+      "bondFailed": "बॉन्ड विफल"
+    }
+  },
+  "miniapps": {
+    "title": "मिनीऐप्स",
+    "subtitle": "Umotu पर बने ऐप्स एक्सप्लोर करें",
+    "explore": "Umotu पर बने ऐप्स एक्सप्लोर करें",
+    "noApps": "अभी कोई ऐप उपलब्ध नहीं",
+    "browseByCategory": "श्रेणी अनुसार ब्राउज़ करें",
+    "appsCount": "{{count}} ऐप्स",
+    "featured": "विशेष",
+    "comingSoon": "जल्द आ रहा",
+    "liveApps": "लाइव ऐप्स",
+    "available": "उपलब्ध",
+    "pohDescription": "दैनिक पुरस्कार अनलॉक करने के लिए Inlyf से मानवता सत्यापित करें।",
+    "vision": {
+      "title": "हमारा विजन",
+      "tagline": "प्रतिदिन $10, हर जगह हर कोई",
+      "description": "Umotu वैसी इंफ्रास्ट्रक्चर बना रहा है जहां हर कोई वैश्विक अर्थव्यवस्था में भाग ले सके—चाहे वे कहीं रहते हों या किस बैंक का उपयोग करते हों।",
+      "readMore": "पूर्ण विजन पढ़ें",
+      "pillars": {
+        "title": "तीन मुख्य सिद्धांत",
+        "ubi": {
+          "title": "$10/दिन, हर जगह हर कोई",
+          "description": "नेटवर्क सुरक्षित करने के पुरस्कार के रूप में यूनिवर्सल बेसिक इनकम। फोन वाले कोई भी भाग ले सकता है और कमा सकता है।"
+        },
+        "capital": {
+          "title": "पूंजी स्वतंत्र रूप से चलती है",
+          "description": "भुगतान और ट्रांसफर में लगभग शून्य घर्षण—क्रॉस-बॉर्डर या स्थानीय। व्यवसाय प्लेटफॉर्म लागत कवर करने ~0.1% देते हैं, व्यक्ति कुछ नहीं।"
+        },
+        "sovereignty": {
+          "title": "मौद्रिक संप्रभुता का सम्मान",
+          "description": "हम फिएट मुद्राओं को बदल नहीं रहे—उन्हें बेहतर बना रहे हैं। बैंक अपनी स्थानीय मुद्रा से पेग्ड स्टेबलकॉइन जारी करते हैं। मौद्रिक नीति व्यापक पहुंच और कम घर्षण से अधिक प्रभावी होती है।"
+        }
+      },
+      "notReplacing": "Umotu सेंट्रल बैंक से प्रतिस्पर्धा नहीं कर रहा। हम फिएट मुद्राओं के लिए बेहतर इंफ्रास्ट्रक्चर बना रहे हैं: कम घर्षण, वैश्विक पहुंच, और बेहतर बाजार दक्षता एवं लचीलापन।"
+    },
+    "building": {
+      "title": "हम इकोसिस्टम बना रहे हैं",
+      "description": "ये ऐप्स Umotu पर संभव क्या है दिखाते हैं। कुछ अब तैयार, अन्य जल्द आ रहे। विश्वभर के डेवलपर्स हमारे प्लेटफॉर्म पर बिल्ड और लॉन्च करने के लिए आमंत्रित हैं।",
+      "developerDocs": "डेवलपर डॉक्स"
+    },
+    "categories": {
+      "payments": {
+        "name": "भुगतान और वित्त",
+        "apps": {
+          "sendMoney": {
+            "name": "पैसे भेजें",
+            "description": "UMT या स्टेबलकॉइन तुरंत किसी को भी विश्व में भेजें—बैंक की आवश्यकता नहीं।",
+            "example": "परिवार को विदेश $20 सेकंड में भेजें, दिन नहीं। कोई छिपा शुल्क नहीं।"
+          },
+          "billPay": {
+            "name": "बिल भुगतान",
+            "description": "यूटिलिटी, फोन, इंटरनेट आदि सीधे वॉलेट से भुगतान करें।"
+          },
+          "savings": {
+            "name": "सेविंग्स सर्कल",
+            "description": "पारंपरिक रोटेटिंग सेविंग्स (तोंटाइन, चिट फंड) स्मार्ट कॉन्ट्रैक्ट से ट्रस्टलेस बनाएं।"
+          },
+          "microLoans": {
+            "name": "माइक्रो लोन",
+            "description": "सत्यापित मानवता और प्रतिष्ठा पर आधारित पीयर-टू-पीयर लेंडिंग।"
+          }
+        }
+      },
+      "transport": {
+        "name": "परिवहन और डिलीवरी",
+        "apps": {
+          "rideSharing": {
+            "name": "राइड शेयरिंग",
+            "description": "क्रिप्टो में भुगतान राइड बुक करें। ड्राइवर अधिक रखते हैं, राइडर कम देते हैं—30% मिडलमैन नहीं।",
+            "example": "लागोस में टैक्सी राइड ₦800। ड्राइवर ₦799.2 मिलते हैं ₦560 के बजाय।"
+          },
+          "delivery": {
+            "name": "डिलीवरी",
+            "description": "भोजन, ग्रॉसरी या पैकेज ऑर्डर करें। कूरियर स्टेबल टोकन में उचित मजदूरी कमाते हैं।",
+            "example": "लंच ऑर्डर करें, स्थानीय स्टेबलकॉइन में भुगतान, कूरियर तुरंत भुगतान प्राप्त करता है।"
+          },
+          "publicTransit": {
+            "name": "पब्लिक ट्रांजिट",
+            "description": "बस, मेट्रो, ट्रेन के लिए टैप से भुगतान। फेयर कार्ड खरीदने की आवश्यकता नहीं।"
+          }
+        }
+      },
+      "travel": {
+        "name": "यात्रा और आतिथ्य",
+        "apps": {
+          "hotels": {
+            "name": "होटल और स्टे",
+            "description": "विश्वभर आवास बुक करें। होस्ट स्टेबलकॉइन स्वीकार करते हैं, गेस्ट शुल्क बचाते हैं।",
+            "example": "बाली में कमरा $40/रात बुक करें। होस्ट $39.96 प्राप्त करता है।"
+          },
+          "flights": {
+            "name": "फ्लाइट्स",
+            "description": "फ्लाइट्स खोजें और बुक करें। क्रिप्टो में भुगतान, UMT पुरस्कार कमाएं।"
+          },
+          "tours": {
+            "name": "स्थानीय टूर",
+            "description": "स्थानीय गाइड से अनुभव बुक करें। भुगतान सीधे उन्हें जाते हैं।"
+          }
+        }
+      },
+      "commerce": {
+        "name": "खरीदारी और कॉमर्स",
+        "apps": {
+          "localMarket": {
+            "name": "स्थानीय बाजार",
+            "description": "स्थानीय खरीद-बिक्री। QR-आधारित भुगतान स्ट्रीट कॉमर्स सहज बनाते हैं।",
+            "example": "जकार्ता में विक्रेता USDC स्वीकार करता है। ग्राहक भुगतान करता है, विक्रेता तुरंत फंड देखता है।"
+          },
+          "ecommerce": {
+            "name": "ई-कॉमर्स",
+            "description": "विश्वभर मर्चेंट से ऑनलाइन खरीदें। कोई कार्ड शुल्क नहीं, कोई चार्जबैक नहीं।",
+            "example": "शेनझेन से इलेक्ट्रॉनिक्स खरीदें। स्टेबलकॉइन में भुगतान, क्रेडिट कार्ड से 3% बचत।"
+          },
+          "marketplace": {
+            "name": "पीयर मार्केटप्लेस",
+            "description": "वस्तु बिक्री के लिए लिस्ट करें, दूसरों से खरीदें। एस्क्रो दोनों पक्षों की रक्षा करता है।"
+          }
+        }
+      },
+      "services": {
+        "name": "सेवाएं और कार्य",
+        "apps": {
+          "remittance": {
+            "name": "रेमिटेंस",
+            "description": "घर पैसे भेजें। प्राप्तकर्ता स्थानीय मुद्रा में कैश आउट कर सकते हैं या डिजिटल रख सकते हैं।",
+            "example": "USA से फिलीपींस $200 भेजें। प्राप्तकर्ता ₱10,400 के बजाय ₱11,000+ प्राप्त करता है।"
+          },
+          "freelance": {
+            "name": "फ्रीलांस कार्य",
+            "description": "गिग कार्य के लिए तुरंत भुगतान प्राप्त करें। बैंक ट्रांसफर के 30 दिन इंतजार नहीं।"
+          },
+          "homeServices": {
+            "name": "होम सर्विसेस",
+            "description": "प्लंबर, इलेक्ट्रीशियन, क्लीनर हायर करें। कार्य पूरा होने पर ही भुगतान।"
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Umotu पर अपना व्यवसाय बनाएं",
+      "subtitle": "बिल्ट-इन भुगतान वाले ऐप्स लॉन्च करें",
+      "description": "Umotu इकोसिस्टम में टैप करने वाले ऐप्स बनाएं—लाखों सत्यापित मनुष्य दैनिक आय के साथ, ट्रांसैक्ट करने तैयार। कोई भुगतान इंटीग्रेशन सिरदर्द नहीं।",
+      "benefits": {
+        "noFees": "लगभग शून्य भुगतान प्रोसेसिंग शुल्क—राजस्व का 99.9% रखें",
+        "verifiedUsers": "सभी उपयोगकर्ता सत्यापित मनुष्य—कोई बॉट या धोखाधड़ी नहीं",
+        "globalReach": "दिन 1 से 190+ देशों के उपयोगकर्ताओं तक पहुंच",
+        "instantPayments": "त्वरित सेटलमेंट—30-दिन भुगतान देरी नहीं"
+      },
+      "exampleTitle": "उपयोग केस",
+      "exampleText": "Umotu पर राइड-शेयरिंग ऐप पारंपरिक प्लेटफॉर्म के 70% के बजाय 99.9% फेयर रखता है। ड्राइवर अधिक कमाते हैं, राइडर कम देते हैं।",
+      "docsButton": "डॉक्स पढ़ें",
+      "buildButton": "बिल्डिंग शुरू करें"
+    },
+    "bank": {
+      "title": "क्या आप बैंक हैं?",
+      "subtitle": "Umotu पर स्टेबलकॉइन जारी करें",
+      "description": "लाइसेंस प्राप्त वित्तीय संस्थाएं Umotu पर स्थानीय मुद्रा स्टेबलकॉइन जारी कर सकती हैं और बढ़ते UBI अर्थव्यवस्था में लाखों उपयोगकर्ताओं तक पहुंच सकती हैं।",
+      "benefits": {
+        "reserves": "रिजर्व पर यील्ड कमाएं: बॉन्ड और कम-जोखिम एसेट में निवेश",
+        "mintRedeem": "मिंट/रिडीम शुल्क लें: सामान्यतः फिएट ↔ स्टेबलकॉइन कन्वर्जन पर 0.1%",
+        "users": "लाखों दैनिक सक्रिय UBI प्राप्तकर्ताओं तक पहुंच",
+        "global": "सीमाओं से परे तुरंत पहुंच विस्तार",
+        "custody": "आपके रिजर्व, आपकी कस्टडी: बैकिंग एसेट पर पूर्ण नियंत्रण"
+      },
+      "revenueModel": "इश्यूअर्स कैसे कमाते हैं",
+      "revenueNote": "Tether और अन्य प्रमुख इश्यूअर्स की तरह, राजस्व रिजर्व यील्ड और कन्वर्जन शुल्क से आता है। दैनिक UBI प्राप्त करने वाले लाखों उपयोगकर्ताओं के साथ, मिंट/रिडीम वॉल्यूम काफी हो सकता है।",
+      "futureNote": "प्रोटोकॉल विकास के साथ भविष्य में इश्यूअर्स को ट्रांसैक्शन शुल्क का हिस्सा भी मिल सकता है।",
+      "learnMore": "और जानें",
+      "applyButton": "अब आवेदन करें"
+    }
+  },
+  "news": {
+    "title": "समाचार और अपडेट",
+    "description": "Umotu टीम से नवीनतम घोषणाएं, टिप्स और सुरक्षा अलर्ट से अपडेट रहें।",
+    "empty": "इस समय कोई समाचार नहीं",
+    "unread": "नया",
+    "unreadCount": "{{count}} नए",
+    "markAsRead": "पढ़ा हुआ मार्क करें",
+    "types": {
+      "announcement": "घोषणा",
+      "tip": "टिप",
+      "security": "सुरक्षा",
+      "airdrop": "एयरड्रॉप",
+      "update": "अपडेट"
+    }
+  },
+  "governance": {
+    "title": "शासन",
+    "subtitle": "Umotu का भविष्य आकार दें",
+    "description": {
+      "title": "आपकी आवाज मायने रखती है",
+      "body": "समुदाय प्रस्तावों पर वोट देकर Umotu के भविष्य को आकार देने में मदद करें। Umotu फाउंडेशन ये वोट आयोजित करता है, लेकिन समुदाय निर्णय लेता है।"
+    },
+    "empty": "कोई सक्रिय प्रस्ताव नहीं",
+    "emptyHint": "नए समुदाय निर्णयों के लिए बाद में जांचें।",
+    "newPolls": "नया",
+    "newPollsCount": "{{count}} नए",
+    "vote": "वोट",
+    "votes": "वोट",
+    "endsIn": "{{time}} में समाप्त",
+    "ended": "समाप्त",
+    "tapToVote": "वोट डालने के लिए ऊपर विकल्प टैप करें",
+    "submitting": "वोट सबमिट कर रहे हैं...",
+    "alreadyVoted": {
+      "title": "पहले ही वोट दिया",
+      "message": "आप इस प्रस्ताव में पहले ही वोट दे चुके हैं।"
+    },
+    "confirm": {
+      "title": "वोट पुष्टि करें",
+      "message": "के लिए वोट",
+      "note": "यह क्रिया पूर्ववत नहीं की जा सकती।",
+      "submit": "वोट सबमिट करें"
+    },
+    "success": {
+      "title": "वोट सबमिट किया गया!",
+      "message": "समुदाय शासन में भाग लेने के लिए धन्यवाद।"
+    },
+    "error": {
+      "title": "वोट विफल",
+      "message": "वोट सबमिट करने में विफल। पुनः प्रयास करें।"
+    }
+  },
+  "learn": {
+    "title": "सीखें",
+    "subtitle": "Umotu के बारे में सब कुछ जानें",
+    "featured": "विशेष",
+    "whatIs": {
+      "title": "Umotu क्या है?",
+      "subtitle": "प्रतिदिन $10, हर जगह हर कोई",
+      "intro": "Umotu का लक्ष्य है कि कोई भी केवल स्मार्टफोन से प्रतिदिन लगभग $10 कमा सके। कोई महंगा हार्डवेयर नहीं, कोई विशेष कौशल नहीं, कोई सीमाएं नहीं।",
+      "howDifferent": "यह कैसे अलग है?",
+      "noMiddleman": "कोई मिडलमैन नहीं: आप सीधे नेटवर्क से इंटरैक्ट करते हैं—बैंक खाते की आवश्यकता नहीं",
+      "globalAccess": "वैश्विक पहुंच: इंटरनेट वाले कहीं भी काम करता है",
+      "youOwnIt": "आपका स्वामित्व: आपका वॉलेट, आपकी की, आपका नियंत्रण",
+      "vision": "विजन",
+      "visionText": "अरबों लोग सार्वजनिक लेजर को ईमानदार रखने में मदद कर सकते हैं और इसके लिए कमाई कर सकते हैं। Umotu पर, फोन लाइटवेट जांच करते हैं जो नेटवर्क को विश्वसनीय बनाते हैं।",
+      "nameOrigin": "नाम की उत्पत्ति",
+      "nameOriginText": "Umotu नाम Paʻumotu, एक पॉलिनेशियन भाषा से प्रेरित है। हम नाम का सम्मानपूर्वक उपयोग करते हैं रोजमर्रा के लोगों के लिए बिल्ड करने की याद दिलाने के लिए।"
+    },
+    "earn": {
+      "title": "आप कैसे कमाते हैं",
+      "subtitle": "आपका फोन काम करता है; आप भुगतान प्राप्त करते हैं",
+      "intro": "आपका फोन छोटे कार्य करता है जो सभी की मदद करते हैं—फिर आपको पुरस्कार मिलता है।",
+      "steps": "तीन सरल चरण",
+      "step1": "1) खुद को मनुष्य साबित करें: त्वरित लाइवनेस जांच (और कभी-कभी रिफ्रेश) सुनिश्चित करती है कि प्रत्येक व्यक्ति का एक खाता।",
+      "step2": "2) नेटवर्क मदद करें: आपका फोन बैकग्राउंड में डेटा उपलब्धता (DA) सैंपलिंग और अन्य लाइटवेट जांच चलाता है।",
+      "step3": "3) दैनिक पुरस्कार कमाएं: इस कार्य के लिए भुगतान, नेटवर्क नीति के अनुसार ~$10/दिन लक्ष्य।",
+      "localCurrency": "आपकी मुद्रा में भुगतान",
+      "localCurrencyText": "पेआउट टोकन चुनें: स्थानीय-मुद्रा स्टेबलकॉइन (जहां उपलब्ध) या UMT। राशि ~$10 USD मूल्य लक्ष्य करती है और भागीदारी एवं बाजार स्थितियों से समायोजित हो सकती है।"
+    },
+    "whereMoney": {
+      "title": "$10 कहां से आता है?",
+      "subtitle": "आप कमाते हैं क्योंकि आप कार्य करते हैं",
+      "intro": "यह #1 प्रश्न है। संक्षिप्त उत्तर: क्योंकि आप नेटवर्क को आवश्यक सेवा प्रदान करते हैं।",
+      "realWork": "आपका फोन वास्तविक कार्य करता है",
+      "realWork1": "डेटा उपलब्धता सैंपलिंग: आपका फोन जांचता है कि ब्लॉक डेटा उपलब्ध और सही है",
+      "realWork2": "मानव भागीदारी: आप एक-व्यक्ति-एक-खाता साबित करते हैं बॉट और स्पैम रोकने के लिए",
+      "realWork3": "ये कार्य सभी की रक्षा करते हैं; बिना इनके नेटवर्क कमजोर होता है",
+      "valueSource": "मूल्य के दो स्रोत",
+      "utility": "उपयोगिता: त्वरित, कम-शुल्क भुगतान जो लोग उपयोग चुनते हैं",
+      "consensus": "कंसेंसस: मूल्य जो बढ़ता है जैसे अधिक लोग नियमों पर सत्यापित और सहमत होते हैं",
+      "distribution": "पुरस्कार कैसे वितरित होते हैं",
+      "newTokens": "नए UMT टोकन बनाए जाते हैं और सत्यापित फोन भागीदारों को बांटे जाते हैं (वैलिडेटर्स को नहीं)",
+      "fees": "लेन-देन शुल्क और बिल्डर बिड का हिस्सा फोन sentinel को ब्लॉक फाइनलाइज़ करने के लिए बांटा जाता है",
+      "treasury": "छोटा हिस्सा निरंतर रखरखाव और स्थिरता कार्यक्रमों के लिए",
+      "whyDifferent": "यह क्यों अलग है",
+      "btcProblem": "Bitcoin विशेष माइनर्स को पुरस्कृत करता है (पूंजी-गहन)",
+      "ethProblem": "Ethereum बड़े स्टेकर्स को पुरस्कृत करता है (पूंजी-गहन)",
+      "umotuSolution": "Umotu रोजमर्रा के फोन को पुरस्कृत करता है (भाग लेने की व्यावहारिक लागत कम)",
+      "conclusion": "यह गिवअवे नहीं: आप साझा वित्तीय इंफ्रास्ट्रक्चर को ईमानदार और उपयोगी रखने के कार्य के लिए भुगतान प्राप्त करते हैं।"
+    },
+    "security": {
+      "title": "वॉलेट सुरक्षा",
+      "subtitle": "अपने पैसे की रक्षा करें",
+      "intro": "आपका वॉलेट डिजिटल तिजोरी जैसा है जिस पर केवल आपका नियंत्रण है।",
+      "recovery": "आपके 12 शब्द और प्राइवेट की",
+      "recoveryText": "आपके 12 गुप्त शब्द (रिकवरी फ्रेज़) और प्राइवेट की दोनों वॉलेट अनलॉक करते हैं। इनमें से कोई भी वाले व्यक्ति आपके फंड मूव कर सकते हैं।",
+      "rules": "स्वर्ण नियम",
+      "rule1": "अपने 12 शब्द या प्राइवेट की कभी किसी से साझा न करें—Umotu योगदानकर्ताओं से भी नहीं।",
+      "rule2": "12 शब्द कागज पर लिखें और ऑफलाइन स्टोर करें। स्क्रीनशॉट, फोटो या क्लाउड नोट्स में न रखें।",
+      "rule3": "यदि प्राइवेट की निर्यात करते हैं, तो ऑफलाइन रखें (कागज, हार्डवेयर, या पूर्ण विश्वसनीय एन्क्रिप्टेड मैनेजर)।",
+      "rule4": "यदि 12 शब्द और प्राइवेट की खो जाते हैं, तो कोई वॉलेट पुनः प्राप्त नहीं कर सकता।",
+      "warning": "महत्वपूर्ण",
+      "warningText": "प्राइवेट की पूर्ण पहुंच देती है। इसे प्रकट करने या अन्य ऐप्स में कॉपी करने से फंड जोखिम में पड़ सकते हैं। बड़े बैलेंस के लिए हार्डवेयर वॉलेट उपयोग करें।",
+      "reveal": "प्राइवेट की प्रकट / निर्यात करें",
+      "revealText": "वॉलेट सेटिंग्स में प्राइवेट की प्रकट या निर्यात कर सकते हैं। हम बायोमेट्रिक्स/PIN मांगते हैं, कुछ सेकंड ही दिखाते हैं, और कभी अपलोड नहीं करते। बड़े बैलेंस के लिए हार्डवेयर वॉलेट विचार करें।",
+      "bestPractices": "सर्वोत्तम अभ्यास",
+      "best1": "फोन पर स्क्रीन लॉक और बायोमेट्रिक्स सक्षम करें।",
+      "best2": "नवीनतम सुरक्षा फिक्स प्राप्त करने के लिए ऐप अपडेट रखें।",
+      "best3": "बड़ी बचत के लिए अलग वॉलेट उपयोग करें; दैनिक उपयोग के लिए फोन पर छोटी राशि रखें।",
+      "scamBannerTitle": "कोई वैध व्यक्ति नहीं मांगेगा",
+      "scamBannerText": "यदि कोई 12 शब्द या प्राइवेट की मांगता है, तो स्कैम है।"
+    },
+    "stablecoins": {
+      "title": "स्टेबलकॉइन समझें",
+      "subtitle": "स्थानीय मुद्रा ट्रैक करने वाला डिजिटल पैसा",
+      "intro": "स्टेबलकॉइन डिजिटल टोकन हैं जो सामान्य मुद्रा (जैसे USD, ZAR, NGN) ट्रैक करने設計 किए जाते हैं।",
+      "examples": "उदाहरण",
+      "example1": "1 ZAR1 ≈ 1 साउथ अफ्रीकन रैंड",
+      "example2": "1 USD1 ≈ 1 US डॉलर",
+      "example3": "1 NGN1 ≈ 1 नाइजीरियन नायरा",
+      "backed": "पार्टनर्स द्वारा जारी",
+      "backedText": "Umotu पर स्टेबलकॉइन रेगुलेटेड पार्टनर्स द्वारा जारी और रिजर्व से 1:1 मूल्य रखने設計 किए जाते हैं। इश्यूअर्स रिजर्व प्रमाण और रिडेम्प्शन शर्तें प्रकाशित करते हैं।",
+      "convert": "कैश में कन्वर्ट",
+      "convertText": "पार्टनर बैंक/एक्सचेंज से कन्वर्ट करें, या जहां स्वीकार हो सीधे खर्च करें।"
+    },
+    "economics": {
+      "title": "UMT अर्थशास्त्र",
+      "subtitle": "किसे क्या और क्यों मिलता है",
+      "intro": "UMT की कुल आपूर्ति 100 अरब टोकन है। अधिकांश रोजमर्रा के फोन उपयोगकर्ताओं को बांटा जाता है जो नेटवर्क को ईमानदार रखते हैं।",
+      "supply": "आपूर्ति और वितरण",
+      "supplyBullets": [
+        "टोकन आपूर्ति का अधिकांश हिस्सा समय के साथ फोन प्रतिभागियों के लिए आरक्षित है और एमिशन कंट्रोलर के माध्यम से जारी किया जाता है। एमिशन कंट्रोलर दैनिक जारी को शेष आपूर्ति के 0.01% से अधिक नहीं रखता, जो दीर्घकालिक स्थिरता सुनिश्चित करता है। इस कार्यक्रम के तहत, 10 वर्षों के बाद कुल आपूर्ति का लगभग 68% और 50 वर्षों के बाद लगभग 15% शेष रहता है।",
+        "आपूर्ति का एक छोटा हिस्सा विशिष्ट उद्देश्यों के लिए लॉन्च पर बनाया जाता है, जिसमें प्रारंभिक उपयोगकर्ता एयरड्रॉप, सामुदायिक बिक्री, फाउंडेशन आवंटन और आपातकालीन रिजर्व आदि शामिल हैं।"
+      ],
+      "premine": "लॉन्च आवंटन (अस्थायी, मेननेट लॉन्च पर परिवर्तन के अधीन)",
+      "premineTable": [
+        {
+          "label": "उपयोगकर्ता एयरड्रॉप",
+          "value": "1.0%"
+        },
+        {
+          "label": "समुदाय बिक्री",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu फाउंडेशन (टाइमलॉक्ड)",
+          "value": "0.2%"
+        },
+        {
+          "label": "इमरजेंसी फंड (शासित)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "फोन के लिए दैनिक पुरस्कार",
+      "emissionsText": "प्रत्येक दिन नेटवर्क शेष एमिशन पूल का अधिकतम 0.01% एमिट कर सकता है। हम सत्यापित फोन को ~$10/दिन लक्ष्य बजट करते हैं, भागीदारों की संख्या और बाजार स्थितियों से समायोजित।",
+      "fees": "शुल्क और Sentinel",
+      "feesText": "Sentinel सहायक (वैकल्पिक, उन्नत) लेन-देन शुल्क और बिल्डर बिड का हिस्सा कमाते हैं। यह दैनिक एमिशन से अलग है।",
+      "transparency": "पारदर्शिता",
+      "transparencyText": "वेस्टिंग शेड्यूल और वॉलेट सार्वजनिक हैं। दैनिक एमिशन कैप और वास्तविक पेआउट ऐप में पोस्ट होते हैं।",
+      "disclaimerTitle": "सादे भाषा में याद दिलावा",
+      "disclaimerText": "यह निवेश सलाह नहीं है। पुरस्कार नेटवर्क नीति और भागीदारी पर निर्भर। ऐप निश्चित आय की गारंटी नहीं देता।"
+    },
+    "contribute": {
+      "title": "योगदान कैसे करें",
+      "subtitle": "Umotu बनाने में मदद करें",
+      "intro": "Umotu ओपन सोर्स और समुदाय-चालित है। हर कोई मदद कर सकता है—चाहे कोडिंग, अनुवाद, या फीडबैक।",
+      "waysTitle": "योगदान के तरीके",
+      "code": {
+        "title": "कोड सुधारें",
+        "text": "बग फिक्स करें, फीचर जोड़ें, टेस्ट लिखें, या पुल रिक्वेस्ट रिव्यू करें। ऐप, स्मार्ट कॉन्ट्रैक्ट और बैकएंड के GitHub रेपो जांचें।",
+        "cta": "GitHub देखें",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "अनुवाद में मदद करें",
+        "text": "ऐप को अपनी भाषा में प्राकृतिक बनाएं। i18n लोकल फ़ाइलें एडिट करें और हर स्क्रीन टेस्ट करें। आपके एडिट लाखों की मदद करेंगे।",
+        "cta": "अनुवाद गाइड",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "BIP-39 भाषाएं विस्तार करें",
+        "text": "नई या सुधरी वर्डलिस्ट प्रस्तावित करें ताकि अधिक लोग अपनी मूल भाषा में 12-शब्द रिकवरी फ्रेज़ देख सकें।",
+        "cta": "BIP-39 देखें",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "शासन में जॉइन करें",
+        "text": "प्रस्ताव पढ़ें, खुली चर्चा करें, और ऐप में वोट दें। आपकी आवाज नेटवर्क पैरामीटर और ग्रांट आवंटन गाइड करती है।",
+        "cta": "शासन खोलें",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "शब्द फैलाएं",
+        "text": "दोस्तों को बताएं, ट्यूटोरियल लिखें, शॉर्ट्स पब्लिश करें, प्रश्नों के उत्तर दें। मजबूत समुदाय सभी के लिए मजबूत नेटवर्क बनाता है।",
+        "cta": "Umotu साझा करें",
+        "url": "https://umotu.com"
+      },
+      "note": "सभी योगदान स्वैच्छिक हैं। ग्रांट प्रस्ताव में निर्दिष्ट न हो तो कोई औपचारिक रोजगार या मुआवजा नहीं।"
+    },
+    "decentralization": {
+      "title": "विकेंद्रीकरण क्यों",
+      "subtitle": "कोई एकल नियंत्रण बिंदु नहीं",
+      "intro": "विकेंद्रीकरण का अर्थ है कोई एक कंपनी या सरकार नेटवर्क बंद नहीं कर सकती या आपके फंड जब्त नहीं कर सकती।",
+      "benefits": "आपके लिए लाभ",
+      "benefit1": "हमेशा चालू: 24/7 उपलब्धता",
+      "benefit2": "कम शुल्क: 3–5% कार्ड शुल्क के बजाय छोटे नेटवर्क शुल्क",
+      "benefit3": "कोई सीमाएं नहीं: वैश्विक मूल्य भेजें",
+      "benefit4": "सेंसरशिप-रेजिस्टेंट: आपकी की, आपके पैसे",
+      "benefit5": "पारदर्शी: कोई भी सिस्टम कार्यप्रणाली सत्यापित कर सकता है",
+      "howWorks": "यह कैसे काम करता है",
+      "howWorksText": "वैलिडेटर्स हर ~2 सेकंड ब्लॉक प्रस्तावित करते हैं। फोन (आपके जैसे) लाइटवेट जांच से सत्यापित और फाइनलाइज़ करते हैं। कई छोटे योगदान मजबूत सुरक्षा बनाते हैं।"
+    },
+    "noCompany": {
+      "title": "कोई कंपनी नहीं, कोई ग्राहक नहीं",
+      "subtitle": "मॉडल समझें",
+      "intro": "प्रोटोकॉल नियंत्रित करने वाली 'Umotu, Inc.' नहीं है। Umotu नियमों का ओपन सेट है जिसे कोई उपयोग कर सकता है।",
+      "notCompany": "Umotu क्या नहीं है",
+      "notCompany1": "ग्राहक खातों वाली कंपनी नहीं",
+      "notCompany2": "बैंक या मनी ट्रांसमीटर नहीं",
+      "notCompany3": "किसी एकल इकाई द्वारा नियंत्रित नहीं",
+      "notCompany4": "लेन-देन रिवर्स करने में सक्षम नहीं",
+      "whatIs": "Umotu क्या है",
+      "whatIs1": "प्रोटोकॉल: ईमेल या वेब जैसा—ओपन, इंटरोपरेबल नियम",
+      "whatIs2": "फोन-प्रथम: रोजमर्रा स्मार्टफोन की मदद से चलता है",
+      "whatIs3": "समुदाय-चालित: आप भागीदार हैं, ग्राहक नहीं",
+      "foundation": "Umotu फाउंडेशन",
+      "foundationIntro": "नॉनप्रॉफिट जो इकोसिस्टम सपोर्ट करता है (रेफरेंस ऐप्स, डॉक्स, समुदाय कार्यक्रम) लेकिन प्रोटोकॉल नियंत्रित नहीं करता।",
+      "foundationTask1": "मोबाइल ऐप और एक्सप्लोरर रेफरेंस इंप्लीमेंटेशन के रूप में मेंटेन करता है",
+      "foundationTask2": "कुछ पब्लिक इंफ्रास्ट्रक्चर ऑपरेट करता है (अन्य अपना चला सकते हैं)",
+      "foundationTask3": "समुदाय शासन समन्वय करता है (समाचार, वोट)",
+      "foundationTask4": "समर्थित स्टेबलकॉइन रिव्यू और लिस्ट करता है",
+      "foundationTask5": "शिक्षा और सुरक्षा गाइड प्रकाशित करता है",
+      "foundationNote": "फाउंडेशन आपके वॉलेट तक पहुंच नहीं सकता और लेन-देन रिवर्स नहीं कर सकता।"
+    },
+    "scamPrevention": {
+      "title": "स्कैम से बचें",
+      "subtitle": "अपनी रक्षा करें",
+      "intro": "Umotu फाउंडेशन कभी DM नहीं करेगा। 'सपोर्ट' बनने वाला कोई स्कैमर है।",
+      "redFlags": "लाल झंडे",
+      "redFlag1": "कस्टमर सपोर्ट बनने वाला कोई",
+      "redFlag2": "खाता 'सत्यापित' या 'अपग्रेड' करने के लिंक",
+      "redFlag3": "12-शब्द फ्रेज़ या प्राइवेट की मांग",
+      "redFlag4": "फंड भेजने पर बोनस टोकन का वादा",
+      "redFlag5": "पुरस्कार 'एक्टिवेट' करने के लिए ऐप्स या साइट्स",
+      "truth": "सच्चाई",
+      "truth1": "वॉलेट रीसेट करने वाला कोई कस्टमर सपोर्ट नहीं",
+      "truth2": "सभी औपचारिक अपडेट इस ऐप में दिखते हैं",
+      "truth3": "Umotu से कोई रिकवरी फ्रेज़ या प्राइवेट की नहीं मांगेगा",
+      "truth4": "यह ऐप केवल औपचारिक Apple Store या Google Play से डाउनलोड करें",
+      "whatToDo": "यदि कोई संपर्क करता है",
+      "action1": "उत्तर न दें",
+      "action2": "लिंक क्लिक न करें",
+      "action3": "जानकारी साझा न करें",
+      "action4": "ब्लॉक और रिपोर्ट करें"
+    },
+    "airdrop": {
+      "title": "टेस्टनेट एयरड्रॉप",
+      "subtitle": "प्रारंभिक उपयोगकर्ता मान्यता प्राप्त करते हैं",
+      "intro": "आप प्रारंभिक हैं! Umotu टेस्टनेट में है। सक्रिय टेस्टनेट भागीदार मेननेट लॉन्च पर आवंटन प्राप्त कर सकते हैं।",
+      "howToQualify": "योग्य कैसे हों",
+      "step1": "ऐप में वॉलेट बनाएं",
+      "step2": "मानव सत्यापन (Proof of Human) पूर्ण करें",
+      "step3": "टेस्टनेट दौरान ऐप नियमित उपयोग करें",
+      "whenAirdrop": "एयरड्रॉप कब?",
+      "whyTestnet": "टेस्टनेट आवश्यक: उपयोगकर्ता वॉलेट सुरक्षा सीखते हैं, और सिस्टम सुरक्षा, मजबूती एवं दक्षता के लिए टेस्ट होता है मेननेट से पहले।",
+      "timeline": "मेननेट 2026 की Q1 या Q2 में अपेक्षित। एयरड्रॉप मेननेट लॉन्च के आसपास होगा।",
+      "howMuch": "कितना मिलेगा?",
+      "totalPool": "कुल एयरड्रॉप पूल: 1,000,000,000 UMT टोकन। आपका हिस्सा कुल भागीदारों और लॉन्च पर UMT मूल्य पर निर्भर।",
+      "scenario2": "1M उपयोगकर्ता: ~1,000 UMT प्रति उपयोगकर्ता, अपेक्षित मूल्य ~$1, एयरड्रॉप मूल्य ~$1,000",
+      "scenario3": "10M उपयोगकर्ता: ~100 UMT प्रति उपयोगकर्ता, अपेक्षित मूल्य ~$20, एयरड्रॉप मूल्य ~$2,000",
+      "scenario4": "100M उपयोगकर्ता: ~10 UMT प्रति उपयोगकर्ता, अपेक्षित मूल्य ~$300, एयरड्रॉप मूल्य ~$3,000",
+      "disclaimer": "ये केवल अनुमान हैं, गारंटी नहीं। वास्तविक मूल्य बाजार स्थितियों और कार्यक्रम नियमों पर निर्भर।",
+      "whatYouGet": "आपको क्या मिलता है",
+      "reward": "मेननेट पर, आपका टेस्टनेट वॉलेट भागीदारी और कार्यक्रम नियमों के आधार पर वास्तविक टोकन प्राप्त कर सकता है। प्रारंभिक और अधिक सक्रिय उपयोगकर्ताओं को प्राथमिकता।",
+      "note": "नोट: टेस्टनेट टोकन का कोई मूल्य नहीं। कोई मेननेट आवंटन लॉन्च पर कार्यक्रम नीति से निर्धारित। एयरड्रॉप समाचार केवल इस ऐप में प्रकाशित होंगे।"
+    },
+    "gettingStarted": {
+      "title": "शुरू करें",
+      "subtitle": "आपके प्रथम पांच मिनट",
+      "intro": "आपका त्वरित सेटअप यहां है:",
+      "checklist": "सेटअप चेकलिस्ट",
+      "check1": "1) अपनी भाषा चुनें (पूर्ण!)",
+      "check2": "2) वॉलेट बनाएं या आयात करें",
+      "check3": "3) महत्वपूर्ण: 12 शब्द कागज पर लिखें",
+      "check4": "4) मानव सत्यापन पूर्ण करें (त्वरित स्कैन)",
+      "check5": "5) दैनिक पुरस्कार कमाने के लिए ऐप चलता रखें",
+      "tips": "प्रो टिप्स",
+      "tip1": "जांच चलने के लिए बैकग्राउंड पहुंच अनुमति दें",
+      "tip2": "पुरस्कार देखने के लिए दैनिक जांचें",
+      "tip3": "दोस्तों को आमंत्रित करें—अधिक उपयोगकर्ता नेटवर्क मजबूत बनाते हैं"
+    }
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "retry": "पुनः प्रयास करें",
+    "cancel": "रद्द करें",
+    "save": "सहेजें",
+    "done": "पूर्ण",
+    "continue": "जारी रखें",
+    "confirm": "पुष्टि करें",
+    "yes": "हाँ",
+    "no": "नहीं",
+    "ok": "ठीक",
+    "success": "सफल",
+    "failed": "विफल",
+    "copied": "कॉपी किया गया!",
+    "pullToRefresh": "रिफ्रेश के लिए खींचें",
+    "notSet": "सेट नहीं"
+  },
+  "errors": {
+    "networkError": "नेटवर्क त्रुटि। अपना कनेक्शन जांचें।",
+    "genericError": "कुछ गलत हुआ। कृपया पुनः प्रयास करें।",
+    "walletNotFound": "वॉलेट नहीं मिला",
+    "transactionFailed": "लेन-देन विफल",
+    "invalidInput": "अमान्य इनपुट"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Umotu में स्वागत है",
+  "onboard_wallet_title": "अपना वॉलेट सेटअप करें",
+  "onboard_wallet_explain": "पुरस्कार प्राप्त करने के लिए वॉलेट बनाएं या आयात करें।",
+  "wallet_create": "नया वॉलेट बनाएं",
+  "wallet_import": "वॉलेट आयात करें",
+  "wallet_import_explain": "अपनी 12-शब्द रिकवरी फ्रेज़ दर्ज करें",
+  "wallet_created": "वॉलेट तैयार",
+  "wallet_save": "डिवाइस में सहेजें",
+  "wallet_backup_title": "अपनी रिकवरी फ्रेज़ बैकअप करें",
+  "wallet_backup_explain": "ये 12 शब्द क्रम में लिखें। डिवाइस खोने पर वॉलेट पुनः प्राप्त करने का एकमात्र तरीका यही है।",
+  "wallet_backup_warning": "अपनी रिकवरी फ्रेज़ कभी साझा न करें। इन शब्दों वाला कोई आपके फंड एक्सेस कर सकता है।",
+  "wallet_backup_confirm": "मैंने अपनी रिकवरी फ्रेज़ लिख ली है",
+  "wallet_backup_done": "मैंने अपनी फ्रेज़ सहेज ली है",
+  "wallet_save_first": "कृपया पहले रिकवरी फ्रेज़ सहेजें",
+  "poh_title": "मानव सत्यापित करें",
+  "continue": "जारी रखें",
+  "or": "या",
+  "seedReveal": {
+    "title": "रिकवरी फ्रेज़",
+    "intro": "रिकवरी फ्रेज़ डिवाइस पहुंच खोने पर वॉलेट रिस्टोर करने का एकमात्र तरीका है। इसे लिखें और सुरक्षित ऑफलाइन रखें।",
+    "displayLanguage": "{{language}} में प्रदर्शित",
+    "hiddenMsg": "सुरक्षा के लिए आपकी फ्रेज़ छिपी है। प्रकट करने के लिए नीचे टैप करें।",
+    "showButton": "फ्रेज़ प्रकट करें",
+    "noScreenshot": "रिकवरी फ्रेज़ का स्क्रीनशॉट कभी न लें।",
+    "checkTitle": "अपना बैकअप सत्यापित करें",
+    "checkPrompt": "सही लिखा है पुष्टि करने के लिए नीचे शब्द दर्ज करें:",
+    "checkWordN": "शब्द #{{n}}",
+    "checkIncorrect": "एक या अधिक शब्द गलत हैं। अपना बैकअप जांचें।",
+    "ackWritten": "मैंने अपनी रिकवरी फ्रेज़ लिख ली है",
+    "ackCannotRecover": "मैं समझता हूं Umotu मेरे वॉलेट पुनः प्राप्त नहीं कर सकता",
+    "cancel": "रद्द करें",
+    "continue": "मैंने सहेज ली है"
+  }
+}

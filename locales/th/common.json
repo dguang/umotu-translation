@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "10 ดอลลาร์ต่อวัน สำหรับทุกคนทั่วโลก"
+  },
+  "navigation": {
+    "home": "หน้าหลัก",
+    "wallet": "กระเป๋าเงิน",
+    "miniapps": "มินิแอป",
+    "back": "ย้อนกลับ",
+    "scan": "สแกน",
+    "settings": "การตั้งค่า",
+    "close": "ปิด"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "มนุษย์ที่ยืนยันตัวตนแล้ว",
+      "umtPrice": "ราคา UMT"
+    },
+    "quickActions": {
+      "news": "ข่าวสาร",
+      "vote": "การกำกับดูแล",
+      "governance": "การกำกับดูแล",
+      "learn": "เรียนรู้",
+      "network": "เครือข่าย"
+    },
+    "setupProgress": {
+      "title": "ความคืบหน้าการตั้งค่า",
+      "steps": {
+        "language": "ภาษา",
+        "wallet": "กระเป๋าเงิน",
+        "verifyHuman": "ยืนยันตัวตนมนุษย์",
+        "complete": "เสร็จสิ้น"
+      },
+      "continue": "ดำเนินการต่อ",
+      "changeChoice": "เปลี่ยนตัวเลือก",
+      "requiresLanguage": "เลือกภาษาก่อน",
+      "requiresWallet": "สร้างกระเป๋าเงินก่อน"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "รางวัลรายวัน",
+      "totalEarned": "ยอดรวมที่ได้รับ",
+      "lastClaimed": "รับล่าสุดเมื่อ",
+      "never": "ยังไม่เคย",
+      "configure": "ตั้งค่า",
+      "loading": "กำลังโหลดรายได้...",
+      "noWallet": "ไม่มีกระเป๋าเงิน",
+      "autoClaim": {
+        "label": "รับอัตโนมัติ:",
+        "active": "เปิดใช้งาน",
+        "setupNow": "ตั้งค่าตอนนี้",
+        "expired": "หมดอายุ",
+        "tapToSetup": "แตะเพื่อเปิดใช้งานรับรางวัลรายวันอัตโนมัติ"
+      }
+    },
+    "sentinel": {
+      "title": "รายได้ Sentinel",
+      "manage": "จัดการ",
+      "loading": "กำลังโหลด...",
+      "status": "สถานะ",
+      "statuses": {
+        "notBonded": "ยังไม่ผูกมัด",
+        "bonded": "ผูกมัดแล้ว",
+        "unbonding": "กำลังยกเลิกการผูกมัด"
+      },
+      "claimable": "ที่สามารถรับได้",
+      "accruing": "กำลังสะสม",
+      "bonded": "ที่ผูกมัด"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "รางวัลรายวันอัตโนมัติ",
+      "description": "เปิดใช้งาน <bold>รับอัตโนมัติ</bold> เพื่อรับรางวัล UBI รายวัน $10 โดยอัตโนมัติ—ไม่ต้องรับด้วยตนเอง!",
+      "benefits": {
+        "midnight": "รับเวลาเที่ยงคืนตามเขตเวลาของคุณ",
+        "lowerFees": "ค่าธรรมเนียม gas ต่ำลง 80% (รวมกับผู้ใช้อื่น)",
+        "disable": "คุณสามารถปิดใช้งานได้ทุกเมื่อใน การตั้งค่า"
+      },
+      "notice": "คุณจะลงนามข้อความอนุญาตครั้งเดียวที่ให้ relay ของเรารับแทนคุณ ไม่มีการแชร์คีย์ส่วนตัว",
+      "maybeLater": "ไว้ทีหลัง",
+      "enableNow": "เปิดใช้งานตอนนี้"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "การตั้งค่ารับอัตโนมัติ",
+      "description": "รับรางวัลรายวันโดยอัตโนมัติ",
+      "checking": "กำลังตรวจสอบสถานะ...",
+      "status": "สถานะ",
+      "enabled": "เปิดใช้งาน",
+      "disabled": "ปิดใช้งาน",
+      "lastClaimed": "รับล่าสุดเมื่อ",
+      "neverClaimed": "ยังไม่เคยรับ",
+      "nextClaim": "รับครั้งถัดไป",
+      "expiresAt": "หมดอายุเมื่อ",
+      "timezone": "เขตเวลา",
+      "preferredHour": "ชั่วโมงที่ต้องการ",
+      "preferredHourHint": "เลือกเวลาที่รับอัตโนมัติควรทำงาน",
+      "enableButton": "เปิดใช้งานรับอัตโนมัติ",
+      "disableButton": "ปิดใช้งานรับอัตโนมัติ",
+      "enabling": "กำลังเปิดใช้งาน...",
+      "disabling": "กำลังปิดใช้งาน...",
+      "enableSuccess": "เปิดใช้งานรับอัตโนมัติสำเร็จ!",
+      "enableError": "เปิดใช้งานล้มเหลว",
+      "disableSuccess": "ปิดใช้งานรับอัตโนมัติสำเร็จ",
+      "disableError": "ปิดใช้งานล้มเหลว",
+      "updateButton": "อัปเดตการตั้งค่า",
+      "updating": "กำลังอัปเดต..."
+    },
+    "manual": {
+      "title": "รับด้วยตนเอง",
+      "description": "หากคุณต้องการเงินเร็วขึ้น ให้รับรางวัลถัดไปที่พร้อมใช้งานตอนนี้ การรับด้วยตนเองใช้แก๊สของกระเป๋าเงินคุณ การรับอัตโนมัติถูกกว่าหากคุณรอ หากกระเป๋าเงินของคุณไม่มีเงิน ให้เปิดใช้งานการรับอัตโนมัติหรือเติมแก๊สเนทีฟก่อนรับด้วยตนเอง",
+      "dayLabel": "วันรางวัล",
+      "claimButton": "รับตอนนี้",
+      "claiming": "กำลังรับ...",
+      "success": "ส่งคำขอรับสำเร็จ",
+      "successWithId": "ส่งคำขอรับสำเร็จ (id: {{id}})",
+      "error": "รับล้มเหลว",
+      "noProof": "ยังไม่ได้เผยแพร่หลักฐานรางวัล ลองอีกครั้งหลังจากสแนปช็อตวันนี้เผยแพร่แล้ว",
+      "unauthorized": "การอนุญาต Relayer ล้มเหลว กรุณาลองอีกครั้งหรือติดต่อฝ่ายสนับสนุน",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "วันรางวัลที่ใช้ได้: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "ครอบคลุม: {{start}} ถึง {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} เพิ่มเติมหลังจากชุดนี้",
+      "batchSuccess": "เคลม {{count}} วันสำเร็จ",
+      "claimingProgress": "กำลังเคลม {{claimed}}/{{total}}...",
+      "claimAllButton": "เคลมทั้งหมด {{count}} วัน"
+    },
+    "timezone": {
+      "title": "เลือกเขตเวลา",
+      "search": "ค้นหาเขตเวลา...",
+      "current": "การเลือกปัจจุบัน",
+      "searchResults": "ผลการค้นหา",
+      "noResults": "ไม่พบผลลัพธ์",
+      "detected": "ตรวจพบ",
+      "popular": "เขตเวลายอดนิยม",
+      "regions": {
+        "Americas": "อเมริกา",
+        "Europe": "ยุโรป",
+        "Asia": "เอเชีย",
+        "Africa": "แอฟริกา",
+        "Oceania": "โอเชียเนีย"
+      }
+    },
+    "payout": {
+      "title": "ความชอบในการจ่ายเงิน",
+      "description": "เลือกสกุลเงินที่ต้องการรับ",
+      "current": "ปัจจุบัน",
+      "saved": "บันทึกแล้ว",
+      "saveError": "บันทึกผิดพลาด",
+      "showMore": "แสดงเพิ่ม ({{count}})",
+      "showLess": "แสดงน้อยลง",
+      "native": "โทเค็นดั้งเดิม",
+      "stablecoin": "สเตเบิลคอยน์",
+      "popular": "ยอดนิยม",
+      "allCurrencies": "สกุลเงินทั้งหมด"
+    }
+  },
+  "wallet": {
+    "title": "กระเป๋าเงิน",
+    "testnetNotice": "โทเค็น Testnet ไม่มีมูลค่าจริง",
+    "totalBalance": "ยอดรวมทั้งหมด",
+    "balance": "ยอดเงิน",
+    "address": "ที่อยู่",
+    "copyAddress": "คัดลอกที่อยู่",
+    "addressCopied": "คัดลอกที่อยู่แล้ว",
+    "receive": "รับ",
+    "send": "ส่ง",
+    "swap": "สวอป",
+    "swapComingSoon": "สวอปกำลังมาเร็วๆ นี้",
+    "history": "ประวัติ",
+    "tokens": "โทเค็น",
+    "collectibles": "ของสะสม",
+    "noTokens": "ยังไม่มีโทเค็นที่ตั้งค่า",
+    "nativeToken": "โทเค็นดั้งเดิม",
+    "loading": "กำลังโหลด...",
+    "refreshing": "กำลังรีเฟรช...",
+    "balancesUpdated": "อัปเดตยอดเงินแล้ว",
+    "menu": {
+      "manageTokens": "จัดการโทเค็น",
+      "addressBook": "สมุดที่อยู่",
+      "walletSettings": "การตั้งค่ากระเป๋าเงิน",
+      "showBalances": "แสดงยอดเงิน",
+      "hideBalances": "ซ่อนยอดเงิน",
+      "showZeroTokens": "แสดงโทเค็นยอดศูนย์",
+      "hideZeroTokens": "ซ่อนโทเค็นยอดศูนย์",
+      "refresh": "รีเฟรช"
+    },
+    "manageTokens": {
+      "title": "จัดการโทเค็น",
+      "info": "เพิ่มโทเค็น ERC-20 ที่กำหนดเอง โทเค็นระบบรวมไว้แล้วโดยค่าเริ่มต้น",
+      "addToken": "เพิ่มโทเค็น",
+      "adding": "กำลังเพิ่ม...",
+      "contractAddress": "ที่อยู่สัญญาโทเค็น (0x...)",
+      "autoFetch": "ดึงสัญลักษณ์และทศนิยมอัตโนมัติ",
+      "customTokens": "โทเค็นกำหนดเอง",
+      "noCustomTokens": "ยังไม่มีโทเค็นกำหนดเองที่เพิ่ม",
+      "addUsingForm": "เพิ่มโทเค็นโดยใช้แบบฟอร์มด้านบน",
+      "systemToken": "โทเค็นนี้เป็นโทเค็นระบบและรวมไว้แล้ว",
+      "fetchingMetadata": "กำลังดึงข้อมูลเมตาของโทเค็น...",
+      "addedSuccess": "เพิ่มโทเค็นสำเร็จ",
+      "enterValidAddress": "กรอกที่อยู่โทเค็นที่ถูกต้อง",
+      "save": "บันทึก"
+    },
+    "addressBook": {
+      "title": "สมุดที่อยู่",
+      "addContact": "เพิ่มผู้ติดต่อ",
+      "nameLabel": "ชื่อหรือป้ายกำกับ",
+      "walletAddress": "ที่อยู่กระเป๋าเงิน (0x...)",
+      "savedContacts": "ผู้ติดต่อที่บันทึก",
+      "noContacts": "ยังไม่มีผู้ติดต่อที่บันทึก",
+      "addForQuickSending": "เพิ่มผู้ติดต่อเพื่อส่งอย่างรวดเร็ว",
+      "enterValidAddress": "กรอกที่อยู่ที่ถูกต้อง",
+      "addLabel": "เพิ่มป้ายกำกับ",
+      "save": "บันทึก"
+    },
+    "settings": {
+      "title": "การตั้งค่ากระเป๋าเงิน",
+      "export": {
+        "title": "ส่งออกกระเป๋าเงิน",
+        "description": "ห้ามแชร์วลีกู้คืนหรือคีย์ส่วนตัว สงวนไว้แบบออฟไลน์อย่างปลอดภัย",
+        "recoveryPhrase": "วลีการกู้คืน",
+        "recoveryPhraseNotAvailable": "วลีการกู้คืนไม่พร้อมใช้งาน (นำเข้าผ่านคีย์ส่วนตัว)",
+        "privateKey": "คีย์ส่วนตัว",
+        "privateKeyWarning": "คีย์ส่วนตัว (เก็บเป็นความลับ!)",
+        "showPhrase": "แสดงวลีการกู้คืน",
+        "showKey": "แสดงคีย์ส่วนตัว",
+        "warning": "ห้ามแชร์วลีการกู้คืนหรือคีย์ส่วนตัวกับใคร",
+        "copy": "คัดลอก",
+        "copied": "คัดลอกแล้ว!",
+        "hide": "ซ่อน",
+        "clipboardWarning": "คลิปบอร์ดสามารถอ่านได้โดยแอปอื่น จะล้างอัตโนมัติใน 30 วินาที",
+        "verifyForKey": "ยืนยันเพื่อแสดงคีย์ส่วนตัว",
+        "verifyForSeed": "ยืนยันเพื่อแสดงวลีการกู้คืน",
+        "verifyDescription": "กรอกรหัสผ่านหรือ PIN เพื่อแสดงข้อมูลกระเป๋าเงินที่ละเอียดอ่อน"
+      },
+      "import": {
+        "title": "นำเข้ากระเป๋าเงิน",
+        "description": "การนำเข้าจะแทนที่กระเป๋าเงินปัจจุบัน ตรวจสอบว่าคุณสำรองข้อมูลกระเป๋าเงินเก่าแล้ว โปรดทราบว่าคุณจะต้องยืนยันสถานะ PoH อีกครั้งหลังนำเข้า",
+        "byPhrase": "วลีการกู้คืน",
+        "byPrivateKey": "คีย์ส่วนตัว",
+        "phrasePlaceholder": "กรอกวลี 12 หรือ 24 คำ…",
+        "keyPlaceholder": "กรอกคีย์ส่วนตัว 0x…",
+        "importButton": "นำเข้ากระเป๋าเงิน",
+        "importing": "กำลังนำเข้า...",
+        "success": "นำเข้ากระเป๋าเงินสำเร็จ!"
+      },
+      "dangerZone": {
+        "title": "เขตอันตราย",
+        "description": "การกระทำเหล่านี้ไม่สามารถยกเลิกได้ ตรวจสอบว่าคุณสำรองกระเป๋าเงินแล้ว",
+        "forgetWallet": "ลืมกระเป๋าเงิน",
+        "forgetDescription": "ลบกระเป๋าเงินออกจากอุปกรณ์นี้ ตรวจสอบว่าคุณสำรองวลีการกู้คืนแล้ว",
+        "confirmTitle": "ลืมกระเป๋าเงินหรือไม่?",
+        "confirmMessage": "การนี้จะลบกระเป๋าเงินออกจากอุปกรณ์นี้ ตรวจสอบว่าคุณสำรองวลีการกู้คืนก่อน",
+        "cancel": "ยกเลิก",
+        "confirm": "ลืมกระเป๋าเงิน",
+        "walletForgotten": "ลืมกระเป๋าเงินแล้ว",
+        "unableToForget": "ไม่สามารถลืมกระเป๋าเงิน",
+        "resetWallet": "รีเซ็ตกระเป๋าเงิน",
+        "resetDescription": "ลบข้อมูลกระเป๋าเงินทั้งหมดและเริ่มใหม่"
+      },
+      "authPrompt": "ยืนยันตัวตนเพื่อแสดงคีย์ส่วนตัว"
+    }
+  },
+  "reset": {
+    "title": "รีเซ็ตกระเป๋าเงิน",
+    "dangerTitle": "การกระทำนี้ไม่สามารถยกเลิกได้!",
+    "warning1": "การรีเซ็ตกระเป๋าเงินจะลบถาวร:",
+    "bullet1": "กระเป๋าเงินและคีย์ส่วนตัวของคุณ",
+    "bullet2": "วลีการกู้คืนของคุณ",
+    "bullet3": "การตั้งค่าและความชอบในแอปทั้งหมด",
+    "bullet4": "ประวัติธุรกรรม",
+    "recoveryNote": "หากคุณมีวลีการกู้คืน 12 คำ คุณสามารถกู้คืนกระเป๋าเงินหลังรีเซ็ตได้",
+    "continueButton": "ฉันเข้าใจแล้ว ดำเนินการต่อ",
+    "confirmTitle": "ยืนยันการรีเซ็ต",
+    "confirmDescription": "พิมพ์ \"RESET\" ด้านล่างเพื่อยืนยันว่าคุณต้องการลบข้อมูลกระเป๋าเงินทั้งหมด",
+    "placeholder": "พิมพ์ RESET",
+    "typeMismatch": "โปรดพิมพ์ RESET เพื่อยืนยัน",
+    "resetButton": "รีเซ็ตกระเป๋าเงินถาวร",
+    "resettingTitle": "กำลังรีเซ็ต...",
+    "resettingDescription": "กำลังลบข้อมูลกระเป๋าเงินทั้งหมด โปรดรอ...",
+    "completeTitle": "รีเซ็ตเสร็จสิ้น",
+    "completeDescription": "กระเป๋าเงินของคุณถูกรีเซ็ตแล้ว คุณสามารถตั้งค่ากระเป๋าเงินใหม่หรือนำเข้าที่มีอยู่ได้",
+    "startFresh": "เริ่มใหม่",
+    "error": "รีเซ็ตกระเป๋าเงินล้มเหลว โปรดลองอีกครั้ง"
+  },
+  "export": {
+    "verifyTitle": "ยืนยันตัวตน",
+    "verifyDescription": "กรอกรหัสผ่านเพื่อส่งออกกระเป๋าเงินของคุณ",
+    "verify": "ยืนยัน",
+    "verificationFailed": "การยืนยันล้มเหลว",
+    "passphraseTitle": "ตั้งรหัสผ่านสำหรับส่งออก",
+    "passphraseDescription": "เลือกรหัสผ่านที่แข็งแกร่งเพื่อเข้ารหัสสำรอง คุณจะต้องใช้รหัสผ่านนี้เพื่อนำเข้าข้อมูลกระเป๋าเงินในภายหลัง",
+    "enterPassphrase": "กรอกรหัสผ่าน",
+    "passphraseTooWeak": "รหัสผ่านอ่อนแอเกินไป ใช้อย่างน้อย 8 ตัวอักษร",
+    "includeSeed": "รวมวลีการกู้คืน",
+    "includeSeedDescription": "แนะนำสำหรับสำรองข้อมูลสมบูรณ์",
+    "confirmTitle": "ยืนยันรหัสผ่าน",
+    "confirmDescription": "กรอกรหัสผ่านอีกครั้งเพื่อยืนยัน",
+    "confirmPassphrase": "ยืนยันรหัสผ่าน",
+    "passphraseMismatch": "รหัสผ่านไม่ตรงกัน",
+    "warning": "เก็บสำรองนี้อย่างปลอดภัย ผู้ใดที่มีไฟล์นี้และรหัสผ่านสามารถเข้าถึงกระเป๋าเงินของคุณได้",
+    "exportNow": "ส่งออกกระเป๋าเงิน",
+    "exportingTitle": "กำลังส่งออก...",
+    "exportingDescription": "กำลังเข้ารหัสและเตรียมสำรองกระเป๋าเงิน...",
+    "successTitle": "ส่งออกเสร็จสิ้น",
+    "successDescription": "สร้างสำรองกระเป๋าเงินที่เข้ารหัสแล้ว เก็บอย่างปลอดภัย",
+    "rememberPassphrase": "จำรหัสผ่านสำหรับส่งออก - คุณจะต้องใช้เพื่อนำเข้าสำรองนี้",
+    "errorTitle": "ส่งออกผิดพลาด",
+    "failed": "ส่งออกผิดพลาด โปรดลองอีกครั้ง",
+    "tryAgain": "ลองอีกครั้ง",
+    "exportKeystore": "ส่งออกสำรองที่เข้ารหัส",
+    "exportKeystoreDesc": "บันทึกไฟล์ keystore ที่เข้ารหัส"
+  },
+  "security": {
+    "title": "รักษาความปลอดภัยกระเป๋าเงินของคุณ",
+    "subtitle": "ตั้งรหัสผ่านหรือ PIN เพื่อปกป้องกระเป๋าเงิน",
+    "checkingDevice": "กำลังตรวจสอบความปลอดภัยอุปกรณ์...",
+    "passwordOption": "รหัสผ่าน",
+    "passwordDesc": "8+ ตัวอักษร รวมตัวอักษรและตัวเลข",
+    "pinOption": "PIN 6 หลัก",
+    "pinDesc": "รวดเร็วและจำง่าย",
+    "enterPin": "กรอก PIN 6 หลัก",
+    "confirmPin": "ยืนยัน PIN ของคุณ",
+    "enterPassword": "กรอกรหัสผ่าน",
+    "confirmPassword": "ยืนยันรหัสผ่าน",
+    "enableBiometrics": "เปิดใช้งาน {{type}} หรือไม่?",
+    "biometricsDesc": "ใช้ {{type}} เพื่อปลดล็อกอย่างรวดเร็ว คุณสามารถเปลี่ยนได้ในภายหลังใน การตั้งค่า",
+    "enableBiometricsButton": "เปิดใช้งาน {{type}}",
+    "enableBiometricsPrompt": "ยืนยันตัวตนเพื่อเปิดใช้งานปลดล็อกด้วยชีวมิติ",
+    "skipBiometrics": "ข้ามไปก่อน",
+    "setupComplete": "ตั้งค่าเสร็จสิ้น!",
+    "walletSecured": "กระเป๋าเงินของคุณปลอดภัยแล้ว!",
+    "continue": "ดำเนินการต่อ",
+    "passwordTooWeak": "รหัสผ่านอ่อนแอเกินไป โปรดปฏิบัติตามคำแนะนำ",
+    "pinMismatch": "PIN ไม่ตรงกัน",
+    "passwordMismatch": "รหัสผ่านไม่ตรงกัน",
+    "setupError": "ตั้งค่าล้มเหลว โปรดลองอีกครั้ง",
+    "passwordTitle": "รหัสผ่าน",
+    "passwordDescription": "8+ ตัวอักษร ความปลอดภัยสูงกว่า",
+    "pinTitle": "PIN 6 หลัก",
+    "pinDescription": "เข้าถึงรวดเร็ว จำง่าย"
+  },
+  "lock": {
+    "title": "ปลดล็อก Umotu",
+    "lockedOut": "ถูกล็อก",
+    "tooManyAttempts": "พยายามมากเกินไป ลองอีกครั้งใน {{time}}",
+    "attemptsRemaining": "เหลือ {{count}} ครั้ง",
+    "enterPassword": "กรอกรหัสผ่าน",
+    "unlock": "ปลดล็อก",
+    "wrongPin": "PIN ผิด",
+    "wrongPassword": "รหัสผ่านผิด",
+    "verificationError": "การยืนยันผิดพลาด",
+    "biometricsPrompt": "ปลดล็อกกระเป๋าเงินของคุณ",
+    "unlockWithFaceId": "ปลดล็อกด้วย Face ID หรือไม่?",
+    "unlockWithFingerprint": "ปลดล็อกด้วยลายนิ้วมือหรือไม่?",
+    "forgotPassword": "ลืมรหัสผ่าน?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "อุปกรณ์ไม่รองรับ",
+    "emulatorMessage": "แอปนี้ไม่สามารถทำงานบน emulator ได้ด้วยเหตุผลด้านความปลอดภัย",
+    "rootedTitle": "คำเตือนด้านความปลอดภัย",
+    "exitApp": "ออก",
+    "continueAnyway": "ดำเนินการต่อ comunque"
+  },
+  "settingsSecurity": {
+    "title": "ความปลอดภัย",
+    "autoLock": "ล็อกอัตโนมัติ",
+    "autoLockDesc": "ล็อกกระเป๋าเงินหลังจากไม่ใช้งาน",
+    "faceId": "Face ID",
+    "fingerprint": "ลายนิ้วมือ",
+    "biometricsDesc": "ปลดล็อกอย่างรวดเร็วด้วยชีวมิติ",
+    "changePin": "เปลี่ยน PIN",
+    "changePassword": "เปลี่ยนรหัสผ่าน",
+    "changeDesc": "อัปเดตข้อมูลประจำตัวความปลอดภัย",
+    "enableBiometrics": "เปิดใช้งานปลดล็อกด้วยชีวมิติ",
+    "enterCurrent": "กรอก {{type}} ปัจจุบัน",
+    "enterNew": "กรอก {{type}} ใหม่",
+    "confirmNew": "ยืนยัน {{type}} ใหม่",
+    "currentPassword": "รหัสผ่านปัจจุบัน",
+    "newPassword": "รหัสผ่านใหม่",
+    "confirmNewPassword": "ยืนยันรหัสผ่านใหม่",
+    "changeNow": "เปลี่ยนตอนนี้",
+    "success": "สำเร็จ",
+    "pinChanged": "เปลี่ยน PIN สำเร็จ",
+    "passwordChanged": "เปลี่ยนรหัสผ่านสำเร็จ",
+    "changeFailed": "เปลี่ยนข้อมูลประจำตัวล้มเหลว",
+    "autoLockOptions": {
+      "immediately": "ทันที",
+      "after1min": "หลัง 1 นาที",
+      "after5min": "หลัง 5 นาที",
+      "after15min": "หลัง 15 นาที",
+      "after1hour": "หลัง 1 ชั่วโมง",
+      "never": "ไม่เคย"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "โปรดรอ",
+    "cooldownMessage": "เพื่อความปลอดภัย คุณสามารถแสดงคีย์อีกครั้งใน {{time}}",
+    "cooldownReason": "เพื่อป้องกันแอปที่เป็นอันตรายเข้าถึงคีย์ของคุณอย่างรวดเร็ว"
+  },
+  "passwordVerify": {
+    "title": "ยืนยันตัวตน",
+    "description": "กรอกรหัสผ่านหรือ PIN เพื่อแสดงข้อมูลกระเป๋าเงินที่ละเอียดอ่อน",
+    "verify": "ยืนยัน"
+  },
+  "passwordValidation": {
+    "veryWeak": "อ่อนแอมาก",
+    "weak": "อ่อนแอ",
+    "fair": "ปานกลาง",
+    "good": "ดี",
+    "strong": "แข็งแกร่ง",
+    "tooShort": "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร",
+    "commonPassword": "นี่เป็นรหัสผ่านที่ใช้กันทั่วไป",
+    "lengthSuggestion": "ใช้อย่างน้อย 12 ตัวอักษรเพื่อความปลอดภัยที่ดีกว่า",
+    "mixedCaseSuggestion": "ผสมตัวพิมพ์ใหญ่และเล็ก",
+    "numberSuggestion": "เพิ่มตัวเลข",
+    "specialCharSuggestion": "เพิ่มอักขระพิเศษ (!@#$%)"
+  },
+  "forgot": {
+    "title": "รีเซ็ตข้อมูลประจำตัว",
+    "warning": "เพื่อรีเซ็ตรหัสผ่านหรือ PIN คุณจะต้องกรอกวลี seed ของกระเป๋าเงิน เพื่อพิสูจน์ว่าคุณเป็นเจ้าของกระเป๋าเงิน",
+    "warningText": "ห้ามแชร์วลี seed กับใคร",
+    "continue": "ฉันเข้าใจแล้ว ดำเนินการต่อ",
+    "enterSeed": "กรอกวลี Seed",
+    "seedDescription": "กรอกวลี seed 12 หรือ 24 คำ แยกแต่ละคำด้วยช่องว่าง",
+    "seedPlaceholder": "กรอกวลี seed...",
+    "verifySeed": "ยืนยันวลี Seed",
+    "invalidSeed": "โปรดกรอกวลี 12 หรือ 24 คำที่ถูกต้อง",
+    "chooseMethod": "เลือกวิธีความปลอดภัย",
+    "methodDescription": "คุณต้องการรักษาความปลอดภัยกระเป๋าเงินอย่างไร?",
+    "newPassword": "สร้างรหัสผ่านใหม่",
+    "newPin": "สร้าง PIN ใหม่",
+    "newPasswordDesc": "เลือกรหัสผ่านที่แข็งแกร่ง (8+ ตัวอักษร)",
+    "newPinDesc": "กรอก PIN 6 หลัก",
+    "confirmPassword": "ยืนยันรหัสผ่าน",
+    "confirmPin": "ยืนยัน PIN",
+    "confirmPasswordDesc": "กรอกรหัสผ่านอีกครั้งเพื่อยืนยัน",
+    "confirmPinDesc": "กรอก PIN อีกครั้งเพื่อยืนยัน",
+    "resetNow": "รีเซ็ตตอนนี้",
+    "complete": "รีเซ็ตเสร็จสิ้น",
+    "completeDescription": "ข้อมูลประจำตัวของคุณถูกรีเซ็ตแล้ว คุณสามารถปลดล็อกกระเป๋าเงินด้วยรหัสผ่านหรือ PIN ใหม่ได้",
+    "unlockNow": "ปลดล็อกกระเป๋าเงิน",
+    "passwordTooWeak": "รหัสผ่านอ่อนแอเกินไป โปรดเลือกรหัสผ่านที่แข็งแกร่งกว่า",
+    "passwordMismatch": "รหัสผ่านไม่ตรงกัน",
+    "pinMismatch": "PIN ไม่ตรงกัน",
+    "resetFailed": "รีเซ็ตข้อมูลประจำตัวล้มเหลว โปรดยืนยันวลี seed ของคุณ",
+    "resetError": "เกิดข้อผิดพลาด โปรดลองอีกครั้ง"
+  },
+  "send": {
+    "title": "ส่ง",
+    "selectToken": "เลือกโทเค็น",
+    "selectTokenInfo": "เลือกโทเค็นที่จะส่ง แสดงเฉพาะโทเค็นที่มี ยอดเงิน",
+    "noTokensWithBalance": "ไม่มีโทเค็นที่มี ยอดเงิน",
+    "addTokensFirst": "เพิ่มโทเค็นในกระเป๋าเงินก่อน",
+    "enterAmount": "กรอกจำนวน",
+    "enterRecipient": "กรอกผู้รับ",
+    "review": "ตรวจสอบ",
+    "amount": "จำนวน",
+    "recipient": "ผู้รับ",
+    "recipientPlaceholder": "ที่อยู่กระเป๋าเงิน 0x...",
+    "networkFee": "ค่าธรรมเนียมเครือข่าย",
+    "gasToken": "จ่าย gas ด้วย",
+    "payingWith": "กำลังจ่ายด้วย",
+    "payGasWith": "จ่าย Gas ด้วย",
+    "nativeGas": "UMT (ดั้งเดิม)",
+    "stableGas": "Stable Gas",
+    "selectStable": "เลือก stable",
+    "max": "สูงสุด",
+    "next": "ถัดไป",
+    "continue": "ดำเนินการต่อ",
+    "confirm": "ยืนยันการส่ง",
+    "confirmSend": "ยืนยันการส่ง",
+    "sending": "กำลังส่ง...",
+    "failed": "ธุรกรรมล้มเหลว",
+    "viewInExplorer": "ดูใน Explorer",
+    "done": "เสร็จสิ้น",
+    "cancel": "ยกเลิก",
+    "send": "ส่ง",
+    "balance": "ยอดเงิน",
+    "available": "ที่มีอยู่",
+    "to": "ถึง",
+    "network": "เครือข่าย",
+    "step": "ขั้นตอน",
+    "estimating": "กำลังประมาณ...",
+    "umtNative": "UMT (ดั้งเดิม)",
+    "txSpeed": "ความเร็วธุรกรรม",
+    "transactionSpeed": "ความเร็วธุรกรรม",
+    "speed": {
+      "slow": "ช้า",
+      "normal": "ปกติ",
+      "fast": "เร็ว"
+    },
+    "gasNotice": {
+      "stablecoin": "จะจ่าย gas ด้วยสเตเบิลคอยน์",
+      "reserved": "เราสงวน {{amount}} {{symbol}} สำหรับ gas; คุณสามารถส่งสูงสุด {{max}} ได้"
+    },
+    "errors": {
+      "invalidAddress": "ที่อยู่ผู้รับไม่ถูกต้อง",
+      "invalidAmount": "กรอกจำนวนที่ถูกต้อง",
+      "insufficientBalance": "ยอดเงินไม่พอ",
+      "insufficientGas": "ยอดเงินไม่พอสำหรับ gas",
+      "insufficientGasWithHint": "ยอดเงินไม่พอสำหรับ gas เพิ่ม UMT หรือสเตเบิลคอยน์ที่รองรับ",
+      "notEnoughForGas": "ยอดเงินไม่พอครอบคลุม gas",
+      "noStableGas": "UMT ไม่พอสำหรับ gas และไม่มี stable ที่รองรับครอบคลุม",
+      "permitFailed": "Permit หรือ approval สำหรับ gas token ล้มเหลว",
+      "relayNotConfigured": "Stable gas relay ไม่ได้ตั้งค่า",
+      "transactionReverted": "ธุรกรรมถูกกลับคืนบน chain",
+      "approvalNeeded": "Gas token ต้องการ approval แต่ไม่มี UMT สำหรับ approval เพิ่ม UMT เล็กน้อยหรือใช้โทเค็นที่รองรับ permit"
+    },
+    "addressBook": {
+      "title": "สมุดที่อยู่",
+      "addNew": "เพิ่มใหม่",
+      "noContacts": "ไม่มีที่อยู่ที่บันทึกไว้",
+      "saveForQuickAccess": "บันทึกที่อยู่เพื่อเข้าถึงอย่างรวดเร็ว",
+      "editContact": "แก้ไขผู้ติดต่อ",
+      "deleteContact": "ลบผู้ติดต่อ",
+      "addressNotSaved": "ที่อยู่ยังไม่ได้บันทึก",
+      "addLabel": "เพิ่มป้ายกำกับ",
+      "enterValidAddress": "กรุณาใส่ที่อยู่ที่ถูกต้องก่อน",
+      "saved": "บันทึกแล้ว",
+      "save": "บันทึก"
+    },
+    "success": {
+      "title": "ส่งธุรกรรมสำเร็จ!",
+      "hash": "Hash",
+      "viewInExplorer": "ดูใน Explorer",
+      "close": "ปิด"
+    },
+    "batch": {
+      "mode": "โหมดแบทช์",
+      "singleMode": "ผู้รับคนเดียว",
+      "addRecipient": "เพิ่มผู้รับ",
+      "noRecipients": "ยังไม่มีผู้รับ",
+      "addFromTagOrBook": "เพิ่มจากแท็กหรือสมุด",
+      "invalidAddress": "ที่อยู่ไม่ถูกต้อง: {{address}}",
+      "invalidAmount": "จำนวนไม่ถูกต้องสำหรับ {{recipient}}",
+      "totalExceedsBalance": "ยอดรวมเกินยอดคงเหลือ",
+      "sendingTo": "กำลังส่งให้ผู้รับ {{count}} คน",
+      "sendingTo_plural": "กำลังส่งให้ผู้รับ {{count}} คน",
+      "recipients": "ผู้รับ",
+      "addresses": "{{count}} ที่อยู่",
+      "addresses_plural": "{{count}} ที่อยู่",
+      "addByTag": "เพิ่มตามแท็ก",
+      "noTags": "ยังไม่มีแท็ก",
+      "createFirstTag": "สร้างแท็กแรกในสมุดที่อยู่",
+      "addFromTag": "เพิ่มจากแท็ก",
+      "selectTag": "เลือกแท็ก",
+      "remove": "ลบ",
+      "sendAll": "ส่งทั้งหมด ({{count}})",
+      "batchSend": "ส่งแบทช์",
+      "badge": "แบทช์",
+      "successFail": "{{success}} สำเร็จ, {{fail}} ล้มเหลว",
+      "successful": "สำเร็จ",
+      "sentStatus": "ส่งแล้ว",
+      "failedStatus": "ล้มเหลว",
+      "details": "รายละเอียดการโอนแบทช์",
+      "total": "รวม",
+      "tagPicker": {
+        "title": "เลือกแท็ก",
+        "noTags": "ไม่มีแท็กที่ใช้ได้",
+        "createHint": "เพิ่มแท็กให้ผู้ติดต่อในสมุดก่อน"
+      },
+      "tags": {
+        "manage": "จัดการแท็ก",
+        "add": "เพิ่มแท็ก",
+        "remove": "ลบแท็ก",
+        "create": "สร้างแท็ก",
+        "newTag": "ชื่อแท็กใหม่",
+        "addToContact": "เพิ่มแท็กให้ผู้ติดต่อ"
+      }
+    }
+  },
+  "receive": {
+    "title": "รับ",
+    "yourAddress": "ที่อยู่กระเป๋าเงินของคุณ",
+    "scanQR": "สแกน QR code เพื่อรับ",
+    "copyAddress": "คัดลอกที่อยู่",
+    "share": "แชร์"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "จ่าย",
+      "myQr": "QR ของฉัน"
+    },
+    "pay": {
+      "title": "จ่าย",
+      "description": "สแกน QR code ของเพื่อนเพื่อจ่ายตรงเข้าสู่กระเป๋าเงินของพวกเขา",
+      "allowCamera": "อนุญาตกล้อง",
+      "requesting": "กำลังขอ...",
+      "openSettings": "เปิดการตั้งค่า",
+      "sendTo": "ส่งถึง",
+      "amount": "จำนวน",
+      "rescan": "สแกนใหม่",
+      "continue": "ดำเนินการต่อ"
+    },
+    "receive": {
+      "title": "รับ",
+      "description": "สแกน QR code นี้เพื่อส่งเงินไปยังที่อยู่นี้",
+      "tapToCopy": "แตะเพื่อคัดลอกที่อยู่",
+      "copied": "คัดลอกไปยังคลิปบอร์ดแล้ว!"
+    }
+  },
+  "history": {
+    "title": "ประวัติธุรกรรม",
+    "sent": "ส่ง",
+    "received": "รับ",
+    "token": "โทเค็น",
+    "external": "ภายนอก",
+    "to": "ถึง: ",
+    "from": "จาก: ",
+    "viewInExplorer": "ดูใน Explorer",
+    "empty": {
+      "title": "ยังไม่มีธุรกรรม",
+      "description": "ประวัติธุรกรรมของคุณจะปรากฏที่นี่เมื่อคุณส่งหรือรับโทเค็น"
+    },
+    "status": {
+      "confirmed": "ยืนยันแล้ว",
+      "pending": "รอดำเนินการ",
+      "failed": "ล้มเหลว"
+    },
+    "details": {
+      "title": "รายละเอียดธุรกรรม",
+      "status": "สถานะ",
+      "type": "ประเภท",
+      "to": "ถึง",
+      "from": "จาก",
+      "token": "โทเค็น",
+      "block": "บล็อก",
+      "gasCost": "ค่าธรรมเนียม Gas",
+      "hash": "Hash",
+      "source": "แหล่งที่มา",
+      "balanceDetected": "ตรวจพบยอดเงิน",
+      "inferredNote": "ธุรกรรมนี้ตรวจพบจากการเปลี่ยนแปลงยอดเงิน รายละเอียดบน chain ที่แน่นอนไม่พร้อมใช้งาน"
+    },
+    "time": {
+      "justNow": "เมื่อสักครู่",
+      "minsAgo": "{{count}} นาทีที่แล้ว",
+      "hoursAgo": "{{count}} ชั่วโมงที่แล้ว",
+      "daysAgo": "{{count}} วันที่แล้ว"
+    }
+  },
+  "settings": {
+    "title": "การตั้งค่า",
+    "account": {
+      "title": "บัญชีและรูปลักษณ์",
+      "walletAddress": "ที่อยู่กระเป๋าเงิน",
+      "copy": "คัดลอก",
+      "copied": "คัดลอกแล้ว"
+    },
+    "theme": {
+      "title": "ธีม",
+      "light": "สว่าง",
+      "dark": "มืด",
+      "system": "ระบบ"
+    },
+    "language": {
+      "title": "ภาษา",
+      "select": "เลือกภาษา",
+      "current": "ปัจจุบัน"
+    },
+    "display": {
+      "title": "การแสดงผล",
+      "description": "ปรับแต่งรูปลักษณ์หน้าหลักของคุณ",
+      "showSentinelCard": "แสดงการ์ดรายได้ Sentinel",
+      "showSentinelCardDesc": "แสดงรายได้บนหน้าหลัก",
+      "showDailyRewardsCard": "แสดงการ์ดรางวัลรายวัน",
+      "on": "เปิด",
+      "off": "ปิด",
+      "sentinelSettings": "การตั้งค่า Sentinel",
+      "sentinelSettingsDesc": "จัดการการผูกมัด รางวัล และรับอัตโนมัติ"
+    },
+    "sentinelDisplay": {
+      "title": "การแสดงผล Sentinel",
+      "showSentinelCard": "แสดงการ์ด Sentinel",
+      "showSentinelCardDesc": "แสดงการ์ดรายได้ sentinel บนหน้าหลัก",
+      "sentinelSettings": "การตั้งค่า Sentinel",
+      "sentinelSettingsDesc": "ตั้งค่า sentinel node และรางวัล"
+    },
+    "verification": {
+      "title": "การยืนยัน",
+      "description": "ยืนยันความเป็นมนุษย์ของคุณด้วย Inlyf เพื่อปลดล็อกรางวัลรายวัน การตรวจสอบ liveness อย่างรวดเร็ว; ยืนยันใหม่เป็นระยะ",
+      "open": "เริ่มการยืนยัน",
+      "refresh": "รีเฟรชการยืนยัน",
+      "status": "สถานะ",
+      "verified": "ยืนยันแล้ว",
+      "notVerified": "ยังไม่ยืนยัน",
+      "expiresOn": "หมดอายุเมื่อ",
+      "daysRemaining": "เหลือวัน",
+      "upToDate": "การยืนยันเป็นปัจจุบัน",
+      "refreshAvailableIn": "สามารถรีเฟรชใน {{days}} วัน"
+    },
+    "network": {
+      "title": "เครือข่าย",
+      "description": "ตั้งค่าการเชื่อมต่อ blockchain",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (กำลังมาเร็วๆ นี้)",
+      "rpcEndpoint": "RPC Endpoint",
+      "pingRpc": "Ping RPC",
+      "testing": "กำลังทดสอบ...",
+      "rpcOk": "RPC OK",
+      "rpcError": "RPC Error",
+      "save": "บันทึก",
+      "saved": "บันทึกการตั้งค่าแล้ว",
+      "connectionStatus": "สถานะการเชื่อมต่อ",
+      "connected": "เชื่อมต่อแล้ว",
+      "disconnected": "ไม่ได้เชื่อมต่อ"
+    },
+    "cache": {
+      "title": "แคช",
+      "description": "ล้างข้อมูลแคชเพื่อรีเฟรชข้อมูลโทเค็นและสัญญา",
+      "clearCache": "ล้างแคช",
+      "cacheCleared": "ล้างแคชแล้ว! รีสตาร์ทเพื่อใช้งาน"
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "ช่วยรักษาความปลอดภัย blockchain โดยให้โทรศัพท์ของคุณออนไลน์ ทำงานสุ่มตัวอย่างอย่างน้อยหนึ่งงานต่อวันเพื่อรักษาสิทธิ์รับรางวัล",
+      "wifiOnly": "WiFi เท่านั้น",
+      "wifiOnlyHint": "ประหยัดข้อมูลมือถือ",
+      "minBattery": "แบตเตอรี่ขั้นต่ำ",
+      "minBatteryHint": "จะไม่ทำงานต่ำกว่าระดับนี้",
+      "background": "ทำงานในพื้นหลัง",
+      "backgroundHint": "ทำงานแม้แอปปิด",
+      "lastSample": "กิจกรรมล่าสุด",
+      "noSamples": "ยังไม่มีกิจกรรม เปิดแอปค้างไว้เพื่อเริ่ม",
+      "staleWarning": "ไม่เห็นวันนี้ — เปิดแอปใหม่เพื่อดำเนินการต่อ",
+      "androidBatteryWarning": "การปรับแต่งแบตเตอรี่อาจป้องกันการทำงานพื้นหลัง",
+      "androidBatteryHint": "ไปที่ การตั้งค่า → แอป → Umotu → แบตเตอรี่ → เลือก \"ไม่จำกัด\" เพื่ออนุญาตการทำงานพื้นหลัง",
+      "openSettings": "แตะเพื่อเปิดการตั้งค่า",
+      "tip": "เปิด \"ทำงานในพื้นหลัง\" เพื่อศักยภาพการรับสูงสุด",
+      "runNow": "ทำงานตอนนี้",
+      "running": "กำลังทำงาน…",
+      "lastError": "ข้อผิดพลาดล่าสุด",
+      "status": {
+        "active": "ใช้งาน",
+        "inactive": "ไม่ใช้งาน",
+        "paused": "หยุดชั่วคราว"
+      }
+    },
+    "permissions": {
+      "title": "สิทธิ์",
+      "description": "จัดการมินิแอปที่เชื่อมต่อและสิทธิ์ของพวกมัน",
+      "openMiniApps": "เปิดมินิแอป",
+      "manageConnections": "จัดการ",
+      "noConnections": "ไม่มีแอปที่เชื่อมต่อ",
+      "revokeAccess": "ยกเลิกการเข้าถึง",
+      "lastUsed": "ใช้ล่าสุด"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "ยินดีต้อนรับสู่ Umotu",
+      "subtitle": "10 ดอลลาร์ต่อวัน สำหรับทุกคนทั่วโลก",
+      "getStarted": "เริ่มต้น"
+    },
+    "language": {
+      "title": "เลือกภาษาของคุณ",
+      "continue": "ดำเนินการต่อ"
+    },
+    "wallet": {
+      "title": "กระเป๋าเงินของคุณ",
+      "createNew": "สร้างกระเป๋าเงินใหม่",
+      "importExisting": "นำเข้าที่มีอยู่",
+      "creating": "กำลังสร้างกระเป๋าเงิน..."
+    },
+    "verify": {
+      "title": "ยืนยันว่าคุณเป็นมนุษย์",
+      "description": "เพื่อรับรางวัลรายวัน ยืนยันว่าคุณเป็นมนุษย์ที่ไม่ซ้ำกัน",
+      "continue": "ดำเนินการต่อ"
+    }
+  },
+  "poh": {
+    "subtitle": "ปลดล็อกรางวัลรายวัน",
+    "description": "ยืนยัน liveness ด้วย Inlyf เพื่อปลดล็อกรางวัล ไม่เก็บข้อมูลชีวมิติบน chain; ออก credential ชั่วคราวเท่านั้น",
+    "howItWorks": "ทำงานอย่างไร",
+    "howItWorksDesc": "การตรวจ liveness สั้นๆ (สแกนหน้า) ยืนยันว่าคุณเป็นมนุษย์ Credential ของคุณมีอายุ 90 วันและสามารถรีเฟรชได้ทุกเมื่อ",
+    "adultQuestion": "คุณเป็นผู้ใหญ่ (18+) หรือไม่?",
+    "yesAdult": "ใช่ 18+",
+    "noMinor": "ไม่ / ผู้เยาว์",
+    "selectAge": "โปรดเลือกตัวเลือก",
+    "verifying": "กำลังยืนยัน...",
+    "startVerification": "เริ่มการยืนยัน",
+    "skipForNow": "ข้ามไปก่อน",
+    "status": {
+      "notVerified": "ยังไม่ยืนยัน",
+      "notVerifiedDetail": "เริ่มการยืนยันเพื่อปลดล็อกรางวัล",
+      "unavailable": "สถานะไม่พร้อมใช้งาน",
+      "verified": "คุณยืนยันแล้ว",
+      "validFor": "มีอายุ ~{{days}} วัน",
+      "validFor_plural": "มีอายุ ~{{days}} วัน",
+      "expired": "การยืนยันหมดอายุหรือไม่พบ",
+      "expiredDetail": "รัน liveness ใหม่เพื่อรีเฟรช credential ของคุณ"
+    }
+  },
+  "sentinelSettings": {
+    "header": "เข้าร่วม pool Sentinel เพื่อช่วย finalize บล็อก ผูกมัดอย่างน้อยขั้นต่ำ ให้อุปกรณ์ออนไลน์ และรับรางวัล",
+    "loading": "กำลังโหลดข้อมูล sentinel...",
+    "unavailable": "โมดูล Sentinel ไม่พร้อมใช้งาน",
+    "yourStatus": "สถานะของคุณ",
+    "wallet": "กระเป๋าเงิน",
+    "bondedAmount": "จำนวนที่ผูกมัด",
+    "minimumBond": "การผูกมัดขั้นต่ำ",
+    "status": {
+      "notBonded": "ยังไม่ผูกมัด",
+      "bonded": "ผูกมัดแล้ว",
+      "unbonding": "กำลังยกเลิกการผูกมัด (พร้อมใช้งาน {{date}})"
+    },
+    "rewards": {
+      "title": "รางวัล",
+      "claimableNow": "ที่สามารถรับตอนนี้",
+      "accruing": "กำลังสะสม",
+      "totalClaimed": "ยอดรวมที่รับ",
+      "claiming": "กำลังรับ...",
+      "claimRewards": "รับรางวัล"
+    },
+    "bond": {
+      "createTitle": "สร้างการผูกมัด",
+      "topUpTitle": "เติมการผูกมัด",
+      "createDescription": "ผูกมัด UMT เพื่อเข้าร่วมคณะกรรมการ sentinel และเริ่มรับรางวัล",
+      "topUpDescription": "เพิ่ม stake เพื่อรับส่วนแบ่งรางวัลมากขึ้น",
+      "amountLabel": "จำนวน (UMT)",
+      "processing": "กำลังประมวลผล...",
+      "bond": "ผูกมัด",
+      "topUp": "เติม",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "รับอัตโนมัติ",
+      "description": "ให้ relayer รับรางวัล sentinel ของคุณอัตโนมัติเมื่อสะสม",
+      "checking": "กำลังตรวจสอบ...",
+      "enabled": "เปิดใช้งาน",
+      "disabled": "ปิดใช้งาน",
+      "expires": "หมดอายุ",
+      "processing": "กำลังประมวลผล...",
+      "enable": "เปิดใช้งานรับอัตโนมัติ",
+      "disable": "ปิดใช้งานรับอัตโนมัติ"
+    },
+    "activity": {
+      "title": "กิจกรรมล่าสุด",
+      "claims": "การรับ",
+      "slashes": "การลงโทษ",
+      "noClaims": "ไม่มีการรับใน {{blocks}}k บล็อก ล่าสุด",
+      "noSlashes": "ไม่มีเหตุการณ์ลงโทษในช่วงล่าสุด",
+      "unknown": "ไม่ทราบ"
+    },
+    "errors": {
+      "configureEnv": "ตั้งค่า RPC + ตัวแปรสัญญา sentinel",
+      "noWallet": "สร้างหรือนำเข้ากระเป๋าเงินเพื่อเข้าร่วมคณะกรรมการ sentinel",
+      "loadFailed": "โหลดข้อมูล sentinel ล้มเหลว"
+    },
+    "toast": {
+      "rewardsClaimed": "รับรางวัล sentinel แล้ว",
+      "noRewards": "ไม่มีรางวัลรอดำเนินการที่จะรับ",
+      "claimFailed": "รับล้มเหลว",
+      "autoClaimEnabled": "เปิดใช้งานรับอัตโนมัติ sentinel",
+      "autoClaimDisabled": "ปิดใช้งานรับอัตโนมัติ sentinel",
+      "autoClaimFailed": "สลับรับอัตโนมัติล้มเหลว",
+      "configureBondAddress": "ตั้งค่าที่อยู่ผูกมัด sentinel",
+      "rpcNotSet": "ไม่ได้ตั้งค่า RPC",
+      "minBondUnavailable": "ผูกมัดขั้นต่ำไม่พร้อมใช้งาน",
+      "enterBondAmount": "กรอกจำนวนผูกมัด",
+      "minBondRequired": "การผูกมัดเริ่มต้นต้องอย่างน้อย {{amount}} UMT",
+      "topUpGreaterThanZero": "จำนวนเติมต้องมากกว่า 0",
+      "insufficientBalance": "ยอดเงินไม่พอสำหรับผูกมัด + gas",
+      "bondSubmitted": "ส่งธุรกรรมผูกมัดแล้ว",
+      "topUpSubmitted": "ส่งธุรกรรมเติมแล้ว",
+      "bondConfirmed": "ยืนยันการผูกมัด",
+      "topUpConfirmed": "ยืนยันการเติม",
+      "bondReverted": "การผูกมัดถูกกลับคืนบน chain",
+      "bondFailed": "การผูกมัดล้มเหลว"
+    }
+  },
+  "miniapps": {
+    "title": "มินิแอป",
+    "subtitle": "สำรวจแอปที่สร้างบน Umotu",
+    "explore": "สำรวจแอปที่สร้างบน Umotu",
+    "noApps": "ยังไม่มีแอปพร้อมใช้งาน",
+    "browseByCategory": "เรียกดูตามหมวดหมู่",
+    "appsCount": "{{count}} แอป",
+    "featured": "แนะนำ",
+    "comingSoon": "กำลังมาเร็วๆ นี้",
+    "liveApps": "แอปที่ใช้งานได้",
+    "available": "พร้อมใช้งาน",
+    "pohDescription": "ยืนยันความเป็นมนุษย์ของคุณด้วย Inlyf เพื่อปลดล็อกรางวัลรายวัน",
+    "vision": {
+      "title": "วิสัยทัศน์ของเรา",
+      "tagline": "10 ดอลลาร์ต่อวัน สำหรับทุกคนทั่วโลก",
+      "description": "Umotu กำลังสร้างโครงสร้างพื้นฐานสำหรับโลกที่ทุกคนสามารถเข้าร่วมเศรษฐกิจโลกได้—ไม่ว่าคุณจะอยู่ที่ไหนหรือใช้ธนาคารใด",
+      "readMore": "อ่านวิสัยทัศน์ฉบับเต็ม",
+      "pillars": {
+        "title": "หลักการหลักสามประการ",
+        "ubi": {
+          "title": "10 ดอลลาร์/วัน สำหรับทุกคนทั่วโลก",
+          "description": "รายได้พื้นฐานสากลเป็นรางวัลที่ได้รับจากการรักษาความปลอดภัยเครือข่าย ใครก็ตามที่มีโทรศัพท์สามารถเข้าร่วมและรับได้"
+        },
+        "capital": {
+          "title": "ทุนเคลื่อนย้ายอย่างอิสระ",
+          "description": "การชำระเงินและโอนเงินแทบไม่มีแรงเสียดทาน—ข้ามพรมแดนหรือท้องถิ่น ธุรกิจจ่าย ~0.1% เพื่อครอบคลุมค่าแพลตฟอร์ม บุคคลไม่จ่ายอะไร"
+        },
+        "sovereignty": {
+          "title": "เคารพอธิปไตยทางการเงิน",
+          "description": "เราไม่แทนที่สกุลเงิน fiat—เราทำให้มันทำงานดีขึ้น ธนาคารออกสเตเบิลคอยน์ที่ผูกกับสกุลเงินท้องถิ่น นโยบายการเงินมีประสิทธิภาพมากขึ้นด้วยการเข้าถึงที่กว้างขึ้นและแรงเสียดทานน้อยลง"
+        }
+      },
+      "notReplacing": "Umotu ไม่ได้แข่งขันกับธนาคารกลาง เรากำลังสร้างโครงสร้างพื้นฐานที่ดีกว่าสำหรับสกุลเงิน fiat: แรงเสียดทานน้อยลง การเข้าถึงทั่วโลก และประสิทธิภาพตลาดและความยืดหยุ่นที่ดีขึ้น"
+    },
+    "building": {
+      "title": "เรากำลังสร้างระบบนิเวศ",
+      "description": "แอปเหล่านี้แสดงสิ่งที่เป็นไปได้บน Umotu บางแอปพร้อมใช้งานตอนนี้ อื่นๆ กำลังมาเร็วๆ นี้ นักพัฒนาทั่วโลกได้รับเชิญให้สร้างและเปิดตัวบนแพลตฟอร์มของเรา",
+      "developerDocs": "เอกสารสำหรับนักพัฒนา"
+    },
+    "categories": {
+      "payments": {
+        "name": "การชำระเงินและการเงิน",
+        "apps": {
+          "sendMoney": {
+            "name": "ส่งเงิน",
+            "description": "ส่ง UMT หรือสเตเบิลคอยน์ทันทีให้ใครก็ได้ ทั่วโลก—ไม่ต้องใช้ธนาคาร",
+            "example": "ส่ง $20 ให้ครอบครัวต่างประเทศในไม่กี่วินาที ไม่ใช่หลายวัน ไม่มีค่าธรรมเนียมแอบแฝง"
+          },
+          "billPay": {
+            "name": "ชำระบิล",
+            "description": "ชำระค่าสาธารณูปโภค โทรศัพท์ อินเทอร์เน็ต และอื่นๆ โดยตรงจากกระเป๋าเงิน"
+          },
+          "savings": {
+            "name": "วงเงินออม",
+            "description": "การออมแบบหมุนเวียนแบบดั้งเดิม (tontine, chit fund) ที่ไร้ความเชื่อถือด้วยสัญญาอัจฉริยะ"
+          },
+          "microLoans": {
+            "name": "สินเชื่อขนาดเล็ก",
+            "description": "การให้ยืมแบบ peer-to-peer ที่ได้รับการสนับสนุนจากความเป็นมนุษย์ที่ยืนยันและชื่อเสียง"
+          }
+        }
+      },
+      "transport": {
+        "name": "การขนส่งและการจัดส่ง",
+        "apps": {
+          "rideSharing": {
+            "name": "แชร์รถ",
+            "description": "จองรถที่ชำระด้วยคริปโต คนขับได้รับมากขึ้น ผู้โดยสารจ่ายน้อยลง—ไม่มีตัวกลางหัก 30%",
+            "example": "ค่าตั๋วแท็กซี่ในลากอส ₦800 คนขับได้รับ ₦799.2 แทน ₦560"
+          },
+          "delivery": {
+            "name": "จัดส่ง",
+            "description": "สั่งอาหาร ของชำ หรือพัสดุ คนจัดส่งได้รับค่าจ้างที่เป็นธรรมในโทเค็น stable",
+            "example": "สั่งอาหารกลางวัน ชำระในสเตเบิลคอยน์ท้องถิ่น คนจัดส่งได้รับเงินทันที"
+          },
+          "publicTransit": {
+            "name": "ขนส่งสาธารณะ",
+            "description": "ชำระรถบัส รถไฟใต้ดิน และรถไฟด้วยการแตะ ไม่ต้องซื้อบัตรค่าโดยสาร"
+          }
+        }
+      },
+      "travel": {
+        "name": "การท่องเที่ยวและการต้อนรับ",
+        "apps": {
+          "hotels": {
+            "name": "โรงแรมและที่พัก",
+            "description": "จองที่พักทั่วโลก เจ้าของที่พักยอมรับสเตเบิลคอยน์ แขกประหยัดค่าธรรมเนียม",
+            "example": "จองห้องในบาหลี $40/คืน เจ้าของได้รับ $39.96"
+          },
+          "flights": {
+            "name": "เที่ยวบิน",
+            "description": "ค้นหาและจองเที่ยวบิน ชำระด้วยคริปโต รับรางวัล UMT"
+          },
+          "tours": {
+            "name": "ทัวร์ท้องถิ่น",
+            "description": "จองประสบการณ์กับไกด์ท้องถิ่น การชำระเงินไปตรงถึงพวกเขา"
+          }
+        }
+      },
+      "commerce": {
+        "name": "การช้อปปิ้งและการพาณิชย์",
+        "apps": {
+          "localMarket": {
+            "name": "ตลาดท้องถิ่น",
+            "description": "ซื้อและขายในท้องถิ่น การชำระเงินแบบ QR ทำให้การพาณิชย์บนถนนราบรื่น",
+            "example": "ผู้ขายในจาการ์ตายอมรับ USDC ลูกค้าชำระ ผู้ขายเห็นเงินทันที"
+          },
+          "ecommerce": {
+            "name": "อีคอมเมิร์ซ",
+            "description": "ช้อปออนไลน์จากพ่อค้าทั่วโลก ไม่มีค่าธรรมเนียมบัตร ไม่มี chargeback",
+            "example": "ซื้ออุปกรณ์อิเล็กทรอนิกส์จากเซินเจิ้น ชำระในสเตเบิลคอยน์ ประหยัด 3% เทียบกับบัตรเครดิต"
+          },
+          "marketplace": {
+            "name": "ตลาด peer",
+            "description": "ลงรายการขาย ซื้อจากผู้อื่น Escrow ปกป้องทั้งสองฝ่าย"
+          }
+        }
+      },
+      "services": {
+        "name": "บริการและงาน",
+        "apps": {
+          "remittance": {
+            "name": "โอนเงินกลับบ้าน",
+            "description": "ส่งเงินกลับบ้าน ผู้รับสามารถแลกเป็นสกุลเงินท้องถิ่นหรือเก็บแบบดิจิทัล",
+            "example": "ส่ง $200 จาก USA ไปฟิลิปปินส์ ผู้รับได้รับ ₱11,000+ แทน ₱10,400"
+          },
+          "freelance": {
+            "name": "งานฟรีแลนซ์",
+            "description": "ได้รับเงินสำหรับงาน gig ทันที ไม่ต้องรอ 30 วันสำหรับโอนธนาคาร"
+          },
+          "homeServices": {
+            "name": "บริการบ้าน",
+            "description": "จ้างช่างประปา ช่างไฟฟ้า แม่บ้าน ชำระเงินเมื่องานเสร็จเท่านั้น"
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "สร้างธุรกิจของคุณบน Umotu",
+      "subtitle": "เปิดตัวแอปที่มีการชำระเงินในตัว",
+      "description": "สร้างแอปที่เข้าถึงระบบนิเวศ Umotu—มนุษย์ที่ยืนยันแล้วหลายล้านคนที่มีรายได้รายวัน พร้อมทำธุรกรรม ไม่มีปัญหาการรวมการชำระเงิน",
+      "benefits": {
+        "noFees": "ค่าธรรมเนียมการประมวลผลการชำระเงินแทบเป็นศูนย์—เก็บ 99.9% ของรายได้",
+        "verifiedUsers": "ผู้ใช้ทั้งหมดเป็นมนุษย์ที่ยืนยันแล้ว—ไม่มีบอทหรือการฉ้อโกง",
+        "globalReach": "เข้าถึงผู้ใช้ใน 190+ ประเทศตั้งแต่วันแรก",
+        "instantPayments": "การชำระเงินทันที—ไม่มีการหน่วงการชำระเงิน 30 วัน"
+      },
+      "exampleTitle": "กรณีใช้งาน",
+      "exampleText": "แอปแชร์รถบน Umotu เก็บ 99.9% ของค่าโดยสาร เทียบกับ 70% บนแพลตฟอร์มดั้งเดิม คนขับได้รับมากขึ้น ผู้โดยสารจ่ายน้อยลง",
+      "docsButton": "อ่านเอกสาร",
+      "buildButton": "เริ่มสร้าง"
+    },
+    "bank": {
+      "title": "คุณเป็นธนาคารหรือไม่?",
+      "subtitle": "ออกสเตเบิลคอยน์บน Umotu",
+      "description": "สถาบันการเงินที่ได้รับใบอนุญาตสามารถออกสเตเบิลคอยน์สกุลเงินท้องถิ่นบน Umotu และเข้าถึงเศรษฐกิจ UBI ที่กำลังเติบโตกับผู้ใช้หลายล้านคน",
+      "benefits": {
+        "reserves": "รับผลตอบแทนจากเงินสำรอง: ลงทุนในพันธบัตรและสินทรัพย์เสี่ยงต่ำ",
+        "mintRedeem": "เก็บค่าธรรมเนียม mint/redeem: โดยทั่วไป 0.1% ในการแปลง fiat ↔ สเตเบิลคอยน์",
+        "users": "เข้าถึงผู้รับ UBI รายวันหลายล้านคน",
+        "global": "ขยายการเข้าถึงข้ามพรมแดนทันที",
+        "custody": "เงินสำรองของคุณ การดูแลของคุณ: ควบคุมสินทรัพย์ backing อย่างเต็มที่"
+      },
+      "revenueModel": "โมเดลรายได้ของผู้ออก",
+      "revenueNote": "เช่น Tether และผู้ออกหลักอื่นๆ รายได้มาจากผลตอบแทนเงินสำรองและค่าธรรมเนียมการแปลง กับผู้ใช้หลายล้านคนที่รับ UBI รายวัน ปริมาณ mint/redeem สามารถมากมาย",
+      "futureNote": "ผู้ออกอาจได้รับส่วนแบ่งค่าธรรมเนียมธุรกรรมในอนาคตเมื่อโปรโตคอลพัฒนา",
+      "learnMore": "เรียนรู้เพิ่มเติม",
+      "applyButton": "สมัครตอนนี้"
+    }
+  },
+  "news": {
+    "title": "ข่าวสารและอัปเดต",
+    "description": "ติดตามประกาศล่าสุด เคล็ดลับ และแจ้งเตือนความปลอดภัยจากทีม Umotu",
+    "empty": "ไม่มีข่าวสารในขณะนี้",
+    "unread": "ใหม่",
+    "unreadCount": "{{count}} ใหม่",
+    "markAsRead": "ทำเครื่องหมายว่าอ่านแล้ว",
+    "types": {
+      "announcement": "ประกาศ",
+      "tip": "เคล็ดลับ",
+      "security": "ความปลอดภัย",
+      "airdrop": "Airdrop",
+      "update": "อัปเดต"
+    }
+  },
+  "governance": {
+    "title": "การกำกับดูแล",
+    "subtitle": "กำหนดอนาคตของ Umotu",
+    "description": {
+      "title": "เสียงของคุณสำคัญ",
+      "body": "ช่วยกำหนดอนาคตของ Umotu โดยลงคะแนนในข้อเสนอชุมชน Umotu Foundation จัดการลงคะแนนเหล่านี้ แต่ชุมชนตัดสินใจ"
+    },
+    "empty": "ไม่มีข้อเสนอที่ใช้งาน",
+    "emptyHint": "ตรวจสอบอีกครั้งในภายหลังสำหรับการตัดสินใจชุมชนใหม่ที่จะลงคะแนน",
+    "newPolls": "ใหม่",
+    "newPollsCount": "{{count}} ใหม่",
+    "vote": "ลงคะแนน",
+    "votes": "คะแนน",
+    "endsIn": "สิ้นสุดใน {{time}}",
+    "ended": "สิ้นสุดแล้ว",
+    "tapToVote": "แตะตัวเลือกด้านบนเพื่อลงคะแนน",
+    "submitting": "กำลังส่งคะแนน...",
+    "alreadyVoted": {
+      "title": "ลงคะแนนแล้ว",
+      "message": "คุณลงคะแนนในข้อเสนอนี้แล้ว"
+    },
+    "confirm": {
+      "title": "ยืนยันคะแนน",
+      "message": "ลงคะแนนให้",
+      "note": "การกระทำนี้ไม่สามารถยกเลิกได้",
+      "submit": "ส่งคะแนน"
+    },
+    "success": {
+      "title": "ส่งคะแนนแล้ว!",
+      "message": "ขอบคุณที่เข้าร่วมการกำกับดูแลชุมชน"
+    },
+    "error": {
+      "title": "ลงคะแนนล้มเหลว",
+      "message": "ส่งคะแนนล้มเหลว โปรดลองอีกครั้ง"
+    }
+  },
+  "learn": {
+    "title": "เรียนรู้",
+    "subtitle": "ทุกสิ่งที่คุณต้องรู้เกี่ยวกับ Umotu",
+    "featured": "แนะนำ",
+    "whatIs": {
+      "title": "Umotu คืออะไร?",
+      "subtitle": "10 ดอลลาร์ต่อวัน สำหรับทุกคนทั่วโลก",
+      "intro": "Umotu มุ่งหมายให้ใครก็ตามรับประมาณ $10/วัน โดยใช้เพียงสมาร์ทโฟน ไม่มีฮาร์ดแวร์ราคาแพง ไม่ต้องมีทักษะพิเศษ ไม่มีพรมแดน",
+      "howDifferent": "แตกต่างอย่างไร?",
+      "noMiddleman": "ไม่มีตัวกลาง: คุณโต้ตอบกับเครือข่ายโดยตรง—ไม่ต้องมีบัญชีธนาคาร",
+      "globalAccess": "เข้าถึงทั่วโลก: ทำงานที่ไหนก็ได้ที่มีอินเทอร์เน็ต",
+      "youOwnIt": "คุณเป็นเจ้าของ: กระเป๋าเงินของคุณ คีย์ของคุณ การควบคุมของคุณ",
+      "vision": "วิสัยทัศน์",
+      "visionText": "คนพันล้านสามารถช่วยรักษา ledger สาธารณะให้ซื่อสัตย์และรับสำหรับมัน บน Umotu โทรศัพท์ทำการตรวจสอบเบาที่ทำให้เครือข่ายน่าเชื่อถือ",
+      "nameOrigin": "ที่มาของชื่อ",
+      "nameOriginText": "Umotu ได้แรงบันดาลใจจาก Paʻumotu ภาษาโพลีนีเซียน เราใช้ชื่อนี้อย่างเคารพเพื่อเตือนให้สร้างสำหรับคนทั่วไป"
+    },
+    "earn": {
+      "title": "คุณรับอย่างไร",
+      "subtitle": "โทรศัพท์ของคุณทำงาน; คุณได้รับเงิน",
+      "intro": "โทรศัพท์ของคุณทำภารกิจเล็กๆ ที่ช่วยทุกคน—แล้วคุณได้รับรางวัล",
+      "steps": "สามขั้นตอนง่ายๆ",
+      "step1": "1) พิสูจน์ว่าคุณเป็นมนุษย์: การตรวจ liveness อย่างรวดเร็ว (และรีเฟรชเป็นระยะ) รับประกันหนึ่งคนหนึ่งบัญชี",
+      "step2": "2) ช่วยเครือข่าย: โทรศัพท์ของคุณรัน Data Availability (DA) sampling และการตรวจสอบเบาอื่นๆ ในพื้นหลัง",
+      "step3": "3) รับรางวัลรายวัน: คุณได้รับเงินสำหรับงานนี้ ด้วยเป้าหมายประมาณ $10/วัน ขึ้นกับนโยบายเครือข่าย",
+      "localCurrency": "จ่ายในสกุลเงินของคุณ",
+      "localCurrencyText": "เลือกโทเค็นจ่าย: สเตเบิลคอยน์สกุลเงินท้องถิ่น (ที่มี) หรือ UMT จำนวนเป้าหมาย ~$10 USD และอาจปรับตามการเข้าร่วมและสภาวะตลาด"
+    },
+    "whereMoney": {
+      "title": "$10 มาจากไหน?",
+      "subtitle": "คุณรับเพราะคุณทำงาน",
+      "intro": "คำถามอันดับ 1 คำตอบสั้น: เพราะคุณให้บริการที่เครือข่ายต้องการ",
+      "realWork": "โทรศัพท์ของคุณทำงานจริง",
+      "realWork1": "Data Availability Sampling: โทรศัพท์ของคุณตรวจสอบว่าข้อมูลบล็อกพร้อมใช้งานและถูกต้อง",
+      "realWork2": "การเข้าร่วมมนุษย์: คุณพิสูจน์หนึ่งคนหนึ่งบัญชีเพื่อหยุดบอทและสแปม",
+      "realWork3": "ภารกิจเหล่านี้ปกป้องทุกคน; โดยไม่มีพวกมันเครือข่ายอ่อนแอลง",
+      "valueSource": "สองแหล่งมูลค่า",
+      "utility": "ยูทิลิตี้: การชำระเงินเร็ว ค่าธรรมเนียมต่ำที่คนเลือกใช้",
+      "consensus": "ฉันทามติ: มูลค่าที่เติบโตเมื่อมีคนมากขึ้นสามารถยืนยันและตกลงตามกฎ",
+      "distribution": "การแจกจ่ายรางวัลอย่างไร",
+      "newTokens": "สร้างโทเค็น UMT ใหม่และแบ่งกับผู้เข้าร่วมโทรศัพท์ที่ยืนยัน (ไม่ใช่กับ validators)",
+      "fees": "ส่วนของค่าธรรมเนียมและ builder bids แบ่งกับ phone sentinels สำหรับ finalize บล็อก",
+      "treasury": "ส่วนเล็กน้อยสนับสนุนการบำรุงรักษาและโปรแกรมความมั่นคง",
+      "whyDifferent": "ทำไมแตกต่าง",
+      "btcProblem": "Bitcoin ให้รางวัล miners พิเศษ (ทุนเข้มข้น)",
+      "ethProblem": "Ethereum ให้รางวัล stakers ขนาดใหญ่ (ทุนเข้มข้น)",
+      "umotuSolution": "Umotu ให้รางวัลโทรศัพท์ทั่วไป (ต้นทุนเข้าร่วมต่ำในทางปฏิบัติ)",
+      "conclusion": "ไม่ใช่ของแจก: คุณได้รับเงินสำหรับงานที่รักษาโครงสร้างพื้นฐานทางการเงินที่แบ่งปันให้ซื่อสัตย์และมีประโยชน์"
+    },
+    "security": {
+      "title": "ความปลอดภัยกระเป๋าเงิน",
+      "subtitle": "ปกป้องเงินของคุณ",
+      "intro": "กระเป๋าเงินของคุณเหมือนตู้เซฟดิจิทัลที่คุณควบคุมเพียงคนเดียว",
+      "recovery": "12 คำและคีย์ส่วนตัวของคุณ",
+      "recoveryText": "12 คำลับ (วลีการกู้คืน) และคีย์ส่วนตัวของคุณทั้งคู่ปลดล็อกกระเป๋าเงิน ใครที่มีอย่างใดอย่างหนึ่งสามารถย้ายเงินของคุณได้",
+      "rules": "กฎทอง",
+      "rule1": "ห้ามแชร์ 12 คำหรือคีย์ส่วนตัวกับใคร—แม้แต่ผู้สนับสนุน Umotu",
+      "rule2": "เขียน 12 คำลงบนกระดาษและเก็บออฟไลน์ ห้ามเก็บใน screenshot รูปภาพ หรือโน้ตคลาวด์",
+      "rule3": "หากคุณส่งออกคีย์ส่วนตัว เก็บออฟไลน์ (กระดาษ ฮาร์ดแวร์ หรือ manager เข้ารหัสที่คุณเชื่อถือเต็มที่)",
+      "rule4": "หากคุณสูญเสีย 12 คำและคีย์ส่วนตัว ไม่มีใครสามารถกู้คืนกระเป๋าเงินของคุณได้",
+      "warning": "สำคัญ",
+      "warningText": "คีย์ส่วนตัวให้การเข้าถึงเต็มที่ การเปิดเผยหรือคัดลอกไปยังแอปอื่นอาจทำให้เงินของคุณเสี่ยง ส่งออกเฉพาะหากคุณเข้าใจความเสี่ยง",
+      "reveal": "แสดง / ส่งออกคีย์ส่วนตัว",
+      "revealText": "คุณสามารถแสดงหรือส่งออกคีย์ส่วนตัวใน การตั้งค่ากระเป๋าเงิน เราต้องการชีวมิติ/PIN แสดงเฉพาะไม่กี่วินาที และไม่เคยอัปโหลด พิจารณาใช้ hardware wallet สำหรับยอดใหญ่",
+      "bestPractices": "แนวปฏิบัติที่ดีที่สุด",
+      "best1": "เปิดใช้งานล็อกหน้าจอและชีวมิติบนโทรศัพท์ของคุณ",
+      "best2": "อัปเดตแอปเพื่อรับการแก้ไขความปลอดภัยล่าสุด",
+      "best3": "ใช้กระเป๋าเงินแยกสำหรับออมใหญ่; เก็บจำนวนเล็กน้อยบนโทรศัพท์สำหรับใช้งานรายวัน",
+      "scamBannerTitle": "ไม่มีใครที่ถูกต้องจะขอ",
+      "scamBannerText": "หากใครขอ 12 คำหรือคีย์ส่วนตัว เป็นการหลอกลวง"
+    },
+    "stablecoins": {
+      "title": "เข้าใจสเตเบิลคอยน์",
+      "subtitle": "เงินดิจิทัลที่ตามสกุลเงินท้องถิ่น",
+      "intro": "สเตเบิลคอยน์เป็นโทเค็นดิจิทัลที่ออกแบบให้ตามเงินปกติ (เช่น USD, ZAR, NGN)",
+      "examples": "ตัวอย่าง",
+      "example1": "1 ZAR1 ≈ 1 แรนด์แอฟริกาใต้",
+      "example2": "1 USD1 ≈ 1 ดอลลาร์สหรัฐ",
+      "example3": "1 NGN1 ≈ 1 ไนราไนจีเรีย",
+      "backed": "ออกโดยพันธมิตร",
+      "backedText": "สเตเบิลคอยน์บน Umotu ออกโดยพันธมิตรที่ได้รับการควบคุมและออกแบบให้รักษามูลค่า 1:1 กับเงินสำรอง ผู้ออกเผยแพร่ proof-of-reserves และเงื่อนไขการไถ่ถอน",
+      "convert": "แปลงเป็นเงินสด",
+      "convertText": "แปลงผ่านพันธมิตรธนาคาร/ exchange หรือใช้จ่ายตรงที่ยอมรับ"
+    },
+    "economics": {
+      "title": "เศรษฐศาสตร์ UMT",
+      "subtitle": "ใครได้รับอะไรและทำไม",
+      "intro": "UMT มีอุปทานคงที่ 100 พันล้านโทเค็น ส่วนใหญ่จ่ายให้ผู้ใช้โทรศัพท์ทั่วไปที่ช่วยรักษาเครือข่ายให้ซื่อสัตย์",
+      "supply": "อุปทานและการแจกจ่าย",
+      "supplyBullets": [
+        "อุปทานโทเค็นส่วนใหญ่ถูกสำรองไว้สำหรับผู้เข้าร่วมทางโทรศัพท์ตลอดเวลาและปล่อยผ่านตัวควบคุมการปล่อย ตัวควบคุมการปล่อยจำกัดการออกรายวันไม่เกิน 0.01% ของอุปทานที่เหลือ เพื่อให้มั่นใจในความยั่งยืนระยะยาว ตามกำหนดการนี้ ประมาณ 68% ของอุปทานทั้งหมดยังคงอยู่หลังจาก 10 ปี และประมาณ 15% ยังคงอยู่หลังจาก 50 ปี",
+        "ส่วนเล็กๆ ของอุปทานถูกสร้างขึ้นเมื่อเปิดตัวเพื่อวัตถุประสงค์เฉพาะ รวมถึงแอร์ดรอปผู้ใช้รายแรก การขายชุมชน การจัดสรรมูลนิธิ และกองทุนฉุกเฉิน ฯลฯ"
+      ],
+      "premine": "การจัดสรรเมื่อเปิดตัว (ชั่วคราว อาจเปลี่ยนแปลงได้เมื่อเปิดตัว mainnet)",
+      "premineTable": [
+        {
+          "label": "Airdrop ผู้ใช้",
+          "value": "1.0%"
+        },
+        {
+          "label": "ขายชุมชน",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu Foundation (timelocked)",
+          "value": "0.2%"
+        },
+        {
+          "label": "กองทุนฉุกเฉิน (กำกับดูแล)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "รางวัลรายวันสำหรับโทรศัพท์",
+      "emissionsText": "แต่ละวันเครือข่ายสามารถ emit สูงสุด 0.01% ของ pool emissions ที่เหลือ เราจัดงบประมาณนั้นเพื่อให้โทรศัพท์ที่ยืนยันเป้าหมายประมาณ $10/วัน ปรับตามจำนวนผู้เข้าร่วมและสภาวะตลาด",
+      "fees": "ค่าธรรมเนียมและ Sentinels",
+      "feesText": "Sentinel helpers (ทางเลือก ขั้นสูง) รับส่วนแบ่งค่าธรรมเนียมธุรกรรมและ builder bids แยกจาก emissions รายวัน",
+      "transparency": "ความโปร่งใส",
+      "transparencyText": "ตาราง vesting และกระเป๋าเงินเป็นสาธารณะ การจำกัด emissions รายวันและการจ่ายจริงโพสต์ในแอป",
+      "disclaimerTitle": "เตือนภาษาธรรมดา",
+      "disclaimerText": "นี่ไม่ใช่คำแนะนำการลงทุน รางวัลขึ้นกับนโยบายเครือข่ายและการเข้าร่วม แอปไม่รับประกันรายได้คงที่"
+    },
+    "contribute": {
+      "title": "มีส่วนร่วมอย่างไร",
+      "subtitle": "ช่วยสร้าง Umotu",
+      "intro": "Umotu เป็น open source และขับเคลื่อนโดยชุมชน ทุกคนสามารถช่วย—ไม่ว่าคุณเขียนโค้ด แปล หรือเพียงแชร์ความเห็น",
+      "waysTitle": "วิธีมีส่วนร่วม",
+      "code": {
+        "title": "ปรับปรุงโค้ด",
+        "text": "แก้บั๊ก เพิ่มฟีเจอร์ เขียน test หรือรีวิว pull request ตรวจสอบ repo GitHub ของเราสำหรับแอป สัญญาอัจฉริยะ และบริการ backend",
+        "cta": "ดู GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "ช่วยแปล",
+        "text": "ทำให้แอปดูเป็นธรรมชาติในภาษาของคุณ แก้ไขไฟล์ i18n locale และ test ทุกหน้าจอ การแก้ไขของคุณช่วยคนหลายล้าน",
+        "cta": "คู่มือการแปล",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "ขยาย wordlists BIP-39",
+        "text": "เสนอ wordlists ใหม่หรือปรับปรุงเพื่อให้คนมากขึ้นเห็นวลีการกู้คืน 12 คำในภาษาแม่",
+        "cta": "ดู BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "เข้าร่วมการกำกับดูแล",
+        "text": "อ่านข้อเสนอ หารืออย่างเปิดเผย และลงคะแนนในแอป เสียงของคุณช่วยนำทางพารามิเตอร์เครือข่ายและการจัดสรร grant",
+        "cta": "เปิดการกำกับดูแล",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "เผยแพร่",
+        "text": "บอกเพื่อน เขียน tutorial เผยแพร่ shorts ตอบคำถาม ชุมชนที่แข็งแกร่งหมายถึงเครือข่ายที่แข็งแกร่งสำหรับทุกคน",
+        "cta": "แชร์ Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "การมีส่วนร่วมทั้งหมดเป็นอาสา ไม่มีการจ้างงานอย่างเป็นทางการหรือค่าตอบแทนเว้นแต่ระบุในข้อเสนอ grant"
+    },
+    "decentralization": {
+      "title": "ทำไมต้องกระจายอำนาจ",
+      "subtitle": "ไม่มีจุดควบคุมเดียว",
+      "intro": "การกระจายอำนาจหมายถึงไม่มีบริษัทหรือรัฐบาลใดปิดเครือข่ายหรือยึดเงินของคุณได้",
+      "benefits": "ประโยชน์สำหรับคุณ",
+      "benefit1": "เปิดตลอด: พร้อมใช้งาน 24/7",
+      "benefit2": "ค่าธรรมเนียมต่ำ: ค่าธรรมเนียมเครือข่ายเล็กน้อยแทน 3–5% ค่าบัตร",
+      "benefit3": "ไม่มีพรมแดน: ส่งมูลค่าทั่วโลก",
+      "benefit4": "ต้านการเซ็นเซอร์: คีย์ของคุณ เงินของคุณ",
+      "benefit5": "โปร่งใส: ใครก็ตามสามารถยืนยันระบบทำงานอย่างไร",
+      "howWorks": "ทำงานอย่างไร",
+      "howWorksText": "Validators เสนอบล็อกทุก ~2 วินาที โทรศัพท์ (เช่นของคุณ) ยืนยันและ finalize ด้วยการตรวจสอบเบา การมีส่วนร่วมเล็กๆ หลายอย่างรวมกันเป็นความปลอดภัยที่แข็งแกร่ง"
+    },
+    "noCompany": {
+      "title": "ไม่มีบริษัท ไม่มีลูกค้า",
+      "subtitle": "เข้าใจโมเดล",
+      "intro": "ไม่มี 'Umotu, Inc.' ควบคุมโปรโตคอล Umotu เป็นชุดกฎเปิดที่ใครก็ตามสามารถใช้",
+      "notCompany": "Umotu ไม่ใช่อะไร",
+      "notCompany1": "ไม่ใช่บริษัทที่มีบัญชีลูกค้า",
+      "notCompany2": "ไม่ใช่ธนาคารหรือผู้ส่งเงิน",
+      "notCompany3": "ไม่ถูกควบคุมโดยเอนทิตีเดียว",
+      "notCompany4": "ไม่สามารถกลับธุรกรรม",
+      "whatIs": "Umotu คืออะไร",
+      "whatIs1": "โปรโตคอล: เช่น email หรือ web—กฎเปิดที่ทำงานร่วมกันได้",
+      "whatIs2": "โทรศัพท์แรก: ทำงานด้วยความช่วยเหลือจากสมาร์ทโฟนทั่วไป",
+      "whatIs3": "ขับเคลื่อนโดยชุมชน: คุณเป็นผู้เข้าร่วม ไม่ใช่ลูกค้า",
+      "foundation": "Umotu Foundation",
+      "foundationIntro": "องค์กรไม่แสวงหากำไรที่สนับสนุนระบบนิเวศ (แอปอ้างอิง เอกสาร โปรแกรมชุมชน) แต่ไม่ควบคุมโปรโตคอล",
+      "foundationTask1": "ดูแลแอปมือถือและ explorer เป็น implementation อ้างอิง",
+      "foundationTask2": "ดำเนินการโครงสร้างพื้นฐานสาธารณะบางส่วน (ผู้อื่นสามารถรันของตนเอง)",
+      "foundationTask3": "ประสานการกำกับดูแลชุมชน (ข่าว การลงคะแนน)",
+      "foundationTask4": "รีวิวและรายชื่อสเตเบิลคอยน์ที่รองรับ",
+      "foundationTask5": "เผยแพร่คู่มือการศึกษาและความปลอดภัย",
+      "foundationNote": "Foundation ไม่สามารถเข้าถึงกระเป๋าเงินของคุณและไม่สามารถกลับธุรกรรม"
+    },
+    "scamPrevention": {
+      "title": "หลีกเลี่ยงการหลอกลวง",
+      "subtitle": "ปกป้องตัวเอง",
+      "intro": "Umotu Foundation จะไม่ DM คุณ ใครก็ตามที่แกล้งเป็น 'support' เป็นมิจฉาชีพ",
+      "redFlags": "สัญญาณอันตราย",
+      "redFlag1": "ใครอ้างว่าเป็นฝ่ายสนับสนุนลูกค้า",
+      "redFlag2": "ลิงก์เพื่อ 'ยืนยัน' หรือ 'อัปเกรด' บัญชีของคุณ",
+      "redFlag3": "ขอวลี 12 คำหรือคีย์ส่วนตัวของคุณ",
+      "redFlag4": "สัญญาโทเค็นโบนัสหากคุณส่งเงิน",
+      "redFlag5": "แอปหรือไซต์ที่ขอให้คุณ 'activate' รางวัล",
+      "truth": "ความจริง",
+      "truth1": "ไม่มีฝ่ายสนับสนุนลูกค้าที่สามารถรีเซ็ตกระเป๋าเงินของคุณ",
+      "truth2": "อัปเดตอย่างเป็นทางการทั้งหมดปรากฏในแอปนี้",
+      "truth3": "ไม่มีใครจาก Umotu จะขอวลีการกู้คืนหรือคีย์ส่วนตัวของคุณ",
+      "truth4": "ดาวน์โหลดแอปนี้เฉพาะจาก Apple Store หรือ Google Play อย่างเป็นทางการ",
+      "whatToDo": "หากมีคนติดต่อคุณ",
+      "action1": "อย่าตอบ",
+      "action2": "อย่าคลิกลิงก์",
+      "action3": "อย่าแชร์ข้อมูล",
+      "action4": "บล็อกและรายงาน"
+    },
+    "airdrop": {
+      "title": "Airdrop Testnet",
+      "subtitle": "ผู้ใช้ต้นได้รับการยอมรับ",
+      "intro": "คุณมาถึงเร็ว! Umotu อยู่ใน testnet ผู้เข้าร่วม testnet ที่ใช้งานอาจได้รับการจัดสรรเมื่อ mainnet เปิดตัว",
+      "howToQualify": "มีสิทธิ์อย่างไร",
+      "step1": "สร้างกระเป๋าเงินในแอป",
+      "step2": "เสร็จสิ้นการยืนยันมนุษย์ (Proof of Human)",
+      "step3": "ใช้แอปอย่างสม่ำเสมอใน testnet",
+      "whenAirdrop": "Airdrop เมื่อไหร่?",
+      "whyTestnet": "Testnet จำเป็น: ผู้ใช้เรียนรู้ความปลอดภัยกระเป๋าเงิน และระบบถูกทดสอบความปลอดภัย ความแข็งแกร่ง และประสิทธิภาพก่อน mainnet",
+      "timeline": "Mainnet คาดการณ์ใน Q1 หรือ Q2 ของ 2026 Airdrop จะเกิดรอบเวลา mainnet เปิดตัวเดียวกัน",
+      "howMuch": "จะได้รับเท่าไหร่?",
+      "totalPool": "pool airdrop ทั้งหมด: 1,000,000,000 UMT tokens ส่วนของคุณขึ้นกับผู้เข้าร่วมทั้งหมดและราคา UMT ที่ launch",
+      "scenario2": "1M ผู้ใช้: ~1,000 UMT ต่อผู้ใช้ ราคาคาด ~$1 มูลค่า airdrop ~$1,000",
+      "scenario3": "10M ผู้ใช้: ~100 UMT ต่อผู้ใช้ ราคาคาด ~$20 มูลค่า airdrop ~$2,000",
+      "scenario4": "100M ผู้ใช้: ~10 UMT ต่อผู้ใช้ ราคาคาด ~$300 มูลค่า airdrop ~$3,000",
+      "disclaimer": "นี่เป็นการคาดการณ์เท่านั้น ไม่ใช่การรับประกัน มูลค่าจริงขึ้นกับสภาวะตลาดและกฎโปรแกรม",
+      "whatYouGet": "คุณได้รับอะไร",
+      "reward": "ที่ mainnet กระเป๋าเงิน testnet ของคุณอาจได้รับโทเค็นจริงตามการเข้าร่วมและกฎโปรแกรม ผู้ใช้ต้นและใช้งานมากได้รับลำดับความสำคัญ",
+      "note": "หมายเหตุ: โทเค็น Testnet ไม่มีมูลค่า การจัดสรร mainnet ใดๆ ถูกกำหนดโดยนโยบายโปรแกรมที่ launch ข่าว airdrop ทั้งหมดจะเผยแพร่เฉพาะในแอปนี้"
+    },
+    "gettingStarted": {
+      "title": "เริ่มต้นใช้งาน",
+      "subtitle": "ห้านาทีแรกของคุณ",
+      "intro": "นี่คือการตั้งค่าอย่างรวดเร็วของคุณ:",
+      "checklist": "รายการตรวจสอบการตั้งค่า",
+      "check1": "1) เลือกภาษา (เสร็จแล้ว!)",
+      "check2": "2) สร้างหรือนำเข้ากระเป๋าเงิน",
+      "check3": "3) สำคัญ: เขียน 12 คำลงบนกระดาษ",
+      "check4": "4) เสร็จสิ้นการยืนยันมนุษย์ (สแกนเร็ว)",
+      "check5": "5) เปิดแอปค้างไว้เพื่อรับรางวัลรายวัน",
+      "tips": "เคล็ดลับโปร",
+      "tip1": "อนุญาตการเข้าถึงพื้นหลังเพื่อให้การตรวจสอบทำงาน",
+      "tip2": "ตรวจสอบทุกวันเพื่อดูรางวัล",
+      "tip3": "เชิญเพื่อน—ผู้ใช้มากขึ้นทำให้เครือข่ายแข็งแกร่งขึ้น"
+    }
+  },
+  "common": {
+    "loading": "กำลังโหลด...",
+    "error": "ข้อผิดพลาด",
+    "retry": "ลองใหม่",
+    "cancel": "ยกเลิก",
+    "save": "บันทึก",
+    "done": "เสร็จสิ้น",
+    "continue": "ดำเนินการต่อ",
+    "confirm": "ยืนยัน",
+    "yes": "ใช่",
+    "no": "ไม่",
+    "ok": "ตกลง",
+    "success": "สำเร็จ",
+    "failed": "ล้มเหลว",
+    "copied": "คัดลอกแล้ว!",
+    "pullToRefresh": "ดึงเพื่อรีเฟรช",
+    "notSet": "ยังไม่ได้ตั้ง"
+  },
+  "errors": {
+    "networkError": "ข้อผิดพลาดเครือข่าย โปรดตรวจสอบการเชื่อมต่อของคุณ",
+    "genericError": "เกิดข้อผิดพลาดบางอย่าง โปรดลองอีกครั้ง",
+    "walletNotFound": "ไม่พบกระเป๋าเงิน",
+    "transactionFailed": "ธุรกรรมล้มเหลว",
+    "invalidInput": "ข้อมูลไม่ถูกต้อง"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "ยินดีต้อนรับสู่ Umotu",
+  "onboard_wallet_title": "ตั้งค่ากระเป๋าเงินของคุณ",
+  "onboard_wallet_explain": "สร้างหรือนำเข้ากระเป๋าเงินเพื่อรับรางวัล",
+  "wallet_create": "สร้างกระเป๋าเงินใหม่",
+  "wallet_import": "นำเข้ากระเป๋าเงิน",
+  "wallet_import_explain": "กรอกวลีการกู้คืน 12 คำ",
+  "wallet_created": "กระเป๋าเงินพร้อม",
+  "wallet_save": "บันทึกในอุปกรณ์",
+  "wallet_backup_title": "สำรองวลีการกู้คืนของคุณ",
+  "wallet_backup_explain": "เขียน 12 คำเหล่านี้ตามลำดับ นี่เป็นวิธีเดียวที่จะกู้คืนกระเป๋าเงินหากคุณสูญเสียอุปกรณ์",
+  "wallet_backup_warning": "ห้ามแชร์วลีการกู้คืน ใครที่มีคำเหล่านี้สามารถเข้าถึงเงินของคุณได้",
+  "wallet_backup_confirm": "ฉันเขียนวลีการกู้คืนแล้ว",
+  "wallet_backup_done": "ฉันบันทึกวลีแล้ว",
+  "wallet_save_first": "โปรดบันทึกวลีการกู้คืนก่อน",
+  "poh_title": "ยืนยันมนุษย์",
+  "continue": "ดำเนินการต่อ",
+  "or": "หรือ",
+  "seedReveal": {
+    "title": "วลีการกู้คืน",
+    "intro": "วลีการกู้คืนเป็นวิธีเดียวที่จะกู้คืนกระเป๋าเงินหากคุณสูญเสียการเข้าถึงอุปกรณ์นี้ เขียนลงและเก็บอย่างปลอดภัยแบบออฟไลน์",
+    "displayLanguage": "แสดงใน {{language}}",
+    "hiddenMsg": "วลีของคุณถูกซ่อนเพื่อความปลอดภัย แตะด้านล่างเพื่อแสดง",
+    "showButton": "แสดงวลี",
+    "noScreenshot": "ห้ามถ่าย screenshot วลีการกู้คืน",
+    "checkTitle": "ยืนยันสำรองของคุณ",
+    "checkPrompt": "กรอกคำด้านล่างเพื่อยืนยันว่าคุณเขียนถูกต้อง:",
+    "checkWordN": "คำ #{{n}}",
+    "checkIncorrect": "คำหนึ่งหรือมากกว่าผิด โปรดตรวจสอบสำรองของคุณ",
+    "ackWritten": "ฉันเขียนวลีการกู้คืนแล้ว",
+    "ackCannotRecover": "ฉันเข้าใจว่า Umotu ไม่สามารถกู้คืนกระเป๋าเงินของฉัน",
+    "cancel": "ยกเลิก",
+    "continue": "ฉันบันทึกแล้ว"
+  }
+}

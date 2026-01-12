@@ -1,0 +1,1414 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "Kuniga 10 dollar, hamma uchun hamma joyda"
+  },
+  "navigation": {
+    "home": "Bosh sahifa",
+    "wallet": "Hamyon",
+    "miniapps": "MiniIlovalar",
+    "back": "Orqaga",
+    "scan": "Skanerlash",
+    "settings": "Sozlamalar",
+    "close": "Yopish"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Tasdiqlangan odamlar",
+      "umtPrice": "UMT narxi"
+    },
+    "quickActions": {
+      "news": "Yangiliklar",
+      "vote": "Boshqaruv",
+      "governance": "Boshqaruv",
+      "learn": "O'rganish",
+      "network": "Tarmoq"
+    },
+    "setupProgress": {
+      "title": "O'rnatish jarayoni",
+      "steps": {
+        "language": "Til",
+        "wallet": "Hamyon",
+        "verifyHuman": "Insonni tasdiqlash",
+        "complete": "Tugallangan"
+      },
+      "continue": "Davom etish",
+      "changeChoice": "Tanlovni o'zgartirish",
+      "requiresLanguage": "Avval tilni tanlang",
+      "requiresWallet": "Avval hamyon yarating"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Kunlik mukofotlar",
+      "totalEarned": "Jami topilgan",
+      "lastClaimed": "Oxirgi talab qilingan",
+      "never": "Hech qachon",
+      "configure": "Sozlash",
+      "loading": "Yuklanmoqda...",
+      "noWallet": "Hamyon yo'q",
+      "autoClaim": {
+        "label": "Avto-talab:",
+        "active": "Faol",
+        "setupNow": "Hozir sozlash",
+        "expired": "Muddat tugagan",
+        "tapToSetup": "Avtomatik kunlik mukofotlarni yoqish uchun bosing"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel daromadlari",
+      "manage": "Boshqarish",
+      "loading": "Yuklanmoqda...",
+      "status": "Holati",
+      "statuses": {
+        "notBonded": "Bog'lanmagan",
+        "bonded": "Bog'langan",
+        "unbonding": "Bog'lanishni bekor qilish"
+      },
+      "claimable": "Talab qilinishi mumkin",
+      "accruing": "To'planmoqda",
+      "bonded": "Bog'langan"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Avtomatik kunlik mukofotlar",
+      "description": "<bold>Avto-talab</bold>ni yoqing va kunlik 10 dollar UBI mukofotingizni avtomatik ravishda oling — qo'lda talab qilish shart emas!",
+      "benefits": {
+        "midnight": "Sizning vaqt mintaqangizda yarim tunda talab qilinadi",
+        "lowerFees": "80% arzonroq gaz to'lovlari (boshqa foydalanuvchilar bilan birgalikda)",
+        "disable": "Istagan vaqtingizda Sozlamalardan o'chirib qo'yishingiz mumkin"
+      },
+      "notice": "Bizning relay siz uchun talab qilishi uchun bir martalik imzo xabarni imzolaysiz. Hech qanday shaxsiy kalitlar ulashilmaydi.",
+      "maybeLater": "Keyinroq",
+      "enableNow": "Hozir yoqish"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Avto-talab sozlamalari",
+      "description": "Kunlik mukofotlaringizni avtomatik talab qiling.",
+      "checking": "Holati tekshirilmoqda...",
+      "status": "Holati",
+      "enabled": "Yoqilgan",
+      "disabled": "O'chirilgan",
+      "lastClaimed": "Oxirgi talab qilingan",
+      "neverClaimed": "Hech qachon",
+      "nextClaim": "Keyingi talab",
+      "expiresAt": "Muddat tugashi",
+      "timezone": "Vaqt mintaqasi",
+      "preferredHour": "Afzal soat",
+      "preferredHourHint": "Avto-talab qachon ishga tushishini tanlang",
+      "enableButton": "Avto-talabni yoqish",
+      "disableButton": "Avto-talabni o'chirish",
+      "enabling": "Yoqilmoqda...",
+      "disabling": "O'chirilmoqda...",
+      "enableSuccess": "Avto-talab yoqildi!",
+      "enableError": "Yoqish muvaffaqiyatsiz",
+      "disableSuccess": "Avto-talab o'chirildi",
+      "disableError": "O'chirish muvaffaqiyatsiz",
+      "updateButton": "Sozlamalarni yangilash",
+      "updating": "Yangilanmoqda..."
+    },
+    "manual": {
+      "title": "Qo'lda talab qilish",
+      "description": "Agar pul tezroq kerak bo'lsa, keyingi mavjud mukofotni hozir talab qiling. Qo'lda talablar hamyoningizning gazidan foydalanadi. Kutib tursangiz, avto-talab arzonroq qoladi. Hamyoningizda mablag' bo'lmasa, qo'lda talabdan oldin avto-talabni yoqing yoki native gaz qo'shing.",
+      "dayLabel": "Mukofot kuni",
+      "claimButton": "Hozir talab qilish",
+      "claiming": "Talab qilinmoqda...",
+      "success": "Talab yuborildi",
+      "successWithId": "Talab yuborildi (id: {{id}})",
+      "error": "Talab qilish muvaffaqiyatsiz",
+      "noProof": "Mukofot isboti hali chop etilmagan. Bugungi snapshot jonli bo'lgandan keyin qayta urinib ko'ring.",
+      "unauthorized": "Relayer avtorizatsiyasi muvaffaqiyatsiz. Iltimos, qayta urinib ko'ring yoki qo'llab-quvvatlash bilan bog'laning.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "Mavjud mukofot kunlari: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "Qamrov: {{start}} dan {{end}} gacha",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} bu to'plamdan keyin yana",
+      "batchSuccess": "{{count}} kun muvaffaqiyatli talab qilindi",
+      "claimingProgress": "{{claimed}}/{{total}} talab qilinmoqda...",
+      "claimAllButton": "Barcha {{count}} kunni talab qilish"
+    },
+    "timezone": {
+      "title": "Vaqt mintaqasini tanlash",
+      "search": "Vaqt mintaqasini qidirish...",
+      "current": "Joriy tanlov",
+      "searchResults": "Qidiruv natijalari",
+      "noResults": "Natija topilmadi",
+      "detected": "Aniqlangan",
+      "popular": "Mashhur vaqt mintaqalari",
+      "regions": {
+        "Americas": "Amerika",
+        "Europe": "Yevropa",
+        "Asia": "Osiyo",
+        "Africa": "Afrika",
+        "Oceania": "Okeaniya"
+      }
+    },
+    "payout": {
+      "title": "To'lov afzalligi",
+      "description": "Afzal to'lov valyutangizni tanlang.",
+      "current": "Joriy",
+      "saved": "Saqlangan",
+      "saveError": "Saqlashda xato",
+      "showMore": "Ko'proq ko'rsatish ({{count}})",
+      "showLess": "Kamroq ko'rsatish",
+      "native": "Asosiy token",
+      "stablecoin": "Stablecoin",
+      "popular": "Mashhur",
+      "allCurrencies": "Barcha valyutalar"
+    }
+  },
+  "wallet": {
+    "title": "Hamyon",
+    "testnetNotice": "Testnet tokenlari haqiqiy qiymatga ega emas",
+    "totalBalance": "Umumiy balans",
+    "balance": "Balans",
+    "address": "Manzil",
+    "copyAddress": "Manzilni nusxalash",
+    "addressCopied": "Manzil nusxalandi",
+    "receive": "Qabul qilish",
+    "send": "Yuborish",
+    "swap": "Almashtirish",
+    "swapComingSoon": "Almashtirish tez orada",
+    "history": "Tarix",
+    "tokens": "Tokenlar",
+    "collectibles": "Kollektsiyalar",
+    "noTokens": "Hech qanday token sozlanmagan",
+    "nativeToken": "Asosiy token",
+    "loading": "Yuklanmoqda...",
+    "refreshing": "Yangilanmoqda...",
+    "balancesUpdated": "Balanslar yangilandi",
+    "menu": {
+      "manageTokens": "Tokenlarni boshqarish",
+      "addressBook": "Manzillar kitobi",
+      "walletSettings": "Hamyon sozlamalari",
+      "showBalances": "Balanslarni ko'rsatish",
+      "hideBalances": "Balanslarni yashirish",
+      "showZeroTokens": "Nol tokenlarni ko'rsatish",
+      "hideZeroTokens": "Nol tokenlarni yashirish",
+      "refresh": "Yangilash"
+    },
+    "manageTokens": {
+      "title": "Tokenlarni boshqarish",
+      "info": "Maxsus ERC-20 tokenlarni qo'shing. Tizim tokenlari standart ravishda kiritilgan.",
+      "addToken": "Token qo'shish",
+      "adding": "Qo'shilmoqda...",
+      "contractAddress": "Token kontrakt manzili (0x...)",
+      "autoFetch": "Belgi va o'nliklar avtomatik yuklanadi",
+      "customTokens": "Maxsus tokenlar",
+      "noCustomTokens": "Hozircha maxsus token qo'shilmagan.",
+      "addUsingForm": "Yuqoridagi forma orqali token qo'shing.",
+      "systemToken": "Bu token tizim tokeni va allaqachon kiritilgan.",
+      "fetchingMetadata": "Token metama'lumotlari yuklanmoqda...",
+      "addedSuccess": "Token muvaffaqiyatli qo'shildi",
+      "enterValidAddress": "To'g'ri token manzilini kiriting",
+      "save": "Saqlash"
+    },
+    "addressBook": {
+      "title": "Manzillar kitobi",
+      "addContact": "Kontakt qo'shish",
+      "nameLabel": "Ism yoki yorliq",
+      "walletAddress": "Hamyon manzili (0x...)",
+      "savedContacts": "Saqlangan kontaktlar",
+      "noContacts": "Hozircha kontakt saqlanmagan.",
+      "addForQuickSending": "Tez yuborish uchun kontaktlar qo'shing.",
+      "enterValidAddress": "To'g'ri manzil kiriting",
+      "addLabel": "Yorliq qo'shish",
+      "save": "Saqlash"
+    },
+    "settings": {
+      "title": "Hamyon sozlamalari",
+      "export": {
+        "title": "Hamyonni eksport qilish",
+        "description": "Hech qachon tiklash iborasini yoki shaxsiy kalitni baham ko'rmang. Ularni oflayn saqlang.",
+        "recoveryPhrase": "Tiklash iborasi",
+        "recoveryPhraseNotAvailable": "Tiklash iborasi mavjud emas (shaxsiy kalit orqali import qilingan)",
+        "privateKey": "Shaxsiy kalit",
+        "privateKeyWarning": "Shaxsiy kalit (maxfiy saqlang!)",
+        "showPhrase": "Tiklash iborasini ko'rsatish",
+        "showKey": "Shaxsiy kalitni ko'rsatish",
+        "warning": "Hech qachon tiklash iborasini yoki shaxsiy kalitni hech kim bilan baham ko'rmang.",
+        "copy": "Nusxalash",
+        "copied": "Nusxalandi!",
+        "hide": "Yashirish",
+        "clipboardWarning": "Boshqa ilovalar buferni o'qishi mumkin. 30 soniyadan keyin avtomatik tozalanadi.",
+        "verifyForKey": "Shaxsiy kalitni ko'rsatish uchun tasdiqlang",
+        "verifyForSeed": "Tiklash iborasini ko'rsatish uchun tasdiqlang",
+        "verifyDescription": "Maxfiy hamyon ma'lumotlarini ko'rsatish uchun parol yoki PIN kiriting."
+      },
+      "import": {
+        "title": "Hamyonni import qilish",
+        "description": "Import qilish joriy hamyonni almashtiradi. Avval mavjudni zaxiralang. Eslatma: importdan keyin PoH holatini qayta tasdiqlashingiz kerak.",
+        "byPhrase": "Tiklash iborasi",
+        "byPrivateKey": "Shaxsiy kalit",
+        "phrasePlaceholder": "12 yoki 24 so'zli iborani kiriting…",
+        "keyPlaceholder": "0x… shaxsiy kalitni kiriting",
+        "importButton": "Hamyonni import qilish",
+        "importing": "Import qilinmoqda...",
+        "success": "Hamyon muvaffaqiyatli import qilindi!"
+      },
+      "dangerZone": {
+        "title": "Xavfli zona",
+        "description": "Bu amallar qaytarib bo'lmaydi. Hamyonni zaxiralaganingizga ishonch hosil qiling.",
+        "forgetWallet": "Hamyonni unutish",
+        "forgetDescription": "Hamyonni ushbu qurilmadan o'chirish. Tiklash iborasini zaxiralaganingizga ishonch hosil qiling.",
+        "confirmTitle": "Hamyonni unutishmi?",
+        "confirmMessage": "Bu hamyonni qurilmadan o'chiradi. Avval tiklash iborasini zaxiralang.",
+        "cancel": "Bekor qilish",
+        "confirm": "Hamyonni unutish",
+        "walletForgotten": "Hamyon unutildi",
+        "unableToForget": "Hamyonni unutib bo'lmadi",
+        "resetWallet": "Hamyonni reset qilish",
+        "resetDescription": "Barcha hamyon ma'lumotlarini to'liq o'chirib, yangidan boshlash."
+      },
+      "authPrompt": "Shaxsiy kalitni ko'rsatish uchun autentifikatsiya qiling"
+    }
+  },
+  "reset": {
+    "title": "Hamyonni reset qilish",
+    "dangerTitle": "Bu amal qaytarib bo'lmaydi!",
+    "warning1": "Hamyonni reset qilish quyidagilarni butunlay o'chiradi:",
+    "bullet1": "Hamyon va shaxsiy kalitlaringiz",
+    "bullet2": "Tiklash iborasi",
+    "bullet3": "Barcha ilova sozlamalari va afzalliklari",
+    "bullet4": "Tranzaksiya tarixi",
+    "recoveryNote": "Agar 12 so'zli tiklash iborangiz bo'lsa, resetdan keyin hamyonni tiklashingiz mumkin.",
+    "continueButton": "Tushundim, davom etish",
+    "confirmTitle": "Resetni tasdiqlash",
+    "confirmDescription": "Barcha hamyon ma'lumotlarini o'chirishni xohlashingizni tasdiqlash uchun quyida \"RESET\" deb yozing.",
+    "placeholder": "RESET deb yozing",
+    "typeMismatch": "Tasdiqlash uchun RESET deb yozing",
+    "resetButton": "Hamyonni abadiy reset qilish",
+    "resettingTitle": "Reset qilinmoqda...",
+    "resettingDescription": "Barcha hamyon ma'lumotlari tozalanmoqda. Kutib turing...",
+    "completeTitle": "Reset tugallandi",
+    "completeDescription": "Hamyoningiz reset qilindi. Endi yangi hamyon yaratishingiz yoki mavjudni import qilishingiz mumkin.",
+    "startFresh": "Yangi boshlash",
+    "error": "Hamyonni reset qilish muvaffaqiyatsiz. Qayta urinib ko'ring."
+  },
+  "export": {
+    "verifyTitle": "Shaxsni tasdiqlash",
+    "verifyDescription": "Hamyonni eksport qilish uchun parolingizni kiriting.",
+    "verify": "Tasdiqlash",
+    "verificationFailed": "Tasdiqlash muvaffaqiyatsiz",
+    "passphraseTitle": "Eksport parolini o'rnatish",
+    "passphraseDescription": "Zaxira faylni shifrlash uchun kuchli parol tanlang. Keyinroq import qilish uchun bu parol kerak bo'ladi.",
+    "enterPassphrase": "Parolni kiriting",
+    "passphraseTooWeak": "Parol juda zaif. Kamida 8 belgi ishlating.",
+    "includeSeed": "Tiklash iborasini kiritish",
+    "includeSeedDescription": "To'liq zaxira uchun tavsiya etiladi",
+    "confirmTitle": "Parolni tasdiqlash",
+    "confirmDescription": "Parolni tasdiqlash uchun qayta kiriting.",
+    "confirmPassphrase": "Parolni tasdiqlang",
+    "passphraseMismatch": "Parollar mos kelmaydi",
+    "warning": "Bu zaxirani xavfsiz saqlang. Fayl va parolga ega bo'lgan har kim hamyoningizga kirishi mumkin.",
+    "exportNow": "Hamyonni eksport qilish",
+    "exportingTitle": "Eksport qilinmoqda...",
+    "exportingDescription": "Hamyon zaxirasini shifrlash va tayyorlash...",
+    "successTitle": "Eksport tugallandi",
+    "successDescription": "Shifrlangan hamyon zaxirangiz yaratildi. Uni xavfsiz saqlang.",
+    "rememberPassphrase": "Eksport parolini eslab qoling - bu zaxirani import qilish uchun kerak.",
+    "errorTitle": "Eksport muvaffaqiyatsiz",
+    "failed": "Eksport muvaffaqiyatsiz. Qayta urinib ko'ring.",
+    "tryAgain": "Qayta urinish",
+    "exportKeystore": "Shifrlangan zaxirani eksport qilish",
+    "exportKeystoreDesc": "Shifrlangan keystore faylni saqlash"
+  },
+  "security": {
+    "title": "Hamyonni himoyalash",
+    "subtitle": "Hamyonni himoyalash uchun parol yoki PIN o'rnatish",
+    "checkingDevice": "Qurilma xavfsizligi tekshirilmoqda...",
+    "passwordOption": "Parol",
+    "passwordDesc": "8+ belgi, harflar va raqamlar",
+    "pinOption": "6 raqamli PIN",
+    "pinDesc": "Tez va eslab qolish oson",
+    "enterPin": "6 raqamli PIN kiriting",
+    "confirmPin": "PINni tasdiqlang",
+    "enterPassword": "Parolni kiriting",
+    "confirmPassword": "Parolni tasdiqlang",
+    "enableBiometrics": "{{type}}ni yoqishmi?",
+    "biometricsDesc": "{{type}} bilan tez ochish uchun. Keyinroq Sozlamalardan o'zgartirishingiz mumkin.",
+    "enableBiometricsButton": "{{type}}ni yoqish",
+    "enableBiometricsPrompt": "Biometrik ochishni yoqish uchun autentifikatsiya qiling",
+    "skipBiometrics": "Hozircha o'tkazib yuborish",
+    "setupComplete": "O'rnatish tugallandi!",
+    "walletSecured": "Hamyoningiz himoyalandi!",
+    "continue": "Davom etish",
+    "passwordTooWeak": "Parol juda zaif. Takliflarga amal qiling.",
+    "pinMismatch": "PINlar mos kelmaydi",
+    "passwordMismatch": "Parollar mos kelmaydi",
+    "setupError": "O'rnatish muvaffaqiyatsiz. Qayta urinib ko'ring.",
+    "passwordTitle": "Parol",
+    "passwordDescription": "8+ belgi, kuchliroq himoya",
+    "pinTitle": "6 raqamli PIN",
+    "pinDescription": "Tez kirish, eslab qolish oson"
+  },
+  "lock": {
+    "title": "Umotu ni ochish",
+    "lockedOut": "Qulflangan",
+    "tooManyAttempts": "Juda ko'p urinish. {{time}} dan keyin qayta urinib ko'ring.",
+    "attemptsRemaining": "{{count}} urinish qoldi",
+    "enterPassword": "Parolni kiriting",
+    "unlock": "Ochish",
+    "wrongPin": "Noto'g'ri PIN",
+    "wrongPassword": "Noto'g'ri parol",
+    "verificationError": "Tasdiqlash xatosi",
+    "biometricsPrompt": "Hamyonni ochish",
+    "unlockWithFaceId": "Face ID bilan ochishmi?",
+    "unlockWithFingerprint": "Barmoq izi bilan ochishmi?",
+    "forgotPassword": "Parolni unutdingizmi?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Qo'llab-quvvatlanmaydigan qurilma",
+    "emulatorMessage": "Xavfsizlik sababli bu ilova emulatorlarda ishlamaydi.",
+    "rootedTitle": "Xavfsizlik ogohlantirishi",
+    "exitApp": "Chiqish",
+    "continueAnyway": "Baribir davom etish"
+  },
+  "settingsSecurity": {
+    "title": "Xavfsizlik",
+    "autoLock": "Avto-qulf",
+    "autoLockDesc": "Faollikdan keyin hamyonni qulflash",
+    "faceId": "Face ID",
+    "fingerprint": "Barmoq izi",
+    "biometricsDesc": "Biometrika bilan tez ochish",
+    "changePin": "PINni o'zgartirish",
+    "changePassword": "Parolni o'zgartirish",
+    "changeDesc": "Xavfsizlik ma'lumotlarini yangilash",
+    "enableBiometrics": "Biometrik ochishni yoqish",
+    "enterCurrent": "Joriy {{type}} ni kiriting",
+    "enterNew": "Yangi {{type}} ni kiriting",
+    "confirmNew": "Yangi {{type}} ni tasdiqlang",
+    "currentPassword": "Joriy parol",
+    "newPassword": "Yangi parol",
+    "confirmNewPassword": "Yangi parolni tasdiqlang",
+    "changeNow": "Hozir o'zgartirish",
+    "success": "Muvaffaqiyat",
+    "pinChanged": "PIN muvaffaqiyatli o'zgartirildi",
+    "passwordChanged": "Parol muvaffaqiyatli o'zgartirildi",
+    "changeFailed": "Ma'lumotlarni o'zgartirish muvaffaqiyatsiz",
+    "autoLockOptions": {
+      "immediately": "Darhol",
+      "after1min": "1 daqiqadan keyin",
+      "after5min": "5 daqiqadan keyin",
+      "after15min": "15 daqiqadan keyin",
+      "after1hour": "1 soatdan keyin",
+      "never": "Hech qachon"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Kutib turing",
+    "cooldownMessage": "Xavfsizlik uchun kalitlarni {{time}} dan keyin qayta ko'rsatishingiz mumkin.",
+    "cooldownReason": "Bu zararli ilovalarning kalitlarga tez-tez kirishini oldini oladi."
+  },
+  "passwordVerify": {
+    "title": "Shaxsni tasdiqlash",
+    "description": "Maxfiy hamyon ma'lumotlarini ko'rsatish uchun parol yoki PIN kiriting",
+    "verify": "Tasdiqlash"
+  },
+  "passwordValidation": {
+    "veryWeak": "Juda zaif",
+    "weak": "Zaif",
+    "fair": "O'rtacha",
+    "good": "Yaxshi",
+    "strong": "Kuchli",
+    "tooShort": "Parol kamida 8 belgi bo'lishi kerak",
+    "commonPassword": "Bu tez-tez ishlatiladigan parol",
+    "lengthSuggestion": "Yaxshiroq xavfsizlik uchun kamida 12 belgi ishlating",
+    "mixedCaseSuggestion": "Katta va kichik harflarni aralashtiring",
+    "numberSuggestion": "Ba'zi raqamlar qo'shing",
+    "specialCharSuggestion": "Maxsus belgilarni qo'shing (!@#$%)"
+  },
+  "forgot": {
+    "title": "Hisob ma'lumotlarini reset qilish",
+    "warning": "Parol yoki PINni reset qilish uchun hamyon seed iborasini kiritishingiz kerak. Bu hamyon egasi ekanligingizni isbotlaydi.",
+    "warningText": "Seed iborangizni hech kim bilan baham ko'rmang.",
+    "continue": "Tushundim, davom etish",
+    "enterSeed": "Seed iborasini kiriting",
+    "seedDescription": "12 yoki 24 so'zli seed iborangizni kiriting. Har bir so'zni bo'shliq bilan ajrating.",
+    "seedPlaceholder": "Seed iborasini kiriting...",
+    "verifySeed": "Seed iborasini tasdiqlash",
+    "invalidSeed": "To'g'ri 12 yoki 24 so'zli seed iborasini kiriting",
+    "chooseMethod": "Xavfsizlik usulini tanlang",
+    "methodDescription": "Hamyonni qanday himoyalamoqchisiz?",
+    "newPassword": "Yangi parol yaratish",
+    "newPin": "Yangi PIN yaratish",
+    "newPasswordDesc": "Kuchli parol tanlang (8+ belgi)",
+    "newPinDesc": "6 raqamli PIN kiriting",
+    "confirmPassword": "Parolni tasdiqlash",
+    "confirmPin": "PINni tasdiqlash",
+    "confirmPasswordDesc": "Parolni qayta kiriting",
+    "confirmPinDesc": "PINni qayta kiriting",
+    "resetNow": "Hozir reset qilish",
+    "complete": "Reset tugallandi",
+    "completeDescription": "Hisob ma'lumotlaringiz reset qilindi. Endi yangi parol yoki PIN bilan hamyonni ochishingiz mumkin.",
+    "unlockNow": "Hamyonni ochish",
+    "passwordTooWeak": "Parol juda zaif. Kuchliroq parol tanlang.",
+    "passwordMismatch": "Parollar mos kelmaydi",
+    "pinMismatch": "PINlar mos kelmaydi",
+    "resetFailed": "Ma'lumotlarni reset qilish muvaffaqiyatsiz. Seed iborasini tekshiring.",
+    "resetError": "Xato yuz berdi. Qayta urinib ko'ring."
+  },
+  "send": {
+    "title": "Yuborish",
+    "selectToken": "Token tanlash",
+    "selectTokenInfo": "Yuborish uchun token tanlang. Faqat balansdagi tokenlar ko'rsatiladi.",
+    "noTokensWithBalance": "Balansdagi token yo'q",
+    "addTokensFirst": "Avval hamyonga token qo'shing",
+    "enterAmount": "Miqdorni kiriting",
+    "enterRecipient": "Qabul qiluvchini kiriting",
+    "review": "Ko'rib chiqish",
+    "amount": "Miqdor",
+    "recipient": "Qabul qiluvchi",
+    "recipientPlaceholder": "0x... hamyon manzili",
+    "networkFee": "Tarmoq to'lovi",
+    "gasToken": "Gazni to'lash uchun",
+    "payingWith": "To'lov usuli",
+    "payGasWith": "Gazni to'lash",
+    "nativeGas": "UMT (asosiy)",
+    "stableGas": "Stable gaz",
+    "selectStable": "Stable tanlash",
+    "max": "Maks",
+    "next": "Keyingi",
+    "continue": "Davom etish",
+    "confirm": "Yuborishni tasdiqlash",
+    "confirmSend": "Yuborishni tasdiqlash",
+    "sending": "Yuborilmoqda...",
+    "failed": "Tranzaksiya muvaffaqiyatsiz",
+    "viewInExplorer": "Explorerda ko'rish",
+    "done": "Tugadi",
+    "cancel": "Bekor qilish",
+    "send": "Yuborish",
+    "balance": "Balans",
+    "available": "Mavjud",
+    "to": "Ga",
+    "network": "Tarmoq",
+    "step": "Qadam",
+    "estimating": "Hisoblanmoqda…",
+    "umtNative": "UMT (asosiy)",
+    "txSpeed": "Tranzaksiya tezligi",
+    "transactionSpeed": "Tranzaksiya tezligi",
+    "speed": {
+      "slow": "Sekin",
+      "normal": "Oddiy",
+      "fast": "Tez"
+    },
+    "gasNotice": {
+      "stablecoin": "Gaz stablecoin bilan to'lanadi.",
+      "reserved": "Gaz uchun {{amount}} {{symbol}} ajratildi; maksimal {{max}} yuborishingiz mumkin."
+    },
+    "errors": {
+      "invalidAddress": "Noto'g'ri qabul qiluvchi manzili",
+      "invalidAmount": "To'g'ri miqdorni kiriting",
+      "insufficientBalance": "Balans yetarli emas",
+      "insufficientGas": "Gaz uchun balans yetarli emas",
+      "insufficientGasWithHint": "Gaz uchun balans yetarli emas. UMT yoki qo'llab-quvvatlanadigan stablecoin qo'shing.",
+      "notEnoughForGas": "Gazni qoplash uchun balans yetarli emas",
+      "noStableGas": "Gaz uchun UMT yetarli emas va qo'llab-quvvatlanadigan stable yetarli emas.",
+      "permitFailed": "Gaz tokeni uchun ruxsat yoki tasdiq muvaffaqiyatsiz",
+      "relayNotConfigured": "Stable gaz relay sozlanmagan",
+      "transactionReverted": "Tranzaksiya zanjirda qaytarildi.",
+      "approvalNeeded": "Gaz tokeni tasdiq talab qiladi, lekin tasdiq uchun UMT yo'q. Kichik miqdorda UMT qo'shing yoki permit qo'llab-quvvatlanadigan token ishlating."
+    },
+    "addressBook": {
+      "title": "Manzillar Kitobi",
+      "addNew": "Yangi Qo'shish",
+      "noContacts": "Saqlangan manzillar yo'q",
+      "saveForQuickAccess": "Tez kirish uchun manzillarni saqlang",
+      "editContact": "Kontaktni Tahrirlash",
+      "deleteContact": "Kontaktni O'chirish",
+      "addressNotSaved": "Manzil saqlanmagan",
+      "addLabel": "Yorliq qo'shish",
+      "enterValidAddress": "Avval to'g'ri manzil kiriting",
+      "saved": "Saqlandi",
+      "save": "Saqlash"
+    },
+    "success": {
+      "title": "Tranzaksiya yuborildi!",
+      "hash": "Hash",
+      "viewInExplorer": "Explorerda ko'rish",
+      "close": "Yopish"
+    },
+    "batch": {
+      "mode": "To'plam Rejimi",
+      "singleMode": "Yagona Qabul Qiluvchi",
+      "addRecipient": "Qabul qiluvchilarni qo'shish",
+      "noRecipients": "Hali qabul qiluvchilar qo'shilmagan",
+      "addFromTagOrBook": "Tegdan yoki kitobdan qo'shish",
+      "invalidAddress": "Noto'g'ri manzil: {{address}}",
+      "invalidAmount": "{{recipient}} uchun noto'g'ri miqdor",
+      "totalExceedsBalance": "Jami balansdan oshib ketdi",
+      "sendingTo": "{{count}} qabul qiluvchiga yuborilmoqda",
+      "sendingTo_plural": "{{count}} qabul qiluvchilarga yuborilmoqda",
+      "recipients": "Qabul qiluvchilar",
+      "addresses": "{{count}} manzil",
+      "addresses_plural": "{{count}} manzillar",
+      "addByTag": "Teg bo'yicha qo'shish",
+      "noTags": "Hali teglar yo'q",
+      "createFirstTag": "Kitobda birinchi tegingizni yarating",
+      "addFromTag": "Tegdan qo'shish",
+      "selectTag": "Tegni tanlang",
+      "remove": "O'chirish",
+      "sendAll": "Hammasini Yuborish ({{count}})",
+      "batchSend": "To'plam Yuborish",
+      "badge": "TO'PLAM",
+      "successFail": "{{success}} muvaffaqiyatli, {{fail}} muvaffaqiyatsiz",
+      "successful": "Muvaffaqiyatli",
+      "sentStatus": "Yuborildi",
+      "failedStatus": "Muvaffaqiyatsiz",
+      "details": "To'plam O'tkazma Tafsilotlari",
+      "total": "Jami",
+      "tagPicker": {
+        "title": "Tegni Tanlang",
+        "noTags": "Mavjud teglar yo'q",
+        "createHint": "Avval kitobdagi kontaktlarga teglar qo'shing"
+      },
+      "tags": {
+        "manage": "Teglarni Boshqarish",
+        "add": "Teg Qo'shish",
+        "remove": "Tegni O'chirish",
+        "create": "Teg Yaratish",
+        "newTag": "Yangi teg nomi",
+        "addToContact": "Kontaktga teg qo'shish"
+      }
+    }
+  },
+  "receive": {
+    "title": "Qabul qilish",
+    "yourAddress": "Sizning hamyon manzilingiz",
+    "scanQR": "QR kodni skanerlab qabul qiling",
+    "copyAddress": "Manzilni nusxalash",
+    "share": "Ulashish"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "To'lov",
+      "myQr": "Mening QR"
+    },
+    "pay": {
+      "title": "To'lov",
+      "description": "Do'stingizning QR kodini skanerlab to'g'ridan-to'g'ri hamyoniga to'lang",
+      "allowCamera": "Kameraga ruxsat berish",
+      "requesting": "So'ralmoqda…",
+      "openSettings": "Sozlamalarni ochish",
+      "sendTo": "Ga yuborish",
+      "amount": "Miqdor",
+      "rescan": "Qayta skanerlash",
+      "continue": "Davom etish"
+    },
+    "receive": {
+      "title": "Qabul qilish",
+      "description": "Bu QR kodni skanerlab ushbu manzilga to'lov yuboring",
+      "tapToCopy": "Manzilni nusxalash uchun bosing",
+      "copied": "Buferga nusxalandi!"
+    }
+  },
+  "history": {
+    "title": "Tranzaksiya tarixi",
+    "sent": "Yuborilgan",
+    "received": "Qabul qilingan",
+    "token": "Token",
+    "external": "Tashqi",
+    "to": "Ga: ",
+    "from": "Dan: ",
+    "viewInExplorer": "Explorerda ko'rish",
+    "empty": {
+      "title": "Hozircha tranzaksiya yo'q",
+      "description": "Token yuborish yoki qabul qilganda tranzaksiya tarixi shu yerda paydo bo'ladi."
+    },
+    "status": {
+      "confirmed": "Tasdiqlangan",
+      "pending": "Kutilmoqda",
+      "failed": "Muvaffaqiyatsiz"
+    },
+    "details": {
+      "title": "Tranzaksiya tafsilotlari",
+      "status": "Holati",
+      "type": "Turi",
+      "to": "Ga",
+      "from": "Dan",
+      "token": "Token",
+      "block": "Blok",
+      "gasCost": "Gaz narxi",
+      "hash": "Hash",
+      "source": "Manba",
+      "balanceDetected": "Balans aniqlangan",
+      "inferredNote": "Bu tranzaksiya balans o'zgarishidan aniqlangan. To'liq zanjir tafsilotlari mavjud emas."
+    },
+    "time": {
+      "justNow": "Hozirgina",
+      "minsAgo": "{{count}} daqiqa oldin",
+      "hoursAgo": "{{count}} soat oldin",
+      "daysAgo": "{{count}} kun oldin"
+    }
+  },
+  "settings": {
+    "title": "Sozlamalar",
+    "account": {
+      "title": "Hisob va ko'rinish",
+      "walletAddress": "Hamyon manzili",
+      "copy": "Nusxalash",
+      "copied": "Nusxalandi"
+    },
+    "theme": {
+      "title": "Mavzu",
+      "light": "Yorug'",
+      "dark": "Qorong'i",
+      "system": "Tizim"
+    },
+    "language": {
+      "title": "Til",
+      "select": "Til tanlash",
+      "current": "Joriy"
+    },
+    "display": {
+      "title": "Ko'rinish",
+      "description": "Bosh sahifa ko'rinishini moslashtiring.",
+      "showSentinelCard": "Sentinel daromadlari kartasini ko'rsatish",
+      "showSentinelCardDesc": "Bosh sahifada daromadlarni ko'rsatish",
+      "showDailyRewardsCard": "Kunlik mukofotlar kartasini ko'rsatish",
+      "on": "YOQILGAN",
+      "off": "O'CHIRILGAN",
+      "sentinelSettings": "Sentinel sozlamalari",
+      "sentinelSettingsDesc": "Bog'lanish, mukofotlar va avto-talabni boshqarish"
+    },
+    "sentinelDisplay": {
+      "title": "Sentinel ko'rinishi",
+      "showSentinelCard": "Sentinel kartasini ko'rsatish",
+      "showSentinelCardDesc": "Bosh sahifada sentinel daromadlar kartasini ko'rsatish",
+      "sentinelSettings": "Sentinel sozlamalari",
+      "sentinelSettingsDesc": "Sentinel tugunni va mukofotlarni sozlash"
+    },
+    "verification": {
+      "title": "Tasdiqlash",
+      "description": "Inlyf bilan insonligingizni tasdiqlang va kunlik mukofotlarni oching. Tez liveness tekshiruvi; vaqti-vaqti bilan yangilang.",
+      "open": "Tasdiqlashni boshlash",
+      "refresh": "Tasdiqlashni yangilash",
+      "status": "Holati",
+      "verified": "Tasdiqlangan",
+      "notVerified": "Tasdiqlanmagan",
+      "expiresOn": "Muddat tugashi",
+      "daysRemaining": "Qolgan kunlar",
+      "upToDate": "Tasdiqlash yangilangan",
+      "refreshAvailableIn": "{{days}} kundan keyin yangilash mumkin"
+    },
+    "network": {
+      "title": "Tarmoq",
+      "description": "Blokcheyn tarmoq ulanishini sozlash.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (tez orada)",
+      "rpcEndpoint": "RPC nuqtasi",
+      "pingRpc": "RPC ping",
+      "testing": "Tekshirilmoqda...",
+      "rpcOk": "RPC OK",
+      "rpcError": "RPC xatosi",
+      "save": "Saqlash",
+      "saved": "Sozlamalar saqlandi",
+      "connectionStatus": "Ulanish holati",
+      "connected": "Ulangan",
+      "disconnected": "Uzilgan"
+    },
+    "cache": {
+      "title": "Kesh",
+      "description": "Token va kontrakt ma'lumotlarini yangilash uchun keshni tozalang.",
+      "clearCache": "Keshni tozalash",
+      "cacheCleared": "Kesh tozalandi! Qo'llash uchun qayta ishga tushiring."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Blokcheynni himoyalashga yordam berish uchun telefoningizni onlayn saqlang. Mukofotlarga loyiq bo'lib qolish uchun kuniga kamida bitta namuna olish ishini bajaring.",
+      "wifiOnly": "Faqat WiFi",
+      "wifiOnlyHint": "Mobil internetni tejaydi",
+      "minBattery": "Minimal batareya",
+      "minBatteryHint": "Bu darajadan pastda ishlamaydi",
+      "background": "Orqa fonda ishlatish",
+      "backgroundHint": "Ilova yopiq bo'lsa ham ishlaydi",
+      "lastSample": "Oxirgi faollik",
+      "noSamples": "Hozircha faollik yo'q. Ilovani ochiq saqlang.",
+      "staleWarning": "Bugun ko'rinmadi — ilovani qayta oching.",
+      "androidBatteryWarning": "Batareya optimizatsiyasi samplingni oldini olishi mumkin",
+      "androidBatteryHint": "Sozlamalar → Ilovalar → Umotu → Batareya → \"Cheklanmagan\" tanlang.",
+      "openSettings": "Sozlamalarni ochish uchun bosing",
+      "tip": "Eng yaxshi daromad uchun \"Orqa fonda ishlatish\"ni yoqing.",
+      "runNow": "Hozir ishga tushirish",
+      "running": "Ishlamoqda…",
+      "lastError": "Oxirgi xato",
+      "status": {
+        "active": "Faol",
+        "inactive": "Faol emas",
+        "paused": "Pauza"
+      }
+    },
+    "permissions": {
+      "title": "Ruxsatlar",
+      "description": "Ulangan Mini Ilovalarni va ularning ruxsatlarini boshqaring.",
+      "openMiniApps": "Mini Ilovalarni ochish",
+      "manageConnections": "Boshqarish",
+      "noConnections": "Ulangan ilova yo'q",
+      "revokeAccess": "Kirishni bekor qilish",
+      "lastUsed": "Oxirgi foydalanilgan"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Umotu ga xush kelibsiz",
+      "subtitle": "Kuniga 10 dollar, hamma uchun hamma joyda",
+      "getStarted": "Boshlash"
+    },
+    "language": {
+      "title": "Tilingizni tanlang",
+      "continue": "Davom etish"
+    },
+    "wallet": {
+      "title": "Sizning hamyoningiz",
+      "createNew": "Yangi hamyon yaratish",
+      "importExisting": "Mavjudni import qilish",
+      "creating": "Hamyon yaratilmoqda..."
+    },
+    "verify": {
+      "title": "Inson ekanligingizni tasdiqlang",
+      "description": "Kunlik mukofotlarni olish uchun o'zingizning noyob inson ekanligingizni tasdiqlang.",
+      "continue": "Davom etish"
+    }
+  },
+  "poh": {
+    "subtitle": "Kunlik mukofotlarni oching",
+    "description": "Inlyf bilan livenessni tasdiqlang va mukofotlarni oching. Biometrika zanjirga saqlanmaydi; faqat qisqa muddatli hisob ma'lumoti beriladi.",
+    "howItWorks": "Qanday ishlaydi",
+    "howItWorksDesc": "Qisqa liveness tekshiruvi (yuz skaneri) inson ekanligingizni tasdiqlaydi. Hisob ma'lumoti 90 kun davom etadi va istagan vaqtingizda yangilanishi mumkin.",
+    "adultQuestion": "Kattamisiz (18+)?",
+    "yesAdult": "Ha, 18+",
+    "noMinor": "Yo'q / Voyaga yetmagan",
+    "selectAge": "Iltimos, variant tanlang",
+    "verifying": "Tasdiqlanmoqda...",
+    "startVerification": "Tasdiqlashni boshlash",
+    "skipForNow": "Hozircha o'tkazib yuborish",
+    "status": {
+      "notVerified": "Hozircha tasdiqlanmagan.",
+      "notVerifiedDetail": "Mukofotlarni ochish uchun tasdiqlashni boshlang.",
+      "unavailable": "Holati mavjud emas.",
+      "verified": "Siz tasdiqlangansiz.",
+      "validFor": "~{{days}} kun amal qiladi",
+      "validFor_plural": "~{{days}} kun amal qiladi",
+      "expired": "Tasdiqlash muddati tugagan yoki topilmadi.",
+      "expiredDetail": "Hisob ma'lumotini yangilash uchun livenessni qayta o'tkazing."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Bloklarni yakunlashga yordam berish uchun Sentinel hovuziga qo'shiling. Minimal miqdorni bog'lang, qurilmangizni onlayn saqlang va mukofot oling.",
+    "loading": "Sentinel ma'lumotlari yuklanmoqda...",
+    "unavailable": "Sentinel moduli mavjud emas",
+    "yourStatus": "Sizning holatingiz",
+    "wallet": "Hamyon",
+    "bondedAmount": "Bog'langan miqdor",
+    "minimumBond": "Minimal bog'lanish",
+    "status": {
+      "notBonded": "Bog'lanmagan",
+      "bonded": "Bog'langan",
+      "unbonding": "Bog'lanishni bekor qilish ({{date}} da mavjud)"
+    },
+    "rewards": {
+      "title": "Mukofotlar",
+      "claimableNow": "Hozir talab qilinishi mumkin",
+      "accruing": "To'planmoqda",
+      "totalClaimed": "Jami talab qilingan",
+      "claiming": "Talab qilinmoqda...",
+      "claimRewards": "Mukofotlarni talab qilish"
+    },
+    "bond": {
+      "createTitle": "Bog'lanish yaratish",
+      "topUpTitle": "Bog'lanishni to'ldirish",
+      "createDescription": "Sentinel qo'mitasiga qo'shilish va mukofot olishni boshlash uchun UMT bog'lang.",
+      "topUpDescription": "Mukofot ulushingizni oshirish uchun stavkangizni oshiring.",
+      "amountLabel": "Miqdor (UMT)",
+      "processing": "Qayta ishlanmoqda...",
+      "bond": "Bog'lash",
+      "topUp": "To'ldirish",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Avto-talab",
+      "description": "Sentinel mukofotlaringiz to'planganda relayer avtomatik talab qilsin.",
+      "checking": "Tekshirilmoqda...",
+      "enabled": "Yoqilgan",
+      "disabled": "O'chirilgan",
+      "expires": "Muddat tugashi",
+      "processing": "Qayta ishlanmoqda...",
+      "enable": "Avto-talabni yoqish",
+      "disable": "Avto-talabni o'chirish"
+    },
+    "activity": {
+      "title": "Oxirgi faollik",
+      "claims": "Talablar",
+      "slashes": "Jarimalar",
+      "noClaims": "Oxirgi {{blocks}}k blokda talab yo'q.",
+      "noSlashes": "Yaqin vaqt ichida jarima yo'q.",
+      "unknown": "noma'lum"
+    },
+    "errors": {
+      "configureEnv": "RPC + sentinel kontrakt muhit o'zgaruvchilarini sozlang.",
+      "noWallet": "Sentinel qo'mitasiga qo'shilish uchun hamyon yarating yoki import qiling.",
+      "loadFailed": "Sentinel ma'lumotlarini yuklash muvaffaqiyatsiz."
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel mukofotlari talab qilindi.",
+      "noRewards": "Kutilayotgan mukofot yo'q.",
+      "claimFailed": "Talab muvaffaqiyatsiz.",
+      "autoClaimEnabled": "Sentinel avto-talab yoqildi",
+      "autoClaimDisabled": "Sentinel avto-talab o'chirildi",
+      "autoClaimFailed": "Avto-talabni yoqish/o'chirish muvaffaqiyatsiz",
+      "configureBondAddress": "Sentinel bog'lanish manzilini sozlang",
+      "rpcNotSet": "RPC o'rnatilmagan",
+      "minBondUnavailable": "Minimal bog'lanish mavjud emas",
+      "enterBondAmount": "Bog'lanish miqdorini kiriting",
+      "minBondRequired": "Dastlabki bog'lanish kamida {{amount}} UMT bo'lishi kerak",
+      "topUpGreaterThanZero": "To'ldirish miqdori 0 dan katta bo'lishi kerak",
+      "insufficientBalance": "Bog'lanish + gaz uchun balans yetarli emas",
+      "bondSubmitted": "Bog'lanish tranzaksiyasi yuborildi",
+      "topUpSubmitted": "To'ldirish tranzaksiyasi yuborildi",
+      "bondConfirmed": "Bog'lanish tasdiqlangan",
+      "topUpConfirmed": "To'ldirish tasdiqlangan",
+      "bondReverted": "Bog'lanish zanjirda qaytarildi",
+      "bondFailed": "Bog'lanish muvaffaqiyatsiz"
+    }
+  },
+  "miniapps": {
+    "title": "MiniIlovalar",
+    "subtitle": "Umotu da qurilgan ilovalarni o'rganing",
+    "explore": "Umotu da qurilgan ilovalarni o'rganing",
+    "noApps": "Hozircha ilova yo'q",
+    "browseByCategory": "Kategoriya bo'yicha ko'rish",
+    "appsCount": "{{count}} ilova",
+    "featured": "TAVSIYA ETILGAN",
+    "comingSoon": "Tez orada",
+    "liveApps": "Jonli ilovalar",
+    "available": "MAVJUD",
+    "pohDescription": "Inlyf bilan insonligingizni tasdiqlang va kunlik mukofotlarni oching.",
+    "vision": {
+      "title": "Bizning vizyonimiz",
+      "tagline": "Kuniga 10 dollar, hamma uchun hamma joyda",
+      "description": "Umotu har kim global iqtisodiyotda ishtirok eta olishi uchun infratuzilma qurmoqda — yashash joyi yoki bankidan qat'i nazar.",
+      "readMore": "To'liq vizyonni o'qish",
+      "pillars": {
+        "title": "Uch asosiy tamoyil",
+        "ubi": {
+          "title": "Kuniga 10 dollar, hamma uchun hamma joyda",
+          "description": "Tarmoqni himoyalash uchun universal asosiy daromad sifatida mukofotlar. Har qanday telefon egasi ishtirok etib topishi mumkin."
+        },
+        "capital": {
+          "title": "Kapital erkin harakatlanadi",
+          "description": "To'lov va o'tkazmalar uchun deyarli nol ishqalanish — chegaradosh yoki mahalliy. Bizneslar platforma xarajatlarini qoplash uchun ~0.1% to'laydi, shaxslar hech nima to'lamaydi."
+        },
+        "sovereignty": {
+          "title": "Pul suverenitetiga hurmat",
+          "description": "Biz fiat valyutalarni almashtirmaymiz — ularni yaxshiroq ishlatamiz. Banklar mahalliy valyutaga bog'langan stablecoinlar chiqaradi. Pul siyosati kengroq yetib borish va kamroq ishqalanish bilan samaraliroq bo'ladi."
+        }
+      },
+      "notReplacing": "Umotu markaziy banklar bilan raqobatlashmaydi. Biz fiat valyutalar uchun yaxshi infratuzilma qurmoqdamiz: kamroq ishqalanish, global kirish va bozor samaradorligi va chidamliligini oshirish."
+    },
+    "building": {
+      "title": "Ekosistemani qurmoqdamiz",
+      "description": "Bu ilovalar Umotu da nima mumkinligini ko'rsatadi. Ba'zilari hozir tayyor, boshqalari tez orada. Butun dunyo dasturchilari platformamizda qurish va ishga tushirishga taklif etiladi.",
+      "developerDocs": "Dasturchi hujjatlari"
+    },
+    "categories": {
+      "payments": {
+        "name": "To'lovlar va moliya",
+        "apps": {
+          "sendMoney": {
+            "name": "Pul yuborish",
+            "description": "UMT yoki stablecoinlarni dunyoning istalgan joyiga tez yuboring — banklarsiz.",
+            "example": "Oilangizga xorijga 20 dollarni soniyalarda yuboring. Yashirin to'lovlar yo'q."
+          },
+          "billPay": {
+            "name": "Hisob to'lash",
+            "description": "Kommunal xizmatlar, telefon, internet va boshqalarni to'g'ridan-to'g'ri hamyondan to'lang."
+          },
+          "savings": {
+            "name": "Jamg'arma doiralari",
+            "description": "An'anaviy aylanma jamg'arma (tontine, chit fund) smart kontraktlar bilan ishonchli."
+          },
+          "microLoans": {
+            "name": "Mikro kreditlar",
+            "description": "Tasdiqlangan insonlik va obro'ga asoslangan tengdosh kreditlash."
+          }
+        }
+      },
+      "transport": {
+        "name": "Transport va yetkazib berish",
+        "apps": {
+          "rideSharing": {
+            "name": "Takshi ulashish",
+            "description": "Kripto bilan to'langan sayohatlarni bron qiling. Haydovchilar ko'proq oladi, yo'lovchilar kamroq to'laydi — o'rta odam 30% olmaydi.",
+            "example": "Lagosdagi taksi 800 ₦. Haydovchi 799.2 ₦ oladi, 560 ₦ emas."
+          },
+          "delivery": {
+            "name": "Yetkazib berish",
+            "description": "Ovqat, oziq-ovqat yoki posilkalarni buyurtma qiling. Kuryerlar adolatli maosh oladi stable tokenlarda."
+          },
+          "publicTransit": {
+            "name": "Jamoat transporti",
+            "description": "Avtobus, metro va poezdlarni bir bosish bilan to'lang. Tarif kartalari kerak emas."
+          }
+        }
+      },
+      "travel": {
+        "name": "Sayohat va mehmonxona",
+        "apps": {
+          "hotels": {
+            "name": "Mehmonxonalar va turar joy",
+            "description": "Dunyo bo'ylab turar joylarni bron qiling. Mezbonlar stablecoin qabul qiladi, mehmonlar to'lovlardan tejaydi."
+          },
+          "flights": {
+            "name": "Parvozlar",
+            "description": "Parvozlarni qidiring va bron qiling. Kripto bilan to'lang, UMT mukofotlari oling."
+          },
+          "tours": {
+            "name": "Mahalliy sayohatlar",
+            "description": "Mahalliy gidlar bilan tajribalarni bron qiling. To'lovlar to'g'ridan-to'g'ri ularga boradi."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Savdo va tijorat",
+        "apps": {
+          "localMarket": {
+            "name": "Mahalliy bozor",
+            "description": "Mahalliy sotib oling va soting. QR to'lovlar ko'cha savdosini soddalashtiradi."
+          },
+          "ecommerce": {
+            "name": "Elektron tijorat",
+            "description": "Dunyo bo'ylab sotuvchilardan onlayn xarid qiling. Karta to'lovlari yo'q, qaytarish yo'q."
+          },
+          "marketplace": {
+            "name": "Tengdosh bozori",
+            "description": "Narsalarni sotishga qo'ying, boshqalardan sotib oling. Eskrow ikkala tomonni himoyalaydi."
+          }
+        }
+      },
+      "services": {
+        "name": "Xizmatlar va ish",
+        "apps": {
+          "remittance": {
+            "name": "Pul o'tkazmalari",
+            "description": "Uyga pul yuboring. Qabul qiluvchilar mahalliy valyutaga aylantirishi yoki raqamli saqlashi mumkin."
+          },
+          "freelance": {
+            "name": "Frilans ish",
+            "description": "Gig ishlar uchun tez to'lov oling. Bank o'tkazmalari uchun 30 kun kutish yo'q."
+          },
+          "homeServices": {
+            "name": "Uy xizmatlari",
+            "description": "Santexnik, elektrchi, tozalovchilarni yollang. Ish tugaganda to'lang."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Biznesingizni Umotu da quring",
+      "subtitle": "O'rnatilgan to'lovlar bilan ilovalarni ishga tushiring",
+      "description": "Umotu ekosistemasiga ulangan ilovalar yarating — kunlik daromadli millionlab tasdiqlangan odamlar tranzaksiya qilishga tayyor. To'lov integratsiyasi muammolari yo'q.",
+      "benefits": {
+        "noFees": "Deyarli nol to'lov ishlov berish to'lovlari — daromadning 99.9% ni saqlang",
+        "verifiedUsers": "Barcha foydalanuvchilar tasdiqlangan odamlar — bot yoki firibgarlik yo'q",
+        "globalReach": "Birinchi kundan 190+ mamlakatdagi foydalanuvchilarga yetib boring",
+        "instantPayments": "Tez hisob-kitob — 30 kunlik to'lov kutish yo'q"
+      },
+      "exampleTitle": "Foydalanish misoli",
+      "exampleText": "Umotu dagi takshi ulashish ilovasi an'anaviy platformalardagi 70% o'rniga tariflarning 99.9% ni saqlaydi. Haydovchilar ko'proq topadi, yo'lovchilar kamroq to'laydi.",
+      "docsButton": "Hujjatlarni o'qish",
+      "buildButton": "Qurishni boshlash"
+    },
+    "bank": {
+      "title": "Bankmisiz?",
+      "subtitle": "Umotu da stablecoinlar chiqaring",
+      "description": "Litsenziyalangan moliya institutlari Umotu da mahalliy valyuta stablecoinlarini chiqarib, millionlab foydalanuvchili o'sib borayotgan UBI iqtisodiyotiga kirishi mumkin.",
+      "benefits": {
+        "reserves": "Rezervlardan daromad oling: obligatsiyalar va past xavfli aktivlarga invest qiling",
+        "mintRedeem": "Chiqarish/ayirboshlash to'lovlarini oling: odatda fiat ↔ stablecoin konvertatsiyasida 0.1%",
+        "users": "Kunlik faol UBI qabul qiluvchi millionlab foydalanuvchilarga kirish",
+        "global": "Chegaralardan tashqariga bir zumda kengayish",
+        "custody": "Rezervlar sizniki, nazorat sizda: orqa aktivlar ustidan to'liq nazorat"
+      },
+      "revenueModel": "Chiqaruvchilar qanday topadi",
+      "revenueNote": "Tether va boshqa yirik chiqaruvchilar kabi, daromad rezerv daromadi va konvertatsiya to'lovlaridan keladi. Millionlab foydalanuvchi kunlik UBI olganda chiqarish/ayirboshlash hajmi katta bo'lishi mumkin.",
+      "futureNote": "Kelajakda protokol rivojlanganda chiqaruvchilar tranzaksiya to'lovlari ulushini olishi mumkin.",
+      "learnMore": "Ko'proq bilish",
+      "applyButton": "Ariza berish"
+    }
+  },
+  "news": {
+    "title": "Yangiliklar va yangilanishlar",
+    "description": "Umotu jamoasidan eng so'nggi e'lonlar, maslahatlar va xavfsizlik ogohlantirishlari bilan tanishing.",
+    "empty": "Hozircha yangilik yo'q",
+    "unread": "Yangi",
+    "unreadCount": "{{count}} yangi",
+    "markAsRead": "O'qilgan deb belgilash",
+    "types": {
+      "announcement": "E'lon",
+      "tip": "Maslahat",
+      "security": "Xavfsizlik",
+      "airdrop": "Airdrop",
+      "update": "Yangilanish"
+    }
+  },
+  "governance": {
+    "title": "Boshqaruv",
+    "subtitle": "Umotu kelajagini shakllantiring",
+    "description": {
+      "title": "Sizning ovozingiz muhim",
+      "body": "Jamoa takliflarida ovoz berib Umotu kelajagini shakllantirishga yordam bering. Umotu jamg'armasi bu ovozlarni tashkil qiladi, lekin jamoa qaror qiladi."
+    },
+    "empty": "Faol taklif yo'q",
+    "emptyHint": "Yangi jamoa qarorlari uchun keyinroq tekshiring.",
+    "newPolls": "Yangi",
+    "newPollsCount": "{{count}} yangi",
+    "vote": "ovoz",
+    "votes": "ovozlar",
+    "endsIn": "{{time}} da tugaydi",
+    "ended": "Tugagan",
+    "tapToVote": "Ovoz berish uchun yuqoridagi variantni bosing",
+    "submitting": "Ovoz yuborilmoqda...",
+    "alreadyVoted": {
+      "title": "Allaqachon ovoz bergansiz",
+      "message": "Bu taklifda allaqachon ovoz bergansiz."
+    },
+    "confirm": {
+      "title": "Ovozni tasdiqlash",
+      "message": "Ovoz berish uchun",
+      "note": "Bu amal qaytarib bo'lmaydi.",
+      "submit": "Ovozni yuborish"
+    },
+    "success": {
+      "title": "Ovoz yuborildi!",
+      "message": "Jamoa boshqaruvida ishtirok etganingiz uchun rahmat."
+    },
+    "error": {
+      "title": "Ovoz muvaffaqiyatsiz",
+      "message": "Ovoz yuborish muvaffaqiyatsiz. Qayta urinib ko'ring."
+    }
+  },
+  "learn": {
+    "title": "O'rganish",
+    "subtitle": "Umotu haqida bilishingiz kerak bo'lgan hamma narsa",
+    "featured": "TAVSIYA ETILGAN",
+    "whatIs": {
+      "title": "Umotu nima?",
+      "subtitle": "Kuniga 10 dollar, hamma uchun hamma joyda",
+      "intro": "Umotu faqat smartfon bilan kuniga taxminan 10 dollar topishga imkon beradi. Qimmat uskunalar, maxsus ko'nikmalar yoki chegaralar yo'q.",
+      "howDifferent": "Qanday farq qiladi?",
+      "noMiddleman": "O'rta odam yo'q: Tarmoq bilan to'g'ridan-to'g'ri aloqa — bank hisobi shart emas",
+      "globalAccess": "Global kirish: Internet bo'lsa ishlaydi",
+      "youOwnIt": "Siz egasisiz: Hamyon, kalitlar, nazorat sizda",
+      "vision": "Vizyon",
+      "visionText": "Milliardlab odamlar umumiy daftarni halol saqlashga yordam berib topishi mumkin. Umotu da telefonlar tarmoqni ishonchli qiladigan engil tekshiruvlarni bajaradi.",
+      "nameOrigin": "Nomi kelib chiqishi",
+      "nameOriginText": "Umotu Paʻumotu polineziya tilidan ilhomlangan. Bu nomni oddiy odamlar uchun qurishni eslatish uchun hurmat bilan ishlatamiz."
+    },
+    "earn": {
+      "title": "Qanday topasiz",
+      "subtitle": "Telefoningiz ishlaydi; siz topasiz",
+      "intro": "Telefoningiz hammaga yordam beradigan kichik vazifalarni bajaradi — keyin mukofot olasiz.",
+      "steps": "Uch oddiy qadam",
+      "step1": "1) Inson ekanligingizni isbotlang: tez liveness tekshiruvi (va vaqti-vaqti bilan yangilash) har bir odam bitta hisobga ega ekanligini ta'minlaydi.",
+      "step2": "2) Tarmoqqa yordam bering: telefoningiz orqa fonda Data Availability (DA) sampling va boshqa engil tekshiruvlarni bajaradi.",
+      "step3": "3) Kunlik mukofot oling: bu ish uchun to'laysiz, tarmoq siyosatiga ko'ra taxminan kuniga 10 dollar.",
+      "localCurrency": "Mahalliy valyutada to'lov",
+      "localCurrencyText": "To'lov tokenini tanlang: mavjud bo'lsa mahalliy valyuta stablecoinlari yoki UMT. Miqdorlar ~10 USD qiymatiga mo'ljallangan va ishtirok va bozor sharoitlariga qarab o'zgarishi mumkin."
+    },
+    "whereMoney": {
+      "title": "10 dollar qayerdan keladi?",
+      "subtitle": "Siz ish qilganingiz uchun topasiz",
+      "intro": "#1 savol. Qisqa javob: chunki siz tarmoqqa kerakli xizmat ko'rsatasiz.",
+      "realWork": "Telefoningiz haqiqiy ish qiladi",
+      "realWork1": "Data Availability Sampling: telefoningiz blok ma'lumotlari mavjud va to'g'ri ekanligini tekshiradi",
+      "realWork2": "Inson ishtiroki: bot va spam oldini olish uchun bir odam-bitta hisobni isbotlaysiz",
+      "realWork3": "Bu vazifalar hammaga himoya beradi; ularsiz tarmoq zaiflashadi",
+      "valueSource": "Qiymatning ikki manbai",
+      "utility": "Foydalilik: odamlar tanlaydigan tez, arzon to'lovlar",
+      "consensus": "Konsensus: ko'proq odamlar qoidalarni tekshirib kelisha oladigan qiymat",
+      "distribution": "Mukofotlar qanday taqsimlanadi",
+      "newTokens": "Yangi UMT tokenlari yaratilib, tasdiqlangan telefon ishtirokchilariga taqsimlanadi (validatorlarga emas)",
+      "fees": "Tranzaksiya to'lovlari va builder takliflari ulushi telefon sentineliga bloklarni yakunlash uchun beriladi",
+      "treasury": "Kichik qismi doimiy texnik xizmat va barqarorlik dasturlari uchun",
+      "whyDifferent": "Nega bu boshqacha",
+      "btcProblem": "Bitcoin maxsus minerlarga (kapital talab qiladi) mukofot beradi",
+      "ethProblem": "Ethereum katta stakerlarga (kapital talab qiladi) mukofot beradi",
+      "umotuSolution": "Umotu oddiy telefonlarga (ishtirok qilish arzon) mukofot beradi",
+      "conclusion": "Bu sovg'a emas: umumiy moliyaviy infratuzilmani halol va foydali saqlaganingiz uchun to'lov."
+    },
+    "security": {
+      "title": "Hamyon xavfsizligi",
+      "subtitle": "Pulingizni himoyalang",
+      "intro": "Hamyoningiz faqat siz nazorat qiladigan raqamli seyfga o'xshaydi.",
+      "recovery": "12 so'z va shaxsiy kalit",
+      "recoveryText": "12 maxfiy so'z (tiklash iborasi) va shaxsiy kalitingiz hamyonni ochadi. Ulardan biriga ega bo'lgan har kim pulingizni ko'chirishi mumkin.",
+      "rules": "Oltin qoidalar",
+      "rule1": "12 so'z yoki shaxsiy kalitni HECH KIM bilan baham ko'rmang — hatto Umotu ishtirokchilari bilan ham.",
+      "rule2": "12 so'zni qog'ozga yozib, oflayn saqlang. Skrinshot, foto yoki bulutli eslatmalarda saqlamang.",
+      "rule3": "Shaxsiy kalitni eksport qilsangiz, uni oflayn saqlang (qog'oz, apparat yoki to'liq ishongan shifrlangan menejerda).",
+      "rule4": "12 so'z va shaxsiy kalitni yo'qotsangiz, hech kim hamyonni tiklay olmaydi.",
+      "warning": "Muhim",
+      "warningText": "Shaxsiy kalit to'liq kirish beradi. Uni ko'rsatish yoki boshqa ilovalarga nusxalash pulingizni xavf ostiga qo'yishi mumkin. Katta balanslar uchun apparat hamyondan foydalaning.",
+      "reveal": "Shaxsiy kalitni ko'rsatish / eksport qilish",
+      "revealText": "Shaxsiy kalitni Hamyon sozlamalarida ko'rsatish yoki eksport qilishingiz mumkin. Biometrika/PIN talab qilamiz, uni faqat bir necha soniya ko'rsatamiz va hech qachon yuklamaymiz. Katta balanslar uchun apparat hamyon tavsiya etiladi.",
+      "bestPractices": "Eng yaxshi amaliyotlar",
+      "best1": "Telefoningizda ekran qulfi va biometrikani yoqing.",
+      "best2": "Ilovani yangilab turing, eng so'nggi xavfsizlik tuzatishlarini oling.",
+      "best3": "Katta jamg'armalar uchun alohida hamyon ishlating; kundalik foydalanish uchun telefoningizda kichik miqdor saqlang.",
+      "scamBannerTitle": "Hech kim so'ramaydi",
+      "scamBannerText": "Kimdir 12 so'z yoki shaxsiy kalitni so'rasa, bu firibgarlik."
+    },
+    "stablecoins": {
+      "title": "Stablecoinlarni tushunish",
+      "subtitle": "Mahalliy valyutani kuzatuvchi raqamli pul",
+      "intro": "Stablecoinlar oddiy pulga (USD, ZAR, NGN) bog'langan raqamli tokenlar.",
+      "examples": "Misollar",
+      "example1": "1 ZAR1 ≈ 1 Janubiy Afrika randi",
+      "example2": "1 USD1 ≈ 1 AQSh dollari",
+      "example3": "1 NGN1 ≈ 1 Nigeriya nayrasi",
+      "backed": "Hamkorlar tomonidan chiqarilgan",
+      "backedText": "Umotu dagi stablecoinlar tartibga solingan hamkorlar tomonidan chiqariladi va rezervlar bilan 1:1 qiymatga ega bo'lishga mo'ljallangan. Chiqaruvchilar rezerv isbotlari va ayirboshlash shartlarini e'lon qiladi.",
+      "convert": "Naqdga aylantirish",
+      "convertText": "Hamkor banklar/almashinuvlar orqali aylantiring yoki qabul qilinadigan joylarda to'g'ridan-to'g'ri sarflang."
+    },
+    "economics": {
+      "title": "UMT iqtisodiyoti",
+      "subtitle": "Kim nima oladi va nega",
+      "intro": "UMT ning umumiy ta'minoti 100 milliard token. Ko'p qismi tarmoqni halol saqlaydigan oddiy telefon foydalanuvchilariga to'lanadi.",
+      "supply": "Ta'minot va taqsimot",
+      "supplyBullets": [
+        "Token ta'minotining katta qismi vaqt o'tishi bilan telefon ishtirokchilari uchun ajratilgan va Emission Controller orqali chiqariladi. Emission Controller kunlik chiqarishni qolgan ta'minotning 0,01% dan ko'p bo'lmagan miqdorda cheklaydi, bu uzoq muddatli barqarorlikni ta'minlaydi. Ushbu jadvalga ko'ra, 10 yildan keyin umumiy ta'minotning taxminan 68% qoladi va 50 yildan keyin taxminan 15% qoladi.",
+        "Ta'minotning kichik qismi ishga tushirishda maxsus maqsadlar uchun yaratiladi, jumladan dastlabki foydalanuvchi airdrop, jamiyat sotuvlari, jamg'arma ajratmalari va favqulodda zahira va boshqalar."
+      ],
+      "premine": "Ishga tushirish taqsimoti (vaqtinchalik, mainnet ishga tushirilganda o'zgarishi mumkin)",
+      "premineTable": [
+        {
+          "label": "Foydalanuvchi airdrop",
+          "value": "1.0%"
+        },
+        {
+          "label": "Jamoa sotuvi",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu jamg'armasi (timelocked)",
+          "value": "0.2%"
+        },
+        {
+          "label": "Favqulodda fond (boshqaruvli)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "Telefonlar uchun kunlik mukofotlar",
+      "emissionsText": "Har kuni tarmoq qolgan emissiya hovuzining eng ko'pi 0.01% ini chiqarishi mumkin. Tasdiqlangan telefonlar kuniga taxminan 10 dollar olishi uchun bu miqdorni byudjetlaymiz, ishtirok va bozor sharoitlariga qarab sozlaymiz.",
+      "fees": "To'lovlar va Sentinelar",
+      "feesText": "Sentinel yordamchilari (ixtiyoriy, ilg'or) tranzaksiya to'lovlari va builder takliflari ulushini oladi. Bu kunlik emissiyalardan alohida.",
+      "transparency": "Shaffoflik",
+      "transparencyText": "Vesting jadvallari va hamyonlar ommaviy. Kunlik emissiya cheklari va haqiqiy to'lovlar ilovada e'lon qilinadi.",
+      "disclaimerTitle": "Oddiy til eslatmasi",
+      "disclaimerText": "Bu investitsiya maslahati emas. Mukofotlar tarmoq siyosati va ishtirokka bog'liq. Ilova qat'iy daromadni kafolatlamaydi."
+    },
+    "contribute": {
+      "title": "Qanday hissa qo'shish mumkin",
+      "subtitle": "Umotu qurishga yordam bering",
+      "intro": "Umotu ochiq kod va jamoa boshqaruvida. Har kim yordam berishi mumkin — kod yozsa, tarjima qilsa yoki oddiy fikr bildirsa.",
+      "waysTitle": "Hissa qo'shish usullari",
+      "code": {
+        "title": "Kodni yaxshilash",
+        "text": "Xatolarni tuzatish, yangi funksiyalar qo'shish, testlar yozish yoki pull requestlarni ko'rib chiqish. Ilova, smart kontraktlar va backend xizmatlari uchun GitHub reposlarini tekshiring.",
+        "cta": "GitHub ni ko'rish",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Tarjimalarda yordam berish",
+        "text": "Ilovani o'z tilingizda tabiiy qiling. i18n locale fayllarini tahrirlang va har bir ekranni sinab ko'ring. Tahrirlaringiz millionlarga yordam beradi.",
+        "cta": "Tarjima qo'llanmasi",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "BIP-39 tillarini kengaytirish",
+        "text": "Yangi yoki yaxshilangan so'z ro'yxatlarini taklif qiling, shunda ko'proq odamlar 12 so'zli tiklash iborasini o'z tilida ko'ra oladi.",
+        "cta": "BIP-39 ni ko'rish",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Boshqaruvga qo'shilish",
+        "text": "Takliflarni o'qing, ochiq muhokama qiling va ilovada ovoz bering. Ovozingiz tarmoq parametrlarini va grant taqsimotini yo'naltiradi.",
+        "cta": "Boshqaruvni ochish",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "So'zni tarqatish",
+        "text": "Do'stlarga ayting, qo'llanmalar yozing, shortlar chiqaring, savollarga javob bering. Kuchli jamoa hammaga kuchli tarmoq beradi.",
+        "cta": "Umotu ni ulashish",
+        "url": "https://umotu.com"
+      },
+      "note": "Barcha hissalar ixtiyoriy. Grant taklifida ko'rsatilmaguncha rasmiy ish yoki kompensatsiya yo'q."
+    },
+    "decentralization": {
+      "title": "Nega desentralizatsiya",
+      "subtitle": "Yagona nazorat nuqtasi yo'q",
+      "intro": "Desentralizatsiya bitta kompaniya yoki hukumat tarmoqni yopishi yoki pulingizni musodara qilishi mumkin emasligini bildiradi.",
+      "benefits": "Siz uchun foydalari",
+      "benefit1": "Doimiy ish: 24/7 mavjud",
+      "benefit2": "Arzon to'lovlar: karta to'lovlari o'rniga kichik tarmoq to'lovlari",
+      "benefit3": "Chegarasiz: qiymatni global yuborish",
+      "benefit4": "Tsenzuraga chidamli: kalitlar sizda, pul sizniki",
+      "benefit5": "Shaffof: har kim tizim qanday ishlashini tekshirishi mumkin",
+      "howWorks": "Qanday ishlaydi",
+      "howWorksText": "Validatorlar har ~2 soniyada blok taklif qiladi. Telefonlar (sizniki kabi) engil tekshiruvlar bilan yakunlaydi. Ko'p kichik hissalar kuchli xavfsizlikka olib keladi."
+    },
+    "noCompany": {
+      "title": "Kompaniya yo'q, mijoz yo'q",
+      "subtitle": "Modelni tushuning",
+      "intro": "Protokolni nazorat qiluvchi 'Umotu, Inc.' yo'q. Umotu har kim ishlatishi mumkin bo'lgan ochiq qoida to'plami.",
+      "notCompany": "Umotu NIMA EMAS",
+      "notCompany1": "Mijoz hisoblari bo'lgan kompaniya EMAS",
+      "notCompany2": "Bank yoki pul o'tkazuvchi EMAS",
+      "notCompany3": "Yagona sub'ekt tomonidan nazorat qilinmaydi",
+      "notCompany4": "Tranzaksiyalarni qaytara olmaydi",
+      "whatIs": "Umotu NIMA",
+      "whatIs1": "Protokol: email yoki web kabi — ochiq, bir-biriga mos qoidalar",
+      "whatIs2": "Telefon birinchi: oddiy smartfonlar yordamida ishlaydi",
+      "whatIs3": "Jamoa boshqaruvida: siz mijoz emas, ishtirokchisiz",
+      "foundation": "Umotu jamg'armasi",
+      "foundationIntro": "Ekosistemani qo'llab-quvvatlovchi notijorat tashkilot (mos yozuv ilovalari, hujjatlar, jamoa dasturlari) lekin protokolni nazorat qilmaydi.",
+      "foundationTask1": "Mobil ilova va explorerni mos yozuv sifatida saqlaydi",
+      "foundationTask2": "Ba'zi ommaviy infratuzilmani boshqaradi (boshqalar o'zlarinikini ishlatishi mumkin)",
+      "foundationTask3": "Jamoa boshqaruvini muvofiqlashtiradi (yangiliklar, ovozlar)",
+      "foundationTask4": "Qo'llab-quvvatlanadigan stablecoinlarni ko'rib chiqadi va ro'yxatga oladi",
+      "foundationTask5": "Ta'lim va xavfsizlik qo'llanmalarini e'lon qiladi",
+      "foundationNote": "Jamg'arma hamyoningizga kira olmaydi va tranzaksiyalarni qaytara olmaydi."
+    },
+    "scamPrevention": {
+      "title": "Firibgarlikdan saqlaning",
+      "subtitle": "O'zingizni himoyalang",
+      "intro": "Umotu jamg'armasi HECH QACHON DM yubormaydi. 'Qo'llab-quvvatlash' deb da'vo qilgan har kim firibgar.",
+      "redFlags": "Qizil bayroqlar",
+      "redFlag1": "Mijoz qo'llab-quvvatlash deb da'vo qiluvchi kimdir",
+      "redFlag2": "Hisobni 'tasdiqlash' yoki 'yangilash' havolalari",
+      "redFlag3": "12 so'z yoki shaxsiy kalit talabi",
+      "redFlag4": "Pul yuborsangiz bonus token va'dasi",
+      "redFlag5": "Mukofotlarni 'faollashtirish'ni so'raydigan ilovalar yoki saytlar",
+      "truth": "Haqiqat",
+      "truth1": "Hamyonni reset qila oladigan mijoz qo'llab-quvvatlash yo'q",
+      "truth2": "Barcha rasmiy yangilanishlar shu ilovada paydo bo'ladi",
+      "truth3": "Umotu dan hech kim tiklash iborasi yoki shaxsiy kalitni so'ramaydi",
+      "truth4": "Bu ilovani faqat rasmiy Apple Store yoki Google Play dan yuklang",
+      "whatToDo": "Kimdir sizga murojaat qilsa",
+      "action1": "Javob bermang",
+      "action2": "Havolalarni bosmang",
+      "action3": "Ma'lumot baham ko'rmang",
+      "action4": "Bloklang va shikoyat qiling"
+    },
+    "airdrop": {
+      "title": "Testnet airdrop",
+      "subtitle": "Dastlabki foydalanuvchilar e'tirof etiladi",
+      "intro": "Siz ertasiz! Umotu testnetda. Faol testnet ishtirokchilari mainnet ishga tushganda ulush olishi mumkin.",
+      "howToQualify": "Qanday saralanasiz",
+      "step1": "Ilovada hamyon yarating",
+      "step2": "Inson tasdiqlashini (Proof of Human) tugallang",
+      "step3": "Testnet davomida ilovani muntazam ishlating",
+      "whenAirdrop": "Airdrop qachon?",
+      "whyTestnet": "Testnet muhim: foydalanuvchilar hamyon xavfsizligini o'rganadi, tizim xavfsizlik, mustahkamlik va samaradorlik uchun sinovdan o'tkaziladi mainnetdan oldin.",
+      "timeline": "Mainnet 2026 yil 1 yoki 2 choragida kutilmoqda. Airdrop shu vaqt atrofida bo'ladi.",
+      "howMuch": "Qancha olasiz?",
+      "totalPool": "Umumiy airdrop hovuzi: 1,000,000,000 UMT token. UMT narxiga va ishtirokchilar soniga bog'liq ulushingiz.",
+      "scenario2": "1 million foydalanuvchi: har biriga ~1,000 UMT, kutilgan narx ~$1, airdrop qiymati ~$1,000",
+      "scenario3": "10 million foydalanuvchi: har biriga ~100 UMT, kutilgan narx ~$20, airdrop qiymati ~$2,000",
+      "scenario4": "100 million foydalanuvchi: har biriga ~10 UMT, kutilgan narx ~$300, airdrop qiymati ~$3,000",
+      "disclaimer": "Bu faqat taxminlar, kafolat emas. Haqiqiy qiymatlar bozor sharoitlari va dastur qoidalariga bog'liq.",
+      "whatYouGet": "Nima olasiz",
+      "reward": "Mainnetda testnet hamyoningiz ishtirok va dastur qoidalariga ko'ra haqiqiy token olishi mumkin. Ertaroq va faolroq foydalanuvchilar ustunlikka ega.",
+      "note": "Eslatma: Testnet tokenlari qiymatsiz. Mainnetdagi har qanday taqsimot ishga tushirishdagi dastur siyosatiga bog'liq. Airdrop haqidagi barcha yangiliklar faqat shu ilovada e'lon qilinadi."
+    },
+    "gettingStarted": {
+      "title": "Boshlash",
+      "subtitle": "Dastlabki besh daqiqa",
+      "intro": "Tez o'rnatish:",
+      "checklist": "O'rnatish ro'yxati",
+      "check1": "1) Tilingizni tanlang (tugallandi!)",
+      "check2": "2) Hamyon yarating yoki import qiling",
+      "check3": "3) MUHIM: 12 so'zni qog'ozga yozing",
+      "check4": "4) Inson tasdiqlashini tugallang (tez skaner)",
+      "check5": "5) Kunlik mukofot olish uchun ilovani ishlatib turing",
+      "tips": "Pro maslahatlar",
+      "tip1": "Tekshiruvlar orqa fonda ishlashi uchun ruxsat bering",
+      "tip2": "Mukofotlarni ko'rish uchun har kuni tekshiring",
+      "tip3": "Do'stlarni taklif qiling — ko'proq foydalanuvchi tarmoqni kuchliroq qiladi"
+    }
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "error": "Xato",
+    "retry": "Qayta urinish",
+    "cancel": "Bekor qilish",
+    "save": "Saqlash",
+    "done": "Tugadi",
+    "continue": "Davom etish",
+    "confirm": "Tasdiqlash",
+    "yes": "Ha",
+    "no": "Yo'q",
+    "ok": "OK",
+    "success": "Muvaffaqiyat",
+    "failed": "Muvaffaqiyatsiz",
+    "copied": "Nusxalandi!",
+    "pullToRefresh": "Yangilash uchun pastga torting",
+    "notSet": "O'rnatilmagan"
+  },
+  "errors": {
+    "networkError": "Tarmoq xatosi. Ulanishingizni tekshiring.",
+    "genericError": "Nimadir noto'g'ri ketdi. Qayta urinib ko'ring.",
+    "walletNotFound": "Hamyon topilmadi",
+    "transactionFailed": "Tranzaksiya muvaffaqiyatsiz",
+    "invalidInput": "Noto'g'ri kiritish"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Umotu ga xush kelibsiz",
+  "onboard_wallet_title": "Hamyoningizni o'rnating",
+  "onboard_wallet_explain": "Mukofot olish uchun hamyon yarating yoki import qiling.",
+  "wallet_create": "Yangi hamyon yaratish",
+  "wallet_import": "Hamyonni import qilish",
+  "wallet_import_explain": "12 so'zli tiklash iborasini kiriting",
+  "wallet_created": "Hamyon tayyor",
+  "wallet_save": "Qurilmaga saqlash",
+  "wallet_backup_title": "Tiklash iborasini zaxiralash",
+  "wallet_backup_explain": "Bu 12 so'zni tartib bilan yozing. Qurilmangizni yo'qotsangiz hamyonni tiklashning YAGONA usuli shu.",
+  "wallet_backup_warning": "Tiklash iborasini hech kim bilan baham ko'rmang. Bu so'zlarga ega bo'lgan har kim pulingizga kirishi mumkin.",
+  "wallet_backup_confirm": "Tiklash iborasini yozib oldim",
+  "wallet_backup_done": "Iborani saqladim",
+  "wallet_save_first": "Avval tiklash iborasini saqlang",
+  "poh_title": "Insonni tasdiqlash",
+  "continue": "Davom etish",
+  "or": "YOKI",
+  "seedReveal": {
+    "title": "Tiklash iborasi",
+    "intro": "Tiklash iborasi qurilmaga kirishni yo'qotsangiz hamyonni tiklashning yagona usuli. Uni yozib, xavfsiz oflayn saqlang.",
+    "displayLanguage": "{{language}} da ko'rsatilmoqda",
+    "hiddenMsg": "Iborangiz xavfsizlik uchun yashirilgan. Ko'rsatish uchun pastga bosing.",
+    "showButton": "Iborani ko'rsatish",
+    "noScreenshot": "Tiklash iborasining skrinshotini olmang.",
+    "checkTitle": "Zaxirangizni tasdiqlang",
+    "checkPrompt": "To'g'ri yozganingizni tasdiqlash uchun pastdagi so'zlarni kiriting:",
+    "checkWordN": "{{n}}-so'z",
+    "checkIncorrect": "Bir yoki bir nechta so'z noto'g'ri. Zaxirangizni tekshiring.",
+    "ackWritten": "Tiklash iborasini yozib oldim",
+    "ackCannotRecover": "Umotu hamyonimni tiklay olmasligini tushunaman",
+    "cancel": "Bekor qilish",
+    "continue": "Saqladim"
+  }
+}

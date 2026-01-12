@@ -1,0 +1,1418 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "10 đô la mỗi ngày, cho mọi người ở mọi nơi"
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "wallet": "Ví",
+    "miniapps": "MiniApps",
+    "back": "Quay lại",
+    "scan": "Quét",
+    "settings": "Cài đặt",
+    "close": "Đóng"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Người dùng đã xác minh",
+      "umtPrice": "Giá UMT"
+    },
+    "quickActions": {
+      "news": "Tin tức",
+      "vote": "Quản trị",
+      "governance": "Quản trị",
+      "learn": "Học hỏi",
+      "network": "Mạng lưới"
+    },
+    "setupProgress": {
+      "title": "Tiến độ thiết lập",
+      "steps": {
+        "language": "Ngôn ngữ",
+        "wallet": "Ví",
+        "verifyHuman": "Xác minh con người",
+        "complete": "Hoàn thành"
+      },
+      "continue": "Tiếp tục",
+      "changeChoice": "Thay đổi lựa chọn",
+      "requiresLanguage": "Vui lòng chọn ngôn ngữ trước",
+      "requiresWallet": "Vui lòng tạo ví trước"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Phần thưởng hàng ngày",
+      "totalEarned": "Tổng đã kiếm được",
+      "lastClaimed": "Lần nhận gần nhất",
+      "never": "Chưa bao giờ",
+      "configure": "Cấu hình",
+      "loading": "Đang tải phần thưởng...",
+      "noWallet": "Không có ví",
+      "autoClaim": {
+        "label": "Tự động nhận:",
+        "active": "Đang hoạt động",
+        "setupNow": "Thiết lập ngay",
+        "expired": "Đã hết hạn",
+        "tapToSetup": "Chạm để bật nhận phần thưởng hàng ngày tự động"
+      }
+    },
+    "sentinel": {
+      "title": "Thu nhập Sentinel",
+      "manage": "Quản lý",
+      "loading": "Đang tải...",
+      "status": "Trạng thái",
+      "statuses": {
+        "notBonded": "Chưa bond",
+        "bonded": "Đã bond",
+        "unbonding": "Đang unbond"
+      },
+      "claimable": "Có thể nhận",
+      "accruing": "Đang tích lũy",
+      "bonded": "Đã bond"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Phần thưởng hàng ngày tự động",
+      "description": "Bật <bold>tự động nhận</bold> để nhận phần thưởng UBI 10 đô la hàng ngày tự động—không cần nhận thủ công!",
+      "benefits": {
+        "midnight": "Nhận vào lúc nửa đêm theo múi giờ của bạn",
+        "lowerFees": "Phí gas thấp hơn 80% (gộp với người dùng khác)",
+        "disable": "Bạn có thể tắt bất kỳ lúc nào trong Cài đặt"
+      },
+      "notice": "Bạn sẽ ký một thông điệp ủy quyền một lần để relay của chúng tôi nhận thay bạn. Không chia sẻ khóa riêng tư.",
+      "maybeLater": "Để sau",
+      "enableNow": "Bật ngay"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Cài đặt Tự động Nhận",
+      "description": "Tự động nhận phần thưởng hàng ngày của bạn.",
+      "checking": "Đang kiểm tra trạng thái...",
+      "status": "Trạng thái",
+      "enabled": "Đã bật",
+      "disabled": "Đã tắt",
+      "lastClaimed": "Lần nhận gần nhất",
+      "neverClaimed": "Chưa bao giờ",
+      "nextClaim": "Lần nhận tiếp theo",
+      "expiresAt": "Hết hạn vào",
+      "timezone": "Múi giờ",
+      "preferredHour": "Giờ ưu tiên",
+      "preferredHourHint": "Chọn thời gian tự động nhận nên chạy",
+      "enableButton": "Bật Tự động Nhận",
+      "disableButton": "Tắt Tự động Nhận",
+      "enabling": "Đang bật...",
+      "disabling": "Đang tắt...",
+      "enableSuccess": "Đã bật tự động nhận!",
+      "enableError": "Không thể bật",
+      "disableSuccess": "Đã tắt tự động nhận",
+      "disableError": "Không thể tắt",
+      "updateButton": "Cập nhật Cài đặt",
+      "updating": "Đang cập nhật..."
+    },
+    "manual": {
+      "title": "Nhận thủ công",
+      "description": "Nếu bạn cần tiền sớm hơn, hãy nhận phần thưởng tiếp theo ngay bây giờ. Nhận thủ công sử dụng gas của ví bạn. Nhận tự động rẻ hơn nếu bạn chờ đợi. Nếu ví của bạn chưa có tiền, hãy bật nhận tự động hoặc nạp gas gốc trước khi nhận thủ công.",
+      "dayLabel": "Ngày phần thưởng",
+      "claimButton": "Nhận ngay",
+      "claiming": "Đang nhận...",
+      "success": "Đã gửi yêu cầu nhận",
+      "successWithId": "Đã gửi yêu cầu nhận (id: {{id}})",
+      "error": "Không thể nhận",
+      "noProof": "Bằng chứng phần thưởng chưa được công bố. Hãy thử lại sau khi ảnh chụp hôm nay được công bố.",
+      "unauthorized": "Xác thực relayer thất bại. Vui lòng thử lại hoặc liên hệ hỗ trợ.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "Số ngày thưởng khả dụng: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "Phạm vi: {{start}} đến {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} ngày nữa sau lô này",
+      "batchSuccess": "Đã claim {{count}} ngày thành công",
+      "claimingProgress": "Đang claim {{claimed}}/{{total}}...",
+      "claimAllButton": "Claim tất cả {{count}} ngày"
+    },
+    "timezone": {
+      "title": "Chọn Múi giờ",
+      "search": "Tìm kiếm múi giờ...",
+      "current": "Lựa chọn hiện tại",
+      "searchResults": "Kết quả tìm kiếm",
+      "noResults": "Không tìm thấy kết quả",
+      "detected": "Đã phát hiện",
+      "popular": "Múi giờ phổ biến",
+      "regions": {
+        "Americas": "Châu Mỹ",
+        "Europe": "Châu Âu",
+        "Asia": "Châu Á",
+        "Africa": "Châu Phi",
+        "Oceania": "Châu Đại Dương"
+      }
+    },
+    "payout": {
+      "title": "Ưu tiên Thanh toán",
+      "description": "Chọn loại tiền thanh toán ưu tiên của bạn.",
+      "current": "Hiện tại",
+      "saved": "Đã lưu",
+      "saveError": "Lỗi khi lưu",
+      "showMore": "Hiển thị thêm ({{count}})",
+      "showLess": "Hiển thị ít hơn",
+      "native": "Token Gốc",
+      "stablecoin": "Stablecoin",
+      "popular": "Phổ biến",
+      "allCurrencies": "Tất cả Tiền tệ"
+    }
+  },
+  "wallet": {
+    "title": "Ví",
+    "testnetNotice": "Token testnet không có giá trị thực",
+    "totalBalance": "Tổng số dư",
+    "balance": "Số dư",
+    "address": "Địa chỉ",
+    "copyAddress": "Sao chép Địa chỉ",
+    "addressCopied": "Đã sao chép địa chỉ",
+    "receive": "Nhận",
+    "send": "Gửi",
+    "swap": "Hoán đổi",
+    "swapComingSoon": "Hoán đổi sắp có",
+    "history": "Lịch sử",
+    "tokens": "Token",
+    "collectibles": "Bộ sưu tập",
+    "noTokens": "Chưa cấu hình token nào",
+    "nativeToken": "Token Gốc",
+    "loading": "Đang tải...",
+    "refreshing": "Đang làm mới...",
+    "balancesUpdated": "Đã cập nhật số dư",
+    "menu": {
+      "manageTokens": "Quản lý Token",
+      "addressBook": "Sổ địa chỉ",
+      "walletSettings": "Cài đặt Ví",
+      "showBalances": "Hiển thị Số dư",
+      "hideBalances": "Ẩn Số dư",
+      "showZeroTokens": "Hiển thị Token có số dư 0",
+      "hideZeroTokens": "Ẩn Token có số dư 0",
+      "refresh": "Làm mới"
+    },
+    "manageTokens": {
+      "title": "Quản lý Token",
+      "info": "Thêm token ERC-20 tùy chỉnh. Token hệ thống đã được bao gồm mặc định.",
+      "addToken": "Thêm Token",
+      "adding": "Đang thêm...",
+      "contractAddress": "Địa chỉ hợp đồng token (0x...)",
+      "autoFetch": "Ký hiệu và số thập phân được lấy tự động",
+      "customTokens": "Token Tùy chỉnh",
+      "noCustomTokens": "Chưa thêm token tùy chỉnh nào.",
+      "addUsingForm": "Thêm token bằng biểu mẫu phía trên.",
+      "systemToken": "Token này là token hệ thống và đã được bao gồm.",
+      "fetchingMetadata": "Đang lấy siêu dữ liệu token...",
+      "addedSuccess": "Đã thêm token thành công",
+      "enterValidAddress": "Nhập địa chỉ token hợp lệ",
+      "save": "Lưu"
+    },
+    "addressBook": {
+      "title": "Sổ địa chỉ",
+      "addContact": "Thêm Liên hệ",
+      "nameLabel": "Tên hoặc nhãn",
+      "walletAddress": "Địa chỉ ví (0x...)",
+      "savedContacts": "Liên hệ Đã lưu",
+      "noContacts": "Chưa lưu liên hệ nào.",
+      "addForQuickSending": "Thêm liên hệ để gửi nhanh hơn.",
+      "enterValidAddress": "Nhập địa chỉ hợp lệ",
+      "addLabel": "Thêm nhãn",
+      "save": "Lưu"
+    },
+    "settings": {
+      "title": "Cài đặt Ví",
+      "export": {
+        "title": "Xuất Ví",
+        "description": "Không bao giờ chia sẻ cụm từ khôi phục hoặc khóa riêng tư của bạn. Hãy lưu trữ chúng an toàn ngoại tuyến.",
+        "recoveryPhrase": "Cụm từ Khôi phục",
+        "recoveryPhraseNotAvailable": "Cụm từ khôi phục không khả dụng (đã nhập bằng khóa riêng tư)",
+        "privateKey": "Khóa Riêng tư",
+        "privateKeyWarning": "Khóa Riêng tư (giữ bí mật!)",
+        "showPhrase": "Hiển thị Cụm từ Khôi phục",
+        "showKey": "Hiển thị Khóa Riêng tư",
+        "warning": "Không bao giờ chia sẻ cụm từ khôi phục hoặc khóa riêng tư với bất kỳ ai.",
+        "copy": "Sao chép",
+        "copied": "Đã sao chép!",
+        "hide": "Ẩn",
+        "clipboardWarning": "Bộ nhớ tạm có thể bị ứng dụng khác đọc. Sẽ tự xóa sau 30 giây.",
+        "verifyForKey": "Xác minh để Hiển thị Khóa Riêng tư",
+        "verifyForSeed": "Xác minh để Hiển thị Cụm từ Khôi phục",
+        "verifyDescription": "Nhập mật khẩu hoặc PIN để hiển thị thông tin ví nhạy cảm."
+      },
+      "import": {
+        "title": "Nhập Ví",
+        "description": "Việc nhập sẽ thay thế ví hiện tại. Hãy chắc chắn đã sao lưu ví hiện có trước. Lưu ý bạn sẽ cần xác minh lại trạng thái PoH sau khi nhập.",
+        "byPhrase": "Cụm từ Khôi phục",
+        "byPrivateKey": "Khóa Riêng tư",
+        "phrasePlaceholder": "Nhập cụm từ 12 hoặc 24 từ…",
+        "keyPlaceholder": "Nhập khóa riêng tư 0x…",
+        "importButton": "Nhập Ví",
+        "importing": "Đang nhập...",
+        "success": "Đã nhập ví thành công!"
+      },
+      "dangerZone": {
+        "title": "Vùng Nguy hiểm",
+        "description": "Các hành động này không thể hoàn tác. Hãy chắc chắn đã sao lưu ví của bạn.",
+        "forgetWallet": "Quên Ví",
+        "forgetDescription": "Xóa ví khỏi thiết bị này. Hãy chắc chắn đã sao lưu cụm từ khôi phục.",
+        "confirmTitle": "Quên Ví?",
+        "confirmMessage": "Điều này sẽ xóa ví khỏi thiết bị này. Hãy chắc chắn đã sao lưu cụm từ khôi phục trước.",
+        "cancel": "Hủy",
+        "confirm": "Quên Ví",
+        "walletForgotten": "Đã quên ví",
+        "unableToForget": "Không thể quên ví",
+        "resetWallet": "Đặt lại Ví",
+        "resetDescription": "Xóa hoàn toàn tất cả dữ liệu ví và bắt đầu lại từ đầu."
+      },
+      "authPrompt": "Xác thực để hiển thị khóa riêng tư"
+    }
+  },
+  "reset": {
+    "title": "Đặt lại Ví",
+    "dangerTitle": "Hành động này không thể hoàn tác!",
+    "warning1": "Việc đặt lại ví sẽ xóa vĩnh viễn:",
+    "bullet1": "Ví và khóa riêng tư của bạn",
+    "bullet2": "Cụm từ khôi phục của bạn",
+    "bullet3": "Tất cả cài đặt và tùy chọn ứng dụng",
+    "bullet4": "Lịch sử giao dịch",
+    "recoveryNote": "Nếu bạn có cụm từ khôi phục 12 từ, bạn có thể khôi phục ví sau khi đặt lại.",
+    "continueButton": "Tôi hiểu, Tiếp tục",
+    "confirmTitle": "Xác nhận Đặt lại",
+    "confirmDescription": "Gõ \"RESET\" bên dưới để xác nhận bạn muốn xóa tất cả dữ liệu ví.",
+    "placeholder": "Gõ RESET",
+    "typeMismatch": "Vui lòng gõ RESET để xác nhận",
+    "resetButton": "Đặt lại Ví Vĩnh viễn",
+    "resettingTitle": "Đang đặt lại...",
+    "resettingDescription": "Đang xóa tất cả dữ liệu ví. Vui lòng chờ...",
+    "completeTitle": "Đặt lại Hoàn tất",
+    "completeDescription": "Ví của bạn đã được đặt lại. Bạn có thể thiết lập ví mới hoặc nhập ví hiện có.",
+    "startFresh": "Bắt đầu Mới",
+    "error": "Không thể đặt lại ví. Vui lòng thử lại."
+  },
+  "export": {
+    "verifyTitle": "Xác minh Danh tính",
+    "verifyDescription": "Nhập mật khẩu để xuất ví của bạn.",
+    "verify": "Xác minh",
+    "verificationFailed": "Xác minh thất bại",
+    "passphraseTitle": "Đặt Mật khẩu Xuất",
+    "passphraseDescription": "Chọn một mật khẩu mạnh để mã hóa bản sao lưu. Bạn sẽ cần mật khẩu này để nhập ví sau này.",
+    "enterPassphrase": "Nhập mật khẩu",
+    "passphraseTooWeak": "Mật khẩu quá yếu. Sử dụng ít nhất 8 ký tự.",
+    "includeSeed": "Bao gồm Cụm từ Khôi phục",
+    "includeSeedDescription": "Khuyến nghị để sao lưu đầy đủ",
+    "confirmTitle": "Xác nhận Mật khẩu",
+    "confirmDescription": "Nhập lại mật khẩu để xác nhận.",
+    "confirmPassphrase": "Xác nhận mật khẩu",
+    "passphraseMismatch": "Mật khẩu không khớp",
+    "warning": "Lưu trữ bản sao lưu này an toàn. Bất kỳ ai có quyền truy cập tệp và mật khẩu này đều có thể truy cập ví của bạn.",
+    "exportNow": "Xuất Ví",
+    "exportingTitle": "Đang xuất...",
+    "exportingDescription": "Đang mã hóa và chuẩn bị bản sao lưu ví...",
+    "successTitle": "Xuất Hoàn tất",
+    "successDescription": "Bản sao lưu ví đã mã hóa của bạn đã được tạo. Hãy lưu trữ an toàn.",
+    "rememberPassphrase": "Hãy nhớ mật khẩu xuất - bạn sẽ cần nó để nhập bản sao lưu này.",
+    "errorTitle": "Xuất Thất bại",
+    "failed": "Xuất thất bại. Vui lòng thử lại.",
+    "tryAgain": "Thử lại",
+    "exportKeystore": "Xuất Bản sao lưu Đã mã hóa",
+    "exportKeystoreDesc": "Lưu tệp keystore đã mã hóa"
+  },
+  "security": {
+    "title": "Bảo mật Ví của Bạn",
+    "subtitle": "Thiết lập mật khẩu hoặc PIN để bảo vệ ví",
+    "checkingDevice": "Đang kiểm tra bảo mật thiết bị...",
+    "passwordOption": "Mật khẩu",
+    "passwordDesc": "8+ ký tự, chữ cái và số",
+    "pinOption": "PIN 6 Chữ số",
+    "pinDesc": "Nhanh chóng và dễ nhớ",
+    "enterPin": "Nhập PIN 6 chữ số",
+    "confirmPin": "Xác nhận PIN của bạn",
+    "enterPassword": "Nhập mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "enableBiometrics": "Bật {{type}}?",
+    "biometricsDesc": "Sử dụng {{type}} để mở khóa nhanh. Bạn có thể thay đổi sau trong Cài đặt.",
+    "enableBiometricsButton": "Bật {{type}}",
+    "enableBiometricsPrompt": "Xác thực để bật mở khóa sinh trắc học",
+    "skipBiometrics": "Bỏ qua lúc này",
+    "setupComplete": "Thiết lập Hoàn tất!",
+    "walletSecured": "Ví của bạn giờ đã được bảo mật!",
+    "continue": "Tiếp tục",
+    "passwordTooWeak": "Mật khẩu quá yếu. Vui lòng làm theo gợi ý.",
+    "pinMismatch": "PIN không khớp",
+    "passwordMismatch": "Mật khẩu không khớp",
+    "setupError": "Thiết lập thất bại. Vui lòng thử lại.",
+    "passwordTitle": "Mật khẩu",
+    "passwordDescription": "8+ ký tự, bảo mật mạnh hơn",
+    "pinTitle": "PIN 6 Chữ số",
+    "pinDescription": "Truy cập nhanh, dễ nhớ"
+  },
+  "lock": {
+    "title": "Mở khóa Umotu",
+    "lockedOut": "Bị khóa",
+    "tooManyAttempts": "Quá nhiều lần thử. Thử lại sau {{time}}.",
+    "attemptsRemaining": "Còn {{count}} lần thử",
+    "enterPassword": "Nhập mật khẩu",
+    "unlock": "Mở khóa",
+    "wrongPin": "PIN sai",
+    "wrongPassword": "Mật khẩu sai",
+    "verificationError": "Xác minh thất bại",
+    "biometricsPrompt": "Mở khóa ví của bạn",
+    "unlockWithFaceId": "Mở khóa bằng Face ID?",
+    "unlockWithFingerprint": "Mở khóa bằng vân tay?",
+    "forgotPassword": "Quên mật khẩu?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Thiết bị Không hỗ trợ",
+    "emulatorMessage": "Ứng dụng này không thể chạy trên trình giả lập vì lý do bảo mật.",
+    "exitApp": "Thoát",
+    "continueAnyway": "Tiếp tục Dù sao"
+  },
+  "settingsSecurity": {
+    "title": "Bảo mật",
+    "autoLock": "Tự động Khóa",
+    "autoLockDesc": "Khóa ví sau thời gian không hoạt động",
+    "faceId": "Face ID",
+    "fingerprint": "Vân tay",
+    "biometricsDesc": "Mở khóa nhanh bằng sinh trắc học",
+    "changePin": "Thay đổi PIN",
+    "changePassword": "Thay đổi Mật khẩu",
+    "changeDesc": "Cập nhật thông tin xác thực bảo mật",
+    "enableBiometrics": "Bật mở khóa sinh trắc học",
+    "enterCurrent": "Nhập {{type}} hiện tại",
+    "enterNew": "Nhập {{type}} mới",
+    "confirmNew": "Xác nhận {{type}} mới",
+    "currentPassword": "Mật khẩu hiện tại",
+    "newPassword": "Mật khẩu mới",
+    "confirmNewPassword": "Xác nhận mật khẩu mới",
+    "changeNow": "Thay đổi Ngay",
+    "success": "Thành công",
+    "pinChanged": "Đã thay đổi PIN thành công",
+    "passwordChanged": "Đã thay đổi mật khẩu thành công",
+    "changeFailed": "Thay đổi thông tin xác thực thất bại",
+    "autoLockOptions": {
+      "immediately": "Ngay lập tức",
+      "after1min": "Sau 1 phút",
+      "after5min": "Sau 5 phút",
+      "after15min": "Sau 15 phút",
+      "after1hour": "Sau 1 giờ",
+      "never": "Không bao giờ"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Vui lòng Chờ",
+    "cooldownMessage": "Vì lý do bảo mật, bạn có thể hiển thị khóa lại sau {{time}}.",
+    "cooldownReason": "Điều này ngăn ứng dụng độc hại truy cập khóa nhanh chóng."
+  },
+  "passwordVerify": {
+    "title": "Xác minh Danh tính",
+    "description": "Nhập mật khẩu hoặc PIN để hiển thị thông tin ví nhạy cảm",
+    "verify": "Xác minh"
+  },
+  "passwordValidation": {
+    "veryWeak": "Rất yếu",
+    "weak": "Yếu",
+    "fair": "Trung bình",
+    "good": "Tốt",
+    "strong": "Mạnh",
+    "tooShort": "Mật khẩu phải có ít nhất 8 ký tự",
+    "commonPassword": "Đây là mật khẩu thường dùng",
+    "lengthSuggestion": "Sử dụng ít nhất 12 ký tự để bảo mật tốt hơn",
+    "mixedCaseSuggestion": "Kết hợp chữ hoa và chữ thường",
+    "numberSuggestion": "Thêm một số số",
+    "specialCharSuggestion": "Thêm ký tự đặc biệt (!@#$%)"
+  },
+  "forgot": {
+    "title": "Đặt lại Thông tin Xác thực",
+    "warning": "Để đặt lại mật khẩu hoặc PIN, bạn cần nhập cụm từ seed ví. Điều này chứng minh bạn sở hữu ví.",
+    "warningText": "Không bao giờ chia sẻ cụm từ seed với bất kỳ ai.",
+    "continue": "Tôi Hiểu, Tiếp tục",
+    "enterSeed": "Nhập Cụm từ Seed",
+    "seedDescription": "Nhập cụm từ seed 12 hoặc 24 từ. Phân cách mỗi từ bằng dấu cách.",
+    "seedPlaceholder": "Nhập cụm từ seed...",
+    "verifySeed": "Xác minh Cụm từ Seed",
+    "invalidSeed": "Vui lòng nhập cụm từ seed 12 hoặc 24 từ hợp lệ",
+    "chooseMethod": "Chọn Phương thức Bảo mật",
+    "methodDescription": "Bạn muốn bảo mật ví như thế nào?",
+    "newPassword": "Tạo Mật khẩu Mới",
+    "newPin": "Tạo PIN Mới",
+    "newPasswordDesc": "Chọn mật khẩu mạnh (8+ ký tự)",
+    "newPinDesc": "Nhập PIN 6 chữ số",
+    "confirmPassword": "Xác nhận Mật khẩu",
+    "confirmPin": "Xác nhận PIN",
+    "confirmPasswordDesc": "Nhập lại mật khẩu để xác nhận",
+    "confirmPinDesc": "Nhập lại PIN để xác nhận",
+    "resetNow": "Đặt lại Ngay",
+    "complete": "Đặt lại Hoàn tất",
+    "completeDescription": "Thông tin xác thực của bạn đã được đặt lại. Bạn có thể mở khóa ví bằng mật khẩu hoặc PIN mới.",
+    "unlockNow": "Mở khóa Ví",
+    "passwordTooWeak": "Mật khẩu quá yếu. Vui lòng chọn mật khẩu mạnh hơn.",
+    "passwordMismatch": "Mật khẩu không khớp",
+    "pinMismatch": "PIN không khớp",
+    "resetFailed": "Đặt lại thông tin xác thực thất bại. Vui lòng xác minh cụm từ seed.",
+    "resetError": "Đã xảy ra lỗi. Vui lòng thử lại."
+  },
+  "send": {
+    "title": "Gửi",
+    "selectToken": "Chọn Token",
+    "selectTokenInfo": "Chọn token để gửi. Chỉ hiển thị token có số dư.",
+    "noTokensWithBalance": "Không có token nào có số dư",
+    "addTokensFirst": "Vui lòng thêm token vào ví trước",
+    "enterAmount": "Nhập Số lượng",
+    "enterRecipient": "Nhập Người nhận",
+    "review": "Xem lại",
+    "amount": "Số lượng",
+    "recipient": "Người nhận",
+    "recipientPlaceholder": "Địa chỉ ví 0x...",
+    "networkFee": "Phí Mạng",
+    "gasToken": "Thanh toán gas bằng",
+    "payingWith": "Thanh toán Bằng",
+    "payGasWith": "Thanh toán Gas Bằng",
+    "nativeGas": "UMT (gốc)",
+    "stableGas": "Stable Gas",
+    "selectStable": "Chọn stable",
+    "max": "Tối đa",
+    "next": "Tiếp theo",
+    "continue": "Tiếp tục",
+    "confirm": "Xác nhận Gửi",
+    "confirmSend": "Xác nhận Gửi",
+    "sending": "Đang gửi...",
+    "failed": "Giao dịch Thất bại",
+    "viewInExplorer": "Xem trên Explorer",
+    "done": "Xong",
+    "cancel": "Hủy",
+    "send": "Gửi",
+    "balance": "Số dư",
+    "available": "Khả dụng",
+    "to": "Đến",
+    "network": "Mạng",
+    "step": "Bước",
+    "estimating": "Đang ước tính…",
+    "umtNative": "UMT (gốc)",
+    "txSpeed": "Tốc độ Giao dịch",
+    "transactionSpeed": "Tốc độ Giao dịch",
+    "speed": {
+      "slow": "Chậm",
+      "normal": "Bình thường",
+      "fast": "Nhanh"
+    },
+    "gasNotice": {
+      "stablecoin": "Gas sẽ được thanh toán bằng stablecoin.",
+      "reserved": "Chúng tôi đã dành {{amount}} {{symbol}} cho gas; bạn có thể gửi tối đa {{max}}."
+    },
+    "errors": {
+      "invalidAddress": "Địa chỉ người nhận không hợp lệ",
+      "invalidAmount": "Nhập số lượng hợp lệ",
+      "insufficientBalance": "Số dư không đủ",
+      "insufficientGas": "Số dư không đủ để trả gas",
+      "insufficientGasWithHint": "Số dư không đủ để trả gas. Thêm UMT hoặc stablecoin được hỗ trợ.",
+      "notEnoughForGas": "Không đủ số dư để trả gas",
+      "noStableGas": "Không đủ UMT để trả gas và không có stablecoin hỗ trợ nào có thể bù đắp.",
+      "permitFailed": "Permit hoặc phê duyệt cho token gas thất bại",
+      "relayNotConfigured": "Relay gas stable chưa được cấu hình",
+      "transactionReverted": "Giao dịch bị đảo ngược trên chain.",
+      "approvalNeeded": "Token gas cần phê duyệt nhưng không có UMT để phê duyệt. Thêm một lượng nhỏ UMT hoặc sử dụng token hỗ trợ permit."
+    },
+    "addressBook": {
+      "title": "Sổ Địa Chỉ",
+      "addNew": "Thêm Mới",
+      "noContacts": "Chưa có địa chỉ nào được lưu",
+      "saveForQuickAccess": "Lưu địa chỉ để truy cập nhanh",
+      "editContact": "Sửa Liên Hệ",
+      "deleteContact": "Xóa Liên Hệ",
+      "addressNotSaved": "Địa chỉ chưa được lưu",
+      "addLabel": "Thêm nhãn",
+      "enterValidAddress": "Vui lòng nhập địa chỉ hợp lệ trước",
+      "saved": "Đã lưu",
+      "save": "Lưu"
+    },
+    "success": {
+      "title": "Giao dịch Đã Gửi!",
+      "hash": "Hash",
+      "viewInExplorer": "Xem trên Explorer",
+      "close": "Đóng"
+    },
+    "batch": {
+      "mode": "Chế Độ Hàng Loạt",
+      "singleMode": "Người Nhận Đơn",
+      "addRecipient": "Thêm người nhận",
+      "noRecipients": "Chưa thêm người nhận nào",
+      "addFromTagOrBook": "Thêm từ thẻ hoặc sổ",
+      "invalidAddress": "Địa chỉ không hợp lệ: {{address}}",
+      "invalidAmount": "Số tiền không hợp lệ cho {{recipient}}",
+      "totalExceedsBalance": "Tổng vượt quá số dư",
+      "sendingTo": "Gửi đến {{count}} người nhận",
+      "sendingTo_plural": "Gửi đến {{count}} người nhận",
+      "recipients": "Người nhận",
+      "addresses": "{{count}} địa chỉ",
+      "addresses_plural": "{{count}} địa chỉ",
+      "addByTag": "Thêm theo thẻ",
+      "noTags": "Chưa có thẻ nào",
+      "createFirstTag": "Tạo thẻ đầu tiên trong sổ địa chỉ",
+      "addFromTag": "Thêm từ thẻ",
+      "selectTag": "Chọn thẻ",
+      "remove": "Xóa",
+      "sendAll": "Gửi Tất Cả ({{count}})",
+      "batchSend": "Gửi Hàng Loạt",
+      "badge": "HÀNG LOẠT",
+      "successFail": "{{success}} thành công, {{fail}} thất bại",
+      "successful": "Thành công",
+      "sentStatus": "Đã gửi",
+      "failedStatus": "Thất bại",
+      "details": "Chi Tiết Chuyển Hàng Loạt",
+      "total": "Tổng",
+      "tagPicker": {
+        "title": "Chọn Thẻ",
+        "noTags": "Không có thẻ nào",
+        "createHint": "Thêm thẻ cho liên hệ trong sổ trước"
+      },
+      "tags": {
+        "manage": "Quản Lý Thẻ",
+        "add": "Thêm Thẻ",
+        "remove": "Xóa Thẻ",
+        "create": "Tạo Thẻ",
+        "newTag": "Tên thẻ mới",
+        "addToContact": "Thêm thẻ cho liên hệ"
+      }
+    }
+  },
+  "receive": {
+    "title": "Nhận",
+    "yourAddress": "Địa chỉ Ví của Bạn",
+    "scanQR": "Quét mã QR để nhận",
+    "copyAddress": "Sao chép Địa chỉ",
+    "share": "Chia sẻ"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Thanh toán",
+      "myQr": "QR của Tôi"
+    },
+    "pay": {
+      "title": "Thanh toán",
+      "description": "Quét mã QR của bạn bè để thanh toán trực tiếp vào ví của họ",
+      "allowCamera": "Cho phép Camera",
+      "requesting": "Đang yêu cầu…",
+      "openSettings": "Mở Cài đặt",
+      "sendTo": "Gửi đến",
+      "amount": "Số lượng",
+      "rescan": "Quét lại",
+      "continue": "Tiếp tục"
+    },
+    "receive": {
+      "title": "Nhận",
+      "description": "Quét mã QR này để gửi thanh toán đến địa chỉ này",
+      "tapToCopy": "Chạm để sao chép địa chỉ",
+      "copied": "Đã sao chép vào bộ nhớ tạm!"
+    }
+  },
+  "history": {
+    "title": "Lịch sử Giao dịch",
+    "sent": "Đã gửi",
+    "received": "Đã nhận",
+    "token": "Token",
+    "external": "Bên ngoài",
+    "to": "Đến: ",
+    "from": "Từ: ",
+    "viewInExplorer": "Xem trên Explorer",
+    "empty": {
+      "title": "Chưa Có Giao dịch",
+      "description": "Lịch sử giao dịch sẽ xuất hiện ở đây khi bạn gửi hoặc nhận token."
+    },
+    "status": {
+      "confirmed": "Đã xác nhận",
+      "pending": "Đang chờ",
+      "failed": "Thất bại"
+    },
+    "details": {
+      "title": "Chi tiết Giao dịch",
+      "status": "Trạng thái",
+      "type": "Loại",
+      "to": "Đến",
+      "from": "Từ",
+      "token": "Token",
+      "block": "Block",
+      "gasCost": "Chi phí Gas",
+      "hash": "Hash",
+      "source": "Nguồn",
+      "balanceDetected": "Phát hiện số dư",
+      "inferredNote": "Giao dịch này được phát hiện từ thay đổi số dư. Chi tiết on-chain chính xác không khả dụng."
+    },
+    "time": {
+      "justNow": "Vừa xong",
+      "minsAgo": "{{count}} phút trước",
+      "hoursAgo": "{{count}} giờ trước",
+      "daysAgo": "{{count}} ngày trước"
+    }
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "account": {
+      "title": "Tài khoản & Giao diện",
+      "walletAddress": "Địa chỉ Ví",
+      "copy": "Sao chép",
+      "copied": "Đã sao chép"
+    },
+    "theme": {
+      "title": "Chủ đề",
+      "light": "Sáng",
+      "dark": "Tối",
+      "system": "Hệ thống"
+    },
+    "language": {
+      "title": "Ngôn ngữ",
+      "select": "Chọn Ngôn ngữ",
+      "current": "Hiện tại"
+    },
+    "display": {
+      "title": "Hiển thị",
+      "description": "Tùy chỉnh giao diện màn hình chính.",
+      "showSentinelCard": "Hiển thị Thẻ Thu nhập Sentinel",
+      "showSentinelCardDesc": "Hiển thị thu nhập trên màn hình chính",
+      "showDailyRewardsCard": "Hiển thị Thẻ Phần thưởng Hàng ngày",
+      "on": "BẬT",
+      "off": "TẮT",
+      "sentinelSettings": "Cài đặt Sentinel",
+      "sentinelSettingsDesc": "Quản lý bond, phần thưởng & tự động nhận"
+    },
+    "sentinelDisplay": {
+      "title": "Hiển thị Sentinel",
+      "showSentinelCard": "Hiển thị Thẻ Sentinel",
+      "showSentinelCardDesc": "Hiển thị thẻ thu nhập sentinel trên màn hình chính",
+      "sentinelSettings": "Cài đặt Sentinel",
+      "sentinelSettingsDesc": "Cấu hình node sentinel và phần thưởng"
+    },
+    "verification": {
+      "title": "Xác minh",
+      "description": "Xác minh bạn là con người thực với Inlyf để mở khóa phần thưởng hàng ngày. Kiểm tra liveness nhanh; xác minh định kỳ.",
+      "open": "Bắt đầu Xác minh",
+      "refresh": "Làm mới Xác minh",
+      "status": "Trạng thái",
+      "verified": "Đã xác minh",
+      "notVerified": "Chưa xác minh",
+      "expiresOn": "Hết hạn vào",
+      "daysRemaining": "Còn lại ngày",
+      "upToDate": "Xác minh đã cập nhật",
+      "refreshAvailableIn": "Có thể làm mới sau {{days}} ngày"
+    },
+    "network": {
+      "title": "Mạng",
+      "description": "Cấu hình kết nối mạng blockchain.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (sắp có)",
+      "rpcEndpoint": "Điểm cuối RPC",
+      "pingRpc": "Ping RPC",
+      "testing": "Đang kiểm tra...",
+      "rpcOk": "RPC OK",
+      "rpcError": "Lỗi RPC",
+      "save": "Lưu",
+      "saved": "Đã lưu cài đặt",
+      "connectionStatus": "Trạng thái Kết nối",
+      "connected": "Đã kết nối",
+      "disconnected": "Ngắt kết nối"
+    },
+    "cache": {
+      "title": "Bộ nhớ đệm",
+      "description": "Xóa dữ liệu bộ nhớ đệm để làm mới thông tin token và hợp đồng.",
+      "clearCache": "Xóa Bộ nhớ đệm",
+      "cacheCleared": "Đã xóa bộ nhớ đệm! Khởi động lại để áp dụng."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Giúp bảo mật blockchain bằng cách giữ điện thoại trực tuyến. Hoàn thành ít nhất một công việc lấy mẫu mỗi ngày để đủ điều kiện nhận phần thưởng.",
+      "wifiOnly": "Chỉ WiFi",
+      "wifiOnlyHint": "Tiết kiệm dữ liệu di động",
+      "minBattery": "Pin Tối thiểu",
+      "minBatteryHint": "Không chạy dưới mức này",
+      "background": "Chạy Nền",
+      "backgroundHint": "Hoạt động ngay cả khi ứng dụng đóng",
+      "lastSample": "Hoạt động Gần nhất",
+      "noSamples": "Chưa có hoạt động. Giữ ứng dụng mở để bắt đầu.",
+      "staleWarning": "Không hoạt động hôm nay — mở lại ứng dụng để tiếp tục.",
+      "androidBatteryWarning": "Tối ưu pin có thể ngăn sampling",
+      "androidBatteryHint": "Vào Cài đặt → Ứng dụng → Umotu → Pin → chọn \"Không hạn chế\" để cho phép sampling nền.",
+      "openSettings": "Chạm để mở cài đặt",
+      "tip": "Bật \"Chạy Nền\" để kiếm phần thưởng tốt nhất.",
+      "runNow": "Chạy ngay",
+      "running": "Đang chạy…",
+      "lastError": "Lỗi gần nhất",
+      "status": {
+        "active": "Hoạt động",
+        "inactive": "Không hoạt động",
+        "paused": "Tạm dừng"
+      }
+    },
+    "permissions": {
+      "title": "Quyền",
+      "description": "Quản lý Mini Apps đã kết nối và quyền của chúng.",
+      "openMiniApps": "Mở Mini Apps",
+      "manageConnections": "Quản lý",
+      "noConnections": "Không có ứng dụng kết nối",
+      "revokeAccess": "Thu hồi Quyền truy cập",
+      "lastUsed": "Lần sử dụng cuối"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Chào mừng đến với Umotu",
+      "subtitle": "10 đô la mỗi ngày, cho mọi người ở mọi nơi",
+      "getStarted": "Bắt đầu"
+    },
+    "language": {
+      "title": "Chọn Ngôn ngữ của Bạn",
+      "continue": "Tiếp tục"
+    },
+    "wallet": {
+      "title": "Ví của Bạn",
+      "createNew": "Tạo Ví Mới",
+      "importExisting": "Nhập Ví Hiện có",
+      "creating": "Đang tạo ví..."
+    },
+    "verify": {
+      "title": "Xác minh Bạn là Con người",
+      "description": "Để nhận phần thưởng hàng ngày, hãy xác minh bạn là con người duy nhất.",
+      "continue": "Tiếp tục"
+    }
+  },
+  "poh": {
+    "subtitle": "Mở khóa phần thưởng hàng ngày",
+    "description": "Xác minh liveness với Inlyf để mở khóa phần thưởng. Không lưu trữ sinh trắc học trên chain; chỉ cấp credential ngắn hạn.",
+    "howItWorks": "Cách hoạt động",
+    "howItWorksDesc": "Kiểm tra liveness ngắn (quét khuôn mặt) xác minh bạn là con người. Credential kéo dài 90 ngày và có thể làm mới bất kỳ lúc nào.",
+    "adultQuestion": "Bạn có phải người lớn (18+)?",
+    "yesAdult": "Có, 18+",
+    "noMinor": "Không / Trẻ em",
+    "selectAge": "Vui lòng chọn một tùy chọn",
+    "verifying": "Đang xác minh...",
+    "startVerification": "Bắt đầu Xác minh",
+    "skipForNow": "Bỏ qua lúc này",
+    "status": {
+      "notVerified": "Chưa xác minh.",
+      "notVerifiedDetail": "Bắt đầu xác minh để mở khóa phần thưởng.",
+      "unavailable": "Trạng thái không khả dụng.",
+      "verified": "Bạn đã được xác minh.",
+      "validFor": "Hợp lệ khoảng ~{{days}} ngày",
+      "validFor_plural": "Hợp lệ khoảng ~{{days}} ngày",
+      "expired": "Xác minh hết hạn hoặc không tìm thấy.",
+      "expiredDetail": "Chạy lại liveness để làm mới credential."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Tham gia pool Sentinel để giúp hoàn tất block. Bond ít nhất số lượng tối thiểu, giữ thiết bị trực tuyến và kiếm phần thưởng.",
+    "loading": "Đang tải dữ liệu sentinel...",
+    "unavailable": "Module Sentinel không khả dụng",
+    "yourStatus": "Trạng thái của Bạn",
+    "wallet": "Ví",
+    "bondedAmount": "Số lượng Đã bond",
+    "minimumBond": "Bond Tối thiểu",
+    "status": {
+      "notBonded": "Chưa bond",
+      "bonded": "Đã bond",
+      "unbonding": "Đang unbond (khả dụng {{date}})"
+    },
+    "rewards": {
+      "title": "Phần thưởng",
+      "claimableNow": "Có thể Nhận Ngay",
+      "accruing": "Đang Tích lũy",
+      "totalClaimed": "Tổng Đã Nhận",
+      "claiming": "Đang nhận...",
+      "claimRewards": "Nhận Phần thưởng"
+    },
+    "bond": {
+      "createTitle": "Tạo Bond",
+      "topUpTitle": "Nạp thêm Bond",
+      "createDescription": "Bond UMT để tham gia ủy ban sentinel và bắt đầu kiếm thưởng.",
+      "topUpDescription": "Tăng stake để kiếm phần thưởng lớn hơn.",
+      "amountLabel": "Số lượng (UMT)",
+      "processing": "Đang xử lý...",
+      "bond": "Bond",
+      "topUp": "Nạp thêm",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Tự động Nhận",
+      "description": "Để relayer tự động nhận phần thưởng sentinel khi chúng tích lũy.",
+      "checking": "Đang kiểm tra...",
+      "enabled": "Đã bật",
+      "disabled": "Đã tắt",
+      "expires": "Hết hạn",
+      "processing": "Đang xử lý...",
+      "enable": "Bật Tự động Nhận",
+      "disable": "Tắt Tự động Nhận"
+    },
+    "activity": {
+      "title": "Hoạt động Gần đây",
+      "claims": "Nhận thưởng",
+      "slashes": "Slashes",
+      "noClaims": "Không có nhận thưởng trong {{blocks}}k block gần nhất.",
+      "noSlashes": "Không có sự kiện slash trong khoảng gần đây.",
+      "unknown": "không rõ"
+    },
+    "errors": {
+      "configureEnv": "Cấu hình RPC + biến môi trường hợp đồng sentinel.",
+      "noWallet": "Tạo hoặc nhập ví để tham gia ủy ban sentinel.",
+      "loadFailed": "Không thể tải dữ liệu sentinel."
+    },
+    "toast": {
+      "rewardsClaimed": "Đã nhận phần thưởng Sentinel.",
+      "noRewards": "Không có phần thưởng chờ nhận.",
+      "claimFailed": "Nhận thưởng thất bại.",
+      "autoClaimEnabled": "Đã bật tự động nhận Sentinel",
+      "autoClaimDisabled": "Đã tắt tự động nhận Sentinel",
+      "autoClaimFailed": "Chuyển đổi tự động nhận thất bại",
+      "configureBondAddress": "Cấu hình địa chỉ bond sentinel",
+      "rpcNotSet": "RPC chưa được đặt",
+      "minBondUnavailable": "Bond tối thiểu không khả dụng",
+      "enterBondAmount": "Nhập số lượng bond",
+      "minBondRequired": "Bond ban đầu phải ít nhất {{amount}} UMT",
+      "topUpGreaterThanZero": "Số lượng nạp thêm phải lớn hơn 0",
+      "insufficientBalance": "Số dư không đủ cho bond + gas",
+      "bondSubmitted": "Đã gửi giao dịch bond",
+      "topUpSubmitted": "Đã gửi giao dịch nạp thêm",
+      "bondConfirmed": "Bond đã xác nhận",
+      "topUpConfirmed": "Nạp thêm đã xác nhận",
+      "bondReverted": "Bond bị đảo ngược trên chain",
+      "bondFailed": "Bond thất bại"
+    }
+  },
+  "miniapps": {
+    "title": "MiniApps",
+    "subtitle": "Khám phá các ứng dụng được xây dựng trên Umotu",
+    "explore": "Khám phá các ứng dụng được xây dựng trên Umotu",
+    "noApps": "Chưa có ứng dụng nào",
+    "browseByCategory": "Duyệt theo Danh mục",
+    "appsCount": "{{count}} ứng dụng",
+    "featured": "NỔI BẬT",
+    "comingSoon": "Sắp Ra mắt",
+    "liveApps": "Ứng dụng Đang hoạt động",
+    "available": "KHẢ DỤNG",
+    "pohDescription": "Xác minh bạn là con người với Inlyf để mở khóa phần thưởng hàng ngày.",
+    "vision": {
+      "title": "Tầm nhìn của Chúng tôi",
+      "tagline": "10 đô la mỗi ngày, cho mọi người ở mọi nơi",
+      "description": "Umotu đang xây dựng cơ sở hạ tầng cho một thế giới mà mọi người đều có thể tham gia vào nền kinh tế toàn cầu—bất kể họ sống ở đâu hay sử dụng ngân hàng nào.",
+      "readMore": "Đọc Toàn bộ Tầm nhìn",
+      "pillars": {
+        "title": "Ba Nguyên tắc Cốt lõi",
+        "ubi": {
+          "title": "10 Đô la/Ngày, Mọi Người Ở Mọi Nơi",
+          "description": "Thu nhập cơ bản phổ quát dưới dạng phần thưởng kiếm được để bảo mật mạng. Bất kỳ ai có điện thoại đều có thể tham gia và kiếm tiền."
+        },
+        "capital": {
+          "title": "Vốn Di chuyển Tự do",
+          "description": "Gần như không ma sát cho thanh toán và chuyển khoản—xuyên biên giới hoặc địa phương. Doanh nghiệp trả khoảng 0.1% để chi trả chi phí nền tảng, cá nhân không trả gì."
+        },
+        "sovereignty": {
+          "title": "Tôn trọng Chủ quyền Tiền tệ",
+          "description": "Chúng tôi không thay thế tiền pháp định—chúng tôi làm cho chúng hoạt động tốt hơn. Ngân hàng phát hành stablecoin gắn với tiền tệ địa phương. Chính sách tiền tệ trở nên hiệu quả hơn với phạm vi rộng hơn và ma sát ít hơn."
+        }
+      },
+      "notReplacing": "Umotu không cạnh tranh với ngân hàng trung ương. Chúng tôi đang xây dựng cơ sở hạ tầng tốt hơn cho tiền pháp định: ma sát ít hơn, truy cập toàn cầu, và hiệu quả thị trường cùng khả năng phục hồi được cải thiện."
+    },
+    "building": {
+      "title": "Chúng tôi Đang Xây dựng Hệ sinh thái",
+      "description": "Các ứng dụng này thể hiện những gì có thể thực hiện trên Umotu. Một số đã sẵn sàng, một số sắp ra mắt. Các nhà phát triển trên toàn thế giới được mời xây dựng và ra mắt trên nền tảng của chúng tôi.",
+      "developerDocs": "Tài liệu Nhà phát triển"
+    },
+    "categories": {
+      "payments": {
+        "name": "Thanh toán & Tài chính",
+        "apps": {
+          "sendMoney": {
+            "name": "Gửi Tiền",
+            "description": "Gửi UMT hoặc stablecoin ngay lập tức đến bất kỳ ai, bất kỳ đâu trên thế giới—không cần ngân hàng.",
+            "example": "Gửi 20 đô la cho gia đình ở nước ngoài trong vài giây, không phải vài ngày. Không phí ẩn."
+          },
+          "billPay": {
+            "name": "Thanh toán Hóa đơn",
+            "description": "Thanh toán tiện ích, điện thoại, internet và hơn thế trực tiếp từ ví."
+          },
+          "savings": {
+            "name": "Vòng Tiết kiệm",
+            "description": "Tiết kiệm luân phiên truyền thống (tontine, chit fund) được làm không cần tin cậy bằng hợp đồng thông minh."
+          },
+          "microLoans": {
+            "name": "Vay Vi mô",
+            "description": "Cho vay ngang hàng được hỗ trợ bởi xác minh con người và uy tín của bạn."
+          }
+        }
+      },
+      "transport": {
+        "name": "Vận chuyển & Giao hàng",
+        "apps": {
+          "rideSharing": {
+            "name": "Chia sẻ Xe",
+            "description": "Đặt xe thanh toán bằng crypto. Tài xế giữ nhiều hơn, hành khách trả ít hơn—không trung gian lấy 30%.",
+            "example": "Chuyến taxi ở Lagos giá ₦800. Tài xế nhận ₦799.2 thay vì ₦560."
+          },
+          "delivery": {
+            "name": "Giao hàng",
+            "description": "Đặt thức ăn, hàng tạp hóa hoặc gói hàng. Nhân viên giao nhận kiếm lương công bằng bằng token ổn định.",
+            "example": "Đặt bữa trưa, thanh toán bằng stablecoin địa phương, nhân viên giao nhận được trả ngay lập tức."
+          },
+          "publicTransit": {
+            "name": "Giao thông Công cộng",
+            "description": "Thanh toán xe buýt, tàu điện ngầm và tàu với một chạm. Không cần mua thẻ vé."
+          }
+        }
+      },
+      "travel": {
+        "name": "Du lịch & Khách sạn",
+        "apps": {
+          "hotels": {
+            "name": "Khách sạn & Lưu trú",
+            "description": "Đặt chỗ ở trên toàn thế giới. Chủ nhà chấp nhận stablecoin, khách tiết kiệm phí.",
+            "example": "Đặt phòng ở Bali giá 40 đô la/đêm. Chủ nhà nhận 39.96 đô la."
+          },
+          "flights": {
+            "name": "Chuyến bay",
+            "description": "Tìm kiếm và đặt chuyến bay. Thanh toán bằng crypto, kiếm phần thưởng UMT."
+          },
+          "tours": {
+            "name": "Tour Địa phương",
+            "description": "Đặt trải nghiệm với hướng dẫn viên địa phương. Thanh toán đi trực tiếp đến họ."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Mua sắm & Thương mại",
+        "apps": {
+          "localMarket": {
+            "name": "Chợ Địa phương",
+            "description": "Mua bán địa phương. Thanh toán dựa trên QR làm thương mại đường phố liền mạch.",
+            "example": "Người bán ở Jakarta chấp nhận USDC. Khách hàng thanh toán, người bán thấy tiền ngay lập tức."
+          },
+          "ecommerce": {
+            "name": "Thương mại Điện tử",
+            "description": "Mua sắm trực tuyến từ thương nhân toàn cầu. Không phí thẻ, không hoàn tiền.",
+            "example": "Mua điện tử từ Thâm Quyến. Thanh toán bằng stablecoin, tiết kiệm 3% so với thẻ tín dụng."
+          },
+          "marketplace": {
+            "name": "Chợ Ngang hàng",
+            "description": "Đăng bán vật phẩm, mua từ người khác. Escrow bảo vệ cả hai bên."
+          }
+        }
+      },
+      "services": {
+        "name": "Dịch vụ & Công việc",
+        "apps": {
+          "remittance": {
+            "name": "Chuyển tiền Kiều hối",
+            "description": "Gửi tiền về nhà. Người nhận có thể rút về tiền địa phương hoặc giữ dạng kỹ thuật số.",
+            "example": "Gửi 200 đô la từ Mỹ đến Philippines. Người nhận nhận hơn ₱11,000 thay vì ₱10,400."
+          },
+          "freelance": {
+            "name": "Công việc Tự do",
+            "description": "Nhận thanh toán cho công việc gig ngay lập tức. Không chờ 30 ngày chuyển khoản ngân hàng."
+          },
+          "homeServices": {
+            "name": "Dịch vụ Gia đình",
+            "description": "Thuê thợ ống nước, điện, dọn dẹp. Thanh toán chỉ khi công việc hoàn thành."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Xây dựng Doanh nghiệp trên Umotu",
+      "subtitle": "Ra mắt ứng dụng với thanh toán tích hợp",
+      "description": "Tạo ứng dụng khai thác hệ sinh thái Umotu—hàng triệu con người đã xác minh với thu nhập hàng ngày, sẵn sàng giao dịch. Không đau đầu tích hợp thanh toán.",
+      "benefits": {
+        "noFees": "Phí xử lý thanh toán gần như bằng không—giữ 99.9% doanh thu",
+        "verifiedUsers": "Tất cả người dùng là con người đã xác minh—không bot hay gian lận",
+        "globalReach": "Tiếp cận người dùng ở hơn 190 quốc gia từ ngày đầu",
+        "instantPayments": "Thanh toán tức thì—không trì hoãn 30 ngày"
+      },
+      "exampleTitle": "Trường hợp Sử dụng",
+      "exampleText": "Ứng dụng chia sẻ xe trên Umotu giữ 99.9% giá vé so với 70% trên nền tảng truyền thống. Tài xế kiếm nhiều hơn, hành khách trả ít hơn.",
+      "docsButton": "Đọc Tài liệu",
+      "buildButton": "Bắt đầu Xây dựng"
+    },
+    "bank": {
+      "title": "Bạn là Ngân hàng?",
+      "subtitle": "Phát hành stablecoin trên Umotu",
+      "description": "Các tổ chức tài chính được cấp phép có thể phát hành stablecoin tiền tệ địa phương trên Umotu và tiếp cận nền kinh tế UBI đang phát triển với hàng triệu người dùng.",
+      "benefits": {
+        "reserves": "Kiếm lợi nhuận từ dự trữ: đầu tư vào trái phiếu và tài sản rủi ro thấp",
+        "mintRedeem": "Thu phí mint/redeem: thường 0.1% cho chuyển đổi fiat ↔ stablecoin",
+        "users": "Tiếp cận hàng triệu người nhận UBI hàng ngày",
+        "global": "Mở rộng phạm vi vượt biên giới ngay lập tức",
+        "custody": "Dự trữ của bạn, quyền giám hộ của bạn: kiểm soát hoàn toàn tài sản backing"
+      },
+      "revenueModel": "Cách Nhà phát hành Kiếm tiền",
+      "revenueNote": "Giống Tether và các nhà phát hành lớn khác, doanh thu đến từ lợi nhuận dự trữ và phí chuyển đổi. Với hàng triệu người dùng nhận UBI hàng ngày, khối lượng mint/redeem có thể đáng kể.",
+      "futureNote": "Nhà phát hành cũng có thể nhận phần phí giao dịch trong tương lai khi giao thức phát triển.",
+      "learnMore": "Tìm hiểu Thêm",
+      "applyButton": "Nộp Đơn Ngay"
+    }
+  },
+  "news": {
+    "title": "Tin tức & Cập nhật",
+    "description": "Cập nhật các thông báo mới nhất, mẹo và cảnh báo bảo mật từ đội ngũ Umotu.",
+    "empty": "Hiện không có tin tức",
+    "unread": "Mới",
+    "unreadCount": "{{count}} mới",
+    "markAsRead": "Đánh dấu đã đọc",
+    "types": {
+      "announcement": "Thông báo",
+      "tip": "Mẹo",
+      "security": "Bảo mật",
+      "airdrop": "Airdrop",
+      "update": "Cập nhật"
+    }
+  },
+  "governance": {
+    "title": "Quản trị",
+    "subtitle": "Định hình tương lai Umotu",
+    "description": {
+      "title": "Tiếng nói của Bạn Quan trọng",
+      "body": "Giúp định hình tương lai Umotu bằng cách bỏ phiếu cho các đề xuất cộng đồng. Quỹ Umotu tổ chức các cuộc bỏ phiếu này, nhưng cộng đồng quyết định."
+    },
+    "empty": "Không có đề xuất hoạt động",
+    "emptyHint": "Kiểm tra lại sau để xem quyết định cộng đồng mới để bỏ phiếu.",
+    "newPolls": "Mới",
+    "newPollsCount": "{{count}} mới",
+    "vote": "bầu chọn",
+    "votes": "phiếu bầu",
+    "endsIn": "Kết thúc sau {{time}}",
+    "ended": "Đã kết thúc",
+    "tapToVote": "Chạm vào tùy chọn trên để bỏ phiếu",
+    "submitting": "Đang gửi phiếu bầu...",
+    "alreadyVoted": {
+      "title": "Đã Bầu chọn",
+      "message": "Bạn đã bỏ phiếu trong đề xuất này."
+    },
+    "confirm": {
+      "title": "Xác nhận Phiếu bầu",
+      "message": "Bầu cho",
+      "note": "Hành động này không thể hoàn tác.",
+      "submit": "Gửi Phiếu bầu"
+    },
+    "success": {
+      "title": "Đã Gửi Phiếu bầu!",
+      "message": "Cảm ơn bạn đã tham gia quản trị cộng đồng."
+    },
+    "error": {
+      "title": "Bầu chọn Thất bại",
+      "message": "Không thể gửi phiếu bầu. Vui lòng thử lại."
+    }
+  },
+  "learn": {
+    "title": "Học hỏi",
+    "subtitle": "Mọi thứ bạn cần biết về Umotu",
+    "featured": "NỔI BẬT",
+    "whatIs": {
+      "title": "Umotu là gì?",
+      "subtitle": "10 đô la mỗi ngày, cho mọi người ở mọi nơi",
+      "intro": "Umotu hướng đến việc cho phép bất kỳ ai kiếm khoảng 10 đô la/ngày chỉ bằng smartphone. Không cần phần cứng đắt tiền, không kỹ năng đặc biệt, không biên giới.",
+      "howDifferent": "Khác biệt như thế nào?",
+      "noMiddleman": "Không trung gian: Bạn tương tác trực tiếp với mạng—không cần tài khoản ngân hàng",
+      "globalAccess": "Truy cập toàn cầu: Hoạt động bất kỳ đâu có internet",
+      "youOwnIt": "Bạn sở hữu: Ví của bạn, khóa của bạn, quyền kiểm soát của bạn",
+      "vision": "Tầm nhìn",
+      "visionText": "Hàng tỷ người có thể giúp giữ sổ cái công khai trung thực và kiếm tiền từ đó. Trên Umotu, điện thoại thực hiện kiểm tra nhẹ để làm mạng đáng tin cậy.",
+      "nameOrigin": "Nguồn gốc Tên",
+      "nameOriginText": "Umotu lấy cảm hứng từ Paʻumotu, một ngôn ngữ Polynesia. Chúng tôi sử dụng tên này một cách tôn trọng như lời nhắc nhở xây dựng cho người dân thường."
+    },
+    "earn": {
+      "title": "Bạn Kiếm tiền Như thế nào",
+      "subtitle": "Điện thoại của bạn làm việc; bạn được trả tiền",
+      "intro": "Điện thoại của bạn thực hiện các nhiệm vụ nhỏ giúp mọi người—sau đó bạn được thưởng.",
+      "steps": "Ba Bước Đơn giản",
+      "step1": "1) Chứng minh bạn là con người: kiểm tra liveness nhanh (và làm mới định kỳ) đảm bảo mỗi người một tài khoản.",
+      "step2": "2) Giúp mạng: điện thoại của bạn chạy sampling Data Availability (DA) và các kiểm tra nhẹ khác ở nền.",
+      "step3": "3) Kiếm phần thưởng hàng ngày: bạn được trả cho công việc này, mục tiêu khoảng 10 đô la/ngày tùy theo chính sách mạng.",
+      "localCurrency": "Trả bằng Tiền tệ Địa phương",
+      "localCurrencyText": "Chọn token thanh toán: stablecoin tiền tệ địa phương (nếu có) hoặc UMT. Số lượng nhắm đến giá trị ~10 USD và có thể điều chỉnh theo tham gia và điều kiện thị trường."
+    },
+    "whereMoney": {
+      "title": "10 Đô la Đến từ Đâu?",
+      "subtitle": "Bạn kiếm vì bạn làm việc",
+      "intro": "Đây là câu hỏi số 1. Câu trả lời ngắn: vì bạn cung cấp dịch vụ mà mạng cần.",
+      "realWork": "Điện thoại của Bạn Làm Việc Thực",
+      "realWork1": "Sampling Data Availability: điện thoại kiểm tra dữ liệu block khả dụng và đúng",
+      "realWork2": "Tham gia Con người: bạn chứng minh một người một tài khoản để ngăn bot và spam",
+      "realWork3": "Các nhiệm vụ này bảo vệ mọi người; không có chúng mạng sẽ yếu đi",
+      "valueSource": "Hai Nguồn Giá trị",
+      "utility": "Tiện ích: thanh toán nhanh, phí thấp mà mọi người chọn sử dụng",
+      "consensus": "Đồng thuận: giá trị tăng khi nhiều người hơn có thể xác minh và đồng ý quy tắc",
+      "distribution": "Phân phối Phần thưởng Như thế nào",
+      "newTokens": "Tạo token UMT mới và chia cho người tham gia điện thoại đã xác minh (không phải validator)",
+      "fees": "Một phần phí và bid builder được chia cho sentinel điện thoại để hoàn tất block",
+      "treasury": "Một phần nhỏ tài trợ bảo trì liên tục và chương trình ổn định",
+      "whyDifferent": "Tại sao Khác biệt",
+      "btcProblem": "Bitcoin thưởng miner chuyên biệt (tốn vốn)",
+      "ethProblem": "Ethereum thưởng staker lớn (tốn vốn)",
+      "umotuSolution": "Umotu thưởng điện thoại thường (chi phí tham gia thực tế thấp)",
+      "conclusion": "Không phải tặng miễn phí: bạn được trả cho công việc giữ cơ sở hạ tầng tài chính chia sẻ trung thực và hữu ích."
+    },
+    "security": {
+      "title": "Bảo mật Ví",
+      "subtitle": "Bảo vệ tiền của bạn",
+      "intro": "Ví của bạn giống như kho kỹ thuật số chỉ bạn kiểm soát.",
+      "recovery": "12 Từ & Khóa Riêng tư của Bạn",
+      "recoveryText": "12 từ bí mật (cụm từ khôi phục) và khóa riêng tư của bạn đều mở khóa ví. Bất kỳ ai có một trong hai đều có thể di chuyển quỹ.",
+      "rules": "Quy tắc Vàng",
+      "rule1": "KHÔNG BAO GIỜ chia sẻ 12 từ hoặc khóa riêng tư với bất kỳ ai—kể cả thành viên Umotu.",
+      "rule2": "Viết 12 từ lên giấy và lưu ngoại tuyến. Không lưu trong ảnh chụp màn hình, ảnh hoặc ghi chú đám mây.",
+      "rule3": "Nếu xuất khóa riêng tư, giữ ngoại tuyến (giấy, phần cứng hoặc trình quản lý mã hóa bạn tin tưởng hoàn toàn).",
+      "rule4": "Nếu mất 12 từ và khóa riêng tư, không ai có thể khôi phục ví.",
+      "warning": "Quan trọng",
+      "warningText": "Khóa riêng tư cấp quyền truy cập đầy đủ. Tiết lộ hoặc sao chép vào ứng dụng khác có thể lộ quỹ. Chỉ xuất nếu bạn hiểu rủi ro.",
+      "reveal": "Hiển thị / Xuất Khóa Riêng tư",
+      "revealText": "Bạn có thể hiển thị hoặc xuất khóa riêng tư trong Cài đặt Ví. Chúng tôi yêu cầu sinh trắc/PIN, chỉ hiển thị vài giây và không tải lên. Cân nhắc sử dụng ví phần cứng cho số dư lớn.",
+      "bestPractices": "Thực hành Tốt nhất",
+      "best1": "Bật khóa màn hình & sinh trắc học trên điện thoại.",
+      "best2": "Giữ ứng dụng cập nhật để nhận bản sửa bảo mật mới nhất.",
+      "best3": "Sử dụng ví riêng cho tiết kiệm lớn; giữ số lượng nhỏ trên điện thoại cho sử dụng hàng ngày.",
+      "scamBannerTitle": "Không Ai Chính thức Sẽ Hỏi",
+      "scamBannerText": "Nếu ai đó hỏi 12 từ hoặc khóa riêng tư của bạn, đó là lừa đảo."
+    },
+    "stablecoins": {
+      "title": "Hiểu về Stablecoin",
+      "subtitle": "Tiền kỹ thuật số theo dõi tiền tệ địa phương",
+      "intro": "Stablecoin là token kỹ thuật số được thiết kế để theo dõi tiền thông thường (như USD, ZAR, NGN).",
+      "examples": "Ví dụ",
+      "example1": "1 ZAR1 ≈ 1 Rand Nam Phi",
+      "example2": "1 USD1 ≈ 1 Đô la Mỹ",
+      "example3": "1 NGN1 ≈ 1 Naira Nigeria",
+      "backed": "Do Đối tác Phát hành",
+      "backedText": "Stablecoin trên Umotu do đối tác được quy định phát hành và thiết kế giữ giá trị 1:1 với dự trữ. Nhà phát hành công bố chứng minh dự trữ và điều khoản đổi.",
+      "convert": "Chuyển đổi sang Tiền mặt",
+      "convertText": "Chuyển qua ngân hàng/trao đổi đối tác, hoặc chi tiêu trực tiếp nơi chấp nhận."
+    },
+    "economics": {
+      "title": "Kinh tế UMT",
+      "subtitle": "Ai nhận gì và tại sao",
+      "intro": "UMT có nguồn cung cố định 100 tỷ token. Phần lớn được trả cho người dùng điện thoại thường giúp giữ mạng trung thực.",
+      "supply": "Nguồn cung & Phân phối",
+      "supplyBullets": [
+        "Phần lớn nguồn cung token được dành cho những người tham gia qua điện thoại theo thời gian và được phát hành thông qua Bộ điều khiển Phát hành. Bộ điều khiển Phát hành giới hạn việc phát hành hàng ngày không quá 0,01% nguồn cung còn lại, đảm bảo tính bền vững lâu dài. Theo lịch trình này, khoảng 68% tổng nguồn cung còn lại sau 10 năm và khoảng 15% còn lại sau 50 năm.",
+        "Một phần nhỏ nguồn cung được tạo ra khi ra mắt cho các mục đích cụ thể, bao gồm airdrop người dùng sớm, bán cộng đồng, phân bổ quỹ và dự trữ khẩn cấp, v.v."
+      ],
+      "premine": "Phân bổ Khởi động (tạm thời, có thể thay đổi khi ra mắt mainnet)",
+      "premineTable": [
+        {
+          "label": "Airdrop Người dùng",
+          "value": "1.0%"
+        },
+        {
+          "label": "Bán Cộng đồng",
+          "value": "0.6%"
+        },
+        {
+          "label": "Quỹ Umotu (timelocked)",
+          "value": "0.2%"
+        },
+        {
+          "label": "Quỹ Khẩn cấp (quản trị)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "Phần thưởng Hàng ngày cho Điện thoại",
+      "emissionsText": "Mỗi ngày mạng có thể phát thải tối đa 0.01% pool phát thải còn lại. Chúng tôi ngân sách số lượng đó để điện thoại đã xác minh nhắm khoảng 10 đô la/ngày, điều chỉnh theo số người tham gia và điều kiện thị trường.",
+      "fees": "Phí & Sentinel",
+      "feesText": "Sentinel hỗ trợ (tùy chọn, nâng cao) kiếm phần phí giao dịch và bid builder. Điều này riêng biệt với phát thải hàng ngày.",
+      "transparency": "Minh bạch",
+      "transparencyText": "Lịch vest và ví công khai. Giới hạn phát thải hàng ngày và payout thực tế được đăng trong ứng dụng.",
+      "disclaimerTitle": "Nhắc nhở Ngôn ngữ Đơn giản",
+      "disclaimerText": "Đây không phải lời khuyên đầu tư. Phần thưởng phụ thuộc chính sách mạng và tham gia. Ứng dụng không đảm bảo thu nhập cố định."
+    },
+    "contribute": {
+      "title": "Cách Đóng góp",
+      "subtitle": "Giúp xây dựng Umotu",
+      "intro": "Umotu là mã nguồn mở và do cộng đồng dẫn dắt. Mọi người đều có thể giúp—dù code, dịch hay chỉ chia sẻ phản hồi.",
+      "waysTitle": "Cách Đóng góp",
+      "code": {
+        "title": "Cải thiện Code",
+        "text": "Sửa lỗi, thêm tính năng, viết test hoặc xem pull request. Kiểm tra repo GitHub cho ứng dụng, hợp đồng thông minh và dịch vụ backend.",
+        "cta": "Xem GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Giúp Dịch thuật",
+        "text": "Làm ứng dụng tự nhiên bằng ngôn ngữ của bạn. Chỉnh sửa tệp locale i18n và kiểm tra mọi màn hình. Chỉnh sửa của bạn giúp hàng triệu người.",
+        "cta": "Hướng dẫn Dịch",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "Mở rộng Danh sách Từ BIP-39",
+        "text": "Đề xuất danh sách từ mới hoặc cải thiện để nhiều người hơn thấy cụm từ khôi phục 12 từ bằng ngôn ngữ mẹ đẻ.",
+        "cta": "Xem BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Tham gia Quản trị",
+        "text": "Đọc đề xuất, thảo luận công khai và bỏ phiếu trong ứng dụng. Tiếng nói của bạn giúp hướng dẫn tham số mạng và phân bổ grant.",
+        "cta": "Mở Quản trị",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Lan tỏa Thông tin",
+        "text": "Kể bạn bè, viết hướng dẫn, đăng short, trả lời câu hỏi. Cộng đồng mạnh hơn nghĩa là mạng mạnh hơn cho mọi người.",
+        "cta": "Chia sẻ Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "Tất cả đóng góp là tự nguyện. Không có việc làm chính thức hoặc bồi thường trừ khi chỉ định trong đề xuất grant."
+    },
+    "decentralization": {
+      "title": "Tại sao Phi tập trung",
+      "subtitle": "Không điểm kiểm soát duy nhất",
+      "intro": "Phi tập trung nghĩa là không công ty hay chính phủ nào có thể tắt mạng hoặc tịch thu quỹ của bạn.",
+      "benefits": "Lợi ích cho Bạn",
+      "benefit1": "Luôn bật: khả dụng 24/7",
+      "benefit2": "Phí thấp hơn: phí mạng nhỏ thay vì phí thẻ 3–5%",
+      "benefit3": "Không biên giới: gửi giá trị toàn cầu",
+      "benefit4": "Chống kiểm duyệt: khóa của bạn, tiền của bạn",
+      "benefit5": "Minh bạch: bất kỳ ai cũng có thể xác minh hệ thống hoạt động",
+      "howWorks": "Cách Hoạt động",
+      "howWorksText": "Validator đề xuất block mỗi ~2 giây. Điện thoại (như của bạn) xác minh và hoàn tất bằng kiểm tra nhẹ. Nhiều đóng góp nhỏ cộng lại thành bảo mật mạnh."
+    },
+    "noCompany": {
+      "title": "Không Công ty, Không Khách hàng",
+      "subtitle": "Hiểu mô hình",
+      "intro": "Không có 'Umotu, Inc.' kiểm soát giao thức. Umotu là tập hợp quy tắc mở bất kỳ ai cũng có thể sử dụng.",
+      "notCompany": "Umotu KHÔNG phải",
+      "notCompany1": "KHÔNG phải công ty có tài khoản khách hàng",
+      "notCompany2": "KHÔNG phải ngân hàng hoặc truyền tiền",
+      "notCompany3": "KHÔNG bị kiểm soát bởi thực thể duy nhất",
+      "notCompany4": "KHÔNG thể đảo ngược giao dịch",
+      "whatIs": "Umotu LÀ",
+      "whatIs1": "Giao thức: như email hoặc web—quy tắc mở, tương tác",
+      "whatIs2": "Ưu tiên điện thoại: chạy với sự giúp đỡ từ smartphone thường",
+      "whatIs3": "Do cộng đồng dẫn dắt: bạn là người tham gia, không phải khách hàng",
+      "foundation": "Quỹ Umotu",
+      "foundationIntro": "Tổ chức phi lợi nhuận hỗ trợ hệ sinh thái (ứng dụng tham chiếu, tài liệu, chương trình cộng đồng) nhưng không kiểm soát giao thức.",
+      "foundationTask1": "Duy trì ứng dụng di động & explorer như triển khai tham chiếu",
+      "foundationTask2": "Vận hành một số cơ sở hạ tầng công khai (người khác có thể chạy riêng)",
+      "foundationTask3": "Phối hợp quản trị cộng đồng (tin tức, bỏ phiếu)",
+      "foundationTask4": "Xem xét và liệt kê stablecoin hỗ trợ",
+      "foundationTask5": "Công bố hướng dẫn giáo dục & an toàn",
+      "foundationNote": "Quỹ không thể truy cập ví của bạn và không thể đảo ngược giao dịch."
+    },
+    "scamPrevention": {
+      "title": "Tránh Lừa đảo",
+      "subtitle": "Bảo vệ bản thân",
+      "intro": "Quỹ Umotu sẽ KHÔNG BAO GIỜ nhắn tin riêng bạn. Bất kỳ ai giả làm 'hỗ trợ' là lừa đảo.",
+      "redFlags": "Dấu hiệu Đỏ",
+      "redFlag1": "Ai đó tự xưng hỗ trợ khách hàng",
+      "redFlag2": "Liên kết để 'xác minh' hoặc 'nâng cấp' tài khoản",
+      "redFlag3": "Yêu cầu cụm từ 12 từ hoặc khóa riêng tư",
+      "redFlag4": "Hứa bonus token nếu gửi quỹ",
+      "redFlag5": "Ứng dụng hoặc site yêu cầu 'kích hoạt' phần thưởng",
+      "truth": "Sự thật",
+      "truth1": "Không có hỗ trợ khách hàng có thể reset ví",
+      "truth2": "Tất cả cập nhật chính thức xuất hiện trong ứng dụng này",
+      "truth3": "Không ai từ Umotu sẽ hỏi cụm từ khôi phục hoặc khóa riêng tư",
+      "truth4": "Chỉ tải ứng dụng này từ Apple Store hoặc Google Play chính thức",
+      "whatToDo": "Nếu Ai đó Liên hệ Bạn",
+      "action1": "Không trả lời",
+      "action2": "Không click liên kết",
+      "action3": "Không chia sẻ thông tin",
+      "action4": "Chặn và báo cáo"
+    },
+    "airdrop": {
+      "title": "Airdrop Testnet",
+      "subtitle": "Người dùng sớm được công nhận",
+      "intro": "Bạn đến sớm! Umotu đang ở testnet. Người tham gia testnet tích cực có thể nhận phân bổ khi mainnet ra mắt.",
+      "howToQualify": "Cách Đủ điều kiện",
+      "step1": "Tạo ví trong ứng dụng",
+      "step2": "Hoàn thành xác minh con người (Proof of Human)",
+      "step3": "Sử dụng ứng dụng thường xuyên trong testnet",
+      "whenAirdrop": "Airdrop Khi nào?",
+      "whyTestnet": "Testnet rất cần thiết: người dùng học bảo mật ví, và hệ thống được kiểm tra bảo mật, vững chắc và hiệu quả trước mainnet.",
+      "timeline": "Mainnet dự kiến Q1 hoặc Q2 2026. Airdrop sẽ diễn ra quanh thời gian ra mắt mainnet.",
+      "howMuch": "Tôi Nhận Bao nhiêu?",
+      "totalPool": "Tổng pool airdrop: 1.000.000.000 token UMT. Phần của bạn phụ thuộc tổng người tham gia và giá UMT tại ra mắt.",
+      "scenario2": "1M người dùng: ~1.000 UMT mỗi người, giá dự kiến ~$1, giá trị airdrop ~$1.000",
+      "scenario3": "10M người dùng: ~100 UMT mỗi người, giá dự kiến ~$20, giá trị airdrop ~$2.000",
+      "scenario4": "100M người dùng: ~10 UMT mỗi người, giá dự kiến ~$300, giá trị airdrop ~$3.000",
+      "disclaimer": "Đây chỉ là dự báo, không đảm bảo. Giá trị thực phụ thuộc điều kiện thị trường và quy tắc chương trình.",
+      "whatYouGet": "Bạn Nhận Gì",
+      "reward": "Tại mainnet, ví testnet của bạn có thể nhận token thực dựa trên tham gia và quy tắc chương trình. Người dùng sớm và tích cực hơn được ưu tiên.",
+      "note": "Lưu ý: Token testnet không có giá trị. Bất kỳ phân bổ mainnet nào được quyết định bởi chính sách chương trình tại ra mắt. Tất cả tin về airdrop chỉ công bố trong ứng dụng này."
+    },
+    "gettingStarted": {
+      "title": "Bắt đầu",
+      "subtitle": "Năm phút đầu tiên của bạn",
+      "intro": "Đây là thiết lập nhanh của bạn:",
+      "checklist": "Danh sách Thiết lập",
+      "check1": "1) Chọn ngôn ngữ (xong!)",
+      "check2": "2) Tạo hoặc nhập ví",
+      "check3": "3) QUAN TRỌNG: Viết 12 từ lên giấy",
+      "check4": "4) Hoàn thành xác minh con người (quét nhanh)",
+      "check5": "5) Giữ ứng dụng chạy để kiếm phần thưởng hàng ngày",
+      "tips": "Mẹo Chuyên nghiệp",
+      "tip1": "Cho phép truy cập nền để kiểm tra chạy",
+      "tip2": "Kiểm tra hàng ngày để xem phần thưởng",
+      "tip3": "Mời bạn bè—nhiều người dùng hơn làm mạng mạnh hơn"
+    }
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "retry": "Thử lại",
+    "cancel": "Hủy",
+    "save": "Lưu",
+    "done": "Xong",
+    "continue": "Tiếp tục",
+    "confirm": "Xác nhận",
+    "yes": "Có",
+    "no": "Không",
+    "ok": "OK",
+    "success": "Thành công",
+    "failed": "Thất bại",
+    "copied": "Đã sao chép!",
+    "pullToRefresh": "Kéo để làm mới",
+    "notSet": "Chưa đặt"
+  },
+  "errors": {
+    "networkError": "Lỗi mạng. Vui lòng kiểm tra kết nối.",
+    "genericError": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "walletNotFound": "Không tìm thấy ví",
+    "transactionFailed": "Giao dịch thất bại",
+    "invalidInput": "Đầu vào không hợp lệ"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Chào mừng đến với Umotu",
+  "onboard_wallet_title": "Thiết lập ví của bạn",
+  "onboard_wallet_explain": "Tạo hoặc nhập ví để nhận phần thưởng.",
+  "wallet_create": "Tạo Ví Mới",
+  "wallet_import": "Nhập Ví",
+  "wallet_import_explain": "Nhập cụm từ khôi phục 12 từ",
+  "wallet_created": "Ví Sẵn sàng",
+  "wallet_save": "Lưu vào Thiết bị",
+  "wallet_backup_title": "Sao lưu Cụm từ Khôi phục",
+  "wallet_backup_explain": "Viết 12 từ này theo thứ tự. Đây là CÁCH DUY NHẤT để khôi phục ví nếu mất thiết bị.",
+  "wallet_backup_warning": "Không bao giờ chia sẻ cụm từ khôi phục. Bất kỳ ai có các từ này đều có thể truy cập quỹ của bạn.",
+  "wallet_backup_confirm": "Tôi đã viết cụm từ khôi phục",
+  "wallet_backup_done": "Tôi Đã Lưu Cụm từ",
+  "wallet_save_first": "Vui lòng lưu cụm từ khôi phục trước",
+  "poh_title": "Xác minh Con người",
+  "continue": "Tiếp tục",
+  "or": "HOẶC",
+  "seedReveal": {
+    "title": "Cụm từ Khôi phục",
+    "intro": "Cụm từ khôi phục là cách duy nhất để khôi phục ví nếu bạn mất quyền truy cập thiết bị này. Viết xuống và lưu trữ an toàn ngoại tuyến.",
+    "displayLanguage": "Hiển thị bằng {{language}}",
+    "hiddenMsg": "Cụm từ của bạn bị ẩn vì bảo mật. Chạm dưới để hiển thị.",
+    "showButton": "Hiển thị Cụm từ",
+    "noScreenshot": "Không bao giờ chụp màn hình cụm từ khôi phục.",
+    "checkTitle": "Xác minh Bản sao lưu",
+    "checkPrompt": "Nhập các từ dưới để xác nhận bạn đã viết đúng:",
+    "checkWordN": "Từ #{{n}}",
+    "checkIncorrect": "Một hoặc nhiều từ sai. Vui lòng kiểm tra bản sao lưu.",
+    "ackWritten": "Tôi đã viết cụm từ khôi phục",
+    "ackCannotRecover": "Tôi hiểu Umotu không thể khôi phục ví của tôi",
+    "cancel": "Hủy",
+    "continue": "Tôi Đã Lưu"
+  }
+}

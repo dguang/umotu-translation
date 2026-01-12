@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "በቀን 10 ዶላር፣ ሁሉም ሰው በየቦታው"
+  },
+  "navigation": {
+    "home": "መነሻ",
+    "wallet": "የገንዘብ ቦርሳ",
+    "miniapps": "ሚኒ አፕስ",
+    "back": "ተመለስ",
+    "scan": "ስካን",
+    "settings": "ቅንብሮች",
+    "close": "ዝጋ"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "የተረጋገጡ ሰዎች",
+      "umtPrice": "UMT ዋጋ"
+    },
+    "quickActions": {
+      "news": "ዜና",
+      "vote": "ድምጽ መስጠት",
+      "governance": "አስተዳደር",
+      "learn": "መማር",
+      "network": "አውታረ መረብ"
+    },
+    "setupProgress": {
+      "title": "የማቀናበሪያ እድገት",
+      "steps": {
+        "language": "ቋንቋ",
+        "wallet": "የገንዘብ ቦርሳ",
+        "verifyHuman": "ሰው መሆን ማረጋገጥ",
+        "complete": "ተጠናቋል"
+      },
+      "continue": "ቀጥል",
+      "changeChoice": "ምርጫ ቀይር",
+      "requiresLanguage": "ቋንቋ መምረጥ አስፈላጊ ነው",
+      "requiresWallet": "የገንዘብ ቦርሳ መፍጠር አስፈላጊ ነው"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "ዕለታዊ ሽልማቶች",
+      "totalEarned": "ጠቅላላ የተገኘ",
+      "lastClaimed": "መጨረሻ የተጠየቀ",
+      "never": "በጭራሽ",
+      "configure": "አዋቅር",
+      "loading": "የሽልማቶች መጫን...",
+      "noWallet": "የገንዘብ ቦርሳ የለም",
+      "autoClaim": {
+        "label": "አውቶ-ጥያቄ፡",
+        "active": "ንቁ",
+        "setupNow": "አሁን አዋቅር",
+        "expired": "ጊዜው አልፎበታል",
+        "tapToSetup": "አውቶማቲክ ዕለታዊ ሽልማቶችን ለማንቃት መታ ያድርጉ"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel ገቢዎች",
+      "manage": "አስተዳድር",
+      "loading": "በመጫን ላይ...",
+      "status": "ሁኔታ",
+      "statuses": {
+        "notBonded": "ያልተቆለፈ",
+        "bonded": "ተቆልፏል",
+        "unbonding": "በመፍታት ላይ"
+      },
+      "claimable": "የሚጠየቅ",
+      "accruing": "በመከማቸት ላይ",
+      "bonded": "ተቆልፏል"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "አውቶማቲክ ዕለታዊ ሽልማቶች",
+      "description": "<bold>አውቶ-ጥያቄ</bold>ን አንቃ ዕለታዊውን $10 UBI ሽልማት አውቶማቲክ ለመቀበል—ማንዋል ጥያቄ አያስፈልግም!",
+      "benefits": {
+        "midnight": "በእርስዎ የጊዜ ሰቅ እኩለ ሌሊት ላይ ይጠይቃል",
+        "lowerFees": "80% ዝቅተኛ ጋዝ ክፍያዎች (ከሌሎች ተጠቃሚዎች ጋር ተጣምሮ)",
+        "disable": "በማንኛውም ጊዜ በቅንብሮች ውስጥ ማሰናከል ይችላሉ"
+      },
+      "notice": "ሬሌይ በእርስዎ ስም እንዲጠይቅ የሚፈቅድ አንድ ጊዜ ፈቃድ መልእክት ይፈርማሉ። ምንም የግል ቁልፎች አይጋራም።",
+      "maybeLater": "ላለፎ ጊዜ",
+      "enableNow": "አሁን አንቃ"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "አውቶ-ጥያቄ ቅንብሮች",
+      "description": "ዕለታዊ ሽልማቶችዎን አውቶማቲክ ይጠይቁ።",
+      "checking": "ሁኔታ በመፈተሽ ላይ...",
+      "status": "ሁኔታ",
+      "enabled": "ተነቃ",
+      "disabled": "ተሰናክሏል",
+      "lastClaimed": "መጨረሻ የተጠየቀ",
+      "neverClaimed": "በጭራሽ አልተጠየቀም",
+      "nextClaim": "ቀጣይ ጥያቄ",
+      "expiresAt": "ጊዜው ያልፋል",
+      "timezone": "የጊዜ ሰቅ",
+      "preferredHour": "ተመራጭ ሰዓት",
+      "preferredHourHint": "አውቶ-ጥያቄ መቼ እንዲሰራ ይምረጡ",
+      "enableButton": "አውቶ-ጥያቄ አንቃ",
+      "disableButton": "አውቶ-ጥያቄ አሰናክል",
+      "enabling": "በማንቃት ላይ...",
+      "disabling": "በማሰናከል ላይ...",
+      "enableSuccess": "አውቶ-ጥያቄ ተነቃ!",
+      "enableError": "ማንቃት አልተሳካም",
+      "disableSuccess": "አውቶ-ጥያቄ ተሰናክሏል",
+      "disableError": "ማሰናከል አልተሳካም",
+      "updateButton": "ቅንብሮች ያዘምኑ",
+      "updating": "በማዘምን ላይ..."
+    },
+    "manual": {
+      "title": "ማንዋል ጥያቄ",
+      "description": "ገንዘብ ቶሎ ከፈለጉ፣ የሚቀጥለውን ያለውን ሽልማት አሁን ይጠይቁ። ማንዋል ጥያቄዎች የዋሌት ጋዝዎን ይጠቀማሉ። ቢጠብቁ አውቶ-ጥያቄ ርካሽ ነው። ዋሌትዎ ገንዘብ ከሌለው፣ በማንዋል ከመጠየቅዎ በፊት አውቶ-ጥያቄን ያንቁ ወይም ኔቲቭ ጋዝ ያክሉ።",
+      "dayLabel": "ሽልማት ቀን",
+      "claimButton": "አሁን ጠይቅ",
+      "claiming": "በመጠየቅ ላይ...",
+      "success": "ጥያቄ ቀርቧል",
+      "successWithId": "ጥያቄ ቀርቧል (id: {{id}})",
+      "error": "ጥያቄ አልተሳካም",
+      "noProof": "የሽልማት ማረጋገጫ ገና አልወጣም። የዛሬው ቅጽበታዊ ምስል ከወጣ በኋላ እንደገና ይሞክሩ።",
+      "unauthorized": "የ Relayer ፈቃድ አልተሳካም። እባክዎ እንደገና ይሞክሩ ወይም ድጋፍን ያግኙ።",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "የሚገኙ የሽልማት ቀናት: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "ሽፋን: {{start}} እስከ {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} ተጨማሪ ከዚህ ስብስብ በኋላ",
+      "batchSuccess": "{{count}} ቀናት በተሳካ ሁኔታ ተጠይቋል",
+      "claimingProgress": "{{claimed}}/{{total}} በመጠየቅ ላይ...",
+      "claimAllButton": "ሁሉንም {{count}} ቀናት ጠይቅ"
+    },
+    "timezone": {
+      "title": "የጊዜ ሰቅ ይምረጡ",
+      "search": "የጊዜ ሰቅ ፈልግ...",
+      "current": "ወቅታዊ ምርጫ",
+      "searchResults": "የፍለጋ ውጤቶች",
+      "noResults": "ውጤት አልተገኘም",
+      "detected": "ተገኝቷል",
+      "popular": "ታዋቂ የጊዜ ሰቆች",
+      "regions": {
+        "Americas": "አሜሪካዎች",
+        "Europe": "አውሮፓ",
+        "Asia": "እስያ",
+        "Africa": "አፍሪካ",
+        "Oceania": "ኦሺኒያ"
+      }
+    },
+    "payout": {
+      "title": "የክፍያ ምርጫ",
+      "description": "ተመራጭ የክፍያ ምንዛሪ ይምረጡ።",
+      "current": "ወቅታዊ",
+      "saved": "ተቀምጧል",
+      "saveError": "ማስቀመጥ ስህተት",
+      "showMore": "ተጨማሪ አሳይ ({{count}})",
+      "showLess": "ያነሰ አሳይ",
+      "native": "ተወላጅ ቶከን",
+      "stablecoin": "ስቴብልኮይን",
+      "popular": "ታዋቂ",
+      "allCurrencies": "ሁሉም ምንዛሬዎች"
+    }
+  },
+  "wallet": {
+    "title": "የገንዘብ ቦርሳ",
+    "testnetNotice": "ቴስትኔት ቶከኖች እውነተኛ እሴት የላቸውም",
+    "totalBalance": "ጠቅላላ ቀሪ ሂሳብ",
+    "balance": "ቀሪ ሂሳብ",
+    "address": "አድራሻ",
+    "copyAddress": "አድራሻ ቅዳ",
+    "addressCopied": "አድራሻ ተቀድቷል",
+    "receive": "ተቀበል",
+    "send": "ላክ",
+    "swap": "ማልዋወጥ",
+    "swapComingSoon": "ማልዋወጥ በቅርብ ጊዜ",
+    "history": "ታሪክ",
+    "tokens": "ቶከኖች",
+    "collectibles": "ሊሰበሰቡ የሚችሉ",
+    "noTokens": "ምንም ቶከኖች አልተዋቀሩም",
+    "nativeToken": "ተወላጅ ቶከን",
+    "loading": "በመጫን ላይ...",
+    "refreshing": "በማደስ ላይ...",
+    "balancesUpdated": "ቀሪ ሂሳቦች ዘምኗል",
+    "menu": {
+      "manageTokens": "ቶከኖች አስተዳድር",
+      "addressBook": "የአድራሻ መጽሐፍ",
+      "walletSettings": "የገንዘብ ቦርሳ ቅንብሮች",
+      "showBalances": "ቀሪ ሂሳቦች አሳይ",
+      "hideBalances": "ቀሪ ሂሳቦች ደብቅ",
+      "showZeroTokens": "ዜሮ ቶከኖች አሳይ",
+      "hideZeroTokens": "ዜሮ ቶከኖች ደብቅ",
+      "refresh": "አድስ"
+    },
+    "manageTokens": {
+      "title": "ቶከኖች አስተዳድር",
+      "info": "ብጁ ERC-20 ቶከኖች ይጨምሩ። ሲስተም ቶከኖች በነባሪ ተካትተዋል።",
+      "addToken": "ቶከን ጨምር",
+      "adding": "በመጨመር ላይ...",
+      "contractAddress": "ቶከን ኮንትራት አድራሻ (0x...)",
+      "autoFetch": "ሲምቦል እና ዴሲማሎች አውቶማቲክ ይገኛሉ",
+      "customTokens": "ብጁ ቶከኖች",
+      "noCustomTokens": "ምንም ብጁ ቶከኖች አልተጨመሩም።",
+      "addUsingForm": "ከላይ ባለው ቅጽ ቶከን ጨምር።",
+      "systemToken": "ይህ ቶከን ሲስተም ቶከን ነው እና ቀድሞ ተካትቷል።",
+      "fetchingMetadata": "ቶከን ሜታዳታ በመጣል ላይ...",
+      "addedSuccess": "ቶከን በተሳካ ሁኔታ ተጨምሯል",
+      "enterValidAddress": "ትክክለኛ ቶከን አድራሻ ያስገቡ",
+      "save": "አስቀምጥ"
+    },
+    "addressBook": {
+      "title": "የአድራሻ መጽሐፍ",
+      "addContact": "እውቂያ ጨምር",
+      "nameLabel": "ስም ወይም መለያ",
+      "walletAddress": "የገንዘብ ቦርሳ አድራሻ (0x...)",
+      "savedContacts": "የተቀመጡ እውቂያዎች",
+      "noContacts": "ምንም እውቂያዎች አልተቀመጡም።",
+      "addForQuickSending": "ፈጣን መላክ ለማግኘት እውቂያዎች ጨምር።",
+      "enterValidAddress": "ትክክለኛ አድራሻ ያስገቡ",
+      "addLabel": "መለያ ጨምር",
+      "save": "አስቀምጥ"
+    },
+    "settings": {
+      "title": "የገንዘብ ቦርሳ ቅንብሮች",
+      "export": {
+        "title": "የገንዘብ ቦርሳ ወደ ውጪ ላክ",
+        "description": "የማገገሚያ ሀረግ ወይም የግል ቁልፍ በጭራሽ አይጋሩ። በደህና ከመስመር ውጪ ያከማቹ።",
+        "recoveryPhrase": "የማገገሚያ ሀረግ",
+        "recoveryPhraseNotAvailable": "የማገገሚያ ሀረግ የለም (በግል ቁልፍ የተመጣ)",
+        "privateKey": "የግል ቁልፍ",
+        "privateKeyWarning": "የግል ቁልፍ (ሚስጥር ይጠብቁ!)",
+        "showPhrase": "የማገገሚያ ሀረግ አሳይ",
+        "showKey": "የግል ቁልፍ አሳይ",
+        "warning": "የማገገሚያ ሀረግ ወይም የግል ቁልፍ ለማንም አይጋሩ።",
+        "copy": "ቅዳ",
+        "copied": "ተቀድቷል!",
+        "hide": "ደብቅ",
+        "clipboardWarning": "ክሊፕቦርድ በሌሎች አፕስ ሊነበብ ይችላል። በ30ሰከንድ ውስጥ አውቶ-ይጠራል።",
+        "verifyForKey": "የግል ቁልፍ ለማሳየት ያረጋግጡ",
+        "verifyForSeed": "የማገገሚያ ሀረግ ለማሳየት ያረጋግጡ",
+        "verifyDescription": "ስሱ የገንዘብ ቦርሳ መረጃ ለማሳየት የይለፍ ቃል ወይም ፒን ያስገቡ።"
+      },
+      "import": {
+        "title": "የገንዘብ ቦርሳ አስገባ",
+        "description": "አስገባት ወቅታዊውን የገንዘብ ቦርሳ ይተካል። ነባሩን በመጀመሪያ ያስቀምጡ። እባክዎን ከአስገባት በኋላ PoH ሁኔታን እንደገና ማረጋገጥ ያስፈልጋል።",
+        "byPhrase": "የማገገሚያ ሀረግ",
+        "byPrivateKey": "የግል ቁልፍ",
+        "phrasePlaceholder": "12 ወይም 24 ቃላት ሀረግ ያስገቡ…",
+        "keyPlaceholder": "0x… የግል ቁልፍ ያስገቡ",
+        "importButton": "የገንዘብ ቦርሳ አስገባ",
+        "importing": "በመገባት ላይ...",
+        "success": "የገንዘብ ቦርሳ በተሳካ ሁኔታ ተገባ!"
+      },
+      "dangerZone": {
+        "title": "አደገኛ ዞን",
+        "description": "እነዚህ ተግባራት ሊቀለበሱ አይችሉም። የገንዘብ ቦርሳዎን መጠባበቂያ ማድረግዎን ያረጋግጡ።",
+        "forgetWallet": "የገንዘብ ቦርሳ ረሳ",
+        "forgetDescription": "ከዚህ መሳሪያ የገንዘብ ቦርሳ ያስወግዱ። የማገገሚያ ሀረግ መጠባበቂያ ማድረግዎን ያረጋግጡ።",
+        "confirmTitle": "የገንዘብ ቦርሳ ረሳ?",
+        "confirmMessage": "ይህ የገንዘብ ቦርሳዎን ከዚህ መሳሪያ ያስወግዳል። የማገገሚያ ሀረግ በመጀመሪያ መጠባበቂያ ማድረግዎን ያረጋግጡ።",
+        "cancel": "ተው",
+        "confirm": "የገንዘብ ቦርሳ ረሳ",
+        "walletForgotten": "የገንዘብ ቦርሳ ተረስቷል",
+        "unableToForget": "የገንዘብ ቦርሳ ማስረሳት አልተቻለም",
+        "resetWallet": "የገንዘብ ቦርሳ ዳግም አስጀምር",
+        "resetDescription": "ሁሉንም የገንዘብ ቦርሳ ዳታ ሙሉ በሙሉ ያጥፉ እና አዲስ ይጀምሩ።"
+      },
+      "authPrompt": "የግል ቁልፍ ለማሳየት ያረጋግጡ"
+    }
+  },
+  "reset": {
+    "title": "የገንዘብ ቦርሳ ዳግም አስጀምር",
+    "dangerTitle": "ይህ ተግባር ሊቀለበስ አይችልም!",
+    "warning1": "የገንዘብ ቦርሳ ዳግም ማስጀመር በቋሚነት ይሰረዛል፡",
+    "bullet1": "የገንዘብ ቦርሳዎ እና የግል ቁልፎች",
+    "bullet2": "የማገገሚያ ሀረግዎ",
+    "bullet3": "ሁሉም አፕ ቅንብሮች እና ምርጫዎች",
+    "bullet4": "የግብይት ታሪክ",
+    "recoveryNote": "የ12-ቃላት የማገገሚያ ሀረግ ካለዎት፣ ከዳግም ማስጀመር በኋላ የገንዘብ ቦርሳዎን ማግኘት ይችላሉ።",
+    "continueButton": "ተረድቻለሁ፣ ቀጥል",
+    "confirmTitle": "ዳግም ማስጀመር ያረጋግጡ",
+    "confirmDescription": "ሁሉንም የገንዘብ ቦርሳ ዳታ መሰረዝ እንደሚፈልጉ ለማረጋገጥ \"RESET\" ይተይቡ።",
+    "placeholder": "RESET ይተይቡ",
+    "typeMismatch": "ማረጋገጥ ለማድረግ RESET ይተይቡ",
+    "resetButton": "የገንዘብ ቦርሳ ለዘላለም ዳግም አስጀምር",
+    "resettingTitle": "በዳግም ማስጀመር ላይ...",
+    "resettingDescription": "ሁሉንም የገንዘብ ቦርሳ ዳታ በማጽዳት ላይ። እባክዎን ይጠብቁ...",
+    "completeTitle": "ዳግም ማስጀመር ተጠናቋል",
+    "completeDescription": "የገንዘብ ቦርሳዎ ዳግም ተጀምሯል። አሁን አዲስ የገንዘብ ቦርሳ ማዋቀር ወይም ነባር ማስገባት ይችላሉ።",
+    "startFresh": "አዲስ ጀምር",
+    "error": "የገንዘብ ቦርሳ ዳግም ማስጀመር አልተሳካም። እንደገና ይሞክሩ።"
+  },
+  "export": {
+    "verifyTitle": "ማንነት ያረጋግጡ",
+    "verifyDescription": "የገንዘብ ቦርሳዎን ለመላክ የይለፍ ቃልዎን ያስገቡ።",
+    "verify": "አረጋግጥ",
+    "verificationFailed": "ማረጋገጥ አልተሳካም",
+    "passphraseTitle": "የወጪ ፓስፍሬዝ ያዘጋጁ",
+    "passphraseDescription": "የመጠባበቂያዎን ለማመስጠር ጠንካራ ፓስፍሬዝ ይምረጡ። ይህን የገንዘብ ቦርሳ ለማስገባት ያስፈልጋል።",
+    "enterPassphrase": "ፓስፍሬዝ ያስገቡ",
+    "passphraseTooWeak": "ፓስፍሬዝ በጣም ደካማ ነው። ቢያንስ 8 ፊደላት ይጠቀሙ።",
+    "includeSeed": "የማገገሚያ ሀረግ ያካትት",
+    "includeSeedDescription": "ለሙሉ መጠባበቂያ ይመከራል",
+    "confirmTitle": "ፓስፍሬዝ ያረጋግጡ",
+    "confirmDescription": "ለማረጋገጥ ፓስፍሬዝዎን እንደገና ያስገቡ።",
+    "confirmPassphrase": "ፓስፍሬዝ ያረጋግጡ",
+    "passphraseMismatch": "ፓስፍሬዞች አይዛመዱም",
+    "warning": "ይህን መጠባበቂያ በደህና ያከማቹ። ይህን ፋይል እና ፓስፍሬዝ ያለው ማንም የገንዘብ ቦርሳዎን ሊደርስ ይችላል።",
+    "exportNow": "የገንዘብ ቦርሳ ወደ ውጪ ላክ",
+    "exportingTitle": "በመላክ ላይ...",
+    "exportingDescription": "የገንዘብ ቦርሳ መጠባበቂያዎን በማመስጠር እና በማዘጋጀት ላይ...",
+    "successTitle": "ወደ ውጪ መላክ ተጠናቋል",
+    "successDescription": "የተመሰጠረ የገንዘብ ቦርሳ መጠባበቂያዎ ተፈጥሯል። በደህና ያከማቹ።",
+    "rememberPassphrase": "የወጪ ፓስፍሬዝዎን ያስታውሱ - ይህን መጠባበቂያ ለማስገባት ያስፈልጋል።",
+    "errorTitle": "ወደ ውጪ መላክ አልተሳካም",
+    "failed": "ወደ ውጪ መላክ አልተሳካም። እንደገና ይሞክሩ።",
+    "tryAgain": "እንደገና ሞክር",
+    "exportKeystore": "የተመሰጠረ መጠባበቂያ ወደ ውጪ ላክ",
+    "exportKeystoreDesc": "የተመሰጠረ ኪስቶር ፋይል አስቀምጥ"
+  },
+  "security": {
+    "title": "የገንዘብ ቦርሳዎን ደህንነቱ ይጠብቁ",
+    "subtitle": "የገንዘብ ቦርሳዎን ለመጠበቅ የይለፍ ቃል ወይም ፒን ያዘጋጁ",
+    "checkingDevice": "የመሳሪያ ደህንነት በመፈተሽ ላይ...",
+    "passwordOption": "የይለፍ ቃል",
+    "passwordDesc": "8+ ፊደላት፣ ፊደላት እና ቁጥሮች",
+    "pinOption": "6-ቁጥር ፒን",
+    "pinDesc": "ፈጣን እና ቀላል ለማስታወስ",
+    "enterPin": "6-ቁጥር ፒን ያስገቡ",
+    "confirmPin": "ፒንዎን ያረጋግጡ",
+    "enterPassword": "የይለፍ ቃል ያስገቡ",
+    "confirmPassword": "የይለፍ ቃል ያረጋግጡ",
+    "enableBiometrics": "{{type}} አንቃ?",
+    "biometricsDesc": "ፈጣን መክፈቻ ለማግኘት {{type}} ይጠቀሙ። በኋላ በቅንብሮች ውስጥ መቀየር ይችላሉ።",
+    "enableBiometricsButton": "{{type}} አንቃ",
+    "enableBiometricsPrompt": "ባዮሜትሪክ መክፈቻ ለማንቃት ያረጋግጡ",
+    "skipBiometrics": "ለአሁን ተዉት",
+    "setupComplete": "ማቀናበር ተጠናቋል!",
+    "walletSecured": "የገንዘብ ቦርሳዎ አሁን ደህንነቱ ተጠብቋል!",
+    "continue": "ቀጥል",
+    "passwordTooWeak": "የይለፍ ቃል በጣም ደካማ ነው። እባክዎን ሀሳቦቹን ይከተሉ።",
+    "pinMismatch": "ፒኖች አይዛመዱም",
+    "passwordMismatch": "የይለፍ ቃላት አይዛመዱም",
+    "setupError": "ማቀናበር አልተሳካም። እንደገና ይሞክሩ።",
+    "passwordTitle": "የይለፍ ቃል",
+    "passwordDescription": "8+ ፊደላት፣ ጠንካራ ደህንነት",
+    "pinTitle": "6-ቁጥር ፒን",
+    "pinDescription": "ፈጣን መዳረሻ፣ ቀላል ለማስታወስ"
+  },
+  "lock": {
+    "title": "Umotu ይክፈቱ",
+    "lockedOut": "ተቆልፈዋል",
+    "tooManyAttempts": "በጣም ብዙ ሙከራዎች። በ{{time}} እንደገና ይሞክሩ።",
+    "attemptsRemaining": "{{count}} ሙከራዎች ቀርተዋል",
+    "enterPassword": "የይለፍ ቃል ያስገቡ",
+    "unlock": "ክፈት",
+    "wrongPin": "የተሳሳተ ፒን",
+    "wrongPassword": "የተሳሳተ የይለፍ ቃል",
+    "verificationError": "ማረጋገጥ አልተሳካም",
+    "biometricsPrompt": "የገንዘብ ቦርሳዎን ይክፈቱ",
+    "unlockWithFaceId": "በ Face ID ይክፈቱ?",
+    "unlockWithFingerprint": "በጣት አሻራ ይክፈቱ?",
+    "forgotPassword": "የይለፍ ቃል ረሳችሁ?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "የማይደገፍ መሳሪያ",
+    "emulatorMessage": "ይህ አፕ ለደህንነት ምክንያቶች በኢሙሌተሮች ላይ አይሰራም።",
+    "rootedTitle": "የደህንነት ማስጠንቀቂያ",
+    "exitApp": "ውጣ",
+    "continueAnyway": "ለሆነም ቀጥል"
+  },
+  "settingsSecurity": {
+    "title": "ደህንነት",
+    "autoLock": "አውቶ-ቆለፍ",
+    "autoLockDesc": "ከእንቅስቃሴ አልባነት በኋላ የገንዘብ ቦርሳ ቆልፍ",
+    "faceId": "Face ID",
+    "fingerprint": "ጣት አሻራ",
+    "biometricsDesc": "ባዮሜትሪክስ በመጠቀም ፈጣን መክፈቻ",
+    "changePin": "ፒን ቀይር",
+    "changePassword": "የይለፍ ቃል ቀይር",
+    "changeDesc": "የደህንነት ማረጋገጫዎችዎን ያዘምኑ",
+    "enableBiometrics": "ባዮሜትሪክ መክፈቻ አንቃ",
+    "enterCurrent": "ወቅታዊ {{type}} ያስገቡ",
+    "enterNew": "አዲስ {{type}} ያስገቡ",
+    "confirmNew": "አዲስ {{type}} ያረጋግጡ",
+    "currentPassword": "ወቅታዊ የይለፍ ቃል",
+    "newPassword": "አዲስ የይለፍ ቃል",
+    "confirmNewPassword": "አዲስ የይለፍ ቃል ያረጋግጡ",
+    "changeNow": "አሁን ቀይር",
+    "success": "ተሳክቷል",
+    "pinChanged": "ፒን በተሳካ ሁኔታ ተቀይሯል",
+    "passwordChanged": "የይለፍ ቃል በተሳካ ሁኔታ ተቀይሯል",
+    "changeFailed": "ማረጋገጫዎች መቀየር አልተሳካም",
+    "autoLockOptions": {
+      "immediately": "ወዲያውኑ",
+      "after1min": "ከ1 ደቂቃ በኋላ",
+      "after5min": "ከ5 ደቂቃ በኋላ",
+      "after15min": "ከ15 ደቂቃ በኋላ",
+      "after1hour": "ከ1 ሰዓት በኋላ",
+      "never": "በጭራሽ"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "እባክዎን ይጠብቁ",
+    "cooldownMessage": "ለደህንነት፣ ቁልፎችዎን እንደገና በ{{time}} ማሳየት ይችላሉ።",
+    "cooldownReason": "ይህ እርኩስ አፕስ ቁልፎችዎን በፍጥነት እንዳይደርስ ይከላከላል።"
+  },
+  "passwordVerify": {
+    "title": "ማንነት ያረጋግጡ",
+    "description": "ስሱ የገንዘብ ቦርሳ መረጃ ለማሳየት የይለፍ ቃል ወይም ፒን ያስገቡ",
+    "verify": "አረጋግጥ"
+  },
+  "passwordValidation": {
+    "veryWeak": "በጣም ደካማ",
+    "weak": "ደካማ",
+    "fair": "መካከለኛ",
+    "good": "ጥሩ",
+    "strong": "ጠንካራ",
+    "tooShort": "የይለፍ ቃል ቢያንስ 8 ፊደላት መሆን አለበት",
+    "commonPassword": "ይህ በተለምዶ ጥቅም ላይ የሚውል የይለፍ ቃል ነው",
+    "lengthSuggestion": "ለተሻለ ደህንነት ቢያንስ 12 ፊደላት ይጠቀሙ",
+    "mixedCaseSuggestion": "ትላልቅ እና ትንንሽ ፊደላት ይቀላቅሉ",
+    "numberSuggestion": "አንዳንድ ቁጥሮች ይጨምሩ",
+    "specialCharSuggestion": "ልዩ ፊደላት ይጨምሩ (!@#$%)"
+  },
+  "forgot": {
+    "title": "ማረጋገጫዎች ዳግም አስጀምር",
+    "warning": "የይለፍ ቃል ወይም ፒን ለዳግም ማስጀመር፣ የገንዘብ ቦርሳ ዘር ሀረግ ማስገባት ያስፈልጋል። ይህ የገንዘብ ቦርሳ ባለቤት መሆንዎን ያረጋግጣል።",
+    "warningText": "ዘር ሀረግዎን ለማንም አይጋሩ።",
+    "continue": "ተረድቻለሁ፣ ቀጥል",
+    "enterSeed": "ዘር ሀረግ ያስገቡ",
+    "seedDescription": "የ12 ወይም 24 ቃላት ዘር ሀረግ ያስገቡ። እያንዳንዱን ቃል በቦታ ይለዩ።",
+    "seedPlaceholder": "ዘር ሀረግ ያስገቡ...",
+    "verifySeed": "ዘር ሀረግ ያረጋግጡ",
+    "invalidSeed": "ትክክለኛ 12 ወይም 24 ቃላት ዘር ሀረግ ያስገቡ",
+    "chooseMethod": "የደህንነት ዘዴ ይምረጡ",
+    "methodDescription": "የገንዘብ ቦርሳዎን እንዴት ማስጠበቅ ይፈልጋሉ?",
+    "newPassword": "አዲስ የይለፍ ቃል ፍጠር",
+    "newPin": "አዲስ ፒን ፍጠር",
+    "newPasswordDesc": "ጠንካራ የይለፍ ቃል ይምረጡ (8+ ፊደላት)",
+    "newPinDesc": "6-ቁጥር ፒን ያስገቡ",
+    "confirmPassword": "የይለፍ ቃል ያረጋግጡ",
+    "confirmPin": "ፒን ያረጋግጡ",
+    "confirmPasswordDesc": "የይለፍ ቃልዎን እንደገና ያስገቡ",
+    "confirmPinDesc": "ፒንዎን እንደገና ያስገቡ",
+    "resetNow": "አሁን ዳግም አስጀምር",
+    "complete": "ዳግም ማስጀመር ተጠናቋል",
+    "completeDescription": "ማረጋገጫዎችዎ ዳግም ተጀምረዋል። አሁን በአዲስ የይለፍ ቃል ወይም ፒን የገንዘብ ቦርሳዎን መክፈት ይችላሉ።",
+    "unlockNow": "የገንዘብ ቦርሳ ክፈት",
+    "passwordTooWeak": "የይለፍ ቃል በጣም ደካማ ነው። ጠንካራ የይለፍ ቃል ይምረጡ።",
+    "passwordMismatch": "የይለፍ ቃላት አይዛመዱም",
+    "pinMismatch": "ፒኖች አይዛመዱም",
+    "resetFailed": "ማረጋገጫዎች ዳግም ማስጀመር አልተሳካም። ዘር ሀረግዎን ያረጋግጡ።",
+    "resetError": "ስህተት ተከስቷል። እንደገና ይሞክሩ።"
+  },
+  "send": {
+    "title": "ላክ",
+    "selectToken": "ቶከን ይምረጡ",
+    "selectTokenInfo": "ለመላክ ቶከን ይምረጡ። ቀሪ ሂሳብ ያላቸው ቶከኖች ብቻ ይታያሉ።",
+    "noTokensWithBalance": "ቀሪ ሂሳብ ያላቸው ቶከኖች የሉም",
+    "addTokensFirst": "ቶከኖች በመጀመሪያ ወደ የገንዘብ ቦርሳዎ ጨምሩ",
+    "enterAmount": "መጠን ያስገቡ",
+    "enterRecipient": "ተቀባይ ያስገቡ",
+    "review": "ግምገማ",
+    "amount": "መጠን",
+    "recipient": "ተቀባይ",
+    "recipientPlaceholder": "0x... የገንዘብ ቦርሳ አድራሻ",
+    "networkFee": "የአውታረ መረብ ክፍያ",
+    "gasToken": "ጋዝ በ ይክፈሉ",
+    "payingWith": "በ ክፍያ በመፈጸም ላይ",
+    "payGasWith": "ጋዝ በ ይክፈሉ",
+    "nativeGas": "UMT (ተወላጅ)",
+    "stableGas": "ስቴብል ጋዝ",
+    "selectStable": "ስቴብል ይምረጡ",
+    "max": "ከፍተኛ",
+    "next": "ቀጣይ",
+    "continue": "ቀጥል",
+    "confirm": "መላክ ያረጋግጡ",
+    "confirmSend": "መላክ ያረጋግጡ",
+    "sending": "በመላክ ላይ...",
+    "failed": "ግብይት አልተሳካም",
+    "viewInExplorer": "በኤክስፕሎረር ይመልከቱ",
+    "done": "ተከናውኗል",
+    "cancel": "ተው",
+    "send": "ላክ",
+    "balance": "ቀሪ ሂሳብ",
+    "available": "ይገኛል",
+    "to": "ወደ",
+    "network": "አውታረ መረብ",
+    "step": "ደረጃ",
+    "estimating": "በመገመት ላይ…",
+    "umtNative": "UMT (ተወላጅ)",
+    "txSpeed": "የግብይት ፍጥነት",
+    "transactionSpeed": "የግብይት ፍጥነት",
+    "speed": {
+      "slow": "ቀስ ብሎ",
+      "normal": "መደበኛ",
+      "fast": "ፈጣን"
+    },
+    "gasNotice": {
+      "stablecoin": "ጋዝ በስቴብልኮይን ይከፈላል።",
+      "reserved": "ለጋዝ {{amount}} {{symbol}} ተይዟል፤ ከፍተኛ {{max}} መላክ ይችላሉ።"
+    },
+    "errors": {
+      "invalidAddress": "ልክ ያልሆነ ተቀባይ አድራሻ",
+      "invalidAmount": "ትክክለኛ መጠን ያስገቡ",
+      "insufficientBalance": "በቂ ቀሪ ሂሳብ የለም",
+      "insufficientGas": "ለጋዝ በቂ ቀሪ ሂሳብ የለም",
+      "insufficientGasWithHint": "ለጋዝ በቂ ቀሪ ሂሳብ የለም። UMT ወይም የተደገፈ ስቴብልኮይን ጨምሩ።",
+      "notEnoughForGas": "ለጋዝ በቂ ቀሪ ሂሳብ የለም",
+      "noStableGas": "ለጋዝ UMT በቂ የለም እና የተደገፈ ስቴብል መሸፈን አይችልም።",
+      "permitFailed": "ለጋዝ ቶከን ፈቃድ ወይም ማፅደቅ አልተሳካም",
+      "relayNotConfigured": "ስቴብል ጋዝ ሬሌይ አልተዋቀረም",
+      "transactionReverted": "ግብይት በቻይን ላይ ተመልሷል።",
+      "approvalNeeded": "ጋዝ ቶከን ማፅደቅ ያስፈልጋል ነገር ግን ለማፅደቅ UMT የለም። ትንሽ UMT ጨምሩ ወይም ፈቃድ-የተደገፈ ቶከን ይጠቀሙ።"
+    },
+    "addressBook": {
+      "title": "የአድራሻ መጽሐፍ",
+      "addNew": "አዲስ ጨምር",
+      "noContacts": "የተቀመጠ አድራሻ የለም",
+      "saveForQuickAccess": "ለፈጣን ተደራሽነት አድራሻዎችን አስቀምጥ",
+      "editContact": "እውቂያ አርትዕ",
+      "deleteContact": "እውቂያ ሰርዝ",
+      "addressNotSaved": "አድራሻ አልተቀመጠም",
+      "addLabel": "መለያ ጨምር",
+      "enterValidAddress": "መጀመሪያ ትክክለኛ አድራሻ አስገባ",
+      "saved": "ተቀምጧል",
+      "save": "አስቀምጥ"
+    },
+    "success": {
+      "title": "ግብይት ተልኳል!",
+      "hash": "ሃሽ",
+      "viewInExplorer": "በኤክስፕሎረር ይመልከቱ",
+      "close": "ዝጋ"
+    },
+    "batch": {
+      "mode": "ባች ሁነታ",
+      "singleMode": "ነጠላ ተቀባይ",
+      "addRecipient": "ተቀባዮችን ጨምር",
+      "noRecipients": "እስካሁን ተቀባይ አልተጨመረም",
+      "addFromTagOrBook": "ከታግ ወይም መጽሐፍ ጨምር",
+      "invalidAddress": "ትክክል ያልሆነ አድራሻ: {{address}}",
+      "invalidAmount": "ለ {{recipient}} ትክክል ያልሆነ መጠን",
+      "totalExceedsBalance": "ጠቅላላው ከሂሳብ ይበልጣል",
+      "sendingTo": "ለ {{count}} ተቀባይ እየላከ",
+      "sendingTo_plural": "ለ {{count}} ተቀባዮች እየላከ",
+      "recipients": "ተቀባዮች",
+      "addresses": "{{count}} አድራሻ",
+      "addresses_plural": "{{count}} አድራሻዎች",
+      "addByTag": "በታግ ጨምር",
+      "noTags": "እስካሁን ታጎች የሉም",
+      "createFirstTag": "በመጽሐፍ ውስጥ የመጀመሪያ ታግዎን ይፍጠሩ",
+      "addFromTag": "ከታግ ጨምር",
+      "selectTag": "ታግ ምረጥ",
+      "remove": "አስወግድ",
+      "sendAll": "ሁሉንም ላክ ({{count}})",
+      "batchSend": "ባች ላክ",
+      "badge": "ባች",
+      "successFail": "{{success}} ተሳካ፣ {{fail}} አልተሳካም",
+      "successful": "ተሳካ",
+      "sentStatus": "ተልኳል",
+      "failedStatus": "አልተሳካም",
+      "details": "የባች ዝውውር ዝርዝሮች",
+      "total": "ጠቅላላ",
+      "tagPicker": {
+        "title": "ታግ ምረጥ",
+        "noTags": "ምንም ታጎች የሉም",
+        "createHint": "መጀመሪያ በመጽሐፍ ውስጥ ለእውቂያዎች ታጎች ጨምር"
+      },
+      "tags": {
+        "manage": "ታጎችን አስተዳድር",
+        "add": "ታግ ጨምር",
+        "remove": "ታግ አስወግድ",
+        "create": "ታግ ፍጠር",
+        "newTag": "አዲስ ታግ ስም",
+        "addToContact": "ለእውቂያ ታግ ጨምር"
+      }
+    }
+  },
+  "receive": {
+    "title": "ተቀበል",
+    "yourAddress": "የእርስዎ የገንዘብ ቦርሳ አድራሻ",
+    "scanQR": "ለመቀበል QR ኮድ ስካን ያድርጉ",
+    "copyAddress": "አድራሻ ቅዳ",
+    "share": "አጋራ"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "ክፈል",
+      "myQr": "የእኔ QR"
+    },
+    "pay": {
+      "title": "ክፈል",
+      "description": "የጓደኛዎን QR ኮድ ስካን በማድረግ በቀጥታ ወደ የገንዘብ ቦርሳቸው ይክፈሉ",
+      "allowCamera": "ካሜራ ፍቀድ",
+      "requesting": "በመጠየቅ ላይ…",
+      "openSettings": "ቅንብሮች ክፈት",
+      "sendTo": "ላክ ወደ",
+      "amount": "መጠን",
+      "rescan": "እንደገና ስካን",
+      "continue": "ቀጥል"
+    },
+    "receive": {
+      "title": "ተቀበል",
+      "description": "ወደ ይህ አድራሻ ክፍያዎች ለመላክ ይህን QR ኮድ ስካን ያድርጉ",
+      "tapToCopy": "አድራሻ ለመቅዳት መታ ያድርጉ",
+      "copied": "ወደ ክሊፕቦርድ ተቀድቷል!"
+    }
+  },
+  "history": {
+    "title": "የግብይት ታሪክ",
+    "sent": "ተልኳል",
+    "received": "ተቀብሏል",
+    "token": "ቶከን",
+    "external": "ውጫዊ",
+    "to": "ወደ: ",
+    "from": "ከ: ",
+    "viewInExplorer": "በኤክስፕሎረር ይመልከቱ",
+    "empty": {
+      "title": "ገና ምንም ግብይቶች የሉም",
+      "description": "ቶከኖች ሲልኩ ወይም ሲቀበሉ የግብይት ታሪክዎ እዚህ ይታያል።"
+    },
+    "status": {
+      "confirmed": "ተረጋግጧል",
+      "pending": "በመጠባበቅ ላይ",
+      "failed": "አልተሳካም"
+    },
+    "details": {
+      "title": "የግብይት ዝርዝሮች",
+      "status": "ሁኔታ",
+      "type": "አይነት",
+      "to": "ወደ",
+      "from": "ከ",
+      "token": "ቶከን",
+      "block": "ብሎክ",
+      "gasCost": "ጋዝ ወጪ",
+      "hash": "ሃሽ",
+      "source": "ምንጭ",
+      "balanceDetected": "ቀሪ ሂሳብ ተገኝቷል",
+      "inferredNote": "ይህ ግብይት ከቀሪ ሂሳብ ለውጥ ተገኝቷል። ትክክለኛ በቻይን ዝርዝሮች የሉም።"
+    },
+    "time": {
+      "justNow": "አሁን ብቻ",
+      "minsAgo": "{{count}} ደቂቃ በፊት",
+      "hoursAgo": "{{count}} ሰዓት በፊት",
+      "daysAgo": "{{count}} ቀን በፊት"
+    }
+  },
+  "settings": {
+    "title": "ቅንብሮች",
+    "account": {
+      "title": "መለያ እና መልክ",
+      "walletAddress": "የገንዘብ ቦርሳ አድራሻ",
+      "copy": "ቅዳ",
+      "copied": "ተቀድቷል"
+    },
+    "theme": {
+      "title": "ገጽታ",
+      "light": "ብርሃን",
+      "dark": "ጨለማ",
+      "system": "ሲስተም"
+    },
+    "language": {
+      "title": "ቋንቋ",
+      "select": "ቋንቋ ይምረጡ",
+      "current": "ወቅታዊ"
+    },
+    "display": {
+      "title": "ማሳያ",
+      "description": "የመነሻ ገጽታ መልክዎን ያበጁ።",
+      "showSentinelCard": "Sentinel ገቢዎች ካርድ አሳይ",
+      "showSentinelCardDesc": "ገቢዎችን በመነሻ ገጽ አሳይ",
+      "showDailyRewardsCard": "ዕለታዊ ሽልማቶች ካርድ አሳይ",
+      "on": "ንቁ",
+      "off": "ተሰናክሏል",
+      "sentinelSettings": "Sentinel ቅንብሮች",
+      "sentinelSettingsDesc": "ቦንድ፣ ሽልማቶች እና አውቶ-ጥያቄ አስተዳድር"
+    },
+    "sentinelDisplay": {
+      "title": "Sentinel ማሳያ",
+      "showSentinelCard": "Sentinel ካርድ አሳይ",
+      "showSentinelCardDesc": "የ sentinel ገቢዎች ካርድ በመነሻ ገጽ አሳይ",
+      "sentinelSettings": "Sentinel ቅንብሮች",
+      "sentinelSettingsDesc": "sentinel ኖድ እና ሽልማቶች አዋቅር"
+    },
+    "verification": {
+      "title": "ማረጋገጥ",
+      "description": "ዕለታዊ ሽልማቶች ለመክፈት Inlyf በመጠቀም ሰው መሆንዎን ያረጋግጡ። ፈጣን ላይቭነስ ፈተና፤ በየጊዜው እንደገና ያረጋግጡ።",
+      "open": "ማረጋገጥ ጀምር",
+      "refresh": "ማረጋገጥ አድስ",
+      "status": "ሁኔታ",
+      "verified": "ተረጋግጧል",
+      "notVerified": "ገና አልተረጋገጠም",
+      "expiresOn": "ጊዜው ያልፋል በ",
+      "daysRemaining": "ቀሪ ቀናት",
+      "upToDate": "ማረጋገጥ ወቅታዊ ነው",
+      "refreshAvailableIn": "በ{{days}} ቀናት ውስጥ ማደስ ይቻላል"
+    },
+    "network": {
+      "title": "አውታረ መረብ",
+      "description": "የብሎክቼይን አውታረ መረብ ግንኙነት አዋቅር።",
+      "testnet": "ቴስትኔት",
+      "mainnet": "ሜይንኔት (በቅርብ ጊዜ)",
+      "rpcEndpoint": "RPC ኢንድፖይንት",
+      "pingRpc": "RPC ፒንግ",
+      "testing": "በመፈተሽ ላይ...",
+      "rpcOk": "RPC ጥሩ",
+      "rpcError": "RPC ስህተት",
+      "save": "አስቀምጥ",
+      "saved": "ቅንብሮች ተቀምጠዋል",
+      "connectionStatus": "የግንኙነት ሁኔታ",
+      "connected": "ተገናኝቷል",
+      "disconnected": "ተቋርጧል"
+    },
+    "cache": {
+      "title": "ካሽ",
+      "description": "የተከማቸ ዳታ ያጽዱ ቶከን እና ኮንትራት መረጃ ለማደስ።",
+      "clearCache": "ካሽ አጽዳ",
+      "cacheCleared": "ካሽ ተጸዳ! ለመተግበር እንደገና ጀምር።"
+    },
+    "chainGuardian": {
+      "title": "ቻይን ጋርዲያን",
+      "description": "ስልክዎን በመስመር ላይ በማቆየት ብሎክቼይን ለመጠበቅ ይርዱ። ለሽልማቶች ብቁ ሆኖ ለመቆየት በቀን ቢያንስ አንድ ናሙና ስራ ያጠናቅቁ።",
+      "wifiOnly": "WiFi ብቻ",
+      "wifiOnlyHint": "ሞባይል ዳታ ይቆጥባል",
+      "minBattery": "አነስተኛ ባትሪ",
+      "minBatteryHint": "ከዚህ ደረጃ በታች አይሰራም",
+      "background": "በበስተጀርባ አስኪድ",
+      "backgroundHint": "አፕ ተዘግቶ ሳለም ይሰራል",
+      "lastSample": "መጨረሻ እንቅስቃሴ",
+      "noSamples": "ገና እንቅስቃሴ የለም። አፕ ክፈት በማድረግ ጀምር።",
+      "staleWarning": "ዛሬ አልታየም — አፕ እንደገና ክፈት ለመቀጠል።",
+      "androidBatteryWarning": "ባትሪ ኦፕቲማይዜሽን ሳምፕሊንግ ሊከላከል ይችላል",
+      "androidBatteryHint": "ቅንብሮች → አፕስ → Umotu → ባትሪ → \"ያልተገደበ\" ይምረጡ በበስተጀርባ ሳምፕሊንግ ለመፍቀድ።",
+      "openSettings": "ቅንብሮች ለመክፈት መታ ያድርጉ",
+      "tip": "ምርጥ ገቢ ለማግኘት \"በበስተጀርባ አስኪድ\" አንቃ።",
+      "runNow": "አሁን አስኪድ",
+      "running": "በማስኬድ ላይ…",
+      "lastError": "መጨረሻ ስህተት",
+      "status": {
+        "active": "ንቁ",
+        "inactive": "እንቅስቃሴ አልባ",
+        "paused": "ቆሟል"
+      }
+    },
+    "permissions": {
+      "title": "ፈቃዶች",
+      "description": "የተገናኙ ሚኒ አፕስ እና ፈቃዶቻቸውን አስተዳድር።",
+      "openMiniApps": "ሚኒ አፕስ ክፈት",
+      "manageConnections": "አስተዳድር",
+      "noConnections": "የተገናኙ አፕስ የሉም",
+      "revokeAccess": "መዳረሻ ሰርዝ",
+      "lastUsed": "መጨረሻ ጥቅም ላይ የዋለ"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "ወደ Umotu እንኳን በደህና መጡ",
+      "subtitle": "በቀን 10 ዶላር፣ ሁሉም ሰው በየቦታው",
+      "getStarted": "ጀምር"
+    },
+    "language": {
+      "title": "ቋንቋዎን ይምረጡ",
+      "continue": "ቀጥል"
+    },
+    "wallet": {
+      "title": "የእርስዎ የገንዘብ ቦርሳ",
+      "createNew": "አዲስ የገንዘብ ቦርሳ ፍጠር",
+      "importExisting": "ነባር አስገባ",
+      "creating": "የገንዘብ ቦርሳ በመፍጠር ላይ..."
+    },
+    "verify": {
+      "title": "ሰው መሆንዎን ያረጋግጡ",
+      "description": "ዕለታዊ ሽልማቶች ለመቀበል፣ ልዩ ሰው መሆንዎን ያረጋግጡ።",
+      "continue": "ቀጥል"
+    }
+  },
+  "poh": {
+    "subtitle": "ዕለታዊ ሽልማቶች ይክፈቱ",
+    "description": "ሽልማቶች ለመክፈት Inlyf በመጠቀም ላይቭነስ ያረጋግጡ። ምንም ባዮሜትሪክስ በቻይን ላይ አይከማችም፤ አጭር ጊዜ ያለው ማረጋገጫ ብቻ ይሰጣል።",
+    "howItWorks": "እንዴት እንደሚሰራ",
+    "howItWorksDesc": "አጭር ላይቭነስ ፈተና (የፊት ስካን) ሰው መሆንዎን ያረጋግጣል። ማረጋገጫዎ ለ90 ቀናት ይቆያል እና በማንኛውም ጊዜ ማደስ ይችላሉ።",
+    "adultQuestion": "አዋቂ (18+) ነዎት?",
+    "yesAdult": "አዎ፣ 18+",
+    "noMinor": "አይ / ታዳጊ",
+    "selectAge": "አማራጭ ይምረጡ",
+    "verifying": "በማረጋገጥ ላይ...",
+    "startVerification": "ማረጋገጥ ጀምር",
+    "skipForNow": "ለአሁን ተዉት",
+    "status": {
+      "notVerified": "ገና አልተረጋገጠም።",
+      "notVerifiedDetail": "ሽልማቶች ለመክፈት ማረጋገጥ ጀምር።",
+      "unavailable": "ሁኔታ የለም።",
+      "verified": "ተረጋግጠዋል።",
+      "validFor": "~{{days}} ቀን ትክክለኛ",
+      "validFor_plural": "~{{days}} ቀናት ትክክለኛ",
+      "expired": "ማረጋገጥ ጊዜው አልፎበታል ወይም አልተገኘም።",
+      "expiredDetail": "ማረጋገጫዎን ለማደስ ላይቭነስ እንደገና ያስኬዱ።"
+    }
+  },
+  "sentinelSettings": {
+    "header": "ብሎኮችን ለማጠናቀቅ Sentinel ገንዳ ይቀላቀሉ። ቢያንስ አነስተኛውን መጠን ቆልፉ፣ መሳሪያዎን በመስመር ላይ ያቆዩ፣ እና ሽልማቶች ያግኙ።",
+    "loading": "sentinel ዳታ በመጫን ላይ...",
+    "unavailable": "Sentinel ሞጁል የለም",
+    "yourStatus": "የእርስዎ ሁኔታ",
+    "wallet": "የገንዘብ ቦርሳ",
+    "bondedAmount": "የተቆለፈ መጠን",
+    "minimumBond": "አነስተኛ ቦንድ",
+    "status": {
+      "notBonded": "ያልተቆለፈ",
+      "bonded": "ተቆልፏል",
+      "unbonding": "በመፍታት ላይ (ይገኛል {{date}})"
+    },
+    "rewards": {
+      "title": "ሽልማቶች",
+      "claimableNow": "አሁን የሚጠየቅ",
+      "accruing": "በመከማቸት ላይ",
+      "totalClaimed": "ጠቅላላ የተጠየቀ",
+      "claiming": "በመጠየቅ ላይ...",
+      "claimRewards": "ሽልማቶች ጠይቅ"
+    },
+    "bond": {
+      "createTitle": "ቦንድ ፍጠር",
+      "topUpTitle": "ቦንድ አክል",
+      "createDescription": "sentinel ኮሚቴ ለመቀላቀል እና ሽልማት ለመጀመር UMT ቆልፉ።",
+      "topUpDescription": "ሽልማቶች ትልቅ ድርሻ ለማግኘት ስቴክዎን ጨምሩ።",
+      "amountLabel": "መጠን (UMT)",
+      "processing": "በመሰራት ላይ...",
+      "bond": "ቆልፍ",
+      "topUp": "አክል",
+      "tx": "ግብይት"
+    },
+    "autoClaim": {
+      "title": "አውቶ-ጥያቄ",
+      "description": "ሽልማቶች ሲከማቹ ሬሌይ አውቶማቲክ እንዲጠይቅ ፍቀድ።",
+      "checking": "በመፈተሽ ላይ...",
+      "enabled": "ተነቃ",
+      "disabled": "ተሰናክሏል",
+      "expires": "ጊዜው ያልፋል",
+      "processing": "በመሰራት ላይ...",
+      "enable": "አውቶ-ጥያቄ አንቃ",
+      "disable": "አውቶ-ጥያቄ አሰናክል"
+    },
+    "activity": {
+      "title": "የቅርብ ጊዜ እንቅስቃሴ",
+      "claims": "ጥያቄዎች",
+      "slashes": "ስላሾች",
+      "noClaims": "በመጨረሻው {{blocks}}k ብሎኮች ውስጥ ምንም ጥያቄዎች የሉም።",
+      "noSlashes": "በቅርብ ጊዜ ውስጥ ምንም ስላሽ ክስተቶች የሉም።",
+      "unknown": "ያልታወቀ"
+    },
+    "errors": {
+      "configureEnv": "RPC + sentinel ኮንትራት ኢንቭ ቫርስ አዋቅር።",
+      "noWallet": "sentinel ኮሚቴ ለመቀላቀል የገንዘብ ቦርሳ ፍጠር ወይም አስገባ።",
+      "loadFailed": "sentinel ዳታ መጫን አልተሳካም።"
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel ሽልማቶች ተጠይቀዋል።",
+      "noRewards": "በመጠባበቅ ላይ ያሉ ሽልማቶች የሉም።",
+      "claimFailed": "ጥያቄ አልተሳካም።",
+      "autoClaimEnabled": "Sentinel አውቶ-ጥያቄ ተነቃ",
+      "autoClaimDisabled": "Sentinel አውቶ-ጥያቄ ተሰናክሏል",
+      "autoClaimFailed": "አውቶ-ጥያቄ መቀያየር አልተሳካም",
+      "configureBondAddress": "sentinel ቦንድ አድራሻ አዋቅር",
+      "rpcNotSet": "RPC አልተዘጋጀም",
+      "minBondUnavailable": "አነስተኛ ቦንድ የለም",
+      "enterBondAmount": "ቦንድ መጠን ያስገቡ",
+      "minBondRequired": "የመጀመሪያ ቦንድ ቢያንስ {{amount}} UMT መሆን አለበት",
+      "topUpGreaterThanZero": "አክል መጠን ከ0 በላይ መሆን አለበት",
+      "insufficientBalance": "ለቦንድ + ጋዝ በቂ ቀሪ ሂሳብ የለም",
+      "bondSubmitted": "ቦንድ ግብይት ቀርቧል",
+      "topUpSubmitted": "አክል ግብይት ቀርቧል",
+      "bondConfirmed": "ቦንድ ተረጋግጧል",
+      "topUpConfirmed": "አክል ተረጋግጧል",
+      "bondReverted": "ቦንድ በቻይን ላይ ተመልሷል",
+      "bondFailed": "ቦንድ አልተሳካም"
+    }
+  },
+  "miniapps": {
+    "title": "ሚኒ አፕስ",
+    "subtitle": "በUmotu ላይ የተገነቡ አፕስ ያስሱ",
+    "explore": "በUmotu ላይ የተገነቡ አፕስ ያስሱ",
+    "noApps": "ገና አፕስ የለም",
+    "browseByCategory": "በካቴጎሪ ያስሱ",
+    "appsCount": "{{count}} አፕስ",
+    "featured": "ተለይተው የቀረቡ",
+    "comingSoon": "በቅርብ ጊዜ",
+    "liveApps": "ቀጥታ አፕስ",
+    "available": "ይገኛል",
+    "pohDescription": "ዕለታዊ ሽልማቶች ለመክፈት Inlyf በመጠቀም ሰው መሆንዎን ያረጋግጡ።",
+    "vision": {
+      "title": "የእኛ ራዕይ",
+      "tagline": "በቀን 10 ዶላር፣ ሁሉም ሰው በየቦታው",
+      "description": "Umotu ሁሉም ሰው በአለም ኢኮኖሚ ውስጥ መሳተፍ የሚችልበት መሠረተ ልማት በመገንባት ላይ ነው—በየት እንደሚኖር ወይም የትኛውን ባንክ እንደሚጠቀም።",
+      "readMore": "ሙሉ ራዕይ ያንብቡ",
+      "pillars": {
+        "title": "ሶስት ዋና መርሆች",
+        "ubi": {
+          "title": "በቀን $10፣ ሁሉም ሰው በየቦታው",
+          "description": "አውታረ መረቡን ለመጠበቅ የተገኙ ሽልማቶች እንደ ሁለንተናዊ መሰረታዊ ገቢ። ስልክ ያለው ማንም መሳተፍ እና መግኘት ይችላል።"
+        },
+        "capital": {
+          "title": "ካፒታል በነጻ ይንቀሳቀሳል",
+          "description": "ለክፍያዎች እና ማስተላለፎች ዜሮ የሚጠጋ ግጭት—በድንበር ማቋረጥ ወይም አካባቢያዊ። ንግዶች ~0.1% የፕላትፎርም ወጪ ይከፍላሉ፣ ግለሰቦች ምንም አይከፍሉም።"
+        },
+        "sovereignty": {
+          "title": "የገንዘብ ሉዓላዊነት ይከበር",
+          "description": "ፊያት ምንዛሬዎችን አናቀውም—የተሻለ እንዲሰሩ እናደርጋለን። ባንኮች ከአካባቢያዊ ምንዛሬቸው ጋር የተጣመሩ ስቴብልኮይኖች ያወጣሉ። የገንዘብ ፖሊሲ በሰፊ ተደራሽነት እና ዝቅተኛ ግጭት የበለጠ ውጤታማ ይሆናል።"
+        }
+      },
+      "notReplacing": "Umotu ከማእከላዊ ባንኮች ጋር አይወዳደርም። ለፊያት ምንዛሬዎች የተሻለ መሠረተ ልማት እየገነባን ነው፡ ዝቅተኛ ግጭት፣ አለም አቀፍ መዳረሻ፣ እና የተሻለ ገበያ ቅልጥፍና እና ጥንካሬ።"
+    },
+    "building": {
+      "title": "ኢኮሲስተሙን እየገነባን ነው",
+      "description": "እነዚህ አፕስ በUmotu ምን ሊሆን እንደሚችል ያሳያሉ። አንዳንዶች አሁን ዝግጁ ናቸው፣ ሌሎች በቅርብ ጊዜ። በዓለም ዙሪያ ገንቢዎች በፕላትፎርማችን ላይ ለመገንባት እና ለመጀመር ይጋበዛሉ።",
+      "developerDocs": "ገንቢ ሰነዶች"
+    },
+    "categories": {
+      "payments": {
+        "name": "ክፍያዎች እና ፋይናንስ",
+        "apps": {
+          "sendMoney": {
+            "name": "ገንዘብ ላክ",
+            "description": "UMT ወይም ስቴብልኮይኖችን በቅጽበት ለማንም፣ በየቦታው ላክ—ባንኮች አያስፈልጉም።",
+            "example": "$20 ለቤተሰብዎ በውጪ በሰከንዶች ላክ፣ በቀናት አይደለም። ድብቅ ክፍያዎች ዜሮ።"
+          },
+          "billPay": {
+            "name": "ቢል ክፈል",
+            "description": "መብራት፣ ስልክ፣ ኢንተርኔት እና ሌሎችን በቀጥታ ከየገንዘብ ቦርሳዎ ይክፈሉ።"
+          },
+          "savings": {
+            "name": "የቁጠባ ክበቦች",
+            "description": "ባህላዊ የሚሽከረከር ቁጠባ (ቶንታይን፣ ቺት ፈንድ) በስማርት ኮንትራት ትረስትሌስ ይሆናል።"
+          },
+          "microLoans": {
+            "name": "ማይክሮ ብድሮች",
+            "description": "በተረጋገጠ ሰው መሆንዎ እና ስም የተጠበቁ ፒር-ቱ-ፒር ብድር።"
+          }
+        }
+      },
+      "transport": {
+        "name": "ትራንስፖርት እና ዲሊቨሪ",
+        "apps": {
+          "rideSharing": {
+            "name": "ራይድ ሼሪንግ",
+            "description": "በክሪፕቶ የሚከፈሉ ጉዞዎች ያስይዙ። ሹፌሮች ተጨማሪ ያገኛሉ፣ ተሳፋሪዎች ያነሰ ይከፍላሉ—30% የሚወስድ መካከለኛ የለም።",
+            "example": "በላጎስ ታክሲ ጉዞ ናይራ 800 ያስከፍላል። ሹፌር ናይራ 799.2 ይቀበላል ከናይራ 560 ይልቅ።"
+          },
+          "delivery": {
+            "name": "ዲሊቨሪ",
+            "description": "ምግብ፣ ግሮሰሪ ወይም ጥቅሎች ይዘዙ። ኩሪየሮች በስቴብል ቶከኖች ፍትሃዊ ደመወዝ ያገኛሉ።",
+            "example": "ምሳ ይዘዙ፣ በአካባቢያዊ ስቴብልኮይን ይክፈሉ፣ ኩሪየር በቅጽበት ይከፈላል።"
+          },
+          "publicTransit": {
+            "name": "የህዝብ ትራንስፖርት",
+            "description": "ለአውቶቡሶች፣ ሜትሮዎች እና ባቡሮች በመታ ይክፈሉ። የታሪፍ ካርዶች መግዛት አያስፈልግም።"
+          }
+        }
+      },
+      "travel": {
+        "name": "ጉዞ እና እንግዳ ተቀባይነት",
+        "apps": {
+          "hotels": {
+            "name": "ሆቴሎች እና ቆይታዎች",
+            "description": "በዓለም ዙሪያ መኖሪያዎች ያስይዙ። አስተናጋጆች ስቴብልኮይኖች ይቀበላሉ፣ እንግዶች በክፍያዎች ይቆጥባሉ።",
+            "example": "በባሊ ክፍል በ$40/ሌሊት ያስይዙ። አስተናጋጅ $39.96 ይቀበላል።"
+          },
+          "flights": {
+            "name": "በረራዎች",
+            "description": "በረራዎች ይፈልጉ እና ያስይዙ። በክሪፕቶ ይክፈሉ፣ UMT ሽልማቶች ያግኙ።"
+          },
+          "tours": {
+            "name": "አካባቢያዊ ጉብኝቶች",
+            "description": "ከአካባቢያዊ መመሪያዎች ጋር ተሞክሮዎች ያስይዙ። ክፍያዎች በቀጥታ ወደ እነሱ ይሄዳሉ።"
+          }
+        }
+      },
+      "commerce": {
+        "name": "ግብይት እና ንግድ",
+        "apps": {
+          "localMarket": {
+            "name": "አካባቢያዊ ገበያ",
+            "description": "በአካባቢው ይግዙ እና ይሽጡ። QR-ተኮር ክፍያዎች የጎዳና ንግድ ምቹ ያደርጋሉ።",
+            "example": "በጃካርታ ሻጭ USDC ይቀበላል። ደንበኛ ይክፈላል፣ ሻጭ ገንዘብ በቅጽበት ይደርሳል።"
+          },
+          "ecommerce": {
+            "name": "ኢ-ኮሜርስ",
+            "description": "ከዓለም ዙሪያ ነጋዴዎች በመስመር ላይ ይግዙ። የካርድ ክፍያዎች የሉም፣ ቻርጅባክ የለም።",
+            "example": "ከሼንዘን ኤሌክትሮኒክስ ይግዙ። በስቴብልኮይኖች ይክፈሉ፣ ከክሬዲት ካርድ ጋር ሲነፃፀር 3% ይቆጥቡ።"
+          },
+          "marketplace": {
+            "name": "ፒር ገበያ",
+            "description": "እቃዎች ለመሸጥ ይዘርዝሩ፣ ከሌሎች ይግዙ። ኤስኮሮ ሁለቱንም ወገኖች ይጠብቃል።"
+          }
+        }
+      },
+      "services": {
+        "name": "አገልግሎቶች እና ሥራ",
+        "apps": {
+          "remittance": {
+            "name": "ሪሚታንስ",
+            "description": "ገንዘብ ወደ ቤት ላክ። ተቀባዮች ወደ አካባቢያዊ ምንዛሬ ማውጣት ወይም ዲጂታል ማቆየት ይችላሉ።",
+            "example": "$200 ከUSA ወደ ፊሊፒንስ ላክ። ተቀባይ ፔሶ 11,000+ ይቀበላል ከፔሶ 10,400 ይልቅ።"
+          },
+          "freelance": {
+            "name": "ፍሪላንስ ሥራ",
+            "description": "ለጊግ ሥራ በቅጽበት ይከፈሉ። ለባንክ ማስተላለፍ 30 ቀን መጠበቅ የለም።"
+          },
+          "homeServices": {
+            "name": "የቤት አገልግሎቶች",
+            "description": "ፕላምበሮች፣ ኤሌክትሪሻኖች፣ ማጽጃዎች ይቀጥሩ። ሥራው ሲጨርስ ብቻ ይክፈሉ።"
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "ንግድዎን በUmotu ላይ ይገንቡ",
+      "subtitle": "ክፍያዎች የተገነቡባቸው አፕስ ይጀምሩ",
+      "description": "በUmotu ኢኮሲስተም ውስጥ የሚገቡ አፕስ ይፍጠሩ—ሚሊዮኖች የተረጋገጡ ሰዎች በዕለታዊ ገቢ ዝግጁ ለግብይት። የክፍያ ውህደት ችግሮች የሉም።",
+      "benefits": {
+        "noFees": "ዜሮ የሚጠጋ የክፍያ ማቀነባበሪያ ክፍያዎች—99.9% ገቢ ይጠብቁ",
+        "verifiedUsers": "ሁሉም ተጠቃሚዎች የተረጋገጡ ሰዎች—ቦቶች ወይም ማጭበርበሮች የሉም",
+        "globalReach": "ከቀን አንድ ጀምሮ በ190+ አገሮች ተጠቃሚዎች ይድረሱ",
+        "instantPayments": "ቅጽበታዊ ክፍያዎች—30 ቀን የክፍያ መዘግየት የለም"
+      },
+      "exampleTitle": "የአጠቃቀም ሁኔታ",
+      "exampleText": "በUmotu ላይ ራይድ-ሼሪንግ አፕ ከባህላዊ ፕላትፎርሞች 70% ይልቅ 99.9% የታሪፍ ድርሻ ይጠብቃል። ሹፌሮች ተጨማሪ ያገኛሉ፣ ተሳፋሪዎች ያነሰ ይከፍላሉ።",
+      "docsButton": "ሰነዶች ያንብቡ",
+      "buildButton": "መገንባት ጀምር"
+    },
+    "bank": {
+      "title": "ባንክ ነዎት?",
+      "subtitle": "በUmotu ላይ ስቴብልኮይኖች ያወጡ",
+      "description": "ፈቃድ ያላቸው የፋይናንስ ተቋማት አካባቢያዊ ምንዛሬ ስቴብልኮይኖች በUmotu ላይ ማውጣት እና በሚሊዮኖች ተጠቃሚዎች በሚገኘው እያደገ ያለው UBI ኢኮኖሚ መጠቀም ይችላሉ።",
+      "benefits": {
+        "reserves": "በሪዘርቭ ላይ ገቢ ያግኙ፡ በቦንዶች እና ዝቅተኛ ስጋት ንብረቶች ያውጡ",
+        "mintRedeem": "ሚንት/ሪዲም ክፍያዎች ይሰብስቡ፡ በተለምዶ 0.1% በፊያት ↔ ስቴብልኮይን መቀየር",
+        "users": "ሚሊዮኖች ዕለታዊ ንቁ UBI ተቀባዮች ይድረሱ",
+        "global": "ድንበር ማቋረጥ በቅጽበት መዳረሻዎን ያስፋፉ",
+        "custody": "ሪዘርቭዎ፣ እርስዎ ካስቶዲ፡ በድጋፍ ንብረቶች ላይ ሙሉ ቁጥጥር"
+      },
+      "revenueModel": "አወጪዎች እንዴት ገቢ ያገኛሉ",
+      "revenueNote": "እንደ ቴተር እና ሌሎች ዋና አወጪዎች፣ ገቢ ከሪዘርቭ ገቢ እና መቀየር ክፍያዎች ይመጣል። በሚሊዮኖች ተጠቃሚዎች ዕለታዊ UBI ተቀባዮች ጋር፣ ሚንት/ሪዲም መጠን ትልቅ ሊሆን ይችላል።",
+      "futureNote": "አወጪዎች ፕሮቶኮሉ ሲሻሻል የግብይት ክፍያዎች ድርሻ ሊያገኙ ይችላሉ።",
+      "learnMore": "ተጨማሪ ይማሩ",
+      "applyButton": "አሁን ያመልክቱ"
+    }
+  },
+  "news": {
+    "title": "ዜና እና ዝመናዎች",
+    "description": "ከUmotu ቡድን የቅርብ ጊዜ ማስታወቂያዎች፣ ምክሮች እና የደህንነት ማስጠንቀቂያዎች ይከታተሉ።",
+    "empty": "በአሁኑ ጊዜ ዜና የለም",
+    "unread": "አዲስ",
+    "unreadCount": "{{count}} አዲስ",
+    "markAsRead": "እንደ ተነበበ ምልክት አድርግ",
+    "types": {
+      "announcement": "ማስታወቂያ",
+      "tip": "ምክር",
+      "security": "ደህንነት",
+      "airdrop": "ኤርድሮፕ",
+      "update": "ዝመና"
+    }
+  },
+  "governance": {
+    "title": "አስተዳደር",
+    "subtitle": "የUmotu ወደፊት ይቀርጹ",
+    "description": {
+      "title": "ድምጽዎ ይቆጠራል",
+      "body": "የማህበረሰብ ፕሮፖዛሎች ላይ በመምረጥ የUmotu ወደፊት ለመቅረጽ ይርዱ። Umotu ፋውንዴሽን እነዚህን ድምጽ መስጠቶች ያደራጃል፣ ነገር ግን ማህበረሰቡ ይወስናል።"
+    },
+    "empty": "ንቁ ፕሮፖዛሎች የሉም",
+    "emptyHint": "ለአዲስ የማህበረሰብ ውሳኔዎች በኋላ ይመልከቱ።",
+    "newPolls": "አዲስ",
+    "newPollsCount": "{{count}} አዲስ",
+    "vote": "ድምጽ",
+    "votes": "ድምጾች",
+    "endsIn": "በ{{time}} ያበቃል",
+    "ended": "ተጠናቋል",
+    "tapToVote": "ድምጽ ለመስጠት ከላይ አማራጭ መታ ያድርጉ",
+    "submitting": "ድምጽ በመላክ ላይ...",
+    "alreadyVoted": {
+      "title": "ቀድሞ ድምጽ ሰጥተዋል",
+      "message": "በዚህ ፕሮፖዛል ቀድሞ ድምጽ ሰጥተዋል።"
+    },
+    "confirm": {
+      "title": "ድምጽ ያረጋግጡ",
+      "message": "ለ ድምጽ መስጠት",
+      "note": "ይህ ተግባር ሊቀለበስ አይችልም።",
+      "submit": "ድምጽ አስገባ"
+    },
+    "success": {
+      "title": "ድምጽ ተልኳል!",
+      "message": "በማህበረሰብ አስተዳደር ለመሳተፍ እናመሰግናለን።"
+    },
+    "error": {
+      "title": "ድምጽ መላክ አልተሳካም",
+      "message": "ድምጽ ማስገባት አልተሳካም። እንደገና ይሞክሩ።"
+    }
+  },
+  "learn": {
+    "title": "መማር",
+    "subtitle": "ስለ Umotu ማወቅ ያለብዎት ሁሉ",
+    "featured": "ተለይተው የቀረቡ",
+    "whatIs": {
+      "title": "Umotu ምንድን ነው?",
+      "subtitle": "በቀን 10 ዶላር፣ ሁሉም ሰው በየቦታው",
+      "intro": "Umotu ማንም በስማርትፎን ብቻ በቀን ወደ $10 ለመግኘት ያለመ ነው። ውድ ሃርድዌር የለም፣ ልዩ ችሎታ የለም፣ ድንበር የለም።",
+      "howDifferent": "እንዴት ይለያል?",
+      "noMiddleman": "መካከለኛ የለም፡ በቀጥታ ከአውታረ መረቡ ጋር ይገናኛሉ—የባንክ መለያ አያስፈልግም",
+      "globalAccess": "አለም አቀፍ መዳረሻ፡ ኢንተርኔት ባለበት ይሰራል",
+      "youOwnIt": "እርስዎ ባለቤት ነዎት፡ የገንዘብ ቦርሳዎ፣ ቁልፎችዎ፣ ቁጥጥርዎ",
+      "vision": "ራዕይ",
+      "visionText": "ቢሊዮኖች ሰዎች የህዝብ ሌጅር ታማኝ ለማድረግ መርዳት እና ለዚያ መክፈል ይችላሉ። በUmotu፣ ስልኮች አውታረ መረቡን ታማኝ የሚያደርጉ ቀላል ፈተናዎች ያከናውናሉ።",
+      "nameOrigin": "ስም መነሻ",
+      "nameOriginText": "Umotu ከፖሊኔዥያን ቋንቋ Paʻumotu ተመስጦ ነው። ለዕለታዊ ሰዎች ለመገንባት እንደ አይነት ስሙን በአክብሮት እንጠቀማለን።"
+    },
+    "earn": {
+      "title": "እንዴት ያገኛሉ",
+      "subtitle": "ስልክዎ ይሰራል፤ እርስዎ ይከፈላሉ",
+      "intro": "ስልክዎ ለሁሉም የሚጠቅሙ ትንሽ ተግባራት ያከናውናል—ከዚያ ሽልማት ያገኛሉ።",
+      "steps": "ሶስት ቀላል ደረጃዎች",
+      "step1": "1) ሰው መሆንዎን ያረጋግጡ፡ ፈጣን ላይቭነስ ፈተና (እና በየጊዜው ማደስ) እያንዳንዱ ሰው አንድ መለያ እንዳለው ያረጋግጣል።",
+      "step2": "2) አውታረ መረቡን ይርዱ፡ ስልክዎ በበስተጀርባ ዳታ አቅርቦት (DA) ሳምፕሊንግ እና ሌሎች ቀላል ፈተናዎች ያከናውናል።",
+      "step3": "3) ዕለታዊ ሽልማቶች ያግኙ፡ ለዚህ ሥራ ~$10/ቀን በአውታረ መረብ ፖሊሲ ይከፈላሉ።",
+      "localCurrency": "በእርስዎ ምንዛሬ ይከፈላል",
+      "localCurrencyText": "የክፍያ ቶከን ይምረጡ፡ አካባቢያዊ-ምንዛሬ ስቴብልኮይኖች (የሚገኙ ከሆነ) ወይም UMT። መጠኖች ~$10 USD እሴት ያነጣጥራሉ እና በመሳተፍ እና ገበያ ሁኔታዎች ሊስተካከሉ ይችላሉ።"
+    },
+    "whereMoney": {
+      "title": "$10 ከየት ይመጣል?",
+      "subtitle": "ሥራ ስለሚሰሩ ይከፈላሉ",
+      "intro": "ቁጥር 1 ጥያቄ ነው። አጭር መልስ፡ አውታረ መረቡ የሚያስፈልገውን አገልግሎት ስለሚሰጡ።",
+      "realWork": "ስልክዎ እውነተኛ ሥራ ይሰራል",
+      "realWork1": "ዳታ አቅርቦት ሳምፕሊንግ፡ ስልክዎ ብሎክ ዳታ ይገኛል እና ትክክል መሆኑን ያረጋግጣል",
+      "realWork2": "ሰው መሳተፍ፡ ቦቶች እና ስፓም ለመከላከል አንድ-ሰው-አንድ-መለያ ያረጋግጡ",
+      "realWork3": "እነዚህ ተግባራት ሁሉንም ይጠብቃሉ፤ ያለ እነሱ አውታረ መረቡ ይዳከማል",
+      "valueSource": "የእሴት ሁለት ምንጮች",
+      "utility": "ጥቅም፡ ሰዎች የሚመርጡት ፈጣን፣ ዝቅተኛ-ክፍያ ክፍያዎች",
+      "consensus": "ኮንሰንሰስ፡ ተጨማሪ ሰዎች ህጎችን ማረጋገጥ እና መስማማት ሲችሉ የሚያድግ እሴት",
+      "distribution": "ሽልማቶች እንዴት ይከፋፈላሉ",
+      "newTokens": "አዲስ UMT ቶከኖች ተፈጥረው ለተረጋገጡ ስልክ ተሳታፊዎች ይከፋፈላሉ (ለቫሊዴተሮች አይደለም)",
+      "fees": "የግብይት ክፍያዎች እና ቢልደር ቢድስ ክፍል ለብሎኮች ማጠናቀቅ ለስልክ ሴንቲነሎች ይከፋፈላል",
+      "treasury": "ትንሽ ክፍል ለቀጣይ ጥገና እና መረጋጋት ፕሮግራሞች ይመደባል",
+      "whyDifferent": "ይህ ለምን ይለያል",
+      "btcProblem": "ቢትኮይን ልዩ ማዕድናት ያላቸውን ያሸልባል (ካፒታል-ኢንተንሲቭ)",
+      "ethProblem": "ኢተሪየም ትላልቅ ስቴከሮችን ያሸልባል (ካፒታል-ኢንተንሲቭ)",
+      "umotuSolution": "Umotu ዕለታዊ ስልኮችን ያሸልባል (ዝቅተኛ ተግባራዊ ወጪ ለመሳተፍ)",
+      "conclusion": "ይህ ልገሳ አይደለም፡ የተጋራ የፋይናንስ መሠረተ ልማት ታማኝ እና ጠቃሚ ለማድረግ ሥራ ስለሚሰሩ ይከፈላሉ።"
+    },
+    "security": {
+      "title": "የገንዘብ ቦርሳ ደህንነት",
+      "subtitle": "ገንዘብዎን ይጠብቁ",
+      "intro": "የገንዘብ ቦርሳዎ እርስዎ ብቻ የሚቆጣጠሩት ዲጂታል ቫልት ነው።",
+      "recovery": "የ12 ቃላትዎ እና የግል ቁልፍ",
+      "recoveryText": "የ12 ሚስጥር ቃላትዎ (የማገገሚያ ሀረግ) እና የግል ቁልፍዎ የገንዘብ ቦርሳዎን ይከፍታሉ። እነዚህን ያለው ማንም ገንዘብዎን ሊያንቀሳቅስ ይችላል።",
+      "rules": "ወርቃማ ህጎች",
+      "rule1": "የ12 ቃላትዎን ወይም የግል ቁልፍዎን ለማንም በጭራሽ አይጋሩ—እንኳን ለUmotu አስተዋጽኦች።",
+      "rule2": "የ12 ቃላትዎን በወረቀት ላይ ጻፉ እና ከመስመር ውጪ ያከማቹ። በስክሪንሾት፣ ፎቶዎች ወይም ክላውድ ኖቶች አያከማቹ።",
+      "rule3": "የግል ቁልፍዎን ካላወጡ፣ ከመስመር ውጪ ያስቀምጡ (ወረቀት፣ ሃርድዌር፣ ወይም ሙሉ በሙሉ የሚያምኑት የተመሰጠረ ማኔጀር)።",
+      "rule4": "የ12 ቃላትዎን እና የግል ቁልፍዎን ካጡ፣ ማንም የገንዘብ ቦርሳዎን ማገገም አይችልም።",
+      "warning": "አስፈላጊ",
+      "warningText": "የግል ቁልፍ ሙሉ መዳረሻ ይሰጣል። ማሳየት ወይም ወደ ሌሎች አፕስ መቅዳት ገንዘብዎን ሊያጋልጥ ይችላል። ስጋቱን ካላወቁ አያወጡ።",
+      "reveal": "የግል ቁልፍ አሳይ / ወደ ውጪ ላክ",
+      "revealText": "የግል ቁልፍዎን በየገንዘብ ቦርሳ ቅንብሮች ውስጥ ማሳየት ወይም ማውጣት ይችላሉ። ባዮሜትሪክስ/ፒን ይጠይቃል፣ ለጥቂት ሰከንዶች ብቻ ያሳያል፣ እና በጭራሽ አንሰቀለውም። ለትላልቅ ቀሪ ሂሳቦች ሃርድዌር የገንዘብ ቦርሳ ይጠቀሙ።",
+      "bestPractices": "ምርጥ ተግባራት",
+      "best1": "በስልክዎ ላይ ስክሪን ቆለፍ እና ባዮሜትሪክስ አንቃ።",
+      "best2": "የቅርብ ጊዜ የደህንነት ማስተካከያዎች ለማግኘት አፕ ያዘምኑ።",
+      "best3": "ለትላልቅ ቁጠባዎች የተለየ የገንዘብ ቦርሳ ይጠቀሙ፤ ትንሽ መጠን በስልክ ለዕለታዊ ጥቅም ይተዉ።",
+      "scamBannerTitle": "ህጋዊ ማንም አይጠይቅም",
+      "scamBannerText": "ማንም የ12 ቃላትዎን ወይም የግል ቁልፍዎን የሚጠይቅ ከሆነ፣ ማጭበርበር ነው።"
+    },
+    "stablecoins": {
+      "title": "ስቴብልኮይኖች መረዳት",
+      "subtitle": "አካባቢያዊ ምንዛሬን የሚከተሉ ዲጂታል ገንዘቦች",
+      "intro": "ስቴብልኮይኖች መደበኛ ገንዘብን (እንደ USD፣ ZAR፣ NGN) ለመከተል የተነደፉ ዲጂታል ቶከኖች ናቸው።",
+      "examples": "ምሳሌዎች",
+      "example1": "1 ZAR1 ≈ 1 ደቡብ አፍሪካ ራንድ",
+      "example2": "1 USD1 ≈ 1 ዩኤስ ዶላር",
+      "example3": "1 NGN1 ≈ 1 ናይጄሪያ ናይራ",
+      "backed": "በአጋሮች የተሰጡ",
+      "backedText": "በUmotu ላይ ያሉ ስቴብልኮይኖች በቁጥጥር ስር ባሉ አጋሮች የተሰጡ እና ከሪዘርቭ ጋር 1:1 እሴት ለመጠበቅ የተነደፉ ናቸው። አወጪዎች የሪዘርቭ ማስረጃ እና የማውጣት ውሎች ያትማሉ።",
+      "convert": "ወደ ጥሬ ገንዘብ መቀየር",
+      "convertText": "በአጋር ባንኮች/ኤክስቼንጆች በኩል ይቀይሩ፣ ወይም በተቀበሉበት በቀጥታ ይጠቀሙ።"
+    },
+    "economics": {
+      "title": "UMT ኢኮኖሚክስ",
+      "subtitle": "ማን ምን ያገኛል እና ለምን",
+      "intro": "UMT የ100 ቢሊዮን ቶከኖች ቋሚ አቅርቦት አለው። አብዛኛው አውታረ መረቡን ታማኝ ለማድረግ ለሚረዱ ዕለታዊ ስልክ ተጠቃሚዎች ይከፈላል።",
+      "supply": "አቅርቦት እና ስርጭት",
+      "supplyBullets": [
+        "የቶከን አቅርቦት አብዛኛው ለስልክ ተሳታፊዎች በጊዜ ሂደት የተያዘ ሲሆን በEmission Controller በኩል ይለቀቃል። Emission Controller የዕለት ተዕለት ማውጣትን ከቀሪው አቅርቦት 0.01% ከማይበልጥ ይገድባል፣ ይህም ረጅም ጊዜ ዘላቂነትን ያረጋግጣል። በዚህ የጊዜ ሰሌዳ መሰረት፣ ከ10 ዓመታት በኋላ ከጠቅላላ አቅርቦት ውስጥ 68% ገደማ ይቀራል፣ እና ከ50 ዓመታት በኋላ 15% ገደማ ይቀራል።",
+        "ትንሽ የአቅርቦት ክፍል በማስጀመሪያ ጊዜ ለተለዩ ዓላማዎች ይፈጠራል፣ የመጀመሪያ ተጠቃሚ airdrop፣ የማህበረሰብ ሽያጭ፣ የፋውንዴሽን ምደባ እና የአደጋ ጊዜ መጠባበቂያ ወዘተ ጨምሮ።"
+      ],
+      "premine": "የማስጀመሪያ ምደባ (ጊዜያዊ፣ በዋና አውታረ መረብ ማስጀመሪያ ጊዜ ሊለወጥ ይችላል)",
+      "premineTable": [
+        {
+          "label": "ተጠቃሚ ኤርድሮፕ",
+          "value": "1.0%"
+        },
+        {
+          "label": "የማህበረሰብ ሽያጭ",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu ፋውንዴሽን (ታይምሎክድ)",
+          "value": "0.2%"
+        },
+        {
+          "label": "ድንገተኛ ፈንድ (የሚመራ)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "ለስልኮች ዕለታዊ ሽልማቶች",
+      "emissionsText": "በየቀኑ አውታረ መረቡ ከቀሪ ኤሚሽን ገንዳ 0.01% ከፍተኛ ማውጣት ይችላል። ይህን መጠን ተረጋግጠው ስልኮች ~$10/ቀን እንዲያነጣጥሩ እንቀናጃለን፣ በመሳተፍ ቁጥር እና ገበያ ሁኔታዎች እንደገና እናስተካክላለን።",
+      "fees": "ክፍያዎች እና ሴንቲነሎች",
+      "feesText": "ሴንቲነል ረዳቶች (አማራጭ፣ የላቀ) የግብይት ክፍያዎች እና ቢልደር ቢድስ ድርሻ ያገኛሉ። ይህ ከዕለታዊ ኤሚሽኖች የተለየ ነው።",
+      "transparency": "ግልጽነት",
+      "transparencyText": "ቬስቲንግ መርሃ ግብሮች እና የገንዘብ ቦርሳዎች ይፋዊ ናቸው። ዕለታዊ ኤሚሽን ካፕስ እና የተገኙ ክፍያዎች በአፕ ውስጥ ይለጠፋሉ።",
+      "disclaimerTitle": "ቀላል-ቋንቋ አይነት አስታዋሽ",
+      "disclaimerText": "ይህ የኢንቨስትመንት ምክር አይደለም። ሽልማቶች በአውታረ መረብ ፖሊሲ እና መሳተፍ ላይ ይወሰናሉ። አፕ ቋሚ ገቢ አይሰጥም።"
+    },
+    "contribute": {
+      "title": "እንዴት አስተዋጽኦ ማድረግ ይችላሉ",
+      "subtitle": "Umotu ለመገንባት ይርዱ",
+      "intro": "Umotu ኦፕን ሶርስ እና በማህበረሰብ የሚመራ ነው። ሁሉም መርዳት ይችላል—ኮድ ቢጽፉ፣ ቢተረጉሙ፣ ወይም ቀላል አስተያየት ቢሰጡ።",
+      "waysTitle": "አስተዋጽኦ መንገዶች",
+      "code": {
+        "title": "ኮዱን ያሻሽሉ",
+        "text": "ባጎች ያስተካክሉ፣ ባህሪያት ጨምሩ፣ ቴስቶች ጻፉ፣ ወይም ፑል ሪኩዌስቶች ይገምግሙ። የእኛ GitHub ሪፖዎችን ለአፕ፣ ስማርት ኮንትራትስ እና ባክኤንድ አገልግሎቶች ይመልከቱ።",
+        "cta": "GitHub ይመልከቱ",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "በትርጉም ይርዱ",
+        "text": "አፕ በእርስዎ ቋንቋ ተፈጥሯዊ እንዲሆን ያድርጉ። i18n ሎኬል ፋይሎችን ያርሙ እና እያንዳንዱን ገጽ ይፈትሹ። እርስዎ ያረሙት ሚሊዮኖችን ይረዳል።",
+        "cta": "የትርጉም መመሪያ",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "BIP-39 ቋንቋዎችን ያስፋፉ",
+        "text": "ተጨማሪ ሰዎች የ12-ቃላት የማገገሚያ ሀረግ በተወላጅ ቋንቋቸው እንዲያዩ አዲስ ወይም የተሻሻሉ ዎርድሊስቶች ያቅርቡ።",
+        "cta": "BIP-39 ይመልከቱ",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "በአስተዳደር ይቀላቀሉ",
+        "text": "ፕሮፖዛሎችን ያንብቡ፣ በግልጽ ይወያዩ፣ እና በአፕ ውስጥ ድምጽ ይስጡ። ድምጽዎ የአውታረ መረብ መለኪያዎች እና ግራንት ምደባዎችን ይመራል።",
+        "cta": "አስተዳደር ክፈት",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "ቃሉን ያሰራጩ",
+        "text": "ለጓደኞች ይንገሩ፣ ቱቶሪያሎች ጻፉ፣ ሾርትስ ያትሙ፣ ጥያቄዎች ይመልሱ። ጠንካራ ማህበረሰብ ለሁሉም ጠንካራ አውታረ መረብ ይፈጥራል።",
+        "cta": "Umotu አጋራ",
+        "url": "https://umotu.com"
+      },
+      "note": "ሁሉም አስተዋጽኦዎች ፈቃደኛ ናቸው። በግራንት ፕሮፖዛል ውስጥ ካልተገለጸ በስተቀር መደበኛ ሥራ ወይም ክፍያ የለም።"
+    },
+    "decentralization": {
+      "title": "ለምን ዲሴንትራላይዜሽን",
+      "subtitle": "ነጠላ ቁጥጥር ነጥብ የለም",
+      "intro": "ዲሴንትራላይዜሽን ማለት ነጠላ ኩባንያ ወይም መንግስት አውታረ መረቡን ማጥፋት ወይም ገንዘብዎን መውሰድ አለመቻል ማለት ነው።",
+      "benefits": "ለእርስዎ ጥቅሞች",
+      "benefit1": "ሁልጊዜ ንቁ፡ 24/7 ይገኛል",
+      "benefit2": "ዝቅተኛ ክፍያዎች፡ 3–5% ካርድ ክፍያዎች ይልቅ ትንሽ አውታረ መረብ ክፍያዎች",
+      "benefit3": "ድንበር የለም፡ እሴት በአለም ላይ ላክ",
+      "benefit4": "ሴንሰርሺፕ-ሪዚስታንት፡ ቁልፎችዎ፣ ገንዘብዎ",
+      "benefit5": "ግልጽ፡ ማንም ስርዓቱ እንዴት እንደሚሰራ ማረጋገጥ ይችላል",
+      "howWorks": "እንዴት እንደሚሰራ",
+      "howWorksText": "ቫሊዴተሮች በ~2 ሰከንድ ብሎኮች ያቀርባሉ። ስልኮች (እንደ እርስዎ) በቀላል ፈተናዎች ያረጋግጣሉ እና ያጠናቅቃሉ። ብዙ ትንሽ አስተዋጽኦዎች ጠንካራ ደህንነት ይፈጥራሉ።"
+    },
+    "noCompany": {
+      "title": "ኩባንያ የለም፣ ደንበኛ የለም",
+      "subtitle": "ሞዴሉን ይረዱ",
+      "intro": "ፕሮቶኮሉን የሚቆጣጠር 'Umotu, Inc.' የለም። Umotu ማንም ሊጠቀምበት የሚችል ኦፕን ህጎች ስብስብ ነው።",
+      "notCompany": "Umotu ምን እንዳልሆነ",
+      "notCompany1": "ደንበኛ መለያዎች ያሉት ኩባንያ አይደለም",
+      "notCompany2": "ባንክ ወይም ገንዘብ ማስተላለፊያ አይደለም",
+      "notCompany3": "በነጠላ አካል አይቆጣጠርም",
+      "notCompany4": "ግብይቶች መቀልበስ አይችልም",
+      "whatIs": "Umotu ምን ነው",
+      "whatIs1": "ፕሮቶኮል፡ እንደ ኢሜይል ወይም ዌብ—ኦፕን፣ ኢንተሮፕራብል ህጎች",
+      "whatIs2": "ስልክ-ቅድሚያ፡ በዕለታዊ ስማርትፎኖች እርዳታ ይሰራል",
+      "whatIs3": "በማህበረሰብ የሚመራ፡ እርስዎ ተሳታፊ ነዎት፣ ደንበኛ አይደሉም",
+      "foundation": "Umotu ፋውንዴሽን",
+      "foundationIntro": "ኢኮሲስተሙን የሚደግፍ ለትርፍ-ያልሆነ ድርጅት (ሪፈረንስ አፕስ፣ ሰነዶች፣ የማህበረሰብ ፕሮግራሞች) ነገር ግን ፕሮቶኮሉን አይቆጣጠርም።",
+      "foundationTask1": "ሞባይል አፕ እና ኤክስፕሎረርን እንደ ሪፈረንስ አፕሊኬሽኖች ይጠብቃል",
+      "foundationTask2": "አንዳንድ ይፋዊ መሠረተ ልማት ያካሂዳል (ሌሎች የራሳቸውን ማካሄድ ይችላሉ)",
+      "foundationTask3": "የማህበረሰብ አስተዳደር ያስተባብራል (ዜና፣ ድምጽ መስጠቶች)",
+      "foundationTask4": "የተደገፉ ስቴብልኮይኖችን ይገመግማል እና ይዘርዝራል",
+      "foundationTask5": "ትምህርት እና ደህንነት መመሪያዎች ያትማል",
+      "foundationNote": "ፋውንዴሽኑ የገንዘብ ቦርሳዎን መድረስ አይችልም እና ግብይቶች መቀልበስ አይችልም።"
+    },
+    "scamPrevention": {
+      "title": "ማጭበርበሮችን ያስወግዱ",
+      "subtitle": "ራስዎን ይጠብቁ",
+      "intro": "Umotu ፋውንዴሽን በጭራሽ DM አያደርግልዎትም። 'ሳፖርት' እንደሆኑ የሚያስመስሉ ማንም ማጭበርበር ነው።",
+      "redFlags": "ቀይ ምልክቶች",
+      "redFlag1": "ደንበኛ ሳፖርት እንደሆኑ የሚናገሩ",
+      "redFlag2": "መለያዎን 'ለማረጋገጥ' ወይም 'ለማሻሻል' ሊንኮች",
+      "redFlag3": "የ12-ቃላት ሀረግ ወይም የግል ቁልፍ መጠየቅ",
+      "redFlag4": "ገንዘብ ከላኩ ቦነስ ቶከኖች ቃል መግባት",
+      "redFlag5": "ሽልማቶችን 'ለማንቃት' የሚጠይቁ አፕስ ወይም ጣቢያዎች",
+      "truth": "እውነት",
+      "truth1": "የገንዘብ ቦርሳዎን ማስጀመር የሚችል ደንበኛ ሳፖርት የለም",
+      "truth2": "ሁሉም ይፋዊ ዝመናዎች በዚህ አፕ ውስጥ ይታያሉ",
+      "truth3": "ከUmotu ማንም የማገገሚያ ሀረግ ወይም የግል ቁልፍ አይጠይቅም",
+      "truth4": "ይህን አፕ ከይፋዊ አፕል ስቶር ወይም ጉግል ፕሌይ ብቻ ያውርዱ",
+      "whatToDo": "ማንም ካነጋገረዎት",
+      "action1": "አይመልሱ",
+      "action2": "ሊንኮች አይክልክሉ",
+      "action3": "መረጃ አይጋሩ",
+      "action4": "ብሎክ እና ሪፖርት ያድርጉ"
+    },
+    "airdrop": {
+      "title": "ቴስትኔት ኤርድሮፕ",
+      "subtitle": "የመጀመሪያ ተጠቃሚዎች ይታወቃሉ",
+      "intro": "እርስዎ መጀመሪያ ናቸው! Umotu በቴስትኔት ላይ ነው። ንቁ ቴስትኔት ተሳታፊዎች በሜይንኔት ላንች ምደባ ሊያገኙ ይችላሉ።",
+      "howToQualify": "ለመገኘት እንዴት",
+      "step1": "በአፕ ውስጥ የገንዘብ ቦርሳ ፍጠር",
+      "step2": "ሰው መሆን (Proof of Human) ማረጋገጥ ጨርስ",
+      "step3": "በቴስትኔት ወቅት አፕ በተደጋጋሚ ይጠቀሙ",
+      "whenAirdrop": "ኤርድሮፕ መቼ ነው?",
+      "whyTestnet": "ቴስትኔት አስፈላጊ ነው፡ ተጠቃሚዎች የገንዘብ ቦርሳ ደህንነት ይማራሉ፣ እና ስርዓቱ ለደህንነት፣ ጥንካሬ እና ቅልጥፍና በሜይንኔት በፊት ይፈተናል።",
+      "timeline": "ሜይንኔት በQ1 ወይም Q2 2026 ይጠበቃል። ኤርድሮፕ በሜይንኔት ላንች ዙሪያ ይሆናል።",
+      "howMuch": "ምን ያህል እንደሆን ያገኛሉ?",
+      "totalPool": "ጠቅላላ ኤርድሮፕ ገንዳ፡ 1,000,000,000 UMT ቶከኖች። ድርሻዎ በጠቅላላ ተሳታፊዎች እና በላንች UMT ዋጋ ላይ ይወሰናል።",
+      "scenario2": "1M ተጠቃሚዎች፡ ~1,000 UMT በተጠቃሚ፣ የሚጠበቀው ዋጋ ~$1፣ ኤርድሮፕ እሴት ~$1,000",
+      "scenario3": "10M ተጠቃሚዎች፡ ~100 UMT በተጠቃሚ፣ የሚጠበቀው ዋጋ ~$20፣ ኤርድሮፕ እሴት ~$2,000",
+      "scenario4": "100M ተጠቃሚዎች፡ ~10 UMT በተጠቃሚ፣ የሚጠበቀው ዋጋ ~$300፣ ኤርድሮፕ እሴት ~$3,000",
+      "disclaimer": "እነዚህ ግምቶች ብቻ ናቸው፣ ዋስትና አይደሉም። ትክክለኛ እሴቶች በገበያ ሁኔታዎች እና ፕሮግራም ህጎች ላይ ይወሰናሉ።",
+      "whatYouGet": "ምን እንደሆን ያገኛሉ",
+      "reward": "በሜይንኔት፣ የቴስትኔት የገንዘብ ቦርሳዎ በመሳተፍ እና ፕሮግራም ህጎች መሰረት እውነተኛ ቶከኖች ሊቀበል ይችላል። መጀመሪያ እና ተጨማሪ ንቁ ተጠቃሚዎች ቅድሚያ ይሰጣሉ።",
+      "note": "ማሳሰቢያ፡ ቴስትኔት ቶከኖች እሴት የላቸውም። ማንኛውም ሜይንኔት ምደባ በላንች ፕሮግራም ፖሊሲ ይወሰናል። ስለ ኤርድሮፕ ሁሉም ዜና በዚህ አፕ ብቻ ይለጠፋል።"
+    },
+    "gettingStarted": {
+      "title": "መጀመር",
+      "subtitle": "የመጀመሪያ አምስት ደቂቃዎች",
+      "intro": "የእርስዎ ፈጣን ማቀናበሪያ እዚህ ነው፡",
+      "checklist": "ማቀናበሪያ ቼክሊስት",
+      "check1": "1) ቋንቋዎን ይምረጡ (ተከናውኗል!)",
+      "check2": "2) የገንዘብ ቦርሳ ፍጠር ወይም አስገባ",
+      "check3": "3) አስፈላጊ፡ የ12 ቃላትዎን በወረቀት ላይ ጻፉ",
+      "check4": "4) ሰው መሆን ማረጋገጥ ጨርስ (ፈጣን ስካን)",
+      "check5": "5) ዕለታዊ ሽልማቶች ለማግኘት አፕ እንዲሰራ ይተዉ",
+      "tips": "ፕሮ ምክሮች",
+      "tip1": "ፈተናዎች በበስተጀርባ እንዲሰሩ መዳረሻ ፍቀድ",
+      "tip2": "ሽልማቶች ለማየት በየቀኑ ይመልከቱ",
+      "tip3": "ጓደኞችን ጋብዙ—ተጨማሪ ተጠቃሚዎች አውታረ መረቡን ጠንካራ ያደርጋሉ"
+    }
+  },
+  "common": {
+    "loading": "በመጫን ላይ...",
+    "error": "ስህተት",
+    "retry": "እንደገና ሞክር",
+    "cancel": "ተው",
+    "save": "አስቀምጥ",
+    "done": "ተከናውኗል",
+    "continue": "ቀጥል",
+    "confirm": "አረጋግጥ",
+    "yes": "አዎ",
+    "no": "አይ",
+    "ok": "እሺ",
+    "success": "ተሳክቷል",
+    "failed": "አልተሳካም",
+    "copied": "ተቀድቷል!",
+    "pullToRefresh": "ለማደስ ይጎትቱ",
+    "notSet": "አልተዘጋጀም"
+  },
+  "errors": {
+    "networkError": "የአውታረ መረብ ስህተት። ግንኙነትዎን ይፈትሹ።",
+    "genericError": "የሆነ ስህተት ተከስቷል። እንደገና ይሞክሩ።",
+    "walletNotFound": "የገንዘብ ቦርሳ አልተገኘም",
+    "transactionFailed": "ግብይት አልተሳካም",
+    "invalidInput": "ልክ ያልሆነ ግብዓት"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "ወደ Umotu እንኳን በደህና መጡ",
+  "onboard_wallet_title": "የገንዘብ ቦርሳዎን ያዘጋጁ",
+  "onboard_wallet_explain": "ሽልማቶች ለመቀበል የገንዘብ ቦርሳ ፍጠር ወይም አስገባ።",
+  "wallet_create": "አዲስ የገንዘብ ቦርሳ ፍጠር",
+  "wallet_import": "የገንዘብ ቦርሳ አስገባ",
+  "wallet_import_explain": "የ12-ቃላት የማገገሚያ ሀረግ ያስገቡ",
+  "wallet_created": "የገንዘብ ቦርሳ ዝግጁ",
+  "wallet_save": "ወደ መሳሪያ አስቀምጥ",
+  "wallet_backup_title": "የማገገሚያ ሀረግዎን መጠባበቂያ ያድርጉ",
+  "wallet_backup_explain": "እነዚህን 12 ቃላት በቅደም ተከተል ጻፉ። መሳሪያዎን ካጡ የገንዘብ ቦርሳዎን ለማገገም ይህ ብቸኛው መንገድ ነው።",
+  "wallet_backup_warning": "የማገገሚያ ሀረግዎን ለማንም አይጋሩ። እነዚህን ቃላት ያለው ማንም ገንዘብዎን መድረስ ይችላል።",
+  "wallet_backup_confirm": "የማገገሚያ ሀረግ ጽፌያለሁ",
+  "wallet_backup_done": "ሀረጌን አስቀምጬያለሁ",
+  "wallet_save_first": "እባክዎን የማገገሚያ ሀረግ በመጀመሪያ ያስቀምጡ",
+  "poh_title": "ሰው መሆን ያረጋግጡ",
+  "continue": "ቀጥል",
+  "or": "ወይም",
+  "seedReveal": {
+    "title": "የማገገሚያ ሀረግ",
+    "intro": "የማገገሚያ ሀረግዎ መዳረሻ ካጡ የገንዘብ ቦርሳዎን ለመመለስ ብቸኛው መንገድ ነው። ጻፉት እና በደህና ከመስመር ውጪ ያከማቹ።",
+    "displayLanguage": "በ{{language}} ይታያል",
+    "hiddenMsg": "ሀረግዎ ለደህንነት ተደብቋል። ለማሳየት ከታች መታ ያድርጉ።",
+    "showButton": "ሀረግ አሳይ",
+    "noScreenshot": "የማገገሚያ ሀረግ ስክሪንሾት በጭራሽ አይውሰዱ።",
+    "checkTitle": "መጠባበቂያዎን ያረጋግጡ",
+    "checkPrompt": "በትክክል እንደጻፉ ለማረጋገጥ ከታች ቃላትን ያስገቡ፡",
+    "checkWordN": "ቃል #{{n}}",
+    "checkIncorrect": "አንድ ወይም ተጨማሪ ቃላት ይሳሳታሉ። መጠባበቂያዎን ይፈትሹ።",
+    "ackWritten": "የማገገሚያ ሀረጌን ጽፌያለሁ",
+    "ackCannotRecover": "Umotu የገንዘብ ቦርሳዬን ማገገም እንደማይችል ተረድቻለሁ",
+    "cancel": "ተው",
+    "continue": "አስቀምጬያለሁ"
+  }
+}

@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "1日10ドル、誰もがどこでも"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "wallet": "ウォレット",
+    "miniapps": "ミニアプリ",
+    "back": "戻る",
+    "scan": "スキャン",
+    "settings": "設定",
+    "close": "閉じる"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "検証済み人間",
+      "umtPrice": "UMT価格"
+    },
+    "quickActions": {
+      "news": "ニュース",
+      "vote": "ガバナンス",
+      "governance": "ガバナンス",
+      "learn": "学ぶ",
+      "network": "ネットワーク"
+    },
+    "setupProgress": {
+      "title": "セットアップ進捗",
+      "steps": {
+        "language": "言語",
+        "wallet": "ウォレット",
+        "verifyHuman": "人間検証",
+        "complete": "完了"
+      },
+      "continue": "続ける",
+      "changeChoice": "選択を変更",
+      "requiresLanguage": "まず言語を選択してください",
+      "requiresWallet": "まずウォレットを作成してください"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "毎日報酬",
+      "totalEarned": "合計獲得額",
+      "lastClaimed": "最終請求日",
+      "never": "なし",
+      "configure": "設定",
+      "loading": "報酬を読み込み中...",
+      "noWallet": "ウォレットなし",
+      "autoClaim": {
+        "label": "自動請求:",
+        "active": "有効",
+        "setupNow": "今すぐ設定",
+        "expired": "期限切れ",
+        "tapToSetup": "タップして自動毎日報酬を有効化"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel報酬",
+      "manage": "管理",
+      "loading": "読み込み中...",
+      "status": "ステータス",
+      "statuses": {
+        "notBonded": "ボンドなし",
+        "bonded": "ボンド済み",
+        "unbonding": "ボンド解除中"
+      },
+      "claimable": "請求可能",
+      "accruing": "蓄積中",
+      "bonded": "ボンド済み"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "自動毎日報酬",
+      "description": "<bold>自動請求</bold>を有効にすると、$10の毎日UBI報酬を自動的に受け取れます—手動請求は不要です！",
+      "benefits": {
+        "midnight": "あなたのタイムゾーンの深夜に請求",
+        "lowerFees": "ガス料金80%低減（他のユーザーとバッチ処理）",
+        "disable": "設定でいつでも無効化できます"
+      },
+      "notice": "リレーが代わりに請求できる一回限りの承認メッセージに署名します。プライベートキーは共有されません。",
+      "maybeLater": "後で",
+      "enableNow": "今すぐ有効化"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "自動請求設定",
+      "description": "毎日報酬を自動的に請求します。",
+      "checking": "ステータスを確認中...",
+      "status": "ステータス",
+      "enabled": "有効",
+      "disabled": "無効",
+      "lastClaimed": "最終請求日",
+      "neverClaimed": "未請求",
+      "nextClaim": "次回請求",
+      "expiresAt": "有効期限",
+      "timezone": "タイムゾーン",
+      "preferredHour": "希望時間",
+      "preferredHourHint": "自動請求を実行する時間を選択してください",
+      "enableButton": "自動請求を有効化",
+      "disableButton": "自動請求を無効化",
+      "enabling": "有効化中...",
+      "disabling": "無効化中...",
+      "enableSuccess": "自動請求が有効化されました！",
+      "enableError": "有効化に失敗しました",
+      "disableSuccess": "自動請求が無効化されました",
+      "disableError": "無効化に失敗しました",
+      "updateButton": "設定を更新",
+      "updating": "更新中..."
+    },
+    "manual": {
+      "title": "手動請求",
+      "description": "早く資金が必要な場合は、次の利用可能な報酬を今すぐ請求してください。手動請求はウォレットのガスを使用します。待てば自動請求の方が安くなります。ウォレットに資金がない場合は、手動請求の前に自動請求を有効にするか、ネイティブガスをチャージしてください。",
+      "dayLabel": "報酬日",
+      "claimButton": "今すぐ請求",
+      "claiming": "請求中...",
+      "success": "請求が送信されました",
+      "successWithId": "請求が送信されました (id: {{id}})",
+      "error": "請求に失敗しました",
+      "noProof": "報酬の証明がまだ公開されていません。今日のスナップショットが公開された後にもう一度お試しください。",
+      "unauthorized": "リレーヤーの認証に失敗しました。もう一度お試しいただくか、サポートにお問い合わせください。",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "利用可能な報酬日数：{{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "対象期間：{{start}} から {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "このバッチの後+{{days}}日",
+      "batchSuccess": "{{count}}日分の請求が完了しました",
+      "claimingProgress": "請求中 {{claimed}}/{{total}}...",
+      "claimAllButton": "{{count}}日分すべてを請求"
+    },
+    "timezone": {
+      "title": "タイムゾーン選択",
+      "search": "タイムゾーンを検索...",
+      "current": "現在の選択",
+      "searchResults": "検索結果",
+      "noResults": "結果が見つかりません",
+      "detected": "検出済み",
+      "popular": "人気のタイムゾーン",
+      "regions": {
+        "Americas": "アメリカ大陸",
+        "Europe": "ヨーロッパ",
+        "Asia": "アジア",
+        "Africa": "アフリカ",
+        "Oceania": "オセアニア"
+      }
+    },
+    "payout": {
+      "title": "支払い通貨設定",
+      "description": "希望の支払い通貨を選択してください。",
+      "current": "現在",
+      "saved": "保存されました",
+      "saveError": "保存エラー",
+      "showMore": "さらに表示 ({{count}})",
+      "showLess": "折りたたむ",
+      "native": "ネイティブトークン",
+      "stablecoin": "ステーブルコイン",
+      "popular": "人気",
+      "allCurrencies": "すべての通貨"
+    }
+  },
+  "wallet": {
+    "title": "ウォレット",
+    "testnetNotice": "テストネットトークンは実価値がありません",
+    "totalBalance": "合計残高",
+    "balance": "残高",
+    "address": "アドレス",
+    "copyAddress": "アドレスをコピー",
+    "addressCopied": "アドレスがコピーされました",
+    "receive": "受信",
+    "send": "送信",
+    "swap": "スワップ",
+    "swapComingSoon": "スワップはまもなく利用可能",
+    "history": "取引履歴",
+    "tokens": "トークン",
+    "collectibles": "コレクティブル",
+    "noTokens": "設定されたトークンなし",
+    "nativeToken": "ネイティブトークン",
+    "loading": "読み込み中...",
+    "refreshing": "更新中...",
+    "balancesUpdated": "残高が更新されました",
+    "menu": {
+      "manageTokens": "トークン管理",
+      "addressBook": "アドレス帳",
+      "walletSettings": "ウォレット設定",
+      "showBalances": "残高を表示",
+      "hideBalances": "残高を非表示",
+      "showZeroTokens": "残高ゼロのトークンを表示",
+      "hideZeroTokens": "残高ゼロのトークンを非表示",
+      "refresh": "更新"
+    },
+    "manageTokens": {
+      "title": "トークン管理",
+      "info": "カスタムERC-20トークンを追加できます。システムトークンはデフォルトで含まれています。",
+      "addToken": "トークンを追加",
+      "adding": "追加中...",
+      "contractAddress": "トークンコントラクトアドレス (0x...)",
+      "autoFetch": "シンボルと小数点は自動的に取得されます",
+      "customTokens": "カスタムトークン",
+      "noCustomTokens": "カスタムトークンがまだ追加されていません。",
+      "addUsingForm": "上記のフォームを使用してトークンを追加してください。",
+      "systemToken": "このトークンはシステムトークンで既に含まれています。",
+      "fetchingMetadata": "トークンメタデータを取得中...",
+      "addedSuccess": "トークンが正常に追加されました",
+      "enterValidAddress": "有効なトークンアドレスを入力してください",
+      "save": "保存"
+    },
+    "addressBook": {
+      "title": "アドレス帳",
+      "addContact": "連絡先を追加",
+      "nameLabel": "名前またはラベル",
+      "walletAddress": "ウォレットアドレス (0x...)",
+      "savedContacts": "保存された連絡先",
+      "noContacts": "保存された連絡先がありません。",
+      "addForQuickSending": "クイック送信のために連絡先を追加してください。",
+      "enterValidAddress": "有効なアドレスを入力してください",
+      "addLabel": "ラベルを追加",
+      "save": "保存"
+    },
+    "settings": {
+      "title": "ウォレット設定",
+      "export": {
+        "title": "ウォレットエクスポート",
+        "description": "リカバリーフレーズやプライベートキーを絶対に他人と共有しないでください。オフラインで安全に保管してください。",
+        "recoveryPhrase": "リカバリーフレーズ",
+        "recoveryPhraseNotAvailable": "リカバリーフレーズは利用できません（プライベートキー経由でインポートされた場合）",
+        "privateKey": "プライベートキー",
+        "privateKeyWarning": "プライベートキー（絶対秘密！）",
+        "showPhrase": "リカバリーフレーズを表示",
+        "showKey": "プライベートキーを表示",
+        "warning": "リカバリーフレーズやプライベートキーを誰とも共有しないでください。",
+        "copy": "コピー",
+        "copied": "コピーされました！",
+        "hide": "非表示",
+        "clipboardWarning": "クリップボードは他のアプリから読み取られる可能性があります。30秒後に自動クリアされます。",
+        "verifyForKey": "プライベートキーを表示するために認証",
+        "verifyForSeed": "リカバリーフレーズを表示するために認証",
+        "verifyDescription": "パスワードまたはPINを入力して機密ウォレット情報を表示してください。"
+      },
+      "import": {
+        "title": "ウォレットインポート",
+        "description": "インポートすると現在のウォレットが置き換えられます。まず既存のウォレットをバックアップしてください。インポート後、PoHステータスを再検証する必要があります。",
+        "byPhrase": "リカバリーフレーズ",
+        "byPrivateKey": "プライベートキー",
+        "phrasePlaceholder": "12または24語のフレーズを入力…",
+        "keyPlaceholder": "0x… で始まるプライベートキーを入力",
+        "importButton": "ウォレットをインポート",
+        "importing": "インポート中...",
+        "success": "ウォレットが正常にインポートされました！"
+      },
+      "dangerZone": {
+        "title": "危険ゾーン",
+        "description": "これらの操作は取り消せません。必ずウォレットをバックアップしてください。",
+        "forgetWallet": "ウォレットを削除",
+        "forgetDescription": "このデバイスからウォレットを削除します。リカバリーフレーズをバックアップしてください。",
+        "confirmTitle": "ウォレットを削除しますか？",
+        "confirmMessage": "この操作でデバイスからウォレットが削除されます。まずリカバリーフレーズをバックアップしてください。",
+        "cancel": "キャンセル",
+        "confirm": "ウォレットを削除",
+        "walletForgotten": "ウォレットが削除されました",
+        "unableToForget": "ウォレットを削除できませんでした",
+        "resetWallet": "ウォレットをリセット",
+        "resetDescription": "すべてのウォレットデータを完全に消去して新しく開始します。"
+      },
+      "authPrompt": "プライベートキーを表示するために認証してください"
+    }
+  },
+  "reset": {
+    "title": "ウォレットリセット",
+    "dangerTitle": "この操作は取り消せません！",
+    "warning1": "ウォレットをリセットすると、以下のものが永久に削除されます：",
+    "bullet1": "ウォレットとプライベートキー",
+    "bullet2": "リカバリーフレーズ",
+    "bullet3": "すべてのアプリ設定とプリファレンス",
+    "bullet4": "取引履歴",
+    "recoveryNote": "12語のリカバリーフレーズをお持ちの場合、リセット後にウォレットを復元できます。",
+    "continueButton": "理解しました、続ける",
+    "confirmTitle": "リセットを確認",
+    "confirmDescription": "すべてのウォレットデータを削除することを確認するため、以下に「RESET」と入力してください。",
+    "placeholder": "RESETと入力",
+    "typeMismatch": "確認のため「RESET」と入力してください",
+    "resetButton": "ウォレットを永久にリセット",
+    "resettingTitle": "リセット中...",
+    "resettingDescription": "すべてのウォレットデータを消去中。お待ちください...",
+    "completeTitle": "リセット完了",
+    "completeDescription": "ウォレットがリセットされました。新規ウォレットを作成するか既存のものをインポートできます。",
+    "startFresh": "新規開始",
+    "error": "ウォレットリセットに失敗しました。もう一度お試しください。"
+  },
+  "export": {
+    "verifyTitle": "本人確認",
+    "verifyDescription": "ウォレットをエクスポートするためにパスワードを入力してください。",
+    "verify": "確認",
+    "verificationFailed": "確認に失敗しました",
+    "passphraseTitle": "エクスポート用パスフレーズ設定",
+    "passphraseDescription": "バックアップを暗号化するための強力なパスフレーズを選択してください。このパスフレーズは後でインポート時に必要です。",
+    "enterPassphrase": "パスフレーズを入力",
+    "passphraseTooWeak": "パスフレーズが弱すぎます。少なくとも8文字使用してください。",
+    "includeSeed": "リカバリーフレーズを含む",
+    "includeSeedDescription": "完全バックアップのため推奨",
+    "confirmTitle": "パスフレーズ確認",
+    "confirmDescription": "確認のためパスフレーズを再入力してください。",
+    "confirmPassphrase": "パスフレーズを確認",
+    "passphraseMismatch": "パスフレーズが一致しません",
+    "warning": "このバックアップを安全に保管してください。このファイルとパスフレーズを持つ者はウォレットにアクセスできます。",
+    "exportNow": "ウォレットをエクスポート",
+    "exportingTitle": "エクスポート中...",
+    "exportingDescription": "ウォレットバックアップを暗号化・準備中...",
+    "successTitle": "エクスポート完了",
+    "successDescription": "暗号化されたウォレットバックアップが作成されました。安全に保管してください。",
+    "rememberPassphrase": "エクスポートパスフレーズを覚えておいてください - このバックアップのインポートに必要です。",
+    "errorTitle": "エクスポート失敗",
+    "failed": "エクスポートに失敗しました。もう一度お試しください。",
+    "tryAgain": "再試行",
+    "exportKeystore": "暗号化バックアップをエクスポート",
+    "exportKeystoreDesc": "暗号化されたキーストアファイルを保存"
+  },
+  "security": {
+    "title": "ウォレットを保護",
+    "subtitle": "ウォレットを保護するためのパスワードまたはPINを設定",
+    "checkingDevice": "デバイスセキュリティを確認中...",
+    "passwordOption": "パスワード",
+    "passwordDesc": "8文字以上、文字と数字",
+    "pinOption": "6桁PIN",
+    "pinDesc": "素早く覚えやすい",
+    "enterPin": "6桁のPINを入力",
+    "confirmPin": "PINを確認",
+    "enterPassword": "パスワードを入力",
+    "confirmPassword": "パスワードを確認",
+    "enableBiometrics": "{{type}}を有効化しますか？",
+    "biometricsDesc": "{{type}}を使用して素早くアンロック。後で設定から変更可能です。",
+    "enableBiometricsButton": "{{type}}を有効化",
+    "enableBiometricsPrompt": "生体認証を有効化するために認証してください",
+    "skipBiometrics": "今はスキップ",
+    "setupComplete": "セットアップ完了！",
+    "walletSecured": "ウォレットが保護されました！",
+    "continue": "続ける",
+    "passwordTooWeak": "パスワードが弱すぎます。提案に従ってください。",
+    "pinMismatch": "PINが一致しません",
+    "passwordMismatch": "パスワードが一致しません",
+    "setupError": "セットアップに失敗しました。もう一度お試しください。",
+    "passwordTitle": "パスワード",
+    "passwordDescription": "8文字以上、より強力なセキュリティ",
+    "pinTitle": "6桁PIN",
+    "pinDescription": "クイックアクセス、覚えやすい"
+  },
+  "lock": {
+    "title": "Umotuをアンロック",
+    "lockedOut": "ロックアウト",
+    "tooManyAttempts": "試行回数超過です。{{time}}後に再試行してください。",
+    "attemptsRemaining": "残り{{count}}回",
+    "enterPassword": "パスワードを入力",
+    "unlock": "アンロック",
+    "wrongPin": "PINが間違っています",
+    "wrongPassword": "パスワードが間違っています",
+    "verificationError": "認証に失敗しました",
+    "biometricsPrompt": "ウォレットをアンロック",
+    "unlockWithFaceId": "Face IDでアンロックしますか？",
+    "unlockWithFingerprint": "指紋でアンロックしますか？",
+    "forgotPassword": "パスワードを忘れた場合？"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "非対応デバイス",
+    "emulatorMessage": "セキュリティ上の理由で、このアプリはエミュレーター上で実行できません。",
+    "rootedTitle": "セキュリティ警告",
+    "exitApp": "終了",
+    "continueAnyway": "それでも続ける"
+  },
+  "settingsSecurity": {
+    "title": "セキュリティ",
+    "autoLock": "自動ロック",
+    "autoLockDesc": "非アクティブ時にウォレットをロック",
+    "faceId": "Face ID",
+    "fingerprint": "指紋認証",
+    "biometricsDesc": "生体認証で素早くアンロック",
+    "changePin": "PINを変更",
+    "changePassword": "パスワードを変更",
+    "changeDesc": "セキュリティ資格情報を更新",
+    "enableBiometrics": "生体認証アンロックを有効化",
+    "enterCurrent": "現在の{{type}}を入力",
+    "enterNew": "新しい{{type}}を入力",
+    "confirmNew": "新しい{{type}}を確認",
+    "currentPassword": "現在のパスワード",
+    "newPassword": "新しいパスワード",
+    "confirmNewPassword": "新しいパスワードを確認",
+    "changeNow": "今変更",
+    "success": "成功",
+    "pinChanged": "PINが正常に変更されました",
+    "passwordChanged": "パスワードが正常に変更されました",
+    "changeFailed": "資格情報の変更に失敗しました",
+    "autoLockOptions": {
+      "immediately": "即時",
+      "after1min": "1分後",
+      "after5min": "5分後",
+      "after15min": "15分後",
+      "after1hour": "1時間後",
+      "never": "なし"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "お待ちください",
+    "cooldownMessage": "セキュリティのため、{{time}}後に再度キーを表示できます。",
+    "cooldownReason": "悪意あるアプリがキーに急速にアクセスするのを防ぎます。"
+  },
+  "passwordVerify": {
+    "title": "本人確認",
+    "description": "機密ウォレット情報を表示するためにパスワードまたはPINを入力してください",
+    "verify": "確認"
+  },
+  "passwordValidation": {
+    "veryWeak": "非常に弱い",
+    "weak": "弱い",
+    "fair": "普通",
+    "good": "良い",
+    "strong": "強い",
+    "tooShort": "パスワードは少なくとも8文字必要です",
+    "commonPassword": "一般的に使用されるパスワードです",
+    "lengthSuggestion": "より良いセキュリティのため12文字以上使用してください",
+    "mixedCaseSuggestion": "大文字と小文字を混在",
+    "numberSuggestion": "数字を追加",
+    "specialCharSuggestion": "特殊文字を追加 (!@#$%)"
+  },
+  "forgot": {
+    "title": "資格情報リセット",
+    "warning": "パスワードまたはPINをリセットするには、ウォレットのシードフレーズを入力する必要があります。これによりウォレットの所有権を証明します。",
+    "warningText": "シードフレーズを誰とも共有しないでください。",
+    "continue": "理解しました、続ける",
+    "enterSeed": "シードフレーズを入力",
+    "seedDescription": "12または24語のシードフレーズを入力してください。各単語をスペースで区切ります。",
+    "seedPlaceholder": "シードフレーズを入力...",
+    "verifySeed": "シードフレーズを確認",
+    "invalidSeed": "有効な12または24語のシードフレーズを入力してください",
+    "chooseMethod": "セキュリティ方法を選択",
+    "methodDescription": "ウォレットをどのように保護しますか？",
+    "newPassword": "新しいパスワードを作成",
+    "newPin": "新しいPINを作成",
+    "newPasswordDesc": "強力なパスワードを選択（8文字以上）",
+    "newPinDesc": "6桁のPINを入力",
+    "confirmPassword": "パスワードを確認",
+    "confirmPin": "PINを確認",
+    "confirmPasswordDesc": "確認のためパスワードを再入力",
+    "confirmPinDesc": "確認のためPINを再入力",
+    "resetNow": "今リセット",
+    "complete": "リセット完了",
+    "completeDescription": "資格情報がリセットされました。新しいパスワードまたはPINでウォレットをアンロックできます。",
+    "unlockNow": "ウォレットをアンロック",
+    "passwordTooWeak": "パスワードが弱すぎます。より強いパスワードを選択してください。",
+    "passwordMismatch": "パスワードが一致しません",
+    "pinMismatch": "PINが一致しません",
+    "resetFailed": "資格情報リセットに失敗しました。シードフレーズを確認してください。",
+    "resetError": "エラーが発生しました。もう一度お試しください。"
+  },
+  "send": {
+    "title": "送信",
+    "selectToken": "トークンを選択",
+    "selectTokenInfo": "送信するトークンを選択。残高のあるトークンのみが表示されます。",
+    "noTokensWithBalance": "残高のあるトークンなし",
+    "addTokensFirst": "まずウォレットにトークンを追加してください",
+    "enterAmount": "金額を入力",
+    "enterRecipient": "受信者を入力",
+    "review": "確認",
+    "amount": "金額",
+    "recipient": "受信者",
+    "recipientPlaceholder": "0x... ウォレットアドレス",
+    "networkFee": "ネットワーク手数料",
+    "gasToken": "ガス支払いトークン",
+    "payingWith": "支払い通貨",
+    "payGasWith": "ガス支払い通貨",
+    "nativeGas": "UMT (ネイティブ)",
+    "stableGas": "ステーブルガス",
+    "selectStable": "ステーブルを選択",
+    "max": "最大",
+    "next": "次へ",
+    "continue": "続ける",
+    "confirm": "送信を確認",
+    "confirmSend": "送信を確認",
+    "sending": "送信中...",
+    "failed": "取引失敗",
+    "viewInExplorer": "エクスプローラーで表示",
+    "done": "完了",
+    "cancel": "キャンセル",
+    "send": "送信",
+    "balance": "残高",
+    "available": "利用可能",
+    "to": "宛先",
+    "network": "ネットワーク",
+    "step": "ステップ",
+    "estimating": "見積もり中…",
+    "umtNative": "UMT (ネイティブ)",
+    "txSpeed": "取引速度",
+    "transactionSpeed": "取引速度",
+    "speed": {
+      "slow": "低速",
+      "normal": "標準",
+      "fast": "高速"
+    },
+    "gasNotice": {
+      "stablecoin": "ガスはステーブルコインで支払われます。",
+      "reserved": "ガス用に{{amount}} {{symbol}}を予約しました。最大{{max}}まで送信可能です。"
+    },
+    "errors": {
+      "invalidAddress": "無効な受信者アドレス",
+      "invalidAmount": "有効な金額を入力",
+      "insufficientBalance": "残高不足",
+      "insufficientGas": "ガス用残高不足",
+      "insufficientGasWithHint": "ガス用残高不足です。UMTまたは対応ステーブルコインを追加してください。",
+      "notEnoughForGas": "ガスをカバーする残高が不足",
+      "noStableGas": "ガス用UMT不足で対応ステーブルも利用不可",
+      "permitFailed": "ガス用トークンの承認またはパーミット失敗",
+      "relayNotConfigured": "ステーブルガスリレーが設定されていません",
+      "transactionReverted": "オンチェーンで取引がリバートされました。",
+      "approvalNeeded": "ガス用トークンに承認が必要ですが、承認用UMTがありません。少量のUMTを追加するかパーミット対応トークンを使用してください。"
+    },
+    "addressBook": {
+      "title": "アドレス帳",
+      "addNew": "新規追加",
+      "noContacts": "保存されたアドレスがありません",
+      "saveForQuickAccess": "クイックアクセス用にアドレスを保存",
+      "editContact": "連絡先を編集",
+      "deleteContact": "連絡先を削除",
+      "addressNotSaved": "アドレスが保存されていません",
+      "addLabel": "ラベルを追加",
+      "enterValidAddress": "まず有効なアドレスを入力してください",
+      "saved": "保存済み",
+      "save": "保存"
+    },
+    "success": {
+      "title": "取引が送信されました！",
+      "hash": "ハッシュ",
+      "viewInExplorer": "エクスプローラーで表示",
+      "close": "閉じる"
+    },
+    "batch": {
+      "mode": "一括モード",
+      "singleMode": "単一の受取人",
+      "addRecipient": "受取人を追加",
+      "noRecipients": "まだ受取人が追加されていません",
+      "addFromTagOrBook": "タグまたはアドレス帳から追加",
+      "invalidAddress": "無効なアドレス：{{address}}",
+      "invalidAmount": "{{recipient}}の金額が無効です",
+      "totalExceedsBalance": "合計が残高を超えています",
+      "sendingTo": "{{count}}人の受取人に送信",
+      "sendingTo_plural": "{{count}}人の受取人に送信",
+      "recipients": "受取人",
+      "addresses": "{{count}}アドレス",
+      "addresses_plural": "{{count}}アドレス",
+      "addByTag": "タグで追加",
+      "noTags": "まだタグがありません",
+      "createFirstTag": "アドレス帳で最初のタグを作成",
+      "addFromTag": "タグから追加",
+      "selectTag": "タグを選択",
+      "remove": "削除",
+      "sendAll": "すべて送信 ({{count}})",
+      "batchSend": "一括送信",
+      "badge": "一括",
+      "successFail": "{{success}}成功、{{fail}}失敗",
+      "successful": "成功",
+      "sentStatus": "送信済み",
+      "failedStatus": "失敗",
+      "details": "一括送金の詳細",
+      "total": "合計",
+      "tagPicker": {
+        "title": "タグを選択",
+        "noTags": "利用可能なタグがありません",
+        "createHint": "まずアドレス帳の連絡先にタグを追加してください"
+      },
+      "tags": {
+        "manage": "タグを管理",
+        "add": "タグを追加",
+        "remove": "タグを削除",
+        "create": "タグを作成",
+        "newTag": "新しいタグ名",
+        "addToContact": "連絡先にタグを追加"
+      }
+    }
+  },
+  "receive": {
+    "title": "受信",
+    "yourAddress": "あなたのウォレットアドレス",
+    "scanQR": "QRコードをスキャンして受信",
+    "copyAddress": "アドレスをコピー",
+    "share": "共有"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "支払い",
+      "myQr": "自分のQR"
+    },
+    "pay": {
+      "title": "支払い",
+      "description": "友人のQRコードをスキャンして直接ウォレットに支払い",
+      "allowCamera": "カメラを許可",
+      "requesting": "リクエスト中…",
+      "openSettings": "設定を開く",
+      "sendTo": "送信先",
+      "amount": "金額",
+      "rescan": "再スキャン",
+      "continue": "続ける"
+    },
+    "receive": {
+      "title": "受信",
+      "description": "このQRコードをスキャンしてこのアドレスに支払い",
+      "tapToCopy": "タップでアドレスをコピー",
+      "copied": "クリップボードにコピーされました！"
+    }
+  },
+  "history": {
+    "title": "取引履歴",
+    "sent": "送信済み",
+    "received": "受信済み",
+    "token": "トークン",
+    "external": "外部",
+    "to": "宛先: ",
+    "from": "送信元: ",
+    "viewInExplorer": "エクスプローラーで表示",
+    "empty": {
+      "title": "取引履歴なし",
+      "description": "トークンの送信または受信を行うと取引履歴がここに表示されます。"
+    },
+    "status": {
+      "confirmed": "確認済み",
+      "pending": "保留中",
+      "failed": "失敗"
+    },
+    "details": {
+      "title": "取引詳細",
+      "status": "ステータス",
+      "type": "種類",
+      "to": "宛先",
+      "from": "送信元",
+      "token": "トークン",
+      "block": "ブロック",
+      "gasCost": "ガスコスト",
+      "hash": "ハッシュ",
+      "source": "ソース",
+      "balanceDetected": "残高検出",
+      "inferredNote": "この取引は残高変化から検出されました。正確なオンチェーン詳細は利用できません。"
+    },
+    "time": {
+      "justNow": "たった今",
+      "minsAgo": "{{count}}分前",
+      "hoursAgo": "{{count}}時間前",
+      "daysAgo": "{{count}}日前"
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "account": {
+      "title": "アカウントと外観",
+      "walletAddress": "ウォレットアドレス",
+      "copy": "コピー",
+      "copied": "コピーされました"
+    },
+    "theme": {
+      "title": "テーマ",
+      "light": "ライト",
+      "dark": "ダーク",
+      "system": "システム"
+    },
+    "language": {
+      "title": "言語",
+      "select": "言語を選択",
+      "current": "現在"
+    },
+    "display": {
+      "title": "表示",
+      "description": "ホーム画面の外観をカスタマイズ。",
+      "showSentinelCard": "Sentinel報酬カードを表示",
+      "showSentinelCardDesc": "ホーム画面に報酬を表示",
+      "showDailyRewardsCard": "毎日報酬カードを表示",
+      "on": "オン",
+      "off": "オフ",
+      "sentinelSettings": "Sentinel設定",
+      "sentinelSettingsDesc": "ボンド、報酬、自動請求を管理"
+    },
+    "sentinelDisplay": {
+      "title": "Sentinel表示",
+      "showSentinelCard": "Sentinelカードを表示",
+      "showSentinelCardDesc": "ホーム画面にSentinel報酬カードを表示",
+      "sentinelSettings": "Sentinel設定",
+      "sentinelSettingsDesc": "Sentinelノードと報酬を設定"
+    },
+    "verification": {
+      "title": "検証",
+      "description": "Inlyfで人間性を検証して毎日報酬をアンロック。短いライブネスチェックで、定期的に再検証。",
+      "open": "検証を開始",
+      "refresh": "検証を更新",
+      "status": "ステータス",
+      "verified": "検証済み",
+      "notVerified": "未検証",
+      "expiresOn": "有効期限",
+      "daysRemaining": "残り日数",
+      "upToDate": "認証は最新です",
+      "refreshAvailableIn": "{{days}}日後に更新可能"
+    },
+    "network": {
+      "title": "ネットワーク",
+      "description": "ブロックチェーンネットワーク接続を設定。",
+      "testnet": "テストネット",
+      "mainnet": "メインネット (まもなく)",
+      "rpcEndpoint": "RPCエンドポイント",
+      "pingRpc": "RPCをPing",
+      "testing": "テスト中...",
+      "rpcOk": "RPC OK",
+      "rpcError": "RPCエラー",
+      "save": "保存",
+      "saved": "設定が保存されました",
+      "connectionStatus": "接続ステータス",
+      "connected": "接続済み",
+      "disconnected": "未接続"
+    },
+    "cache": {
+      "title": "キャッシュ",
+      "description": "キャッシュデータをクリアしてトークン・コントラクト情報を更新。",
+      "clearCache": "キャッシュをクリア",
+      "cacheCleared": "キャッシュがクリアされました！適用するには再起動してください。"
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "スマートフォンをオンラインに保ってブロックチェーンのセキュリティに貢献。報酬の資格を維持するために、1日に少なくとも1つのサンプリング作業を完了してください。",
+      "wifiOnly": "Wi-Fiのみ",
+      "wifiOnlyHint": "モバイルデータを節約",
+      "minBattery": "最小バッテリー",
+      "minBatteryHint": "このレベル以下では実行しません",
+      "background": "バックグラウンド実行",
+      "backgroundHint": "アプリが閉じていても動作",
+      "lastSample": "最終アクティビティ",
+      "noSamples": "アクティビティなし。アプリを開いて開始してください。",
+      "staleWarning": "今日未検出 — アプリを再起動して再開。",
+      "androidBatteryWarning": "バッテリー最適化がサンプリングを妨げる可能性があります",
+      "androidBatteryHint": "設定 → アプリ → Umotu → バッテリー → 「制限なし」を選択してバックグラウンドサンプリングを許可。",
+      "openSettings": "タップして設定を開く",
+      "tip": "最高の報酬のため「バックグラウンド実行」を有効にしてください。",
+      "runNow": "今実行",
+      "running": "実行中…",
+      "lastError": "最終エラー",
+      "status": {
+        "active": "アクティブ",
+        "inactive": "非アクティブ",
+        "paused": "一時停止"
+      }
+    },
+    "permissions": {
+      "title": "権限",
+      "description": "接続されたミニアプリとその権限を管理。",
+      "openMiniApps": "ミニアプリを開く",
+      "manageConnections": "管理",
+      "noConnections": "接続されたアプリなし",
+      "revokeAccess": "アクセスを取消",
+      "lastUsed": "最終使用"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Umotuへようこそ",
+      "subtitle": "1日10ドル、誰もがどこでも",
+      "getStarted": "開始する"
+    },
+    "language": {
+      "title": "言語を選択",
+      "continue": "続ける"
+    },
+    "wallet": {
+      "title": "あなたのウォレット",
+      "createNew": "新規ウォレットを作成",
+      "importExisting": "既存をインポート",
+      "creating": "ウォレットを作成中..."
+    },
+    "verify": {
+      "title": "人間であることを検証",
+      "description": "毎日報酬を受け取るため、ユニークな人間であることを検証してください。",
+      "continue": "続ける"
+    }
+  },
+  "poh": {
+    "subtitle": "毎日報酬をアンロック",
+    "description": "Inlyfでライブネスを検証して報酬をアンロック。生体情報はオンチェーンに保存されず、短期間のクレデンシャルのみ発行されます。",
+    "howItWorks": "仕組み",
+    "howItWorksDesc": "短いライブネスチェック（顔スキャン）で人間であることを検証。クレデンシャルは90日有効で、いつでも更新可能です。",
+    "adultQuestion": "18歳以上ですか？",
+    "yesAdult": "はい、18歳以上",
+    "noMinor": "いいえ / 未成年",
+    "selectAge": "オプションを選択してください",
+    "verifying": "検証中...",
+    "startVerification": "検証を開始",
+    "skipForNow": "今はスキップ",
+    "status": {
+      "notVerified": "まだ検証されていません。",
+      "notVerifiedDetail": "検証を開始して報酬をアンロック。",
+      "unavailable": "ステータス利用不可。",
+      "verified": "検証済みです。",
+      "validFor": "約{{days}}日有効",
+      "validFor_plural": "約{{days}}日有効",
+      "expired": "検証が期限切れまたは見つかりません。",
+      "expiredDetail": "クレデンシャルを更新するためライブネスを再実行してください。"
+    }
+  },
+  "sentinelSettings": {
+    "header": "Sentinelプールに参加してブロックの最終化を支援。最低額をボンドし、デバイスをオンラインに保つと報酬を獲得。",
+    "loading": "Sentinelデータを読み込み中...",
+    "unavailable": "Sentinelモジュール利用不可",
+    "yourStatus": "あなたのステータス",
+    "wallet": "ウォレット",
+    "bondedAmount": "ボンド額",
+    "minimumBond": "最低ボンド額",
+    "status": {
+      "notBonded": "ボンドなし",
+      "bonded": "ボンド済み",
+      "unbonding": "ボンド解除中 ({{date}}に利用可能)"
+    },
+    "rewards": {
+      "title": "報酬",
+      "claimableNow": "今請求可能",
+      "accruing": "蓄積中",
+      "totalClaimed": "合計請求額",
+      "claiming": "請求中...",
+      "claimRewards": "報酬を請求"
+    },
+    "bond": {
+      "createTitle": "ボンド作成",
+      "topUpTitle": "ボンド追加",
+      "createDescription": "UMTをボンドしてSentinel委員会に参加し報酬獲得を開始。",
+      "topUpDescription": "ステークを増やしてより大きな報酬シェアを獲得。",
+      "amountLabel": "金額 (UMT)",
+      "processing": "処理中...",
+      "bond": "ボンド",
+      "topUp": "追加",
+      "tx": "取引"
+    },
+    "autoClaim": {
+      "title": "自動請求",
+      "description": "リレーがSentinel報酬を自動的に請求。",
+      "checking": "確認中...",
+      "enabled": "有効",
+      "disabled": "無効",
+      "expires": "期限",
+      "processing": "処理中...",
+      "enable": "自動請求を有効化",
+      "disable": "自動請求を無効化"
+    },
+    "activity": {
+      "title": "最近のアクティビティ",
+      "claims": "請求",
+      "slashes": "スラッシュ",
+      "noClaims": "過去{{blocks}}kブロックに請求なし。",
+      "noSlashes": "最近のウィンドウにスラッシュイベントなし。",
+      "unknown": "不明"
+    },
+    "errors": {
+      "configureEnv": "RPC + Sentinelコントラクト環境変数を設定してください。",
+      "noWallet": "Sentinel委員会に参加するためウォレットを作成またはインポートしてください。",
+      "loadFailed": "Sentinelデータの読み込みに失敗しました。"
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel報酬が請求されました。",
+      "noRewards": "保留中の報酬なし。",
+      "claimFailed": "請求に失敗。",
+      "autoClaimEnabled": "Sentinel自動請求が有効化されました",
+      "autoClaimDisabled": "Sentinel自動請求が無効化されました",
+      "autoClaimFailed": "自動請求切り替えに失敗",
+      "configureBondAddress": "Sentinelボンドアドレスを設定",
+      "rpcNotSet": "RPCが設定されていません",
+      "minBondUnavailable": "最低ボンド額利用不可",
+      "enterBondAmount": "ボンド金額を入力",
+      "minBondRequired": "初回ボンドは少なくとも{{amount}} UMT必要",
+      "topUpGreaterThanZero": "追加額は0より大きくなければなりません",
+      "insufficientBalance": "ボンド + ガス用残高不足",
+      "bondSubmitted": "ボンド取引が送信されました",
+      "topUpSubmitted": "追加取引が送信されました",
+      "bondConfirmed": "ボンドが確認されました",
+      "topUpConfirmed": "追加が確認されました",
+      "bondReverted": "オンチェーンでボンドがリバート",
+      "bondFailed": "ボンドに失敗"
+    }
+  },
+  "miniapps": {
+    "title": "ミニアプリ",
+    "subtitle": "Umotu上で構築されたアプリを探す",
+    "explore": "Umotu上で構築されたアプリを探す",
+    "noApps": "まだアプリがありません",
+    "browseByCategory": "カテゴリ別に閲覧",
+    "appsCount": "{{count}}個のアプリ",
+    "featured": "特集",
+    "comingSoon": "まもなく",
+    "liveApps": "ライブアプリ",
+    "available": "利用可能",
+    "pohDescription": "Inlyfで人間性を検証して毎日報酬をアンロック。",
+    "vision": {
+      "title": "私たちのビジョン",
+      "tagline": "1日10ドル、誰もがどこでも",
+      "description": "Umotuは、居住地や銀行に関係なく誰でもグローバル経済に参加できるインフラを構築しています。",
+      "readMore": "ビジョン全文を読む",
+      "pillars": {
+        "title": "3つの核心原則",
+        "ubi": {
+          "title": "1日10ドル、誰もがどこでも",
+          "description": "ネットワーク保護に対する報酬として普遍的ベーシックインカム。電話を持つ誰でも参加して稼げます。"
+        },
+        "capital": {
+          "title": "資本が自由に移動",
+          "description": "支払い・送金の摩擦ほぼゼロ—国境を越えてもローカルでも。ビジネスはプラットフォームコストをカバーする約0.1%を支払い、個人は無料。"
+        },
+        "sovereignty": {
+          "title": "通貨主権の尊重",
+          "description": "法定通貨を置き換えず、より良く機能させる。銀行が現地通貨にペッグされたステーブルコインを発行。より広いリーチと低摩擦で金融政策が効果的になります。"
+        }
+      },
+      "notReplacing": "Umotuは中央銀行と競争していません。法定通貨のためのより良いインフラを構築しています：低摩擦、グローバルアクセス、市場効率とレジリエンスの向上。"
+    },
+    "building": {
+      "title": "エコシステムを構築中",
+      "description": "これらのアプリはUmotu上で可能なことを示しています。一部は今すぐ利用可能、他はまもなく。世界中の開発者がプラットフォーム上で構築・起動することを歓迎します。",
+      "developerDocs": "開発者ドキュメント"
+    },
+    "categories": {
+      "payments": {
+        "name": "支払い & ファイナンス",
+        "apps": {
+          "sendMoney": {
+            "name": "送金",
+            "description": "UMTまたはステーブルコインを世界中の誰にでも即時送信—銀行不要。",
+            "example": "海外の家族に$20を数秒で送信、数日ではなく。隠れ手数料ゼロ。"
+          },
+          "billPay": {
+            "name": "請求書支払い",
+            "description": "公共料金、電話、インターネットなどをウォレットから直接支払い。"
+          },
+          "savings": {
+            "name": "貯蓄サークル",
+            "description": "伝統的な回転貯蓄（tontine、chit fund）をスマートコントラクトでトラストレスに。"
+          },
+          "microLoans": {
+            "name": "マイクロローン",
+            "description": "検証された人間性とレピュテーションに基づくP2P融資。"
+          }
+        }
+      },
+      "transport": {
+        "name": "交通 & 配送",
+        "apps": {
+          "rideSharing": {
+            "name": "ライドシェア",
+            "description": "暗号通貨で支払うライド予約。ドライバーはより多く受け取り、ライダーは安く—30%取る中間業者なし。",
+            "example": "ラゴスのタクシーが₦800。ドライバーは₦560ではなく₦799.2を受け取る。"
+          },
+          "delivery": {
+            "name": "配送",
+            "description": "食事、日用品、パッケージを注文。配達員はステーブルトークンで公正な賃金。",
+            "example": "ランチを注文、現地ステーブルコインで支払い、配達員は即時支払い。"
+          },
+          "publicTransit": {
+            "name": "公共交通",
+            "description": "バス、地下鉄、電車をタップで支払い。運賃カード購入不要。"
+          }
+        }
+      },
+      "travel": {
+        "name": "旅行 & ホスピタリティ",
+        "apps": {
+          "hotels": {
+            "name": "ホテル & 宿泊",
+            "description": "世界中の宿泊を予約。ホストはステーブルコインを受け取り、ゲストは手数料節約。",
+            "example": "バリの部屋を$40/泊で予約。ホストは$39.96を受け取る。"
+          },
+          "flights": {
+            "name": "フライト",
+            "description": "フライト検索・予約。暗号通貨で支払い、UMT報酬を獲得。"
+          },
+          "tours": {
+            "name": "ローカルツアー",
+            "description": "現地ガイドの体験を予約。支払いが直接ガイドへ。"
+          }
+        }
+      },
+      "commerce": {
+        "name": "ショッピング & コマース",
+        "apps": {
+          "localMarket": {
+            "name": "ローカルマーケット",
+            "description": "地元で売買。QRベース支払いでストリートコマースをシームレスに。",
+            "example": "ジャカルタのベンダーがUSDCを受け取り。顧客が支払うと即時資金確認。"
+          },
+          "ecommerce": {
+            "name": "Eコマース",
+            "description": "世界中のマーチャントからオンラインショッピング。カード手数料・チャージバックなし。",
+            "example": "深圳から電子機器を購入。ステーブルコインで支払い、クレジットカード比3%節約。"
+          },
+          "marketplace": {
+            "name": "ピアマーケットプレイス",
+            "description": "商品を出品・購入。エスクローが両者を保護。"
+          }
+        }
+      },
+      "services": {
+        "name": "サービス & 仕事",
+        "apps": {
+          "remittance": {
+            "name": "送金",
+            "description": "故郷へ送金。受取人は現地通貨に換金またはデジタル保持。",
+            "example": "米国からフィリピンへ$200送信。受取人は₱10,400ではなく₱11,000+を受け取る。"
+          },
+          "freelance": {
+            "name": "フリーランス仕事",
+            "description": "ギグワークを即時支払い。銀行振込30日待ちなし。"
+          },
+          "homeServices": {
+            "name": "ホームサービス",
+            "description": "配管工、電気工、清掃員を雇用。仕事完了時のみ支払い。"
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Umotu上でビジネスを構築",
+      "subtitle": "ビルトイン支払い付きアプリ起動",
+      "description": "Umotuエコシステムにアクセスするアプリを作成—毎日収入のある数百万の検証済み人間。支払い統合の頭痛なし。",
+      "benefits": {
+        "noFees": "ほぼゼロの支払い処理手数料—収益の99.9%を保持",
+        "verifiedUsers": "すべてのユーザーは検証済み人間—ボットや詐欺なし",
+        "globalReach": "初日から190カ国以上のユーザーへリーチ",
+        "instantPayments": "即時決済—30日支払い遅延なし"
+      },
+      "exampleTitle": "ユースケース",
+      "exampleText": "Umotu上のライドシェアアプリは伝統的プラットフォームの70%に対し運賃の99.9%を保持。ドライバーはより多く稼ぎ、ライダーは安く。",
+      "docsButton": "ドキュメントを読む",
+      "buildButton": "構築を開始"
+    },
+    "bank": {
+      "title": "銀行ですか？",
+      "subtitle": "Umotu上でステーブルコインを発行",
+      "description": "ライセンス取得金融機関はUmotu上で現地通貨ステーブルコインを発行し、数百万ユーザーの成長するUBIエコノミーにアクセスできます。",
+      "benefits": {
+        "reserves": "準備金で利回り獲得：債券や低リスク資産に投資",
+        "mintRedeem": "発行/償還手数料徴収：通常フィアット↔ステーブルコイン変換で0.1%",
+        "users": "毎日アクティブな数百万のUBI受取人にアクセス",
+        "global": "即時国境を超えたリーチ拡大",
+        "custody": "準備金はあなたの管理：裏付け資産の完全コントロール"
+      },
+      "revenueModel": "発行者の収益方法",
+      "revenueNote": "Tetherなど主要発行者同様、収益は準備金利回りと変換手数料から。毎日UBIを受け取る数百万ユーザーで発行/償還ボリュームは大幅。",
+      "futureNote": "プロトコル進化に伴い、将来的に取引手数料シェアを受け取る可能性。",
+      "learnMore": "詳細を見る",
+      "applyButton": "今申請"
+    }
+  },
+  "news": {
+    "title": "ニュース & 更新",
+    "description": "Umotuチームからの最新アナウンス、Tips、セキュリティアラートをチェック。",
+    "empty": "現在ニュースはありません",
+    "unread": "新規",
+    "unreadCount": "{{count}}件新規",
+    "markAsRead": "既読にする",
+    "types": {
+      "announcement": "アナウンス",
+      "tip": "Tips",
+      "security": "セキュリティ",
+      "airdrop": "エアドロップ",
+      "update": "更新"
+    }
+  },
+  "governance": {
+    "title": "ガバナンス",
+    "subtitle": "Umotuの未来を形作る",
+    "description": {
+      "title": "あなたの声が重要です",
+      "body": "コミュニティ提案に投票してUmotuの未来を支援。Umotu財団が投票を組織しますが、決定はコミュニティです。"
+    },
+    "empty": "アクティブな提案なし",
+    "emptyHint": "新しいコミュニティ決定は後でチェックしてください。",
+    "newPolls": "新規",
+    "newPollsCount": "{{count}}件新規",
+    "vote": "投票",
+    "votes": "投票",
+    "endsIn": "{{time}}後に終了",
+    "ended": "終了",
+    "tapToVote": "上記のオプションをタップして投票",
+    "submitting": "投票送信中...",
+    "alreadyVoted": {
+      "title": "既に投票済み",
+      "message": "この提案に既に投票しています。"
+    },
+    "confirm": {
+      "title": "投票を確認",
+      "message": "投票先",
+      "note": "この操作は取り消せません。",
+      "submit": "投票を送信"
+    },
+    "success": {
+      "title": "投票が送信されました！",
+      "message": "コミュニティガバナンスへの参加ありがとうございます。"
+    },
+    "error": {
+      "title": "投票失敗",
+      "message": "投票送信に失敗しました。もう一度お試しください。"
+    }
+  },
+  "learn": {
+    "title": "学ぶ",
+    "subtitle": "Umotuについて必要なすべて",
+    "featured": "特集",
+    "whatIs": {
+      "title": "Umotuとは？",
+      "subtitle": "1日10ドル、誰もがどこでも",
+      "intro": "Umotuはスマートフォンだけで誰でも約1日10ドル稼げることを目指しています。高価なハードウェア、特別スキル、国境不要。",
+      "howDifferent": "何が違うか？",
+      "noMiddleman": "中間業者なし：ネットワークと直接やり取り—銀行口座不要",
+      "globalAccess": "グローバルアクセス：インターネットがあればどこでも",
+      "youOwnIt": "あなたが所有：あなたのウォレット、あなたのキー、あなたのコントロール",
+      "vision": "ビジョン",
+      "visionText": "数十億人がパブリックレジャーを正直に保つのを支援し報酬を得る。Umotuでは電話が軽量チェックを行いネットワークを信頼できるものにします。",
+      "nameOrigin": "名前の由来",
+      "nameOriginText": "Umotuはポリネシア語Paʻumotuにインスパイア。日常の人々のために構築するリマインダーとして敬意を表して使用。"
+    },
+    "earn": {
+      "title": "稼ぎ方",
+      "subtitle": "あなたの電話が働き、あなたが報酬を得る",
+      "intro": "電話が皆を助ける小さなタスクを実行—その後報酬を得ます。",
+      "steps": "3つのシンプルステップ",
+      "step1": "1) 人間であることを証明：クイックライブネスチェック（定期更新）で1人1アカウントを保証。",
+      "step2": "2) ネットワークを支援：電話がバックグラウンドでデータアベイラビリティ（DA）サンプリングなど軽量チェックを実行。",
+      "step3": "3) 毎日報酬獲得：この仕事に対し報酬、ネットワークポリシーにより約1日10ドル目標。",
+      "localCurrency": "あなたの通貨で支払い",
+      "localCurrencyText": "支払いトークンを選択：現地通貨ステーブルコイン（利用可能な場合）またはUMT。金額は~10USD価値を目標とし、参加数と市場状況で調整。"
+    },
+    "whereMoney": {
+      "title": "$10はどこから来る？",
+      "subtitle": "仕事をするから稼ぐ",
+      "intro": "最も多い質問。短い答え：ネットワークが必要とするサービスを提供するから。",
+      "realWork": "あなたの電話が本物の仕事をする",
+      "realWork1": "データアベイラビリティサンプリング：電話がブロックデータが利用可能で正しいかをチェック",
+      "realWork2": "人間参加：1人1アカウントを証明してボットとスパムを阻止",
+      "realWork3": "これらのタスクは皆を守る。これらがなければネットワークが弱体化",
+      "valueSource": "価値の2つのソース",
+      "utility": "ユーティリティ：人々が選択する高速低手数料支払い",
+      "consensus": "コンセンサス：より多くの人がルールを検証・合意できる価値の成長",
+      "distribution": "報酬の分配方法",
+      "newTokens": "新規UMTトークンが作成され検証済み電話参加者に共有（バリデータではなく）",
+      "fees": "手数料とビルダービッドの一部が電話Sentinelにブロック最終化で共有",
+      "treasury": "少部分が継続メンテナンスと安定プログラムに",
+      "whyDifferent": "何が違うか",
+      "btcProblem": "Bitcoinは専門マイナーに報酬（資本集約）",
+      "ethProblem": "Ethereumは大規模ステーカーに報酬（資本集約）",
+      "umotuSolution": "Umotuは日常の電話に報酬（参加実コスト低）",
+      "conclusion": "ギブアウェイではなく：共有金融インフラを正直で有用に保つ仕事に対する報酬。"
+    },
+    "security": {
+      "title": "ウォレットセキュリティ",
+      "subtitle": "お金を保護",
+      "intro": "ウォレットはあなただけがコントロールするデジタル金庫です。",
+      "recovery": "あなたの12語 & プライベートキー",
+      "recoveryText": "12の秘密語（リカバリーフレーズ）とプライベートキーの両方がウォレットをアンロック。どちらかを持つ者は資金を移動可能。",
+      "rules": "ゴールデンルール",
+      "rule1": "12語やプライベートキーを誰とも共有しない—Umotu貢献者でも。",
+      "rule2": "12語を紙に書きオフライン保管。スクリーンショット、写真、クラウドノートに保存しない。",
+      "rule3": "プライベートキーをエクスポートする場合、オフライン（紙、ハードウェア、信頼できる暗号化マネージャー）で保管。",
+      "rule4": "12語とプライベートキーを失うと誰もウォレットを復元できません。",
+      "warning": "重要",
+      "warningText": "プライベートキーは完全アクセスを許可。他のアプリに表示・コピーすると資金が危険。リスクを理解した場合のみエクスポート。",
+      "reveal": "プライベートキー表示 / エクスポート",
+      "revealText": "ウォレット設定でプライベートキーを表示・エクスポート可能。生体認証/PINを要求、数秒のみ表示、アップロードなし。大口残高はハードウェアウォレット推奨。",
+      "bestPractices": "ベストプラクティス",
+      "best1": "電話の画面ロック & 生体認証を有効。",
+      "best2": "最新セキュリティ修正のためアプリを更新。",
+      "best3": "大口貯蓄は別ウォレットに。日常用は電話に少額。",
+      "scamBannerTitle": "正規者は絶対に求めません",
+      "scamBannerText": "12語やプライベートキーを求める者は詐欺です。"
+    },
+    "stablecoins": {
+      "title": "ステーブルコインを理解",
+      "subtitle": "現地通貨を追跡するデジタルマネー",
+      "intro": "ステーブルコインは通常の通貨（USD, ZAR, NGNなど）を追跡するよう設計されたデジタルトークンです。",
+      "examples": "例",
+      "example1": "1 ZAR1 ≈ 1 南アフリカランド",
+      "example2": "1 USD1 ≈ 1 米ドル",
+      "example3": "1 NGN1 ≈ 1 ナイジェリアナイラ",
+      "backed": "パートナー発行",
+      "backedText": "Umotu上のステーブルコインは規制パートナー発行で準備金と1:1価値を維持するよう設計。発行者は準備金証明と償還条件を公開。",
+      "convert": "現金への変換",
+      "convertText": "パートナーバンク/取引所経由で変換、または受け入れ場所で直接使用。"
+    },
+    "economics": {
+      "title": "UMTエコノミクス",
+      "subtitle": "誰が何を得てなぜ",
+      "intro": "UMTは総供給100億トークン固定。大部分はネットワークを正直に保つ日常電話ユーザーに支払われます。",
+      "supply": "供給 & 分配",
+      "supplyBullets": [
+        "トークン供給の大部分は、時間をかけて電話参加者に割り当てられ、エミッションコントローラーを通じてリリースされます。エミッションコントローラーは、1日の発行量を残りの供給量の0.01%以下に制限し、長期的な持続可能性を確保します。このスケジュールでは、10年後に総供給量の約68%が残り、50年後には約15%が残ります。",
+        "供給の一部は、初期ユーザーへのエアドロップ、コミュニティセール、財団への割り当て、緊急準備金など、特定の目的のためにローンチ時に作成されます。"
+      ],
+      "premine": "ローンチ時の割り当て（暫定、メインネット開始時に変更の可能性あり）",
+      "premineTable": [
+        {
+          "label": "ユーザーエアドロップ",
+          "value": "1.0%"
+        },
+        {
+          "label": "コミュニティセール",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu財団 (タイムロック)",
+          "value": "0.2%"
+        },
+        {
+          "label": "緊急基金 (ガバナンス)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "電話への毎日報酬",
+      "emissionsText": "毎日ネットワークは残りエミッションプールの最大0.01%を発行可能。検証済み電話が約1日10ドル目標となるよう予算調整、参加数と市場状況で。",
+      "fees": "手数料 & Sentinel",
+      "feesText": "Sentinelヘルパー（オプション、上級）は取引手数料とビルダービッドのシェアを獲得。毎日エミッションとは別。",
+      "transparency": "透明性",
+      "transparencyText": "ベスティングスケジュールとウォレットは公開。毎日エミッション上限と実際支払いはアプリに投稿。",
+      "disclaimerTitle": "平易なリマインダー",
+      "disclaimerText": "これは投資アドバイスではありません。報酬はネットワークポリシーと参加に依存。アプリは固定収入を保証しません。"
+    },
+    "contribute": {
+      "title": "貢献方法",
+      "subtitle": "Umotu構築を支援",
+      "intro": "Umotuはオープンソースでコミュニティ駆動。誰でも支援可能—コード、翻訳、フィードバック共有。",
+      "waysTitle": "貢献方法",
+      "code": {
+        "title": "コード改善",
+        "text": "バグ修正、機能追加、テスト執筆、プルリクエストレビュー。アプリ、スマートコントラクト、バックエンドのGitHubリポジトリをチェック。",
+        "cta": "GitHubを見る",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "翻訳支援",
+        "text": "アプリをあなたの言語で自然に。i18nロケールファイルを編集し全画面テスト。あなたの編集は数百万を助けます。",
+        "cta": "翻訳ガイド",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "BIP-39言語拡張",
+        "text": "新しいまたは改善されたワードリストを提案し、より多くの人が母語で12語リカバリーフレーズを見られるように。",
+        "cta": "BIP-39を見る",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "ガバナンス参加",
+        "text": "提案を読み、公開議論、アプリで投票。あなたの声がネットワークパラメータとグラント割り当てをガイド。",
+        "cta": "ガバナンスを開く",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "口コミ",
+        "text": "友人へ伝え、チュートリアル執筆、ショート動画公開、質問回答。強いコミュニティは皆のための強いネットワーク。",
+        "cta": "Umotuを共有",
+        "url": "https://umotu.com"
+      },
+      "note": "すべての貢献は任意。グラント提案で指定されない限り正式雇用や報酬なし。"
+    },
+    "decentralization": {
+      "title": "分散化の理由",
+      "subtitle": "単一制御点なし",
+      "intro": "分散化は単一企業や政府がネットワークをシャットダウンまたは資金没収できないことを意味します。",
+      "benefits": "あなたへの利点",
+      "benefit1": "常時オン：24/7利用可能",
+      "benefit2": "低手数料：カード手数料3–5%ではなく小ネットワーク手数料",
+      "benefit3": "国境なし：グローバル価値送信",
+      "benefit4": "検閲耐性：あなたのキー、あなたの資金",
+      "benefit5": "透明：誰でもシステム動作を検証可能",
+      "howWorks": "仕組み",
+      "howWorksText": "バリデータが~2秒ごとにブロック提案。電話（あなたのもの）が軽量チェックで検証・最終化。多くの小貢献が強いセキュリティに。"
+    },
+    "noCompany": {
+      "title": "会社なし、顧客なし",
+      "subtitle": "モデルを理解",
+      "intro": "プロトコルを制御する『Umotu, Inc.』はありません。Umotuは誰でも使用できるオープンルールセットです。",
+      "notCompany": "Umotuがでないもの",
+      "notCompany1": "顧客アカウントを持つ会社ではない",
+      "notCompany2": "銀行や送金事業者ではない",
+      "notCompany3": "単一エンティティで制御されていない",
+      "notCompany4": "取引をリバースできない",
+      "whatIs": "Umotuとは",
+      "whatIs1": "プロトコル：メールやウェブ同様—オープン相互運用ルール",
+      "whatIs2": "電話優先：日常スマートフォン支援で実行",
+      "whatIs3": "コミュニティ駆動：あなたは参加者、顧客ではない",
+      "foundation": "Umotu財団",
+      "foundationIntro": "エコシステムを支援する非営利団体（リファレンスアプリ、ドキュメント、コミュニティプログラム）だがプロトコルを制御しない。",
+      "foundationTask1": "モバイルアプリ & エクスプローラーをリファレンス実装としてメンテ",
+      "foundationTask2": "一部パブリックインフラ運用（他者も運用可能）",
+      "foundationTask3": "コミュニティガバナンス調整（ニュース、投票）",
+      "foundationTask4": "サポートステーブルコインをレビュー・リスト",
+      "foundationTask5": "教育 & 安全ガイド公開",
+      "foundationNote": "財団はあなたのウォレットにアクセスできず取引をリバースできません。"
+    },
+    "scamPrevention": {
+      "title": "詐欺回避",
+      "subtitle": "自分を守る",
+      "intro": "Umotu財団は絶対にDMしません。『サポート』を装う者は詐欺師です。",
+      "redFlags": "危険信号",
+      "redFlag1": "カスタマーサポートを主張する者",
+      "redFlag2": "アカウント『検証』または『アップグレード』リンク",
+      "redFlag3": "12語フレーズまたはプライベートキーの要求",
+      "redFlag4": "資金送信でボーナストークン約束",
+      "redFlag5": "報酬『アクティベート』を求めるアプリやサイト",
+      "truth": "真実",
+      "truth1": "ウォレットをリセットできるカスタマーサポートなし",
+      "truth2": "すべての公式更新はこのアプリに表示",
+      "truth3": "Umotu関係者はリカバリーフレーズやプライベートキーを求めません",
+      "truth4": "このアプリは公式Apple StoreまたはGoogle Playからのみダウンロード",
+      "whatToDo": "連絡された場合",
+      "action1": "応答しない",
+      "action2": "リンクをクリックしない",
+      "action3": "情報を共有しない",
+      "action4": "ブロックして報告"
+    },
+    "airdrop": {
+      "title": "テストネットエアドロップ",
+      "subtitle": "早期ユーザーが認識される",
+      "intro": "あなたは早期です！Umotuはテストネット中。アクティブなテストネット参加者はメインネットローンチ時に割り当てを受け取る可能性があります。",
+      "howToQualify": "資格取得方法",
+      "step1": "アプリでウォレット作成",
+      "step2": "人間検証（Proof of Human）完了",
+      "step3": "テストネット中にアプリを定期使用",
+      "whenAirdrop": "エアドロップはいつ？",
+      "whyTestnet": "テストネットは必須：ユーザーがウォレットセキュリティを学び、メインネット前にシステムをセキュリティ、堅牢性、効率でテスト。",
+      "timeline": "メインネットは2026年Q1またはQ2予定。エアドロップは同時期。",
+      "howMuch": "いくら受け取れる？",
+      "totalPool": "総エアドロッププール：1,000,000,000 UMTトークン。あなたのシェアは総参加者とローンチ時UMT価格に依存。",
+      "scenario2": "100万ユーザー：ユーザーあたり~1,000 UMT、予想価格~$1、エアドロップ価値~$1,000",
+      "scenario3": "1,000万ユーザー：ユーザーあたり~100 UMT、予想価格~$20、エアドロップ価値~$2,000",
+      "scenario4": "1億ユーザー：ユーザーあたり~10 UMT、予想価格~$300、エアドロップ価値~$3,000",
+      "disclaimer": "これらは予測のみ、保証なし。実際価値は市場状況とプログラムルールに依存。",
+      "whatYouGet": "受け取るもの",
+      "reward": "メインネット時、テストネットウォレットが参加とプログラムルールに基づき実トークンを受け取る可能性。早期・アクティブユーザーが優先。",
+      "note": "注：テストネットトークンは価値なし。メインネット割り当てはローンチ時プログラムポリシーで決定。エアドロップニュースはすべてこのアプリでのみ公開。"
+    },
+    "gettingStarted": {
+      "title": "開始ガイド",
+      "subtitle": "最初の5分",
+      "intro": "クイックセットアップです：",
+      "checklist": "セットアップチェックリスト",
+      "check1": "1) 言語を選択（完了！）",
+      "check2": "2) ウォレット作成またはインポート",
+      "check3": "3) 重要：12語を紙に書き留める",
+      "check4": "4) 人間検証完了（クイックスキャン）",
+      "check5": "5) 毎日報酬のためアプリを起動状態に",
+      "tips": "プロTips",
+      "tip1": "チェック実行のためバックグラウンドアクセス許可",
+      "tip2": "毎日チェックして報酬確認",
+      "tip3": "友人招待—ユーザー増加でネットワーク強化"
+    }
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "retry": "再試行",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "done": "完了",
+    "continue": "続ける",
+    "confirm": "確認",
+    "yes": "はい",
+    "no": "いいえ",
+    "ok": "OK",
+    "success": "成功",
+    "failed": "失敗",
+    "copied": "コピーされました！",
+    "pullToRefresh": "下に引いて更新",
+    "notSet": "未設定"
+  },
+  "errors": {
+    "networkError": "ネットワークエラー。接続を確認してください。",
+    "genericError": "問題が発生しました。もう一度お試しください。",
+    "walletNotFound": "ウォレットが見つかりません",
+    "transactionFailed": "取引に失敗しました",
+    "invalidInput": "無効な入力"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Umotuへようこそ",
+  "onboard_wallet_title": "ウォレットを設定",
+  "onboard_wallet_explain": "報酬を受け取るためウォレットを作成またはインポート。",
+  "wallet_create": "新規ウォレットを作成",
+  "wallet_import": "ウォレットをインポート",
+  "wallet_import_explain": "12語リカバリーフレーズを入力",
+  "wallet_created": "ウォレット準備完了",
+  "wallet_save": "デバイスに保存",
+  "wallet_backup_title": "リカバリーフレーズをバックアップ",
+  "wallet_backup_explain": "これらの12語を順番に書き留めてください。デバイス紛失時のウォレット復元唯一の方法です。",
+  "wallet_backup_warning": "リカバリーフレーズを共有しないでください。これらの語を持つ者は資金にアクセスできます。",
+  "wallet_backup_confirm": "リカバリーフレーズを書き留めました",
+  "wallet_backup_done": "フレーズを保存しました",
+  "wallet_save_first": "まずリカバリーフレーズを保存してください",
+  "poh_title": "人間検証",
+  "continue": "続ける",
+  "or": "または",
+  "seedReveal": {
+    "title": "リカバリーフレーズ",
+    "intro": "リカバリーフレーズはこのデバイスアクセス喪失時のウォレット復元唯一の方法です。書き留めてオフライン安全保管。",
+    "displayLanguage": "{{language}}で表示",
+    "hiddenMsg": "セキュリティのためフレーズは隠されています。下をタップして表示。",
+    "showButton": "フレーズを表示",
+    "noScreenshot": "リカバリーフレーズのスクリーンショットを絶対撮らないでください。",
+    "checkTitle": "バックアップを確認",
+    "checkPrompt": "書き留めたことを確認するため以下の語を入力：",
+    "checkWordN": "語 #{{n}}",
+    "checkIncorrect": "1つ以上の語が間違っています。バックアップを確認してください。",
+    "ackWritten": "リカバリーフレーズを書き留めました",
+    "ackCannotRecover": "Umotuは私のウォレットを復元できないことを理解",
+    "cancel": "キャンセル",
+    "continue": "保存しました"
+  }
+}

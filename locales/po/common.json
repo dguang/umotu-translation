@@ -1,0 +1,1414 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "10 dolarów dziennie, dla wszystkich na całym świecie"
+  },
+  "navigation": {
+    "home": "Strona główna",
+    "wallet": "Portfel",
+    "miniapps": "MiniApps",
+    "back": "Wstecz",
+    "scan": "Skanuj",
+    "settings": "Ustawienia",
+    "close": "Zamknij"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Zweryfikowani ludzie",
+      "umtPrice": "Cena UMT"
+    },
+    "quickActions": {
+      "news": "Aktualności",
+      "vote": "Głosowanie",
+      "governance": "Zarządzanie",
+      "learn": "Dowiedz się więcej",
+      "network": "Sieć"
+    },
+    "setupProgress": {
+      "title": "Postęp konfiguracji",
+      "steps": {
+        "language": "Język",
+        "wallet": "Portfel",
+        "verifyHuman": "Zweryfikuj człowieka",
+        "complete": "Zakończono"
+      },
+      "continue": "Kontynuuj",
+      "changeChoice": "Zmień wybór",
+      "requiresLanguage": "Najpierw wybierz język",
+      "requiresWallet": "Najpierw utwórz portfel"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Codzienne nagrody",
+      "totalEarned": "Łącznie zarobione",
+      "lastClaimed": "Ostatnio odebrane",
+      "never": "Nigdy",
+      "configure": "Konfiguruj",
+      "loading": "Ładowanie zarobków...",
+      "noWallet": "Brak portfela",
+      "autoClaim": {
+        "label": "Automatyczne odbieranie:",
+        "active": "Aktywne",
+        "setupNow": "Skonfiguruj teraz",
+        "expired": "Wygasło",
+        "tapToSetup": "Dotknij, aby włączyć automatyczne codzienne nagrody"
+      }
+    },
+    "sentinel": {
+      "title": "Zarobki Sentinel",
+      "manage": "Zarządzaj",
+      "loading": "Ładowanie...",
+      "status": "Status",
+      "statuses": {
+        "notBonded": "Nie zablokowane",
+        "bonded": "Zablokowane",
+        "unbonding": "Odblokowywanie"
+      },
+      "claimable": "Do odebrania",
+      "accruing": "Naliczane",
+      "bonded": "Zablokowane"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Automatyczne codzienne nagrody",
+      "description": "Włącz <bold>automatyczne odbieranie</bold>, aby otrzymywać codzienną nagrodę UBI w wysokości 10 dolarów automatycznie — bez ręcznego odbierania!",
+      "benefits": {
+        "midnight": "Odbieranie o północy w Twojej strefie czasowej",
+        "lowerFees": "80% niższe opłaty za gaz (grupowane z innymi użytkownikami)",
+        "disable": "Możesz wyłączyć w dowolnym momencie w Ustawieniach"
+      },
+      "notice": "Podpiszesz jednorazową wiadomość autoryzacyjną, która pozwoli naszemu relayowi odbierać w Twoim imieniu. Klucze prywatne nie są udostępniane.",
+      "maybeLater": "Może później",
+      "enableNow": "Włącz teraz"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Ustawienia automatycznego odbierania",
+      "description": "Automatycznie odbieraj codzienne nagrody.",
+      "checking": "Sprawdzanie statusu...",
+      "status": "Status",
+      "enabled": "Włączone",
+      "disabled": "Wyłączone",
+      "lastClaimed": "Ostatnio odebrane",
+      "neverClaimed": "Nigdy",
+      "nextClaim": "Następne odbieranie",
+      "expiresAt": "Wygasa",
+      "timezone": "Strefa czasowa",
+      "preferredHour": "Preferowana godzina",
+      "preferredHourHint": "Wybierz, kiedy automatyczne odbieranie powinno się uruchamiać",
+      "enableButton": "Włącz automatyczne odbieranie",
+      "disableButton": "Wyłącz automatyczne odbieranie",
+      "enabling": "Włączanie...",
+      "disabling": "Wyłączanie...",
+      "enableSuccess": "Automatyczne odbieranie włączone!",
+      "enableError": "Nie udało się włączyć",
+      "disableSuccess": "Automatyczne odbieranie wyłączone",
+      "disableError": "Nie udało się wyłączyć",
+      "updateButton": "Zaktualizuj ustawienia",
+      "updating": "Aktualizowanie..."
+    },
+    "manual": {
+      "title": "Ręczne odbieranie",
+      "description": "Jeśli potrzebujesz środków wcześniej, odbierz następną dostępną nagrodę teraz. Ręczne odbieranie używa gazu z twojego portfela. Automatyczne odbieranie jest tańsze, jeśli poczekasz. Jeśli twój portfel nie ma środków, włącz automatyczne odbieranie lub doładuj natywny gaz przed ręcznym odbieraniem.",
+      "dayLabel": "Dzień nagrody",
+      "claimButton": "Odbierz teraz",
+      "claiming": "Odbieranie...",
+      "success": "Odbieranie zgłoszone",
+      "successWithId": "Odbieranie zgłoszone (id: {{id}})",
+      "error": "Nie udało się odebrać",
+      "noProof": "Dowód nagrody nie został jeszcze opublikowany. Spróbuj ponownie po udostępnieniu dzisiejszego snapshot'a.",
+      "unauthorized": "Autoryzacja relayera nie powiodła się. Spróbuj ponownie lub skontaktuj się z pomocą techniczną.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "Dostępne dni nagród: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "Zakres: {{start}} do {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} więcej po tej partii",
+      "batchSuccess": "{{count}} dni odebrano pomyślnie",
+      "claimingProgress": "Odbieranie {{claimed}}/{{total}}...",
+      "claimAllButton": "Odbierz wszystkie {{count}} dni"
+    },
+    "timezone": {
+      "title": "Wybierz strefę czasową",
+      "search": "Szukaj strefy czasowej...",
+      "current": "Aktualny wybór",
+      "searchResults": "Wyniki wyszukiwania",
+      "noResults": "Brak wyników",
+      "detected": "Wykryta",
+      "popular": "Popularne strefy czasowe",
+      "regions": {
+        "Americas": "Ameryka",
+        "Europe": "Europa",
+        "Asia": "Azja",
+        "Africa": "Afryka",
+        "Oceania": "Oceania"
+      }
+    },
+    "payout": {
+      "title": "Preferencja wypłaty",
+      "description": "Wybierz preferowaną walutę wypłaty.",
+      "current": "Aktualna",
+      "saved": "Zapisano",
+      "saveError": "Błąd zapisywania",
+      "showMore": "Pokaż więcej ({{count}})",
+      "showLess": "Pokaż mniej",
+      "native": "Natywny token",
+      "stablecoin": "Stablecoin",
+      "popular": "Popularne",
+      "allCurrencies": "Wszystkie waluty"
+    }
+  },
+  "wallet": {
+    "title": "Portfel",
+    "testnetNotice": "Tokeny testnet nie mają realnej wartości",
+    "totalBalance": "Całkowite saldo",
+    "balance": "Saldo",
+    "address": "Adres",
+    "copyAddress": "Kopiuj adres",
+    "addressCopied": "Adres skopiowany",
+    "receive": "Odbierz",
+    "send": "Wyślij",
+    "swap": "Wymiana",
+    "swapComingSoon": "Wymiana wkrótce dostępna",
+    "history": "Historia",
+    "tokens": "Tokeny",
+    "collectibles": "Kolekcjonerskie",
+    "noTokens": "Brak skonfigurowanych tokenów",
+    "nativeToken": "Natywny token",
+    "loading": "Ładowanie...",
+    "refreshing": "Odświeżanie...",
+    "balancesUpdated": "Salda zaktualizowane",
+    "menu": {
+      "manageTokens": "Zarządzaj tokenami",
+      "addressBook": "Książka adresowa",
+      "walletSettings": "Ustawienia portfela",
+      "showBalances": "Pokaż salda",
+      "hideBalances": "Ukryj salda",
+      "showZeroTokens": "Pokaż tokeny zerowe",
+      "hideZeroTokens": "Ukryj tokeny zerowe",
+      "refresh": "Odśwież"
+    },
+    "manageTokens": {
+      "title": "Zarządzaj tokenami",
+      "info": "Dodaj niestandardowe tokeny ERC-20. Tokeny systemowe są domyślnie włączone.",
+      "addToken": "Dodaj token",
+      "adding": "Dodawanie...",
+      "contractAddress": "Adres kontraktu tokena (0x...)",
+      "autoFetch": "Symbol i decimals są pobierane automatycznie",
+      "customTokens": "Niestandardowe tokeny",
+      "noCustomTokens": "Nie dodano jeszcze niestandardowych tokenów.",
+      "addUsingForm": "Dodaj token za pomocą formularza powyżej.",
+      "systemToken": "Ten token jest tokenem systemowym i jest już włączony.",
+      "fetchingMetadata": "Pobieranie metadanych tokena...",
+      "addedSuccess": "Token dodany pomyślnie",
+      "enterValidAddress": "Wprowadź prawidłowy adres tokena",
+      "save": "Zapisz"
+    },
+    "addressBook": {
+      "title": "Książka adresowa",
+      "addContact": "Dodaj kontakt",
+      "nameLabel": "Nazwa lub etykieta",
+      "walletAddress": "Adres portfela (0x...)",
+      "savedContacts": "Zapisane kontakty",
+      "noContacts": "Nie zapisano jeszcze kontaktów.",
+      "addForQuickSending": "Dodaj kontakty dla szybkiego wysyłania.",
+      "enterValidAddress": "Wprowadź prawidłowy adres",
+      "addLabel": "Dodaj etykietę",
+      "save": "Zapisz"
+    },
+    "settings": {
+      "title": "Ustawienia portfela",
+      "export": {
+        "title": "Eksportuj portfel",
+        "description": "Nigdy nie udostępniaj swojej frazy odzyskiwania ani klucza prywatnego. Przechowuj je bezpiecznie offline.",
+        "recoveryPhrase": "Fraza odzyskiwania",
+        "recoveryPhraseNotAvailable": "Fraza odzyskiwania niedostępna (zaimportowano za pomocą klucza prywatnego)",
+        "privateKey": "Klucz prywatny",
+        "privateKeyWarning": "Klucz prywatny (trzymaj w tajemnicy!)",
+        "showPhrase": "Pokaż frazę odzyskiwania",
+        "showKey": "Pokaż klucz prywatny",
+        "warning": "Nigdy nie udostępniaj swojej frazy odzyskiwania ani klucza prywatnego nikomu.",
+        "copy": "Kopiuj",
+        "copied": "Skopiowano!",
+        "hide": "Ukryj",
+        "clipboardWarning": "Schowek może być odczytywany przez inne aplikacje. Zostanie automatycznie wyczyszczony po 30 s.",
+        "verifyForKey": "Zweryfikuj, aby pokazać klucz prywatny",
+        "verifyForSeed": "Zweryfikuj, aby pokazać frazę odzyskiwania",
+        "verifyDescription": "Wprowadź hasło lub PIN, aby ujawnić wrażliwe informacje portfela."
+      },
+      "import": {
+        "title": "Importuj portfel",
+        "description": "Importowanie zastąpi aktualny portfel. Upewnij się, że najpierw wykonałeś kopię zapasową istniejącego. Po importowaniu będziesz musiał ponownie zweryfikować status PoH.",
+        "byPhrase": "Fraza odzyskiwania",
+        "byPrivateKey": "Klucz prywatny",
+        "phrasePlaceholder": "Wprowadź frazę 12 lub 24 słów…",
+        "keyPlaceholder": "Wprowadź klucz prywatny 0x…",
+        "importButton": "Importuj portfel",
+        "importing": "Importowanie...",
+        "success": "Portfel zaimportowany pomyślnie!"
+      },
+      "dangerZone": {
+        "title": "Strefa niebezpieczna",
+        "description": "Te działania nie mogą być cofnięte. Upewnij się, że wykonałeś kopię zapasową portfela.",
+        "forgetWallet": "Zapomnij portfel",
+        "forgetDescription": "Usuń portfel z tego urządzenia. Upewnij się, że masz kopię zapasową frazy odzyskiwania.",
+        "confirmTitle": "Zapomnieć portfel?",
+        "confirmMessage": "To usunie Twój portfel z tego urządzenia. Upewnij się, że najpierw masz kopię zapasową frazy odzyskiwania.",
+        "cancel": "Anuluj",
+        "confirm": "Zapomnij portfel",
+        "walletForgotten": "Portfel zapomniany",
+        "unableToForget": "Nie można zapomnieć portfela",
+        "resetWallet": "Resetuj portfel",
+        "resetDescription": "Całkowicie wyczyść wszystkie dane portfela i zacznij od nowa."
+      },
+      "authPrompt": "Uwierzytelnij, aby ujawnić klucz prywatny"
+    }
+  },
+  "reset": {
+    "title": "Resetuj portfel",
+    "dangerTitle": "To działanie nie może być cofnięte!",
+    "warning1": "Resetowanie portfela trwale usunie:",
+    "bullet1": "Twój portfel i klucze prywatne",
+    "bullet2": "Twoją frazę odzyskiwania",
+    "bullet3": "Wszystkie ustawienia i preferencje aplikacji",
+    "bullet4": "Historię transakcji",
+    "recoveryNote": "Jeśli masz swoją 12-słowną frazę odzyskiwania, możesz odzyskać portfel po resecie.",
+    "continueButton": "Rozumiem, kontynuuj",
+    "confirmTitle": "Potwierdź reset",
+    "confirmDescription": "Wpisz \"RESET\" poniżej, aby potwierdzić, że chcesz usunąć wszystkie dane portfela.",
+    "placeholder": "Wpisz RESET",
+    "typeMismatch": "Wpisz RESET, aby potwierdzić",
+    "resetButton": "Resetuj portfel na zawsze",
+    "resettingTitle": "Resetowanie...",
+    "resettingDescription": "Czyszczenie wszystkich danych portfela. Proszę czekać...",
+    "completeTitle": "Reset ukończony",
+    "completeDescription": "Twój portfel został zresetowany. Możesz teraz skonfigurować nowy portfel lub zaimportować istniejący.",
+    "startFresh": "Zacznij od nowa",
+    "error": "Nie udało się zresetować portfela. Spróbuj ponownie."
+  },
+  "export": {
+    "verifyTitle": "Zweryfikuj tożsamość",
+    "verifyDescription": "Wprowadź hasło, aby eksportować portfel.",
+    "verify": "Zweryfikuj",
+    "verificationFailed": "Weryfikacja nieudana",
+    "passphraseTitle": "Ustaw hasło eksportu",
+    "passphraseDescription": "Wybierz silne hasło do szyfrowania kopii zapasowej. Będziesz go potrzebować do importu portfela później.",
+    "enterPassphrase": "Wprowadź hasło",
+    "passphraseTooWeak": "Hasło jest zbyt słabe. Użyj co najmniej 8 znaków.",
+    "includeSeed": "Dołącz frazę odzyskiwania",
+    "includeSeedDescription": "Zalecane dla pełnej kopii zapasowej",
+    "confirmTitle": "Potwierdź hasło",
+    "confirmDescription": "Wprowadź ponownie hasło, aby potwierdzić.",
+    "confirmPassphrase": "Potwierdź hasło",
+    "passphraseMismatch": "Hasła nie pasują",
+    "warning": "Przechowuj tę kopię zapasową bezpiecznie. Każdy, kto ma dostęp do tego pliku i hasła, może uzyskać dostęp do Twojego portfela.",
+    "exportNow": "Eksportuj portfel",
+    "exportingTitle": "Eksportowanie...",
+    "exportingDescription": "Szyfrowanie i przygotowywanie kopii zapasowej portfela...",
+    "successTitle": "Eksport ukończony",
+    "successDescription": "Twoja zaszyfrowana kopia zapasowa portfela została utworzona. Przechowuj ją bezpiecznie.",
+    "rememberPassphrase": "Zapamiętaj hasło eksportu — będziesz go potrzebować do importu tej kopii zapasowej.",
+    "errorTitle": "Eksport nieudany",
+    "failed": "Eksport nieudany. Spróbuj ponownie.",
+    "tryAgain": "Spróbuj ponownie",
+    "exportKeystore": "Eksportuj zaszyfrowaną kopię zapasową",
+    "exportKeystoreDesc": "Zapisz zaszyfrowany plik keystore"
+  },
+  "security": {
+    "title": "Zabezpiecz swój portfel",
+    "subtitle": "Skonfiguruj hasło lub PIN, aby chronić portfel",
+    "checkingDevice": "Sprawdzanie bezpieczeństwa urządzenia...",
+    "passwordOption": "Hasło",
+    "passwordDesc": "8+ znaków, litery i cyfry",
+    "pinOption": "6-cyfrowy PIN",
+    "pinDesc": "Szybki i łatwy do zapamiętania",
+    "enterPin": "Wprowadź 6-cyfrowy PIN",
+    "confirmPin": "Potwierdź PIN",
+    "enterPassword": "Wprowadź hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "enableBiometrics": "Włączyć {{type}}?",
+    "biometricsDesc": "Użyj {{type}} do szybkiego odblokowania. Możesz to zmienić później w Ustawieniach.",
+    "enableBiometricsButton": "Włącz {{type}}",
+    "enableBiometricsPrompt": "Uwierzytelnij, aby włączyć odblokowanie biometryczne",
+    "skipBiometrics": "Pomiń na razie",
+    "setupComplete": "Konfiguracja ukończona!",
+    "walletSecured": "Twój portfel jest teraz zabezpieczony!",
+    "continue": "Kontynuuj",
+    "passwordTooWeak": "Hasło jest zbyt słabe. Postępuj zgodnie z sugestiami.",
+    "pinMismatch": "PIN-y nie pasują",
+    "passwordMismatch": "Hasła nie pasują",
+    "setupError": "Konfiguracja nieudana. Spróbuj ponownie.",
+    "passwordTitle": "Hasło",
+    "passwordDescription": "8+ znaków, silniejsze bezpieczeństwo",
+    "pinTitle": "6-cyfrowy PIN",
+    "pinDescription": "Szybki dostęp, łatwy do zapamiętania"
+  },
+  "lock": {
+    "title": "Odblokuj Umotu",
+    "lockedOut": "Zablokowany",
+    "tooManyAttempts": "Zbyt wiele prób. Spróbuj ponownie za {{time}}.",
+    "attemptsRemaining": "Pozostało {{count}} prób",
+    "enterPassword": "Wprowadź hasło",
+    "unlock": "Odblokuj",
+    "wrongPin": "Nieprawidłowy PIN",
+    "wrongPassword": "Nieprawidłowe hasło",
+    "verificationError": "Weryfikacja nieudana",
+    "biometricsPrompt": "Odblokuj swój portfel",
+    "unlockWithFaceId": "Odblokować za pomocą Face ID?",
+    "unlockWithFingerprint": "Odblokować za pomocą odcisku palca?",
+    "forgotPassword": "Zapomniałeś hasła?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Nieobsługiwane urządzenie",
+    "emulatorMessage": "Ta aplikacja nie może działać na emulatorach ze względów bezpieczeństwa.",
+    "rootedTitle": "Ostrzeżenie bezpieczeństwa",
+    "exitApp": "Wyjdź",
+    "continueAnyway": "Kontynuuj mimo to"
+  },
+  "settingsSecurity": {
+    "title": "Bezpieczeństwo",
+    "autoLock": "Automatyczne blokowanie",
+    "autoLockDesc": "Blokuj portfel po bezczynności",
+    "faceId": "Face ID",
+    "fingerprint": "Odcisk palca",
+    "biometricsDesc": "Szybkie odblokowanie biometryczne",
+    "changePin": "Zmień PIN",
+    "changePassword": "Zmień hasło",
+    "changeDesc": "Zaktualizuj dane uwierzytelniające",
+    "enableBiometrics": "Włącz odblokowanie biometryczne",
+    "enterCurrent": "Wprowadź aktualny {{type}}",
+    "enterNew": "Wprowadź nowy {{type}}",
+    "confirmNew": "Potwierdź nowy {{type}}",
+    "currentPassword": "Aktualne hasło",
+    "newPassword": "Nowe hasło",
+    "confirmNewPassword": "Potwierdź nowe hasło",
+    "changeNow": "Zmień teraz",
+    "success": "Sukces",
+    "pinChanged": "PIN zmieniony pomyślnie",
+    "passwordChanged": "Hasło zmienione pomyślnie",
+    "changeFailed": "Zmiana danych uwierzytelniających nieudana",
+    "autoLockOptions": {
+      "immediately": "Natychmiast",
+      "after1min": "Po 1 minucie",
+      "after5min": "Po 5 minutach",
+      "after15min": "Po 15 minutach",
+      "after1hour": "Po 1 godzinie",
+      "never": "Nigdy"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Proszę czekać",
+    "cooldownMessage": "Ze względów bezpieczeństwa możesz ponownie ujawnić klucze za {{time}}.",
+    "cooldownReason": "To zapobiega szybkiemu dostępowi złośliwych aplikacji do Twoich kluczy."
+  },
+  "passwordVerify": {
+    "title": "Zweryfikuj tożsamość",
+    "description": "Wprowadź hasło lub PIN, aby ujawnić wrażliwe informacje portfela",
+    "verify": "Zweryfikuj"
+  },
+  "passwordValidation": {
+    "veryWeak": "Bardzo słabe",
+    "weak": "Słabe",
+    "fair": "Średnie",
+    "good": "Dobre",
+    "strong": "Silne",
+    "tooShort": "Hasło musi mieć co najmniej 8 znaków",
+    "commonPassword": "To jest powszechnie używane hasło",
+    "lengthSuggestion": "Użyj co najmniej 12 znaków dla lepszego bezpieczeństwa",
+    "mixedCaseSuggestion": "Mieszaj wielkie i małe litery",
+    "numberSuggestion": "Dodaj cyfry",
+    "specialCharSuggestion": "Dodaj znaki specjalne (!@#$%)"
+  },
+  "forgot": {
+    "title": "Resetuj dane uwierzytelniające",
+    "warning": "Aby zresetować hasło lub PIN, musisz wprowadzić frazę seed portfela. To dowodzi, że jesteś właścicielem portfela.",
+    "warningText": "Nigdy nie udostępniaj swojej frazy seed nikomu.",
+    "continue": "Rozumiem, kontynuuj",
+    "enterSeed": "Wprowadź frazę seed",
+    "seedDescription": "Wprowadź swoją 12- lub 24-słowną frazę seed. Oddziel każde słowo spacją.",
+    "seedPlaceholder": "Wprowadź frazę seed...",
+    "verifySeed": "Zweryfikuj frazę seed",
+    "invalidSeed": "Wprowadź prawidłową 12- lub 24-słowną frazę seed",
+    "chooseMethod": "Wybierz metodę bezpieczeństwa",
+    "methodDescription": "Jak chcesz zabezpieczyć swój portfel?",
+    "newPassword": "Utwórz nowe hasło",
+    "newPin": "Utwórz nowy PIN",
+    "newPasswordDesc": "Wybierz silne hasło (8+ znaków)",
+    "newPinDesc": "Wprowadź 6-cyfrowy PIN",
+    "confirmPassword": "Potwierdź hasło",
+    "confirmPin": "Potwierdź PIN",
+    "confirmPasswordDesc": "Wprowadź ponownie hasło",
+    "confirmPinDesc": "Wprowadź ponownie PIN",
+    "resetNow": "Resetuj teraz",
+    "complete": "Reset ukończony",
+    "completeDescription": "Twoje dane uwierzytelniające zostały zresetowane. Możesz teraz odblokować portfel nowym hasłem lub PIN-em.",
+    "unlockNow": "Odblokuj portfel",
+    "passwordTooWeak": "Hasło jest zbyt słabe. Wybierz silniejsze hasło.",
+    "passwordMismatch": "Hasła nie pasują",
+    "pinMismatch": "PIN-y nie pasują",
+    "resetFailed": "Reset danych uwierzytelniających nieudany. Zweryfikuj frazę seed.",
+    "resetError": "Wystąpił błąd. Spróbuj ponownie."
+  },
+  "send": {
+    "title": "Wyślij",
+    "selectToken": "Wybierz token",
+    "selectTokenInfo": "Wybierz token do wysłania. Pokazane są tylko tokeny z saldem.",
+    "noTokensWithBalance": "Brak tokenów z saldem",
+    "addTokensFirst": "Najpierw dodaj tokeny do portfela",
+    "enterAmount": "Wprowadź kwotę",
+    "enterRecipient": "Wprowadź odbiorcę",
+    "review": "Przejrzyj",
+    "amount": "Kwota",
+    "recipient": "Odbiorca",
+    "recipientPlaceholder": "Adres portfela 0x...",
+    "networkFee": "Opłata sieciowa",
+    "gasToken": "Płać gaz",
+    "payingWith": "Płacenie za pomocą",
+    "payGasWith": "Płać gaz za pomocą",
+    "nativeGas": "UMT (natywny)",
+    "stableGas": "Stable Gas",
+    "selectStable": "Wybierz stable",
+    "max": "Maks.",
+    "next": "Dalej",
+    "continue": "Kontynuuj",
+    "confirm": "Potwierdź wysyłanie",
+    "confirmSend": "Potwierdź wysyłanie",
+    "sending": "Wysyłanie...",
+    "failed": "Transakcja nieudana",
+    "viewInExplorer": "Zobacz w eksploratorze",
+    "done": "Gotowe",
+    "cancel": "Anuluj",
+    "send": "Wyślij",
+    "balance": "Saldo",
+    "available": "Dostępne",
+    "to": "Do",
+    "network": "Sieć",
+    "step": "Krok",
+    "estimating": "Szacowanie…",
+    "umtNative": "UMT (natywny)",
+    "txSpeed": "Prędkość transakcji",
+    "transactionSpeed": "Prędkość transakcji",
+    "speed": {
+      "slow": "Wolna",
+      "normal": "Normalna",
+      "fast": "Szybka"
+    },
+    "gasNotice": {
+      "stablecoin": "Gaz będzie płatny stablecoinem.",
+      "reserved": "Zarezerwowaliśmy {{amount}} {{symbol}} na gaz; możesz wysłać maksymalnie {{max}}."
+    },
+    "errors": {
+      "invalidAddress": "Nieprawidłowy adres odbiorcy",
+      "invalidAmount": "Wprowadź prawidłową kwotę",
+      "insufficientBalance": "Niewystarczające saldo",
+      "insufficientGas": "Niewystarczające saldo na gaz",
+      "insufficientGasWithHint": "Niewystarczające saldo na gaz. Dodaj UMT lub obsługiwany stablecoin.",
+      "notEnoughForGas": "Niewystarczające saldo na pokrycie gazu",
+      "noStableGas": "Niewystarczająco UMT na gaz i żaden obsługiwany stable nie może go pokryć.",
+      "permitFailed": "Upoważnienie lub zatwierdzenie tokena gazu nieudane",
+      "relayNotConfigured": "Relay stable gas nie skonfigurowany",
+      "transactionReverted": "Transakcja cofnięta na łańcuchu.",
+      "approvalNeeded": "Token gazu wymaga zatwierdzenia, ale brak UMT na zatwierdzenie. Dodaj małą ilość UMT lub użyj tokena obsługującego permit."
+    },
+    "addressBook": {
+      "title": "Książka Adresowa",
+      "addNew": "Dodaj Nowy",
+      "noContacts": "Brak zapisanych adresów",
+      "saveForQuickAccess": "Zapisz adresy dla szybkiego dostępu",
+      "editContact": "Edytuj Kontakt",
+      "deleteContact": "Usuń Kontakt",
+      "addressNotSaved": "Adres nie zapisany",
+      "addLabel": "Dodaj etykietę",
+      "enterValidAddress": "Najpierw wprowadź prawidłowy adres",
+      "saved": "Zapisano",
+      "save": "Zapisz"
+    },
+    "success": {
+      "title": "Transakcja wysłana!",
+      "hash": "Hash",
+      "viewInExplorer": "Zobacz w eksploratorze",
+      "close": "Zamknij"
+    },
+    "batch": {
+      "mode": "Tryb Wsadowy",
+      "singleMode": "Pojedynczy Odbiorca",
+      "addRecipient": "Dodaj odbiorców",
+      "noRecipients": "Nie dodano jeszcze odbiorców",
+      "addFromTagOrBook": "Dodaj z tagu lub książki",
+      "invalidAddress": "Nieprawidłowy adres: {{address}}",
+      "invalidAmount": "Nieprawidłowa kwota dla {{recipient}}",
+      "totalExceedsBalance": "Suma przekracza saldo",
+      "sendingTo": "Wysyłanie do {{count}} odbiorcy",
+      "sendingTo_plural": "Wysyłanie do {{count}} odbiorców",
+      "recipients": "Odbiorcy",
+      "addresses": "{{count}} adres",
+      "addresses_plural": "{{count}} adresów",
+      "addByTag": "Dodaj według tagu",
+      "noTags": "Brak tagów",
+      "createFirstTag": "Utwórz pierwszy tag w książce adresowej",
+      "addFromTag": "Dodaj z tagu",
+      "selectTag": "Wybierz tag",
+      "remove": "Usuń",
+      "sendAll": "Wyślij Wszystko ({{count}})",
+      "batchSend": "Wyślij Wsadowo",
+      "badge": "WSAD",
+      "successFail": "{{success}} pomyślnie, {{fail}} nieudanych",
+      "successful": "Pomyślnie",
+      "sentStatus": "Wysłano",
+      "failedStatus": "Nieudane",
+      "details": "Szczegóły Transferu Wsadowego",
+      "total": "Suma",
+      "tagPicker": {
+        "title": "Wybierz Tag",
+        "noTags": "Brak dostępnych tagów",
+        "createHint": "Najpierw dodaj tagi do kontaktów w książce"
+      },
+      "tags": {
+        "manage": "Zarządzaj Tagami",
+        "add": "Dodaj Tag",
+        "remove": "Usuń Tag",
+        "create": "Utwórz Tag",
+        "newTag": "Nazwa nowego tagu",
+        "addToContact": "Dodaj tag do kontaktu"
+      }
+    }
+  },
+  "receive": {
+    "title": "Odbierz",
+    "yourAddress": "Twój adres portfela",
+    "scanQR": "Skanuj kod QR, aby odebrać",
+    "copyAddress": "Kopiuj adres",
+    "share": "Udostępnij"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Zapłać",
+      "myQr": "Mój QR"
+    },
+    "pay": {
+      "title": "Zapłać",
+      "description": "Skanuj kod QR znajomego, aby zapłacić bezpośrednio do jego portfela",
+      "allowCamera": "Zezwól na kamerę",
+      "requesting": "Żądanie…",
+      "openSettings": "Otwórz ustawienia",
+      "sendTo": "Wyślij do",
+      "amount": "Kwota",
+      "rescan": "Skanuj ponownie",
+      "continue": "Kontynuuj"
+    },
+    "receive": {
+      "title": "Odbierz",
+      "description": "Skanuj ten kod QR, aby wysyłać płatności na ten adres",
+      "tapToCopy": "Dotknij, aby skopiować adres",
+      "copied": "Skopiowano do schowka!"
+    }
+  },
+  "history": {
+    "title": "Historia transakcji",
+    "sent": "Wysłane",
+    "received": "Otrzymane",
+    "token": "Token",
+    "external": "Zewnętrzne",
+    "to": "Do: ",
+    "from": "Od: ",
+    "viewInExplorer": "Zobacz w eksploratorze",
+    "empty": {
+      "title": "Brak transakcji",
+      "description": "Twoja historia transakcji pojawi się tutaj po wysłaniu lub otrzymaniu tokenów."
+    },
+    "status": {
+      "confirmed": "Potwierdzona",
+      "pending": "Oczekująca",
+      "failed": "Nieudana"
+    },
+    "details": {
+      "title": "Szczegóły transakcji",
+      "status": "Status",
+      "type": "Typ",
+      "to": "Do",
+      "from": "Od",
+      "token": "Token",
+      "block": "Blok",
+      "gasCost": "Koszt gazu",
+      "hash": "Hash",
+      "source": "Źródło",
+      "balanceDetected": "Wykryto saldo",
+      "inferredNote": "Ta transakcja została wykryta na podstawie zmiany salda. Szczegóły on-chain nie są dostępne."
+    },
+    "time": {
+      "justNow": "Przed chwilą",
+      "minsAgo": "{{count}} min temu",
+      "hoursAgo": "{{count}} godz. temu",
+      "daysAgo": "{{count}} dni temu"
+    }
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "account": {
+      "title": "Konto i wygląd",
+      "walletAddress": "Adres portfela",
+      "copy": "Kopiuj",
+      "copied": "Skopiowano"
+    },
+    "theme": {
+      "title": "Motyw",
+      "light": "Jasny",
+      "dark": "Ciemny",
+      "system": "Systemowy"
+    },
+    "language": {
+      "title": "Język",
+      "select": "Wybierz język",
+      "current": "Aktualny"
+    },
+    "display": {
+      "title": "Wyświetlanie",
+      "description": "Dostosuj wygląd ekranu głównego.",
+      "showSentinelCard": "Pokaż kartę zarobków Sentinel",
+      "showSentinelCardDesc": "Pokaż zarobki na ekranie głównym",
+      "showDailyRewardsCard": "Pokaż kartę codziennych nagród",
+      "on": "WŁ.",
+      "off": "WYŁ.",
+      "sentinelSettings": "Ustawienia Sentinel",
+      "sentinelSettingsDesc": "Zarządzaj blokadą, nagrodami i automatycznym odbieraniem"
+    },
+    "sentinelDisplay": {
+      "title": "Wyświetlanie Sentinel",
+      "showSentinelCard": "Pokaż kartę Sentinel",
+      "showSentinelCardDesc": "Wyświetl kartę zarobków sentinel na ekranie głównym",
+      "sentinelSettings": "Ustawienia Sentinel",
+      "sentinelSettingsDesc": "Konfiguruj węzeł sentinel i nagrody"
+    },
+    "verification": {
+      "title": "Weryfikacja",
+      "description": "Zweryfikuj swoją człowieczeństwo za pomocą Inlyf, aby odblokować codzienne nagrody. Szybkie sprawdzenie liveness; weryfikuj okresowo.",
+      "open": "Rozpocznij weryfikację",
+      "refresh": "Odśwież weryfikację",
+      "status": "Status",
+      "verified": "Zweryfikowany",
+      "notVerified": "Nie zweryfikowany",
+      "expiresOn": "Wygasa",
+      "daysRemaining": "Pozostałe dni",
+      "upToDate": "Weryfikacja aktualna",
+      "refreshAvailableIn": "Odświeżenie dostępne za {{days}} dni"
+    },
+    "network": {
+      "title": "Sieć",
+      "description": "Konfiguruj połączenie z siecią blockchain.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (wkrótce)",
+      "rpcEndpoint": "Endpoint RPC",
+      "pingRpc": "Ping RPC",
+      "testing": "Testowanie...",
+      "rpcOk": "RPC OK",
+      "rpcError": "Błąd RPC",
+      "save": "Zapisz",
+      "saved": "Ustawienia zapisane",
+      "connectionStatus": "Status połączenia",
+      "connected": "Połączony",
+      "disconnected": "Rozłączony"
+    },
+    "cache": {
+      "title": "Pamięć podręczna",
+      "description": "Wyczyść dane w pamięci podręcznej, aby odświeżyć informacje o tokenach i kontraktach.",
+      "clearCache": "Wyczyść pamięć podręczną",
+      "cacheCleared": "Pamięć podręczna wyczyszczona! Uruchom ponownie, aby zastosować."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Pomóż zabezpieczyć blockchain, utrzymując telefon online. Wykonaj co najmniej jedno zadanie samplingu dziennie, aby zachować prawo do nagród.",
+      "wifiOnly": "Tylko WiFi",
+      "wifiOnlyHint": "Oszczędza dane mobilne",
+      "minBattery": "Minimalna bateria",
+      "minBatteryHint": "Nie uruchamia się poniżej tego poziomu",
+      "background": "Uruchamiaj w tle",
+      "backgroundHint": "Działa nawet gdy aplikacja jest zamknięta",
+      "lastSample": "Ostatnia aktywność",
+      "noSamples": "Brak aktywności. Trzymaj aplikację otwartą, aby zacząć.",
+      "staleWarning": "Nie widziany dziś — otwórz aplikację, aby wznowić.",
+      "androidBatteryWarning": "Optymalizacja baterii może zapobiec próbkowaniu",
+      "androidBatteryHint": "Przejdź do Ustawienia → Aplikacje → Umotu → Bateria → wybierz \"Nieograniczona\", aby zezwolić na działanie w tle.",
+      "openSettings": "Dotknij, aby otworzyć ustawienia",
+      "tip": "Włącz \"Uruchamiaj w tle\" dla najlepszego potencjału zarobkowego.",
+      "runNow": "Uruchom teraz",
+      "running": "Działanie…",
+      "lastError": "Ostatni błąd",
+      "status": {
+        "active": "Aktywne",
+        "inactive": "Nieaktywne",
+        "paused": "Wstrzymane"
+      }
+    },
+    "permissions": {
+      "title": "Uprawnienia",
+      "description": "Zarządzaj podłączonymi Mini Apps i ich uprawnieniami.",
+      "openMiniApps": "Otwórz Mini Apps",
+      "manageConnections": "Zarządzaj",
+      "noConnections": "Brak podłączonych aplikacji",
+      "revokeAccess": "Cofnij dostęp",
+      "lastUsed": "Ostatnio używane"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Witaj w Umotu",
+      "subtitle": "10 dolarów dziennie, dla wszystkich na całym świecie",
+      "getStarted": "Zacznij"
+    },
+    "language": {
+      "title": "Wybierz język",
+      "continue": "Kontynuuj"
+    },
+    "wallet": {
+      "title": "Twój portfel",
+      "createNew": "Utwórz nowy portfel",
+      "importExisting": "Importuj istniejący",
+      "creating": "Tworzenie portfela..."
+    },
+    "verify": {
+      "title": "Zweryfikuj, że jesteś człowiekiem",
+      "description": "Aby otrzymywać codzienne nagrody, zweryfikuj, że jesteś unikalną osobą.",
+      "continue": "Kontynuuj"
+    }
+  },
+  "poh": {
+    "subtitle": "Odblokuj codzienne nagrody",
+    "description": "Zweryfikuj liveness za pomocą Inlyf, aby odblokować nagrody. Żadne dane biometryczne nie są przechowywane on-chain; wydawany jest tylko krótkotrwały credential.",
+    "howItWorks": "Jak to działa",
+    "howItWorksDesc": "Krótkie sprawdzenie liveness (skan twarzy) weryfikuje, że jesteś człowiekiem. Twój credential trwa 90 dni i można go odświeżyć w dowolnym momencie.",
+    "adultQuestion": "Czy jesteś dorosły (18+)?",
+    "yesAdult": "Tak, 18+",
+    "noMinor": "Nie / Niepełnoletni",
+    "selectAge": "Wybierz opcję",
+    "verifying": "Weryfikowanie...",
+    "startVerification": "Rozpocznij weryfikację",
+    "skipForNow": "Pomiń na razie",
+    "status": {
+      "notVerified": "Jeszcze nie zweryfikowany.",
+      "notVerifiedDetail": "Rozpocznij weryfikację, aby odblokować nagrody.",
+      "unavailable": "Status niedostępny.",
+      "verified": "Jesteś zweryfikowany.",
+      "validFor": "Ważny przez ~{{days}} dzień",
+      "validFor_plural": "Ważny przez ~{{days}} dni",
+      "expired": "Weryfikacja wygasła lub nie znaleziona.",
+      "expiredDetail": "Uruchom ponownie liveness, aby odświeżyć credential."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Dołącz do puli Sentinel, aby pomagać finalizować bloki. Zablokuj co najmniej minimalną kwotę, utrzymuj urządzenie online i zarabiaj nagrody.",
+    "loading": "Ładowanie danych sentinel...",
+    "unavailable": "Moduł Sentinel niedostępny",
+    "yourStatus": "Twój status",
+    "wallet": "Portfel",
+    "bondedAmount": "Zablokowana kwota",
+    "minimumBond": "Minimalna blokada",
+    "status": {
+      "notBonded": "Nie zablokowane",
+      "bonded": "Zablokowane",
+      "unbonding": "Odblokowywanie (dostępne {{date}})"
+    },
+    "rewards": {
+      "title": "Nagrody",
+      "claimableNow": "Do odebrania teraz",
+      "accruing": "Naliczane",
+      "totalClaimed": "Łącznie odebrane",
+      "claiming": "Odbieranie...",
+      "claimRewards": "Odbierz nagrody"
+    },
+    "bond": {
+      "createTitle": "Utwórz blokadę",
+      "topUpTitle": "Uzupełnij blokadę",
+      "createDescription": "Zablokuj UMT, aby dołączyć do komitetu sentinel i zacząć zarabiać.",
+      "topUpDescription": "Zwiększ swoją stawkę, aby zarabiać większy udział w nagrodach.",
+      "amountLabel": "Kwota (UMT)",
+      "processing": "Przetwarzanie...",
+      "bond": "Zablokuj",
+      "topUp": "Uzupełnij",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Automatyczne odbieranie",
+      "description": "Pozwól relayerowi automatycznie odbierać nagrody sentinel, gdy się naliczą.",
+      "checking": "Sprawdzanie...",
+      "enabled": "Włączone",
+      "disabled": "Wyłączone",
+      "expires": "Wygasa",
+      "processing": "Przetwarzanie...",
+      "enable": "Włącz automatyczne odbieranie",
+      "disable": "Wyłącz automatyczne odbieranie"
+    },
+    "activity": {
+      "title": "Ostatnia aktywność",
+      "claims": "Odbierania",
+      "slashes": "Kary",
+      "noClaims": "Brak odbierań w ostatnich {{blocks}}k blokach.",
+      "noSlashes": "Brak kar w ostatnim oknie.",
+      "unknown": "nieznany"
+    },
+    "errors": {
+      "configureEnv": "Skonfiguruj zmienne środowiskowe RPC + sentinel contract.",
+      "noWallet": "Utwórz lub importuj portfel, aby dołączyć do komitetu sentinel.",
+      "loadFailed": "Nie udało się załadować danych sentinel."
+    },
+    "toast": {
+      "rewardsClaimed": "Nagrody sentinel odebrane.",
+      "noRewards": "Brak oczekujących nagród do odebrania.",
+      "claimFailed": "Odbieranie nieudane.",
+      "autoClaimEnabled": "Automatyczne odbieranie sentinel włączone",
+      "autoClaimDisabled": "Automatyczne odbieranie sentinel wyłączone",
+      "autoClaimFailed": "Przełączanie automatycznego odbierania nieudane",
+      "configureBondAddress": "Skonfiguruj adres blokady sentinel",
+      "rpcNotSet": "RPC nie ustawiony",
+      "minBondUnavailable": "Minimalna blokada niedostępna",
+      "enterBondAmount": "Wprowadź kwotę blokady",
+      "minBondRequired": "Początkowa blokada musi być co najmniej {{amount}} UMT",
+      "topUpGreaterThanZero": "Kwota uzupełnienia musi być większa niż 0",
+      "insufficientBalance": "Niewystarczające saldo na blokadę + gaz",
+      "bondSubmitted": "Transakcja blokady zgłoszona",
+      "topUpSubmitted": "Transakcja uzupełnienia zgłoszona",
+      "bondConfirmed": "Blokada potwierdzona",
+      "topUpConfirmed": "Uzupełnienie potwierdzone",
+      "bondReverted": "Blokada cofnięta on-chain",
+      "bondFailed": "Blokada nieudana"
+    }
+  },
+  "miniapps": {
+    "title": "MiniApps",
+    "subtitle": "Eksploruj aplikacje zbudowane na Umotu",
+    "explore": "Eksploruj aplikacje zbudowane na Umotu",
+    "noApps": "Brak dostępnych aplikacji",
+    "browseByCategory": "Przeglądaj według kategorii",
+    "appsCount": "{{count}} aplikacji",
+    "featured": "WYRÓŻNIONE",
+    "comingSoon": "Wkrótce",
+    "liveApps": "Aplikacje na żywo",
+    "available": "DOSTĘPNE",
+    "pohDescription": "Zweryfikuj swoją człowieczeństwo za pomocą Inlyf, aby odblokować codzienne nagrody.",
+    "vision": {
+      "title": "Nasza wizja",
+      "tagline": "10 dolarów dziennie, dla wszystkich na całym świecie",
+      "description": "Umotu buduje infrastrukturę dla świata, w którym każdy może uczestniczyć w globalnej gospodarce — niezależnie od miejsca zamieszkania czy banku.",
+      "readMore": "Przeczytaj pełną wizję",
+      "pillars": {
+        "title": "Trzy główne zasady",
+        "ubi": {
+          "title": "10 dolarów/dzień, dla wszystkich na całym świecie",
+          "description": "Uniwersalny dochód podstawowy jako zarobione nagrody za zabezpieczanie sieci. Każdy z telefonem może uczestniczyć i zarabiać."
+        },
+        "capital": {
+          "title": "Kapitał porusza się swobodnie",
+          "description": "Prawie zerowe tarcie dla płatności i transferów — transgranicznych lub lokalnych. Firmy płacą ~0,1% na pokrycie kosztów platformy, osoby fizyczne nic."
+        },
+        "sovereignty": {
+          "title": "Szanuj suwerenność monetarną",
+          "description": "Nie zastępujemy walut fiat — sprawiamy, że działają lepiej. Banki emitują stablecoiny powiązane z lokalną walutą. Polityka monetarna staje się skuteczniejsza dzięki szerszemu zasięgowi i mniejszemu tarciu."
+        }
+      },
+      "notReplacing": "Umotu nie konkuruje z bankami centralnymi. Budujemy lepszą infrastrukturę dla walut fiat: mniej tarcia, globalny dostęp oraz lepszą efektywność i odporność rynku."
+    },
+    "building": {
+      "title": "Budujemy ekosystem",
+      "description": "Te aplikacje pokazują, co jest możliwe na Umotu. Niektóre są gotowe teraz, inne wkrótce. Deweloperzy z całego świata są zaproszeni do budowania i uruchamiania na naszej platformie.",
+      "developerDocs": "Dokumentacja dla deweloperów"
+    },
+    "categories": {
+      "payments": {
+        "name": "Płatności i finanse",
+        "apps": {
+          "sendMoney": {
+            "name": "Wyślij pieniądze",
+            "description": "Wyślij UMT lub stablecoiny natychmiast do kogokolwiek na świecie — bez banków.",
+            "example": "Wyślij 20 dolarów rodzinie za granicę w sekundy, nie dni. Zero ukrytych opłat."
+          },
+          "billPay": {
+            "name": "Płać rachunki",
+            "description": "Płać za media, telefon, internet i więcej bezpośrednio z portfela."
+          },
+          "savings": {
+            "name": "Koła oszczędnościowe",
+            "description": "Tradycyjne rotacyjne oszczędności (tontine, chit fund) uczynione bezzaufaniowymi dzięki smart kontraktom."
+          },
+          "microLoans": {
+            "name": "Mikropożyczki",
+            "description": "Pożyczki peer-to-peer wsparte zweryfikowaną człowieczeństwem i reputacją."
+          }
+        }
+      },
+      "transport": {
+        "name": "Transport i dostawy",
+        "apps": {
+          "rideSharing": {
+            "name": "Wspólne przejazdy",
+            "description": "Rezerwuj przejazdy płatne krypto. Kierowcy zatrzymują więcej, pasażerowie płacą mniej — bez pośrednika zabierającego 30%.",
+            "example": "Przejazd taksówką w Lagos kosztuje ₦800. Kierowca dostaje ₦799,2 zamiast ₦560."
+          },
+          "delivery": {
+            "name": "Dostawy",
+            "description": "Zamawiaj jedzenie, zakupy lub paczki. Kurierzy zarabiają godziwe wynagrodzenie w stable tokenach."
+          },
+          "publicTransit": {
+            "name": "Transport publiczny",
+            "description": "Płać za autobusy, metro i pociągi dotknięciem. Nie potrzeba kupować kart biletowych."
+          }
+        }
+      },
+      "travel": {
+        "name": "Podróże i hotelarstwo",
+        "apps": {
+          "hotels": {
+            "name": "Hotele i pobyty",
+            "description": "Rezerwuj zakwaterowanie na całym świecie. Gospodarze akceptują stablecoiny, goście oszczędzają na opłatach."
+          },
+          "flights": {
+            "name": "Lot",
+            "description": "Szukaj i rezerwuj loty. Płać krypto, zarabiaj nagrody UMT."
+          },
+          "tours": {
+            "name": "Lokalne wycieczki",
+            "description": "Rezerwuj doświadczenia z lokalnymi przewodnikami. Płatności idą bezpośrednio do nich."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Zakupy i handel",
+        "apps": {
+          "localMarket": {
+            "name": "Lokalny rynek",
+            "description": "Kupuj i sprzedawaj lokalnie. Płatności QR czynią handel uliczny bezproblemowym."
+          },
+          "ecommerce": {
+            "name": "E-commerce",
+            "description": "Kupuj online od merchantów na całym świecie. Bez opłat kartowych, bez chargebacków."
+          },
+          "marketplace": {
+            "name": "Rynek peer-to-peer",
+            "description": "Wystawiaj przedmioty na sprzedaż, kupuj od innych. Escrow chroni obie strony."
+          }
+        }
+      },
+      "services": {
+        "name": "Usługi i praca",
+        "apps": {
+          "remittance": {
+            "name": "Przekazy pieniężne",
+            "description": "Wyślij pieniądze do domu. Odbiorcy mogą wypłacić na lokalną walutę lub trzymać cyfrowo."
+          },
+          "freelance": {
+            "name": "Praca freelance",
+            "description": "Otrzymuj płatności za pracę gig natychmiast. Bez czekania 30 dni na przelew bankowy."
+          },
+          "homeServices": {
+            "name": "Usługi domowe",
+            "description": "Zatrudniaj hydraulików, elektryków, sprzątaczy. Płać tylko gdy praca jest wykonana."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Buduj swój biznes na Umotu",
+      "subtitle": "Uruchamiaj aplikacje z wbudowanymi płatnościami",
+      "description": "Twórz aplikacje, które wykorzystują ekosystem Umotu — miliony zweryfikowanych ludzi z codziennym dochodem, gotowych do transakcji. Bez problemów z integracją płatności.",
+      "benefits": {
+        "noFees": "Prawie zerowe opłaty przetwarzania płatności — zatrzymuj 99,9% przychodu",
+        "verifiedUsers": "Wszyscy użytkownicy to zweryfikowani ludzie — zero botów czy oszustw",
+        "globalReach": "Dotrzyj do użytkowników w 190+ krajach od pierwszego dnia",
+        "instantPayments": "Natychmiastowe rozliczenia — bez 30-dniowych opóźnień płatności"
+      },
+      "exampleTitle": "Przykład użycia",
+      "exampleText": "Aplikacja ride-sharing na Umotu zatrzymuje 99,9% opłat vs 70% na tradycyjnych platformach. Kierowcy zarabiają więcej, pasażerowie płacą mniej.",
+      "docsButton": "Przeczytaj dokumentację",
+      "buildButton": "Zacznij budować"
+    },
+    "bank": {
+      "title": "Jesteś bankiem?",
+      "subtitle": "Emituj stablecoiny na Umotu",
+      "description": "Licencjonowane instytucje finansowe mogą emitować stablecoiny lokalnej waluty na Umotu i wykorzystać rosnącą gospodarkę UBI z milionami użytkowników.",
+      "benefits": {
+        "reserves": "Zarabiaj yield na rezerwach: inwestuj w obligacje i niskiego ryzyka aktywa",
+        "mintRedeem": "Pobieraj opłaty za mint/redeem: zazwyczaj 0,1% za konwersje fiat ↔ stablecoin",
+        "users": "Dostęp do milionów codziennie aktywnych odbiorców UBI",
+        "global": "Rozszerz zasięg poza granice natychmiast",
+        "custody": "Twoje rezerwy, Twoja opieka: pełna kontrola nad aktywami backingowymi"
+      },
+      "revenueModel": "Jak emitenci zarabiają",
+      "revenueNote": "Podobnie jak Tether i inni główni emitenci, przychód pochodzi z yield rezerw i opłat konwersyjnych. Z milionami użytkowników otrzymującymi codzienne UBI, wolumen mint/redeem może być znaczny.",
+      "futureNote": "Emitenci mogą również otrzymywać udział w opłatach transakcyjnych w przyszłości wraz z ewolucją protokołu.",
+      "learnMore": "Dowiedz się więcej",
+      "applyButton": "Aplikuj teraz"
+    }
+  },
+  "news": {
+    "title": "Aktualności i aktualizacje",
+    "description": "Bądź na bieżąco z najnowszymi ogłoszeniami, wskazówkami i alertami bezpieczeństwa od zespołu Umotu.",
+    "empty": "Brak aktualności w tej chwili",
+    "unread": "Nowe",
+    "unreadCount": "{{count}} nowe",
+    "markAsRead": "Oznacz jako przeczytane",
+    "types": {
+      "announcement": "Ogłoszenie",
+      "tip": "Wskazówka",
+      "security": "Bezpieczeństwo",
+      "airdrop": "Airdrop",
+      "update": "Aktualizacja"
+    }
+  },
+  "governance": {
+    "title": "Zarządzanie",
+    "subtitle": "Kształtuj przyszłość Umotu",
+    "description": {
+      "title": "Twój głos ma znaczenie",
+      "body": "Pomóż kształtować przyszłość Umotu, głosując na propozycje społeczności. Fundacja Umotu organizuje te głosowania, ale społeczność decyduje."
+    },
+    "empty": "Brak aktywnych propozycji",
+    "emptyHint": "Sprawdź później nowe decyzje społeczności do głosowania.",
+    "newPolls": "Nowe",
+    "newPollsCount": "{{count}} nowe",
+    "vote": "głosuj",
+    "votes": "głosy",
+    "endsIn": "Kończy się za {{time}}",
+    "ended": "Zakończone",
+    "tapToVote": "Dotknij opcję powyżej, aby oddać głos",
+    "submitting": "Zgłaszanie głosu...",
+    "alreadyVoted": {
+      "title": "Już głosowano",
+      "message": "Już oddałeś głos w tej propozycji."
+    },
+    "confirm": {
+      "title": "Potwierdź głos",
+      "message": "Głosuj na",
+      "note": "To działanie nie może być cofnięte.",
+      "submit": "Zgłoś głos"
+    },
+    "success": {
+      "title": "Głos zgłoszony!",
+      "message": "Dziękujemy za udział w zarządzaniu społeczności."
+    },
+    "error": {
+      "title": "Głosowanie nieudane",
+      "message": "Nie udało się zgłosić głosu. Spróbuj ponownie."
+    }
+  },
+  "learn": {
+    "title": "Dowiedz się więcej",
+    "subtitle": "Wszystko, co musisz wiedzieć o Umotu",
+    "featured": "WYRÓŻNIONE",
+    "whatIs": {
+      "title": "Czym jest Umotu?",
+      "subtitle": "10 dolarów dziennie, dla wszystkich na całym świecie",
+      "intro": "Umotu dąży do tego, aby każdy mógł zarabiać około 10 dolarów/dzień używając tylko smartfona. Bez drogiego sprzętu, bez specjalnych umiejętności, bez granic.",
+      "howDifferent": "Czym się różni?",
+      "noMiddleman": "Bez pośrednika: Interakcjonujesz bezpośrednio z siecią — bez konta bankowego",
+      "globalAccess": "Globalny dostęp: Działa wszędzie z internetem",
+      "youOwnIt": "Należy do Ciebie: Twój portfel, Twoje klucze, Twoja kontrola",
+      "vision": "Wizja",
+      "visionText": "Miliardy ludzi mogą pomagać utrzymywać publiczną księgę uczciwą i zarabiać na tym. Na Umotu telefony wykonują lekkie sprawdzenia, które czynią sieć godną zaufania.",
+      "nameOrigin": "Pochodzenie nazwy",
+      "nameOriginText": "Umotu czerpie inspirację z języka Paʻumotu, polinezyjskiego. Używamy nazwy z szacunkiem jako przypomnienie, aby budować dla zwykłych ludzi."
+    },
+    "earn": {
+      "title": "Jak zarabiasz",
+      "subtitle": "Twój telefon pracuje; Ty dostajesz płatność",
+      "intro": "Twój telefon wykonuje małe zadania, które pomagają wszystkim — potem dostajesz nagrodę.",
+      "steps": "Trzy proste kroki",
+      "step1": "1) Udowodnij, że jesteś człowiekiem: szybkie sprawdzenie liveness (i okazjonalne odświeżanie) zapewnia jedną konto na osobę.",
+      "step2": "2) Pomagaj sieci: Twój telefon uruchamia próbkowane Data Availability (DA) i inne lekkie sprawdzenia w tle.",
+      "step3": "3) Zarabiaj codzienne nagrody: Jesteś płatny za tę pracę, z celem około 10 dolarów/dzień w zależności od polityki sieci.",
+      "localCurrency": "Płatne w Twojej walucie",
+      "localCurrencyText": "Wybierz token wypłaty: stablecoiny lokalnej waluty (gdzie dostępne) lub UMT. Kwoty celują w ~10 USD wartości i mogą się dostosowywać z udziałem i warunkami rynkowymi."
+    },
+    "whereMoney": {
+      "title": "Skąd biorą się te 10 dolarów?",
+      "subtitle": "Zarabiasz, bo wykonujesz pracę",
+      "intro": "To pytanie nr 1. Krótka odpowiedź: bo dostarczasz usługę, której sieć potrzebuje.",
+      "realWork": "Twój telefon wykonuje realną pracę",
+      "realWork1": "Próbkowanie Data Availability: Twój telefon sprawdza, że dane bloków są dostępne i poprawne",
+      "realWork2": "Uczestnictwo ludzkie: Udowadniasz jedną-osobę-jedno-konto, aby zatrzymać boty i spam",
+      "realWork3": "Te zadania chronią wszystkich; bez nich sieć słabnie",
+      "valueSource": "Dwa źródła wartości",
+      "utility": "Użyteczność: szybkie, niskoopłatne płatności, które ludzie wybierają",
+      "consensus": "Konsensus: wartość, która rośnie wraz z większą liczbą ludzi weryfikujących i zgadzających się na reguły",
+      "distribution": "Jak nagrody są dystrybuowane",
+      "newTokens": "Nowe tokeny UMT są tworzone i dzielone z zweryfikowanymi uczestnikami telefonów (nie z walidatorami)",
+      "fees": "Część opłat i bidów budowniczych jest dzielona z sentinelami telefonów za finalizowanie bloków",
+      "treasury": "Mała część finansuje bieżącą konserwację i programy stabilności",
+      "whyDifferent": "Dlaczego to inne",
+      "btcProblem": "Bitcoin nagradza specjalistycznych minerów (kapitałochłonne)",
+      "ethProblem": "Ethereum nagradza dużych stakerów (kapitałochłonne)",
+      "umotuSolution": "Umotu nagradza codzienne telefony (niski praktyczny koszt uczestnictwa)",
+      "conclusion": "To nie darowizna: Jesteś płatny za pracę, która utrzymuje wspólną infrastrukturę finansową uczciwą i użyteczną."
+    },
+    "security": {
+      "title": "Bezpieczeństwo portfela",
+      "subtitle": "Chroń swoje pieniądze",
+      "intro": "Twój portfel jest jak cyfrowy sejf, który tylko Ty kontrolujesz.",
+      "recovery": "Twoje 12 słów i klucz prywatny",
+      "recoveryText": "Twoje 12 tajnych słów (fraza odzyskiwania) i klucz prywatny odblokowują portfel. Każdy, kto ma jedno z nich, może ruszyć Twoje środki.",
+      "rules": "Złote reguły",
+      "rule1": "NIGDY nie udostępniaj swoich 12 słów ani klucza prywatnego nikomu — nawet współtwórcom Umotu.",
+      "rule2": "Zapisz swoje 12 słów na papierze i przechowuj offline. Nie przechowuj w screenshotach, zdjęciach czy notatkach w chmurze.",
+      "rule3": "Jeśli eksportujesz klucz prywatny, przechowuj offline (papier, hardware lub zaszyfrowany manager, któremu ufasz).",
+      "rule4": "Jeśli zgubisz 12 słów i klucz prywatny, nikt nie może odzyskać Twojego portfela.",
+      "warning": "Ważne",
+      "warningText": "Klucz prywatny daje pełny dostęp. Ujawnienie lub kopiowanie do innych aplikacji może narazić Twoje środki. Eksportuj tylko jeśli rozumiesz ryzyko.",
+      "reveal": "Ujawnij / Eksportuj klucz prywatny",
+      "revealText": "Możesz ujawnić lub eksportować klucz prywatny w Ustawieniach portfela. Wymagamy biometrii/PIN, pokazujemy tylko na kilka sekund i nigdy nie uploadujemy. Rozważ hardware wallet dla dużych sald.",
+      "bestPractices": "Najlepsze praktyki",
+      "best1": "Włącz blokadę ekranu i biometrię na telefonie.",
+      "best2": "Aktualizuj aplikację, aby otrzymywać najnowsze poprawki bezpieczeństwa.",
+      "best3": "Użyj oddzielnego portfela na duże oszczędności; trzymaj małe kwoty na telefonie na codzienne użycie.",
+      "scamBannerTitle": "Nikt legitny nie poprosi",
+      "scamBannerText": "Jeśli ktoś prosi o Twoje 12 słów lub klucz prywatny, to oszustwo."
+    },
+    "stablecoins": {
+      "title": "Zrozumienie stablecoinów",
+      "subtitle": "Cyfrowe pieniądze śledzące lokalną walutę",
+      "intro": "Stablecoiny to cyfrowe tokeny zaprojektowane do śledzenia zwykłych pieniędzy (jak USD, ZAR, NGN).",
+      "examples": "Przykłady",
+      "example1": "1 ZAR1 ≈ 1 rand południowoafrykański",
+      "example2": "1 USD1 ≈ 1 dolar amerykański",
+      "example3": "1 NGN1 ≈ 1 naira nigeryjska",
+      "backed": "Emitowane przez partnerów",
+      "backedText": "Stablecoiny na Umotu są emitowane przez regulowanych partnerów i zaprojektowane do utrzymywania wartości 1:1 z rezerwami. Emitenci publikują proof-of-reserves i warunki redemption.",
+      "convert": "Konwersja na gotówkę",
+      "convertText": "Konwertuj przez partnerów banki/wymiany lub wydawaj bezpośrednio gdzie akceptowane."
+    },
+    "economics": {
+      "title": "Ekonomia UMT",
+      "subtitle": "Kto co dostaje i dlaczego",
+      "intro": "UMT ma stałą podaż 100 miliardów tokenów. Większość jest płatna zwykłym użytkownikom telefonów, którzy pomagają utrzymywać sieć uczciwą.",
+      "supply": "Podaż i dystrybucja",
+      "supplyBullets": [
+        "Zdecydowana większość podaży tokenów jest zarezerwowana dla uczestników telefonicznych w czasie i jest uwalniana poprzez Kontroler Emisji. Kontroler Emisji ogranicza dzienną emisję do nie więcej niż 0,01% pozostałej podaży, zapewniając długoterminową zrównoważoność. Zgodnie z tym harmonogramem, około 68% całkowitej podaży pozostaje po 10 latach, a około 15% pozostaje po 50 latach.",
+        "Niewielka część podaży jest tworzona przy uruchomieniu dla określonych celów, w tym airdrop dla wczesnych użytkowników, sprzedaż społecznościowa, alokacja fundacji i rezerwa awaryjna itp."
+      ],
+      "premine": "Alokacja Startowa (wstępna, może ulec zmianie przy uruchomieniu mainnet)",
+      "premineTable": [
+        {
+          "label": "Airdrop dla użytkowników",
+          "value": "1,0%"
+        },
+        {
+          "label": "Sprzedaż społecznościowa",
+          "value": "0,6%"
+        },
+        {
+          "label": "Fundacja Umotu (timelocked)",
+          "value": "0,2%"
+        },
+        {
+          "label": "Fundusz awaryjny (governed)",
+          "value": "0,2%"
+        }
+      ],
+      "emissions": "Codzienne nagrody dla telefonów",
+      "emissionsText": "Każdego dnia sieć może emitować maksymalnie 0,01% pozostałej puli emisji. Budżetujemy tę kwotę, aby zweryfikowane telefony celowały w około 10 dolarów/dzień, dostosowując do liczby uczestników i warunków rynkowych.",
+      "fees": "Opłaty i Sentinel",
+      "feesText": "Sentinel helpers (opcjonalne, zaawansowane) zarabiają udział w opłatach transakcyjnych i bidach budowniczych. To oddzielne od codziennych emisji.",
+      "transparency": "Przejrzystość",
+      "transparencyText": "Harmonogramy vesting i portfele są publiczne. Limity dziennych emisji i zrealizowane wypłaty są publikowane w aplikacji.",
+      "disclaimerTitle": "Przypomnienie w prostym języku",
+      "disclaimerText": "To nie rada inwestycyjna. Nagrody zależą od polityki sieci i uczestnictwa. Aplikacja nie gwarantuje stałego dochodu."
+    },
+    "contribute": {
+      "title": "Jak przyczynić się",
+      "subtitle": "Pomóż budować Umotu",
+      "intro": "Umotu jest open source i napędzane społecznością. Każdy może pomóc — czy kodujesz, tłumaczysz czy po prostu dzielisz się feedbackiem.",
+      "waysTitle": "Sposoby przyczynienia się",
+      "code": {
+        "title": "Popraw kod",
+        "text": "Napraw błędy, dodaj funkcje, pisz testy lub recenzuj pull requesty. Sprawdź nasze repozytoria GitHub dla aplikacji, smart kontraktów i usług backendowych.",
+        "cta": "Zobacz GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Pomóż z tłumaczeniami",
+        "text": "Spraw, aby aplikacja brzmiała naturalnie w Twoim języku. Edytuj pliki locale i18n i testuj każdy ekran. Twoje edycje pomogą milionom.",
+        "cta": "Przewodnik po tłumaczeniach",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "Rozszerz listy słów BIP-39",
+        "text": "Proponuj nowe lub ulepszone listy słów, aby więcej ludzi mogło zobaczyć swoją 12-słowną frazę odzyskiwania w rodzimym języku.",
+        "cta": "Zobacz BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Dołącz do zarządzania",
+        "text": "Czytaj propozycje, dyskutuj otwarcie i głosuj w aplikacji. Twój głos pomaga kierować parametrami sieci i alokacjami grantów.",
+        "cta": "Otwórz zarządzanie",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Rozpowszechniaj",
+        "text": "Opowiadaj znajomym, pisz tutoriale, publikuj shorts, odpowiadaj na pytania. Silniejsza społeczność oznacza silniejszą sieć dla wszystkich.",
+        "cta": "Udostępnij Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "Wszystkie wkłady są dobrowolne. Nie ma formalnego zatrudnienia ani wynagrodzenia, chyba że określone w propozycji grantu."
+    },
+    "decentralization": {
+      "title": "Dlaczego decentralizacja",
+      "subtitle": "Brak pojedynczego punktu kontroli",
+      "intro": "Decentralizacja oznacza, że żadna pojedyncza firma czy rząd nie może wyłączyć sieci lub skonfiskować Twoich środków.",
+      "benefits": "Korzyści dla Ciebie",
+      "benefit1": "Zawsze włączona: dostępność 24/7",
+      "benefit2": "Niższe opłaty: małe opłaty sieciowe zamiast 3–5% opłat kartowych",
+      "benefit3": "Bez granic: wysyłaj wartość globalnie",
+      "benefit4": "Odporna na cenzurę: Twoje klucze, Twoje pieniądze",
+      "benefit5": "Przejrzysta: każdy może zweryfikować jak działa system",
+      "howWorks": "Jak to działa",
+      "howWorksText": "Walidatorzy proponują bloki co ~2 sekundy. Telefony (jak Twój) weryfikują i finalizują lekkimi sprawdzeniami. Wiele małych wkładów sumuje się do silnego bezpieczeństwa."
+    },
+    "noCompany": {
+      "title": "Bez firmy, bez klientów",
+      "subtitle": "Zrozum model",
+      "intro": "Nie ma 'Umotu, Inc.' kontrolującej protokół. Umotu to otwarty zestaw reguł, którego każdy może używać.",
+      "notCompany": "Czym Umotu NIE jest",
+      "notCompany1": "NIE firmą z kontami klientów",
+      "notCompany2": "NIE bankiem ani nadawcą pieniędzy",
+      "notCompany3": "NIE kontrolowane przez jedną jednostkę",
+      "notCompany4": "NIE może cofać transakcji",
+      "whatIs": "Czym Umotu JEST",
+      "whatIs1": "Protokół: jak email czy web — otwarte, interoperacyjne reguły",
+      "whatIs2": "Phone-first: działa z pomocą zwykłych smartfonów",
+      "whatIs3": "Napędzane społecznością: Jesteś uczestnikiem, nie klientem",
+      "foundation": "Fundacja Umotu",
+      "foundationIntro": "Non-profit wspierający ekosystem (aplikacje referencyjne, docs, programy społecznościowe), ale nie kontrolujący protokołu.",
+      "foundationTask1": "Utrzymuje mobilną aplikację i explorer jako implementacje referencyjne",
+      "foundationTask2": "Operuje część publicznej infrastruktury (inni mogą uruchamiać swoją)",
+      "foundationTask3": "Koordynuje zarządzanie społeczności (aktualności, głosowania)",
+      "foundationTask4": "Przegląda i listuje obsługiwane stablecoiny",
+      "foundationTask5": "Publikuje przewodniki edukacyjne i bezpieczeństwa",
+      "foundationNote": "Fundacja nie może uzyskać dostępu do Twojego portfela i nie może cofać transakcji."
+    },
+    "scamPrevention": {
+      "title": "Unikaj oszustw",
+      "subtitle": "Chroń siebie",
+      "intro": "Fundacja Umotu NIGDY nie DM Cię. Każdy udający 'support' to oszust.",
+      "redFlags": "Czerwone flagi",
+      "redFlag1": "Ktoś twierdzący, że jest wsparciem klienta",
+      "redFlag2": "Linki do 'weryfikacji' lub 'upgrade' konta",
+      "redFlag3": "Prośby o 12-słowną frazę lub klucz prywatny",
+      "redFlag4": "Obietnice bonusowych tokenów jeśli wyślesz środki",
+      "redFlag5": "Aplikacje lub strony proszące o 'aktywację' nagród",
+      "truth": "Prawda",
+      "truth1": "Nie ma wsparcia klienta, które może zresetować Twój portfel",
+      "truth2": "Wszystkie oficjalne aktualizacje pojawiają się w tej aplikacji",
+      "truth3": "Nikt z Umotu nie poprosi o frazę odzyskiwania lub klucz prywatny",
+      "truth4": "Pobieraj tę aplikację tylko z oficjalnego Apple Store lub Google Play",
+      "whatToDo": "Jeśli ktoś Cię skontaktuje",
+      "action1": "Nie odpowiadaj",
+      "action2": "Nie klikaj linków",
+      "action3": "Nie udostępniaj informacji",
+      "action4": "Zablokuj i zgłoś"
+    },
+    "airdrop": {
+      "title": "Airdrop testnet",
+      "subtitle": "Wczesni użytkownicy są nagradzani",
+      "intro": "Jesteś wczesny! Umotu jest w testnecie. Aktywni uczestnicy testnet mogą otrzymać alokację przy launchu mainnet.",
+      "howToQualify": "Jak się zakwalifikować",
+      "step1": "Utwórz portfel w aplikacji",
+      "step2": "Ukończ weryfikację człowieka (Proof of Human)",
+      "step3": "Używaj aplikacji regularnie podczas testnet",
+      "whenAirdrop": "Kiedy airdrop?",
+      "whyTestnet": "Testnet jest niezbędny: użytkownicy uczą się bezpieczeństwa portfela, a system jest testowany pod kątem bezpieczeństwa, robustności i efektywności przed mainnet.",
+      "timeline": "Mainnet oczekiwany w Q1 lub Q2 2026. Airdrop odbędzie się około launchu mainnet.",
+      "howMuch": "Ile dostanę?",
+      "totalPool": "Całkowita pula airdrop: 1 000 000 000 UMT tokenów. Twój udział zależy od całkowitej liczby uczestników i ceny UMT przy launchu.",
+      "scenario2": "1M użytkowników: ~1 000 UMT na użytkownika, oczekiwana cena ~$1, wartość airdrop ~$1,000",
+      "scenario3": "10M użytkowników: ~100 UMT na użytkownika, oczekiwana cena ~$20, wartość airdrop ~$2,000",
+      "scenario4": "100M użytkowników: ~10 UMT na użytkownika, oczekiwana cena ~$300, wartość airdrop ~$3,000",
+      "disclaimer": "To tylko projekcje, nie gwarancje. Rzeczywiste wartości zależą od warunków rynkowych i reguł programu.",
+      "whatYouGet": "Co dostajesz",
+      "reward": "Przy mainnet, Twój portfel testnet może otrzymać realne tokeny na podstawie uczestnictwa i reguł programu. Wcześniejsi i bardziej aktywni użytkownicy są priorytetowi.",
+      "note": "Uwaga: Tokeny testnet nie mają wartości. Każda alokacja mainnet jest określona przez politykę programu przy launchu. Wszystkie newsy o airdrop będą publikowane tylko w tej aplikacji."
+    },
+    "gettingStarted": {
+      "title": "Pierwsze kroki",
+      "subtitle": "Twoje pierwsze pięć minut",
+      "intro": "Oto szybka konfiguracja:",
+      "checklist": "Lista konfiguracji",
+      "check1": "1) Wybierz język (zrobione!)",
+      "check2": "2) Utwórz lub importuj portfel",
+      "check3": "3) WAŻNE: Zapisz swoje 12 słów na papierze",
+      "check4": "4) Ukończ weryfikację człowieka (szybki skan)",
+      "check5": "5) Trzymaj aplikację uruchomioną, aby zarabiać codzienne nagrody",
+      "tips": "Pro tipy",
+      "tip1": "Zezwól na dostęp w tle, aby sprawdzenia mogły działać",
+      "tip2": "Sprawdzaj codziennie, aby zobaczyć nagrody",
+      "tip3": "Zapraszaj znajomych — więcej użytkowników czyni sieć silniejszą"
+    }
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Błąd",
+    "retry": "Spróbuj ponownie",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "done": "Gotowe",
+    "continue": "Kontynuuj",
+    "confirm": "Potwierdź",
+    "yes": "Tak",
+    "no": "Nie",
+    "ok": "OK",
+    "success": "Sukces",
+    "failed": "Nieudane",
+    "copied": "Skopiowano!",
+    "pullToRefresh": "Pociągnij, aby odświeżyć",
+    "notSet": "Nie ustawiono"
+  },
+  "errors": {
+    "networkError": "Błąd sieci. Sprawdź połączenie.",
+    "genericError": "Coś poszło nie tak. Spróbuj ponownie.",
+    "walletNotFound": "Portfel nie znaleziony",
+    "transactionFailed": "Transakcja nieudana",
+    "invalidInput": "Nieprawidłowe dane wejściowe"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Witaj w Umotu",
+  "onboard_wallet_title": "Skonfiguruj swój portfel",
+  "onboard_wallet_explain": "Utwórz lub importuj portfel, aby otrzymywać nagrody.",
+  "wallet_create": "Utwórz nowy portfel",
+  "wallet_import": "Importuj portfel",
+  "wallet_import_explain": "Wprowadź swoją 12-słowną frazę odzyskiwania",
+  "wallet_created": "Portfel gotowy",
+  "wallet_save": "Zapisz na urządzeniu",
+  "wallet_backup_title": "Kopia zapasowa frazy odzyskiwania",
+  "wallet_backup_explain": "Zapisz te 12 słów w kolejności. To JEDYNY sposób na odzyskanie portfela jeśli zgubisz urządzenie.",
+  "wallet_backup_warning": "Nigdy nie udostępniaj frazy odzyskiwania. Każdy z tymi słowami może uzyskać dostęp do Twoich środków.",
+  "wallet_backup_confirm": "Zapisałem frazę odzyskiwania",
+  "wallet_backup_done": "Zapisałem frazę",
+  "wallet_save_first": "Najpierw zapisz frazę odzyskiwania",
+  "poh_title": "Zweryfikuj człowieka",
+  "continue": "Kontynuuj",
+  "or": "LUB",
+  "seedReveal": {
+    "title": "Fraza odzyskiwania",
+    "intro": "Fraza odzyskiwania jest jedynym sposobem na przywrócenie portfela jeśli stracisz dostęp do tego urządzenia. Zapisz ją i przechowuj bezpiecznie offline.",
+    "displayLanguage": "Wyświetlana w {{language}}",
+    "hiddenMsg": "Twoja fraza jest ukryta ze względów bezpieczeństwa. Dotknij poniżej, aby ujawnić.",
+    "showButton": "Ujawnij frazę",
+    "noScreenshot": "Nigdy nie rób screenshota frazy odzyskiwania.",
+    "checkTitle": "Zweryfikuj swoją kopię zapasową",
+    "checkPrompt": "Wprowadź słowa poniżej, aby potwierdzić, że zapisałeś je poprawnie:",
+    "checkWordN": "Słowo #{{n}}",
+    "checkIncorrect": "Jedno lub więcej słów jest nieprawidłowych. Sprawdź swoją kopię zapasową.",
+    "ackWritten": "Zapisałem frazę odzyskiwania",
+    "ackCannotRecover": "Rozumiem, że Umotu nie może odzyskać mojego portfela",
+    "cancel": "Anuluj",
+    "continue": "Zapisałem"
+  }
+}

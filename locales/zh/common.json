@@ -1,0 +1,1382 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "天天十美金 人人皆有份"
+  },
+  "navigation": {
+    "home": "首页",
+    "wallet": "钱包",
+    "miniapps": "小程序",
+    "back": "返回",
+    "scan": "扫一扫",
+    "settings": "设置",
+    "close": "关闭"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "已验证人类",
+      "umtPrice": "UMT 价格"
+    },
+    "quickActions": {
+      "news": "新闻",
+      "vote": "治理",
+      "governance": "治理",
+      "learn": "学习",
+      "network": "网络"
+    },
+    "setupProgress": {
+      "title": "设置进度",
+      "steps": {
+        "language": "语言",
+        "wallet": "钱包",
+        "verifyHuman": "验证人类身份",
+        "complete": "完成"
+      },
+      "continue": "继续",
+      "changeChoice": "更改选择",
+      "requiresLanguage": "请先选择语言",
+      "requiresWallet": "请先创建钱包"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "每日奖励",
+      "totalEarned": "累计获得",
+      "lastClaimed": "上次领取",
+      "never": "从未领取",
+      "configure": "配置",
+      "loading": "正在加载收益…",
+      "noWallet": "无钱包",
+      "autoClaim": {
+        "label": "自动领取：",
+        "active": "已开启",
+        "setupNow": "立即设置",
+        "expired": "已过期",
+        "tapToSetup": "点击开启自动领取每日奖励"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel 收益",
+      "manage": "管理",
+      "loading": "加载中…",
+      "status": "状态",
+      "statuses": {
+        "notBonded": "未质押",
+        "bonded": "已质押",
+        "unbonding": "解除质押中"
+      },
+      "claimable": "可领取",
+      "accruing": "累计中",
+      "bonded": "已质押金额"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "自动领取每日奖励",
+      "description": "开启<bold>自动领取</bold>后，您每天的10美元 UBI 奖励将自动到账，无需手动操作！",
+      "benefits": {
+        "midnight": "按您所在时区每天凌晨自动领取",
+        "lowerFees": "手续费降低80%（与其他用户批量处理）",
+        "disable": "可在「设置」中随时关闭"
+      },
+      "notice": "您只需签署一次授权消息，允许我们的中继服务器代为领取。绝不会共享您的私钥。",
+      "maybeLater": "稍后再说",
+      "enableNow": "立即开启"
+    },
+    "settings": {
+      "cadence": "领取频率",
+      "cadenceHint": "自动领取将按照此频率执行",
+      "cadenceWeekly": "每周",
+      "cadenceBiweekly": "每两周",
+      "cadenceMonthly": "每月",
+      "title": "自动领取设置",
+      "description": "自动领取每日奖励，无需手动操作。",
+      "checking": "正在检查状态…",
+      "status": "状态",
+      "enabled": "已开启",
+      "disabled": "已关闭",
+      "lastClaimed": "上次领取",
+      "neverClaimed": "从未领取",
+      "nextClaim": "下次领取",
+      "expiresAt": "到期时间",
+      "timezone": "时区",
+      "preferredHour": "首选时间",
+      "preferredHourHint": "选择自动领取运行的时间",
+      "enableButton": "开启自动领取",
+      "disableButton": "关闭自动领取",
+      "enabling": "正在开启…",
+      "disabling": "正在关闭…",
+      "enableSuccess": "自动领取已成功开启！",
+      "enableError": "开启失败",
+      "disableSuccess": "自动领取已关闭",
+      "disableError": "关闭失败",
+      "updateButton": "更新设置",
+      "updating": "正在更新…"
+    },
+    "manual": {
+      "title": "手动领取",
+      "description": "如果您需要更快获得资金，请立即领取下一个可用奖励。手动领取使用您钱包的gas。如果您愿意等待，自动领取更便宜。如果您的钱包没有资金，请在手动领取前启用自动领取或充值原生gas。",
+      "dayLabel": "奖励天数",
+      "claimButton": "立即领取",
+      "claiming": "正在领取…",
+      "success": "领取已提交",
+      "successWithId": "领取已提交（编号：{{id}}）",
+      "error": "领取失败",
+      "noProof": "奖励证明尚未发布。请在今日快照上线后重试。",
+      "unauthorized": "中继器授权失败。请重试或联系支持。",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "预估 Gas：{{gas}}",
+      "gasEstimateFailed": "无法获取 Gas 预估",
+      "availableDays": "可领取奖励天数：{{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "覆盖范围：{{start}} 至 {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} 天在此批次之后",
+      "batchSuccess": "{{count}} 天已成功领取",
+      "claimingProgress": "正在领取 {{claimed}}/{{total}}...",
+      "claimAllButton": "领取全部 {{count}} 天"
+    },
+    "timezone": {
+      "title": "选择时区",
+      "search": "搜索时区…",
+      "current": "当前选择",
+      "searchResults": "搜索结果",
+      "noResults": "未找到匹配的时区",
+      "detected": "已检测",
+      "popular": "常用时区",
+      "regions": {
+        "Americas": "美洲",
+        "Europe": "欧洲",
+        "Asia": "亚洲",
+        "Africa": "非洲",
+        "Oceania": "大洋洲"
+      }
+    },
+    "payout": {
+      "title": "奖励支付偏好",
+      "description": "选择接收奖励的货币。",
+      "current": "当前",
+      "saved": "已保存",
+      "saveError": "保存失败",
+      "showMore": "显示更多 ({{count}})",
+      "showLess": "收起",
+      "native": "原生代币",
+      "stablecoin": "稳定币",
+      "popular": "热门",
+      "allCurrencies": "全部货币"
+    }
+  },
+  "wallet": {
+    "title": "钱包",
+    "testnetNotice": "测试网代币无真实价值",
+    "totalBalance": "总余额",
+    "balance": "余额",
+    "address": "地址",
+    "copyAddress": "复制地址",
+    "addressCopied": "地址已复制",
+    "receive": "收款",
+    "send": "转账",
+    "swap": "兑换",
+    "swapComingSoon": "兑换功能即将推出",
+    "history": "历史记录",
+    "tokens": "代币",
+    "collectibles": "收藏品",
+    "noTokens": "暂无代币",
+    "nativeToken": "原生代币",
+    "loading": "加载中…",
+    "refreshing": "刷新中…",
+    "balancesUpdated": "余额已更新",
+    "menu": {
+      "manageTokens": "管理代币",
+      "addressBook": "通讯录",
+      "walletSettings": "钱包设置",
+      "showBalances": "显示余额",
+      "hideBalances": "隐藏余额",
+      "showZeroTokens": "显示零余额代币",
+      "hideZeroTokens": "隐藏零余额代币",
+      "refresh": "刷新"
+    },
+    "manageTokens": {
+      "title": "管理代币",
+      "info": "添加自定义 ERC-20 代币。系统代币默认已包含。",
+      "addToken": "添加代币",
+      "adding": "添加中…",
+      "contractAddress": "代币合约地址 (0x...)",
+      "autoFetch": "代币符号和精度将自动获取",
+      "customTokens": "自定义代币",
+      "noCustomTokens": "暂未添加自定义代币。",
+      "addUsingForm": "使用上方表单添加代币。",
+      "systemToken": "此代币为系统代币，已默认包含。",
+      "fetchingMetadata": "正在获取代币信息…",
+      "addedSuccess": "代币添加成功",
+      "enterValidAddress": "请输入有效的代币地址",
+      "save": "保存"
+    },
+    "addressBook": {
+      "title": "通讯录",
+      "addContact": "添加联系人",
+      "nameLabel": "名称或标签",
+      "walletAddress": "钱包地址 (0x...)",
+      "savedContacts": "已保存联系人",
+      "noContacts": "暂无保存的联系人。",
+      "addForQuickSending": "添加联系人以便快速转账。",
+      "enterValidAddress": "请输入有效的地址",
+      "addLabel": "请添加标签",
+      "save": "保存"
+    },
+    "settings": {
+      "title": "钱包设置",
+      "export": {
+        "title": "导出钱包",
+        "description": "请勿向任何人透露您的助记词或私钥。请安全地离线保存。",
+        "recoveryPhrase": "助记词",
+        "recoveryPhraseNotAvailable": "助记词不可用（通过私钥导入）",
+        "privateKey": "私钥",
+        "privateKeyWarning": "私钥（请妥善保管！）",
+        "showPhrase": "显示助记词",
+        "showKey": "显示私钥",
+        "warning": "永远不要将助记词或私钥泄露给任何人。",
+        "copy": "复制",
+        "copied": "已复制！",
+        "hide": "隐藏",
+        "clipboardWarning": "剪贴板可被其他应用读取。将在30秒后自动清除。"
+      },
+      "import": {
+        "title": "导入钱包",
+        "description": "导入将替换当前钱包。请确保您已备份现有钱包。请注意在导入新钱包后，你需要重新进行PoH人类验证。",
+        "byPhrase": "助记词",
+        "byPrivateKey": "私钥",
+        "phrasePlaceholder": "输入12或24个助记词…",
+        "keyPlaceholder": "输入 0x… 私钥",
+        "importButton": "导入钱包",
+        "importing": "导入中…",
+        "success": "钱包导入成功！"
+      },
+      "dangerZone": {
+        "title": "危险区域",
+        "description": "此操作无法撤销。请确保您已备份钱包。",
+        "forgetWallet": "删除钱包",
+        "forgetDescription": "从本设备移除钱包。请确保您已备份好助记词。",
+        "confirmTitle": "确认删除钱包？",
+        "confirmMessage": "此操作将从本设备删除钱包。请确保您已备份助记词。",
+        "cancel": "取消",
+        "confirm": "删除钱包",
+        "walletForgotten": "钱包已删除",
+        "unableToForget": "无法删除钱包"
+      },
+      "authPrompt": "验证身份以显示私钥"
+    }
+  },
+  "reset": {
+    "title": "重置钱包",
+    "dangerTitle": "此操作无法撤销！",
+    "warning1": "重置钱包将永久删除：",
+    "bullet1": "您的钱包和私钥",
+    "bullet2": "您的助记词",
+    "bullet3": "所有应用设置和偏好",
+    "bullet4": "交易历史",
+    "recoveryNote": "如果您有12个词的助记词，可以在重置后恢复钱包。",
+    "continueButton": "我理解，继续",
+    "confirmTitle": "确认重置",
+    "confirmDescription": "在下方输入「RESET」以确认您要删除所有钱包数据。",
+    "placeholder": "输入 RESET",
+    "typeMismatch": "请输入 RESET 以确认",
+    "resetButton": "永久重置钱包",
+    "resettingTitle": "正在重置…",
+    "resettingDescription": "正在清除所有钱包数据，请稍候…",
+    "completeTitle": "重置完成",
+    "completeDescription": "您的钱包已重置。您现在可以创建新钱包或导入已有钱包。",
+    "startFresh": "重新开始",
+    "error": "重置钱包失败，请重试。"
+  },
+  "export": {
+    "verifyTitle": "验证身份",
+    "verifyDescription": "输入密码以导出钱包。",
+    "verify": "验证",
+    "verificationFailed": "验证失败",
+    "passphraseTitle": "设置导出密码",
+    "passphraseDescription": "选择一个强密码来加密您的备份。导入钱包时将需要此密码。",
+    "enterPassphrase": "输入密码",
+    "passphraseTooWeak": "密码太弱，请使用至少8个字符。",
+    "includeSeed": "包含助记词",
+    "includeSeedDescription": "建议完整备份",
+    "confirmTitle": "确认密码",
+    "confirmDescription": "再次输入密码以确认。",
+    "confirmPassphrase": "确认密码",
+    "passphraseMismatch": "密码不匹配",
+    "warning": "请安全存储此备份。任何获得此文件和密码的人都可以访问您的钱包。",
+    "exportNow": "导出钱包",
+    "exportingTitle": "正在导出…",
+    "exportingDescription": "正在加密和准备钱包备份…",
+    "successTitle": "导出完成",
+    "successDescription": "您的加密钱包备份已创建。请安全存储。",
+    "rememberPassphrase": "请记住您的导出密码 - 导入此备份时将需要它。",
+    "errorTitle": "导出失败",
+    "failed": "导出失败，请重试。",
+    "tryAgain": "重试",
+    "exportKeystore": "导出加密备份",
+    "exportKeystoreDesc": "保存加密的密钥库文件"
+  },
+  "security": {
+    "title": "保护您的钱包",
+    "subtitle": "设置密码或 PIN 码来保护您的钱包",
+    "checkingDevice": "正在检查设备安全…",
+    "passwordOption": "密码",
+    "passwordDesc": "8个以上字符，包含字母和数字",
+    "pinOption": "6位 PIN 码",
+    "pinDesc": "快速且易于记忆",
+    "enterPin": "输入6位 PIN 码",
+    "confirmPin": "确认您的 PIN 码",
+    "enterPassword": "输入密码",
+    "confirmPassword": "确认密码",
+    "enableBiometrics": "启用{{type}}？",
+    "biometricsDesc": "使用{{type}}快速解锁。您可以稍后在设置中更改。",
+    "enableBiometricsButton": "启用{{type}}",
+    "enableBiometricsPrompt": "验证以启用生物识别解锁",
+    "skipBiometrics": "暂时跳过",
+    "setupComplete": "设置完成！",
+    "walletSecured": "您的钱包现已受到保护！",
+    "continue": "继续",
+    "passwordTooWeak": "密码太弱，请按照建议进行改进。",
+    "pinMismatch": "PIN 码不匹配",
+    "passwordMismatch": "密码不匹配",
+    "setupError": "设置失败，请重试。",
+    "passwordTitle": "密码",
+    "passwordDescription": "8个以上字符，安全性更高",
+    "pinTitle": "6位 PIN 码",
+    "pinDescription": "快速访问，易于记忆"
+  },
+  "lock": {
+    "title": "解锁 Umotu",
+    "lockedOut": "已锁定",
+    "tooManyAttempts": "尝试次数过多，请在 {{time}} 后重试。",
+    "attemptsRemaining": "剩余 {{count}} 次尝试",
+    "enterPassword": "输入密码",
+    "unlock": "解锁",
+    "wrongPin": "PIN 码错误",
+    "wrongPassword": "密码错误",
+    "verificationError": "验证失败",
+    "biometricsPrompt": "解锁您的钱包",
+    "unlockWithFaceId": "使用面容 ID 解锁？",
+    "unlockWithFingerprint": "使用指纹解锁？",
+    "forgotPassword": "忘记密码？"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "不支持的设备",
+    "emulatorMessage": "出于安全原因，此应用无法在模拟器上运行。",
+    "rootedTitle": "安全警告",
+    "exitApp": "退出",
+    "continueAnyway": "仍然继续"
+  },
+  "settingsSecurity": {
+    "title": "安全",
+    "autoLock": "自动锁定",
+    "autoLockDesc": "不活动后锁定钱包",
+    "faceId": "面容 ID",
+    "fingerprint": "指纹",
+    "biometricsDesc": "使用生物识别快速解锁",
+    "changePin": "更改 PIN 码",
+    "changePassword": "更改密码",
+    "changeDesc": "更新您的安全凭证",
+    "enableBiometrics": "启用生物识别解锁",
+    "enterCurrent": "输入当前{{type}}",
+    "enterNew": "输入新{{type}}",
+    "confirmNew": "确认新{{type}}",
+    "currentPassword": "当前密码",
+    "newPassword": "新密码",
+    "confirmNewPassword": "确认新密码",
+    "changeNow": "立即更改",
+    "success": "成功",
+    "pinChanged": "PIN 码已成功更改",
+    "passwordChanged": "密码已成功更改",
+    "changeFailed": "更改凭证失败",
+    "autoLockOptions": {
+      "immediately": "立即",
+      "after1min": "1分钟后",
+      "after5min": "5分钟后",
+      "after15min": "15分钟后",
+      "after1hour": "1小时后",
+      "never": "从不"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "请稍候",
+    "cooldownMessage": "为了安全，您可以在 {{time}} 后再次查看密钥。",
+    "cooldownReason": "这可以防止恶意应用快速访问您的密钥。"
+  },
+  "passwordVerify": {
+    "title": "验证身份",
+    "description": "输入密码或 PIN 码以显示敏感钱包信息",
+    "verify": "验证"
+  },
+  "passwordValidation": {
+    "veryWeak": "非常弱",
+    "weak": "弱",
+    "fair": "一般",
+    "good": "良好",
+    "strong": "强",
+    "tooShort": "密码至少需要8个字符",
+    "commonPassword": "这是一个常用密码",
+    "lengthSuggestion": "使用至少12个字符以提高安全性",
+    "mixedCaseSuggestion": "混合使用大小写字母",
+    "numberSuggestion": "添加一些数字",
+    "specialCharSuggestion": "添加特殊字符（!@#$%）"
+  },
+  "forgot": {
+    "title": "重置凭证",
+    "warning": "要重置密码或 PIN 码，您需要输入钱包助记词。这证明您拥有该钱包。",
+    "warningText": "切勿与任何人分享助记词。",
+    "continue": "我理解，继续",
+    "enterSeed": "输入助记词",
+    "seedDescription": "输入您的12或24个助记词，用空格分隔。",
+    "seedPlaceholder": "输入助记词…",
+    "verifySeed": "验证助记词",
+    "invalidSeed": "请输入有效的12或24个助记词",
+    "chooseMethod": "选择安全方式",
+    "methodDescription": "您想如何保护您的钱包？",
+    "newPassword": "创建新密码",
+    "newPin": "创建新 PIN 码",
+    "newPasswordDesc": "选择一个强密码（8个以上字符）",
+    "newPinDesc": "输入6位 PIN 码",
+    "confirmPassword": "确认密码",
+    "confirmPin": "确认 PIN 码",
+    "confirmPasswordDesc": "再次输入密码以确认",
+    "confirmPinDesc": "再次输入 PIN 码以确认",
+    "resetNow": "立即重置",
+    "complete": "重置完成",
+    "completeDescription": "您的凭证已重置。您现在可以使用新密码或 PIN 码解锁钱包。",
+    "unlockNow": "解锁钱包",
+    "passwordTooWeak": "密码太弱，请选择更强的密码。",
+    "passwordMismatch": "密码不匹配",
+    "pinMismatch": "PIN 码不匹配",
+    "resetFailed": "重置凭证失败，请验证您的助记词。",
+    "resetError": "发生错误，请重试。"
+  },
+  "send": {
+    "title": "转账",
+    "selectToken": "选择代币",
+    "selectTokenInfo": "选择要转账的代币。仅显示有余额的代币。",
+    "noTokensWithBalance": "无余额代币",
+    "addTokensFirst": "请先添加代币到钱包",
+    "enterAmount": "输入金额",
+    "enterRecipient": "输入收款人",
+    "review": "复核",
+    "amount": "金额",
+    "recipient": "收款人",
+    "recipientPlaceholder": "0x… 钱包地址",
+    "networkFee": "网络手续费",
+    "gasToken": "Gas 支付方式",
+    "payingWith": "支付方式",
+    "payGasWith": "Gas 支付方式",
+    "nativeGas": "原生（UMT）",
+    "umtNative": "UMT（原生）",
+    "stableGas": "稳定币 Gas",
+    "selectStable": "选择稳定币",
+    "max": "全部",
+    "next": "下一步",
+    "confirm": "确认转账",
+    "confirmSend": "确认转账",
+    "cancel": "取消",
+    "sending": "发送中…",
+    "failed": "交易失败",
+    "done": "完成",
+    "available": "可用",
+    "to": "收款人",
+    "network": "网络",
+    "step": "步骤",
+    "estimating": "估算中…",
+    "txSpeed": "交易速度",
+    "transactionSpeed": "交易速度",
+    "speed": {
+      "slow": "慢速",
+      "normal": "正常",
+      "fast": "快速"
+    },
+    "errors": {
+      "invalidAddress": "收款地址无效",
+      "invalidAmount": "请输入有效金额",
+      "insufficientBalance": "余额不足",
+      "insufficientGas": "Gas 余额不足",
+      "notEnoughForGas": "余额不足以支付 Gas 费用",
+      "noStableGas": "UMT 不足支付 Gas，且没有可用的稳定币。"
+    },
+    "addressBook": {
+      "title": "通讯录",
+      "addNew": "添加新联系人",
+      "noContacts": "暂无保存的地址",
+      "saveForQuickAccess": "保存地址以便快速访问",
+      "editContact": "编辑联系人",
+      "deleteContact": "删除联系人",
+      "addressNotSaved": "地址未保存",
+      "addLabel": "添加标签",
+      "enterValidAddress": "请先输入有效地址",
+      "saved": "已保存",
+      "save": "保存"
+    },
+    "success": {
+      "title": "交易已发送！",
+      "hash": "哈希",
+      "viewInExplorer": "在浏览器中查看",
+      "close": "关闭"
+    },
+    "batch": {
+      "mode": "批量模式",
+      "singleMode": "单个收款人",
+      "addRecipient": "添加收款人",
+      "noRecipients": "尚未添加收款人",
+      "addFromTagOrBook": "从标签或通讯录添加",
+      "invalidAddress": "无效地址：{{address}}",
+      "invalidAmount": "{{recipient}} 的金额无效",
+      "totalExceedsBalance": "总金额超出余额",
+      "sendingTo": "发送给 {{count}} 个收款人",
+      "sendingTo_plural": "发送给 {{count}} 个收款人",
+      "recipients": "收款人",
+      "addresses": "{{count}} 个地址",
+      "addresses_plural": "{{count}} 个地址",
+      "addByTag": "按标签添加",
+      "noTags": "暂无标签",
+      "createFirstTag": "在通讯录中创建您的第一个标签",
+      "addFromTag": "从标签添加",
+      "selectTag": "选择标签",
+      "remove": "移除",
+      "sendAll": "发送全部 ({{count}})",
+      "batchSend": "批量发送",
+      "badge": "批量",
+      "successFail": "{{success}} 成功，{{fail}} 失败",
+      "successful": "成功",
+      "sentStatus": "已发送",
+      "failedStatus": "失败",
+      "details": "批量转账详情",
+      "total": "总计",
+      "tagPicker": {
+        "title": "选择标签",
+        "noTags": "暂无可用标签",
+        "createHint": "请先在通讯录中为联系人添加标签"
+      },
+      "tags": {
+        "manage": "管理标签",
+        "add": "添加标签",
+        "remove": "移除标签",
+        "create": "创建标签",
+        "newTag": "新标签名称",
+        "addToContact": "为联系人添加标签"
+      }
+    }
+  },
+  "receive": {
+    "title": "收款",
+    "yourAddress": "您的钱包地址",
+    "scanQR": "扫描二维码收款",
+    "copyAddress": "复制地址",
+    "share": "分享"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "付款",
+      "myQr": "我的二维码"
+    },
+    "pay": {
+      "title": "付款",
+      "description": "扫描好友的二维码，直接向其钱包付款",
+      "allowCamera": "允许相机",
+      "requesting": "请求中…",
+      "openSettings": "打开设置",
+      "sendTo": "收款人",
+      "amount": "金额",
+      "rescan": "重新扫描",
+      "continue": "继续"
+    },
+    "receive": {
+      "title": "收款",
+      "description": "扫描此二维码向该地址付款",
+      "tapToCopy": "点击复制地址",
+      "copied": "已复制到剪贴板！"
+    }
+  },
+  "history": {
+    "title": "交易历史",
+    "sent": "转出",
+    "received": "收到",
+    "token": "代币",
+    "external": "外部",
+    "to": "至：",
+    "from": "来自：",
+    "viewInExplorer": "在浏览器查看",
+    "empty": {
+      "title": "暂无交易",
+      "description": "发送或接收代币后，交易记录将显示在这里。"
+    },
+    "status": {
+      "confirmed": "已确认",
+      "pending": "进行中",
+      "failed": "失败"
+    },
+    "details": {
+      "title": "交易详情",
+      "status": "状态",
+      "type": "类型",
+      "to": "至",
+      "from": "来自",
+      "token": "代币",
+      "block": "区块",
+      "gasCost": "Gas 费用",
+      "hash": "交易哈希",
+      "source": "来源",
+      "balanceDetected": "通过余额变化检测到",
+      "inferredNote": "此交易通过余额变化检测到，暂无完整的链上详情。"
+    },
+    "time": {
+      "justNow": "刚刚",
+      "minsAgo": "{{count}}分钟前",
+      "hoursAgo": "{{count}}小时前",
+      "daysAgo": "{{count}}天前"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "account": {
+      "title": "账户与外观"
+    },
+    "theme": {
+      "title": "主题",
+      "light": "浅色",
+      "dark": "深色"
+    },
+    "language": {
+      "title": "语言",
+      "select": "选择语言",
+      "current": "当前"
+    },
+    "sentinelDisplay": {
+      "title": "显示 Sentinel",
+      "showSentinelCard": "显示 Sentinel 收益卡片",
+      "showSentinelCardDesc": "在主页显示Sentinel 收益卡片",
+      "sentinelSettings": "Sentinel 设置",
+      "sentinelSettingsDesc": "管理质押、奖励和自动领取"
+    },
+    "verification": {
+      "title": "身份验证",
+      "description": "通过 Inlyf 验证您的身份以解锁每日奖励。一次快速活体检测；需定期重新验证。",
+      "open": "开始验证",
+      "refresh": "刷新验证",
+      "status": "状态",
+      "verified": "已验证",
+      "notVerified": "未验证",
+      "expiresOn": "到期日期",
+      "daysRemaining": "剩余天数",
+      "upToDate": "验证已是最新",
+      "refreshAvailableIn": "{{days}} 天后可刷新"
+    },
+    "chainGuardian": {
+      "title": "链守护者",
+      "description": "保持手机在线，帮助保护区块链安全。每天至少完成一项采样任务，以保持获得奖励的资格。",
+      "status": {
+        "active": "活跃",
+        "paused": "暂停",
+        "inactive": "未启用"
+      },
+      "wifiOnly": "仅WiFi",
+      "wifiOnlyHint": "仅在WiFi连接时运行采样",
+      "minBattery": "最低电量",
+      "minBatteryHint": "低于此电量时暂停采样",
+      "background": "后台运行",
+      "backgroundHint": "允许在后台运行采样",
+      "lastSample": "上次采样",
+      "noSamples": "尚未采样",
+      "staleWarning": "超过12小时未采样",
+      "androidBatteryWarning": "电池优化可能阻止后台采样",
+      "androidBatteryHint": "前往 设置 → 应用 → Umotu → 电池 → 选择「不限制」以允许后台采样。",
+      "openSettings": "点击打开设置",
+      "tip": "开启后台运行可赚取更多奖励",
+      "runNow": "立即运行",
+      "running": "正在运行…",
+      "lastError": "上次错误"
+    },
+    "permissions": {
+      "title": "权限管理",
+      "description": "管理小程序权限和已连接的应用。",
+      "openMiniApps": "小程序",
+      "manageConnections": "管理连接"
+    },
+    "network": {
+      "title": "网络",
+      "testnet": "测试网",
+      "mainnet": "主网（即将上线）",
+      "rpcEndpoint": "RPC 节点",
+      "pingRpc": "测试 RPC",
+      "testing": "测试中…",
+      "rpcOk": "RPC 正常",
+      "rpcError": "RPC 错误",
+      "save": "保存",
+      "saved": "已保存",
+      "connectionStatus": "连接状态",
+      "connected": "已连接",
+      "disconnected": "未连接"
+    },
+    "cache": {
+      "title": "缓存管理",
+      "description": "清除缓存数据以刷新代币和合约信息。",
+      "clearCache": "清除缓存并重建应用",
+      "cacheCleared": "缓存已清除！请重新构建应用以加载最新合约地址。"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "欢迎来到 Umotu",
+      "subtitle": "天天十美金 人人皆有份",
+      "getStarted": "开始使用"
+    },
+    "language": {
+      "title": "选择语言",
+      "continue": "继续"
+    },
+    "wallet": {
+      "title": "您的钱包",
+      "createNew": "创建新钱包",
+      "importExisting": "导入已有钱包",
+      "creating": "正在创建钱包…"
+    },
+    "verify": {
+      "title": "验证您是真实人类",
+      "description": "为了领取每日奖励，需要验证您是唯一的真实人类。",
+      "continue": "继续"
+    }
+  },
+  "poh": {
+    "subtitle": "解锁每日奖励",
+    "description": "通过 Inlyf 进行活体验证来解锁奖励。链上不会存储任何生物特征，仅记录短期凭证。",
+    "howItWorks": "验证流程",
+    "howItWorksDesc": "简短的活体检测（人脸扫描）验证您是真人。凭证有效期为90天，可随时刷新。",
+    "adultQuestion": "您是否已成年 (18+)?",
+    "yesAdult": "是，18+",
+    "noMinor": "否 / 未成年",
+    "selectAge": "请选择一个选项",
+    "verifying": "验证中…",
+    "startVerification": "开始验证",
+    "skipForNow": "稍后再说",
+    "status": {
+      "notVerified": "尚未验证。",
+      "notVerifiedDetail": "开始验证以解锁奖励。",
+      "unavailable": "状态不可用。",
+      "verified": "您已通过验证。",
+      "validFor": "有效期约 {{days}} 天",
+      "validFor_plural": "有效期约 {{days}} 天",
+      "expired": "验证已过期或未找到。",
+      "expiredDetail": "重新运行活体检测以刷新您的凭证。"
+    }
+  },
+  "sentinelSettings": {
+    "header": "加入 Sentinel 池来帮助确认区块。至少质押最低金额，保持设备在线，赚取奖励。",
+    "loading": "正在加载 Sentinel 数据...",
+    "unavailable": "Sentinel 模块不可用",
+    "yourStatus": "您的状态",
+    "wallet": "钱包",
+    "bondedAmount": "已质押金额",
+    "minimumBond": "最低质押",
+    "status": {
+      "notBonded": "未质押",
+      "bonded": "已质押",
+      "unbonding": "解绑中（{{date}}可用）"
+    },
+    "rewards": {
+      "title": "奖励",
+      "claimableNow": "可领取",
+      "accruing": "累积中",
+      "totalClaimed": "累计已领",
+      "claiming": "领取中...",
+      "claimRewards": "领取奖励"
+    },
+    "bond": {
+      "createTitle": "创建质押",
+      "topUpTitle": "追加质押",
+      "createDescription": "质押 UMT 加入 Sentinel 委员会并开始赚取收益。",
+      "topUpDescription": "增加质押以获得更大的奖励份额。",
+      "amountLabel": "金额 (UMT)",
+      "processing": "处理中...",
+      "bond": "质押",
+      "topUp": "追加",
+      "tx": "交易"
+    },
+    "autoClaim": {
+      "title": "自动领取",
+      "description": "让中继器在您的 Sentinel 奖励累积时自动领取。",
+      "checking": "检查中...",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "expires": "过期时间",
+      "processing": "处理中...",
+      "enable": "启用自动领取",
+      "disable": "禁用自动领取"
+    },
+    "activity": {
+      "title": "近期活动",
+      "claims": "领取记录",
+      "slashes": "罚没记录",
+      "noClaims": "最近 {{blocks}}k 个区块内无领取记录。",
+      "noSlashes": "最近窗口内无罚没事件。",
+      "unknown": "未知"
+    },
+    "errors": {
+      "configureEnv": "请配置 RPC + Sentinel 合约环境变量。",
+      "noWallet": "请创建或导入钱包以加入 Sentinel 委员会。",
+      "loadFailed": "加载 Sentinel 数据失败。"
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel 奖励已领取。",
+      "noRewards": "暂无可领取的奖励。",
+      "claimFailed": "领取失败。",
+      "autoClaimEnabled": "Sentinel 自动领取已启用",
+      "autoClaimDisabled": "Sentinel 自动领取已禁用",
+      "autoClaimFailed": "自动领取切换失败",
+      "configureBondAddress": "请配置 Sentinel 质押地址",
+      "rpcNotSet": "RPC 未设置",
+      "minBondUnavailable": "最低质押金额不可用",
+      "enterBondAmount": "请输入质押金额",
+      "minBondRequired": "初始质押必须至少 {{amount}} UMT",
+      "topUpGreaterThanZero": "追加金额必须大于 0",
+      "insufficientBalance": "余额不足以支付质押 + Gas 费用",
+      "bondSubmitted": "质押交易已提交",
+      "topUpSubmitted": "追加质押交易已提交",
+      "bondConfirmed": "质押已确认",
+      "topUpConfirmed": "追加质押已确认",
+      "bondReverted": "质押在链上被撤销",
+      "bondFailed": "质押失败"
+    }
+  },
+  "miniapps": {
+    "title": "小程序",
+    "subtitle": "探索基于 Umotu 构建的应用",
+    "explore": "探索基于 Umotu 构建的应用",
+    "noApps": "暂无可用应用",
+    "browseByCategory": "按类别浏览",
+    "appsCount": "{{count}} 个应用",
+    "featured": "精选",
+    "comingSoon": "即将推出",
+    "liveApps": "在线应用",
+    "available": "可用",
+    "pohDescription": "通过Inlyf验证您的身份以解锁每日奖励。",
+    "vision": {
+      "title": "我们的愿景",
+      "tagline": "天天十美金 人人皆有份",
+      "description": "Umotu 正在构建基础设施，让世界上每个人都能参与全球经济——无论他们住在哪里或使用哪家银行。",
+      "readMore": "阅读完整愿景",
+      "pillars": {
+        "title": "三大核心原则",
+        "ubi": {
+          "title": "天天十美金 人人皆有份",
+          "description": "通用基本收入作为保护网络的奖励。任何拥有手机的人都可以参与并赚取收入。"
+        },
+        "capital": {
+          "title": "资本自由流动",
+          "description": "支付和转账几乎零摩擦——无论是跨境还是本地。企业只需支付约0.1%来覆盖平台成本，个人完全免费。"
+        },
+        "sovereignty": {
+          "title": "尊重货币主权",
+          "description": "我们不取代法定货币——我们让它们运作得更好。银行发行与当地货币挂钩的稳定币。货币政策因更广泛的覆盖和更低的摩擦而更加有效。"
+        }
+      },
+      "notReplacing": "Umotu 不是在与中央银行竞争。我们正在为法定货币构建更好的基础设施：更低的摩擦、更广泛的全球市场和更高的市场效率。"
+    },
+    "building": {
+      "title": "我们正在构建生态系统",
+      "description": "这些应用展示了在 Umotu 上的可能性。有些已经可用，有些即将推出。欢迎全球开发者在我们的平台上构建和发布应用。",
+      "developerDocs": "开发者文档"
+    },
+    "categories": {
+      "payments": {
+        "name": "支付与金融",
+        "apps": {
+          "sendMoney": {
+            "name": "转账",
+            "description": "即时向世界任何地方的任何人发送 UMT 或稳定币——无需银行。",
+            "example": "几秒钟内向海外家人汇款20美元，而不是几天。零隐藏费用。"
+          },
+          "billPay": {
+            "name": "账单支付",
+            "description": "直接从钱包支付水电费、电话费、网络费等。"
+          },
+          "savings": {
+            "name": "储蓄圈",
+            "description": "传统的轮流储蓄（如标会、基金会）通过智能合约实现无需信任。"
+          },
+          "microLoans": {
+            "name": "小额贷款",
+            "description": "以您的人类验证身份和信誉为担保的点对点借贷。"
+          }
+        }
+      },
+      "transport": {
+        "name": "交通与配送",
+        "apps": {
+          "rideSharing": {
+            "name": "网约车",
+            "description": "用加密货币支付打车费。司机赚得更多，乘客花得更少——没有中间商抽成30%。",
+            "example": "拉各斯一趟出租车费用800奈拉。司机获得799.2奈拉而不是560奈拉。"
+          },
+          "delivery": {
+            "name": "配送",
+            "description": "订购食物、杂货或包裹。快递员以稳定币获得公平报酬。",
+            "example": "订购午餐，用当地稳定币支付，快递员即时收到付款。"
+          },
+          "publicTransit": {
+            "name": "公共交通",
+            "description": "轻触支付公交、地铁和火车费用。无需购买交通卡。"
+          }
+        }
+      },
+      "travel": {
+        "name": "旅行与酒店",
+        "apps": {
+          "hotels": {
+            "name": "酒店与住宿",
+            "description": "在全球预订住宿。房东接受稳定币，客人节省费用。",
+            "example": "在巴厘岛预订每晚40美元的房间。房东收到39.96美元。"
+          },
+          "flights": {
+            "name": "机票",
+            "description": "搜索并预订机票。用加密货币支付，赚取 UMT 奖励。"
+          },
+          "tours": {
+            "name": "当地旅游",
+            "description": "与当地导游预订体验活动。付款直接到达他们手中。"
+          }
+        }
+      },
+      "commerce": {
+        "name": "购物与商业",
+        "apps": {
+          "localMarket": {
+            "name": "本地市场",
+            "description": "本地买卖。基于二维码的支付让街头商业无缝衔接。",
+            "example": "雅加达的商贩接受 USDC。客户付款，商贩即时看到资金。"
+          },
+          "ecommerce": {
+            "name": "电子商务",
+            "description": "在全球商家网上购物。无银行卡手续费，无拒付。",
+            "example": "从深圳购买电子产品。用稳定币支付，比信用卡节省3%。"
+          },
+          "marketplace": {
+            "name": "点对点市场",
+            "description": "发布出售物品，从他人处购买。托管保护双方利益。"
+          }
+        }
+      },
+      "services": {
+        "name": "服务与工作",
+        "apps": {
+          "remittance": {
+            "name": "汇款",
+            "description": "汇款回家。收款人可以兑换成当地货币或保留数字货币。",
+            "example": "从美国向菲律宾汇200美元。收款人获得11,000+比索而不是10,400比索。"
+          },
+          "freelance": {
+            "name": "自由职业",
+            "description": "零工工作即时收款。无需等待30天的银行转账。"
+          },
+          "homeServices": {
+            "name": "家政服务",
+            "description": "雇佣水管工、电工、清洁工。工作完成后才付款。"
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "在 Umotu 上构建您的业务",
+      "subtitle": "启动内置支付功能的应用",
+      "description": "创建接入 Umotu 生态系统的应用——数百万经过验证的用户拥有每日收入，随时准备交易。无需为支付集成烦恼。",
+      "benefits": {
+        "noFees": "近零支付处理费——保留99.9%的收入",
+        "verifiedUsers": "所有用户都是经过验证的真人——没有机器人或欺诈",
+        "globalReach": "从第一天起就能触达190多个国家的用户",
+        "instantPayments": "即时结算——无需30天的付款延迟"
+      },
+      "exampleTitle": "使用案例",
+      "exampleText": "Umotu 上的网约车应用保留99.9%的车费，而传统平台只有70%。司机赚得更多，乘客花得更少。",
+      "docsButton": "阅读文档",
+      "buildButton": "开始构建"
+    },
+    "bank": {
+      "title": "您是银行吗？",
+      "subtitle": "在 Umotu 上发行稳定币",
+      "description": "持牌金融机构可以在 Umotu 上发行当地货币稳定币，接入拥有数百万用户的 UBI 经济体系。",
+      "benefits": {
+        "reserves": "储备金收益：投资债券和低风险资产获得收益",
+        "mintRedeem": "铸造/赎回费用：法币 ↔ 稳定币兑换通常收取0.1%",
+        "users": "接触数百万日活跃 UBI 接收者",
+        "global": "即时将您的业务扩展到全球",
+        "custody": "您的储备，您托管：资产完全在你控制之下"
+      },
+      "revenueModel": "发行方如何盈利",
+      "revenueNote": "与 Tether 等主要发行方一样，收入来自储备金收益和兑换费用。随着数百万用户每日领取 UBI，铸造/赎回交易量可观。",
+      "futureNote": "随着协议发展，发行方未来可能还会获得部分交易费用分成。",
+      "learnMore": "了解更多",
+      "applyButton": "立即申请"
+    }
+  },
+  "news": {
+    "title": "新闻与公告",
+    "description": "获取 Umotu 团队的最新公告、提示和安全警报。",
+    "empty": "暂无新闻",
+    "unread": "新",
+    "unreadCount": "{{count}} 条未读",
+    "markAsRead": "标记为已读",
+    "types": {
+      "announcement": "公告",
+      "tip": "提示",
+      "security": "安全",
+      "airdrop": "空投",
+      "update": "更新"
+    }
+  },
+  "governance": {
+    "title": "社区治理",
+    "subtitle": "共同决定 Umotu 的未来",
+    "description": {
+      "title": "您的声音很重要",
+      "body": "通过投票参与社区提案，帮助塑造 Umotu 的未来。Umotu 基金会组织这些投票，但最终由社区决定。"
+    },
+    "empty": "暂无活跃提案",
+    "emptyHint": "稍后再来查看新的社区决策投票。",
+    "newPolls": "新",
+    "newPollsCount": "{{count}} 个新提案",
+    "vote": "票",
+    "votes": "票",
+    "endsIn": "{{time}}后结束",
+    "ended": "已结束",
+    "tapToVote": "点击上方选项进行投票",
+    "submitting": "提交投票中…",
+    "alreadyVoted": {
+      "title": "已投票",
+      "message": "您已在此提案中投过票。"
+    },
+    "confirm": {
+      "title": "确认投票",
+      "message": "投票给",
+      "note": "此操作无法撤销。",
+      "submit": "提交投票"
+    },
+    "success": {
+      "title": "投票成功！",
+      "message": "感谢您参与社区治理。"
+    },
+    "error": {
+      "title": "投票失败",
+      "message": "提交投票失败，请重试。"
+    }
+  },
+  "learn": {
+    "title": "学习",
+    "subtitle": "了解 Umotu 的一切",
+    "featured": "精选",
+    "airdrop": {
+      "title": "测试网空投",
+      "subtitle": "早期用户获得认可",
+      "intro": "您来得正好！Umotu 目前处于测试网阶段。活跃的测试网参与者在主网上线时可能获得代币空投分配。",
+      "howToQualify": "如何获得资格",
+      "step1": "在应用中创建钱包",
+      "step2": "完成人类验证（人类证明）",
+      "step3": "在测试网期间经常使用应用",
+      "whenAirdrop": "空投什么时候进行？",
+      "whyTestnet": "测试网至关重要：用户可以学习钱包安全知识，系统在主网上线前进行安全性、稳定性和效率测试。",
+      "timeline": "主网预计将于2026年第一或第二季度上线。空投将在主网上线的同一时间进行。",
+      "howMuch": "我能获得多少？",
+      "totalPool": "空投总量：1,000,000,000 UMT代币。您的份额取决于总参与人数和上线时的UMT价格。",
+      "scenario2": "100万用户：每位用户约1,000 UMT，预期价格约$1，空投价值约$1,000",
+      "scenario3": "1000万用户：每位用户约100 UMT，预期价格约$20，空投价值约$2,000",
+      "scenario4": "1亿用户：每位用户约10 UMT，预期价格约$300，空投价值约$3,000",
+      "disclaimer": "以上仅为预测，非保证承诺。实际价值取决于市场状况和计划规则。",
+      "whatYouGet": "您将获得什么",
+      "reward": "主网上线时，您的测试网钱包可能根据参与度和计划规则获得真实代币。越早加入且越活跃的用户将获得优先考虑。",
+      "note": "注意：测试网代币没有价值。任何主网分配将在上线时根据计划政策确定。关于空投的所有信息都仅在该App内发布，其它一切信息来源都不可靠，谨防诈骗。"
+    },
+    "whatIs": {
+      "title": "什么是 Umotu？",
+      "subtitle": "天天十美金 人人皆有份",
+      "intro": "Umotu 旨在让任何人只需一部智能手机就能每天赚取约10美元。无需昂贵硬件，无需特殊技能，没有国界限制。",
+      "howDifferent": "有什么不同？",
+      "noMiddleman": "无中间商：您直接与网络交互 — 无需银行账户",
+      "globalAccess": "全球通用：只要有网络就能使用",
+      "youOwnIt": "您掌控一切：您的钱包，您的密钥，您做主",
+      "vision": "我们的愿景",
+      "visionText": "数十亿人可以帮助维护公共账本的诚实性并从中获得收益。在 Umotu 上，手机执行轻量级检查，使网络值得信赖。",
+      "nameOrigin": "名字的由来",
+      "nameOriginText": "Umotu 的名字源自 Paʻumotu，一种波利尼西亚语言。我们怀着敬意使用这个名字，以此提醒 Umotu 要为普通人而建设。"
+    },
+    "earn": {
+      "title": "如何赚钱",
+      "subtitle": "手机工作，您获报酬",
+      "intro": "您的手机执行帮助所有人的小任务 — 然后您获得奖励。",
+      "steps": "三个简单步骤",
+      "step1": "1) 证明您是人类：快速活体检测（并偶尔刷新）确保每人只有一个账户。",
+      "step2": "2) 帮助网络：您的手机在后台运行数据可用性（DA）采样和其他轻量级检查。",
+      "step3": "3) 获得每日奖励：您因这项工作获得报酬，目标约为每天10美元，具体取决于网络政策。",
+      "localCurrency": "以您的货币支付",
+      "localCurrencyText": "选择支付代币：本地货币稳定币（如有）或 UMT。金额目标约为10美元价值，可能随参与度和市场情况调整。"
+    },
+    "security": {
+      "title": "钱包安全",
+      "subtitle": "保护您的资金",
+      "intro": "您的钱包就像一个只有您能控制的数字保险库。",
+      "recovery": "您的12个词与私钥",
+      "recoveryText": "您的12个秘密单词（助记词）和私钥都可以解锁您的钱包。任何拥有其中之一的人都可以转移您的资金。",
+      "rules": "黄金法则",
+      "rule1": "永远不要与任何人分享您的12个词或私钥 — 包括 Umotu 贡献者。",
+      "rule2": "将12个词写在纸上并离线保存。不要存储在截图、照片或云笔记中。",
+      "rule3": "如果您导出私钥，请离线保存（纸张、硬件或您完全信任的加密管理器）。",
+      "rule4": "如果您丢失12个词和私钥，没有人能恢复您的钱包。",
+      "warning": "重要提示",
+      "warningText": "您的私钥授予完全访问权限。将其透露或复制到其他应用可能会使您的资金面临风险。只有在您理解风险的情况下才导出。",
+      "reveal": "显示/导出私钥",
+      "revealText": "您可以在设置 → 钱包中显示或导出私钥。我们要求生物识别/PIN验证，仅显示几秒钟，且从不上传。考虑使用硬件钱包存储大额余额。",
+      "bestPractices": "最佳实践",
+      "best1": "在手机上启用屏幕锁定和生物识别。",
+      "best2": "保持应用更新以获取最新的安全修复。",
+      "best3": "使用单独的钱包存储大额储蓄；手机上只保留日常使用的小额资金。",
+      "scamBannerTitle": "正规渠道不会索要",
+      "scamBannerText": "如果有人索要您的12个词或私钥，那就是骗局。"
+    },
+    "stablecoins": {
+      "title": "了解稳定币",
+      "subtitle": "追踪本地货币的数字货币",
+      "intro": "稳定币是设计用于追踪普通货币（如美元、南非兰特、尼日利亚奈拉）的数字代币。",
+      "examples": "示例",
+      "example1": "1 ZAR1 ≈ 1 南非兰特",
+      "example2": "1 USD1 ≈ 1 美元",
+      "example3": "1 NGN1 ≈ 1 尼日利亚奈拉",
+      "backed": "由合作伙伴发行",
+      "backedText": "Umotu 上的稳定币由受监管的合作伙伴发行，设计为与储备金保持1:1的价值。发行方发布储备证明和赎回条款。",
+      "convert": "转换为现金",
+      "convertText": "通过合作银行/交易所转换，或在接受的地方直接消费。"
+    },
+    "economics": {
+      "title": "UMT 经济模型",
+      "subtitle": "谁获得什么，为什么",
+      "intro": "UMT 总供应量固定为1000亿枚代币。大部分将奖励给帮助保持网络诚实的普通手机用户。",
+      "supply": "供应与分配",
+      "supplyBullets": [
+        "绝大部分代币供应将随时间分配给手机参与者，通过发行控制器释放。发行控制器将每日发行量限制在剩余供应量的0.01%以内，确保长期可持续性。按照这个时间表，10年后约有68%的总供应量保留，50年后约有15%保留。",
+        "一小部分供应在启动时创建，用于特定目的，包括早期用户空投、社区销售、基金会分配和应急储备等。"
+      ],
+      "premine": "启动分配（暂定，可能在主网启动时更改）",
+      "premineTable": [
+        {
+          "label": "用户空投",
+          "value": "1.0%"
+        },
+        {
+          "label": "社区销售",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu 基金会（时间锁定）",
+          "value": "0.2%"
+        },
+        {
+          "label": "应急基金（治理管理）",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "手机每日奖励",
+      "emissionsText": "奖励每天有上限，预算目标是每部经过验证的手机每天约10美元，根据参与情况和政策调整。您获得报酬是因为您的手机在进行真实的网络检查。",
+      "fees": "费用与哨兵",
+      "feesText": "哨兵帮助者（可选，高级功能）可获得交易费用和构建者出价的一部分。这与每日发行分开。",
+      "transparency": "透明度",
+      "transparencyText": "锁仓释放时间表和钱包地址都是公开的。每日发行上限和实际支付金额在应用中公布。",
+      "disclaimerTitle": "简明提醒",
+      "disclaimerText": "这不是投资建议。奖励取决于网络政策和参与情况。该应用不保证固定收入。"
+    },
+    "contribute": {
+      "title": "如何贡献",
+      "subtitle": "帮助建设 Umotu",
+      "intro": "Umotu 是开源且由社区驱动的。每个人都可以帮忙——无论您是编程、翻译还是提供反馈。",
+      "waysTitle": "贡献方式",
+      "code": {
+        "title": "改进代码",
+        "text": "修复漏洞、添加功能、编写测试或审查拉取请求。查看我们的 GitHub 仓库了解应用、智能合约和后端服务。",
+        "cta": "查看 GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "帮助翻译",
+        "text": "让应用在您的语言中感觉自然。编辑 i18n 语言文件并测试每个屏幕。您的编辑可以帮助数百万人。",
+        "cta": "翻译指南",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "扩展 BIP-39 语言",
+        "text": "提议新的或改进的词表，让更多人可以用自己的母语看到12个词的恢复短语。",
+        "cta": "查看 BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "参与治理",
+        "text": "阅读提案、公开讨论并在应用中投票。您的声音有助于指导网络参数和资助分配。",
+        "cta": "打开治理",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "传播信息",
+        "text": "告诉朋友、编写教程、出短视频，回答问题等。更强大的社区意味着对每个人来说更强大的网络。",
+        "cta": "分享 Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "所有贡献都是自愿的。除非在资助提案中明确规定，否则没有正式雇佣或报酬。"
+    },
+    "decentralization": {
+      "title": "为何去中心化",
+      "subtitle": "没有单点控制",
+      "intro": "去中心化意味着没有任何公司或政府可以关闭网络或没收您的资金。",
+      "benefits": "对您的好处",
+      "benefit1": "始终在线：24/7全天候可用",
+      "benefit2": "更低费用：小额网络费用而非3-5%的刷卡费",
+      "benefit3": "无国界：全球转账价值",
+      "benefit4": "抗审查：您的密钥，您的资金",
+      "benefit5": "透明：任何人都可以验证系统如何运作",
+      "howWorks": "工作原理",
+      "howWorksText": "验证者大约每2秒提议一个区块。手机（像您的）通过轻量级检查进行验证和最终确认。许多小贡献汇聚成强大的安全性。"
+    },
+    "gettingStarted": {
+      "title": "开始使用",
+      "subtitle": "您的前五分钟",
+      "intro": "这是您的快速设置：",
+      "checklist": "设置清单",
+      "check1": "1) 选择您的语言（已完成！）",
+      "check2": "2) 创建或导入钱包",
+      "check3": "3) 重要：将12个词写在纸上",
+      "check4": "4) 完成人类验证（快速扫描）",
+      "check5": "5) 保持应用运行以获得每日奖励",
+      "tips": "专业提示",
+      "tip1": "允许后台访问以便检查可以运行",
+      "tip2": "每天查看奖励",
+      "tip3": "邀请朋友 — 更多用户使网络更强大"
+    },
+    "noCompany": {
+      "title": "没有公司，没有客户",
+      "subtitle": "理解这个模式",
+      "intro": "没有'Umotu公司'控制协议。Umotu 是任何人都可以使用的开放规则集。",
+      "notCompany": "Umotu 不是什么",
+      "notCompany1": "不是一家有客户账户的公司",
+      "notCompany2": "不是银行或货币传输机构",
+      "notCompany3": "不受任何单一实体控制",
+      "notCompany4": "无法撤销交易",
+      "whatIs": "Umotu 是什么",
+      "whatIs1": "一个协议：就像电子邮件或网络 — 开放、可互操作的规则",
+      "whatIs2": "以手机为先：在日常智能手机的帮助下运行",
+      "whatIs3": "社区驱动：您是参与者，不是客户",
+      "foundation": "Umotu 基金会",
+      "foundationIntro": "一个支持生态系统（参考应用、文档、社区项目）但不控制协议的非营利组织。",
+      "foundationTask1": "维护移动应用和区块浏览器作为参考实现",
+      "foundationTask2": "运营部分公共基础设施（其他人可以运营自己的）",
+      "foundationTask3": "协调社区治理（新闻、投票）",
+      "foundationTask4": "审核和列出支持的稳定币",
+      "foundationTask5": "发布教育和安全指南",
+      "foundationNote": "基金会无法访问您的钱包，也无法撤销交易。"
+    },
+    "whereMoney": {
+      "title": "$10美元从哪里来？",
+      "subtitle": "您因工作而获得报酬",
+      "intro": "这是最常被问到的问题。简短回答：因为您提供了网络需要的服务。",
+      "realWork": "您的手机在做真实的工作",
+      "realWork1": "数据可用性采样：您的手机检查区块数据是否可用且正确",
+      "realWork2": "人类参与：您证明一人一账户以阻止机器人和垃圾信息",
+      "realWork3": "这些任务保护所有人；没有它们网络就会变弱",
+      "valueSource": "价值的两个来源",
+      "utility": "实用性：人们选择使用的快速、低费用支付",
+      "consensus": "共识：随着更多人可以验证和同意规则而增长的价值",
+      "distribution": "奖励如何分配",
+      "newTokens": "新的 UMT 代币被创建并分享给经过验证的手机参与者（而不是验证者）",
+      "fees": "部分费用和构建者出价分享给手机哨兵以最终确认区块",
+      "treasury": "小部分资金用于持续维护和稳定计划",
+      "whyDifferent": "为什么这与众不同",
+      "btcProblem": "比特币奖励专业矿工（资本密集型）",
+      "ethProblem": "以太坊奖励大额质押者（资本密集型）",
+      "umotuSolution": "Umotu 奖励日常手机（参与的实际成本低）",
+      "conclusion": "这不是施舍：您因保持共享金融基础设施诚实和有用的工作而获得报酬。"
+    },
+    "scamPrevention": {
+      "title": "防范诈骗",
+      "subtitle": "保护自己",
+      "intro": "Umotu 基金会永远不会私信您。任何假装是'客服'的人都是骗子。",
+      "redFlags": "危险信号",
+      "redFlag1": "声称是客户支持的人",
+      "redFlag2": "'验证'或'升级'您账户的链接",
+      "redFlag3": "索要您的12个词助记词或私钥",
+      "redFlag4": "如果您发送资金就承诺奖励代币",
+      "redFlag5": "要求您'激活'奖励的应用或网站",
+      "truth": "事实真相",
+      "truth1": "没有可以重置您钱包的客户支持",
+      "truth2": "所有官方更新都在此应用中显示",
+      "truth3": "Umotu 的任何人都不会索要您的助记词或私钥",
+      "truth4": "仅从官方 Apple Store 或 Google Play下载此应用，其它一切下载链接都是诈骗",
+      "whatToDo": "如果有人联系您",
+      "action1": "不要回复",
+      "action2": "不要点击链接",
+      "action3": "不要分享信息",
+      "action4": "拉黑并举报"
+    }
+  },
+  "common": {
+    "loading": "加载中…",
+    "error": "错误",
+    "retry": "重试",
+    "cancel": "取消",
+    "save": "保存",
+    "done": "完成",
+    "continue": "继续",
+    "confirm": "确认",
+    "yes": "是",
+    "no": "否",
+    "ok": "确定",
+    "success": "成功",
+    "failed": "失败",
+    "copied": "已复制！",
+    "pullToRefresh": "下拉刷新",
+    "notSet": "未设置"
+  },
+  "errors": {
+    "networkError": "网络错误，请检查您的网络连接。",
+    "genericError": "出现未知错误，请重试。",
+    "walletNotFound": "未找到钱包",
+    "transactionFailed": "交易失败",
+    "invalidInput": "输入无效"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "美元"
+  },
+  "onboard_welcome": "欢迎使用 Umotu",
+  "onboard_wallet_title": "设置钱包",
+  "onboard_wallet_explain": "创建或导入钱包以接收奖励。",
+  "wallet_create": "创建新钱包",
+  "wallet_import": "导入钱包",
+  "wallet_import_explain": "输入您的12个助记词",
+  "wallet_created": "钱包已就绪",
+  "wallet_save": "保存到设备",
+  "wallet_backup_title": "备份您的助记词",
+  "wallet_backup_explain": "按顺序写下这12个单词。这是恢复钱包的唯一方式，如果您丢失设备。",
+  "wallet_backup_warning": "切勿分享您的助记词。任何拥有这些单词的人都可以访问您的资金。",
+  "wallet_backup_confirm": "我已经写下了我的助记词",
+  "wallet_backup_done": "我已保存助记词",
+  "wallet_save_first": "请先保存您的助记词",
+  "poh_title": "人类验证",
+  "continue": "继续",
+  "or": "或",
+  "seedReveal": {
+    "title": "助记词",
+    "intro": "助记词是您恢复钱包的唯一方式。请将其写下并安全地离线保存。",
+    "displayLanguage": "以{{language}}显示",
+    "hiddenMsg": "出于安全考虑，您的助记词已隐藏。点击下方按钮显示。",
+    "showButton": "显示助记词",
+    "noScreenshot": "请勿截图保存助记词。",
+    "checkTitle": "验证备份",
+    "checkPrompt": "请输入以下单词以确认您已正确记录：",
+    "checkWordN": "第 {{n}} 个词",
+    "checkIncorrect": "一个或多个单词不正确，请检查您的备份。",
+    "ackWritten": "我已写下助记词",
+    "ackCannotRecover": "我理解 Umotu 无法帮我恢复钱包",
+    "cancel": "取消",
+    "continue": "我已保存"
+  }
+}

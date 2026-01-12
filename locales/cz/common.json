@@ -1,0 +1,1418 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "10 dolarů denně, všem a všude"
+  },
+  "navigation": {
+    "home": "Domů",
+    "wallet": "Peněženka",
+    "miniapps": "MiniAplikace",
+    "back": "Zpět",
+    "scan": "Skenovat",
+    "settings": "Nastavení",
+    "close": "Zavřít"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Ověření lidé",
+      "umtPrice": "Cena UMT"
+    },
+    "quickActions": {
+      "news": "Novinky",
+      "vote": "Správa",
+      "governance": "Správa",
+      "learn": "Vzdělávání",
+      "network": "Síť"
+    },
+    "setupProgress": {
+      "title": "Průběh nastavení",
+      "steps": {
+        "language": "Jazyk",
+        "wallet": "Peněženka",
+        "verifyHuman": "Ověřit člověka",
+        "complete": "Dokončeno"
+      },
+      "continue": "Pokračovat",
+      "changeChoice": "Změnit volbu",
+      "requiresLanguage": "Nejprve vyberte jazyk",
+      "requiresWallet": "Nejprve vytvořte peněženku"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Denní odměny",
+      "totalEarned": "Celkem vyděláno",
+      "lastClaimed": "Naposledy vyžádáno",
+      "never": "Nikdy",
+      "configure": "Nastavit",
+      "loading": "Načítání odměn...",
+      "noWallet": "Žádná peněženka",
+      "autoClaim": {
+        "label": "Automatické vyžádání:",
+        "active": "Aktivní",
+        "setupNow": "Nastavit nyní",
+        "expired": "Vypršelo",
+        "tapToSetup": "Klepněte pro aktivaci automatických denních odměn"
+      }
+    },
+    "sentinel": {
+      "title": "Odměny Sentinel",
+      "manage": "Spravovat",
+      "loading": "Načítání...",
+      "status": "Stav",
+      "statuses": {
+        "notBonded": "Nevázáno",
+        "bonded": "Vázáno",
+        "unbonding": "Uvolňování vazby"
+      },
+      "claimable": "K vyžádání",
+      "accruing": "Akumulující se",
+      "bonded": "Vázáno"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Automatické denní odměny",
+      "description": "Aktivujte <bold>automatické vyžádání</bold>, abyste automaticky dostávali svou denní UBI odměnu 10 dolarů – bez ručního vyžádání!",
+      "benefits": {
+        "midnight": "Vyžádáno o půlnoci ve vašem časovém pásmu",
+        "lowerFees": "O 80 % nižší poplatky za gas (sdruženo s ostatními uživateli)",
+        "disable": "Kdykoli můžete deaktivovat v Nastavení"
+      },
+      "notice": "Podepíšete jednorázovou autorizační zprávu, která umožní našemu relé vyžádat za vás. Žádné soukromé klíče nejsou sdíleny.",
+      "maybeLater": "Možná později",
+      "enableNow": "Aktivovat nyní"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Nastavení automatického vyžádání",
+      "description": "Automaticky vyžadovat denní odměny.",
+      "checking": "Kontrola stavu...",
+      "status": "Stav",
+      "enabled": "Aktivováno",
+      "disabled": "Deaktivováno",
+      "lastClaimed": "Naposledy vyžádáno",
+      "neverClaimed": "Nikdy",
+      "nextClaim": "Další vyžádání",
+      "expiresAt": "Vyprší",
+      "timezone": "Časové pásmo",
+      "preferredHour": "Preferovaná hodina",
+      "preferredHourHint": "Vyberte, kdy má automatické vyžádání proběhnout",
+      "enableButton": "Aktivovat automatické vyžádání",
+      "disableButton": "Deaktivovat automatické vyžádání",
+      "enabling": "Aktivace...",
+      "disabling": "Deaktivace...",
+      "enableSuccess": "Automatické vyžádání aktivováno!",
+      "enableError": "Selhání aktivace",
+      "disableSuccess": "Automatické vyžádání deaktivováno",
+      "disableError": "Selhání deaktivace",
+      "updateButton": "Aktualizovat nastavení",
+      "updating": "Aktualizace..."
+    },
+    "manual": {
+      "title": "Ruční vyžádání",
+      "description": "Pokud potřebujete prostředky dříve, vyžádejte si další dostupnou odměnu nyní. Ruční vyžádání používá gas z vaší peněženky. Automatické vyžádání je levnější, pokud počkáte. Pokud vaše peněženka nemá prostředky, povolte automatické vyžádání nebo doplňte nativní gas před ručním vyžádáním.",
+      "dayLabel": "Den odměny",
+      "claimButton": "Vyžádat nyní",
+      "claiming": "Vyžadování...",
+      "success": "Vyžádání odesláno",
+      "successWithId": "Vyžádání odesláno (id: {{id}})",
+      "error": "Selhání vyžádání",
+      "noProof": "Důkaz odměny ještě nebyl zveřejněn. Zkuste to znovu po zveřejnění dnešního snímku.",
+      "unauthorized": "Autorizace relayeru selhala. Zkuste to prosím znovu nebo kontaktujte podporu.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "Dostupné dny odměn: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "Pokrytí: {{start}} až {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} dalších po této dávce",
+      "batchSuccess": "{{count}} dní úspěšně vyžádáno",
+      "claimingProgress": "Vyžadování {{claimed}}/{{total}}...",
+      "claimAllButton": "Vyžádat všech {{count}} dní"
+    },
+    "timezone": {
+      "title": "Vyberte časové pásmo",
+      "search": "Hledat časové pásmo...",
+      "current": "Aktuální výběr",
+      "searchResults": "Výsledky hledání",
+      "noResults": "Žádné výsledky",
+      "detected": "Detekováno",
+      "popular": "Populární časová pásma",
+      "regions": {
+        "Americas": "Amerika",
+        "Europe": "Evropa",
+        "Asia": "Asie",
+        "Africa": "Afrika",
+        "Oceania": "Oceánie"
+      }
+    },
+    "payout": {
+      "title": "Preference výplaty",
+      "description": "Vyberte preferovanou měnu výplaty.",
+      "current": "Aktuální",
+      "saved": "Uloženo",
+      "saveError": "Chyba při ukládání",
+      "showMore": "Zobrazit více ({{count}})",
+      "showLess": "Zobrazit méně",
+      "native": "Nativní token",
+      "stablecoin": "Stablecoin",
+      "popular": "Populární",
+      "allCurrencies": "Všechny měny"
+    }
+  },
+  "wallet": {
+    "title": "Peněženka",
+    "testnetNotice": "Tokeny testnetu nemají reálnou hodnotu",
+    "totalBalance": "Celkový zůstatek",
+    "balance": "Zůstatek",
+    "address": "Adresa",
+    "copyAddress": "Kopírovat adresu",
+    "addressCopied": "Adresa zkopírována",
+    "receive": "Přijmout",
+    "send": "Odeslat",
+    "swap": "Vyměnit",
+    "swapComingSoon": "Výměna brzy přijde",
+    "history": "Historie",
+    "tokens": "Tokeny",
+    "collectibles": "Sběratelské předměty",
+    "noTokens": "Žádné nakonfigurované tokeny",
+    "nativeToken": "Nativní token",
+    "loading": "Načítání...",
+    "refreshing": "Obnovování...",
+    "balancesUpdated": "Zůstatky aktualizovány",
+    "menu": {
+      "manageTokens": "Spravovat tokeny",
+      "addressBook": "Adresář",
+      "walletSettings": "Nastavení peněženky",
+      "showBalances": "Zobrazit zůstatky",
+      "hideBalances": "Skrýt zůstatky",
+      "showZeroTokens": "Zobrazit nulové tokeny",
+      "hideZeroTokens": "Skrýt nulové tokeny",
+      "refresh": "Obnovit"
+    },
+    "manageTokens": {
+      "title": "Spravovat tokeny",
+      "info": "Přidat vlastní ERC-20 tokeny. Systémové tokeny jsou zahrnuty standardně.",
+      "addToken": "Přidat token",
+      "adding": "Přidávání...",
+      "contractAddress": "Adresa kontraktu tokenu (0x...)",
+      "autoFetch": "Symbol a desetinná místa se načtou automaticky",
+      "customTokens": "Vlastní tokeny",
+      "noCustomTokens": "Zatím nebyly přidány žádné vlastní tokeny.",
+      "addUsingForm": "Přidejte token pomocí formuláře výše.",
+      "systemToken": "Tento token je systémový a již je zahrnut.",
+      "fetchingMetadata": "Načítání metadat tokenu...",
+      "addedSuccess": "Token úspěšně přidán",
+      "enterValidAddress": "Zadejte platnou adresu tokenu",
+      "save": "Uložit"
+    },
+    "addressBook": {
+      "title": "Adresář",
+      "addContact": "Přidat kontakt",
+      "nameLabel": "Jméno nebo štítek",
+      "walletAddress": "Adresa peněženky (0x...)",
+      "savedContacts": "Uložené kontakty",
+      "noContacts": "Zatím nejsou uloženy žádné kontakty.",
+      "addForQuickSending": "Přidejte kontakty pro rychlé odesílání.",
+      "enterValidAddress": "Zadejte platnou adresu",
+      "addLabel": "Přidat štítek",
+      "save": "Uložit"
+    },
+    "settings": {
+      "title": "Nastavení peněženky",
+      "export": {
+        "title": "Exportovat peněženku",
+        "description": "Nikdy nesdílejte svou obnovovací frázi nebo soukromý klíč. Ukládejte je bezpečně offline.",
+        "recoveryPhrase": "Obnovovací fráze",
+        "recoveryPhraseNotAvailable": "Obnovovací fráze není dostupná (importováno přes soukromý klíč)",
+        "privateKey": "Soukromý klíč",
+        "privateKeyWarning": "Soukromý klíč (držte v tajnosti!)",
+        "showPhrase": "Zobrazit obnovovací frázi",
+        "showKey": "Zobrazit soukromý klíč",
+        "warning": "Nikdy nesdílejte svou obnovovací frázi nebo soukromý klíč s nikým.",
+        "copy": "Kopírovat",
+        "copied": "Zkopírováno!",
+        "hide": "Skrýt",
+        "clipboardWarning": "Schránka může být čtena jinými aplikacemi. Bude automaticky vymazána za 30 s.",
+        "verifyForKey": "Ověřit pro zobrazení soukromého klíče",
+        "verifyForSeed": "Ověřit pro zobrazení obnovovací fráze",
+        "verifyDescription": "Zadejte heslo nebo PIN pro zobrazení citlivých informací o peněžence."
+      },
+      "import": {
+        "title": "Importovat peněženku",
+        "description": "Import nahradí aktuální peněženku. Nejprve si zálohujte stávající. Po importu bude nutné znovu ověřit PoH status.",
+        "byPhrase": "Obnovovací fráze",
+        "byPrivateKey": "Soukromý klíč",
+        "phrasePlaceholder": "Zadejte frázi 12 nebo 24 slov…",
+        "keyPlaceholder": "Zadejte soukromý klíč 0x…",
+        "importButton": "Importovat peněženku",
+        "importing": "Importování...",
+        "success": "Peněženka úspěšně importována!"
+      },
+      "dangerZone": {
+        "title": "Nebezpečná zóna",
+        "description": "Tyto akce nelze vrátit zpět. Nejprve si zálohujte peněženku.",
+        "forgetWallet": "Zapomenout peněženku",
+        "forgetDescription": "Odstranit peněženku z tohoto zařízení. Nejprve si zálohujte obnovovací frázi.",
+        "confirmTitle": "Zapomenout peněženku?",
+        "confirmMessage": "Toto odstraní peněženku z tohoto zařízení. Nejprve si zálohujte obnovovací frázi.",
+        "cancel": "Zrušit",
+        "confirm": "Zapomenout peněženku",
+        "walletForgotten": "Peněženka zapomenuta",
+        "unableToForget": "Nelze zapomenout peněženku",
+        "resetWallet": "Resetovat peněženku",
+        "resetDescription": "Úplně vymazat všechna data peněženky a začít znovu."
+      },
+      "authPrompt": "Ověřte se pro zobrazení soukromého klíče"
+    }
+  },
+  "reset": {
+    "title": "Resetovat peněženku",
+    "dangerTitle": "Tato akce nelze vrátit zpět!",
+    "warning1": "Resetování peněženky trvale vymaže:",
+    "bullet1": "Vaši peněženku a soukromé klíče",
+    "bullet2": "Vaši obnovovací frázi",
+    "bullet3": "Všechna nastavení a preference aplikace",
+    "bullet4": "Historii transakcí",
+    "recoveryNote": "Pokud máte svou obnovovací frázi 12 slov, můžete peněženku po resetu obnovit.",
+    "continueButton": "Rozumím, pokračovat",
+    "confirmTitle": "Potvrdit reset",
+    "confirmDescription": "Napište \"RESET\" pro potvrzení, že chcete vymazat všechna data peněženky.",
+    "placeholder": "Napište RESET",
+    "typeMismatch": "Napište RESET pro potvrzení",
+    "resetButton": "Resetovat peněženku navždy",
+    "resettingTitle": "Resetování...",
+    "resettingDescription": "Mažou se všechna data peněženky. Čekejte prosím...",
+    "completeTitle": "Reset dokončen",
+    "completeDescription": "Vaše peněženka byla resetována. Nyní můžete nastavit novou peněženku nebo importovat stávající.",
+    "startFresh": "Začít znovu",
+    "error": "Selhání resetu peněženky. Zkuste to prosím znovu."
+  },
+  "export": {
+    "verifyTitle": "Ověřit identitu",
+    "verifyDescription": "Zadejte heslo pro export peněženky.",
+    "verify": "Ověřit",
+    "verificationFailed": "Ověření selhalo",
+    "passphraseTitle": "Nastavit exportní heslo",
+    "passphraseDescription": "Vyberte silné heslo pro šifrování zálohy. Toto heslo budete potřebovat pro pozdější import peněženky.",
+    "enterPassphrase": "Zadejte heslo",
+    "passphraseTooWeak": "Heslo je příliš slabé. Použijte alespoň 8 znaků.",
+    "includeSeed": "Zahrnout obnovovací frázi",
+    "includeSeedDescription": "Doporučeno pro úplnou zálohu",
+    "confirmTitle": "Potvrdit heslo",
+    "confirmDescription": "Zadejte heslo znovu pro potvrzení.",
+    "confirmPassphrase": "Potvrdit heslo",
+    "passphraseMismatch": "Hesla se neshodují",
+    "warning": "Uložte tuto zálohu bezpečně. Kdokoli s přístupem k souboru a heslu může ovládat vaši peněženku.",
+    "exportNow": "Exportovat peněženku",
+    "exportingTitle": "Exportování...",
+    "exportingDescription": "Šifrování a příprava zálohy peněženky...",
+    "successTitle": "Export dokončen",
+    "successDescription": "Vaše šifrovaná záloha peněženky byla vytvořena. Uložte ji bezpečně.",
+    "rememberPassphrase": "Zapamatujte si exportní heslo – budete ho potřebovat pro import této zálohy.",
+    "errorTitle": "Export selhal",
+    "failed": "Export selhal. Zkuste to prosím znovu.",
+    "tryAgain": "Zkusit znovu",
+    "exportKeystore": "Exportovat šifrovanou zálohu",
+    "exportKeystoreDesc": "Uložit šifrovaný soubor keystore"
+  },
+  "security": {
+    "title": "Zabezpečte svou peněženku",
+    "subtitle": "Nastavte heslo nebo PIN pro ochranu peněženky",
+    "checkingDevice": "Kontrola zabezpečení zařízení...",
+    "passwordOption": "Heslo",
+    "passwordDesc": "8+ znaků, písmena a číslice",
+    "pinOption": "6místný PIN",
+    "pinDesc": "Rychlý a snadno zapamatovatelný",
+    "enterPin": "Zadejte 6místný PIN",
+    "confirmPin": "Potvrďte PIN",
+    "enterPassword": "Zadejte heslo",
+    "confirmPassword": "Potvrďte heslo",
+    "enableBiometrics": "Aktivovat {{type}}?",
+    "biometricsDesc": "Použijte {{type}} pro rychlé odemknutí. Můžete to změnit později v Nastavení.",
+    "enableBiometricsButton": "Aktivovat {{type}}",
+    "enableBiometricsPrompt": "Ověřte se pro aktivaci biometrického odemknutí",
+    "skipBiometrics": "Přeskočit prozatím",
+    "setupComplete": "Nastavení dokončeno!",
+    "walletSecured": "Vaše peněženka je nyní zabezpečena!",
+    "continue": "Pokračovat",
+    "passwordTooWeak": "Heslo je příliš slabé. Dodržte prosím doporučení.",
+    "pinMismatch": "PINy se neshodují",
+    "passwordMismatch": "Hesla se neshodují",
+    "setupError": "Nastavení selhalo. Zkuste to prosím znovu.",
+    "passwordTitle": "Heslo",
+    "passwordDescription": "8+ znaků, vyšší zabezpečení",
+    "pinTitle": "6místný PIN",
+    "pinDescription": "Rychlý přístup, snadno zapamatovatelný"
+  },
+  "lock": {
+    "title": "Odemknout Umotu",
+    "lockedOut": "Zamčeno",
+    "tooManyAttempts": "Příliš mnoho pokusů. Zkuste znovu za {{time}}.",
+    "attemptsRemaining": "Zbývá {{count}} pokusů",
+    "enterPassword": "Zadejte heslo",
+    "unlock": "Odemknout",
+    "wrongPin": "Nesprávný PIN",
+    "wrongPassword": "Nesprávné heslo",
+    "verificationError": "Ověření selhalo",
+    "biometricsPrompt": "Odemknout peněženku",
+    "unlockWithFaceId": "Odemknout pomocí Face ID?",
+    "unlockWithFingerprint": "Odemknout pomocí otisku prstu?",
+    "forgotPassword": "Zapomenuté heslo?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Nepodporované zařízení",
+    "emulatorMessage": "Tato aplikace z bezpečnostních důvodů nemůže běžet na emulátorech.",
+    "rootedTitle": "Bezpečnostní varování",
+    "exitApp": "Ukončit",
+    "continueAnyway": "Pokračovat i tak"
+  },
+  "settingsSecurity": {
+    "title": "Zabezpečení",
+    "autoLock": "Automatické zamknutí",
+    "autoLockDesc": "Zamknout peněženku po nečinnosti",
+    "faceId": "Face ID",
+    "fingerprint": "Otisk prstu",
+    "biometricsDesc": "Rychlé odemknutí biometrií",
+    "changePin": "Změnit PIN",
+    "changePassword": "Změnit heslo",
+    "changeDesc": "Aktualizovat bezpečnostní údaje",
+    "enableBiometrics": "Aktivovat biometrické odemknutí",
+    "enterCurrent": "Zadejte aktuální {{type}}",
+    "enterNew": "Zadejte nový {{type}}",
+    "confirmNew": "Potvrďte nový {{type}}",
+    "currentPassword": "Aktuální heslo",
+    "newPassword": "Nové heslo",
+    "confirmNewPassword": "Potvrďte nové heslo",
+    "changeNow": "Změnit nyní",
+    "success": "Úspěch",
+    "pinChanged": "PIN úspěšně změněn",
+    "passwordChanged": "Heslo úspěšně změněno",
+    "changeFailed": "Změna údajů selhala",
+    "autoLockOptions": {
+      "immediately": "Okamžitě",
+      "after1min": "Po 1 minutě",
+      "after5min": "Po 5 minutách",
+      "after15min": "Po 15 minutách",
+      "after1hour": "Po 1 hodině",
+      "never": "Nikdy"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Čekejte prosím",
+    "cooldownMessage": "Z bezpečnostních důvodů můžete klíče zobrazit znovu za {{time}}.",
+    "cooldownReason": "Toto brání škodlivým aplikacím v rychlém přístupu k vašim klíčům."
+  },
+  "passwordVerify": {
+    "title": "Ověřit identitu",
+    "description": "Zadejte heslo nebo PIN pro zobrazení citlivých informací o peněžence",
+    "verify": "Ověřit"
+  },
+  "passwordValidation": {
+    "veryWeak": "Velmi slabé",
+    "weak": "Slabé",
+    "fair": "Průměrné",
+    "good": "Dobré",
+    "strong": "Silné",
+    "tooShort": "Heslo musí mít alespoň 8 znaků",
+    "commonPassword": "Toto je běžně používané heslo",
+    "lengthSuggestion": "Použijte alespoň 12 znaků pro lepší zabezpečení",
+    "mixedCaseSuggestion": "Kombinujte velká a malá písmena",
+    "numberSuggestion": "Přidejte číslice",
+    "specialCharSuggestion": "Přidejte speciální znaky (!@#$%)"
+  },
+  "forgot": {
+    "title": "Resetovat přihlašovací údaje",
+    "warning": "Pro reset hesla nebo PINu musíte zadat obnovovací frázi peněženky. To dokazuje, že jste vlastníkem peněženky.",
+    "warningText": "Nikdy nesdílejte obnovovací frázi s nikým.",
+    "continue": "Rozumím, pokračovat",
+    "enterSeed": "Zadejte obnovovací frázi",
+    "seedDescription": "Zadejte svou obnovovací frázi 12 nebo 24 slov. Oddělte slova mezerami.",
+    "seedPlaceholder": "Zadejte obnovovací frázi...",
+    "verifySeed": "Ověřit obnovovací frázi",
+    "invalidSeed": "Zadejte prosím platnou obnovovací frázi 12 nebo 24 slov",
+    "chooseMethod": "Vyberte metodu zabezpečení",
+    "methodDescription": "Jak chcete zabezpečit peněženku?",
+    "newPassword": "Vytvořit nové heslo",
+    "newPin": "Vytvořit nový PIN",
+    "newPasswordDesc": "Vyberte silné heslo (8+ znaků)",
+    "newPinDesc": "Zadejte 6místný PIN",
+    "confirmPassword": "Potvrdit heslo",
+    "confirmPin": "Potvrdit PIN",
+    "confirmPasswordDesc": "Zadejte heslo znovu pro potvrzení",
+    "confirmPinDesc": "Zadejte PIN znovu pro potvrzení",
+    "resetNow": "Resetovat nyní",
+    "complete": "Reset dokončen",
+    "completeDescription": "Vaše přihlašovací údaje byly resetovány. Nyní můžete odemknout peněženku novým heslem nebo PINem.",
+    "unlockNow": "Odemknout peněženku",
+    "passwordTooWeak": "Heslo je příliš slabé. Vyberte prosím silnější heslo.",
+    "passwordMismatch": "Hesla se neshodují",
+    "pinMismatch": "PINy se neshodují",
+    "resetFailed": "Reset údajů selhal. Ověřte prosím obnovovací frázi.",
+    "resetError": "Došlo k chybě. Zkuste to prosím znovu."
+  },
+  "send": {
+    "title": "Odeslat",
+    "selectToken": "Vybrat token",
+    "selectTokenInfo": "Vyberte token k odeslání. Zobrazují se pouze tokeny s pozitivním zůstatkem.",
+    "noTokensWithBalance": "Žádné tokeny s pozitivním zůstatkem",
+    "addTokensFirst": "Nejprve přidejte tokeny do peněženky",
+    "enterAmount": "Zadejte částku",
+    "enterRecipient": "Zadejte příjemce",
+    "review": "Zkontrolovat",
+    "amount": "Částka",
+    "recipient": "Příjemce",
+    "recipientPlaceholder": "Adresa peněženky 0x...",
+    "networkFee": "Poplatek sítě",
+    "gasToken": "Platit gas tokenem",
+    "payingWith": "Platba pomocí",
+    "payGasWith": "Platit gas pomocí",
+    "nativeGas": "UMT (nativní)",
+    "stableGas": "Stable Gas",
+    "selectStable": "Vybrat stablecoin",
+    "max": "Max",
+    "next": "Další",
+    "continue": "Pokračovat",
+    "confirm": "Potvrdit odeslání",
+    "confirmSend": "Potvrdit odeslání",
+    "sending": "Odesílání...",
+    "failed": "Transakce selhala",
+    "viewInExplorer": "Zobrazit v průzkumníku",
+    "done": "Hotovo",
+    "cancel": "Zrušit",
+    "send": "Odeslat",
+    "balance": "Zůstatek",
+    "available": "Dostupné",
+    "to": "Komu",
+    "network": "Síť",
+    "step": "Krok",
+    "estimating": "Odhadování…",
+    "umtNative": "UMT (nativní)",
+    "txSpeed": "Rychlost transakce",
+    "transactionSpeed": "Rychlost transakce",
+    "speed": {
+      "slow": "Pomalá",
+      "normal": "Normální",
+      "fast": "Rychlá"
+    },
+    "gasNotice": {
+      "stablecoin": "Gas bude placen stablecoinem.",
+      "reserved": "Rezervovali jsme {{amount}} {{symbol}} na gas; můžete odeslat maximálně {{max}}."
+    },
+    "errors": {
+      "invalidAddress": "Neplatná adresa příjemce",
+      "invalidAmount": "Zadejte platnou částku",
+      "insufficientBalance": "Nedostatečný zůstatek",
+      "insufficientGas": "Nedostatečný zůstatek na gas",
+      "insufficientGasWithHint": "Nedostatečný zůstatek na gas. Přidejte UMT nebo podporovaný stablecoin.",
+      "notEnoughForGas": "Nedostatek prostředků na pokrytí gasu",
+      "noStableGas": "Nedostatek UMT na gas a žádný podporovaný stablecoin to nemůže pokrýt.",
+      "permitFailed": "Schválení nebo permit pro gas token selhalo",
+      "relayNotConfigured": "Relé pro stable gas není nakonfigurováno",
+      "transactionReverted": "Transakce byla na řetězci vrácena.",
+      "approvalNeeded": "Gas token vyžaduje schválení, ale není dost UMT na schválení. Přidejte malé množství UMT nebo použijte token podporující permit."
+    },
+    "addressBook": {
+      "title": "Adresář",
+      "addNew": "Přidat Nový",
+      "noContacts": "Žádné uložené adresy",
+      "saveForQuickAccess": "Uložte adresy pro rychlý přístup",
+      "editContact": "Upravit Kontakt",
+      "deleteContact": "Smazat Kontakt",
+      "addressNotSaved": "Adresa není uložena",
+      "addLabel": "Přidat štítek",
+      "enterValidAddress": "Nejprve zadejte platnou adresu",
+      "saved": "Uloženo",
+      "save": "Uložit"
+    },
+    "success": {
+      "title": "Transakce odeslána!",
+      "hash": "Hash",
+      "viewInExplorer": "Zobrazit v průzkumníku",
+      "close": "Zavřít"
+    },
+    "batch": {
+      "mode": "Dávkový Režim",
+      "singleMode": "Jeden Příjemce",
+      "addRecipient": "Přidat příjemce",
+      "noRecipients": "Zatím nebyli přidáni příjemci",
+      "addFromTagOrBook": "Přidat ze štítku nebo adresáře",
+      "invalidAddress": "Neplatná adresa: {{address}}",
+      "invalidAmount": "Neplatná částka pro {{recipient}}",
+      "totalExceedsBalance": "Celkem překračuje zůstatek",
+      "sendingTo": "Odesílání {{count}} příjemci",
+      "sendingTo_plural": "Odesílání {{count}} příjemcům",
+      "recipients": "Příjemci",
+      "addresses": "{{count}} adresa",
+      "addresses_plural": "{{count}} adres",
+      "addByTag": "Přidat podle štítku",
+      "noTags": "Zatím žádné štítky",
+      "createFirstTag": "Vytvořte první štítek v adresáři",
+      "addFromTag": "Přidat ze štítku",
+      "selectTag": "Vybrat štítek",
+      "remove": "Odebrat",
+      "sendAll": "Odeslat Vše ({{count}})",
+      "batchSend": "Dávkové Odeslání",
+      "badge": "DÁVKA",
+      "successFail": "{{success}} úspěšných, {{fail}} neúspěšných",
+      "successful": "Úspěšné",
+      "sentStatus": "Odesláno",
+      "failedStatus": "Selhalo",
+      "details": "Detaily Dávkového Převodu",
+      "total": "Celkem",
+      "tagPicker": {
+        "title": "Vybrat Štítek",
+        "noTags": "Žádné štítky nejsou k dispozici",
+        "createHint": "Nejprve přidejte štítky ke kontaktům v adresáři"
+      },
+      "tags": {
+        "manage": "Spravovat Štítky",
+        "add": "Přidat Štítek",
+        "remove": "Odebrat Štítek",
+        "create": "Vytvořit Štítek",
+        "newTag": "Název nového štítku",
+        "addToContact": "Přidat štítek ke kontaktu"
+      }
+    }
+  },
+  "receive": {
+    "title": "Přijmout",
+    "yourAddress": "Vaše adresa peněženky",
+    "scanQR": "Skenovat QR kód pro přijetí",
+    "copyAddress": "Kopírovat adresu",
+    "share": "Sdílet"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Platit",
+      "myQr": "Můj QR"
+    },
+    "pay": {
+      "title": "Platit",
+      "description": "Skenujte QR kód přítele pro přímou platbu do jeho peněženky",
+      "allowCamera": "Povolit kameru",
+      "requesting": "Žádost o přístup…",
+      "openSettings": "Otevřít nastavení",
+      "sendTo": "Odeslat komu",
+      "amount": "Částka",
+      "rescan": "Skenovat znovu",
+      "continue": "Pokračovat"
+    },
+    "receive": {
+      "title": "Přijmout",
+      "description": "Skenujte tento QR kód pro odeslání plateb na tuto adresu",
+      "tapToCopy": "Klepněte pro kopírování adresy",
+      "copied": "Zkopírováno do schránky!"
+    }
+  },
+  "history": {
+    "title": "Historie transakcí",
+    "sent": "Odesláno",
+    "received": "Přijato",
+    "token": "Token",
+    "external": "Externí",
+    "to": "Komu: ",
+    "from": "Od: ",
+    "viewInExplorer": "Zobrazit v průzkumníku",
+    "empty": {
+      "title": "Zatím žádné transakce",
+      "description": "Historie transakcí se zde objeví, jakmile odešlete nebo přijmete tokeny."
+    },
+    "status": {
+      "confirmed": "Potvrzeno",
+      "pending": "Čeká na potvrzení",
+      "failed": "Selhalo"
+    },
+    "details": {
+      "title": "Detaily transakce",
+      "status": "Stav",
+      "type": "Typ",
+      "to": "Komu",
+      "from": "Od",
+      "token": "Token",
+      "block": "Blok",
+      "gasCost": "Náklady na gas",
+      "hash": "Hash",
+      "source": "Zdroj",
+      "balanceDetected": "Detekován zůstatek",
+      "inferredNote": "Tato transakce byla detekována ze změny zůstatku. Přesné on-chain detaily nejsou dostupné."
+    },
+    "time": {
+      "justNow": "Právě teď",
+      "minsAgo": "Před {{count}} m",
+      "hoursAgo": "Před {{count}} h",
+      "daysAgo": "Před {{count}} d"
+    }
+  },
+  "settings": {
+    "title": "Nastavení",
+    "account": {
+      "title": "Účet a vzhled",
+      "walletAddress": "Adresa peněženky",
+      "copy": "Kopírovat",
+      "copied": "Zkopírováno"
+    },
+    "theme": {
+      "title": "Motiv",
+      "light": "Světlý",
+      "dark": "Tmavý",
+      "system": "Systémový"
+    },
+    "language": {
+      "title": "Jazyk",
+      "select": "Vybrat jazyk",
+      "current": "Aktuální"
+    },
+    "display": {
+      "title": "Zobrazení",
+      "description": "Přizpůsobte vzhled domovské obrazovky.",
+      "showSentinelCard": "Zobrazit kartu odměn Sentinel",
+      "showSentinelCardDesc": "Zobrazit odměny na domovské obrazovce",
+      "showDailyRewardsCard": "Zobrazit kartu denních odměn",
+      "on": "ZAP",
+      "off": "VYP",
+      "sentinelSettings": "Nastavení Sentinel",
+      "sentinelSettingsDesc": "Spravovat vazbu, odměny a automatické vyžádání"
+    },
+    "sentinelDisplay": {
+      "title": "Zobrazení Sentinel",
+      "showSentinelCard": "Zobrazit kartu Sentinel",
+      "showSentinelCardDesc": "Zobrazit kartu odměn Sentinel na domovské obrazovce",
+      "sentinelSettings": "Nastavení Sentinel",
+      "sentinelSettingsDesc": "Konfigurovat uzel Sentinel a odměny"
+    },
+    "verification": {
+      "title": "Ověření",
+      "description": "Ověřte svou lidskost pomocí Inlyf pro odemknutí denních odměn. Rychlá kontrola živosti; pravidelně opakujte.",
+      "open": "Spustit ověření",
+      "refresh": "Obnovit ověření",
+      "status": "Stav",
+      "verified": "Ověřeno",
+      "notVerified": "Neověřeno",
+      "expiresOn": "Vyprší",
+      "daysRemaining": "Zbývajících dní",
+      "upToDate": "Ověření je aktuální",
+      "refreshAvailableIn": "Obnovení dostupné za {{days}} dní"
+    },
+    "network": {
+      "title": "Síť",
+      "description": "Konfigurovat připojení k blockchainové síti.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (brzy)",
+      "rpcEndpoint": "RPC endpoint",
+      "pingRpc": "Ping RPC",
+      "testing": "Testování...",
+      "rpcOk": "RPC OK",
+      "rpcError": "Chyba RPC",
+      "save": "Uložit",
+      "saved": "Nastavení uloženo",
+      "connectionStatus": "Stav připojení",
+      "connected": "Připojeno",
+      "disconnected": "Odpojeno"
+    },
+    "cache": {
+      "title": "Mezipaměť",
+      "description": "Vymazat cachovaná data pro obnovení informací o tokenech a kontraktech.",
+      "clearCache": "Vymazat mezipaměť",
+      "cacheCleared": "Mezipaměť vymazána! Restartujte pro aplikaci změn."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Pomáhejte zabezpečovat blockchain udržováním telefonu online. Dokončete alespoň jednu vzorkovací úlohu denně, abyste zůstali způsobilí pro odměny.",
+      "wifiOnly": "Pouze WiFi",
+      "wifiOnlyHint": "Šetří mobilní data",
+      "minBattery": "Minimální baterie",
+      "minBatteryHint": "Nespustí se pod touto úrovní",
+      "background": "Běžet na pozadí",
+      "backgroundHint": "Funguje i při zavřené aplikaci",
+      "lastSample": "Poslední aktivita",
+      "noSamples": "Zatím žádná aktivita. Nechte aplikaci otevřenou pro spuštění.",
+      "staleWarning": "Dnes neviděn — znovu otevřete aplikaci pro obnovení.",
+      "androidBatteryWarning": "Optimalizace baterie může bránit vzorkování",
+      "androidBatteryHint": "Přejděte do Nastavení → Aplikace → Umotu → Baterie → vyberte „Neomezeno“ pro povolení vzorkování na pozadí.",
+      "openSettings": "Klepněte pro otevření nastavení",
+      "tip": "Aktivujte „Běžet na pozadí“ pro maximální potenciál výdělků.",
+      "runNow": "Spustit nyní",
+      "running": "Běží…",
+      "lastError": "Poslední chyba",
+      "status": {
+        "active": "Aktivní",
+        "inactive": "Neaktivní",
+        "paused": "Pozastaveno"
+      }
+    },
+    "permissions": {
+      "title": "Oprávnění",
+      "description": "Spravovat připojené MiniAplikace a jejich oprávnění.",
+      "openMiniApps": "Otevřít MiniAplikace",
+      "manageConnections": "Spravovat",
+      "noConnections": "Žádná připojení",
+      "revokeAccess": "Odvolat přístup",
+      "lastUsed": "Naposledy použito"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Vítejte v Umotu",
+      "subtitle": "10 dolarů denně, všem a všude",
+      "getStarted": "Začít"
+    },
+    "language": {
+      "title": "Vyberte jazyk",
+      "continue": "Pokračovat"
+    },
+    "wallet": {
+      "title": "Vaše peněženka",
+      "createNew": "Vytvořit novou peněženku",
+      "importExisting": "Importovat stávající",
+      "creating": "Vytváření peněženky..."
+    },
+    "verify": {
+      "title": "Ověřte, že jste člověk",
+      "description": "Pro přijímání denních odměn ověřte, že jste unikátní člověk.",
+      "continue": "Pokračovat"
+    }
+  },
+  "poh": {
+    "subtitle": "Odemknout denní odměny",
+    "description": "Ověřte živost pomocí Inlyf pro odemknutí odměn. Žádná biometrie není uložena on-chain; vydává se pouze krátkodobý certifikát.",
+    "howItWorks": "Jak to funguje",
+    "howItWorksDesc": "Krátká kontrola živosti (sken obličeje) ověří, že jste člověk. Certifikát platí 90 dní a lze ho kdykoli obnovit.",
+    "adultQuestion": "Jste dospělý (18+)?",
+    "yesAdult": "Ano, 18+",
+    "noMinor": "Ne / nezletilý",
+    "selectAge": "Vyberte prosím možnost",
+    "verifying": "Ověřování...",
+    "startVerification": "Spustit ověření",
+    "skipForNow": "Přeskočit prozatím",
+    "status": {
+      "notVerified": "Zatím neověřeno.",
+      "notVerifiedDetail": "Spusťte ověření pro odemknutí odměn.",
+      "unavailable": "Stav nedostupný.",
+      "verified": "Jste ověřeni.",
+      "validFor": "Platné přibližně {{days}} den",
+      "validFor_plural": "Platné přibližně {{days}} dní",
+      "expired": "Ověření vypršelo nebo nebylo nalezeno.",
+      "expiredDetail": "Spusťte znovu kontrolu živosti pro obnovení certifikátu."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Připojte se k poolu Sentinel pro pomoc při finalizaci bloků. Vázajte minimální částku, udržujte zařízení online a získejte odměny.",
+    "loading": "Načítání dat Sentinel...",
+    "unavailable": "Modul Sentinel nedostupný",
+    "yourStatus": "Váš stav",
+    "wallet": "Peněženka",
+    "bondedAmount": "Vázaná částka",
+    "minimumBond": "Minimální vazba",
+    "status": {
+      "notBonded": "Nevázáno",
+      "bonded": "Vázáno",
+      "unbonding": "Uvolňování vazby (dostupné {{date}})"
+    },
+    "rewards": {
+      "title": "Odměny",
+      "claimableNow": "K vyžádání nyní",
+      "accruing": "Akumulující se",
+      "totalClaimed": "Celkem vyžádáno",
+      "claiming": "Vyžadování...",
+      "claimRewards": "Vyžádat odměny"
+    },
+    "bond": {
+      "createTitle": "Vytvořit vazbu",
+      "topUpTitle": "Doplnit vazbu",
+      "createDescription": "Vázajte UMT pro připojení k výboru Sentinel a začněte vydělávat.",
+      "topUpDescription": "Zvýšte svůj vklad pro větší podíl odměn.",
+      "amountLabel": "Částka (UMT)",
+      "processing": "Zpracování...",
+      "bond": "Vázat",
+      "topUp": "Doplnit",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Automatické vyžádání",
+      "description": "Nechte relé automaticky vyžadovat odměny Sentinel při jejich akumulaci.",
+      "checking": "Kontrola...",
+      "enabled": "Aktivováno",
+      "disabled": "Deaktivováno",
+      "expires": "Vyprší",
+      "processing": "Zpracování...",
+      "enable": "Aktivovat automatické vyžádání",
+      "disable": "Deaktivovat automatické vyžádání"
+    },
+    "activity": {
+      "title": "Nedávná aktivita",
+      "claims": "Vyžádání",
+      "slashes": "Tresty",
+      "noClaims": "Žádná vyžádání v posledních {{blocks}}k blocích.",
+      "noSlashes": "Žádné tresty v nedávném okně.",
+      "unknown": "neznámé"
+    },
+    "errors": {
+      "configureEnv": "Nakonfigurujte RPC + proměnné prostředí kontraktu Sentinel.",
+      "noWallet": "Vytvořte nebo importujte peněženku pro připojení k výboru Sentinel.",
+      "loadFailed": "Načtení dat Sentinel selhalo."
+    },
+    "toast": {
+      "rewardsClaimed": "Odměny Sentinel vyžádány.",
+      "noRewards": "Žádné čekající odměny k vyžádání.",
+      "claimFailed": "Vyžádání selhalo.",
+      "autoClaimEnabled": "Automatické vyžádání Sentinel aktivováno",
+      "autoClaimDisabled": "Automatické vyžádání Sentinel deaktivováno",
+      "autoClaimFailed": "Přepnutí automatického vyžádání selhalo",
+      "configureBondAddress": "Nakonfigurujte adresu vazby Sentinel",
+      "rpcNotSet": "RPC není nastaveno",
+      "minBondUnavailable": "Minimální vazba nedostupná",
+      "enterBondAmount": "Zadejte částku vazby",
+      "minBondRequired": "Počáteční vazba musí být alespoň {{amount}} UMT",
+      "topUpGreaterThanZero": "Částka doplnění musí být větší než 0",
+      "insufficientBalance": "Nedostatečný zůstatek na vazbu + gas",
+      "bondSubmitted": "Transakce vazby odeslána",
+      "topUpSubmitted": "Transakce doplnění odeslána",
+      "bondConfirmed": "Vazba potvrzena",
+      "topUpConfirmed": "Doplnění potvrzeno",
+      "bondReverted": "Vazba vrácena on-chain",
+      "bondFailed": "Vazba selhala"
+    }
+  },
+  "miniapps": {
+    "title": "MiniAplikace",
+    "subtitle": "Prozkoumejte aplikace postavené na Umotu",
+    "explore": "Prozkoumejte aplikace postavené na Umotu",
+    "noApps": "Zatím žádné aplikace",
+    "browseByCategory": "Procházet podle kategorií",
+    "appsCount": "{{count}} aplikací",
+    "featured": "DOPORUČENÉ",
+    "comingSoon": "Brzy",
+    "liveApps": "Živé aplikace",
+    "available": "DOSTUPNÉ",
+    "pohDescription": "Ověřte svou lidskost pomocí Inlyf pro odemknutí denních odměn.",
+    "vision": {
+      "title": "Naše vize",
+      "tagline": "10 dolarů denně, všem a všude",
+      "description": "Umotu buduje infrastrukturu pro svět, kde se každý může zapojit do globální ekonomiky – bez ohledu na to, kde žije nebo jakou banku používá.",
+      "readMore": "Přečíst celou vizi",
+      "pillars": {
+        "title": "Tři základní principy",
+        "ubi": {
+          "title": "10 dolarů/den, všem a všude",
+          "description": "Univerzální základní příjem jako vydělané odměny za zabezpečení sítě. Kdokoli s telefonem se může zapojit a vydělávat."
+        },
+        "capital": {
+          "title": "Kapitál se pohybuje volně",
+          "description": "Téměř nulové tření pro platby a převody – přeshraniční i lokální. Firmy platí ~0,1 % na pokrytí nákladů platformy, jednotlivci nic."
+        },
+        "sovereignty": {
+          "title": "Respekt k měnové suverenitě",
+          "description": "Nenahrazujeme fiat měny – zlepšujeme jejich fungování. Banky vydávají stablecoiny vázané na lokální měnu. Měnová politika je účinnější s širším dosahem a menším třením."
+        }
+      },
+      "notReplacing": "Umotu nekonkuruje centrálním bankám. Budujeme lepší infrastrukturu pro fiat měny: méně tření, globální přístup a vyšší efektivitu a odolnost trhu."
+    },
+    "building": {
+      "title": "Budujeme ekosystém",
+      "description": "Tyto aplikace ukazují, co je na Umotu možné. Některé jsou připravené nyní, další brzy přijdou. Vývojáři z celého světa jsou zváni k tvorbě a spuštění na naší platformě.",
+      "developerDocs": "Dokumentace pro vývojáře"
+    },
+    "categories": {
+      "payments": {
+        "name": "Platby a finance",
+        "apps": {
+          "sendMoney": {
+            "name": "Poslat peníze",
+            "description": "Posílejte UMT nebo stablecoiny okamžitě komukoli na světě – bez bank.",
+            "example": "Pošlete 20 dolarů rodině do zahraničí během sekund, ne dnů. Žádné skryté poplatky."
+          },
+          "billPay": {
+            "name": "Platba účtů",
+            "description": "Plaťte energie, telefon, internet a další přímo z peněženky."
+          },
+          "savings": {
+            "name": "Spořicí kruhy",
+            "description": "Tradiční rotující spoření (tontine, chit fund) bez důvěry díky smart kontraktům."
+          },
+          "microLoans": {
+            "name": "Mikropůjčky",
+            "description": "Peer-to-peer půjčky podpořené ověřenou lidskostí a reputací."
+          }
+        }
+      },
+      "transport": {
+        "name": "Doprava a doručování",
+        "apps": {
+          "rideSharing": {
+            "name": "Sdílení jízd",
+            "description": "Rezervujte jízdy placené kryptem. Řidiči si nechají více, cestující platí méně – bez prostředníka beroucího 30 %.",
+            "example": "Taxi v Lagosu stojí ₦800. Řidič dostane ₦799,2 místo ₦560."
+          },
+          "delivery": {
+            "name": "Doručování",
+            "description": "Objednávejte jídlo, potraviny nebo balíky. Kurýři dostávají férové mzdy ve stable tokenech."
+          },
+          "publicTransit": {
+            "name": "Veřejná doprava",
+            "description": "Plaťte za autobusy, metro a vlaky jedním klepnutím. Žádné nákupy jízdenek."
+          }
+        }
+      },
+      "travel": {
+        "name": "Cestování a pohostinství",
+        "apps": {
+          "hotels": {
+            "name": "Hotely a ubytování",
+            "description": "Rezervujte ubytování po celém světě. Hostitelé přijímají stablecoiny, hosté šetří na poplatcích.",
+            "example": "Rezervujte pokoj na Bali za 40 $/noc. Hostitel dostane 39,96 $."
+          },
+          "flights": {
+            "name": "Lety",
+            "description": "Hledejte a rezervujte lety. Plaťte kryptem, získejte odměny UMT."
+          },
+          "tours": {
+            "name": "Lokální prohlídky",
+            "description": "Rezervujte zážitky s místními průvodci. Platby jdou přímo jim."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Nakupování a obchod",
+        "apps": {
+          "localMarket": {
+            "name": "Lokální trh",
+            "description": "Nakupujte a prodávejte lokálně. Platby QR kódy činí pouliční obchod bezproblémovým.",
+            "example": "Prodejce v Jakartě přijímá USDC. Zákazník zaplatí, prodejce vidí prostředky okamžitě."
+          },
+          "ecommerce": {
+            "name": "E-commerce",
+            "description": "Nakupujte online od obchodníků po celém světě. Žádné poplatky za karty, žádné chargebacky.",
+            "example": "Kupte elektroniku ze Shenzhen. Plaťte stablecoiny, ušetřete 3 % oproti kartě."
+          },
+          "marketplace": {
+            "name": "Peer-to-peer tržiště",
+            "description": "Vystavte předměty na prodej, nakupujte od ostatních. Escrow chrání obě strany."
+          }
+        }
+      },
+      "services": {
+        "name": "Služby a práce",
+        "apps": {
+          "remittance": {
+            "name": "Remitence",
+            "description": "Posílejte peníze domů. Příjemci mohou vybrat v lokální měně nebo si je nechat digitálně.",
+            "example": "Pošlete 200 $ z USA na Filipíny. Příjemce dostane ₱11 000+ místo ₱10 400."
+          },
+          "freelance": {
+            "name": "Freelance práce",
+            "description": "Dostávejte platby za gigy okamžitě. Žádné čekání 30 dní na bankovní převod."
+          },
+          "homeServices": {
+            "name": "Domácí služby",
+            "description": "Najímejte instalatéry, elektrikáře, uklízeče. Plaťte až po dokončení práce."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Vybudujte svůj byznys na Umotu",
+      "subtitle": "Spusťte aplikace s vestavěnými platbami",
+      "description": "Vytvářejte aplikace využívající ekosystém Umotu – miliony ověřených lidí s denním příjmem, připravených transactovat. Žádné starosti s integrací plateb.",
+      "benefits": {
+        "noFees": "Téměř nulové poplatky za zpracování plateb – ponechejte si 99,9 % příjmů",
+        "verifiedUsers": "Všichni uživatelé jsou ověření lidé – žádní boti ani podvody",
+        "globalReach": "Dosáhněte uživatelů ve více než 190 zemích od prvního dne",
+        "instantPayments": "Okamžité vyrovnání – žádné 30denní zpoždění plateb"
+      },
+      "exampleTitle": "Příklad použití",
+      "exampleText": "Aplikace sdílení jízd na Umotu si ponechá 99,9 % jízdného oproti 70 % na tradičních platformách. Řidiči vydělají více, cestující zaplatí méně.",
+      "docsButton": "Přečíst dokumentaci",
+      "buildButton": "Začít vyvíjet"
+    },
+    "bank": {
+      "title": "Jste banka?",
+      "subtitle": "Vydávejte stablecoiny na Umotu",
+      "description": "Licencované finanční instituce mohou vydávat stablecoiny v lokální měně na Umotu a využít rostoucí UBI ekonomiku s miliony uživatelů.",
+      "benefits": {
+        "reserves": "Vydělávejte výnos z rezerv: investujte do dluhopisů a nízkorizikových aktiv",
+        "mintRedeem": "Účtujte poplatky za mint/redeem: typicky 0,1 % za konverze fiat ↔ stablecoin",
+        "users": "Přístup k milionům denně aktivních příjemců UBI",
+        "global": "Okamžitě rozšiřte dosah přes hranice",
+        "custody": "Vaše rezervy, vaše úschova: plná kontrola nad zajišťovacími aktivy"
+      },
+      "revenueModel": "Jak vydavatelé vydělávají",
+      "revenueNote": "Jako Tether a další velcí vydavatelé pochází příjmy z výnosu rezerv a konverzních poplatků. S miliony uživatelů přijímajících denní UBI může být objem mint/redeem značný.",
+      "futureNote": "Vydavatelé mohou v budoucnu také dostat podíl z transakčních poplatků při vývoji protokolu.",
+      "learnMore": "Dozvědět se více",
+      "applyButton": "Požádat nyní"
+    }
+  },
+  "news": {
+    "title": "Novinky a aktualizace",
+    "description": "Zůstaňte v obraze s nejnovějšími oznámeními, tipy a bezpečnostními upozorněními od týmu Umotu.",
+    "empty": "Momentálně žádné novinky",
+    "unread": "Nové",
+    "unreadCount": "{{count}} nových",
+    "markAsRead": "Označit jako přečtené",
+    "types": {
+      "announcement": "Oznámení",
+      "tip": "Tip",
+      "security": "Bezpečnost",
+      "airdrop": "Airdrop",
+      "update": "Aktualizace"
+    }
+  },
+  "governance": {
+    "title": "Správa",
+    "subtitle": "Utvářejte budoucnost Umotu",
+    "description": {
+      "title": "Váš hlas má význam",
+      "body": "Pomozte utvářet budoucnost Umotu hlasováním o komunitních návrzích. Umotu Foundation tyto hlasování organizuje, ale rozhoduje komunita."
+    },
+    "empty": "Žádné aktivní návrhy",
+    "emptyHint": "Vrátíte se později pro nová komunitní rozhodnutí k hlasování.",
+    "newPolls": "Nové",
+    "newPollsCount": "{{count}} nových",
+    "vote": "hlas",
+    "votes": "hlasů",
+    "endsIn": "Končí za {{time}}",
+    "ended": "Ukončeno",
+    "tapToVote": "Klepněte na možnost výše pro odevzdání hlasu",
+    "submitting": "Odesílání hlasu...",
+    "alreadyVoted": {
+      "title": "Již hlasováno",
+      "message": "V tomto návrhu jste již hlasovali."
+    },
+    "confirm": {
+      "title": "Potvrdit hlas",
+      "message": "Hlasovat pro",
+      "note": "Tato akce nelze vrátit.",
+      "submit": "Odevzdat hlas"
+    },
+    "success": {
+      "title": "Hlas odevzdán!",
+      "message": "Děkujeme za účast v komunitní správě."
+    },
+    "error": {
+      "title": "Hlasování selhalo",
+      "message": "Odeslání hlasu selhalo. Zkuste to prosím znovu."
+    }
+  },
+  "learn": {
+    "title": "Vzdělávání",
+    "subtitle": "Vše, co potřebujete vědět o Umotu",
+    "featured": "DOPORUČENÉ",
+    "whatIs": {
+      "title": "Co je Umotu?",
+      "subtitle": "10 dolarů denně, všem a všude",
+      "intro": "Umotu si klade za cíl umožnit komukoli vydělat přibližně 10 dolarů/den pouze pomocí smartphonu. Žádné drahé hardware, žádné speciální dovednosti, žádné hranice.",
+      "howDifferent": "Čím je jiný?",
+      "noMiddleman": "Žádný prostředník: Komunikujete přímo se sítí – není potřeba bankovní účet",
+      "globalAccess": "Globální přístup: Funguje kdekoli s internetem",
+      "youOwnIt": "Vlastníte to vy: Vaše peněženka, vaše klíče, vaše kontrola",
+      "vision": "Vize",
+      "visionText": "Miliardy lidí mohou pomáhat udržovat veřejnou účetní knihu čestnou a za to dostávat odměnu. Na Umotu telefony provádějí lehké kontroly, které činí síť důvěryhodnou.",
+      "nameOrigin": "Původ názvu",
+      "nameOriginText": "Umotu čerpá inspiraci z jazyka Paʻumotu, polynéského jazyka. Název používáme s úctou jako připomínku budování pro obyčejné lidi."
+    },
+    "earn": {
+      "title": "Jak vyděláváte",
+      "subtitle": "Váš telefon pracuje; vy dostáváte platbu",
+      "intro": "Váš telefon provádí drobné úkoly, které pomáhají všem – a vy za to dostanete odměnu.",
+      "steps": "Tři jednoduché kroky",
+      "step1": "1) Dokážte, že jste člověk: rychlá kontrola živosti (a občasné obnovení) zajišťuje jeden účet na osobu.",
+      "step2": "2) Pomáhejte síti: váš telefon spouští vzorkování dostupnosti dat (DA) a další lehké kontroly na pozadí.",
+      "step3": "3) Získejte denní odměny: jste placeni za tuto práci, s cílem přibližně 10 dolarů/den v závislosti na politice sítě.",
+      "localCurrency": "Placeno ve vaší měně",
+      "localCurrencyText": "Vyberte výplatní token: stablecoiny lokální měny (kde jsou dostupné) nebo UMT. Částky cílí na ~10 USD a mohou se upravovat podle účasti a tržních podmínek."
+    },
+    "whereMoney": {
+      "title": "Odkud se berou ty 10 dolary?",
+      "subtitle": "Vyděláváte, protože vykonáváte práci",
+      "intro": "To je otázka č. 1. Krátká odpověď: protože poskytujete službu, kterou síť potřebuje.",
+      "realWork": "Váš telefon vykonává reálnou práci",
+      "realWork1": "Vzorkování dostupnosti dat: váš telefon kontroluje, že data bloků jsou dostupná a správná",
+      "realWork2": "Lidská účast: dokazujete jeden-člověk-jeden-účet pro zastavení botů a spamu",
+      "realWork3": "Tyto úkoly chrání všechny; bez nich síť slábne",
+      "valueSource": "Dva zdroje hodnoty",
+      "utility": "Užitečnost: rychlé platby s nízkými poplatky, které lidé volí používat",
+      "consensus": "Konsenzus: hodnota, která roste s více lidmi schopnými ověřovat a souhlasit s pravidly",
+      "distribution": "Jak se odměny rozdělují",
+      "newTokens": "Nové tokeny UMT jsou vytvářeny a sdíleny s ověřenými účastníky telefonů (ne s validátory)",
+      "fees": "Část poplatků a nabídek builderů je sdílena s telefonními sentinely za finalizaci bloků",
+      "treasury": "Malá část financuje průběžnou údržbu a stabilizační programy",
+      "whyDifferent": "Proč je to jiné",
+      "btcProblem": "Bitcoin odměňuje specializované těžaře (kapitálově náročné)",
+      "ethProblem": "Ethereum odměňuje velké stakeře (kapitálově náročné)",
+      "umotuSolution": "Umotu odměňuje obyčejné telefony (nízké praktické náklady na účast)",
+      "conclusion": "Není to dárek: jste placeni za práci, která udržuje sdílenou finanční infrastrukturu čestnou a užitečnou."
+    },
+    "security": {
+      "title": "Zabezpečení peněženky",
+      "subtitle": "Chraňte své peníze",
+      "intro": "Vaše peněženka je jako digitální trezor, který ovládáte pouze vy.",
+      "recovery": "Vašich 12 slov a soukromý klíč",
+      "recoveryText": "Vašich 12 tajných slov (obnovovací fráze) a soukromý klíč odemykají peněženku. Kdokoli s jedním z nich může přesunout vaše prostředky.",
+      "rules": "Zlatá pravidla",
+      "rule1": "NIKDY nesdílejte svých 12 slov nebo soukromý klíč s nikým – ani s přispěvateli Umotu.",
+      "rule2": "Napište svých 12 slov na papír a uložte offline. Neukládejte je na screenshoty, fotky nebo cloudové poznámky.",
+      "rule3": "Pokud exportujete soukromý klíč, uložte ho offline (papír, hardware nebo šifrovaný správce, kterému plně důvěřujete).",
+      "rule4": "Pokud ztratíte svých 12 slov a soukromý klíč, nikdo nemůže peněženku obnovit.",
+      "warning": "Důležité",
+      "warningText": "Soukromý klíč poskytuje plný přístup. Jeho odhalení nebo kopírování do jiných aplikací může vystavit vaše prostředky. Exportujte pouze pokud chápete riziko.",
+      "reveal": "Zobrazit / Exportovat soukromý klíč",
+      "revealText": "Soukromý klíč můžete zobrazit nebo exportovat v Nastavení peněženky. Vyžadujeme biometrii/PIN, zobrazíme ho jen na pár sekund a nikdy ho nenahráváme. Pro velké zůstatky zvažte hardware peněženku.",
+      "bestPractices": "Nejlepší postupy",
+      "best1": "Aktivujte zamknutí obrazovky a biometrii na telefonu.",
+      "best2": "Udržujte aplikaci aktualizovanou pro nejnovější bezpečnostní opravy.",
+      "best3": "Používejte samostatnou peněženku pro velké úspory; malé částky nechte na telefonu pro denní použití.",
+      "scamBannerTitle": "Nikdo legitimní to nebude žádat",
+      "scamBannerText": "Pokud někdo žádá vašich 12 slov nebo soukromý klíč, je to podvod."
+    },
+    "stablecoins": {
+      "title": "Porozumění stablecoinům",
+      "subtitle": "Digitální peníze sledující lokální měnu",
+      "intro": "Stablecoiny jsou digitální tokeny navržené tak, aby sledovaly běžné peníze (jako USD, ZAR, NGN).",
+      "examples": "Příklady",
+      "example1": "1 ZAR1 ≈ 1 jihoafrický rand",
+      "example2": "1 USD1 ≈ 1 americký dolar",
+      "example3": "1 NGN1 ≈ 1 nigerijská naira",
+      "backed": "Vydávány partnery",
+      "backedText": "Stablecoiny na Umotu vydávají regulovaní partneři a jsou navrženy pro udržení 1:1 hodnoty s rezervami. Vydavatelé publikují důkazy rezerv a podmínky vyplacení.",
+      "convert": "Konverze na hotovost",
+      "convertText": "Konvertujte přes partnerské banky/burzy nebo utrácejte přímo tam, kde jsou přijímány."
+    },
+    "economics": {
+      "title": "Ekonomika UMT",
+      "subtitle": "Kdo dostane co a proč",
+      "intro": "UMT má pevnou zásobu 100 miliard tokenů. Většina je vyplácena obyčejným uživatelům telefonů, kteří pomáhají udržovat síť čestnou.",
+      "supply": "Zásoba a distribuce",
+      "supplyBullets": [
+        "Naprostá většina nabídky tokenů je vyhrazena pro účastníky s telefony v průběhu času a je uvolňována prostřednictvím Emission Controller. Emission Controller omezuje denní vydávání na maximálně 0,01% zbývající nabídky, čímž zajišťuje dlouhodobou udržitelnost. Podle tohoto harmonogramu zůstává přibližně 68% celkové nabídky po 10 letech a přibližně 15% po 50 letech.",
+        "Malá část nabídky je vytvořena při spuštění pro specifické účely, včetně airdropa pro první uživatele, komunitního prodeje, alokace nadace a nouzové rezervy atd."
+      ],
+      "premine": "Alokace při spuštění (předběžná, může se změnit při spuštění mainnetu)",
+      "premineTable": [
+        {
+          "label": "Airdrop uživatelům",
+          "value": "1,0 %"
+        },
+        {
+          "label": "Komunitní prodej",
+          "value": "0,6 %"
+        },
+        {
+          "label": "Umotu Foundation (časově uzamčeno)",
+          "value": "0,2 %"
+        },
+        {
+          "label": "Nouzový fond (spravovaný)",
+          "value": "0,2 %"
+        }
+      ],
+      "emissions": "Denní odměny pro telefony",
+      "emissionsText": "Každý den může síť emitovat maximálně 0,01 % zbývajícího emisního poolu. Tuto částku rozpočtujeme tak, aby ověřené telefony cílily přibližně 10 dolarů/den, s úpravami podle počtu účastníků a tržních podmínek.",
+      "fees": "Poplatky a Sentinel",
+      "feesText": "Pomocníci Sentinel (volitelné, pokročilé) získávají podíl z transakčních poplatků a nabídek builderů. Toto je oddělené od denních emisí.",
+      "transparency": "Transparentnost",
+      "transparencyText": "Vestingové plány a peněženky jsou veřejné. Denní limity emisí a realizované výplaty jsou zveřejňovány v aplikaci.",
+      "disclaimerTitle": "Poznámka v prostém jazyce",
+      "disclaimerText": "Toto není investiční rada. Odměny závisí na politice sítě a účasti. Aplikace negarantuje pevný příjem."
+    },
+    "contribute": {
+      "title": "Jak přispět",
+      "subtitle": "Pomozte budovat Umotu",
+      "intro": "Umotu je open source a řízený komunitou. Každý může pomoci – ať už kódováním, překlady nebo prostým sdílením zpětné vazby.",
+      "waysTitle": "Způsoby přispění",
+      "code": {
+        "title": "Vylepšit kód",
+        "text": "Opravujte chyby, přidávejte funkce, pište testy nebo recenzujte pull requesty. Podívejte se na naše GitHub repozitáře pro aplikaci, smart kontrakty a backend služby.",
+        "cta": "Zobrazit GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Pomoci s překlady",
+        "text": "Učiňte aplikaci přirozenou ve vašem jazyce. Editujte i18n locale soubory a testujte každou obrazovku. Vaše úpravy pomohou milionům.",
+        "cta": "Průvodce překladem",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "Rozšířit BIP-39 jazyky",
+        "text": "Navrhněte nové nebo vylepšené seznamy slov, aby více lidí vidělo svou 12slovnou obnovovací frázi ve svém rodném jazyce.",
+        "cta": "Viz BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Zapojit se do správy",
+        "text": "Čtěte návrhy, diskutujte otevřeně a hlasujte v aplikaci. Váš hlas pomáhá řídit parametry sítě a alokace grantů.",
+        "cta": "Otevřít správu",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Šířit povědomí",
+        "text": "Řekněte přátelům, pište tutoriály, publikujte shorts, odpovídejte na otázky. Silnější komunita znamená silnější síť pro všechny.",
+        "cta": "Sdílet Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "Všechny příspěvky jsou dobrovolné. Neexistuje formální zaměstnání ani odměna, pokud není specifikováno v grantovém návrhu."
+    },
+    "decentralization": {
+      "title": "Proč decentralizace",
+      "subtitle": "Žádný jediný bod kontroly",
+      "intro": "Decentralizace znamená, že žádná jediná společnost nebo vláda nemůže síť vypnout nebo zabavit vaše prostředky.",
+      "benefits": "Výhody pro vás",
+      "benefit1": "Vždy dostupná: 24/7 provoz",
+      "benefit2": "Nižší poplatky: malé síťové poplatky místo 3–5 % poplatků za karty",
+      "benefit3": "Bez hranic: posílejte hodnotu globálně",
+      "benefit4": "Odolná proti cenzuře: vaše klíče, vaše peníze",
+      "benefit5": "Transparentní: kdokoli může ověřit fungování systému",
+      "howWorks": "Jak to funguje",
+      "howWorksText": "Validátoři navrhují bloky každých ~2 sekund. Telefony (jako ten váš) ověřují a finalizují lehkými kontrolami. Mnoho malých příspěvků se sčítá do silného zabezpečení."
+    },
+    "noCompany": {
+      "title": "Žádná společnost, žádní zákazníci",
+      "subtitle": "Porozumění modelu",
+      "intro": "Neexistuje „Umotu, Inc.“ ovládající protokol. Umotu je otevřená sada pravidel, kterou může kdokoli používat.",
+      "notCompany": "Co Umotu NENÍ",
+      "notCompany1": "NENÍ společnost s účty zákazníků",
+      "notCompany2": "NENÍ banka nebo převodce peněz",
+      "notCompany3": "NENÍ ovládáno žádnou jedinou entitou",
+      "notCompany4": "NEMŮŽE vracet transakce",
+      "whatIs": "Co Umotu JE",
+      "whatIs1": "Protokol: jako email nebo web – otevřená, interoperabilní pravidla",
+      "whatIs2": "Zaměřené na telefony: běží s pomocí obyčejných smartphonů",
+      "whatIs3": "Řízené komunitou: jste účastník, ne zákazník",
+      "foundation": "Umotu Foundation",
+      "foundationIntro": "Nezisková organizace podporující ekosystém (referenční aplikace, dokumentace, komunitní programy), ale neovládající protokol.",
+      "foundationTask1": "Udržuje mobilní aplikaci a explorer jako referenční implementace",
+      "foundationTask2": "Provozuje některou veřejnou infrastrukturu (další ji mohou provozovat sami)",
+      "foundationTask3": "Koordinuje komunitní správu (novinky, hlasování)",
+      "foundationTask4": "Recenzuje a uvádí podporované stablecoiny",
+      "foundationTask5": "Publikuje vzdělávací a bezpečnostní průvodce",
+      "foundationNote": "Nadace nemůže přistupovat k vaší peněžence a nemůže vracet transakce."
+    },
+    "scamPrevention": {
+      "title": "Jak se vyhnout podvodům",
+      "subtitle": "Chraňte se",
+      "intro": "Umotu Foundation vás NIKDY nekontaktuje přes DM. Kdokoli předstírající „podporu“ je podvodník.",
+      "redFlags": "Červené vlajky",
+      "redFlag1": "Někdo tvrdící, že je zákaznická podpora",
+      "redFlag2": "Odkazy na „ověření“ nebo „upgrade“ účtu",
+      "redFlag3": "Žádosti o vaši 12slovnou frázi nebo soukromý klíč",
+      "redFlag4": "Sliby bonusových tokenů pokud pošlete prostředky",
+      "redFlag5": "Aplikace nebo weby žádající „aktivaci“ odměn",
+      "truth": "Pravda",
+      "truth1": "Neexistuje zákaznická podpora, která by mohla resetovat peněženku",
+      "truth2": "Všechny oficiální aktualizace se objevují v této aplikaci",
+      "truth3": "Nikdo z Umotu nebude žádat vaši obnovovací frázi nebo soukromý klíč",
+      "truth4": "Stahujte tuto aplikaci pouze z oficiálního Apple Store nebo Google Play",
+      "whatToDo": "Pokud vás někdo kontaktuje",
+      "action1": "Neodpovídejte",
+      "action2": "Neklikejte na odkazy",
+      "action3": "Nesdílejte informace",
+      "action4": "Blokujte a hlaste"
+    },
+    "airdrop": {
+      "title": "Testnet Airdrop",
+      "subtitle": "Raní uživatelé jsou oceněni",
+      "intro": "Jste brzy! Umotu je v testnetu. Aktivní účastníci testnetu mohou dostat alokaci při spuštění mainnetu.",
+      "howToQualify": "Jak se kvalifikovat",
+      "step1": "Vytvořte peněženku v aplikaci",
+      "step2": "Dokončete ověření lidskosti (Proof of Human)",
+      "step3": "Pravidelně používejte aplikaci během testnetu",
+      "whenAirdrop": "Kdy bude airdrop?",
+      "whyTestnet": "Testnet je zásadní: uživatelé se učí zabezpečení peněženky a systém je testován na bezpečnost, robustnost a efektivitu před mainnetem.",
+      "timeline": "Mainnet se očekává v Q1 nebo Q2 2026. Airdrop proběhne přibližně ve stejnou dobu jako spuštění mainnetu.",
+      "howMuch": "Kolik dostanu?",
+      "totalPool": "Celkový pool airdropu: 1 000 000 000 tokenů UMT. Váš podíl závisí na celkovém počtu účastníků a ceně UMT při spuštění.",
+      "scenario2": "1M uživatelů: ~1 000 UMT na uživatele, očekávaná cena ~$1, hodnota airdropu ~$1 000",
+      "scenario3": "10M uživatelů: ~100 UMT na uživatele, očekávaná cena ~$20, hodnota airdropu ~$2 000",
+      "scenario4": "100M uživatelů: ~10 UMT na uživatele, očekávaná cena ~$300, hodnota airdropu ~$3 000",
+      "disclaimer": "Toto jsou pouze projekce, ne záruky. Skutečné hodnoty závisí na tržních podmínkách a pravidlech programu.",
+      "whatYouGet": "Co dostanete",
+      "reward": "Při mainnetu může vaše testnet peněženka obdržet reálné tokeny na základě účasti a pravidel programu. Ranější a aktivnější uživatelé mají prioritu.",
+      "note": "Poznámka: Tokeny testnetu nemají hodnotu. Jakákoli alokace mainnetu je určena politikou programu při spuštění. Všechny novinky o airdropu budou publikovány pouze v této aplikaci."
+    },
+    "gettingStarted": {
+      "title": "Začínáme",
+      "subtitle": "Vašich prvních pět minut",
+      "intro": "Zde je rychlé nastavení:",
+      "checklist": "Kontrolní seznam nastavení",
+      "check1": "1) Vyberte jazyk (hotovo!)",
+      "check2": "2) Vytvořte nebo importujte peněženku",
+      "check3": "3) DŮLEŽITÉ: Napište svých 12 slov na papír",
+      "check4": "4) Dokončete ověření lidskosti (rychlý sken)",
+      "check5": "5) Nechte aplikaci běžet pro získávání denních odměn",
+      "tips": "Profesionální tipy",
+      "tip1": "Povolte přístup na pozadí, aby kontroly mohly běžet",
+      "tip2": "Kontrolujte denně pro zobrazení odměn",
+      "tip3": "Pozvěte přátele – více uživatelů činí síť silnější"
+    }
+  },
+  "common": {
+    "loading": "Načítání...",
+    "error": "Chyba",
+    "retry": "Zkusit znovu",
+    "cancel": "Zrušit",
+    "save": "Uložit",
+    "done": "Hotovo",
+    "continue": "Pokračovat",
+    "confirm": "Potvrdit",
+    "yes": "Ano",
+    "no": "Ne",
+    "ok": "OK",
+    "success": "Úspěch",
+    "failed": "Selhalo",
+    "copied": "Zkopírováno!",
+    "pullToRefresh": "Táhněte pro obnovení",
+    "notSet": "Nenastaveno"
+  },
+  "errors": {
+    "networkError": "Chyba sítě. Zkontrolujte prosím připojení.",
+    "genericError": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "walletNotFound": "Peněženka nenalezena",
+    "transactionFailed": "Transakce selhala",
+    "invalidInput": "Neplatný vstup"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Vítejte v Umotu",
+  "onboard_wallet_title": "Nastavit peněženku",
+  "onboard_wallet_explain": "Vytvořte nebo importujte peněženku pro přijímání odměn.",
+  "wallet_create": "Vytvořit novou peněženku",
+  "wallet_import": "Importovat peněženku",
+  "wallet_import_explain": "Zadejte svou 12slovnou obnovovací frázi",
+  "wallet_created": "Peněženka připravena",
+  "wallet_save": "Uložit do zařízení",
+  "wallet_backup_title": "Zálohovat obnovovací frázi",
+  "wallet_backup_explain": "Napište těchto 12 slov v pořadí. Toto je JEDINÝ způsob obnovení peněženky při ztrátě zařízení.",
+  "wallet_backup_warning": "Nikdy nesdílejte obnovovací frázi. Kdokoli s těmito slovy může přistupovat k vašim prostředkům.",
+  "wallet_backup_confirm": "Napsal jsem si obnovovací frázi",
+  "wallet_backup_done": "Uložil jsem si frázi",
+  "wallet_save_first": "Nejprve prosím uložte obnovovací frázi",
+  "poh_title": "Ověřit člověka",
+  "continue": "Pokračovat",
+  "or": "NEBO",
+  "seedReveal": {
+    "title": "Obnovovací fráze",
+    "intro": "Obnovovací fráze je jediný způsob obnovení peněženky při ztrátě přístupu k tomuto zařízení. Napište ji a uložte bezpečně offline.",
+    "displayLanguage": "Zobrazeno v {{language}}",
+    "hiddenMsg": "Vaše fráze je z bezpečnostních důvodů skryta. Klepněte níže pro zobrazení.",
+    "showButton": "Zobrazit frázi",
+    "noScreenshot": "Nikdy nedělejte screenshot obnovovací fráze.",
+    "checkTitle": "Ověřit zálohu",
+    "checkPrompt": "Zadejte slova níže pro potvrzení, že jste je správně zapsali:",
+    "checkWordN": "Slovo č. {{n}}",
+    "checkIncorrect": "Jedno nebo více slov je nesprávných. Zkontrolujte prosím zálohu.",
+    "ackWritten": "Napsal jsem si obnovovací frázi",
+    "ackCannotRecover": "Chápu, že Umotu nemůže obnovit mou peněženku",
+    "cancel": "Zrušit",
+    "continue": "Uložil jsem ji"
+  }
+}

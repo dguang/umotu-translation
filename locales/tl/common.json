@@ -1,0 +1,1415 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "$10 sa isang araw, lahat kahit saan"
+  },
+  "navigation": {
+    "home": "Home",
+    "wallet": "Pitaka",
+    "miniapps": "MiniApps",
+    "back": "Bumalik",
+    "scan": "I-scan",
+    "settings": "Mga Setting",
+    "close": "Isara"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Mga Beripikadong Tao",
+      "umtPrice": "Presyo ng UMT"
+    },
+    "quickActions": {
+      "news": "Balita",
+      "vote": "Pamamahala",
+      "governance": "Pamamahala",
+      "learn": "Matuto",
+      "network": "Network"
+    },
+    "setupProgress": {
+      "title": "Progreso sa Pag-setup",
+      "steps": {
+        "language": "Wika",
+        "wallet": "Pitaka",
+        "verifyHuman": "Beripikahin ang Tao",
+        "complete": "Kumpleto"
+      },
+      "continue": "Magpatuloy",
+      "changeChoice": "Baguhin ang pinili",
+      "requiresLanguage": "Pumili muna ng wika",
+      "requiresWallet": "Gumawa muna ng pitaka"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Pang-araw-araw na Gantimpala",
+      "totalEarned": "Kabuuang Nakuha",
+      "lastClaimed": "Huling Kinuha",
+      "never": "Wala pa",
+      "configure": "I-configure",
+      "loading": "Naglo-load ng mga kita...",
+      "noWallet": "Walang pitaka",
+      "autoClaim": {
+        "label": "Auto-claim:",
+        "active": "Aktibo",
+        "setupNow": "I-setup ngayon",
+        "expired": "Nag-expire na",
+        "tapToSetup": "Pindutin upang paganahin ang awtomatikong pang-araw-araw na gantimpala"
+      }
+    },
+    "sentinel": {
+      "title": "Kita sa Sentinel",
+      "manage": "Pamahalaan",
+      "loading": "Naglo-load...",
+      "status": "Katayuan",
+      "statuses": {
+        "notBonded": "Hindi bonded",
+        "bonded": "Bonded",
+        "unbonding": "Nag-uunbond"
+      },
+      "claimable": "Maaaring Kunin",
+      "accruing": "Naglalago",
+      "bonded": "Bonded"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Awtomatikong Pang-araw-araw na Gantimpala",
+      "description": "Paganahin ang <bold>auto-claim</bold> upang awtomatikong matanggap ang iyong $10 pang-araw-araw na UBI na gantimpala—walang manu-manong pagkuha na kailangan!",
+      "benefits": {
+        "midnight": "Kinukuha sa hatinggabi ayon sa iyong timezone",
+        "lowerFees": "80% na mas mababang bayad sa gas (pinagsama-sama sa ibang mga user)",
+        "disable": "Maaari mong i-disable anumang oras sa Mga Setting"
+      },
+      "notice": "Mag-sign ka ng isang beses na mensahe ng awtorisasyon na nagpapahintulot sa aming relay na kunin para sa iyo. Walang ibinabahagi na private key.",
+      "maybeLater": "Mamaya Na Lang",
+      "enableNow": "Paganahin Ngayon"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Mga Setting ng Auto-Claim",
+      "description": "Awtomatikong kunin ang iyong pang-araw-araw na gantimpala.",
+      "checking": "Sinusuri ang katayuan...",
+      "status": "Katayuan",
+      "enabled": "Pinagana",
+      "disabled": "Hindi Pinagana",
+      "lastClaimed": "Huling Kinuha",
+      "neverClaimed": "Wala Pang Kinuha",
+      "nextClaim": "Susunod na Pagkuha",
+      "expiresAt": "Mag-e-expire Sa",
+      "timezone": "Timezone",
+      "preferredHour": "Ginustong Oras",
+      "preferredHourHint": "Pumili kung kailan dapat tumakbo ang auto-claim",
+      "enableButton": "Paganahin ang Auto-Claim",
+      "disableButton": "Huwag Paganahin ang Auto-Claim",
+      "enabling": "Pinapagana...",
+      "disabling": "Hinihiwalay...",
+      "enableSuccess": "Pinagana ang auto-claim!",
+      "enableError": "Nabigo sa pagpapagana",
+      "disableSuccess": "Hindi na pinagana ang auto-claim",
+      "disableError": "Nabigo sa paghihiwalay",
+      "updateButton": "I-update ang Mga Setting",
+      "updating": "Ini-update..."
+    },
+    "manual": {
+      "title": "Manu-manong Pagkuha",
+      "description": "Kung kailangan mo ng pondo nang mas maaga, kunin ang susunod na magagamit na gantimpala ngayon. Ang manu-manong pagkuha ay gumagamit ng gas ng iyong wallet. Mas mura ang auto-claim kung maghihintay ka. Kung walang pondo ang wallet mo, paganahin ang auto-claim o magdagdag ng native gas bago manu-manong kumita.",
+      "dayLabel": "Araw ng gantimpala",
+      "claimButton": "Kunin Ngayon",
+      "claiming": "Kinukuha...",
+      "success": "Na-submit ang pagkuha",
+      "successWithId": "Na-submit ang pagkuha (id: {{id}})",
+      "error": "Nabigo sa pagkuha",
+      "noProof": "Hindi pa nai-publish ang patunay ng gantimpala. Subukan muli pagkatapos mag-live ang snapshot ngayong araw.",
+      "unauthorized": "Nabigo ang awtorisasyon ng relayer. Pakisubukan muli o makipag-ugnayan sa suporta.",
+      "invalidDay": "Wala pang gantimpala na maaaring kunin",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Hindi available ang gas estimate",
+      "availableDays": "Mga araw ng gantimpala na magagamit: {{days}}",
+      "gasNotice": "Gumagamit ng gas ng iyong pitaka ang manu-manong pagkuha. Mas mura ang auto-claim kung maghihintay ka.",
+      "availableRange": "Saklaw: {{start}} hanggang {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Gamitin ang auto-claim (hal., {{cadence}}) upang maibawas ang mga bayarin.",
+      "newWalletHint": "Kung walang pondo ang iyong pitaka, paganahin ang auto-claim o mag-top up ng native gas bago mag-claim nang manu-mano.",
+      "remainingAfter": "+{{days}} pa pagkatapos ng batch na ito",
+      "batchSuccess": "{{count}} araw na-claim nang matagumpay",
+      "claimingProgress": "Nagca-claim {{claimed}}/{{total}}...",
+      "claimingDay": "Pinoproseso ang araw {{day}}",
+      "claimAllButton": "I-claim lahat ng {{count}} araw"
+    },
+    "timezone": {
+      "title": "Pumili ng Timezone",
+      "search": "Maghanap ng timezone...",
+      "current": "Kasalukuyang Pinili",
+      "searchResults": "Mga Resulta ng Paghahanap",
+      "noResults": "Walang nahanap",
+      "detected": "Natukoy",
+      "popular": "Mga Popular na Timezone",
+      "regions": {
+        "Americas": "Americas",
+        "Europe": "Europa",
+        "Asia": "Asya",
+        "Africa": "Africa",
+        "Oceania": "Oceania"
+      }
+    },
+    "payout": {
+      "title": "Ginustong Payout",
+      "description": "Pumili ng iyong ginustong currency ng payout.",
+      "current": "Kasalukuyan",
+      "saved": "Na-save",
+      "saveError": "Error sa pag-save",
+      "showMore": "Ipakita Pa ({{count}})",
+      "showLess": "Ipakita Lamang",
+      "native": "Native Token",
+      "stablecoin": "Stablecoin",
+      "popular": "Popular",
+      "allCurrencies": "Lahat ng Currency"
+    }
+  },
+  "wallet": {
+    "title": "Pitaka",
+    "testnetNotice": "Ang mga token sa testnet ay walang tunay na halaga",
+    "totalBalance": "Kabuuang Balanse",
+    "balance": "Balanse",
+    "address": "Address",
+    "copyAddress": "Kopyahin ang Address",
+    "addressCopied": "Na-kopya ang address",
+    "receive": "Tanggapin",
+    "send": "Ipadala",
+    "swap": "Ipalit",
+    "swapComingSoon": "Ang swap ay darating na",
+    "history": "Kasaysayan",
+    "tokens": "Mga Token",
+    "collectibles": "Mga Collectible",
+    "noTokens": "Walang naka-configure na token",
+    "nativeToken": "Native Token",
+    "loading": "Naglo-load...",
+    "refreshing": "Ini-refresh...",
+    "balancesUpdated": "Na-update ang mga balanse",
+    "menu": {
+      "manageTokens": "Pamahalaan ang Mga Token",
+      "addressBook": "Address Book",
+      "walletSettings": "Mga Setting ng Pitaka",
+      "showBalances": "Ipakita ang Mga Balanse",
+      "hideBalances": "Itago ang Mga Balanse",
+      "showZeroTokens": "Ipakita ang Mga Zero Token",
+      "hideZeroTokens": "Itago ang Mga Zero Token",
+      "refresh": "I-refresh"
+    },
+    "manageTokens": {
+      "title": "Pamahalaan ang Mga Token",
+      "info": "Magdagdag ng custom na ERC-20 token. Kasama na ang mga system token bilang default.",
+      "addToken": "Magdagdag ng Token",
+      "adding": "Nagdadagdag...",
+      "contractAddress": "Address ng kontrata ng token (0x...)",
+      "autoFetch": "Awtomatikong kinukuha ang symbol at decimals",
+      "customTokens": "Mga Custom na Token",
+      "noCustomTokens": "Wala pang nadagdag na custom na token.",
+      "addUsingForm": "Magdagdag ng token gamit ang form sa itaas.",
+      "systemToken": "System token ito at kasama na.",
+      "fetchingMetadata": "Kinukuha ang metadata ng token...",
+      "addedSuccess": "Matagumpay na nadagdag ang token",
+      "enterValidAddress": "Maglagay ng wastong address ng token",
+      "save": "I-save"
+    },
+    "addressBook": {
+      "title": "Address Book",
+      "addContact": "Magdagdag ng Contact",
+      "nameLabel": "Pangalan o label",
+      "walletAddress": "Address ng pitaka (0x...)",
+      "savedContacts": "Mga Na-save na Contact",
+      "noContacts": "Wala pang na-save na contact.",
+      "addForQuickSending": "Magdagdag ng contact para sa mabilis na pagpapadala.",
+      "enterValidAddress": "Maglagay ng wastong address",
+      "addLabel": "Magdagdag ng label",
+      "save": "I-save"
+    },
+    "settings": {
+      "title": "Mga Setting ng Pitaka",
+      "export": {
+        "title": "I-export ang Pitaka",
+        "description": "Huwag kailanman ibahagi ang iyong recovery phrase o private key. I-store ito nang ligtas offline.",
+        "recoveryPhrase": "Recovery Phrase",
+        "recoveryPhraseNotAvailable": "Hindi available ang recovery phrase (na-import gamit ang private key)",
+        "privateKey": "Private Key",
+        "privateKeyWarning": "Private Key (panatilihing lihim!)",
+        "showPhrase": "Ipakita ang Recovery Phrase",
+        "showKey": "Ipakita ang Private Key",
+        "warning": "Huwag ibahagi ang iyong recovery phrase o private key sa sinuman.",
+        "copy": "Kopyahin",
+        "copied": "Na-kopya!",
+        "hide": "Itago",
+        "clipboardWarning": "Maaaring basahin ng ibang app ang clipboard. Awtomatikong mabubura ito sa 30 segundo.",
+        "verifyForKey": "Beripikahin upang Ipakita ang Private Key",
+        "verifyForSeed": "Beripikahin upang Ipakita ang Recovery Phrase",
+        "verifyDescription": "Maglagay ng iyong password o PIN upang ipakita ang sensitibong impormasyon ng pitaka."
+      },
+      "import": {
+        "title": "I-import ang Pitaka",
+        "description": "Ang pag-import ay papalitan ang kasalukuyang pitaka. Siguraduhin na na-backup mo na ang umiiral na isa. Pakitandaan na kailangan mong muling beripikahin ang katayuan ng PoH pagkatapos mag-import.",
+        "byPhrase": "Recovery Phrase",
+        "byPrivateKey": "Private Key",
+        "phrasePlaceholder": "Maglagay ng 12 o 24 na salitang phrase…",
+        "keyPlaceholder": "Maglagay ng 0x… private key",
+        "importButton": "I-import ang Pitaka",
+        "importing": "Ini-import...",
+        "success": "Matagumpay na na-import ang pitaka!"
+      },
+      "dangerZone": {
+        "title": "Danger Zone",
+        "description": "Ang mga aksyon na ito ay hindi maaaring bawiin. Siguraduhin na na-backup mo na ang iyong pitaka.",
+        "forgetWallet": "Kalimutan ang Pitaka",
+        "forgetDescription": "Alisin ang pitaka sa device na ito. Siguraduhin na na-backup mo na ang recovery phrase.",
+        "confirmTitle": "Kalimutan ang Pitaka?",
+        "confirmMessage": "Aalisin nito ang iyong pitaka sa device na ito. Siguraduhin na na-backup mo na muna ang recovery phrase.",
+        "cancel": "Kanselahin",
+        "confirm": "Kalimutan ang Pitaka",
+        "walletForgotten": "Nakalimutan na ang pitaka",
+        "unableToForget": "Hindi makalimutan ang pitaka",
+        "resetWallet": "I-reset ang Pitaka",
+        "resetDescription": "Ganap na burahin ang lahat ng data ng pitaka at magsimula ulit."
+      },
+      "authPrompt": "Mag-authenticate upang ipakita ang private key"
+    }
+  },
+  "reset": {
+    "title": "I-reset ang Pitaka",
+    "dangerTitle": "Hindi maaaring bawiin ang aksyong ito!",
+    "warning1": "Ang pag-reset ng iyong pitaka ay permanenteng buburahin ang:",
+    "bullet1": "Iyong pitaka at private key",
+    "bullet2": "Iyong recovery phrase",
+    "bullet3": "Lahat ng setting at preference ng app",
+    "bullet4": "Kasaysayan ng transaksyon",
+    "recoveryNote": "Kung mayroon kang 12-salitang recovery phrase, maaari mong ma-recover ang pitaka pagkatapos i-reset.",
+    "continueButton": "Naiintindihan Ko, Magpatuloy",
+    "confirmTitle": "Kumpirmahin ang Reset",
+    "confirmDescription": "I-type ang \"RESET\" sa ibaba upang kumpirmahin na gusto mong burahin ang lahat ng data ng pitaka.",
+    "placeholder": "I-type ang RESET",
+    "typeMismatch": "Mangyaring i-type ang RESET upang kumpirmahin",
+    "resetButton": "I-reset ang Pitaka Nang Tuluyan",
+    "resettingTitle": "Nagrereset...",
+    "resettingDescription": "Binubura ang lahat ng data ng pitaka. Mangyaring maghintay...",
+    "completeTitle": "Kumpleto ang Reset",
+    "completeDescription": "Na-reset na ang iyong pitaka. Maaari ka nang mag-set up ng bagong pitaka o mag-import ng existing.",
+    "startFresh": "Magsimula Ulit",
+    "error": "Nabigo sa pag-reset ng pitaka. Subukang muli."
+  },
+  "export": {
+    "verifyTitle": "Beripikahin ang Pagkakakilanlan",
+    "verifyDescription": "Maglagay ng iyong password upang i-export ang pitaka.",
+    "verify": "Beripikahin",
+    "verificationFailed": "Nabigo ang pagberipika",
+    "passphraseTitle": "Mag-set ng Export Passphrase",
+    "passphraseDescription": "Pumili ng malakas na passphrase upang i-encrypt ang backup. Kailangan mo ito upang i-import ang pitaka mamaya.",
+    "enterPassphrase": "Maglagay ng passphrase",
+    "passphraseTooWeak": "Mahina ang passphrase. Gumamit ng hindi bababa sa 8 character.",
+    "includeSeed": "Isama ang Recovery Phrase",
+    "includeSeedDescription": "Inirerekomenda para sa kumpletong backup",
+    "confirmTitle": "Kumpirmahin ang Passphrase",
+    "confirmDescription": "Muling i-enter ang passphrase upang kumpirmahin.",
+    "confirmPassphrase": "Kumpirmahin ang passphrase",
+    "passphraseMismatch": "Hindi tugma ang mga passphrase",
+    "warning": "I-store nang ligtas ang backup na ito. Sinumang may access sa file at passphrase ay maaaring ma-access ang iyong pitaka.",
+    "exportNow": "I-export ang Pitaka",
+    "exportingTitle": "Nagi-export...",
+    "exportingDescription": "Ini-encrypt at inihahanda ang backup ng pitaka...",
+    "successTitle": "Kumpleto ang Export",
+    "successDescription": "Nagawa na ang encrypted na backup ng pitaka. I-store ito nang ligtas.",
+    "rememberPassphrase": "Tandaan ang export passphrase - kailangan mo ito upang i-import ang backup na ito.",
+    "errorTitle": "Nabigo ang Export",
+    "failed": "Nabigo ang export. Subukang muli.",
+    "tryAgain": "Subukang Muli",
+    "exportKeystore": "I-export ang Encrypted Backup",
+    "exportKeystoreDesc": "I-save ang encrypted keystore file"
+  },
+  "security": {
+    "title": "I-secure ang Iyong Pitaka",
+    "subtitle": "Mag-set up ng password o PIN upang protektahan ang pitaka",
+    "checkingDevice": "Sinusuri ang seguridad ng device...",
+    "passwordOption": "Password",
+    "passwordDesc": "8+ character, letra at numero",
+    "pinOption": "6-Digit PIN",
+    "pinDesc": "Mabilis at madaling tandaan",
+    "enterPin": "Maglagay ng 6-digit PIN",
+    "confirmPin": "Kumpirmahin ang iyong PIN",
+    "enterPassword": "Maglagay ng password",
+    "confirmPassword": "Kumpirmahin ang password",
+    "enableBiometrics": "Paganahin ang {{type}}?",
+    "biometricsDesc": "Gamitin ang {{type}} para sa mabilis na unlock. Maaari mong baguhin ito mamaya sa Mga Setting.",
+    "enableBiometricsButton": "Paganahin ang {{type}}",
+    "enableBiometricsPrompt": "Mag-authenticate upang paganahin ang biometric unlock",
+    "skipBiometrics": "Laktawan muna",
+    "setupComplete": "Kumpleto ang Setup!",
+    "walletSecured": "Ligtas na ang iyong pitaka!",
+    "continue": "Magpatuloy",
+    "passwordTooWeak": "Mahina ang password. Sundin ang mga mungkahi.",
+    "pinMismatch": "Hindi tugma ang mga PIN",
+    "passwordMismatch": "Hindi tugma ang mga password",
+    "setupError": "Nabigo ang setup. Subukang muli.",
+    "passwordTitle": "Password",
+    "passwordDescription": "8+ character, mas malakas na seguridad",
+    "pinTitle": "6-Digit PIN",
+    "pinDescription": "Mabilis na access, madaling tandaan"
+  },
+  "lock": {
+    "title": "I-unlock ang Umotu",
+    "lockedOut": "Naka-lock Out",
+    "tooManyAttempts": "Masyadong maraming pagtatangka. Subukang muli sa {{time}}.",
+    "attemptsRemaining": "{{count}} pagtatangka na lang",
+    "enterPassword": "Maglagay ng password",
+    "unlock": "I-unlock",
+    "wrongPin": "Maling PIN",
+    "wrongPassword": "Maling password",
+    "verificationError": "Nabigo ang pagberipika",
+    "biometricsPrompt": "I-unlock ang iyong pitaka",
+    "unlockWithFaceId": "I-unlock gamit ang Face ID?",
+    "unlockWithFingerprint": "I-unlock gamit ang fingerprint?",
+    "forgotPassword": "Nakalimutan ang password?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Hindi Suportadong Device",
+    "emulatorMessage": "Hindi maaaring tumakbo ang app na ito sa emulator para sa seguridad.",
+    "rootedTitle": "Babala sa Seguridad",
+    "exitApp": "Lumabas",
+    "continueAnyway": "Magpatuloy Pa Rin"
+  },
+  "settingsSecurity": {
+    "title": "Seguridad",
+    "autoLock": "Auto-Lock",
+    "autoLockDesc": "I-lock ang pitaka pagkatapos ng kawalan ng aktibidad",
+    "faceId": "Face ID",
+    "fingerprint": "Fingerprint",
+    "biometricsDesc": "Mabilis na unlock gamit ang biometrics",
+    "changePin": "Baguhin ang PIN",
+    "changePassword": "Baguhin ang Password",
+    "changeDesc": "I-update ang iyong security credentials",
+    "enableBiometrics": "Paganahin ang biometric unlock",
+    "enterCurrent": "Maglagay ng kasalukuyang {{type}}",
+    "enterNew": "Maglagay ng bago {{type}}",
+    "confirmNew": "Kumpirmahin ang bagong {{type}}",
+    "currentPassword": "Kasalukuyang password",
+    "newPassword": "Bagong password",
+    "confirmNewPassword": "Kumpirmahin ang bagong password",
+    "changeNow": "Baguhin Ngayon",
+    "success": "Tagumpay",
+    "pinChanged": "Matagumpay na nabago ang PIN",
+    "passwordChanged": "Matagumpay na nabago ang password",
+    "changeFailed": "Nabigo sa pagbabago ng credentials",
+    "autoLockOptions": {
+      "immediately": "Kaagad",
+      "after1min": "Pagkatapos ng 1 minuto",
+      "after5min": "Pagkatapos ng 5 minuto",
+      "after15min": "Pagkatapos ng 15 minuto",
+      "after1hour": "Pagkatapos ng 1 oras",
+      "never": "Huwag Kailanman"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Mangyaring Maghintay",
+    "cooldownMessage": "Para sa seguridad, maaari mong ipakita muli ang iyong key sa {{time}}.",
+    "cooldownReason": "Pinipigilan nito ang mga malisyosong app na mabilis na ma-access ang iyong key."
+  },
+  "passwordVerify": {
+    "title": "Beripikahin ang Pagkakakilanlan",
+    "description": "Maglagay ng iyong password o PIN upang ipakita ang sensitibong impormasyon ng pitaka",
+    "verify": "Beripikahin"
+  },
+  "passwordValidation": {
+    "veryWeak": "Napakahina",
+    "weak": "Mahina",
+    "fair": "Katamtaman",
+    "good": "Mabuti",
+    "strong": "Malakas",
+    "tooShort": "Dapat hindi bababa sa 8 character ang password",
+    "commonPassword": "Ito ay karaniwang ginagamit na password",
+    "lengthSuggestion": "Gumamit ng hindi bababa sa 12 character para sa mas mahusay na seguridad",
+    "mixedCaseSuggestion": "Haluan ng malaki at maliit na letra",
+    "numberSuggestion": "Magdagdag ng mga numero",
+    "specialCharSuggestion": "Magdagdag ng special character (!@#$%)"
+  },
+  "forgot": {
+    "title": "I-reset ang Credentials",
+    "warning": "Upang i-reset ang iyong password o PIN, kailangan mong ilagay ang wallet seed phrase. Pinatutunayan nito na ikaw ang may-ari ng pitaka.",
+    "warningText": "Huwag kailanman ibahagi ang iyong seed phrase sa sinuman.",
+    "continue": "Naiintindihan Ko, Magpatuloy",
+    "enterSeed": "Maglagay ng Seed Phrase",
+    "seedDescription": "Maglagay ng iyong 12 o 24 na salitang seed phrase. Paghiwalayin ng space ang bawat salita.",
+    "seedPlaceholder": "Maglagay ng seed phrase...",
+    "verifySeed": "Beripikahin ang Seed Phrase",
+    "invalidSeed": "Mangyaring maglagay ng wastong 12 o 24 na salitang seed phrase",
+    "chooseMethod": "Pumili ng Paraan ng Seguridad",
+    "methodDescription": "Paano mo gustong i-secure ang iyong pitaka?",
+    "newPassword": "Gumawa ng Bagong Password",
+    "newPin": "Gumawa ng Bagong PIN",
+    "newPasswordDesc": "Pumili ng malakas na password (8+ character)",
+    "newPinDesc": "Maglagay ng 6-digit PIN",
+    "confirmPassword": "Kumpirmahin ang Password",
+    "confirmPin": "Kumpirmahin ang PIN",
+    "confirmPasswordDesc": "Muling i-enter ang password upang kumpirmahin",
+    "confirmPinDesc": "Muling i-enter ang PIN upang kumpirmahin",
+    "resetNow": "I-reset Ngayon",
+    "complete": "Kumpleto ang Reset",
+    "completeDescription": "Na-reset na ang iyong credentials. Maaari mo nang i-unlock ang pitaka gamit ang bagong password o PIN.",
+    "unlockNow": "I-unlock ang Pitaka",
+    "passwordTooWeak": "Mahina ang password. Pumili ng mas malakas na password.",
+    "passwordMismatch": "Hindi tugma ang mga password",
+    "pinMismatch": "Hindi tugma ang mga PIN",
+    "resetFailed": "Nabigo sa pag-reset ng credentials. Beripikahin ang iyong seed phrase.",
+    "resetError": "May nangyaring error. Subukang muli."
+  },
+  "send": {
+    "title": "Ipadala",
+    "selectToken": "Pumili ng Token",
+    "selectTokenInfo": "Pumili ng token na ipapadala. Tanging mga token na may balanse ang ipinapakita.",
+    "noTokensWithBalance": "Walang token na may balanse",
+    "addTokensFirst": "Magdagdag muna ng token sa iyong pitaka",
+    "enterAmount": "Maglagay ng Halaga",
+    "enterRecipient": "Maglagay ng Tatanggap",
+    "review": "Suriin",
+    "amount": "Halaga",
+    "recipient": "Tatanggap",
+    "recipientPlaceholder": "0x... address ng pitaka",
+    "networkFee": "Bayad sa Network",
+    "gasToken": "Bayaran ang gas gamit",
+    "payingWith": "Binabayaran Gamit",
+    "payGasWith": "Bayaran ang Gas Gamit",
+    "nativeGas": "UMT (native)",
+    "stableGas": "Stable Gas",
+    "selectStable": "Pumili ng stable",
+    "max": "Max",
+    "next": "Susunod",
+    "continue": "Magpatuloy",
+    "confirm": "Kumpirmahin ang Pagpapadala",
+    "confirmSend": "Kumpirmahin ang Pagpapadala",
+    "sending": "Naglilipat...",
+    "failed": "Nabigo ang Transaksyon",
+    "viewInExplorer": "Tingnan sa Explorer",
+    "done": "Tapos Na",
+    "cancel": "Kanselahin",
+    "send": "Ipadala",
+    "balance": "Balanse",
+    "available": "Available",
+    "to": "Papunta Sa",
+    "network": "Network",
+    "step": "Hakbang",
+    "estimating": "Tinantya…",
+    "umtNative": "UMT (native)",
+    "txSpeed": "Bilis ng Transaksyon",
+    "transactionSpeed": "Bilis ng Transaksyon",
+    "speed": {
+      "slow": "Mabagal",
+      "normal": "Normal",
+      "fast": "Mabilis"
+    },
+    "gasNotice": {
+      "stablecoin": "Babayaran ang gas gamit ang stablecoin.",
+      "reserved": "Nag-reserve kami ng {{amount}} {{symbol}} para sa gas; maaari kang magpadala ng pinakamarami {{max}}."
+    },
+    "errors": {
+      "invalidAddress": "Hindi wastong address ng tatanggap",
+      "invalidAmount": "Maglagay ng wastong halaga",
+      "insufficientBalance": "Kulang ang balanse",
+      "insufficientGas": "Kulang ang balanse para sa gas",
+      "insufficientGasWithHint": "Kulang ang balanse para sa gas. Magdagdag ng UMT o suporta na stablecoin.",
+      "notEnoughForGas": "Kulang ang balanse upang masakop ang gas",
+      "noStableGas": "Kulang ang UMT para sa gas at walang suporta na stable na maaaring sumakop.",
+      "permitFailed": "Nabigo ang permit o approval para sa gas token",
+      "relayNotConfigured": "Hindi na-configure ang stable gas relay",
+      "transactionReverted": "Na-revert ang transaksyon sa chain.",
+      "approvalNeeded": "Kailangan ng approval ang gas token ngunit walang UMT para sa approval. Magdagdag ng maliit na UMT o gumamit ng permit-supported token."
+    },
+    "addressBook": {
+      "title": "Address Book",
+      "addNew": "Magdagdag ng Bago",
+      "noContacts": "Walang naka-save na address",
+      "saveForQuickAccess": "I-save ang mga address para sa mabilis na access",
+      "editContact": "I-edit ang Contact",
+      "deleteContact": "Tanggalin ang Contact",
+      "addressNotSaved": "Hindi naka-save ang address",
+      "addLabel": "Magdagdag ng label",
+      "enterValidAddress": "Maglagay muna ng valid na address",
+      "saved": "Naka-save",
+      "save": "I-save"
+    },
+    "success": {
+      "title": "Naipadala ang Transaksyon!",
+      "hash": "Hash",
+      "viewInExplorer": "Tingnan sa Explorer",
+      "close": "Isara"
+    },
+    "batch": {
+      "mode": "Batch Mode",
+      "singleMode": "Isang Recipient",
+      "addRecipient": "Magdagdag ng mga recipient",
+      "noRecipients": "Wala pang naidagdag na recipient",
+      "addFromTagOrBook": "Magdagdag mula sa tag o book",
+      "invalidAddress": "Invalid na address: {{address}}",
+      "invalidAmount": "Invalid na halaga para sa {{recipient}}",
+      "totalExceedsBalance": "Lumampas ang kabuuan sa balance",
+      "sendingTo": "Nagpapadala sa {{count}} recipient",
+      "sendingTo_plural": "Nagpapadala sa {{count}} recipients",
+      "recipients": "Mga Recipient",
+      "addresses": "{{count}} address",
+      "addresses_plural": "{{count}} addresses",
+      "addByTag": "Magdagdag ayon sa tag",
+      "noTags": "Wala pang tags",
+      "createFirstTag": "Gumawa ng unang tag sa address book",
+      "addFromTag": "Magdagdag mula sa tag",
+      "selectTag": "Pumili ng tag",
+      "remove": "Alisin",
+      "sendAll": "Ipadala Lahat ({{count}})",
+      "batchSend": "Batch Send",
+      "badge": "BATCH",
+      "successFail": "{{success}} successful, {{fail}} failed",
+      "successful": "Successful",
+      "sentStatus": "Naipadala",
+      "failedStatus": "Nabigo",
+      "details": "Batch Transfer Details",
+      "total": "Kabuuan",
+      "tagPicker": {
+        "title": "Pumili ng Tag",
+        "noTags": "Walang available na tag",
+        "createHint": "Magdagdag muna ng tags sa mga contact sa book"
+      },
+      "tags": {
+        "manage": "Pamahalaan ang Tags",
+        "add": "Magdagdag ng Tag",
+        "remove": "Alisin ang Tag",
+        "create": "Gumawa ng Tag",
+        "newTag": "Bagong tag name",
+        "addToContact": "Magdagdag ng tag sa contact"
+      }
+    }
+  },
+  "receive": {
+    "title": "Tanggapin",
+    "yourAddress": "Iyong Address ng Pitaka",
+    "scanQR": "I-scan ang QR code upang tumanggap",
+    "copyAddress": "Kopyahin ang Address",
+    "share": "I-share"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Magbayad",
+      "myQr": "Aking QR"
+    },
+    "pay": {
+      "title": "Magbayad",
+      "description": "I-scan ang QR code ng iyong kaibigan upang direktang magbayad sa kanilang pitaka",
+      "allowCamera": "Payagan ang Camera",
+      "requesting": "Humihiling…",
+      "openSettings": "Buksan ang Mga Setting",
+      "sendTo": "Ipadala sa",
+      "amount": "Halaga",
+      "rescan": "I-scan Ulit",
+      "continue": "Magpatuloy"
+    },
+    "receive": {
+      "title": "Tanggapin",
+      "description": "I-scan ang QR code na ito upang magpadala ng bayad sa address na ito",
+      "tapToCopy": "Pindutin upang kopyahin ang address",
+      "copied": "Na-kopya sa clipboard!"
+    }
+  },
+  "history": {
+    "title": "Kasaysayan ng Transaksyon",
+    "sent": "Naipadala",
+    "received": "Natanggap",
+    "token": "Token",
+    "external": "Panlabas",
+    "to": "Papunta: ",
+    "from": "Mula: ",
+    "viewInExplorer": "Tingnan sa Explorer",
+    "empty": {
+      "title": "Wala Pang Transaksyon",
+      "description": "Lilitaw dito ang kasaysayan ng transaksyon kapag nagpadala o tumanggap ka ng token."
+    },
+    "status": {
+      "confirmed": "Nakumpirma",
+      "pending": "Nakabinbin",
+      "failed": "Nabigo"
+    },
+    "details": {
+      "title": "Detalye ng Transaksyon",
+      "status": "Katayuan",
+      "type": "Uri",
+      "to": "Papunta",
+      "from": "Mula",
+      "token": "Token",
+      "block": "Block",
+      "gasCost": "Gastusin sa Gas",
+      "hash": "Hash",
+      "source": "Pinagmulan",
+      "balanceDetected": "Natukoy ang balanse",
+      "inferredNote": "Natukoy ang transaksyong ito mula sa pagbabago ng balanse. Hindi available ang eksaktong detalye sa chain."
+    },
+    "time": {
+      "justNow": "Kakagaling lang",
+      "minsAgo": "{{count}}m nakalipas",
+      "hoursAgo": "{{count}}h nakalipas",
+      "daysAgo": "{{count}}d nakalipas"
+    }
+  },
+  "settings": {
+    "title": "Mga Setting",
+    "account": {
+      "title": "Account at Hitsura",
+      "walletAddress": "Address ng Pitaka",
+      "copy": "Kopyahin",
+      "copied": "Na-kopya"
+    },
+    "theme": {
+      "title": "Tema",
+      "light": "Maliwanag",
+      "dark": "Madilim",
+      "system": "System"
+    },
+    "language": {
+      "title": "Wika",
+      "select": "Pumili ng Wika",
+      "current": "Kasalukuyan"
+    },
+    "display": {
+      "title": "Display",
+      "description": "I-customize ang hitsura ng home screen.",
+      "showSentinelCard": "Ipakita ang Sentinel Earnings Card",
+      "showSentinelCardDesc": "Ipakita ang kita sa home screen",
+      "showDailyRewardsCard": "Ipakita ang Daily Rewards Card",
+      "on": "BUKAS",
+      "off": "SARADO",
+      "sentinelSettings": "Mga Setting ng Sentinel",
+      "sentinelSettingsDesc": "Pamahalaan ang bond, gantimpala at auto-claim"
+    },
+    "sentinelDisplay": {
+      "title": "Display ng Sentinel",
+      "showSentinelCard": "Ipakita ang Sentinel Card",
+      "showSentinelCardDesc": "Ipakita ang sentinel earnings card sa home screen",
+      "sentinelSettings": "Mga Setting ng Sentinel",
+      "sentinelSettingsDesc": "I-configure ang sentinel node at gantimpala"
+    },
+    "verification": {
+      "title": "Pagberipika",
+      "description": "Beripikahin ang iyong pagiging tao gamit ang Inlyf upang i-unlock ang pang-araw-araw na gantimpala. Mabilis na liveness check; pana-panahong mag-re-verify.",
+      "open": "Simulan ang Pagberipika",
+      "refresh": "I-refresh ang Pagberipika",
+      "status": "Katayuan",
+      "verified": "Beripikado",
+      "notVerified": "Hindi Beripikado",
+      "expiresOn": "Mag-e-expire sa",
+      "daysRemaining": "Natitirang araw",
+      "upToDate": "Napapanahon ang beripikasyon",
+      "refreshAvailableIn": "Magre-refresh matapos {{days}} araw"
+    },
+    "network": {
+      "title": "Network",
+      "description": "I-configure ang koneksyon sa blockchain network.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (darating na)",
+      "rpcEndpoint": "RPC Endpoint",
+      "pingRpc": "Ping RPC",
+      "testing": "Sinusubok...",
+      "rpcOk": "RPC OK",
+      "rpcError": "RPC Error",
+      "save": "I-save",
+      "saved": "Na-save ang mga setting",
+      "connectionStatus": "Katayuan ng Koneksyon",
+      "connected": "Nakakonekta",
+      "disconnected": "Hindi Nakakonekta"
+    },
+    "cache": {
+      "title": "Cache",
+      "description": "Burahin ang cached data upang i-refresh ang impormasyon ng token at kontrata.",
+      "clearCache": "Burahin ang Cache",
+      "cacheCleared": "Na-clear ang cache! I-restart upang ma-apply."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Tumulong i-secure ang blockchain sa pamamagitan ng pag-online ng iyong phone. Kumpletuhin ang kahit isang sampling job bawat araw upang manatiling karapat-dapat sa mga gantimpala.",
+      "wifiOnly": "WiFi Lamang",
+      "wifiOnlyHint": "Nakakatipid ng mobile data",
+      "minBattery": "Minimum na Battery",
+      "minBatteryHint": "Hindi tatakbo kapag mas mababa sa level na ito",
+      "background": "Tumakbo sa Background",
+      "backgroundHint": "Gumagana kahit sarado ang app",
+      "lastSample": "Huling Aktibidad",
+      "noSamples": "Wala pang aktibidad. Panatilihing bukas ang app upang magsimula.",
+      "staleWarning": "Hindi nakita ngayong araw — buksan muli ang app upang magpatuloy.",
+      "androidBatteryWarning": "Maaaring pigilan ng battery optimization ang sampling",
+      "androidBatteryHint": "Pumunta sa Settings → Apps → Umotu → Battery → piliin ang \"Unrestricted\" upang payagan ang background sampling.",
+      "openSettings": "Pindutin upang buksan ang mga setting",
+      "tip": "Paganahin ang \"Tumakbo sa Background\" para sa pinakamahusay na potensyal na kita.",
+      "runNow": "Tumakbo ngayon",
+      "running": "Tumatakbo…",
+      "lastError": "Huling error",
+      "status": {
+        "active": "Aktibo",
+        "inactive": "Hindi Aktibo",
+        "paused": "Naka-pause"
+      }
+    },
+    "permissions": {
+      "title": "Mga Permission",
+      "description": "Pamahalaan ang mga nakakonektang Mini Apps at kanilang permission.",
+      "openMiniApps": "Buksan ang Mini Apps",
+      "manageConnections": "Pamahalaan",
+      "noConnections": "Walang nakakonektang app",
+      "revokeAccess": "Bawiin ang Access",
+      "lastUsed": "Huling ginamit"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Maligayang Pagdating sa Umotu",
+      "subtitle": "$10 sa isang araw, lahat kahit saan",
+      "getStarted": "Magsimula"
+    },
+    "language": {
+      "title": "Pumili ng Iyong Wika",
+      "continue": "Magpatuloy"
+    },
+    "wallet": {
+      "title": "Iyong Pitaka",
+      "createNew": "Gumawa ng Bagong Pitaka",
+      "importExisting": "I-import ang Existing",
+      "creating": "Gumagawa ng pitaka..."
+    },
+    "verify": {
+      "title": "Beripikahin na Tao Ka",
+      "description": "Upang makatanggap ng pang-araw-araw na gantimpala, beripikahin na ikaw ay natatanging tao.",
+      "continue": "Magpatuloy"
+    }
+  },
+  "poh": {
+    "subtitle": "I-unlock ang pang-araw-araw na gantimpala",
+    "description": "Beripikahin ang liveness gamit ang Inlyf upang i-unlock ang gantimpala. Walang biometrics na naka-store sa chain; maikling credential lamang ang ibinibigay.",
+    "howItWorks": "Paano Ito Gumagana",
+    "howItWorksDesc": "Mabilis na liveness check (face scan) ang nagbeberipika na tao ka. Ang credential ay tumatagal ng 90 araw at maaaring i-refresh anumang oras.",
+    "adultQuestion": "Adult ka ba (18+)?",
+    "yesAdult": "Oo, 18+",
+    "noMinor": "Hindi / Minor",
+    "selectAge": "Mangyaring pumili ng opsyon",
+    "verifying": "Nagbeberipika...",
+    "startVerification": "Simulan ang Pagberipika",
+    "skipForNow": "Laktawan muna",
+    "status": {
+      "notVerified": "Hindi pa beripikado.",
+      "notVerifiedDetail": "Simulan ang pagberipika upang i-unlock ang gantimpala.",
+      "unavailable": "Hindi available ang katayuan.",
+      "verified": "Beripikado ka na.",
+      "validFor": "Wasto sa humigit-kumulang {{days}} araw",
+      "validFor_plural": "Wasto sa humigit-kumulang {{days}} araw",
+      "expired": "Nag-expire ang pagberipika o hindi natagpuan.",
+      "expiredDetail": "Patakbuhin muli ang liveness upang i-refresh ang credential."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Sumali sa Sentinel pool upang tumulong i-finalize ang mga block. Mag-bond ng hindi bababa sa minimum na halaga, panatilihing online ang device, at kumita ng gantimpala.",
+    "loading": "Naglo-load ng data ng sentinel...",
+    "unavailable": "Hindi available ang Sentinel module",
+    "yourStatus": "Iyong Katayuan",
+    "wallet": "Pitaka",
+    "bondedAmount": "Bonded na Halaga",
+    "minimumBond": "Minimum na Bond",
+    "status": {
+      "notBonded": "Hindi bonded",
+      "bonded": "Bonded",
+      "unbonding": "Nag-uunbond (available {{date}})"
+    },
+    "rewards": {
+      "title": "Mga Gantimpala",
+      "claimableNow": "Maaaring Kunin Ngayon",
+      "accruing": "Naglalago",
+      "totalClaimed": "Kabuuang Nakuha",
+      "claiming": "Kinukuha...",
+      "claimRewards": "Kunin ang Mga Gantimpala"
+    },
+    "bond": {
+      "createTitle": "Gumawa ng Bond",
+      "topUpTitle": "Mag-top Up ng Bond",
+      "createDescription": "Mag-bond ng UMT upang sumali sa sentinel committee at magsimulang kumita.",
+      "topUpDescription": "Dagdagan ang iyong stake upang kumita ng mas malaking bahagi ng gantimpala.",
+      "amountLabel": "Halaga (UMT)",
+      "processing": "Pinoproseso...",
+      "bond": "Mag-bond",
+      "topUp": "Mag-top Up",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Auto-Claim",
+      "description": "Hayaan ang relayer na awtomatikong kunin ang iyong sentinel rewards kapag naglago.",
+      "checking": "Sinusuri...",
+      "enabled": "Pinagana",
+      "disabled": "Hindi Pinagana",
+      "expires": "Mag-e-expire",
+      "processing": "Pinoproseso...",
+      "enable": "Paganahin ang Auto-Claim",
+      "disable": "Huwag Paganahin ang Auto-Claim"
+    },
+    "activity": {
+      "title": "Kamakailang Aktibidad",
+      "claims": "Mga Pagkuha",
+      "slashes": "Mga Slash",
+      "noClaims": "Walang pagkuha sa huling {{blocks}}k block.",
+      "noSlashes": "Walang slash event sa kamakailang window.",
+      "unknown": "hindi alam"
+    },
+    "errors": {
+      "configureEnv": "I-configure ang RPC + sentinel contract env vars.",
+      "noWallet": "Gumawa o mag-import ng pitaka upang sumali sa sentinel committee.",
+      "loadFailed": "Nabigo sa pag-load ng data ng sentinel."
+    },
+    "toast": {
+      "rewardsClaimed": "Nakuha ang sentinel rewards.",
+      "noRewards": "Walang nakabinbing gantimpala na kukunin.",
+      "claimFailed": "Nabigo ang pagkuha.",
+      "autoClaimEnabled": "Pinagana ang sentinel auto-claim",
+      "autoClaimDisabled": "Hindi na pinagana ang sentinel auto-claim",
+      "autoClaimFailed": "Nabigo ang pag-toggle ng auto-claim",
+      "configureBondAddress": "I-configure ang sentinel bond address",
+      "rpcNotSet": "Hindi na-set ang RPC",
+      "minBondUnavailable": "Hindi available ang min bond",
+      "enterBondAmount": "Maglagay ng halaga ng bond",
+      "minBondRequired": "Dapat hindi bababa sa {{amount}} UMT ang initial bond",
+      "topUpGreaterThanZero": "Dapat mas malaki sa 0 ang top-up amount",
+      "insufficientBalance": "Kulang ang balanse para sa bond + gas",
+      "bondSubmitted": "Na-submit ang bond transaction",
+      "topUpSubmitted": "Na-submit ang top-up transaction",
+      "bondConfirmed": "Nakumpirma ang bond",
+      "topUpConfirmed": "Nakumpirma ang top-up",
+      "bondReverted": "Na-revert ang bond sa chain",
+      "bondFailed": "Nabigo ang bond"
+    }
+  },
+  "miniapps": {
+    "title": "MiniApps",
+    "subtitle": "Galugarin ang mga app na ginawa sa Umotu",
+    "explore": "Galugarin ang mga app na ginawa sa Umotu",
+    "noApps": "Wala pang available na app",
+    "browseByCategory": "Mag-browse ayon sa Kategorya",
+    "appsCount": "{{count}} app",
+    "featured": "TAMPOK",
+    "comingSoon": "Darating Na",
+    "liveApps": "Mga Live App",
+    "available": "AVAILABLE",
+    "pohDescription": "Beripikahin ang iyong pagiging tao gamit ang Inlyf upang i-unlock ang pang-araw-araw na gantimpala.",
+    "vision": {
+      "title": "Ating Pananaw",
+      "tagline": "$10 sa isang araw, lahat kahit saan",
+      "description": "Ginagawa ng Umotu ang infrastructure para sa mundo kung saan lahat ay maaaring makilahok sa global economy—kahit saan sila nakatira o anong bangko ang ginagamit nila.",
+      "readMore": "Basahin ang Buong Pananaw",
+      "pillars": {
+        "title": "Tatlong Pangunahing Prinsipyo",
+        "ubi": {
+          "title": "$10/Araw, Lahat Kahit Saan",
+          "description": "Universal basic income bilang gantimpala sa pag-secure ng network. Sinumang may phone ay maaaring makilahok at kumita."
+        },
+        "capital": {
+          "title": "Malayang Gumagalaw ang Kapital",
+          "description": "Halos zero friction para sa mga bayad at transfer—cross-border man o lokal. Mga negosyo ay nagbabayad ng ~0.1% upang masakop ang gastos ng platform, indibidwal ay walang bayad."
+        },
+        "sovereignty": {
+          "title": "Igalang ang Monetary Sovereignty",
+          "description": "Hindi namin pinapalitan ang fiat currencies—ginagawa namin itong mas gumana. Mga bangko ay nag-i-issue ng stablecoin na naka-peg sa lokal na currency. Mas epektibo ang monetary policy na may mas malawak na sakop at mas kaunting friction."
+        }
+      },
+      "notReplacing": "Hindi nakikipagkumpitensya ang Umotu sa central bank. Gumagawa kami ng mas mahusay na infrastructure para sa fiat currencies: mas kaunting friction, global access, at pinahusay na market efficiency at resilience."
+    },
+    "building": {
+      "title": "Ginagawa Namin ang Ecosystem",
+      "description": "Ipinapakita ng mga app na ito kung ano ang posible sa Umotu. May ready na ngayon, ang iba ay darating pa. Inimbitahan ang mga developer sa buong mundo na magtayo at mag-launch sa aming platform.",
+      "developerDocs": "Mga Dokumento para sa Developer"
+    },
+    "categories": {
+      "payments": {
+        "name": "Mga Bayad at Pananalapi",
+        "apps": {
+          "sendMoney": {
+            "name": "Magpadala ng Pera",
+            "description": "Magpadala ng UMT o stablecoin kaagad sa sinuman, kahit saan sa mundo—walang bangko na kailangan.",
+            "example": "Magpadala ng $20 sa iyong pamilya sa ibang bansa sa ilang segundo, hindi araw. Zero hidden fees."
+          },
+          "billPay": {
+            "name": "Magbayad ng Bill",
+            "description": "Magbayad ng utilities, phone, internet, at iba pa direktang mula sa iyong pitaka."
+          },
+          "savings": {
+            "name": "Savings Circles",
+            "description": "Tradisyunal na rotating savings (tontine, chit fund) na ginawang trustless gamit ang smart contract."
+          },
+          "microLoans": {
+            "name": "Micro Loans",
+            "description": "Peer-to-peer lending na sinusuportahan ng iyong beripikadong pagiging tao at reputasyon."
+          }
+        }
+      },
+      "transport": {
+        "name": "Transport at Delivery",
+        "apps": {
+          "rideSharing": {
+            "name": "Ride Sharing",
+            "description": "Mag-book ng rides na binabayaran ng crypto. Mas malaki ang kita ng driver, mas mababa ang bayad ng rider—walang middleman na kumukuha ng 30%.",
+            "example": "Ang taxi ride sa Lagos ay nagkakahalaga ng ₦800. Nakukuha ng driver ang ₦799.2 sa halip na ₦560."
+          },
+          "delivery": {
+            "name": "Delivery",
+            "description": "Mag-order ng pagkain, groceries, o package. Makatarungang sahod ang mga courier sa stable token."
+          },
+          "publicTransit": {
+            "name": "Public Transit",
+            "description": "Magbayad para sa bus, metro, at tren sa isang tap. Walang pangangailangan bumili ng fare card."
+          }
+        }
+      },
+      "travel": {
+        "name": "Paglalakbay at Hospitality",
+        "apps": {
+          "hotels": {
+            "name": "Mga Hotel at Stays",
+            "description": "Mag-book ng accommodation sa buong mundo. Tinatanggap ng host ang stablecoin, nakakatipid ang guest sa fees."
+          },
+          "flights": {
+            "name": "Mga Flight",
+            "description": "Maghanap at mag-book ng flight. Magbayad ng crypto, kumita ng UMT rewards."
+          },
+          "tours": {
+            "name": "Mga Local Tour",
+            "description": "Mag-book ng experience kasama ang local guide. Direktang napupunta sa kanila ang bayad."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Pamimili at Commerce",
+        "apps": {
+          "localMarket": {
+            "name": "Local Market",
+            "description": "Bumili at magbenta lokal. Ginagawang seamless ng QR-based payment ang street commerce."
+          },
+          "ecommerce": {
+            "name": "E-commerce",
+            "description": "Mamili online mula sa merchant sa buong mundo. Walang card fees, walang chargeback."
+          },
+          "marketplace": {
+            "name": "Peer Marketplace",
+            "description": "Mag-list ng item para ibenta, bumili mula sa iba. Pinoprotektahan ng escrow ang parehong partido."
+          }
+        }
+      },
+      "services": {
+        "name": "Mga Serbisyo at Trabaho",
+        "apps": {
+          "remittance": {
+            "name": "Remittance",
+            "description": "Magpadala ng pera pauwi. Maaaring i-cash out ng tatanggap sa lokal na currency o panatilihing digital."
+          },
+          "freelance": {
+            "name": "Freelance Work",
+            "description": "Mabayaran kaagad para sa gig work. Walang paghihintay ng 30 araw para sa bank transfer."
+          },
+          "homeServices": {
+            "name": "Mga Serbisyo sa Bahay",
+            "description": "Kumuha ng plumber, electrician, cleaner. Magbayad lamang kapag tapos na ang trabaho."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Itayo ang Iyong Negosyo sa Umotu",
+      "subtitle": "Mag-launch ng app na may built-in na bayad",
+      "description": "Gumawa ng app na nakakonekta sa Umotu ecosystem—milyun-milyong beripikadong tao na may pang-araw-araw na kita, handa nang mag-transact. Walang sakit ng ulo sa payment integration.",
+      "benefits": {
+        "noFees": "Halos zero payment processing fees—panatilihin ang 99.9% ng revenue",
+        "verifiedUsers": "Lahat ng user ay beripikadong tao—walang bot o fraud",
+        "globalReach": "Abot sa user sa 190+ bansa mula day one",
+        "instantPayments": "Kaagad na settlement—walang 30-day payment delay"
+      },
+      "exampleTitle": "Halimbawa ng Paggamit",
+      "exampleText": "Ang ride-sharing app sa Umotu ay panatilihin ang 99.9% ng fares kumpara sa 70% sa tradisyunal na platform. Mas malaki ang kita ng driver, mas mababa ang bayad ng rider.",
+      "docsButton": "Basahin ang Docs",
+      "buildButton": "Magsimulang Magtayo"
+    },
+    "bank": {
+      "title": "Bangko Ka Ba?",
+      "subtitle": "Mag-issue ng stablecoin sa Umotu",
+      "description": "Ang mga lisensyadong financial institution ay maaaring mag-issue ng local currency stablecoin sa Umotu at makapasok sa lumalaking UBI economy na may milyun-milyong user.",
+      "benefits": {
+        "reserves": "Kumita ng yield sa reserves: mamuhunan sa bond at low-risk asset",
+        "mintRedeem": "Mag-charge ng mint/redeem fees: karaniwang 0.1% sa fiat ↔ stablecoin conversion",
+        "users": "Maabot ang milyun-milyong daily active UBI recipient",
+        "global": "Palawakin ang iyong sakop lampas sa border kaagad",
+        "custody": "Iyong reserves, iyong custody: buong kontrol sa backing asset"
+      },
+      "revenueModel": "Paano Kumikita ang Mga Issuer",
+      "revenueNote": "Tulad ng Tether at iba pang malalaking issuer, ang revenue ay mula sa reserve yield at conversion fees. Sa milyun-milyong user na tumatanggap ng daily UBI, malaki ang potensyal na mint/redeem volume.",
+      "futureNote": "Maaaring makatanggap din ang mga issuer ng bahagi ng transaction fees sa hinaharap habang umuunlad ang protocol.",
+      "learnMore": "Matuto Pa",
+      "applyButton": "Mag-apply Ngayon"
+    }
+  },
+  "news": {
+    "title": "Balita at Update",
+    "description": "Manatiling updated sa pinakabagong anunsyo, tip, at babala sa seguridad mula sa Umotu team.",
+    "empty": "Wala pang balita sa ngayon",
+    "unread": "Bago",
+    "unreadCount": "{{count}} bago",
+    "markAsRead": "Markahan bilang nabasa",
+    "types": {
+      "announcement": "Anunsyo",
+      "tip": "Tip",
+      "security": "Seguridad",
+      "airdrop": "Airdrop",
+      "update": "Update"
+    }
+  },
+  "governance": {
+    "title": "Pamamahala",
+    "subtitle": "Hubugin ang kinabukasan ng Umotu",
+    "description": {
+      "title": "Mahalaga ang Iyong Boses",
+      "body": "Tumulong hubugin ang kinabukasan ng Umotu sa pamamagitan ng pagboto sa mga panukala ng komunidad. Ino-organisa ng Umotu Foundation ang mga boto na ito, ngunit ang komunidad ang nagpapasya."
+    },
+    "empty": "Walang aktibong panukala",
+    "emptyHint": "Bumalik mamaya para sa bagong desisyon ng komunidad na bobotohan.",
+    "newPolls": "Bago",
+    "newPollsCount": "{{count}} bago",
+    "vote": "boto",
+    "votes": "boto",
+    "endsIn": "Matatapos sa {{time}}",
+    "ended": "Tapos Na",
+    "tapToVote": "Pindutin ang opsyon sa itaas upang iboto",
+    "submitting": "Isinusumite ang boto...",
+    "alreadyVoted": {
+      "title": "Naboto Na",
+      "message": "Naboto mo na sa panukalang ito."
+    },
+    "confirm": {
+      "title": "Kumpirmahin ang Boto",
+      "message": "Bumoto para sa",
+      "note": "Hindi maaaring bawiin ang aksyong ito.",
+      "submit": "Isumite ang Boto"
+    },
+    "success": {
+      "title": "Na-submit ang Boto!",
+      "message": "Salamat sa paglahok sa pamamahala ng komunidad."
+    },
+    "error": {
+      "title": "Nabigo ang Boto",
+      "message": "Nabigo sa pag-submit ng boto. Subukang muli."
+    }
+  },
+  "learn": {
+    "title": "Matuto",
+    "subtitle": "Lahat ng kailangan mong malaman tungkol sa Umotu",
+    "featured": "TAMPOK",
+    "whatIs": {
+      "title": "Ano ang Umotu?",
+      "subtitle": "$10 sa isang araw, lahat kahit saan",
+      "intro": "Layunin ng Umotu na payagan ang sinuman na kumita ng humigit-kumulang $10/araw gamit lamang ang smartphone. Walang mamahaling hardware, walang espesyal na kasanayan, walang border.",
+      "howDifferent": "Paano Ito Iba?",
+      "noMiddleman": "Walang middleman: Direktang nakikipag-ugnayan ka sa network—walang bank account na kailangan",
+      "globalAccess": "Global access: Gumagana kahit saan may internet",
+      "youOwnIt": "Ikaw ang may-ari: Iyong pitaka, iyong key, iyong kontrol",
+      "vision": "Ang Pananaw",
+      "visionText": "Bilyun-bilyong tao ang maaaring tumulong panatilihing tapat ang public ledger at kumita para rito. Sa Umotu, gumagawa ang mga phone ng lightweight check na ginagawang mapagkakatiwalaan ang network.",
+      "nameOrigin": "Pinagmulan ng Pangalan",
+      "nameOriginText": "Kumuha ng inspirasyon ang Umotu mula sa Paʻumotu, isang Polynesian language. Ginagamit namin ang pangalan nang may paggalang bilang paalala na magtayo para sa ordinaryong tao."
+    },
+    "earn": {
+      "title": "Paano Ka Kumikita",
+      "subtitle": "Gumagana ang iyong phone; binabayaran ka",
+      "intro": "Gumaganap ang iyong phone ng maliliit na gawain na nakakatulong sa lahat—pagkatapos ay gagantimpalaan ka.",
+      "steps": "Tatlong Simpleng Hakbang",
+      "step1": "1) Patunayan na tao ka: mabilis na liveness check (at pana-panahong refresh) ang nagsisiguro na isang account bawat tao.",
+      "step2": "2) Tumulong sa network: tumatakbo ang iyong phone ng Data Availability (DA) sampling at iba pang lightweight check sa background.",
+      "step3": "3) Kumita ng pang-araw-araw na gantimpala: binabayaran ka para sa trabahong ito, na may target na humigit-kumulang $10/araw depende sa policy ng network.",
+      "localCurrency": "Binabayaran sa Iyong Currency",
+      "localCurrencyText": "Pumili ng payout token: local-currency stablecoin (kung available) o UMT. Ang halaga ay target na ~$10 USD at maaaring magbago depende sa partisipasyon at kondisyon ng market."
+    },
+    "whereMoney": {
+      "title": "Saan Galing ang $10?",
+      "subtitle": "Kumikita ka dahil nagbibigay ka ng serbisyo",
+      "intro": "Ito ang #1 tanong. Maikling sagot: dahil nagbibigay ka ng serbisyo na kailangan ng network.",
+      "realWork": "Gumagawa ng Tunay na Trabaho ang Iyong Phone",
+      "realWork1": "Data Availability Sampling: sinusuri ng iyong phone na available at tama ang block data",
+      "realWork2": "Partisipasyon ng Tao: pinatutunayan mo ang one-person-one-account upang pigilan ang bot at spam",
+      "realWork3": "Pinoprotektahan ng mga gawaing ito ang lahat; walang ito ay humihina ang network",
+      "valueSource": "Dalawang Pinagmulan ng Halaga",
+      "utility": "Utility: mabilis, mababang-bayad na bayad na pinipili ng mga tao na gamitin",
+      "consensus": "Consensus: halaga na lumalago habang mas maraming tao ang maaaring mag-verify at magkasundo sa mga rule",
+      "distribution": "Paano Ipinamamahagi ang Mga Gantimpala",
+      "newTokens": "Bagong UMT token ang ginagawa at ibinabahagi sa beripikadong phone participant (hindi sa validator)",
+      "fees": "Bahagi ng fees at builder bid ay ibinabahagi sa phone sentinel para sa pag-finalize ng block",
+      "treasury": "Maliit na bahagi ang napupunta sa ongoing maintenance at stability program",
+      "whyDifferent": "Bakit Iba Ito",
+      "btcProblem": "Pinag-gagantimpalaan ng Bitcoin ang espesyalisadong miner (capital-intensive)",
+      "ethProblem": "Pinag-gagantimpalaan ng Ethereum ang malalaking staker (capital-intensive)",
+      "umotuSolution": "Pinag-gagantimpalaan ng Umotu ang ordinaryong phone (mababang praktikal na gastos sa partisipasyon)",
+      "conclusion": "Hindi ito giveaway: binabayaran ka para sa trabaho na panatilihing tapat at kapaki-pakinabang ang shared financial infrastructure."
+    },
+    "security": {
+      "title": "Seguridad ng Pitaka",
+      "subtitle": "Protektahan ang iyong pera",
+      "intro": "Ang iyong pitaka ay parang digital vault na ikaw lamang ang may kontrol.",
+      "recovery": "Iyong 12 Salita at Private Key",
+      "recoveryText": "Ang iyong 12 lihim na salita (recovery phrase) at private key ay parehong nagbubukas ng iyong pitaka. Sinumang may alinman rito ay maaaring ilipat ang iyong pondo.",
+      "rules": "Mga Ginintuang Panuntunan",
+      "rule1": "HUWAG kailanman ibahagi ang iyong 12 salita o private key sa sinuman—kahit sa Umotu contributor.",
+      "rule2": "Isulat ang iyong 12 salita sa papel at i-store offline. Huwag i-store sa screenshot, photo, o cloud note.",
+      "rule3": "Kung i-export mo ang private key, panatilihing offline (papel, hardware, o encrypted manager na lubos mong pinagkakatiwalaan).",
+      "rule4": "Kung mawala ang iyong 12 salita at private key, walang makaka-recover ng iyong pitaka.",
+      "warning": "Mahalaga",
+      "warningText": "Ang private key ay nagbibigay ng buong access. Ang pagpapakita o pagkopya nito sa ibang app ay maaaring ilantad ang iyong pondo. I-export lamang kung naiintindihan mo ang risk.",
+      "reveal": "Ipakita / I-export ang Private Key",
+      "revealText": "Maaari mong ipakita o i-export ang private key sa Mga Setting ng Pitaka. Nangangailangan kami ng biometrics/PIN, ipinapakita lamang nang ilang segundo, at hindi kailanman ini-upload. Isaalang-alang ang paggamit ng hardware wallet para sa malalaking balanse.",
+      "bestPractices": "Mga Pinakamahusay na Kasanayan",
+      "best1": "Paganahin ang screen lock at biometrics sa iyong phone.",
+      "best2": "Panatilihing updated ang app upang makuha ang pinakabagong security fix.",
+      "best3": "Gumamit ng hiwalay na pitaka para sa malalaking savings; panatilihing maliit ang halaga sa phone para sa pang-araw-araw na gamit.",
+      "scamBannerTitle": "Walang Legit na Magtatanong",
+      "scamBannerText": "Kung may magtanong ng iyong 12 salita o private key, scam ito."
+    },
+    "stablecoins": {
+      "title": "Pag-unawa sa Stablecoin",
+      "subtitle": "Digital money na sumusubaybay sa lokal na currency",
+      "intro": "Ang stablecoin ay digital token na idinisenyo upang sumubaybay sa regular na pera (tulad ng USD, ZAR, NGN).",
+      "examples": "Mga Halimbawa",
+      "example1": "1 ZAR1 ≈ 1 South African Rand",
+      "example2": "1 USD1 ≈ 1 US Dollar",
+      "example3": "1 NGN1 ≈ 1 Nigerian Naira",
+      "backed": "Inilalabas ng Mga Partner",
+      "backedText": "Ang stablecoin sa Umotu ay inilalabas ng regulated partner at idinisenyo upang mapanatili ang 1:1 value sa reserves. Nagpu-publish ang mga issuer ng proof-of-reserves at redemption term.",
+      "convert": "Pag-convert sa Cash",
+      "convertText": "I-convert sa pamamagitan ng partner bank/exchange, o gastahin direktang kung saan tinatanggap."
+    },
+    "economics": {
+      "title": "Ekonomiya ng UMT",
+      "subtitle": "Sino ang nakakakuha ng ano at bakit",
+      "intro": "Ang UMT ay may fixed supply na 100 bilyon token. Karamihan rito ay ibinabayad sa ordinaryong phone user na tumutulong panatilihing tapat ang network.",
+      "supply": "Supply at Distribusyon",
+      "supplyBullets": [
+        "Ang karamihan ng supply ng token ay nakalaan para sa mga kalahok sa telepono sa paglipas ng panahon at inilalabas sa pamamagitan ng Emission Controller. Nililimitahan ng Emission Controller ang pang-araw-araw na pagbibigay sa hindi hihigit sa 0.01% ng natitirang supply, na tinitiyak ang pangmatagalang sustainability. Sa ilalim ng schedule na ito, humigit-kumulang 68% ng kabuuang supply ang natitira pagkatapos ng 10 taon, at humigit-kumulang 15% ang natitira pagkatapos ng 50 taon.",
+        "Ang isang maliit na bahagi ng supply ay nilikha sa paglulunsad para sa mga partikular na layunin, kabilang ang early user airdrop, community sale, foundation allocation, at emergency reserve, atbp."
+      ],
+      "premine": "Alokasyon sa Paglulunsad (pansamantala, maaaring magbago sa paglulunsad ng mainnet)",
+      "premineTable": [
+        {
+          "label": "User Airdrop",
+          "value": "1.0%"
+        },
+        {
+          "label": "Community Sale",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu Foundation (timelocked)",
+          "value": "0.2%"
+        },
+        {
+          "label": "Emergency Fund (governed)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "Pang-araw-araw na Gantimpala para sa Mga Phone",
+      "emissionsText": "Bawat araw maaaring mag-emit ang network ng pinakamarami 0.01% ng natitirang emissions pool. Binabadyet namin ang halagang iyon upang target na humigit-kumulang $10/araw ang beripikadong phone, na nag-a-adjust depende sa bilang ng participant at kondisyon ng market.",
+      "fees": "Fees at Sentinel",
+      "feesText": "Ang Sentinel helper (opsyonal, advanced) ay kumikita ng bahagi ng transaction fees at builder bid. Hiwalay ito sa daily emissions.",
+      "transparency": "Transparency",
+      "transparencyText": "Public ang vesting schedule at wallet. Public din ang daily emission cap at realized payout sa app.",
+      "disclaimerTitle": "Paalala sa Plain-Language",
+      "disclaimerText": "Hindi ito investment advice. Nakadepende ang gantimpala sa policy ng network at partisipasyon. Hindi ginagarantiya ng app ang fixed income."
+    },
+    "contribute": {
+      "title": "Paano Makatulong",
+      "subtitle": "Tumulong itayo ang Umotu",
+      "intro": "Open source at community-driven ang Umotu. Lahat ay maaaring makatulong—mag-code man, mag-translate, o magbigay lamang ng feedback.",
+      "waysTitle": "Mga Paraan ng Pagkontribyut",
+      "code": {
+        "title": "Paghusayin ang Code",
+        "text": "Ayusin ang bug, magdagdag ng feature, magsulat ng test, o mag-review ng pull request. Tingnan ang aming GitHub repo para sa app, smart contract, at backend service.",
+        "cta": "Tingnan ang GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Tumulong sa Pagsasalin",
+        "text": "Gawing natural ang app sa iyong wika. I-edit ang i18n locale file at subukan ang bawat screen. Nakakatulong ang iyong edit sa milyon-milyon.",
+        "cta": "Gabay sa Pagsasalin",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "Palawakin ang BIP-39 Language",
+        "text": "Magmungkahi ng bago o pinahusay na wordlist upang mas maraming tao ang makakita ng 12-salitang recovery phrase sa kanilang native language.",
+        "cta": "Tingnan ang BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Sumali sa Pamamahala",
+        "text": "Basahin ang mga panukala, talakayin nang bukas, at bumoto sa app. Nakakatulong ang iyong boses sa pag-guide ng network parameter at grant allocation.",
+        "cta": "Buksan ang Pamamahala",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Ikalat ang Salita",
+        "text": "Sabihin sa kaibigan, magsulat ng tutorial, mag-publish ng short, sumagot ng tanong. Mas malakas na komunidad ay nangangahulugan ng mas malakas na network para sa lahat.",
+        "cta": "I-share ang Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "Boluntaryo ang lahat ng kontribusyon. Walang formal employment o compensation maliban kung tinukoy sa grant proposal."
+    },
+    "decentralization": {
+      "title": "Bakit Decentralization",
+      "subtitle": "Walang single point of control",
+      "intro": "Ang decentralization ay nangangahulugan na walang single company o government ang maaaring isara ang network o kunin ang iyong pondo.",
+      "benefits": "Mga Benepisyo Para Sa Iyo",
+      "benefit1": "Laging bukas: 24/7 availability",
+      "benefit2": "Mababang bayad: maliit na network fee sa halip na 3–5% card fee",
+      "benefit3": "Walang border: magpadala ng halaga global",
+      "benefit4": "Censorship-resistant: iyong key, iyong pera",
+      "benefit5": "Transparent: sinuman ay maaaring mag-verify kung paano gumagana ang system",
+      "howWorks": "Paano Ito Gumagana",
+      "howWorksText": "Nagpo-propose ang validator ng block bawat ~2 segundo. Ang mga phone (tulad ng iyo) ay nagbe-verify at nagfi-finalize gamit ang lightweight check. Ang maraming maliit na kontribusyon ay nagiging malakas na seguridad."
+    },
+    "noCompany": {
+      "title": "Walang Company, Walang Customer",
+      "subtitle": "Unawain ang modelo",
+      "intro": "Walang 'Umotu, Inc.' na kumokontrol sa protocol. Ang Umotu ay open set ng rule na maaaring gamitin ng sinuman.",
+      "notCompany": "Ano ang HINDI Umotu",
+      "notCompany1": "HINDI company na may customer account",
+      "notCompany2": "HINDI bank o money transmitter",
+      "notCompany3": "HINDI kontrolado ng single entity",
+      "notCompany4": "HINDI maaaring baligtarin ang transaksyon",
+      "whatIs": "Ano ang Umotu",
+      "whatIs1": "Protocol: tulad ng email o web—open, interoperable rule",
+      "whatIs2": "Phone-first: tumatakbo gamit ang tulong ng ordinaryong smartphone",
+      "whatIs3": "Community-driven: participant ka, hindi customer",
+      "foundation": "Ang Umotu Foundation",
+      "foundationIntro": "Nonprofit na sumusuporta sa ecosystem (reference app, doc, community program) ngunit hindi kumokontrol sa protocol.",
+      "foundationTask1": "Pinapanatili ang mobile app at explorer bilang reference implementation",
+      "foundationTask2": "Nagpapatakbo ng ilang public infrastructure (maaaring patakbuhin ng iba ang kanila)",
+      "foundationTask3": "Nagko-coordinate ng community governance (balita, boto)",
+      "foundationTask4": "Nagre-review at naglilista ng suportadong stablecoin",
+      "foundationTask5": "Nagpu-publish ng education at safety guide",
+      "foundationNote": "Hindi maa-access ng Foundation ang iyong pitaka at hindi maaaring baligtarin ang transaksyon."
+    },
+    "scamPrevention": {
+      "title": "Iwasan ang Scam",
+      "subtitle": "Protektahan ang sarili",
+      "intro": "HINDI kailanman mag-DM sa iyo ang Umotu Foundation. Sinumang nagpapanggap na 'support' ay scammer.",
+      "redFlags": "Mga Red Flag",
+      "redFlag1": "May nagpapanggap na customer support",
+      "redFlag2": "Link para 'i-verify' o 'i-upgrade' ang account",
+      "redFlag3": "Humihiling ng 12-salitang phrase o private key",
+      "redFlag4": "Nangangako ng bonus token kung magpapadala ng pondo",
+      "redFlag5": "App o site na humihiling 'i-activate' ang gantimpala",
+      "truth": "Ang Katotohanan",
+      "truth1": "Walang customer support na maaaring i-reset ang iyong pitaka",
+      "truth2": "Lahat ng opisyal na update ay lilitaw sa app na ito",
+      "truth3": "Walang mula sa Umotu ang magtatanong ng recovery phrase o private key",
+      "truth4": "I-download lamang ang app na ito mula sa opisyal na Apple Store o Google Play",
+      "whatToDo": "Kung May Makipag-ugnayan Sa Iyo",
+      "action1": "Huwag sumagot",
+      "action2": "Huwag mag-click ng link",
+      "action3": "Huwag magbahagi ng impormasyon",
+      "action4": "I-block at i-report"
+    },
+    "airdrop": {
+      "title": "Testnet Airdrop",
+      "subtitle": "Kinikilala ang early user",
+      "intro": "Maaga ka! Nasa testnet pa ang Umotu. Ang aktibong testnet participant ay maaaring makatanggap ng allocation kapag nag-launch ang mainnet.",
+      "howToQualify": "Paano Mag-qualify",
+      "step1": "Gumawa ng pitaka sa app",
+      "step2": "Kumpletuhin ang human verification (Proof of Human)",
+      "step3": "Gamitin nang regular ang app sa panahon ng testnet",
+      "whenAirdrop": "Kailan ang Airdrop?",
+      "whyTestnet": "Mahalaga ang testnet: natututo ang user ng wallet security, at nasusubukan ang system para sa seguridad, robustness, at efficiency bago ang mainnet.",
+      "timeline": "Inaasahan ang mainnet sa Q1 o Q2 ng 2026. Mangyayari ang airdrop sa paligid ng launch ng mainnet.",
+      "howMuch": "Gaano Karami ang Makukuha?",
+      "totalPool": "Kabuuang airdrop pool: 1,000,000,000 UMT token. Nakadepende ang iyong bahagi sa kabuuang participant at presyo ng UMT sa launch.",
+      "scenario2": "1M user: ~1,000 UMT bawat user, inaasahang presyo ~$1, halaga ng airdrop ~$1,000",
+      "scenario3": "10M user: ~100 UMT bawat user, inaasahang presyo ~$20, halaga ng airdrop ~$2,000",
+      "scenario4": "100M user: ~10 UMT bawat user, inaasahang presyo ~$300, halaga ng airdrop ~$3,000",
+      "disclaimer": "Proyeksyon lamang ito, hindi garantiya. Nakadepende ang aktwal na halaga sa kondisyon ng market at rule ng program.",
+      "whatYouGet": "Ano ang Makukuha Mo",
+      "reward": "Sa mainnet, maaaring makatanggap ng tunay na token ang iyong testnet wallet batay sa partisipasyon at rule ng program. Priyoridad ang mas maaga at mas aktibong user.",
+      "note": "Tandaan: Walang halaga ang testnet token. Anumang mainnet allocation ay tinutukoy ng policy ng program sa launch. Lahat ng balita tungkol sa airdrop ay ipo-publish lamang sa app na ito."
+    },
+    "gettingStarted": {
+      "title": "Magsimula",
+      "subtitle": "Iyong unang limang minuto",
+      "intro": "Narito ang iyong mabilis na setup:",
+      "checklist": "Checklist ng Setup",
+      "check1": "1) Pumili ng wika (tapos na!)",
+      "check2": "2) Gumawa o mag-import ng pitaka",
+      "check3": "3) MAHALAGA: Isulat ang iyong 12 salita sa papel",
+      "check4": "4) Kumpletuhin ang human verification (mabilis na scan)",
+      "check5": "5) Panatilihing tumatakbo ang app upang kumita ng pang-araw-araw na gantimpala",
+      "tips": "Mga Pro Tip",
+      "tip1": "Payagan ang background access upang tumakbo ang check",
+      "tip2": "Bumalik araw-araw upang makita ang gantimpala",
+      "tip3": "Mag-imbita ng kaibigan—mas maraming user ay ginagawang mas malakas ang network"
+    }
+  },
+  "common": {
+    "loading": "Naglo-load...",
+    "error": "Error",
+    "retry": "Subukang Muli",
+    "cancel": "Kanselahin",
+    "save": "I-save",
+    "done": "Tapos Na",
+    "continue": "Magpatuloy",
+    "confirm": "Kumpirmahin",
+    "yes": "Oo",
+    "no": "Hindi",
+    "ok": "OK",
+    "success": "Tagumpay",
+    "failed": "Nabigo",
+    "copied": "Na-kopya!",
+    "pullToRefresh": "Hilahin upang i-refresh",
+    "notSet": "Hindi na-set"
+  },
+  "errors": {
+    "networkError": "Error sa network. Suriin ang iyong koneksyon.",
+    "genericError": "May nangyaring mali. Subukang muli.",
+    "walletNotFound": "Hindi natagpuan ang pitaka",
+    "transactionFailed": "Nabigo ang transaksyon",
+    "invalidInput": "Hindi wastong input"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Maligayang Pagdating sa Umotu",
+  "onboard_wallet_title": "I-set up ang iyong pitaka",
+  "onboard_wallet_explain": "Gumawa o mag-import ng pitaka upang makatanggap ng gantimpala.",
+  "wallet_create": "Gumawa ng Bagong Pitaka",
+  "wallet_import": "I-import ang Pitaka",
+  "wallet_import_explain": "Maglagay ng iyong 12-salitang recovery phrase",
+  "wallet_created": "Handa Na ang Pitaka",
+  "wallet_save": "I-save sa Device",
+  "wallet_backup_title": "I-backup ang Iyong Recovery Phrase",
+  "wallet_backup_explain": "Isulat ang 12 salitang ito nang sunud-sunod. Ito ang TANGING paraan upang ma-recover ang pitaka kung mawala ang device.",
+  "wallet_backup_warning": "Huwag kailanman ibahagi ang recovery phrase. Sinumang may mga salitang ito ay maaaring ma-access ang iyong pondo.",
+  "wallet_backup_confirm": "Naisulat ko na ang recovery phrase",
+  "wallet_backup_done": "Na-save Ko Na ang Aking Phrase",
+  "wallet_save_first": "Mangyaring i-save muna ang recovery phrase",
+  "poh_title": "Beripikahin ang Tao",
+  "continue": "Magpatuloy",
+  "or": "O",
+  "seedReveal": {
+    "title": "Recovery Phrase",
+    "intro": "Ang recovery phrase ay ang tanging paraan upang ma-restore ang pitaka kung mawala ang access sa device na ito. Isulat ito at i-store nang ligtas offline.",
+    "displayLanguage": "Ipinapakita sa {{language}}",
+    "hiddenMsg": "Nakatago ang iyong phrase para sa seguridad. Pindutin sa ibaba upang ipakita.",
+    "showButton": "Ipakita ang Phrase",
+    "noScreenshot": "Huwag kumuha ng screenshot ng recovery phrase.",
+    "checkTitle": "Beripikahin ang Iyong Backup",
+    "checkPrompt": "Maglagay ng mga salita sa ibaba upang kumpirmahin na tama mong naisulat:",
+    "checkWordN": "Salita #{{n}}",
+    "checkIncorrect": "Mali ang isa o higit pang salita. Suriin ang iyong backup.",
+    "ackWritten": "Naisulat ko na ang recovery phrase",
+    "ackCannotRecover": "Naiintindihan ko na hindi maa-recover ng Umotu ang aking pitaka",
+    "cancel": "Kanselahin",
+    "continue": "Na-save Ko Na Ito"
+  }
+}

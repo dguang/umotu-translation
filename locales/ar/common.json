@@ -1,0 +1,1414 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "10 دولارات يوميًا، للجميع في كل مكان"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "wallet": "المحفظة",
+    "miniapps": "التطبيقات المصغرة",
+    "back": "رجوع",
+    "scan": "مسح",
+    "settings": "الإعدادات",
+    "close": "إغلاق"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "البشر الموثقون",
+      "umtPrice": "سعر UMT"
+    },
+    "quickActions": {
+      "news": "الأخبار",
+      "vote": "الحوكمة",
+      "governance": "الحوكمة",
+      "learn": "تعلم",
+      "network": "الشبكة"
+    },
+    "setupProgress": {
+      "title": "تقدم الإعداد",
+      "steps": {
+        "language": "اللغة",
+        "wallet": "المحفظة",
+        "verifyHuman": "توثيق الإنسان",
+        "complete": "مكتمل"
+      },
+      "continue": "متابعة",
+      "changeChoice": "تغيير الاختيار",
+      "requiresLanguage": "اختر اللغة أولاً",
+      "requiresWallet": "أنشئ محفظة أولاً"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "المكافآت اليومية",
+      "totalEarned": "إجمالي المكتسب",
+      "lastClaimed": "آخر مطالبة",
+      "never": "أبدًا",
+      "configure": "تهيئة",
+      "loading": "جارٍ تحميل المكافآت...",
+      "noWallet": "لا توجد محفظة",
+      "autoClaim": {
+        "label": "المطالبة التلقائية:",
+        "active": "نشط",
+        "setupNow": "إعداد الآن",
+        "expired": "منتهي الصلاحية",
+        "tapToSetup": "اضغط لتفعيل المكافآت اليومية التلقائية"
+      }
+    },
+    "sentinel": {
+      "title": "أرباح Sentinel",
+      "manage": "إدارة",
+      "loading": "جارٍ التحميل...",
+      "status": "الحالة",
+      "statuses": {
+        "notBonded": "غير مربوط",
+        "bonded": "مرتبط",
+        "unbonding": "جارٍ فك الارتباط"
+      },
+      "claimable": "قابل للمطالبة",
+      "accruing": "جارٍ التجميع",
+      "bonded": "مرتبط"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "المكافآت اليومية التلقائية",
+      "description": "فعّل <bold>المطالبة التلقائية</bold> لتلقي مكافأتك اليومية بقيمة 10 دولارات تلقائيًا – لا حاجة للمطالبة اليدوية!",
+      "benefits": {
+        "midnight": "يتم المطالبة عند منتصف الليل حسب توقيتك",
+        "lowerFees": "رسوم غاز أقل بنسبة 80% (مجمعة مع مستخدمين آخرين)",
+        "disable": "يمكنك تعطيلها في أي وقت من الإعدادات"
+      },
+      "notice": "ستوقع رسالة تفويض لمرة واحدة تسمح لمرحلنا بالمطالبة نيابة عنك. لا يتم مشاركة المفاتيح الخاصة.",
+      "maybeLater": "ربما لاحقًا",
+      "enableNow": "تفعيل الآن"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "إعدادات المطالبة التلقائية",
+      "description": "المطالبة التلقائية بمكافآتك اليومية.",
+      "checking": "جارٍ التحقق من الحالة...",
+      "status": "الحالة",
+      "enabled": "مفعل",
+      "disabled": "معطل",
+      "lastClaimed": "آخر مطالبة",
+      "neverClaimed": "لم يتم المطالبة أبدًا",
+      "nextClaim": "المطالبة التالية",
+      "expiresAt": "تنتهي في",
+      "timezone": "المنطقة الزمنية",
+      "preferredHour": "الساعة المفضلة",
+      "preferredHourHint": "اختر متى يجب تشغيل المطالبة التلقائية",
+      "enableButton": "تفعيل المطالبة التلقائية",
+      "disableButton": "تعطيل المطالبة التلقائية",
+      "enabling": "جارٍ التفعيل...",
+      "disabling": "جارٍ التعطيل...",
+      "enableSuccess": "تم تفعيل المطالبة التلقائية!",
+      "enableError": "فشل التفعيل",
+      "disableSuccess": "تم تعطيل المطالبة التلقائية",
+      "disableError": "فشل التعطيل",
+      "updateButton": "تحديث الإعدادات",
+      "updating": "جارٍ التحديث..."
+    },
+    "manual": {
+      "title": "المطالبة اليدوية",
+      "description": "إذا كنت بحاجة إلى الأموال في وقت أقرب، اطلب المكافأة المتاحة التالية الآن. المطالبات اليدوية تستخدم غاز محفظتك. المطالبة التلقائية تبقى أرخص إذا انتظرت. إذا كانت محفظتك غير ممولة، قم بتفعيل المطالبة التلقائية أو أضف الغاز الأصلي قبل المطالبة اليدوية.",
+      "dayLabel": "يوم المكافأة",
+      "claimButton": "المطالبة الآن",
+      "claiming": "جارٍ المطالبة...",
+      "success": "تم تقديم المطالبة",
+      "successWithId": "تم تقديم المطالبة (المعرف: {{id}})",
+      "error": "فشلت المطالبة",
+      "noProof": "لم يتم نشر إثبات المكافأة بعد. حاول مرة أخرى بعد نشر لقطة اليوم.",
+      "unauthorized": "فشل تفويض المرحل. يرجى المحاولة مرة أخرى أو الاتصال بالدعم.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "أيام المكافآت المتاحة: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "التغطية: {{start}} إلى {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} إضافية بعد هذه الدفعة",
+      "batchSuccess": "تم المطالبة بـ {{count}} أيام بنجاح",
+      "claimingProgress": "جارٍ المطالبة {{claimed}}/{{total}}...",
+      "claimAllButton": "المطالبة بجميع الـ {{count}} أيام"
+    },
+    "timezone": {
+      "title": "اختيار المنطقة الزمنية",
+      "search": "البحث في المناطق الزمنية...",
+      "current": "الاختيار الحالي",
+      "searchResults": "نتائج البحث",
+      "noResults": "لم يتم العثور على نتائج",
+      "detected": "مكتشف",
+      "popular": "المناطق الزمنية الشائعة",
+      "regions": {
+        "Americas": "الأمريكتان",
+        "Europe": "أوروبا",
+        "Asia": "آسيا",
+        "Africa": "أفريقيا",
+        "Oceania": "أوقيانوسيا"
+      }
+    },
+    "payout": {
+      "title": "تفضيل الدفع",
+      "description": "اختر عملتك المفضلة للدفع.",
+      "current": "الحالي",
+      "saved": "تم الحفظ",
+      "saveError": "خطأ في الحفظ",
+      "showMore": "عرض المزيد ({{count}})",
+      "showLess": "عرض أقل",
+      "native": "الرمز الأصلي",
+      "stablecoin": "عملة مستقرة",
+      "popular": "شائع",
+      "allCurrencies": "جميع العملات"
+    }
+  },
+  "wallet": {
+    "title": "المحفظة",
+    "testnetNotice": "رموز الشبكة التجريبية ليس لها قيمة حقيقية",
+    "totalBalance": "إجمالي الرصيد",
+    "balance": "الرصيد",
+    "address": "العنوان",
+    "copyAddress": "نسخ العنوان",
+    "addressCopied": "تم نسخ العنوان",
+    "receive": "استلام",
+    "send": "إرسال",
+    "swap": "تبديل",
+    "swapComingSoon": "التبديل قادم قريبًا",
+    "history": "السجل",
+    "tokens": "الرموز",
+    "collectibles": "المقتنيات",
+    "noTokens": "لم يتم تهيئة رموز",
+    "nativeToken": "الرمز الأصلي",
+    "loading": "جارٍ التحميل...",
+    "refreshing": "جارٍ التحديث...",
+    "balancesUpdated": "تم تحديث الأرصدة",
+    "menu": {
+      "manageTokens": "إدارة الرموز",
+      "addressBook": "دفتر العناوين",
+      "walletSettings": "إعدادات المحفظة",
+      "showBalances": "إظهار الأرصدة",
+      "hideBalances": "إخفاء الأرصدة",
+      "showZeroTokens": "إظهار الرموز الصفرية",
+      "hideZeroTokens": "إخفاء الرموز الصفرية",
+      "refresh": "تحديث"
+    },
+    "manageTokens": {
+      "title": "إدارة الرموز",
+      "info": "أضف رموز ERC-20 مخصصة. الرموز النظامية مضمنة افتراضيًا.",
+      "addToken": "إضافة رمز",
+      "adding": "جارٍ الإضافة...",
+      "contractAddress": "عنوان عقد الرمز (0x...)",
+      "autoFetch": "يتم جلب الرمز والكسور العشرية تلقائيًا",
+      "customTokens": "الرموز المخصصة",
+      "noCustomTokens": "لم تتم إضافة رموز مخصصة بعد.",
+      "addUsingForm": "أضف رمزًا باستخدام النموذج أعلاه.",
+      "systemToken": "هذا الرمز هو رمز نظامي ومضمن بالفعل.",
+      "fetchingMetadata": "جارٍ جلب بيانات الرمز...",
+      "addedSuccess": "تم إضافة الرمز بنجاح",
+      "enterValidAddress": "أدخل عنوان رمز صالح",
+      "save": "حفظ"
+    },
+    "addressBook": {
+      "title": "دفتر العناوين",
+      "addContact": "إضافة جهة اتصال",
+      "nameLabel": "الاسم أو التسمية",
+      "walletAddress": "عنوان المحفظة (0x...)",
+      "savedContacts": "جهات الاتصال المحفوظة",
+      "noContacts": "لم يتم حفظ جهات اتصال بعد.",
+      "addForQuickSending": "أضف جهات اتصال للإرسال السريع.",
+      "enterValidAddress": "أدخل عنوانًا صالحًا",
+      "addLabel": "إضافة تسمية",
+      "save": "حفظ"
+    },
+    "settings": {
+      "title": "إعدادات المحفظة",
+      "export": {
+        "title": "تصدير المحفظة",
+        "description": "لا تشارك عبارة الاستعادة أو المفتاح الخاص أبدًا. احفظهما بأمان دون اتصال.",
+        "recoveryPhrase": "عبارة الاستعادة",
+        "recoveryPhraseNotAvailable": "عبارة الاستعادة غير متوفرة (تم الاستيراد عبر المفتاح الخاص)",
+        "privateKey": "المفتاح الخاص",
+        "privateKeyWarning": "المفتاح الخاص (احفظه سرًا!)",
+        "showPhrase": "إظهار عبارة الاستعادة",
+        "showKey": "إظهار المفتاح الخاص",
+        "warning": "لا تشارك عبارة الاستعادة أو المفتاح الخاص مع أي شخص.",
+        "copy": "نسخ",
+        "copied": "تم النسخ!",
+        "hide": "إخفاء",
+        "clipboardWarning": "يمكن لتطبيقات أخرى قراءة الحافظة. سيتم مسحها تلقائيًا بعد 30 ثانية.",
+        "verifyForKey": "التحقق لإظهار المفتاح الخاص",
+        "verifyForSeed": "التحقق لإظهار عبارة الاستعادة",
+        "verifyDescription": "أدخل كلمة المرور أو الرمز السري لإظهار معلومات المحفظة الحساسة."
+      },
+      "import": {
+        "title": "استيراد المحفظة",
+        "description": "الاستيراد يستبدل المحفظة الحالية. تأكد من نسخ المحفظة الحالية احتياطيًا أولاً. لاحظ أنك ستحتاج إلى إعادة توثيق حالة PoH بعد الاستيراد.",
+        "byPhrase": "عبارة الاستعادة",
+        "byPrivateKey": "المفتاح الخاص",
+        "phrasePlaceholder": "أدخل عبارة 12 أو 24 كلمة…",
+        "keyPlaceholder": "أدخل المفتاح الخاص 0x…",
+        "importButton": "استيراد المحفظة",
+        "importing": "جارٍ الاستيراد...",
+        "success": "تم استيراد المحفظة بنجاح!"
+      },
+      "dangerZone": {
+        "title": "منطقة الخطر",
+        "description": "هذه الإجراءات لا يمكن التراجع عنها. تأكد من نسخ محفظتك احتياطيًا.",
+        "forgetWallet": "نسيان المحفظة",
+        "forgetDescription": "إزالة المحفظة من هذا الجهاز. تأكد من نسخ عبارة الاستعادة احتياطيًا.",
+        "confirmTitle": "نسيان المحفظة؟",
+        "confirmMessage": "سيؤدي ذلك إلى إزالة محفظتك من هذا الجهاز. تأكد من نسخ عبارة الاستعادة احتياطيًا أولاً.",
+        "cancel": "إلغاء",
+        "confirm": "نسيان المحفظة",
+        "walletForgotten": "تم نسيان المحفظة",
+        "unableToForget": "تعذر نسيان المحفظة",
+        "resetWallet": "إعادة تعيين المحفظة",
+        "resetDescription": "مسح جميع بيانات المحفظة تمامًا والبدء من جديد."
+      },
+      "authPrompt": "المصادقة لإظهار المفتاح الخاص"
+    }
+  },
+  "reset": {
+    "title": "إعادة تعيين المحفظة",
+    "dangerTitle": "هذا الإجراء لا يمكن التراجع عنه!",
+    "warning1": "إعادة تعيين محفظتك سيحذف نهائيًا:",
+    "bullet1": "محفظتك ومفاتيحك الخاصة",
+    "bullet2": "عبارة الاستعادة",
+    "bullet3": "جميع إعدادات التطبيق والتفضيلات",
+    "bullet4": "سجل المعاملات",
+    "recoveryNote": "إذا كان لديك عبارة الاستعادة المكونة من 12 كلمة، يمكنك استعادة محفظتك بعد إعادة التعيين.",
+    "continueButton": "أفهم، متابعة",
+    "confirmTitle": "تأكيد إعادة التعيين",
+    "confirmDescription": "اكتب \"RESET\" أدناه لتأكيد رغبتك في حذف جميع بيانات المحفظة.",
+    "placeholder": "اكتب RESET",
+    "typeMismatch": "يرجى كتابة RESET للتأكيد",
+    "resetButton": "إعادة تعيين المحفظة إلى الأبد",
+    "resettingTitle": "جارٍ إعادة التعيين...",
+    "resettingDescription": "جارٍ مسح جميع بيانات المحفظة. يرجى الانتظار...",
+    "completeTitle": "اكتملت إعادة التعيين",
+    "completeDescription": "تم إعادة تعيين محفظتك. يمكنك الآن إعداد محفظة جديدة أو استيراد محفظة موجودة.",
+    "startFresh": "البدء من جديد",
+    "error": "فشلت إعادة تعيين المحفظة. يرجى المحاولة مرة أخرى."
+  },
+  "export": {
+    "verifyTitle": "التحقق من الهوية",
+    "verifyDescription": "أدخل كلمة المرور لتصدير محفظتك.",
+    "verify": "التحقق",
+    "verificationFailed": "فشل التحقق",
+    "passphraseTitle": "تعيين عبارة مرور التصدير",
+    "passphraseDescription": "اختر عبارة مرور قوية لتشفير النسخة الاحتياطية. ستحتاج إلى هذه العبارة لاستيراد المحفظة لاحقًا.",
+    "enterPassphrase": "أدخل عبارة المرور",
+    "passphraseTooWeak": "عبارة المرور ضعيفة جدًا. استخدم 8 أحرف على الأقل.",
+    "includeSeed": "تضمين عبارة الاستعادة",
+    "includeSeedDescription": "موصى به للنسخ الاحتياطي الكامل",
+    "confirmTitle": "تأكيد عبارة المرور",
+    "confirmDescription": "أعد إدخال عبارة المرور للتأكيد.",
+    "confirmPassphrase": "تأكيد عبارة المرور",
+    "passphraseMismatch": "عبارات المرور غير متطابقة",
+    "warning": "احفظ هذه النسخة الاحتياطية بأمان. أي شخص لديه الوصول إلى هذا الملف وعبارة المرور يمكنه الوصول إلى محفظتك.",
+    "exportNow": "تصدير المحفظة",
+    "exportingTitle": "جارٍ التصدير...",
+    "exportingDescription": "جارٍ تشفير وإعداد نسخة محفظتك الاحتياطية...",
+    "successTitle": "اكتمل التصدير",
+    "successDescription": "تم إنشاء نسختك الاحتياطية المشفرة للمحفظة. احفظها بأمان.",
+    "rememberPassphrase": "تذكر عبارة مرور التصدير - ستحتاجها لاستيراد هذه النسخة الاحتياطية.",
+    "errorTitle": "فشل التصدير",
+    "failed": "فشل التصدير. يرجى المحاولة مرة أخرى.",
+    "tryAgain": "المحاولة مرة أخرى",
+    "exportKeystore": "تصدير نسخة احتياطية مشفرة",
+    "exportKeystoreDesc": "حفظ ملف keystore المشفر"
+  },
+  "security": {
+    "title": "تأمين محفظتك",
+    "subtitle": "إعداد كلمة مرور أو رمز PIN لحماية محفظتك",
+    "checkingDevice": "جارٍ التحقق من أمان الجهاز...",
+    "passwordOption": "كلمة مرور",
+    "passwordDesc": "8 أحرف على الأقل، حروف وأرقام",
+    "pinOption": "رمز PIN مكون من 6 أرقام",
+    "pinDesc": "سريع وسهل التذكر",
+    "enterPin": "أدخل رمز PIN مكونًا من 6 أرقام",
+    "confirmPin": "تأكيد رمز PIN",
+    "enterPassword": "أدخل كلمة مرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "enableBiometrics": "تفعيل {{type}}؟",
+    "biometricsDesc": "استخدم {{type}} لفتح سريع. يمكنك تغييره لاحقًا في الإعدادات.",
+    "enableBiometricsButton": "تفعيل {{type}}",
+    "enableBiometricsPrompt": "المصادقة لتفعيل فتح القفل البيومتري",
+    "skipBiometrics": "تخطي الآن",
+    "setupComplete": "اكتمل الإعداد!",
+    "walletSecured": "تم تأمين محفظتك الآن!",
+    "continue": "متابعة",
+    "passwordTooWeak": "كلمة المرور ضعيفة جدًا. يرجى اتباع الاقتراحات.",
+    "pinMismatch": "رمزا PIN غير متطابقين",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين",
+    "setupError": "فشل الإعداد. يرجى المحاولة مرة أخرى.",
+    "passwordTitle": "كلمة مرور",
+    "passwordDescription": "8 أحرف على الأقل، أمان أقوى",
+    "pinTitle": "رمز PIN مكون من 6 أرقام",
+    "pinDescription": "وصول سريع، سهل التذكر"
+  },
+  "lock": {
+    "title": "فتح Umotu",
+    "lockedOut": "محجوب",
+    "tooManyAttempts": "محاولات كثيرة جدًا. حاول مرة أخرى بعد {{time}}.",
+    "attemptsRemaining": "تبقى {{count}} محاولات",
+    "enterPassword": "أدخل كلمة المرور",
+    "unlock": "فتح",
+    "wrongPin": "رمز PIN غير صحيح",
+    "wrongPassword": "كلمة مرور غير صحيحة",
+    "verificationError": "فشل التحقق",
+    "biometricsPrompt": "فتح محفظتك",
+    "unlockWithFaceId": "فتح باستخدام Face ID؟",
+    "unlockWithFingerprint": "فتح باستخدام بصمة الإصبع؟",
+    "forgotPassword": "نسيت كلمة المرور؟"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "جهاز غير مدعوم",
+    "emulatorMessage": "لا يمكن تشغيل هذا التطبيق على المحاكيات لأسباب أمنية.",
+    "rootedTitle": "تحذير أمني",
+    "exitApp": "الخروج",
+    "continueAnyway": "المتابعة على أي حال"
+  },
+  "settingsSecurity": {
+    "title": "الأمان",
+    "autoLock": "القفل التلقائي",
+    "autoLockDesc": "قفل المحفظة بعد عدم النشاط",
+    "faceId": "Face ID",
+    "fingerprint": "بصمة الإصبع",
+    "biometricsDesc": "فتح سريع باستخدام البيومترية",
+    "changePin": "تغيير رمز PIN",
+    "changePassword": "تغيير كلمة المرور",
+    "changeDesc": "تحديث بيانات الأمان",
+    "enableBiometrics": "تفعيل فتح القفل البيومتري",
+    "enterCurrent": "أدخل {{type}} الحالي",
+    "enterNew": "أدخل {{type}} الجديد",
+    "confirmNew": "تأكيد {{type}} الجديد",
+    "currentPassword": "كلمة المرور الحالية",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+    "changeNow": "تغيير الآن",
+    "success": "نجاح",
+    "pinChanged": "تم تغيير رمز PIN بنجاح",
+    "passwordChanged": "تم تغيير كلمة المرور بنجاح",
+    "changeFailed": "فشل تغيير بيانات الأمان",
+    "autoLockOptions": {
+      "immediately": "فورًا",
+      "after1min": "بعد دقيقة واحدة",
+      "after5min": "بعد 5 دقائق",
+      "after15min": "بعد 15 دقيقة",
+      "after1hour": "بعد ساعة واحدة",
+      "never": "أبدًا"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "يرجى الانتظار",
+    "cooldownMessage": "لأسباب أمنية، يمكنك إظهار مفاتيحك مرة أخرى بعد {{time}}.",
+    "cooldownReason": "هذا يمنع التطبيقات الضارة من الوصول السريع إلى مفاتيحك."
+  },
+  "passwordVerify": {
+    "title": "التحقق من الهوية",
+    "description": "أدخل كلمة المرور أو رمز PIN لإظهار معلومات المحفظة الحساسة",
+    "verify": "التحقق"
+  },
+  "passwordValidation": {
+    "veryWeak": "ضعيف جدًا",
+    "weak": "ضعيف",
+    "fair": "مقبول",
+    "good": "جيد",
+    "strong": "قوي",
+    "tooShort": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+    "commonPassword": "هذه كلمة مرور شائعة الاستخدام",
+    "lengthSuggestion": "استخدم 12 حرفًا على الأقل لأمان أفضل",
+    "mixedCaseSuggestion": "اخلط الأحرف الكبيرة والصغيرة",
+    "numberSuggestion": "أضف بعض الأرقام",
+    "specialCharSuggestion": "أضف أحرفًا خاصة (!@#$%)"
+  },
+  "forgot": {
+    "title": "إعادة تعيين بيانات الأمان",
+    "warning": "لإعادة تعيين كلمة المرور أو رمز PIN، ستحتاج إلى إدخال عبارة بذر المحفظة. هذا يثبت ملكيتك للمحفظة.",
+    "warningText": "لا تشارك عبارة البذر مع أي شخص أبدًا.",
+    "continue": "أفهم، متابعة",
+    "enterSeed": "أدخل عبارة البذر",
+    "seedDescription": "أدخل عبارة البذر المكونة من 12 أو 24 كلمة. افصل كل كلمة بمسافة.",
+    "seedPlaceholder": "أدخل عبارة البذر...",
+    "verifySeed": "التحقق من عبارة البذر",
+    "invalidSeed": "يرجى إدخال عبارة بذر صالحة مكونة من 12 أو 24 كلمة",
+    "chooseMethod": "اختيار طريقة الأمان",
+    "methodDescription": "كيف ترغب في تأمين محفظتك؟",
+    "newPassword": "إنشاء كلمة مرور جديدة",
+    "newPin": "إنشاء رمز PIN جديد",
+    "newPasswordDesc": "اختر كلمة مرور قوية (8 أحرف على الأقل)",
+    "newPinDesc": "أدخل رمز PIN مكونًا من 6 أرقام",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "confirmPin": "تأكيد رمز PIN",
+    "confirmPasswordDesc": "أعد إدخال كلمة المرور للتأكيد",
+    "confirmPinDesc": "أعد إدخال رمز PIN للتأكيد",
+    "resetNow": "إعادة التعيين الآن",
+    "complete": "اكتملت إعادة التعيين",
+    "completeDescription": "تم إعادة تعيين بيانات الأمان. يمكنك الآن فتح محفظتك بكلمة المرور أو رمز PIN الجديد.",
+    "unlockNow": "فتح المحفظة",
+    "passwordTooWeak": "كلمة المرور ضعيفة جدًا. يرجى اختيار كلمة مرور أقوى.",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين",
+    "pinMismatch": "رمزا PIN غير متطابقين",
+    "resetFailed": "فشلت إعادة تعيين بيانات الأمان. يرجى التحقق من عبارة البذر.",
+    "resetError": "حدث خطأ. يرجى المحاولة مرة أخرى."
+  },
+  "send": {
+    "title": "إرسال",
+    "selectToken": "اختيار الرمز",
+    "selectTokenInfo": "اختر رمزًا للإرسال. تظهر فقط الرموز ذات الرصيد.",
+    "noTokensWithBalance": "لا توجد رموز ذات رصيد",
+    "addTokensFirst": "أضف رموزًا إلى محفظتك أولاً",
+    "enterAmount": "أدخل المبلغ",
+    "enterRecipient": "أدخل المستلم",
+    "review": "مراجعة",
+    "amount": "المبلغ",
+    "recipient": "المستلم",
+    "recipientPlaceholder": "عنوان محفظة 0x...",
+    "networkFee": "رسوم الشبكة",
+    "gasToken": "دفع الغاز بـ",
+    "payingWith": "الدفع بـ",
+    "payGasWith": "دفع الغاز بـ",
+    "nativeGas": "UMT (أصلي)",
+    "stableGas": "غاز مستقر",
+    "selectStable": "اختيار مستقر",
+    "max": "الحد الأقصى",
+    "next": "التالي",
+    "continue": "متابعة",
+    "confirm": "تأكيد الإرسال",
+    "confirmSend": "تأكيد الإرسال",
+    "sending": "جارٍ الإرسال...",
+    "failed": "فشلت المعاملة",
+    "viewInExplorer": "عرض في المستكشف",
+    "done": "تم",
+    "cancel": "إلغاء",
+    "send": "إرسال",
+    "balance": "الرصيد",
+    "available": "متاح",
+    "to": "إلى",
+    "network": "الشبكة",
+    "step": "الخطوة",
+    "estimating": "جارٍ التقدير…",
+    "umtNative": "UMT (أصلي)",
+    "txSpeed": "سرعة المعاملة",
+    "transactionSpeed": "سرعة المعاملة",
+    "speed": {
+      "slow": "بطيء",
+      "normal": "عادي",
+      "fast": "سريع"
+    },
+    "gasNotice": {
+      "stablecoin": "سيتم دفع الغاز بعملة مستقرة.",
+      "reserved": "حجزنا {{amount}} {{symbol}} للغاز؛ يمكنك إرسال {{max}} كحد أقصى."
+    },
+    "errors": {
+      "invalidAddress": "عنوان المستلم غير صالح",
+      "invalidAmount": "أدخل مبلغًا صالحًا",
+      "insufficientBalance": "رصيد غير كافٍ",
+      "insufficientGas": "رصيد غير كافٍ للغاز",
+      "insufficientGasWithHint": "رصيد غير كافٍ للغاز. أضف UMT أو عملة مستقرة مدعومة.",
+      "notEnoughForGas": "رصيد غير كافٍ لتغطية الغاز",
+      "noStableGas": "رصيد UMT غير كافٍ للغاز ولا توجد عملة مستقرة مدعومة لتغطيته.",
+      "permitFailed": "فشل التصريح أو الموافقة على رمز الغاز",
+      "relayNotConfigured": "مرحل الغاز المستقر غير مهيأ",
+      "transactionReverted": "تم إرجاع المعاملة على السلسلة.",
+      "approvalNeeded": "يحتاج رمز الغاز إلى موافقة لكن لا يتوفر UMT للموافقة. أضف كمية صغيرة من UMT أو استخدم رمزًا يدعم التصريح."
+    },
+    "addressBook": {
+      "title": "دفتر العناوين",
+      "addNew": "إضافة جديد",
+      "noContacts": "لا توجد عناوين محفوظة",
+      "saveForQuickAccess": "احفظ العناوين للوصول السريع",
+      "editContact": "تعديل جهة الاتصال",
+      "deleteContact": "حذف جهة الاتصال",
+      "addressNotSaved": "العنوان غير محفوظ",
+      "addLabel": "إضافة تسمية",
+      "enterValidAddress": "أدخل عنواناً صالحاً أولاً",
+      "saved": "تم الحفظ",
+      "save": "حفظ"
+    },
+    "success": {
+      "title": "تم إرسال المعاملة!",
+      "hash": "الهاش",
+      "viewInExplorer": "عرض في المستكشف",
+      "close": "إغلاق"
+    },
+    "batch": {
+      "mode": "وضع الدفعات",
+      "singleMode": "مستلم واحد",
+      "addRecipient": "إضافة مستلمين",
+      "noRecipients": "لم تتم إضافة مستلمين بعد",
+      "addFromTagOrBook": "إضافة من الوسم أو الدفتر",
+      "invalidAddress": "عنوان غير صالح: {{address}}",
+      "invalidAmount": "مبلغ غير صالح لـ {{recipient}}",
+      "totalExceedsBalance": "المجموع يتجاوز الرصيد",
+      "sendingTo": "إرسال إلى {{count}} مستلم",
+      "sendingTo_plural": "إرسال إلى {{count}} مستلمين",
+      "recipients": "المستلمون",
+      "addresses": "{{count}} عنوان",
+      "addresses_plural": "{{count}} عناوين",
+      "addByTag": "إضافة بالوسم",
+      "noTags": "لا توجد وسوم بعد",
+      "createFirstTag": "أنشئ أول وسم في دفتر العناوين",
+      "addFromTag": "إضافة من الوسم",
+      "selectTag": "اختر وسماً",
+      "remove": "إزالة",
+      "sendAll": "إرسال الكل ({{count}})",
+      "batchSend": "إرسال دفعة",
+      "badge": "دفعة",
+      "successFail": "{{success}} نجح، {{fail}} فشل",
+      "successful": "ناجح",
+      "sentStatus": "مُرسل",
+      "failedStatus": "فاشل",
+      "details": "تفاصيل التحويل الجماعي",
+      "total": "المجموع",
+      "tagPicker": {
+        "title": "اختر وسماً",
+        "noTags": "لا توجد وسوم متاحة",
+        "createHint": "أضف وسوماً لجهات الاتصال في الدفتر أولاً"
+      },
+      "tags": {
+        "manage": "إدارة الوسوم",
+        "add": "إضافة وسم",
+        "remove": "إزالة الوسم",
+        "create": "إنشاء وسم",
+        "newTag": "اسم الوسم الجديد",
+        "addToContact": "إضافة وسم لجهة الاتصال"
+      }
+    }
+  },
+  "receive": {
+    "title": "استلام",
+    "yourAddress": "عنوان محفظتك",
+    "scanQR": "مسح رمز QR للاستلام",
+    "copyAddress": "نسخ العنوان",
+    "share": "مشاركة"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "دفع",
+      "myQr": "رمز QR الخاص بي"
+    },
+    "pay": {
+      "title": "دفع",
+      "description": "امسح رمز QR لصديقك للدفع مباشرة إلى محفظته",
+      "allowCamera": "السماح بالكاميرا",
+      "requesting": "جارٍ الطلب…",
+      "openSettings": "فتح الإعدادات",
+      "sendTo": "إرسال إلى",
+      "amount": "المبلغ",
+      "rescan": "إعادة المسح",
+      "continue": "متابعة"
+    },
+    "receive": {
+      "title": "استلام",
+      "description": "امسح هذا الرمز QR لإرسال المدفوعات إلى هذا العنوان",
+      "tapToCopy": "اضغط لنسخ العنوان",
+      "copied": "تم النسخ إلى الحافظة!"
+    }
+  },
+  "history": {
+    "title": "سجل المعاملات",
+    "sent": "مرسل",
+    "received": "مستلم",
+    "token": "الرمز",
+    "external": "خارجي",
+    "to": "إلى: ",
+    "from": "من: ",
+    "viewInExplorer": "عرض في المستكشف",
+    "empty": {
+      "title": "لا توجد معاملات بعد",
+      "description": "سيظهر سجل معاملاتك هنا بمجرد إرسال أو استلام رموز."
+    },
+    "status": {
+      "confirmed": "مؤكد",
+      "pending": "معلق",
+      "failed": "فاشل"
+    },
+    "details": {
+      "title": "تفاصيل المعاملة",
+      "status": "الحالة",
+      "type": "النوع",
+      "to": "إلى",
+      "from": "من",
+      "token": "الرمز",
+      "block": "الكتلة",
+      "gasCost": "تكلفة الغاز",
+      "hash": "الهاش",
+      "source": "المصدر",
+      "balanceDetected": "تم اكتشاف الرصيد",
+      "inferredNote": "تم اكتشاف هذه المعاملة من تغيير الرصيد. التفاصيل الدقيقة على السلسلة غير متوفرة."
+    },
+    "time": {
+      "justNow": "الآن",
+      "minsAgo": "قبل {{count}} دقيقة",
+      "hoursAgo": "قبل {{count}} ساعة",
+      "daysAgo": "قبل {{count}} يوم"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "account": {
+      "title": "الحساب والمظهر",
+      "walletAddress": "عنوان المحفظة",
+      "copy": "نسخ",
+      "copied": "تم النسخ"
+    },
+    "theme": {
+      "title": "السمة",
+      "light": "فاتح",
+      "dark": "داكن",
+      "system": "النظام"
+    },
+    "language": {
+      "title": "اللغة",
+      "select": "اختيار اللغة",
+      "current": "الحالية"
+    },
+    "display": {
+      "title": "العرض",
+      "description": "تخصيص مظهر الشاشة الرئيسية.",
+      "showSentinelCard": "إظهار بطاقة أرباح Sentinel",
+      "showSentinelCardDesc": "إظهار الأرباح على الشاشة الرئيسية",
+      "showDailyRewardsCard": "إظهار بطاقة المكافآت اليومية",
+      "on": "تشغيل",
+      "off": "إيقاف",
+      "sentinelSettings": "إعدادات Sentinel",
+      "sentinelSettingsDesc": "إدارة الارتباط والمكافآت والمطالبة التلقائية"
+    },
+    "sentinelDisplay": {
+      "title": "عرض Sentinel",
+      "showSentinelCard": "إظهار بطاقة Sentinel",
+      "showSentinelCardDesc": "عرض بطاقة أرباح sentinel على الشاشة الرئيسية",
+      "sentinelSettings": "إعدادات Sentinel",
+      "sentinelSettingsDesc": "تهيئة عقدة sentinel والمكافآت"
+    },
+    "verification": {
+      "title": "التحقق",
+      "description": "تحقق من إنسانيتك مع Inlyf لفتح المكافآت اليومية. فحص حيوية سريع؛ أعد التحقق دوريًا.",
+      "open": "بدء التحقق",
+      "refresh": "تحديث التحقق",
+      "status": "الحالة",
+      "verified": "موثق",
+      "notVerified": "غير موثق",
+      "expiresOn": "تنتهي في",
+      "daysRemaining": "الأيام المتبقية",
+      "upToDate": "التحقق محدث",
+      "refreshAvailableIn": "التحديث متاح خلال {{days}} أيام"
+    },
+    "network": {
+      "title": "الشبكة",
+      "description": "تهيئة اتصال شبكة البلوكشين.",
+      "testnet": "الشبكة التجريبية",
+      "mainnet": "الشبكة الرئيسية (قادمة قريبًا)",
+      "rpcEndpoint": "نقطة نهاية RPC",
+      "pingRpc": "اختبار RPC",
+      "testing": "جارٍ الاختبار...",
+      "rpcOk": "RPC سليم",
+      "rpcError": "خطأ RPC",
+      "save": "حفظ",
+      "saved": "تم حفظ الإعدادات",
+      "connectionStatus": "حالة الاتصال",
+      "connected": "متصل",
+      "disconnected": "غير متصل"
+    },
+    "cache": {
+      "title": "الذاكرة المؤقتة",
+      "description": "مسح البيانات المؤقتة لتحديث معلومات الرموز والعقود.",
+      "clearCache": "مسح الذاكرة المؤقتة",
+      "cacheCleared": "تم مسح الذاكرة المؤقتة! أعد تشغيل التطبيق للتطبيق."
+    },
+    "chainGuardian": {
+      "title": "حارس السلسلة",
+      "description": "ساعد في تأمين البلوكشين بإبقاء هاتفك متصلًا بالإنترنت. أكمل مهمة عينات واحدة على الأقل يوميًا للبقاء مؤهلًا للمكافآت.",
+      "wifiOnly": "واي فاي فقط",
+      "wifiOnlyHint": "توفير بيانات الجوال",
+      "minBattery": "الحد الأدنى للبطارية",
+      "minBatteryHint": "لن يعمل تحت هذا المستوى",
+      "background": "التشغيل في الخلفية",
+      "backgroundHint": "يعمل حتى عند إغلاق التطبيق",
+      "lastSample": "آخر نشاط",
+      "noSamples": "لا يوجد نشاط بعد. أبقِ التطبيق مفتوحًا للبدء.",
+      "staleWarning": "غير مرئي اليوم — أعد فتح التطبيق للاستئناف.",
+      "androidBatteryWarning": "تحسين البطارية قد يمنع العينات",
+      "androidBatteryHint": "انتقل إلى الإعدادات → التطبيقات → Umotu → البطارية → اختر \"غير مقيد\" للسماح بالعينات في الخلفية.",
+      "openSettings": "اضغط لفتح الإعدادات",
+      "tip": "فعّل \"التشغيل في الخلفية\" لأفضل إمكانية كسب.",
+      "runNow": "تشغيل الآن",
+      "running": "جارٍ التشغيل…",
+      "lastError": "آخر خطأ",
+      "status": {
+        "active": "نشط",
+        "inactive": "غير نشط",
+        "paused": "متوقف مؤقتًا"
+      }
+    },
+    "permissions": {
+      "title": "الأذونات",
+      "description": "إدارة التطبيقات المصغرة المتصلة وأذوناتها.",
+      "openMiniApps": "فتح التطبيقات المصغرة",
+      "manageConnections": "إدارة",
+      "noConnections": "لا توجد تطبيقات متصلة",
+      "revokeAccess": "إلغاء الوصول",
+      "lastUsed": "آخر استخدام"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "مرحبًا بك في Umotu",
+      "subtitle": "10 دولارات يوميًا، للجميع في كل مكان",
+      "getStarted": "البدء"
+    },
+    "language": {
+      "title": "اختيار لغتك",
+      "continue": "متابعة"
+    },
+    "wallet": {
+      "title": "محفظتك",
+      "createNew": "إنشاء محفظة جديدة",
+      "importExisting": "استيراد موجودة",
+      "creating": "جارٍ إنشاء المحفظة..."
+    },
+    "verify": {
+      "title": "تحقق من أنك إنسان",
+      "description": "لتلقي المكافآت اليومية، تحقق من أنك إنسان فريد.",
+      "continue": "متابعة"
+    }
+  },
+  "poh": {
+    "subtitle": "فتح المكافآت اليومية",
+    "description": "تحقق من الحيوية مع Inlyf لفتح المكافآت. لا يتم تخزين البيومترية على السلسلة؛ يتم إصدار شهادة قصيرة الأمد فقط.",
+    "howItWorks": "كيف يعمل",
+    "howItWorksDesc": "فحص حيوية قصير (مسح الوجه) يتحقق من أنك إنسان. تستمر شهادتك 90 يومًا ويمكن تحديثها في أي وقت.",
+    "adultQuestion": "هل أنت بالغ (18 عامًا فأكثر)؟",
+    "yesAdult": "نعم، 18 عامًا فأكثر",
+    "noMinor": "لا / قاصر",
+    "selectAge": "يرجى اختيار خيار",
+    "verifying": "جارٍ التحقق...",
+    "startVerification": "بدء التحقق",
+    "skipForNow": "تخطي الآن",
+    "status": {
+      "notVerified": "لم يتم التوثيق بعد.",
+      "notVerifiedDetail": "ابدأ التوثيق لفتح المكافآت.",
+      "unavailable": "الحالة غير متوفرة.",
+      "verified": "أنت موثق.",
+      "validFor": "صالح لـ ~{{days}} يوم",
+      "validFor_plural": "صالح لـ ~{{days}} أيام",
+      "expired": "انتهى التوثيق أو لم يُعثر عليه.",
+      "expiredDetail": "أعد تشغيل فحص الحيوية لتحديث شهادتك."
+    }
+  },
+  "sentinelSettings": {
+    "header": "انضم إلى مجموعة Sentinel للمساعدة في إنهاء الكتل. اربط الحد الأدنى على الأقل، أبقِ جهازك متصلًا، واربح مكافآت.",
+    "loading": "جارٍ تحميل بيانات sentinel...",
+    "unavailable": "وحدة Sentinel غير متوفرة",
+    "yourStatus": "حالتك",
+    "wallet": "المحفظة",
+    "bondedAmount": "المبلغ المرتبط",
+    "minimumBond": "الحد الأدنى للارتباط",
+    "status": {
+      "notBonded": "غير مرتبط",
+      "bonded": "مرتبط",
+      "unbonding": "جارٍ فك الارتباط (متاح {{date}})"
+    },
+    "rewards": {
+      "title": "المكافآت",
+      "claimableNow": "قابل للمطالبة الآن",
+      "accruing": "جارٍ التجميع",
+      "totalClaimed": "إجمالي المطالب به",
+      "claiming": "جارٍ المطالبة...",
+      "claimRewards": "المطالبة بالمكافآت"
+    },
+    "bond": {
+      "createTitle": "إنشاء ارتباط",
+      "topUpTitle": "تعبئة الارتباط",
+      "createDescription": "اربط UMT للانضمام إلى لجنة sentinel وبدء الكسب.",
+      "topUpDescription": "زِد حصتك لكسب حصة أكبر من المكافآت.",
+      "amountLabel": "المبلغ (UMT)",
+      "processing": "جارٍ المعالجة...",
+      "bond": "ارتباط",
+      "topUp": "تعبئة",
+      "tx": "معاملة"
+    },
+    "autoClaim": {
+      "title": "المطالبة التلقائية",
+      "description": "دع المرحل يطالب تلقائيًا بمكافآت sentinel عند تجميعها.",
+      "checking": "جارٍ التحقق...",
+      "enabled": "مفعل",
+      "disabled": "معطل",
+      "expires": "تنتهي",
+      "processing": "جارٍ المعالجة...",
+      "enable": "تفعيل المطالبة التلقائية",
+      "disable": "تعطيل المطالبة التلقائية"
+    },
+    "activity": {
+      "title": "النشاط الأخير",
+      "claims": "المطالبات",
+      "slashes": "الجزاءات",
+      "noClaims": "لا مطالبات في آخر {{blocks}} ألف كتلة.",
+      "noSlashes": "لا أحداث جزاء في النافذة الأخيرة.",
+      "unknown": "غير معروف"
+    },
+    "errors": {
+      "configureEnv": "تهيئة متغيرات بيئة RPC + عقد sentinel.",
+      "noWallet": "أنشئ أو استورد محفظة للانضمام إلى لجنة sentinel.",
+      "loadFailed": "فشل تحميل بيانات sentinel."
+    },
+    "toast": {
+      "rewardsClaimed": "تم المطالبة بمكافآت Sentinel.",
+      "noRewards": "لا توجد مكافآت معلقة للمطالبة.",
+      "claimFailed": "فشلت المطالبة.",
+      "autoClaimEnabled": "تم تفعيل المطالبة التلقائية لـ Sentinel",
+      "autoClaimDisabled": "تم تعطيل المطالبة التلقائية لـ Sentinel",
+      "autoClaimFailed": "فشل تبديل المطالبة التلقائية",
+      "configureBondAddress": "تهيئة عنوان ارتباط sentinel",
+      "rpcNotSet": "لم يتم تعيين RPC",
+      "minBondUnavailable": "الحد الأدنى للارتباط غير متوفر",
+      "enterBondAmount": "أدخل مبلغ الارتباط",
+      "minBondRequired": "يجب أن يكون الارتباط الأولي {{amount}} UMT على الأقل",
+      "topUpGreaterThanZero": "يجب أن يكون مبلغ التعبئة أكبر من 0",
+      "insufficientBalance": "رصيد غير كافٍ للارتباط + الغاز",
+      "bondSubmitted": "تم تقديم معاملة الارتباط",
+      "topUpSubmitted": "تم تقديم معاملة التعبئة",
+      "bondConfirmed": "تم تأكيد الارتباط",
+      "topUpConfirmed": "تم تأكيد التعبئة",
+      "bondReverted": "تم إرجاع الارتباط على السلسلة",
+      "bondFailed": "فشل الارتباط"
+    }
+  },
+  "miniapps": {
+    "title": "التطبيقات المصغرة",
+    "subtitle": "استكشف التطبيقات المبنية على Umotu",
+    "explore": "استكشف التطبيقات المبنية على Umotu",
+    "noApps": "لا توجد تطبيقات متوفرة بعد",
+    "browseByCategory": "التصفح حسب الفئة",
+    "appsCount": "{{count}} تطبيقات",
+    "featured": "مميز",
+    "comingSoon": "قادم قريبًا",
+    "liveApps": "التطبيقات الحية",
+    "available": "متوفرة",
+    "pohDescription": "تحقق من إنسانيتك مع Inlyf لفتح المكافآت اليومية.",
+    "vision": {
+      "title": "رؤيتنا",
+      "tagline": "10 دولارات يوميًا، للجميع في كل مكان",
+      "description": "يبني Umotu بنية تحتية لعالم يمكن للجميع فيه المشاركة في الاقتصاد العالمي — بغض النظر عن مكان إقامتهم أو البنك الذي يتعاملون معه.",
+      "readMore": "اقرأ الرؤية الكاملة",
+      "pillars": {
+        "title": "المبادئ الأساسية الثلاثة",
+        "ubi": {
+          "title": "10 دولارات/يوم، للجميع في كل مكان",
+          "description": "الدخل الأساسي العالمي كمكافآت مكتسبة لتأمين الشبكة. يمكن لأي شخص يملك هاتفًا المشاركة والكسب."
+        },
+        "capital": {
+          "title": "رأس المال يتحرك بحرية",
+          "description": "احتكاك شبه معدوم للمدفوعات والتحويلات — عبر الحدود أو محليًا. تدفع الشركات ~0.1% لتغطية تكاليف المنصة، والأفراد لا يدفعون شيئًا."
+        },
+        "sovereignty": {
+          "title": "احترام السيادة النقدية",
+          "description": "لا نستبدل العملات الورقية — نجعلها تعمل بشكل أفضل. تصدر البنوك عملات مستقرة مربوطة بعملتها المحلية. تصبح السياسة النقدية أكثر فعالية مع وصول أوسع واحتكاك أقل."
+        }
+      },
+      "notReplacing": "Umotu لا ينافس البنوك المركزية. نحن نبني بنية تحتية أفضل للعملات الورقية: احتكاك أقل، وصول عالمي، وكفاءة سوق أفضل ومرونة."
+    },
+    "building": {
+      "title": "نبني النظام البيئي",
+      "description": "تعرض هذه التطبيقات ما هو ممكن على Umotu. بعضها جاهز الآن، والبعض الآخر قادم قريبًا. ندعو المطورين في جميع أنحاء العالم لبناء وإطلاق على منصتنا.",
+      "developerDocs": "وثائق المطورين"
+    },
+    "categories": {
+      "payments": {
+        "name": "المدفوعات والمالية",
+        "apps": {
+          "sendMoney": {
+            "name": "إرسال الأموال",
+            "description": "أرسل UMT أو عملات مستقرة فورًا إلى أي شخص في أي مكان في العالم — بدون بنوك.",
+            "example": "أرسل 20 دولارًا إلى عائلتك في الخارج في ثوانٍ، لا أيام. بدون رسوم مخفية."
+          },
+          "billPay": {
+            "name": "دفع الفواتير",
+            "description": "ادفع المرافق والهاتف والإنترنت وغيرها مباشرة من محفظتك."
+          },
+          "savings": {
+            "name": "دوائر الادخار",
+            "description": "الادخار الدوري التقليدي (تونتين، صندوق chit) مصنوع بدون ثقة بعقود ذكية."
+          },
+          "microLoans": {
+            "name": "القروض الصغيرة",
+            "description": "الإقراض بين الأقران مدعوم بإنسانيتك الموثقة وسمعةك."
+          }
+        }
+      },
+      "transport": {
+        "name": "النقل والتوصيل",
+        "apps": {
+          "rideSharing": {
+            "name": "مشاركة الركوب",
+            "description": "احجز رحلات مدفوعة بالعملات المشفرة. يحتفظ السائقون بمزيد، ويدفع الركاب أقل — بدون وسيط يأخذ 30%.",
+            "example": "رحلة تاكسي في لاغوس تكلف 800 نايرا. يحصل السائق على 799.2 بدلاً من 560."
+          },
+          "delivery": {
+            "name": "التوصيل",
+            "description": "اطلب طعامًا أو بقالة أو طرود. يكسب المندوبون أجورًا عادلة بعملات مستقرة."
+          },
+          "publicTransit": {
+            "name": "النقل العام",
+            "description": "ادفع للحافلات والمترو والقطارات بلمسة. لا حاجة لشراء بطاقات الأجرة."
+          }
+        }
+      },
+      "travel": {
+        "name": "السفر والضيافة",
+        "apps": {
+          "hotels": {
+            "name": "الفنادق والإقامات",
+            "description": "احجز إقامات في جميع أنحاء العالم. يقبل المضيفون عملات مستقرة، ويوفر الضيوف على الرسوم."
+          },
+          "flights": {
+            "name": "الرحلات الجوية",
+            "description": "ابحث واحجز رحلات جوية. ادفع بالعملات المشفرة، اربح مكافآت UMT."
+          },
+          "tours": {
+            "name": "الجولات المحلية",
+            "description": "احجز تجارب مع مرشدين محليين. تذهب المدفوعات مباشرة إليهم."
+          }
+        }
+      },
+      "commerce": {
+        "name": "التسوق والتجارة",
+        "apps": {
+          "localMarket": {
+            "name": "السوق المحلي",
+            "description": "اشترِ وبِع محليًا. المدفوعات المبنية على QR تجعل التجارة الشارعية سلسة."
+          },
+          "ecommerce": {
+            "name": "التجارة الإلكترونية",
+            "description": "تسوق عبر الإنترنت من تجار في جميع أنحاء العالم. بدون رسوم بطاقات، بدون استرداد."
+          },
+          "marketplace": {
+            "name": "سوق الأقران",
+            "description": "اعرض عناصر للبيع، اشترِ من الآخرين. يحمي الضمان كلا الطرفين."
+          }
+        }
+      },
+      "services": {
+        "name": "الخدمات والعمل",
+        "apps": {
+          "remittance": {
+            "name": "التحويلات",
+            "description": "أرسل الأموال إلى الوطن. يمكن للمستلمين صرفها إلى عملة محلية أو الاحتفاظ بها رقميًا."
+          },
+          "freelance": {
+            "name": "العمل الحر",
+            "description": "احصل على أجر عمل المهام فورًا. بدون انتظار 30 يومًا للتحويلات البنكية."
+          },
+          "homeServices": {
+            "name": "خدمات المنزل",
+            "description": "استأجر سباكين أو كهربائيين أو منظفين. ادفع فقط عند انتهاء العمل."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "بنِ أعمالك على Umotu",
+      "subtitle": "أطلق تطبيقات مع مدفوعات مدمجة",
+      "description": "أنشئ تطبيقات تستفيد من نظام Umotu البيئي — ملايين البشر الموثقين بدخل يومي، جاهزين للمعاملات. بدون متاعب دمج المدفوعات.",
+      "benefits": {
+        "noFees": "رسوم معالجة مدفوعات شبه معدومة — احتفظ بـ 99.9% من الإيرادات",
+        "verifiedUsers": "جميع المستخدمين بشر موثقون — لا روبوتات أو احتيال",
+        "globalReach": "الوصول إلى مستخدمين في أكثر من 190 دولة من اليوم الأول",
+        "instantPayments": "تسويات فورية — بدون تأخير 30 يومًا في المدفوعات"
+      },
+      "exampleTitle": "حالة استخدام",
+      "exampleText": "تطبيق مشاركة الركوب على Umotu يحتفظ بـ 99.9% من الأجرة مقابل 70% على المنصات التقليدية. يكسب السائقون أكثر، ويدفع الركاب أقل.",
+      "docsButton": "اقرأ الوثائق",
+      "buildButton": "ابدأ البناء"
+    },
+    "bank": {
+      "title": "هل أنت بنك؟",
+      "subtitle": "أصدر عملات مستقرة على Umotu",
+      "description": "يمكن للمؤسسات المالية المرخصة إصدار عملات مستقرة بعملات محلية على Umotu والاستفادة من اقتصاد UBI متنامٍ مع ملايين المستخدمين.",
+      "benefits": {
+        "reserves": "اربح عائدًا على الاحتياطيات: استثمر في السندات والأصول منخفضة المخاطر",
+        "mintRedeem": "فرض رسوم صك/استرداد: عادة 0.1% على تحويلات العملة الورقية ↔ العملة المستقرة",
+        "users": "الوصول إلى ملايين متلقي UBI اليوميين النشطين",
+        "global": "وسّع نطاقك خارج الحدود فورًا",
+        "custody": "احتياطياتك، حفظك: سيطرة كاملة على الأصول الداعمة"
+      },
+      "revenueModel": "كيف يكسب المصدرون",
+      "revenueNote": "مثل Tether وغيرها من المصدرين الكبار، يأتي الإيراد من عائد الاحتياطيات ورسوم التحويل. مع ملايين المستخدمين الذين يتلقون UBI يوميًا، يمكن أن يكون حجم الصك/الاسترداد كبيرًا.",
+      "futureNote": "قد يحصل المصدرون أيضًا على حصة من رسوم المعاملات في المستقبل مع تطور البروتوكول.",
+      "learnMore": "تعرف على المزيد",
+      "applyButton": "تقدم الآن"
+    }
+  },
+  "news": {
+    "title": "الأخبار والتحديثات",
+    "description": "ابقَ على اطلاع بالإعلانات والنصائح وتنبيهات الأمان الأحدث من فريق Umotu.",
+    "empty": "لا توجد أخبار في الوقت الحالي",
+    "unread": "جديد",
+    "unreadCount": "{{count}} جديدة",
+    "markAsRead": "وضع علامة مقروء",
+    "types": {
+      "announcement": "إعلان",
+      "tip": "نصيحة",
+      "security": "أمان",
+      "airdrop": "إسقاط جوي",
+      "update": "تحديث"
+    }
+  },
+  "governance": {
+    "title": "الحوكمة",
+    "subtitle": "شكل مستقبل Umotu",
+    "description": {
+      "title": "صوتك مهم",
+      "body": "ساعد في تشكيل مستقبل Umotu بالتصويت على مقترحات المجتمع. تنظم مؤسسة Umotu هذه التصويتات، لكن المجتمع يقرر."
+    },
+    "empty": "لا توجد مقترحات نشطة",
+    "emptyHint": "تحقق لاحقًا لمقترحات مجتمعية جديدة للتصويت عليها.",
+    "newPolls": "جديد",
+    "newPollsCount": "{{count}} جديدة",
+    "vote": "تصويت",
+    "votes": "أصوات",
+    "endsIn": "ينتهي بعد {{time}}",
+    "ended": "انتهى",
+    "tapToVote": "اضغط على خيار أعلاه للإدلاء بصوتك",
+    "submitting": "جارٍ تقديم التصويت...",
+    "alreadyVoted": {
+      "title": "تم التصويت بالفعل",
+      "message": "لقد صوتت بالفعل في هذا المقترح."
+    },
+    "confirm": {
+      "title": "تأكيد التصويت",
+      "message": "التصويت لـ",
+      "note": "هذا الإجراء لا يمكن التراجع عنه.",
+      "submit": "تقديم التصويت"
+    },
+    "success": {
+      "title": "تم تقديم التصويت!",
+      "message": "شكرًا لمشاركتك في حوكمة المجتمع."
+    },
+    "error": {
+      "title": "فشل التصويت",
+      "message": "فشل تقديم التصويت. يرجى المحاولة مرة أخرى."
+    }
+  },
+  "learn": {
+    "title": "تعلم",
+    "subtitle": "كل ما تحتاج لمعرفته عن Umotu",
+    "featured": "مميز",
+    "whatIs": {
+      "title": "ما هو Umotu؟",
+      "subtitle": "10 دولارات يوميًا، للجميع في كل مكان",
+      "intro": "يهدف Umotu إلى السماح لأي شخص بكسب حوالي 10 دولارات يوميًا باستخدام هاتف ذكي فقط. بدون أجهزة باهظة الثمن، بدون مهارات خاصة، بدون حدود.",
+      "howDifferent": "كيف هو مختلف؟",
+      "noMiddleman": "بدون وسيط: تتفاعل مباشرة مع الشبكة — لا حاجة لحساب بنكي",
+      "globalAccess": "وصول عالمي: يعمل في أي مكان يتوفر فيه الإنترنت",
+      "youOwnIt": "أنت تملكه: محفظتك، مفاتيحك، سيطرتك",
+      "vision": "الرؤية",
+      "visionText": "مليارات الأشخاص يمكنهم المساعدة في الحفاظ على سجل عام نزيه وكسب مقابل ذلك. على Umotu، تقوم الهواتف بفحوصات خفيفة تجعل الشبكة موثوقة.",
+      "nameOrigin": "أصل الاسم",
+      "nameOriginText": "يستلهم Umotu من لغة Paʻumotu البولينيزية. نستخدم الاسم باحترام كتذكير لبناء للناس العاديين."
+    },
+    "earn": {
+      "title": "كيف تكسب",
+      "subtitle": "هاتفك يعمل؛ تحصل على الأجر",
+      "intro": "يقوم هاتفك بمهام صغيرة تساعد الجميع — ثم تحصل على مكافآت.",
+      "steps": "ثلاث خطوات بسيطة",
+      "step1": "1) أثبت أنك إنسان: فحص حيوية سريع (وتحديث دوري) يضمن حسابًا واحدًا لكل شخص.",
+      "step2": "2) ساعد الشبكة: يشغل هاتفك عينات توفر البيانات (DA) وفحوصات خفيفة أخرى في الخلفية.",
+      "step3": "3) اربح مكافآت يومية: تحصل على أجر مقابل هذا العمل، بهدف حوالي 10 دولارات يوميًا حسب سياسة الشبكة.",
+      "localCurrency": "مدفوع بعملتك",
+      "localCurrencyText": "اختر رمز الدفع: عملات مستقرة بعملات محلية (حيث متوفرة) أو UMT. تستهدف المبالغ قيمة ~10 دولارات أمريكية وقد تتعدل مع المشاركة وظروف السوق."
+    },
+    "whereMoney": {
+      "title": "من أين تأتي الـ 10 دولارات؟",
+      "subtitle": "تكسب لأنك تقدم خدمة",
+      "intro": "هو السؤال الأول. الإجابة المختصرة: لأنك تقدم خدمة تحتاجها الشبكة.",
+      "realWork": "هاتفك يقوم بعمل حقيقي",
+      "realWork1": "عينات توفر البيانات: يتحقق هاتفك من توفر بيانات الكتلة وصحتها",
+      "realWork2": "المشاركة البشرية: تثبت قاعدة شخص واحد-حساب واحد لمنع الروبوتات والسبام",
+      "realWork3": "هذه المهام تحمي الجميع؛ بدونها تضعف الشبكة",
+      "valueSource": "مصدران للقيمة",
+      "utility": "المنفعة: مدفوعات سريعة منخفضة الرسوم يختار الناس استخدامها",
+      "consensus": "الإجماع: قيمة تنمو مع قدرة المزيد من الناس على التحقق والاتفاق على القواعد",
+      "distribution": "كيف تُوزع المكافآت",
+      "newTokens": "تُصك رموز UMT جديدة وتُشارك مع مشاركي الهواتف الموثقين (ليس مع المدققين)",
+      "fees": "تُشارك حصة من الرسوم وعروض البنائين مع مساعدي sentinel لإنهاء الكتل",
+      "treasury": "حصة صغيرة تمول الصيانة المستمرة وبرامج الاستقرار",
+      "whyDifferent": "لماذا هذا مختلف",
+      "btcProblem": "يكافئ Bitcoin عمال تعدين متخصصين (كثيف رأس المال)",
+      "ethProblem": "يكافئ Ethereum المراهنين الكبار (كثيف رأس المال)",
+      "umotuSolution": "يكافئ Umotu الهواتف العادية (تكلفة مشاركة عملية منخفضة)",
+      "conclusion": "ليس هدية: تحصل على أجر مقابل عمل يحافظ على بنية تحتية مالية مشتركة نزيهة ومفيدة."
+    },
+    "security": {
+      "title": "أمان المحفظة",
+      "subtitle": "احمِ أموالك",
+      "intro": "محفظتك مثل خزنة رقمية تتحكم أنت فيها فقط.",
+      "recovery": "كلماتك الـ 12 والمفتاح الخاص",
+      "recoveryText": "كلماتك السرية الـ 12 (عبارة الاستعادة) ومفتاحك الخاص كلاهما يفتحان محفظتك. أي شخص يملكهما يمكنه نقل أموالك.",
+      "rules": "القواعد الذهبية",
+      "rule1": "لا تشارك كلماتك الـ 12 أو المفتاح الخاص مع أي شخص — حتى مع مساهمي Umotu.",
+      "rule2": "اكتب كلماتك الـ 12 على ورق واحفظها دون اتصال. لا تخزنها في لقطات شاشة أو صور أو ملاحظات سحابية.",
+      "rule3": "إذا صدرت مفتاحك الخاص، احفظه دون اتصال (ورق، جهاز، أو مدير مشفر تثق به تمامًا).",
+      "rule4": "إذا فقدت كلماتك الـ 12 والمفتاح الخاص، لا يمكن لأحد استعادة محفظتك.",
+      "warning": "مهم",
+      "warningText": "المفتاح الخاص يمنح وصولًا كاملاً. كشفه أو نسخه إلى تطبيقات أخرى قد يعرض أموالك للخطر. صدره فقط إذا فهمت المخاطر.",
+      "reveal": "كشف / تصدير المفتاح الخاص",
+      "revealText": "يمكنك كشف أو تصدير مفتاحك الخاص في إعدادات المحفظة. نطلب البيومترية/PIN، نعرضه لثوانٍ قليلة فقط، ولا نرفعه أبدًا. فكر في استخدام محفظة أجهزة للأرصدة الكبيرة.",
+      "bestPractices": "أفضل الممارسات",
+      "best1": "فعّل قفل الشاشة والبيومترية على هاتفك.",
+      "best2": "حافظ على تحديث التطبيق للحصول على أحدث إصلاحات الأمان.",
+      "best3": "استخدم محفظة منفصلة للادخارات الكبيرة؛ احتفظ بمبالغ صغيرة على هاتفك للاستخدام اليومي.",
+      "scamBannerTitle": "لا أحد شرعي سيطلب",
+      "scamBannerText": "إذا طلب أحد كلماتك الـ 12 أو المفتاح الخاص، فهو احتيال."
+    },
+    "stablecoins": {
+      "title": "فهم العملات المستقرة",
+      "subtitle": "أموال رقمية تتبع العملة المحلية",
+      "intro": "العملات المستقرة هي رموز رقمية مصممة لتتبع الأموال العادية (مثل USD، ZAR، NGN).",
+      "examples": "أمثلة",
+      "example1": "1 ZAR1 ≈ 1 راند جنوب أفريقي",
+      "example2": "1 USD1 ≈ 1 دولار أمريكي",
+      "example3": "1 NGN1 ≈ 1 نايرا نيجيرية",
+      "backed": "تصدر من شركاء",
+      "backedText": "العملات المستقرة على Umotu تصدر من شركاء منظمين ومصممة للحفاظ على قيمة 1:1 مع الاحتياطيات. ينشر المصدرون إثبات الاحتياطيات وشروط الاسترداد.",
+      "convert": "التحويل إلى نقد",
+      "convertText": "تحويل عبر بنوك/بورصات الشركاء، أو أنفق مباشرة حيث مقبول."
+    },
+    "economics": {
+      "title": "اقتصاديات UMT",
+      "subtitle": "من يحصل على ماذا ولماذا",
+      "intro": "لـ UMT إمداد ثابت قدره 100 مليار رمز. معظمها يُدفع لمستخدمي الهواتف العاديين الذين يساعدون في الحفاظ على نزاهة الشبكة.",
+      "supply": "الإمداد والتوزيع",
+      "supplyBullets": [
+        "الغالبية العظمى من إمدادات الرموز مخصصة للمشاركين عبر الهاتف بمرور الوقت ويتم إصدارها من خلال وحدة التحكم في الإصدار. تحد وحدة التحكم في الإصدار من الإصدار اليومي بما لا يزيد عن 0.01% من الإمداد المتبقي، مما يضمن الاستدامة على المدى الطويل. وفقاً لهذا الجدول، يتبقى حوالي 68% من إجمالي الإمداد بعد 10 سنوات، وحوالي 15% بعد 50 عاماً.",
+        "يتم إنشاء جزء صغير من الإمداد عند الإطلاق لأغراض محددة، بما في ذلك توزيع مجاني للمستخدمين الأوائل، وبيع مجتمعي، وتخصيص المؤسسة، واحتياطي الطوارئ وما إلى ذلك."
+      ],
+      "premine": "تخصيص الإطلاق (مؤقت، قابل للتغيير عند إطلاق الشبكة الرئيسية)",
+      "premineTable": [
+        {
+          "label": "إسقاط جوي للمستخدمين",
+          "value": "1.0%"
+        },
+        {
+          "label": "بيع المجتمع",
+          "value": "0.6%"
+        },
+        {
+          "label": "مؤسسة Umotu (مغلقة زمنيًا)",
+          "value": "0.2%"
+        },
+        {
+          "label": "صندوق الطوارئ (محكوم)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "المكافآت اليومية للهواتف",
+      "emissionsText": "يمكن للشبكة كل يوم إصدار 0.01% كحد أقصى من حوض الانبعاثات المتبقي. نخصص هذا المبلغ بحيث تستهدف الهواتف الموثقة حوالي 10 دولارات يوميًا، مع تعديل حسب عدد المشاركين وظروف السوق.",
+      "fees": "الرسوم و Sentinel",
+      "feesText": "يكسب مساعدو Sentinel الاختياريون (متقدمون) حصة من رسوم المعاملات وعروض البنائين. هذا منفصل عن الانبعاثات اليومية.",
+      "transparency": "الشفافية",
+      "transparencyText": "جداول التوزيع المؤجل والمحافظ عامة. حدود الانبعاث اليومية والمدفوعات الفعلية تنشر في التطبيق.",
+      "disclaimerTitle": "تذكير بلغة بسيطة",
+      "disclaimerText": "هذا ليس نصيحة استثمارية. تعتمد المكافآت على سياسة الشبكة والمشاركة. التطبيق لا يضمن دخلًا ثابتًا."
+    },
+    "contribute": {
+      "title": "كيف تساهم",
+      "subtitle": "ساعد في بناء Umotu",
+      "intro": "Umotu مفتوح المصدر ومدفوع من المجتمع. يمكن للجميع المساعدة — سواء كنت تبرمج أو تترجم أو تقدم تعليقات فقط.",
+      "waysTitle": "طرق المساهمة",
+      "code": {
+        "title": "تحسين الكود",
+        "text": "إصلاح الأخطاء، إضافة ميزات، كتابة اختبارات، أو مراجعة طلبات السحب. تحقق من مستودعات GitHub للتطبيق والعقود الذكية والخدمات الخلفية.",
+        "cta": "عرض GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "المساعدة في الترجمات",
+        "text": "اجعل التطبيق طبيعيًا بلغتك. حرر ملفات i18n المحلية واختبر كل شاشة. تساعد تعديلاتك الملايين.",
+        "cta": "دليل الترجمة",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "توسيع قوائم كلمات BIP-39",
+        "text": "اقترح قوائم كلمات جديدة أو محسنة حتى يرى المزيد من الناس عبارة الاستعادة الـ 12 كلمة بلغتهم الأم.",
+        "cta": "انظر BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "انضم إلى الحوكمة",
+        "text": "اقرأ المقترحات، ناقش علنًا، وصوت في التطبيق. صوتك يساعد في توجيه معلمات الشبكة وتخصيص المنح.",
+        "cta": "فتح الحوكمة",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "انشر الكلمة",
+        "text": "أخبر الأصدقاء، اكتب دروسًا، انشر فيديوهات قصيرة، أجب على الأسئلة. مجتمع أقوى يعني شبكة أقوى للجميع.",
+        "cta": "شارك Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "جميع المساهمات طوعية. لا يوجد توظيف رسمي أو تعويض إلا إذا حدد في مقترح منح."
+    },
+    "decentralization": {
+      "title": "لماذا اللامركزية",
+      "subtitle": "لا نقطة سيطرة واحدة",
+      "intro": "اللامركزية تعني أنه لا يمكن لشركة أو حكومة واحدة إغلاق الشبكة أو مصادرة أموالك.",
+      "benefits": "فوائد لك",
+      "benefit1": "دائمًا متاح: 24/7",
+      "benefit2": "رسوم أقل: رسوم شبكة صغيرة بدلاً من 3–5% رسوم البطاقات",
+      "benefit3": "بدون حدود: إرسال قيمة عالميًا",
+      "benefit4": "مقاوم للرقابة: مفاتيحك، أموالك",
+      "benefit5": "شفاف: يمكن لأي شخص التحقق من كيفية عمل النظام",
+      "howWorks": "كيف يعمل",
+      "howWorksText": "يقترح المدققون كتل كل ~2 ثانية. الهواتف (مثل هاتفك) تتحقق وتنهي بفحوصات خفيفة. مساهمات صغيرة كثيرة تضيف إلى أمان قوي."
+    },
+    "noCompany": {
+      "title": "لا شركة، لا عملاء",
+      "subtitle": "فهم النموذج",
+      "intro": "لا توجد 'Umotu, Inc.' تتحكم في البروتوكول. Umotu مجموعة مفتوحة من القواعد يمكن لأي شخص استخدامها.",
+      "notCompany": "ما ليس Umotu",
+      "notCompany1": "ليس شركة بحسابات عملاء",
+      "notCompany2": "ليس بنكًا أو مرسل أموال",
+      "notCompany3": "ليس محكومًا بكيان واحد",
+      "notCompany4": "غير قادر على عكس المعاملات",
+      "whatIs": "ما هو Umotu",
+      "whatIs1": "بروتوكول: مثل البريد الإلكتروني أو الويب — قواعد مفتوحة ومتوافقة",
+      "whatIs2": "أولوية الهاتف: يعمل بمساعدة من الهواتف الذكية العادية",
+      "whatIs3": "مدفوع من المجتمع: أنت مشارك، ليس عميل",
+      "foundation": "مؤسسة Umotu",
+      "foundationIntro": "منظمة غير ربحية تدعم النظام البيئي (تطبيقات مرجعية، وثائق، برامج مجتمعية) لكنها لا تتحكم في البروتوكول.",
+      "foundationTask1": "تحافظ على التطبيق المتنقل والمستكشف كتطبيقات مرجعية",
+      "foundationTask2": "تشغل بعض البنية التحتية العامة (يمكن للآخرين تشغيل خاصتهم)",
+      "foundationTask3": "تنسق حوكمة المجتمع (أخبار، تصويتات)",
+      "foundationTask4": "تراجع وقوائم العملات المستقرة المدعومة",
+      "foundationTask5": "تنشر أدلة التعليم والسلامة",
+      "foundationNote": "المؤسسة لا يمكنها الوصول إلى محفظتك ولا يمكنها عكس المعاملات."
+    },
+    "scamPrevention": {
+      "title": "تجنب الاحتيالات",
+      "subtitle": "احمِ نفسك",
+      "intro": "مؤسسة Umotu لن تراسلك مباشرة أبدًا. أي شخص يتظاهر بأنه 'دعم' محتال.",
+      "redFlags": "علامات حمراء",
+      "redFlag1": "شخص يدعي أنه دعم عملاء",
+      "redFlag2": "روابط لـ 'توثيق' أو 'ترقية' حسابك",
+      "redFlag3": "طلبات لعبارة الـ 12 كلمة أو المفتاح الخاص",
+      "redFlag4": "وعود برموز إضافية إذا أرسلت أموالًا",
+      "redFlag5": "تطبيقات أو مواقع تطلب 'تفعيل' المكافآت",
+      "truth": "الحقيقة",
+      "truth1": "لا يوجد دعم عملاء يمكنه إعادة تعيين محفظتك",
+      "truth2": "تظهر جميع التحديثات الرسمية في هذا التطبيق",
+      "truth3": "لا أحد من Umotu سيطلب عبارة الاستعادة أو المفتاح الخاص",
+      "truth4": "قم بتنزيل هذا التطبيق فقط من متجر Apple الرسمي أو Google Play",
+      "whatToDo": "إذا اتصل بك أحد",
+      "action1": "لا ترد",
+      "action2": "لا تنقر على روابط",
+      "action3": "لا تشارك معلومات",
+      "action4": "احظر وأبلغ"
+    },
+    "airdrop": {
+      "title": "إسقاط جوي الشبكة التجريبية",
+      "subtitle": "المستخدمون الأوائل يُكافأون",
+      "intro": "أنت مبكر! Umotu في الشبكة التجريبية. قد يحصل المشاركون النشطون في الشبكة التجريبية على تخصيص عند إطلاق الشبكة الرئيسية.",
+      "howToQualify": "كيف تتأهل",
+      "step1": "أنشئ محفظة في التطبيق",
+      "step2": "أكمل توثيق الإنسان (إثبات الإنسان)",
+      "step3": "استخدم التطبيق بانتظام أثناء الشبكة التجريبية",
+      "whenAirdrop": "متى سيكون الإسقاط الجوي؟",
+      "whyTestnet": "الشبكة التجريبية ضرورية: يتعلم المستخدمون أمان المحفظة، ويُختبر النظام للأمان والقوة والكفاءة قبل الشبكة الرئيسية.",
+      "timeline": "من المتوقع إطلاق الشبكة الرئيسية في الربع الأول أو الثاني من 2026. سيحدث الإسقاط الجوي في نفس الوقت تقريبًا مع إطلاق الشبكة الرئيسية.",
+      "howMuch": "كم سأحصل؟",
+      "totalPool": "إجمالي مجموعة الإسقاط الجوي: 1,000,000,000 رمز UMT. تعتمد حصتك على إجمالي المشاركين وسعر UMT عند الإطلاق.",
+      "scenario2": "مليون مستخدم: ~1,000 UMT لكل مستخدم، السعر المتوقع ~$1، قيمة الإسقاط ~$1,000",
+      "scenario3": "10 مليون مستخدم: ~100 UMT لكل مستخدم، السعر المتوقع ~$20، قيمة الإسقاط ~$2,000",
+      "scenario4": "100 مليون مستخدم: ~10 UMT لكل مستخدم، السعر المتوقع ~$300، قيمة الإسقاط ~$3,000",
+      "disclaimer": "هذه تقديرات فقط وليست ضمانات. تعتمد القيم الفعلية على ظروف السوق وقواعد البرنامج.",
+      "whatYouGet": "ما تحصل عليه",
+      "reward": "عند الشبكة الرئيسية، قد تتلقى محفظتك التجريبية رموزًا حقيقية بناءً على المشاركة وقواعد البرنامج. يُعطى الأولوية للمستخدمين الأوائل والأكثر نشاطًا.",
+      "note": "ملاحظة: رموز الشبكة التجريبية بلا قيمة. أي تخصيص في الشبكة الرئيسية يحدد حسب سياسة البرنامج عند الإطلاق. تنشر جميع أخبار الإسقاط الجوي فقط في هذا التطبيق."
+    },
+    "gettingStarted": {
+      "title": "البدء",
+      "subtitle": "أول خمس دقائق لك",
+      "intro": "إليك إعدادك السريع:",
+      "checklist": "قائمة الإعداد",
+      "check1": "1) اختيار اللغة (تم!)",
+      "check2": "2) إنشاء أو استيراد محفظة",
+      "check3": "3) مهم: اكتب كلماتك الـ 12 على ورق",
+      "check4": "4) أكمل توثيق الإنسان (مسح سريع)",
+      "check5": "5) أبقِ التطبيق يعمل لكسب المكافآت اليومية",
+      "tips": "نصائح احترافية",
+      "tip1": "اسمح بالوصول في الخلفية حتى تعمل الفحوصات",
+      "tip2": "تحقق يوميًا لرؤية المكافآت",
+      "tip3": "ادعُ أصدقاء — المزيد من المستخدمين يقوي الشبكة"
+    }
+  },
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "error": "خطأ",
+    "retry": "إعادة المحاولة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "done": "تم",
+    "continue": "متابعة",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "ok": "موافق",
+    "success": "نجاح",
+    "failed": "فشل",
+    "copied": "تم النسخ!",
+    "pullToRefresh": "اسحب للتحديث",
+    "notSet": "غير محدد"
+  },
+  "errors": {
+    "networkError": "خطأ في الشبكة. يرجى التحقق من اتصالك.",
+    "genericError": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "walletNotFound": "لم يتم العثور على المحفظة",
+    "transactionFailed": "فشلت المعاملة",
+    "invalidInput": "إدخال غير صالح"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "دولار أمريكي"
+  },
+  "onboard_welcome": "مرحبًا بك في Umotu",
+  "onboard_wallet_title": "إعداد محفظتك",
+  "onboard_wallet_explain": "أنشئ أو استورد محفظة لتلقي المكافآت.",
+  "wallet_create": "إنشاء محفظة جديدة",
+  "wallet_import": "استيراد محفظة",
+  "wallet_import_explain": "أدخل عبارة الاستعادة المكونة من 12 كلمة",
+  "wallet_created": "المحفظة جاهزة",
+  "wallet_save": "حفظ في الجهاز",
+  "wallet_backup_title": "نسخ عبارة الاستعادة احتياطيًا",
+  "wallet_backup_explain": "اكتب هذه الكلمات الـ 12 بالترتيب. هذه الطريقة الوحيدة لاستعادة محفظتك إذا فقدت جهازك.",
+  "wallet_backup_warning": "لا تشارك عبارة الاستعادة أبدًا. أي شخص يملك هذه الكلمات يمكنه الوصول إلى أموالك.",
+  "wallet_backup_confirm": "لقد كتبت عبارة الاستعادة",
+  "wallet_backup_done": "لقد حفظت عباراتي",
+  "wallet_save_first": "يرجى حفظ عبارة الاستعادة أولاً",
+  "poh_title": "توثيق الإنسان",
+  "continue": "متابعة",
+  "or": "أو",
+  "seedReveal": {
+    "title": "عبارة الاستعادة",
+    "intro": "عبارة الاستعادة هي الطريقة الوحيدة لاستعادة محفظتك إذا فقدت الوصول إلى هذا الجهاز. اكتبها واحفظها بأمان دون اتصال.",
+    "displayLanguage": "معروضة بـ {{language}}",
+    "hiddenMsg": "عباراتك مخفية للأمان. اضغط أدناه لكشفها.",
+    "showButton": "كشف العبارة",
+    "noScreenshot": "لا تلتقط لقطة شاشة لعبارة الاستعادة أبدًا.",
+    "checkTitle": "التحقق من نسختك الاحتياطية",
+    "checkPrompt": "أدخل الكلمات أدناه لتأكيد كتابتها بشكل صحيح:",
+    "checkWordN": "الكلمة #{{n}}",
+    "checkIncorrect": "واحدة أو أكثر من الكلمات غير صحيحة. يرجى التحقق من نسختك الاحتياطية.",
+    "ackWritten": "لقد كتبت عبارة الاستعادة",
+    "ackCannotRecover": "أفهم أن Umotu لا يمكنه استعادة محفظتي",
+    "cancel": "إلغاء",
+    "continue": "لقد حفظتها"
+  }
+}

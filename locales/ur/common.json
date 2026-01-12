@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "$10 روزانہ، ہر کوئی ہر جگہ"
+  },
+  "navigation": {
+    "home": "ہوم",
+    "wallet": "والٹ",
+    "miniapps": "مني ایپس",
+    "back": "واپس",
+    "scan": "اسکین",
+    "settings": "سیٹنگز",
+    "close": "بند کریں"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "تصدیق شدہ انسان",
+      "umtPrice": "UMT قیمت"
+    },
+    "quickActions": {
+      "news": "خبریں",
+      "vote": "گورننس",
+      "governance": "گورننس",
+      "learn": "سیکھیں",
+      "network": "نیٹ ورک"
+    },
+    "setupProgress": {
+      "title": "سیٹ اپ کی پیشرفت",
+      "steps": {
+        "language": "زبان",
+        "wallet": "والٹ",
+        "verifyHuman": "انسان کی تصدیق کریں",
+        "complete": "مکمل"
+      },
+      "continue": "جاری رکھیں",
+      "changeChoice": "انتخاب تبدیل کریں",
+      "requiresLanguage": "پہلے زبان منتخب کریں",
+      "requiresWallet": "پہلے والٹ بنائیں"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "روزانہ انعامات",
+      "totalEarned": "کل کمایا گیا",
+      "lastClaimed": "آخری دعویٰ",
+      "never": "کبھی نہیں",
+      "configure": "کنفیگر کریں",
+      "loading": "انعامات لوڈ ہو رہے ہیں...",
+      "noWallet": "کوئی والٹ نہیں",
+      "autoClaim": {
+        "label": "آٹو کلیم:",
+        "active": "فعال",
+        "setupNow": "اب سیٹ اپ کریں",
+        "expired": "ختم ہو گیا",
+        "tapToSetup": "خودکار روزانہ انعامات فعال کرنے کے لیے ٹیپ کریں"
+      }
+    },
+    "sentinel": {
+      "title": "Sentinel کمائی",
+      "manage": "مینج کریں",
+      "loading": "لوڈ ہو رہا ہے...",
+      "status": "حالت",
+      "statuses": {
+        "notBonded": "بانڈ نہیں کیا گیا",
+        "bonded": "بانڈ کیا گیا",
+        "unbonding": "ان بانڈنگ"
+      },
+      "claimable": "دعویٰ کے قابل",
+      "accruing": "جمع ہو رہا ہے",
+      "bonded": "بانڈ کیا گیا"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "خودکار روزانہ انعامات",
+      "description": "<bold>آٹو کلیم</bold> فعال کریں تاکہ آپ کا $10 روزانہ UBI انعام خودکار طور پر ملے—دستی دعویٰ کی ضرورت نہیں!",
+      "benefits": {
+        "midnight": "آپ کے ٹائم زون میں آدھی رات کو دعویٰ کرتا ہے",
+        "lowerFees": "80% کم گیس فیس (دوسرے صارفین کے ساتھ بیچڈ)",
+        "disable": "آپ سیٹنگز میں کسی بھی وقت غیر فعال کر سکتے ہیں"
+      },
+      "notice": "آپ ایک بار کی توثیق کا پیغام سائن کریں گے جو ہمارے ریلیے کو آپ کی طرف سے دعویٰ کرنے کی اجازت دیتا ہے۔ نجی کلیدیں شیئر نہیں کی جاتیں۔",
+      "maybeLater": "بعد میں",
+      "enableNow": "اب فعال کریں"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "آٹو کلیم سیٹنگز",
+      "description": "اپنے روزانہ انعامات خودکار طور پر دعویٰ کریں۔",
+      "checking": "حالت چیک ہو رہی ہے...",
+      "status": "حالت",
+      "enabled": "فعال",
+      "disabled": "غیر فعال",
+      "lastClaimed": "آخری دعویٰ",
+      "neverClaimed": "کبھی نہیں",
+      "nextClaim": "اگلا دعویٰ",
+      "expiresAt": "ختم ہوتا ہے",
+      "timezone": "ٹائم زون",
+      "preferredHour": "ترجیحی گھنٹہ",
+      "preferredHourHint": "آٹو کلیم کب چلنا چاہیے منتخب کریں",
+      "enableButton": "آٹو کلیم فعال کریں",
+      "disableButton": "آٹو کلیم غیر فعال کریں",
+      "enabling": "فعال ہو رہا ہے...",
+      "disabling": "غیر فعال ہو رہا ہے...",
+      "enableSuccess": "آٹو کلیم فعال ہو گیا!",
+      "enableError": "فعال کرنے میں ناکامی",
+      "disableSuccess": "آٹو کلیم غیر فعال ہو گیا",
+      "disableError": "غیر فعال کرنے میں ناکامی",
+      "updateButton": "سیٹنگز اپ ڈیٹ کریں",
+      "updating": "اپ ڈیٹ ہو رہا ہے..."
+    },
+    "manual": {
+      "title": "دستی دعویٰ",
+      "description": "اگر آپ کو جلد رقم کی ضرورت ہے تو ابھی اگلا دستیاب انعام دعویٰ کریں۔ دستی دعوے آپ کے والٹ کی گیس استعمال کرتے ہیں۔ انتظار کرنے پر آٹو کلیم سستا رہتا ہے۔ اگر آپ کے والٹ میں فنڈز نہیں ہیں تو دستی دعوے سے پہلے آٹو کلیم فعال کریں یا نیٹو گیس شامل کریں۔",
+      "dayLabel": "انعام کا دن",
+      "claimButton": "اب دعویٰ کریں",
+      "claiming": "دعویٰ ہو رہا ہے...",
+      "success": "دعویٰ جمع کر دیا گیا",
+      "successWithId": "دعویٰ جمع کر دیا گیا (آئی ڈی: {{id}})",
+      "error": "دعویٰ کرنے میں ناکامی",
+      "noProof": "انعام کا ثبوت ابھی شائع نہیں ہوا۔ آج کا سنیپ شاٹ لائیو ہونے کے بعد دوبارہ کوشش کریں۔",
+      "unauthorized": "ریلیئر اجازت ناکام۔ براہ کرم دوبارہ کوشش کریں یا سپورٹ سے رابطہ کریں۔",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "دستیاب انعامی دن: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "کوریج: {{start}} سے {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} اس بیچ کے بعد مزید",
+      "batchSuccess": "{{count}} دن کامیابی سے دعویٰ کیے گئے",
+      "claimingProgress": "{{claimed}}/{{total}} دعویٰ ہو رہا ہے...",
+      "claimAllButton": "تمام {{count}} دن دعویٰ کریں"
+    },
+    "timezone": {
+      "title": "ٹائم زون منتخب کریں",
+      "search": "ٹائم زون تلاش کریں...",
+      "current": "موجودہ انتخاب",
+      "searchResults": "تلاش کے نتائج",
+      "noResults": "کوئی نتائج نہیں ملے",
+      "detected": "پتہ چلا",
+      "popular": "مشہور ٹائم زونز",
+      "regions": {
+        "Americas": "امریکاز",
+        "Europe": "یورپ",
+        "Asia": "ایشیا",
+        "Africa": "افریقہ",
+        "Oceania": "اوشیانیا"
+      }
+    },
+    "payout": {
+      "title": "پی آؤٹ ترجیح",
+      "description": "اپنی ترجیحی پی آؤٹ کرنسی منتخب کریں۔",
+      "current": "موجودہ",
+      "saved": "محفوظ ہو گیا",
+      "saveError": "محفوظ کرنے میں خرابی",
+      "showMore": "مزید دکھائیں ({{count}})",
+      "showLess": "کم دکھائیں",
+      "native": "نیٹیو ٹوکن",
+      "stablecoin": "سٹیبل کوئن",
+      "popular": "مشہور",
+      "allCurrencies": "تمام کرنسیاں"
+    }
+  },
+  "wallet": {
+    "title": "والٹ",
+    "testnetNotice": "ٹیسٹ نیٹ ٹوکنز کی کوئی حقیقی قدر نہیں",
+    "totalBalance": "کل بیلنس",
+    "balance": "بیلنس",
+    "address": "ایڈریس",
+    "copyAddress": "ایڈریس کاپی کریں",
+    "addressCopied": "ایڈریس کاپی ہو گیا",
+    "receive": "وصول کریں",
+    "send": "بھیجیں",
+    "swap": "سواپ",
+    "swapComingSoon": "سواپ جلد آ رہا ہے",
+    "history": "ہسٹری",
+    "tokens": "ٹوکنز",
+    "collectibles": "جمع کرنے کے قابل",
+    "noTokens": "کوئی ٹوکن کنفیگر نہیں",
+    "nativeToken": "نیٹیو ٹوکن",
+    "loading": "لوڈ ہو رہا ہے...",
+    "refreshing": "ریفریش ہو رہا ہے...",
+    "balancesUpdated": "بیلنس اپ ڈیٹ ہو گئے",
+    "menu": {
+      "manageTokens": "ٹوکنز مینج کریں",
+      "addressBook": "ایڈریس بک",
+      "walletSettings": "والٹ سیٹنگز",
+      "showBalances": "بیلنس دکھائیں",
+      "hideBalances": "بیلنس چھپائیں",
+      "showZeroTokens": "صفر ٹوکنز دکھائیں",
+      "hideZeroTokens": "صفر ٹوکنز چھپائیں",
+      "refresh": "ریفریش"
+    },
+    "manageTokens": {
+      "title": "ٹوکنز مینج کریں",
+      "info": "کسٹم ERC-20 ٹوکنز شامل کریں۔ سسٹم ٹوکنز پہلے سے شامل ہیں۔",
+      "addToken": "ٹوکن شامل کریں",
+      "adding": "شامل ہو رہا ہے...",
+      "contractAddress": "ٹوکن کنٹریکٹ ایڈریس (0x...)",
+      "autoFetch": "سمبل اور ڈیسملز خودکار طور پر حاصل ہو جاتے ہیں",
+      "customTokens": "کسٹم ٹوکنز",
+      "noCustomTokens": "ابھی کوئی کسٹم ٹوکن شامل نہیں۔",
+      "addUsingForm": "اوپر فارم استعمال کر کے ٹوکن شامل کریں۔",
+      "systemToken": "یہ ٹوکن سسٹم ٹوکن ہے اور پہلے سے شامل ہے۔",
+      "fetchingMetadata": "ٹوکن میٹا ڈیٹا حاصل ہو رہا ہے...",
+      "addedSuccess": "ٹوکن کامیابی سے شامل ہو گیا",
+      "enterValidAddress": "درست ٹوکن ایڈریس درج کریں",
+      "save": "محفوظ کریں"
+    },
+    "addressBook": {
+      "title": "ایڈریس بک",
+      "addContact": "رابطہ شامل کریں",
+      "nameLabel": "نام یا لیبل",
+      "walletAddress": "والٹ ایڈریس (0x...)",
+      "savedContacts": "محفوظ رابطے",
+      "noContacts": "ابھی کوئی رابطہ محفوظ نہیں۔",
+      "addForQuickSending": "تیز بھیجنے کے لیے رابطے شامل کریں۔",
+      "enterValidAddress": "درست ایڈریس درج کریں",
+      "addLabel": "لیبل شامل کریں",
+      "save": "محفوظ کریں"
+    },
+    "settings": {
+      "title": "والٹ سیٹنگز",
+      "export": {
+        "title": "والٹ ایکسپورٹ کریں",
+        "description": "اپنا ریکوری فریز یا پرائیویٹ کی کبھی کسی کے ساتھ شیئر نہ کریں۔ انہیں آف لائن محفوظ رکھیں۔",
+        "recoveryPhrase": "ریکوری فریز",
+        "recoveryPhraseNotAvailable": "ریکوری فریز دستیاب نہیں (پرائیویٹ کی سے امپورٹ کیا گیا)",
+        "privateKey": "پرائیویٹ کی",
+        "privateKeyWarning": "پرائیویٹ کی (خفیہ رکھیں!)",
+        "showPhrase": "ریکوری فریز دکھائیں",
+        "showKey": "پرائیویٹ کی دکھائیں",
+        "warning": "اپنا ریکوری فریز یا پرائیویٹ کی کبھی کسی کے ساتھ شیئر نہ کریں۔",
+        "copy": "کاپی",
+        "copied": "کاپی ہو گیا!",
+        "hide": "چھپائیں",
+        "clipboardWarning": "دوسری ایپس کلپ بورڈ پڑھ سکتی ہیں۔ یہ 30 سیکنڈ میں خودکار طور پر صاف ہو جائے گا۔",
+        "verifyForKey": "پرائیویٹ کی دکھانے کے لیے تصدیق کریں",
+        "verifyForSeed": "ریکوری فریز دکھانے کے لیے تصدیق کریں",
+        "verifyDescription": "حساس والٹ معلومات ظاہر کرنے کے لیے اپنا پاس ورڈ یا پن درج کریں۔"
+      },
+      "import": {
+        "title": "والٹ امپورٹ کریں",
+        "description": "امپورٹ کرنے سے موجودہ والٹ تبدیل ہو جائے گا۔ پہلے موجودہ کا بیک اپ ضرور لیں۔ نوٹ: امپورٹ کے بعد PoH حالت دوبارہ تصدیق کرنی پڑے گی۔",
+        "byPhrase": "ریکوری فریز سے",
+        "byPrivateKey": "پرائیویٹ کی سے",
+        "phrasePlaceholder": "12 یا 24 الفاظ کا فریز درج کریں…",
+        "keyPlaceholder": "0x… پرائیویٹ کی درج کریں",
+        "importButton": "والٹ امپورٹ کریں",
+        "importing": "امپورٹ ہو رہا ہے...",
+        "success": "والٹ کامیابی سے امپورٹ ہو گیا!"
+      },
+      "dangerZone": {
+        "title": "خطرناک زون",
+        "description": "یہ اقدامات واپس نہیں کیے جا سکتے۔ والٹ کا بیک اپ ضرور لیں۔",
+        "forgetWallet": "والٹ بھول جائیں",
+        "forgetDescription": "اس ڈیوائس سے والٹ ہٹائیں۔ ریکوری فریز کا بیک اپ ضرور لیں۔",
+        "confirmTitle": "والٹ بھول جائیں؟",
+        "confirmMessage": "یہ اس ڈیوائس سے والٹ ہٹا دے گا۔ پہلے ریکوری فریز کا بیک اپ ضرور لیں۔",
+        "cancel": "منسوخ",
+        "confirm": "والٹ بھول جائیں",
+        "walletForgotten": "والٹ بھول گیا",
+        "unableToForget": "والٹ بھولنے میں ناکامی",
+        "resetWallet": "والٹ ری سیٹ کریں",
+        "resetDescription": "تمام والٹ ڈیٹا مکمل طور پر مٹا کر تازہ آغاز کریں۔"
+      },
+      "authPrompt": "نجی کی ظاہر کرنے کے لیے توثیق کریں"
+    }
+  },
+  "reset": {
+    "title": "والٹ ری سیٹ کریں",
+    "dangerTitle": "یہ عمل واپس نہیں کیا جا سکتا!",
+    "warning1": "والٹ ری سیٹ کرنے سے مستقل طور پر مٹ جائے گا:",
+    "bullet1": "آپ کا والٹ اور نجی کلیدیں",
+    "bullet2": "آپ کا ریکوری فریز",
+    "bullet3": "تمام ایپ سیٹنگز اور ترجیحات",
+    "bullet4": "ٹرانزیکشن ہسٹری",
+    "recoveryNote": "اگر آپ کے پاس 12 الفاظ کا ریکوری فریز ہے تو ری سیٹ کے بعد والٹ بحال کر سکتے ہیں۔",
+    "continueButton": "میں سمجھتا ہوں، جاری رکھیں",
+    "confirmTitle": "ری سیٹ کی تصدیق",
+    "confirmDescription": "تمام والٹ ڈیٹا مٹانے کی تصدیق کے لیے نیچے \"RESET\" ٹائپ کریں۔",
+    "placeholder": "RESET ٹائپ کریں",
+    "typeMismatch": "تصدیق کے لیے RESET ٹائپ کریں",
+    "resetButton": "والٹ ہمیشہ کے لیے ری سیٹ کریں",
+    "resettingTitle": "ری سیٹ ہو رہا ہے...",
+    "resettingDescription": "تمام والٹ ڈیٹا صاف ہو رہا ہے۔ براہ مہربانی انتظار کریں...",
+    "completeTitle": "ری سیٹ مکمل",
+    "completeDescription": "آپ کا والٹ ری سیٹ ہو گیا۔ اب آپ نیا والٹ سیٹ اپ کر سکتے ہیں یا موجودہ امپورٹ کر سکتے ہیں۔",
+    "startFresh": "تازہ آغاز کریں",
+    "error": "والٹ ری سیٹ کرنے میں ناکامی۔ دوبارہ کوشش کریں۔"
+  },
+  "export": {
+    "verifyTitle": "شناخت کی تصدیق",
+    "verifyDescription": "والٹ ایکسپورٹ کرنے کے لیے اپنا پاس ورڈ درج کریں۔",
+    "verify": "تصدیق کریں",
+    "verificationFailed": "تصدیق ناکام",
+    "passphraseTitle": "ایکسپورٹ پاس فریز سیٹ کریں",
+    "passphraseDescription": "بیک اپ انکرپٹ کرنے کے لیے مضبوط پاس فریز منتخب کریں۔ بعد میں امپورٹ کے لیے اس کی ضرورت پڑے گی۔",
+    "enterPassphrase": "پاس فریز درج کریں",
+    "passphraseTooWeak": "پاس فریز بہت کمزور ہے۔ کم از کم 8 حروف استعمال کریں۔",
+    "includeSeed": "ریکوری فریز شامل کریں",
+    "includeSeedDescription": "مکمل بیک اپ کے لیے تجویز کیا جاتا ہے",
+    "confirmTitle": "پاس فریز کی تصدیق",
+    "confirmDescription": "تصدیق کے لیے پاس فریز دوبارہ درج کریں۔",
+    "confirmPassphrase": "پاس فریز کی تصدیق کریں",
+    "passphraseMismatch": "پاس فریز مماثل نہیں",
+    "warning": "اس بیک اپ کو محفوظ رکھیں۔ اس فائل اور پاس فریز والا کوئی بھی آپ کے والٹ تک رسائی حاصل کر سکتا ہے۔",
+    "exportNow": "والٹ ایکسپورٹ کریں",
+    "exportingTitle": "ایکسپورٹ ہو رہا ہے...",
+    "exportingDescription": "والٹ بیک اپ انکرپٹ اور تیار ہو رہا ہے...",
+    "successTitle": "ایکسپورٹ مکمل",
+    "successDescription": "آپ کا انکرپٹڈ والٹ بیک اپ تیار ہو گیا۔ اسے محفوظ رکھیں۔",
+    "rememberPassphrase": "اپنا ایکسپورٹ پاس فریز یاد رکھیں - اس بیک اپ کو امپورٹ کرنے کے لیے اس کی ضرورت پڑے گی۔",
+    "errorTitle": "ایکسپورٹ ناکام",
+    "failed": "ایکسپورٹ ناکام۔ دوبارہ کوشش کریں۔",
+    "tryAgain": "دوبارہ کوشش کریں",
+    "exportKeystore": "انکرپٹڈ بیک اپ ایکسپورٹ کریں",
+    "exportKeystoreDesc": "انکرپٹڈ کی سٹور فائل محفوظ کریں"
+  },
+  "security": {
+    "title": "اپنے والٹ کو محفوظ بنائیں",
+    "subtitle": "والٹ کی حفاظت کے لیے پاس ورڈ یا پن سیٹ اپ کریں",
+    "checkingDevice": "ڈیوائس سیکیورٹی چیک ہو رہی ہے...",
+    "passwordOption": "پاس ورڈ",
+    "passwordDesc": "8+ حروف، حروف اور نمبرز",
+    "pinOption": "6 ہندسوں کا پن",
+    "pinDesc": "تیز اور یاد رکھنے میں آسان",
+    "enterPin": "6 ہندسوں کا پن درج کریں",
+    "confirmPin": "پن کی تصدیق کریں",
+    "enterPassword": "پاس ورڈ درج کریں",
+    "confirmPassword": "پاس ورڈ کی تصدیق کریں",
+    "enableBiometrics": "{{type}} فعال کریں؟",
+    "biometricsDesc": "{{type}} سے تیز انلاک استعمال کریں۔ بعد میں سیٹنگز میں تبدیل کر سکتے ہیں۔",
+    "enableBiometricsButton": "{{type}} فعال کریں",
+    "enableBiometricsPrompt": "بائیو میٹرک انلاک فعال کرنے کے لیے توثیق کریں",
+    "skipBiometrics": "ابھی چھوڑ دیں",
+    "setupComplete": "سیٹ اپ مکمل!",
+    "walletSecured": "آپ کا والٹ اب محفوظ ہے!",
+    "continue": "جاری رکھیں",
+    "passwordTooWeak": "پاس ورڈ بہت کمزور ہے۔ تجاویز پر عمل کریں۔",
+    "pinMismatch": "پن مماثل نہیں",
+    "passwordMismatch": "پاس ورڈز مماثل نہیں",
+    "setupError": "سیٹ اپ ناکام۔ دوبارہ کوشش کریں۔",
+    "passwordTitle": "پاس ورڈ",
+    "passwordDescription": "8+ حروف، زیادہ سیکیورٹی",
+    "pinTitle": "6 ہندسوں کا پن",
+    "pinDescription": "تیز رسائی، یاد رکھنے میں آسان"
+  },
+  "lock": {
+    "title": "Umotu انلاک کریں",
+    "lockedOut": "لاک آؤٹ",
+    "tooManyAttempts": "بہت زیادہ کوششیں۔ {{time}} میں دوبارہ کوشش کریں۔",
+    "attemptsRemaining": "{{count}} کوششیں باقی",
+    "enterPassword": "پاس ورڈ درج کریں",
+    "unlock": "انلاک",
+    "wrongPin": "غلط پن",
+    "wrongPassword": "غلط پاس ورڈ",
+    "verificationError": "تصدیق ناکام",
+    "biometricsPrompt": "اپنا والٹ انلاک کریں",
+    "unlockWithFaceId": "فیس آئی ڈی سے انلاک کریں؟",
+    "unlockWithFingerprint": "فنگ ر پرنٹ سے انلاک کریں؟",
+    "forgotPassword": "پاس ورڈ بھول گئے؟"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "غیر تعاون یافتہ ڈیوائس",
+    "emulatorMessage": "سیکیورٹی وجوہات کی بنا پر یہ ایپ ایمیولیٹرز پر نہیں چل سکتی۔",
+    "rootedTitle": "سیکیورٹی وارننگ",
+    "exitApp": "ایپ بند کریں",
+    "continueAnyway": "پھر بھی جاری رکھیں"
+  },
+  "settingsSecurity": {
+    "title": "سیکیورٹی",
+    "autoLock": "آٹو لاک",
+    "autoLockDesc": "غیر فعالیت کے بعد والٹ لاک کریں",
+    "faceId": "فیس آئی ڈی",
+    "fingerprint": "فنگ ر پرنٹ",
+    "biometricsDesc": "بائیو میٹرکس سے تیز انلاک",
+    "changePin": "پن تبدیل کریں",
+    "changePassword": "پاس ورڈ تبدیل کریں",
+    "changeDesc": "اپنی سیکیورٹی کریڈینشلز اپ ڈیٹ کریں",
+    "enableBiometrics": "بائیو میٹرک انلاک فعال کریں",
+    "enterCurrent": "موجودہ {{type}} درج کریں",
+    "enterNew": "نیا {{type}} درج کریں",
+    "confirmNew": "نیا {{type}} کی تصدیق کریں",
+    "currentPassword": "موجودہ پاس ورڈ",
+    "newPassword": "نیا پاس ورڈ",
+    "confirmNewPassword": "نیا پاس ورڈ کی تصدیق کریں",
+    "changeNow": "اب تبدیل کریں",
+    "success": "کامیابی",
+    "pinChanged": "پن کامیابی سے تبدیل ہو گیا",
+    "passwordChanged": "پاس ورڈ کامیابی سے تبدیل ہو گیا",
+    "changeFailed": "کریڈینشلز تبدیل کرنے میں ناکامی",
+    "autoLockOptions": {
+      "immediately": "فوراً",
+      "after1min": "1 منٹ کے بعد",
+      "after5min": "5 منٹ کے بعد",
+      "after15min": "15 منٹ کے بعد",
+      "after1hour": "1 گھنٹے کے بعد",
+      "never": "کبھی نہیں"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "براہ مہربانی انتظار کریں",
+    "cooldownMessage": "سیکیورٹی کے لیے، آپ {{time}} میں دوبارہ کلیدیں ظاہر کر سکتے ہیں۔",
+    "cooldownReason": "یہ بدنیتی ایپس کو تیزی سے کلیدیں حاصل کرنے سے روکتا ہے۔"
+  },
+  "passwordVerify": {
+    "title": "شناخت کی تصدیق",
+    "description": "حساس والٹ معلومات ظاہر کرنے کے لیے اپنا پاس ورڈ یا پن درج کریں",
+    "verify": "تصدیق کریں"
+  },
+  "passwordValidation": {
+    "veryWeak": "بہت کمزور",
+    "weak": "کمزور",
+    "fair": "اوسط",
+    "good": "اچھا",
+    "strong": "مضبوط",
+    "tooShort": "پاس ورڈ کم از کم 8 حروف کا ہونا چاہیے",
+    "commonPassword": "یہ عام استعمال ہونے والا پاس ورڈ ہے",
+    "lengthSuggestion": "زیادہ سیکیورٹی کے لیے کم از کم 12 حروف استعمال کریں",
+    "mixedCaseSuggestion": "بڑے اور چھوٹے حروف مکس کریں",
+    "numberSuggestion": "کچھ نمبرز شامل کریں",
+    "specialCharSuggestion": "خصوصی حروف شامل کریں (!@#$%)"
+  },
+  "forgot": {
+    "title": "کریڈینشلز ری سیٹ کریں",
+    "warning": "پاس ورڈ یا پن ری سیٹ کرنے کے لیے والٹ سیڈ فریز درج کرنا پڑے گا۔ یہ ثابت کرتا ہے کہ آپ والٹ کے مالک ہیں۔",
+    "warningText": "اپنا سیڈ فریز کبھی کسی کے ساتھ شیئر نہ کریں۔",
+    "continue": "میں سمجھتا ہوں، جاری رکھیں",
+    "enterSeed": "سیڈ فریز درج کریں",
+    "seedDescription": "اپنا 12 یا 24 الفاظ کا سیڈ فریز درج کریں۔ ہر لفظ کو خلا سے الگ کریں۔",
+    "seedPlaceholder": "سیڈ فریز درج کریں...",
+    "verifySeed": "سیڈ فریز کی تصدیق کریں",
+    "invalidSeed": "درست 12 یا 24 الفاظ کا سیڈ فریز درج کریں",
+    "chooseMethod": "سیکیورٹی طریقہ منتخب کریں",
+    "methodDescription": "والٹ محفوظ کرنے کا طریقہ کیا ہو؟",
+    "newPassword": "نیا پاس ورڈ بنائیں",
+    "newPin": "نیا پن بنائیں",
+    "newPasswordDesc": "مضبوط پاس ورڈ منتخب کریں (8+ حروف)",
+    "newPinDesc": "6 ہندسوں کا پن درج کریں",
+    "confirmPassword": "پاس ورڈ کی تصدیق",
+    "confirmPin": "پن کی تصدیق",
+    "confirmPasswordDesc": "تصدیق کے لیے پاس ورڈ دوبارہ درج کریں",
+    "confirmPinDesc": "تصدیق کے لیے پن دوبارہ درج کریں",
+    "resetNow": "اب ری سیٹ کریں",
+    "complete": "ری سیٹ مکمل",
+    "completeDescription": "آپ کی کریڈینشلز ری سیٹ ہو گئیں۔ اب آپ نئے پاس ورڈ یا پن سے والٹ انلاک کر سکتے ہیں۔",
+    "unlockNow": "والٹ انلاک کریں",
+    "passwordTooWeak": "پاس ورڈ بہت کمزور ہے۔ زیادہ مضبوط منتخب کریں۔",
+    "passwordMismatch": "پاس ورڈز مماثل نہیں",
+    "pinMismatch": "پن مماثل نہیں",
+    "resetFailed": "کریڈینشلز ری سیٹ کرنے میں ناکامی۔ سیڈ فریز چیک کریں۔",
+    "resetError": "خرابی پیش آئی۔ دوبارہ کوشش کریں۔"
+  },
+  "send": {
+    "title": "بھیجیں",
+    "selectToken": "ٹوکن منتخب کریں",
+    "selectTokenInfo": "بھیجنے کے لیے ٹوکن منتخب کریں۔ صرف بیلنس والے ٹوکن دکھائے جاتے ہیں۔",
+    "noTokensWithBalance": "بیلنس والا کوئی ٹوکن نہیں",
+    "addTokensFirst": "پہلے والٹ میں ٹوکنز شامل کریں",
+    "enterAmount": "رقم درج کریں",
+    "enterRecipient": "وصول کنندہ درج کریں",
+    "review": "جائزہ",
+    "amount": "رقم",
+    "recipient": "وصول کنندہ",
+    "recipientPlaceholder": "0x... والٹ ایڈریس",
+    "networkFee": "نیٹ ورک فیس",
+    "gasToken": "گیس ادا کریں",
+    "payingWith": "ادا کر رہے ہیں",
+    "payGasWith": "گیس ادا کریں",
+    "nativeGas": "UMT (نیٹیو)",
+    "stableGas": "سٹیبل گیس",
+    "selectStable": "سٹیبل منتخب کریں",
+    "max": "میکس",
+    "next": "اگلا",
+    "continue": "جاری رکھیں",
+    "confirm": "بھیجنے کی تصدیق",
+    "confirmSend": "بھیجنے کی تصدیق",
+    "sending": "بھیج رہا ہے...",
+    "failed": "ٹرانزیکشن ناکام",
+    "viewInExplorer": "ایکسپلورر میں دیکھیں",
+    "done": "ہو گیا",
+    "cancel": "منسوخ",
+    "send": "بھیجیں",
+    "balance": "بیلنس",
+    "available": "دستیاب",
+    "to": "کو",
+    "network": "نیٹ ورک",
+    "step": "سٹیپ",
+    "estimating": "اندازہ لگا رہا ہے…",
+    "umtNative": "UMT (نیٹیو)",
+    "txSpeed": "ٹرانزیکشن سپیڈ",
+    "transactionSpeed": "ٹرانزیکشن سپیڈ",
+    "speed": {
+      "slow": "سست",
+      "normal": "نارمل",
+      "fast": "تیز"
+    },
+    "gasNotice": {
+      "stablecoin": "گیس سٹیبل کوئن سے ادا ہو گی۔",
+      "reserved": "گیس کے لیے {{amount}} {{symbol}} ریزرو کیا گیا؛ آپ زیادہ سے زیادہ {{max}} بھیج سکتے ہیں۔"
+    },
+    "errors": {
+      "invalidAddress": "غلط وصول کنندہ ایڈریس",
+      "invalidAmount": "درست رقم درج کریں",
+      "insufficientBalance": "ناکافی بیلنس",
+      "insufficientGas": "گیس کے لیے ناکافی بیلنس",
+      "insufficientGasWithHint": "گیس کے لیے ناکافی بیلنس۔ UMT یا سپورٹڈ سٹیبل کوئن شامل کریں۔",
+      "notEnoughForGas": "گیس کور کرنے کے لیے ناکافی بیلنس",
+      "noStableGas": "گیس کے لیے ناکافی UMT اور کوئی سپورٹڈ سٹیبل گیس کور نہیں کر سکتا۔",
+      "permitFailed": "گیس ٹوکن کے لیے پرمٹ یا اپروول ناکام",
+      "relayNotConfigured": "سٹیبل گیس ریلیے کنفیگر نہیں",
+      "transactionReverted": "ٹرانزیکشن آن چین ریورٹ ہو گئی۔",
+      "approvalNeeded": "گیس ٹوکن کو اپروول کی ضرورت لیکن اپروول کے لیے UMT دستیاب نہیں۔ تھوڑا UMT شامل کریں یا پرمٹ سپورٹڈ ٹوکن استعمال کریں۔"
+    },
+    "addressBook": {
+      "title": "پتہ کتاب",
+      "addNew": "نیا شامل کریں",
+      "noContacts": "کوئی محفوظ پتے نہیں",
+      "saveForQuickAccess": "فوری رسائی کے لیے پتے محفوظ کریں",
+      "editContact": "رابطہ ترمیم کریں",
+      "deleteContact": "رابطہ حذف کریں",
+      "addressNotSaved": "پتہ محفوظ نہیں",
+      "addLabel": "لیبل شامل کریں",
+      "enterValidAddress": "پہلے درست پتہ درج کریں",
+      "saved": "محفوظ ہو گیا",
+      "save": "محفوظ کریں"
+    },
+    "success": {
+      "title": "ٹرانزیکشن بھیجی گئی!",
+      "hash": "ہیش",
+      "viewInExplorer": "ایکسپلورر میں دیکھیں",
+      "close": "بند کریں"
+    },
+    "batch": {
+      "mode": "بیچ موڈ",
+      "singleMode": "واحد وصول کنندہ",
+      "addRecipient": "وصول کنندگان شامل کریں",
+      "noRecipients": "ابھی تک کوئی وصول کنندہ شامل نہیں",
+      "addFromTagOrBook": "ٹیگ یا کتاب سے شامل کریں",
+      "invalidAddress": "غلط پتہ: {{address}}",
+      "invalidAmount": "{{recipient}} کے لیے غلط رقم",
+      "totalExceedsBalance": "کل بیلنس سے زیادہ ہے",
+      "sendingTo": "{{count}} وصول کنندہ کو بھیج رہا ہے",
+      "sendingTo_plural": "{{count}} وصول کنندگان کو بھیج رہا ہے",
+      "recipients": "وصول کنندگان",
+      "addresses": "{{count}} پتہ",
+      "addresses_plural": "{{count}} پتے",
+      "addByTag": "ٹیگ سے شامل کریں",
+      "noTags": "ابھی تک کوئی ٹیگ نہیں",
+      "createFirstTag": "پتہ کتاب میں اپنا پہلا ٹیگ بنائیں",
+      "addFromTag": "ٹیگ سے شامل کریں",
+      "selectTag": "ٹیگ منتخب کریں",
+      "remove": "ہٹائیں",
+      "sendAll": "سب بھیجیں ({{count}})",
+      "batchSend": "بیچ بھیجیں",
+      "badge": "بیچ",
+      "successFail": "{{success}} کامیاب، {{fail}} ناکام",
+      "successful": "کامیاب",
+      "sentStatus": "بھیج دیا گیا",
+      "failedStatus": "ناکام",
+      "details": "بیچ منتقلی تفصیلات",
+      "total": "کل",
+      "tagPicker": {
+        "title": "ٹیگ منتخب کریں",
+        "noTags": "کوئی ٹیگ دستیاب نہیں",
+        "createHint": "پہلے کتاب میں رابطوں میں ٹیگ شامل کریں"
+      },
+      "tags": {
+        "manage": "ٹیگز کا انتظام کریں",
+        "add": "ٹیگ شامل کریں",
+        "remove": "ٹیگ ہٹائیں",
+        "create": "ٹیگ بنائیں",
+        "newTag": "نیا ٹیگ نام",
+        "addToContact": "رابطے میں ٹیگ شامل کریں"
+      }
+    }
+  },
+  "receive": {
+    "title": "وصول کریں",
+    "yourAddress": "آپ کا والٹ ایڈریس",
+    "scanQR": "QR کوڈ اسکین کر کے وصول کریں",
+    "copyAddress": "ایڈریس کاپی کریں",
+    "share": "شیئر کریں"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "ادا کریں",
+      "myQr": "میرا QR"
+    },
+    "pay": {
+      "title": "ادا کریں",
+      "description": "دوست کا QR کوڈ اسکین کر کے براہ راست والٹ میں ادا کریں",
+      "allowCamera": "کیمرہ کی اجازت دیں",
+      "requesting": "درخواست کر رہا ہے…",
+      "openSettings": "سیٹنگز کھولیں",
+      "sendTo": "بھیجیں",
+      "amount": "رقم",
+      "rescan": "دوبارہ اسکین",
+      "continue": "جاری رکھیں"
+    },
+    "receive": {
+      "title": "وصول کریں",
+      "description": "اس QR کوڈ کو اسکین کر کے اس ایڈریس پر ادائیگیاں بھیجیں",
+      "tapToCopy": "ایڈریس کاپی کرنے کے لیے ٹیپ کریں",
+      "copied": "کلپ بورڈ پر کاپی ہو گیا!"
+    }
+  },
+  "history": {
+    "title": "ٹرانزیکشن ہسٹری",
+    "sent": "بھیجا گیا",
+    "received": "وصول کیا گیا",
+    "token": "ٹوکن",
+    "external": "بیرونی",
+    "to": "کو: ",
+    "from": "سے: ",
+    "viewInExplorer": "ایکسپلورر میں دیکھیں",
+    "empty": {
+      "title": "ابھی کوئی ٹرانزیکشن نہیں",
+      "description": "ٹوکن بھیجنے یا وصول کرنے کے بعد ہسٹری یہاں دکھائی جائے گی۔"
+    },
+    "status": {
+      "confirmed": "تصدیق شدہ",
+      "pending": "زیر التواء",
+      "failed": "ناکام"
+    },
+    "details": {
+      "title": "ٹرانزیکشن تفصیلات",
+      "status": "حالت",
+      "type": "قسم",
+      "to": "کو",
+      "from": "سے",
+      "token": "ٹوکن",
+      "block": "بلاک",
+      "gasCost": "گیس لاگت",
+      "hash": "ہیش",
+      "source": "ماخذ",
+      "balanceDetected": "بیلنس پتہ چلا",
+      "inferredNote": "یہ ٹرانزیکشن بیلنس تبدیلی سے پتہ چلی۔ درست آن چین تفصیلات دستیاب نہیں۔"
+    },
+    "time": {
+      "justNow": "ابھی",
+      "minsAgo": "{{count}} منٹ پہلے",
+      "hoursAgo": "{{count}} گھنٹے پہلے",
+      "daysAgo": "{{count}} دن پہلے"
+    }
+  },
+  "settings": {
+    "title": "سیٹنگز",
+    "account": {
+      "title": "اکاؤنٹ اور ظاہری شکل",
+      "walletAddress": "والٹ ایڈریس",
+      "copy": "کاپی",
+      "copied": "کاپی ہو گیا"
+    },
+    "theme": {
+      "title": "تھیم",
+      "light": "لائٹ",
+      "dark": "ڈارک",
+      "system": "سسٹم"
+    },
+    "language": {
+      "title": "زبان",
+      "select": "زبان منتخب کریں",
+      "current": "موجودہ"
+    },
+    "display": {
+      "title": "ڈسپلے",
+      "description": "ہوم اسکرین کی ظاہری شکل حسب ضرورت بنائیں۔",
+      "showSentinelCard": "Sentinel کمائی کارڈ دکھائیں",
+      "showSentinelCardDesc": "ہوم اسکرین پر کمائی دکھائیں",
+      "showDailyRewardsCard": "روزانہ انعامات کارڈ دکھائیں",
+      "on": "آن",
+      "off": "آف",
+      "sentinelSettings": "Sentinel سیٹنگز",
+      "sentinelSettingsDesc": "بانڈ، انعامات اور آٹو کلیم مینج کریں"
+    },
+    "sentinelDisplay": {
+      "title": "Sentinel ڈسپلے",
+      "showSentinelCard": "Sentinel کارڈ دکھائیں",
+      "showSentinelCardDesc": "ہوم اسکرین پر sentinel کمائی کارڈ دکھائیں",
+      "sentinelSettings": "Sentinel سیٹنگز",
+      "sentinelSettingsDesc": "sentinel نوڈ اور انعامات کنفیگر کریں"
+    },
+    "verification": {
+      "title": "تصدیق",
+      "description": "روزانہ انعامات انلاک کرنے کے لیے Inlyf سے اپنی انسانیت کی تصدیق کریں۔ ایک تیز لائیو نیس چیک؛ وقتاً فوقتاً دوبارہ تصدیق کریں۔",
+      "open": "تصدیق شروع کریں",
+      "refresh": "تصدیق ریفریش کریں",
+      "status": "حالت",
+      "verified": "تصدیق شدہ",
+      "notVerified": "تصدیق نہیں ہوئی",
+      "expiresOn": "ختم ہوتا ہے",
+      "daysRemaining": "باقی دن",
+      "upToDate": "تصدیق اپ ٹو ڈیٹ ہے",
+      "refreshAvailableIn": "{{days}} دنوں میں ریفریش دستیاب"
+    },
+    "network": {
+      "title": "نیٹ ورک",
+      "description": "بلاک چین نیٹ ورک کنکشن کنفیگر کریں۔",
+      "testnet": "ٹیسٹ نیٹ",
+      "mainnet": "مین نیٹ (جلد آ رہا ہے)",
+      "rpcEndpoint": "RPC اینڈ پوائنٹ",
+      "pingRpc": "RPC پنگ",
+      "testing": "ٹیسٹ ہو رہا ہے...",
+      "rpcOk": "RPC ٹھیک",
+      "rpcError": "RPC خرابی",
+      "save": "محفوظ کریں",
+      "saved": "سیٹنگز محفوظ ہو گئیں",
+      "connectionStatus": "کنکشن حالت",
+      "connected": "کنکٹڈ",
+      "disconnected": "ڈس کنکٹڈ"
+    },
+    "cache": {
+      "title": "کیش",
+      "description": "ٹوکن اور کنٹریکٹ معلومات ریفریش کرنے کے لیے کیش صاف کریں۔",
+      "clearCache": "کیش صاف کریں",
+      "cacheCleared": "کیش صاف ہو گیا! تبدیلیاں लागو کرنے کے لیے ری سٹارٹ کریں۔"
+    },
+    "chainGuardian": {
+      "title": "چین گارڈین",
+      "description": "اپنا فون آن لائن رکھ کر بلاک چین کو محفوظ بنانے میں مدد کریں۔ انعامات کی اہلیت برقرار رکھنے کے لیے روزانہ کم از کم ایک سیمپلنگ کام مکمل کریں۔",
+      "wifiOnly": "صرف وائی فائی",
+      "wifiOnlyHint": "موبائل ڈیٹا بچاتا ہے",
+      "minBattery": "کم از کم بیٹری",
+      "minBatteryHint": "اس سطح سے نیچے نہیں چلے گا",
+      "background": "بیک گراؤنڈ میں چلائیں",
+      "backgroundHint": "ایپ بند ہونے پر بھی کام کرتا ہے",
+      "lastSample": "آخری سرگرمی",
+      "noSamples": "ابھی کوئی سرگرمی نہیں۔ شروع کرنے کے لیے ایپ کھلی رکھیں۔",
+      "staleWarning": "آج نہیں دیکھا گیا — دوبارہ کھولیں تاکہ دوبارہ شروع ہو۔",
+      "androidBatteryWarning": "بیٹری آپٹیمائزیشن سیمپلنگ روک سکتی ہے",
+      "androidBatteryHint": "سیٹنگز → ایپس → Umotu → بیٹری → \"ان ریسٹرکٹڈ\" منتخب کریں تاکہ بیک گراؤنڈ سیمپلنگ کی اجازت ہو۔",
+      "openSettings": "سیٹنگز کھولنے کے لیے ٹیپ کریں",
+      "tip": "زیادہ کمائی کے لیے \"بیک گراؤنڈ میں چلائیں\" فعال کریں۔",
+      "runNow": "اب چلائیں",
+      "running": "چل رہا ہے…",
+      "lastError": "آخری خرابی",
+      "status": {
+        "active": "فعال",
+        "inactive": "غیر فعال",
+        "paused": "پاز"
+      }
+    },
+    "permissions": {
+      "title": "اجازتیں",
+      "description": "کنکٹڈ منی ایپس اور ان کی اجازتوں کو مینج کریں۔",
+      "openMiniApps": "منی ایپس کھولیں",
+      "manageConnections": "مینج کریں",
+      "noConnections": "کوئی کنکشن نہیں",
+      "revokeAccess": "رسائی منسوخ کریں",
+      "lastUsed": "آخری استعمال"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Umotu میں خوش آمدید",
+      "subtitle": "$10 روزانہ، ہر کوئی ہر جگہ",
+      "getStarted": "شروع کریں"
+    },
+    "language": {
+      "title": "اپنی زبان منتخب کریں",
+      "continue": "جاری رکھیں"
+    },
+    "wallet": {
+      "title": "آپ کا والٹ",
+      "createNew": "نیا والٹ بنائیں",
+      "importExisting": "موجودہ امپورٹ کریں",
+      "creating": "والٹ بنا رہا ہے..."
+    },
+    "verify": {
+      "title": "تصدیق کریں کہ آپ انسان ہیں",
+      "description": "روزانہ انعامات وصول کرنے کے لیے تصدیق کریں کہ آپ منفرد انسان ہیں۔",
+      "continue": "جاری رکھیں"
+    }
+  },
+  "poh": {
+    "subtitle": "روزانہ انعامات انلاک کریں",
+    "description": "انعامات انلاک کرنے کے لیے Inlyf سے لائیو نیس کی تصدیق کریں۔ بائیو میٹرکس آن چین سٹور نہیں ہوتے؛ صرف مختصر مدت کی کریڈینشل جاری ہوتی ہے۔",
+    "howItWorks": "یہ کیسے کام کرتا ہے",
+    "howItWorksDesc": "مختصر لائیو نیس چیک (چہرے کا اسکین) تصدیق کرتا ہے کہ آپ انسان ہیں۔ کریڈینشل 90 دن کی ہوتی ہے اور کسی بھی وقت ریفریش کی جا سکتی ہے۔",
+    "adultQuestion": "کیا آپ بالغ ہیں (18+)؟",
+    "yesAdult": "ہاں، 18+",
+    "noMinor": "نہیں / نابالغ",
+    "selectAge": "براہ مہربانی ایک آپشن منتخب کریں",
+    "verifying": "تصدیق ہو رہی ہے...",
+    "startVerification": "تصدیق شروع کریں",
+    "skipForNow": "ابھی چھوڑ دیں",
+    "status": {
+      "notVerified": "ابھی تصدیق نہیں ہوئی۔",
+      "notVerifiedDetail": "انعامات انلاک کرنے کے لیے تصدیق شروع کریں۔",
+      "unavailable": "حالت دستیاب نہیں۔",
+      "verified": "آپ تصدیق شدہ ہیں۔",
+      "validFor": "~{{days}} دن کے لیے درست",
+      "validFor_plural": "~{{days}} دنوں کے لیے درست",
+      "expired": "تصدیق ختم یا نہیں ملی۔",
+      "expiredDetail": "اپنی کریڈینشل ریفریش کرنے کے لیے لائیو نیس دوبارہ چلائیں۔"
+    }
+  },
+  "sentinelSettings": {
+    "header": "بلاکس فائنلائز کرنے میں مدد کے لیے Sentinel پول میں شامل ہوں۔ کم از کم رقم بانڈ کریں، ڈیوائس آن لائن رکھیں، اور انعامات کمائیں۔",
+    "loading": "sentinel ڈیٹا لوڈ ہو رہا ہے...",
+    "unavailable": "Sentinel ماڈیول دستیاب نہیں",
+    "yourStatus": "آپ کی حالت",
+    "wallet": "والٹ",
+    "bondedAmount": "بانڈ شدہ رقم",
+    "minimumBond": "کم از کم بانڈ",
+    "status": {
+      "notBonded": "بانڈ نہیں کیا گیا",
+      "bonded": "بانڈ کیا گیا",
+      "unbonding": "ان بانڈنگ ({{date}} پر دستیاب)"
+    },
+    "rewards": {
+      "title": "انعامات",
+      "claimableNow": "اب دعویٰ کے قابل",
+      "accruing": "جمع ہو رہے ہیں",
+      "totalClaimed": "کل دعویٰ کیا گیا",
+      "claiming": "دعویٰ ہو رہا ہے...",
+      "claimRewards": "انعامات دعویٰ کریں"
+    },
+    "bond": {
+      "createTitle": "بانڈ بنائیں",
+      "topUpTitle": "بانڈ ٹاپ اپ کریں",
+      "createDescription": "sentinel کمیٹی میں شامل ہونے اور کمائی شروع کرنے کے لیے UMT بانڈ کریں۔",
+      "topUpDescription": "انعامات کا بڑا حصہ کمائی کے لیے سٹیک بڑھائیں۔",
+      "amountLabel": "رقم (UMT)",
+      "processing": "پروسیسنگ...",
+      "bond": "بانڈ",
+      "topUp": "ٹاپ اپ",
+      "tx": "ٹرانزیکشن"
+    },
+    "autoClaim": {
+      "title": "آٹو کلیم",
+      "description": "sentinel انعامات جمع ہونے پر ریلیئر خودکار طور پر دعویٰ کرے۔",
+      "checking": "چیکنگ...",
+      "enabled": "فعال",
+      "disabled": "غیر فعال",
+      "expires": "ختم ہوتا ہے",
+      "processing": "پروسیسنگ...",
+      "enable": "آٹو کلیم فعال کریں",
+      "disable": "آٹو کلیم غیر فعال کریں"
+    },
+    "activity": {
+      "title": "حالیہ سرگرمی",
+      "claims": "دعویٰ",
+      "slashes": "سلیشز",
+      "noClaims": "آخری {{blocks}}k بلاکس میں کوئی دعویٰ نہیں۔",
+      "noSlashes": "حالیہ ونڈو میں کوئی سلیش ایونٹ نہیں۔",
+      "unknown": "نامعلوم"
+    },
+    "errors": {
+      "configureEnv": "RPC + sentinel کنٹریکٹ env vars کنفیگر کریں۔",
+      "noWallet": "sentinel کمیٹی میں شامل ہونے کے لیے والٹ بنائیں یا امپورٹ کریں۔",
+      "loadFailed": "sentinel ڈیٹا لوڈ کرنے میں ناکامی۔"
+    },
+    "toast": {
+      "rewardsClaimed": "Sentinel انعامات دعویٰ ہو گئے۔",
+      "noRewards": "زیر التواء کوئی انعامات نہیں۔",
+      "claimFailed": "دعویٰ ناکام۔",
+      "autoClaimEnabled": "Sentinel آٹو کلیم فعال ہو گیا",
+      "autoClaimDisabled": "Sentinel آٹو کلیم غیر فعال ہو گیا",
+      "autoClaimFailed": "آٹو کلیم ٹوگل ناکام",
+      "configureBondAddress": "sentinel بانڈ ایڈریس کنفیگر کریں",
+      "rpcNotSet": "RPC سیٹ نہیں",
+      "minBondUnavailable": "کم از کم بانڈ دستیاب نہیں",
+      "enterBondAmount": "بانڈ رقم درج کریں",
+      "minBondRequired": "ابتدائی بانڈ کم از کم {{amount}} UMT ہونا چاہیے",
+      "topUpGreaterThanZero": "ٹاپ اپ رقم 0 سے زیادہ ہونی چاہیے",
+      "insufficientBalance": "بانڈ + گیس کے لیے ناکافی بیلنس",
+      "bondSubmitted": "بانڈ ٹرانزیکشن جمع ہو گئی",
+      "topUpSubmitted": "ٹاپ اپ ٹرانزیکشن جمع ہو گئی",
+      "bondConfirmed": "بانڈ تصدیق ہو گیا",
+      "topUpConfirmed": "ٹاپ اپ تصدیق ہو گیا",
+      "bondReverted": "بانڈ آن چین ریورٹ ہو گیا",
+      "bondFailed": "بانڈ ناکام"
+    }
+  },
+  "miniapps": {
+    "title": "منی ایپس",
+    "subtitle": "Umotu پر بنائی گئی ایپس دریافت کریں",
+    "explore": "Umotu پر بنائی گئی ایپس دریافت کریں",
+    "noApps": "ابھی کوئی ایپس دستیاب نہیں",
+    "browseByCategory": "کیٹیگری کے مطابق براؤز کریں",
+    "appsCount": "{{count}} ایپس",
+    "featured": "فیچرڈ",
+    "comingSoon": "جلد آ رہا ہے",
+    "liveApps": "لائیو ایپس",
+    "available": "دستیاب",
+    "pohDescription": "روزانہ انعامات انلاک کرنے کے لیے Inlyf سے اپنی انسانیت کی تصدیق کریں۔",
+    "vision": {
+      "title": "ہمارا ویژن",
+      "tagline": "$10 روزانہ، ہر کوئی ہر جگہ",
+      "description": "Umotu ایسی انفراسٹرکچر بنا رہا ہے جس میں ہر کوئی عالمی معیشت میں شرکت کر سکے—چاہے وہ کہیں بھی رہے یا کون سا بینک استعمال کرے۔",
+      "readMore": "مکمل ویژن پڑھیں",
+      "pillars": {
+        "title": "تین بنیادی اصول",
+        "ubi": {
+          "title": "$10/روز، ہر کوئی ہر جگہ",
+          "description": "نیٹ ورک محفوظ کرنے کے انعامات کے طور پر یونیورسل بیسک انکم۔ سمارٹ فون والا کوئی بھی شرکت کر کے کما سکتا ہے۔"
+        },
+        "capital": {
+          "title": "سرمایہ آزادانہ طور پر منتقل ہوتا ہے",
+          "description": "ادائیگیوں اور ٹرانسفرز کے لیے قریب صفر رگڑ—کراس بارڈر یا لوکل۔ کاروبار ~0.1% پلیٹ فارم لاگت ادا کرتے ہیں، افراد کچھ نہیں۔"
+        },
+        "sovereignty": {
+          "title": "مونٹری خودمختاری کا احترام",
+          "description": "ہم فیٹ کرنسیاں تبدیل نہیں کرتے—انہیں بہتر بناتے ہیں۔ بینک اپنی لوکل کرنسی کی سٹیبل کوئن جاری کرتے ہیں۔ مونٹری پالیسی زیادہ وسیع رسائی اور کم رگڑ کے ساتھ زیادہ موثر ہو جاتی ہے۔"
+        }
+      },
+      "notReplacing": "Umotu مرکزی بینکوں سے مقابلہ نہیں کر رہا۔ ہم فیٹ کرنسیوں کے لیے بہتر انفراسٹرکچر بنا رہے ہیں: کم رگڑ، عالمی رسائی، اور بہتر مارکیٹ کارکردگی اور لچک۔"
+    },
+    "building": {
+      "title": "ہم ایکو سسٹم بنا رہے ہیں",
+      "description": "یہ ایپس Umotu پر ممکنہ چیزوں کی نمائش کرتی ہیں۔ کچھ اب تیار ہیں، دیگر جلد آ رہی ہیں۔ دنیا بھر کے ڈویلپرز کو ہمارے پلیٹ فارم پر بنانے اور لانچ کرنے کی دعوت ہے۔",
+      "developerDocs": "ڈویلپر ڈاکس"
+    },
+    "categories": {
+      "payments": {
+        "name": "ادائیگیاں اور فنانس",
+        "apps": {
+          "sendMoney": {
+            "name": "پیسے بھیجیں",
+            "description": "UMT یا سٹیبل کوئن فوری طور پر دنیا میں کسی کو بھیجیں—بینکوں کی ضرورت نہیں۔",
+            "example": "خاندان کو بیرون ملک $20 سیکنڈز میں بھیجیں، دنوں نہیں۔ کوئی پوشیدہ فیس نہیں۔"
+          },
+          "billPay": {
+            "name": "بل ادا کریں",
+            "description": "یوٹیلیٹیز، فون، انٹرنیٹ وغیرہ براہ راست والٹ سے ادا کریں۔"
+          },
+          "savings": {
+            "name": "سیونگ سرکلز",
+            "description": "روایتی گھومتی سیونگ (تونٹین، چٹ فنڈ) سمارٹ کنٹریکٹس سے ٹرسٹ لیس بنائی گئی۔"
+          },
+          "microLoans": {
+            "name": "مائیکرو لونز",
+            "description": "تصدیق شدہ انسانیت اور ساکھ پر مبنی پیر ٹو پیر لینڈنگ۔"
+          }
+        }
+      },
+      "transport": {
+        "name": "ٹرانسپورٹ اور ڈلیوری",
+        "apps": {
+          "rideSharing": {
+            "name": "رائیڈ شیئرنگ",
+            "description": "کرپٹو میں ادا کی جانے والی رائیڈز بک کریں۔ ڈرائیورز زیادہ کماتے ہیں، رائیڈرز کم ادا کرتے ہیں—کوئی وسط والا 30% نہیں لیتا۔",
+            "example": "لاہور میں ٹیکسی رائیڈ ₨800۔ ڈرائیور کو ₨799.2 ملتے ہیں ₨560 کی بجائے۔"
+          },
+          "delivery": {
+            "name": "ڈلیوری",
+            "description": "کھانا، گروسری یا پیکج آرڈر کریں۔ کورئیرز سٹیبل ٹوکنز میں منصفانہ تنخواہ کماتے ہیں۔",
+            "example": "لنچ آرڈر کریں، لوکل سٹیبل کوئن میں ادا کریں، کورئیر فوری ادائیگی پاتا ہے۔"
+          },
+          "publicTransit": {
+            "name": "پبلک ٹرانزٹ",
+            "description": "بسز، میٹروز اور ٹرینز کے لیے ٹیپ سے ادا کریں۔ فیئر کارڈ خریدنے کی ضرورت نہیں۔"
+          }
+        }
+      },
+      "travel": {
+        "name": "ٹریول اور ہاسپیٹیلٹی",
+        "apps": {
+          "hotels": {
+            "name": "ہوٹلز اور سٹیز",
+            "description": "دنیا بھر میں رہائش بک کریں۔ ہوسٹس سٹیبل کوئن قبول کرتے ہیں، مہمان فیس بچاتے ہیں۔",
+            "example": "بالی میں کمرہ $40/رات۔ ہوسٹ کو $39.96 ملتے ہیں۔"
+          },
+          "flights": {
+            "name": "فلائٹس",
+            "description": "فلائٹس تلاش اور بک کریں۔ کرپٹو میں ادا کریں، UMT انعامات کمائیں۔"
+          },
+          "tours": {
+            "name": "لوکل ٹورز",
+            "description": "لوکل گائیڈز کے ساتھ تجربات بک کریں۔ ادائیگیاں براہ راست انہیں جاتی ہیں۔"
+          }
+        }
+      },
+      "commerce": {
+        "name": "شاپنگ اور کامرس",
+        "apps": {
+          "localMarket": {
+            "name": "لوکل مارکیٹ",
+            "description": "لوکل خرید و فروخت۔ QR پر مبنی ادائیگیاں سٹریٹ کامرس کو ہموار بناتی ہیں۔",
+            "example": "جکارتہ میں وینڈر USDC قبول کرتا ہے۔ گاہک ادا کرتا ہے، وینڈر فوری فنڈز دیکھتا ہے۔"
+          },
+          "ecommerce": {
+            "name": "ای کامرس",
+            "description": "دنیا بھر کے مرچنٹس سے آن لائن شاپنگ۔ کوئی کارڈ فیس، کوئی چارج بیک نہیں۔",
+            "example": "شینزن سے الیکٹرانکس خریدیں۔ سٹیبل کوئن میں ادا کریں، کریڈٹ کارڈ کے مقابلے 3% بچت۔"
+          },
+          "marketplace": {
+            "name": "پیر مارکیٹ پلیس",
+            "description": "اشیاء فروخت کے لیے لسٹ کریں، دوسروں سے خریدیں۔ ایسکرو دونوں فریقوں کی حفاظت کرتا ہے۔"
+          }
+        }
+      },
+      "services": {
+        "name": "سروسز اور ورک",
+        "apps": {
+          "remittance": {
+            "name": "ریمیٹنس",
+            "description": "گھر پیسے بھیجیں۔ وصول کنندہ لوکل کرنسی میں کیش آؤٹ کر سکتا ہے یا ڈیجیٹل رکھ سکتا ہے۔",
+            "example": "امریکہ سے فلپائنز $200 بھیجیں۔ وصول کنندہ ₱11,000+ پاتا ہے ₱10,400 کی بجائے۔"
+          },
+          "freelance": {
+            "name": "فری لانس ورک",
+            "description": "گگ ورک کے لیے فوری ادائیگی پائیں۔ بینک ٹرانسفر کے 30 دن انتظار نہیں۔"
+          },
+          "homeServices": {
+            "name": "ہوم سروسز",
+            "description": "پلمبرز، الیکٹریشنز، کلینرز ہائر کریں۔ کام مکمل ہونے پر ہی ادائیگی کریں۔"
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Umotu پر اپنا کاروبار بنائیں",
+      "subtitle": "بلٹ ان ادائیگیوں کے ساتھ ایپس لانچ کریں",
+      "description": "Umotu ایکو سسٹم میں ٹیپ کرنے والی ایپس بنائیں—لاکھوں تصدیق شدہ انسان روزانہ آمدنی کے ساتھ ٹرانزیکٹ کرنے کے لیے تیار۔ ادائیگی انٹیگریشن کی پریشانی نہیں۔",
+      "benefits": {
+        "noFees": "قریب صفر ادائیگی پروسیسنگ فیس—99.9% ریونیو رکھیں",
+        "verifiedUsers": "تمام صارفین تصدیق شدہ انسان—کوئی بوٹس یا فراڈ نہیں",
+        "globalReach": "پہلے دن سے 190+ ممالک میں صارفین تک رسائی",
+        "instantPayments": "فوری سیٹلمنٹس—30 دن ادائیگی تاخیر نہیں"
+      },
+      "exampleTitle": "یوز کیس",
+      "exampleText": "Umotu پر رائیڈ شیئرنگ ایپ روایتی پلیٹ فارمز کے 70% کے مقابلے 99.9% فیئر رکھتی ہے۔ ڈرائیورز زیادہ کماتے ہیں، رائیڈرز کم ادا کرتے ہیں۔",
+      "docsButton": "ڈاکس پڑھیں",
+      "buildButton": "بنाना شروع کریں"
+    },
+    "bank": {
+      "title": "کیا آپ بینک ہیں؟",
+      "subtitle": "Umotu پر سٹیبل کوئن جاری کریں",
+      "description": "لائسنس یافتہ مالی ادارے Umotu پر لوکل کرنسی سٹیبل کوئن جاری کر سکتے ہیں اور لاکھوں UBI صارفین کی بڑھتی معیشت میں ٹیپ کر سکتے ہیں۔",
+      "benefits": {
+        "reserves": "ریزرو پر ییلڈ کمائیں: بانڈز اور کم رسک اثاثوں میں سرمایہ کاری",
+        "mintRedeem": "منٹ/ریڈیم فیس چارج کریں: عام طور پر فیٹ ↔ سٹیبل کوئن کنورژن پر 0.1%",
+        "users": "لاکھوں روزانہ فعال UBI وصول کنندگان تک رسائی",
+        "global": "بارڈرز سے باہر فوری توسیع",
+        "custody": "آپ کے ریزرو، آپ کی کسٹڈی: بیکنگ اثاثوں پر مکمل کنٹرول"
+      },
+      "revenueModel": "جاری کنندگان کیسے کماتے ہیں",
+      "revenueNote": "Tether اور دیگر بڑے جاری کنندگان کی طرح، ریونیو ریزرو ییلڈ اور کنورژن فیس سے آتا ہے۔ روزانہ UBI وصول کرنے والے لاکھوں صارفین کے ساتھ منٹ/ریڈیم حجم کافی ہو سکتا ہے۔",
+      "futureNote": "پروٹوکول کی ترقی کے ساتھ جاری کنندگان کو مستقبل میں ٹرانزیکشن فیس کا حصہ بھی مل سکتا ہے۔",
+      "learnMore": "مزید جانیں",
+      "applyButton": "اب اپلائی کریں"
+    }
+  },
+  "news": {
+    "title": "خبریں اور اپ ڈیٹس",
+    "description": "Umotu ٹیم کی تازہ ترین اعلانات، ٹپس، اور سیکیورٹی الرٹس سے اپ ڈیٹ رہیں۔",
+    "empty": "ابھی کوئی خبر نہیں",
+    "unread": "نیا",
+    "unreadCount": "{{count}} نئی",
+    "markAsRead": "پڑھا ہوا مارک کریں",
+    "types": {
+      "announcement": "اعلان",
+      "tip": "ٹپ",
+      "security": "سیکیورٹی",
+      "airdrop": "ایئر ڈراپ",
+      "update": "اپ ڈیٹ"
+    }
+  },
+  "governance": {
+    "title": "گورننس",
+    "subtitle": "Umotu کا مستقبل تشکیل دیں",
+    "description": {
+      "title": "آپ کی آواز اہم ہے",
+      "body": "کمیونٹی پروپوزلز پر ووٹ دے کر Umotu کے مستقبل کو تشکیل دینے میں مدد کریں۔ Umotu فاؤنڈیشن یہ ووٹس آرگنائز کرتی ہے، لیکن کمیونٹی فیصلہ کرتی ہے۔"
+    },
+    "empty": "کوئی فعال پروپوزل نہیں",
+    "emptyHint": "نئی کمیونٹی فیصلوں کے لیے بعد میں چیک کریں۔",
+    "newPolls": "نیا",
+    "newPollsCount": "{{count}} نئی",
+    "vote": "ووٹ",
+    "votes": "ووٹس",
+    "endsIn": "{{time}} میں ختم",
+    "ended": "ختم ہو گیا",
+    "tapToVote": "ووٹ ڈالنے کے لیے اوپر آپشن ٹیپ کریں",
+    "submitting": "ووٹ جمع ہو رہا ہے...",
+    "alreadyVoted": {
+      "title": "پہلے ہی ووٹ دے چکے",
+      "message": "آپ اس پروپوزل میں پہلے ہی ووٹ دے چکے ہیں۔"
+    },
+    "confirm": {
+      "title": "ووٹ کی تصدیق",
+      "message": "ووٹ کے لیے",
+      "note": "یہ عمل واپس نہیں کیا جا سکتا۔",
+      "submit": "ووٹ جمع کریں"
+    },
+    "success": {
+      "title": "ووٹ جمع ہو گیا!",
+      "message": "کمیونٹی گورننس میں شرکت کے لیے شکریہ۔"
+    },
+    "error": {
+      "title": "ووٹ ناکام",
+      "message": "ووٹ جمع کرنے میں ناکامی۔ دوبارہ کوشش کریں۔"
+    }
+  },
+  "learn": {
+    "title": "سیکھیں",
+    "subtitle": "Umotu کے بارے میں سب کچھ",
+    "featured": "فیچرڈ",
+    "whatIs": {
+      "title": "Umotu کیا ہے؟",
+      "subtitle": "$10 روزانہ، ہر کوئی ہر جگہ",
+      "intro": "Umotu کا مقصد کسی کو بھی صرف سمارٹ فون سے $10/روز کمائی کا موقع دینا ہے۔ مہنگا ہارڈ ویئر، خصوصی مہارتیں، یا بارڈرز کی ضرورت نہیں۔",
+      "howDifferent": "یہ مختلف کیسے ہے؟",
+      "noMiddleman": "کوئی وسط والا نہیں: آپ براہ راست نیٹ ورک سے تعامل کرتے ہیں—بینک اکاؤنٹ کی ضرورت نہیں",
+      "globalAccess": "عالمی رسائی: انٹرنیٹ والے ہر جگہ کام کرتا ہے",
+      "youOwnIt": "آپ کا مالک ہے: آپ کا والٹ، آپ کی کلیدیں، آپ کا کنٹرول",
+      "vision": "ویژن",
+      "visionText": "اربوں لوگ پبلک لیجر کو ایماندار رکھنے میں مدد کر کے کما سکتے ہیں۔ Umotu پر فونز لائٹ ویٹ چیکس کرتے ہیں جو نیٹ ورک کو قابل اعتماد بناتے ہیں۔",
+      "nameOrigin": "نام کی ابتدا",
+      "nameOriginText": "Umotu Paʻumotu، ایک پولینیشن زبان سے متاثر ہے۔ ہم نام کا احترام سے استعمال کرتے ہیں تاکہ روزمرہ لوگوں کے لیے بنانے کی یاد دلائی جائے۔"
+    },
+    "earn": {
+      "title": "آپ کیسے کماتے ہیں",
+      "subtitle": "آپ کا فون کام کرتا ہے؛ آپ ادائیگی پاتے ہیں",
+      "intro": "آپ کا فون چھوٹے ٹاسکس کرتا ہے جو سب کے لیے مددگار ہیں—پھر آپ کو انعام ملتا ہے۔",
+      "steps": "تین سادہ سٹیپس",
+      "step1": "1) ثابت کریں کہ آپ انسان ہیں: تیز لائیو نیس چیک (اور وقتاً فوقتاً ریفریش) یقینی بناتا ہے کہ ہر شخص کا ایک اکاؤنٹ ہو۔",
+      "step2": "2) نیٹ ورک کی مدد کریں: آپ کا فون بیک گراؤنڈ میں ڈیٹا ایویلیبلٹی (DA) سیمپلنگ اور دیگر لائٹ ویٹ چیکس چلاتا ہے۔",
+      "step3": "3) روزانہ انعامات کمائیں: اس کام کے لیے آپ کو ادائیگی ملتی ہے، نیٹ ورک پالیسی کے مطابق ~$10/روز کا ہدف۔",
+      "localCurrency": "اپنی کرنسی میں ادائیگی",
+      "localCurrencyText": "پی آؤٹ ٹوکن منتخب کریں: لوکل کرنسی سٹیبل کوئن (دستیاب جہاں) یا UMT۔ رقوم ~$10 USD ویلیو کا ہدف رکھتی ہیں اور شرکت اور مارکیٹ حالات کے ساتھ ایڈجسٹ ہو سکتی ہیں۔"
+    },
+    "whereMoney": {
+      "title": "$10 کہاں سے آتے ہیں؟",
+      "subtitle": "آپ کماتے ہیں کیونکہ آپ کام کرتے ہیں",
+      "intro": "سب سے بڑا سوال۔ مختصر جواب: کیونکہ آپ نیٹ ورک کو درکار سروس فراہم کرتے ہیں۔",
+      "realWork": "آپ کا فون حقیقی کام کرتا ہے",
+      "realWork1": "ڈیٹا ایویلیبلٹی سیمپلنگ: آپ کا فون چیک کرتا ہے کہ بلاک ڈیٹا دستیاب اور درست ہے",
+      "realWork2": "انسانی شرکت: آپ ایک شخص ایک اکاؤنٹ ثابت کر کے بوٹس اور اسپام روکتے ہیں",
+      "realWork3": "یہ ٹاسکس سب کی حفاظت کرتے ہیں؛ ان کے بغیر نیٹ ورک کمزور ہو جاتا ہے",
+      "valueSource": "ویلیو کے دو ماخذ",
+      "utility": "یوٹیلٹی: تیز، کم فیس ادائیگیاں جو لوگ استعمال کرنا چاہتے ہیں",
+      "consensus": "کنسینسس: ویلیو جو بڑھتی ہے جتنا زیادہ لوگ قوانین کی تصدیق اور اتفاق کر سکتے ہیں",
+      "distribution": "انعامات کی تقسیم کیسے ہوتی ہے",
+      "newTokens": "نئے UMT ٹوکنز بنائے جاتے ہیں اور تصدیق شدہ فون شرکت کنندگان میں شیئر کیے جاتے ہیں (ویلیڈیٹرز کو نہیں)",
+      "fees": "ٹرانزیکشن فیس اور بلڈر بڈز کا حصہ فون sentinelز کو بلاکس فائنلائز کرنے کے لیے شیئر کیا جاتا ہے",
+      "treasury": "چھوٹا حصہ جاری دیکھ بھال اور سٹیبلٹی پروگرامز کے لیے",
+      "whyDifferent": "یہ مختلف کیوں ہے",
+      "btcProblem": "بٹ کوئن خصوصیائزڈ مائنرز کو انعام دیتا ہے (سرمایہ گنجلک)",
+      "ethProblem": "ایتھریم بڑے سٹیکرز کو انعام دیتا ہے (سرمایہ گنجلک)",
+      "umotuSolution": "Umotu روزمرہ فونز کو انعام دیتا ہے (شرکت کی عملی لاگت کم)",
+      "conclusion": "یہ گیو اوے نہیں: آپ شیئرڈ فنانشل انفراسٹرکچر کو ایماندار اور مفید رکھنے کے کام کی ادائیگی پاتے ہیں۔"
+    },
+    "security": {
+      "title": "والٹ سیکیورٹی",
+      "subtitle": "اپنے پیسوں کی حفاظت کریں",
+      "intro": "آپ کا والٹ ڈیجیٹل والٹ کی طرح ہے جس پر صرف آپ کا کنٹرول ہے۔",
+      "recovery": "آپ کے 12 الفاظ اور پرائیویٹ کی",
+      "recoveryText": "آپ کے 12 خفیہ الفاظ (ریکوری فریز) اور پرائیویٹ کی دونوں والٹ انلاک کرتے ہیں۔ ان میں سے کوئی بھی والا آپ کے فنڈز منتقل کر سکتا ہے۔",
+      "rules": "سنہری قوانین",
+      "rule1": "اپنے 12 الفاظ یا پرائیویٹ کی کبھی کسی کے ساتھ شیئر نہ کریں—Umotu کنٹریبیوٹرز سے بھی نہیں۔",
+      "rule2": "12 الفاظ کاغذ پر لکھیں اور آف لائن محفوظ رکھیں۔ سکرین شاٹس، فوٹوز، یا کلاؤڈ نوٹس میں نہ رکھیں۔",
+      "rule3": "اگر پرائیویٹ کی ایکسپورٹ کریں تو آف لائن رکھیں (کاغذ، ہارڈ ویئر، یا مکمل بھروسہ والا انکرپٹڈ مینیجر)۔",
+      "rule4": "اگر 12 الفاظ اور پرائیویٹ کی کھو جائیں تو کوئی والٹ بحال نہیں کر سکتا۔",
+      "warning": "اہم",
+      "warningText": "پرائیویٹ کی مکمل رسائی دیتی ہے۔ اسے ظاہر یا دوسری ایپس میں کاپی کرنے سے فنڈز خطرے میں پڑ سکتے ہیں۔ بڑی رقم کے لیے ہارڈ ویئر والٹ استعمال کریں۔",
+      "reveal": "پرائیویٹ کی ظاہر / ایکسپورٹ کریں",
+      "revealText": "والٹ سیٹنگز میں پرائیویٹ کی ظاہر یا ایکسپورٹ کر سکتے ہیں۔ ہم بائیو میٹرکس/پن مانگتے ہیں، چند سیکنڈز دکھاتے ہیں، اور کبھی اپ لوڈ نہیں کرتے۔ بڑی بیلنس کے لیے ہارڈ ویئر والٹ پر غور کریں۔",
+      "bestPractices": "بہترین پریکٹسز",
+      "best1": "فون پر اسکرین لاک اور بائیو میٹرکس فعال کریں۔",
+      "best2": "تازہ ترین سیکیورٹی فکسز کے لیے ایپ اپ ڈیٹ رکھیں۔",
+      "best3": "بڑی سیونگ کے لیے الگ والٹ استعمال کریں؛ روزانہ استعمال کے لیے فون پر تھوڑی رقم رکھیں۔",
+      "scamBannerTitle": "کوئی جائز شخص نہیں مانگے گا",
+      "scamBannerText": "اگر کوئی 12 الفاظ یا پرائیویٹ کی مانگے تو سکیم ہے۔"
+    },
+    "stablecoins": {
+      "title": "سٹیبل کوئن کو سمجھیں",
+      "subtitle": "ڈیجیٹل پیسہ جو لوکل کرنسی ٹریک کرتا ہے",
+      "intro": "سٹیبل کوئن ڈیجیٹل ٹوکنز ہیں جو عام پیسے (جیسے USD، ZAR، NGN) ٹریک کرنے کے لیے بنائے گئے ہیں۔",
+      "examples": "مثالیں",
+      "example1": "1 ZAR1 ≈ 1 جنوبی افریقی رینڈ",
+      "example2": "1 USD1 ≈ 1 امریکی ڈالر",
+      "example3": "1 NGN1 ≈ 1 نائیجیرین نائرا",
+      "backed": "پارٹنرز کی طرف سے جاری",
+      "backedText": "Umotu پر سٹیبل کوئن ریگولیٹڈ پارٹنرز کی طرف سے جاری کی جاتی ہیں اور ریزرو کے ساتھ 1:1 ویلیو رکھنے کے لیے بنائی گئی ہیں۔ جاری کنندگان پروف آف ریزرو اور ریڈمپشن ٹرمز پبلش کرتے ہیں۔",
+      "convert": "کیش میں تبدیل",
+      "convertText": "پارٹنر بینکوں/ایکسچینجز سے تبدیل کریں، یا جہاں قبول ہو براہ راست خرچ کریں۔"
+    },
+    "economics": {
+      "title": "UMT اکانومکس",
+      "subtitle": "کون کیا اور کیوں پاتا ہے",
+      "intro": "UMT کی کل سپلائی 100 بلین ٹوکنز ہے۔ اس کا زیادہ تر حصہ روزمرہ فون صارفین کو ادا کیا جاتا ہے جو نیٹ ورک کو ایماندار رکھنے میں مدد کرتے ہیں۔",
+      "supply": "سپلائی اور تقسیم",
+      "supplyBullets": [
+        "ٹوکن سپلائی کا بڑا حصہ وقت کے ساتھ فون شرکاء کے لیے مخصوص ہے اور ایمیشن کنٹرولر کے ذریعے جاری کیا جاتا ہے۔ ایمیشن کنٹرولر روزانہ اجراء کو بقیہ سپلائی کے 0.01% سے زیادہ نہیں رکھتا، جو طویل مدتی پائیداری کو یقینی بناتا ہے۔ اس شیڈول کے تحت، 10 سال بعد کل سپلائی کا تقریباً 68% اور 50 سال بعد تقریباً 15% باقی رہتا ہے۔",
+        "سپلائی کا ایک چھوٹا حصہ مخصوص مقاصد کے لیے لانچ پر بنایا جاتا ہے، جس میں ابتدائی صارف ایئرڈراپ، کمیونٹی سیل، فاؤنڈیشن مختص اور ایمرجنسی ریزرو وغیرہ شامل ہیں۔"
+      ],
+      "premine": "لانچ مختص (عارضی، مین نیٹ لانچ پر تبدیلی کے تابع)",
+      "premineTable": [
+        {
+          "label": "صارف ایئر ڈراپ",
+          "value": "1.0%"
+        },
+        {
+          "label": "کمیونٹی سیل",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu فاؤنڈیشن (ٹائم لاکڈ)",
+          "value": "0.2%"
+        },
+        {
+          "label": "ایمرجنسی فنڈ (گورنڈ)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "فونز کے لیے روزانہ انعامات",
+      "emissionsText": "ہر دن نیٹ ورک باقی emissions پول کا زیادہ سے زیادہ 0.01% emit کر سکتا ہے۔ ہم اسے بجٹ کرتے ہیں تاکہ تصدیق شدہ فونز ~$10/روز کا ہدف رکھیں، شرکت اور مارکیٹ حالات کے ساتھ ایڈجسٹ۔",
+      "fees": "فیس اور Sentinelز",
+      "feesText": "sentinel ہیلپرز (آپشنل، ایڈوانسڈ) ٹرانزیکشن فیس اور بلڈر بڈز کا حصہ کماتے ہیں۔ یہ روزانہ emissions سے الگ ہے۔",
+      "transparency": "شفافیت",
+      "transparencyText": "ویسٹنگ شیڈیولز اور والٹس پبلک ہیں۔ روزانہ emission کیپس اور حقیقی پے آؤٹس ایپ میں پوسٹ کیے جاتے ہیں۔",
+      "disclaimerTitle": "سادہ زبان میں یاد دہانی",
+      "disclaimerText": "یہ سرمایہ کاری مشورہ نہیں۔ انعامات نیٹ ورک پالیسی اور شرکت پر منحصر ہیں۔ ایپ فکسڈ انکم کی ضمانت نہیں دیتی۔"
+    },
+    "contribute": {
+      "title": "کیسے کنٹریبیوٹ کریں",
+      "subtitle": "Umotu بنانے میں مدد کریں",
+      "intro": "Umotu اوپن سورس اور کمیونٹی ڈریون ہے۔ ہر کوئی مدد کر سکتا ہے—چاہے کوڈنگ، ترجمہ، یا فیڈ بیک۔",
+      "waysTitle": "کنٹریبیوشن کے طریقے",
+      "code": {
+        "title": "کوڈ بہتر بنائیں",
+        "text": "بگز فکس کریں، فیچرز شامل کریں، ٹیسٹس لکھیں، یا پل ریکویسٹس ریویو کریں۔ ایپ، سمارٹ کنٹریکٹس، اور بیک اینڈ سروسز کے لیے GitHub ریپوز چیک کریں۔",
+        "cta": "GitHub دیکھیں",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "تراجم میں مدد کریں",
+        "text": "ایپ کو اپنی زبان میں قدرتی بنائیں۔ i18n لوکیل فائلیں ایڈٹ کریں اور ہر اسکرین ٹیسٹ کریں۔ آپ کی ایڈٹس لاکھوں کی مدد کریں گی۔",
+        "cta": "ترجمہ گائیڈ",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "BIP-39 زبانوں کو توسیع دیں",
+        "text": "نئی یا بہتر ورڈ لسٹس پروپوز کریں تاکہ زیادہ لوگ اپنا 12 الفاظ ریکوری فریز اپنی مادری زبان میں دیکھ سکیں۔",
+        "cta": "BIP-39 دیکھیں",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "گورننس میں شامل ہوں",
+        "text": "پروپوزلز پڑھیں، کھل کر بحث کریں، اور ایپ میں ووٹ دیں۔ آپ کی آواز نیٹ ورک پیرامیٹرز اور گرانٹ الوکیشنز گائیڈ کرتی ہے۔",
+        "cta": "گورننس کھولیں",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "بات پھیلائیں",
+        "text": "دوستوں کو بتائیں، ٹیوٹوریلز لکھیں، شارٹس پبلش کریں، سوالات کے جواب دیں۔ مضبوط کمیونٹی کا مطلب سب کے لیے مضبوط نیٹ ورک۔",
+        "cta": "Umotu شیئر کریں",
+        "url": "https://umotu.com"
+      },
+      "note": "تمام کنٹریبیوشنز رضاکارانہ ہیں۔ گرانٹ پروپوزل میں مخصوص نہ ہو تو کوئی رسمی ملازمت یا کمپنسیشن نہیں۔"
+    },
+    "decentralization": {
+      "title": "ڈی سینٹرلائزیشن کیوں",
+      "subtitle": "کوئی سنگل پوائنٹ آف کنٹرول نہیں",
+      "intro": "ڈی سینٹرلائزیشن کا مطلب کوئی کمپنی یا حکومت نیٹ ورک بند یا فنڈز ضبط نہیں کر سکتی۔",
+      "benefits": "آپ کے لیے فوائد",
+      "benefit1": "ہمیشہ آن: 24/7 دستیاب",
+      "benefit2": "کم فیس: 3–5% کارڈ فیس کی بجائے چھوٹی نیٹ ورک فیس",
+      "benefit3": "کوئی بارڈرز نہیں: عالمی ویلیو بھیجیں",
+      "benefit4": "سینسرشپ ریزسٹنٹ: آپ کی کلیدیں، آپ کے پیسے",
+      "benefit5": "شفاف: کوئی بھی سسٹم کے کام کی تصدیق کر سکتا ہے",
+      "howWorks": "یہ کیسے کام کرتا ہے",
+      "howWorksText": "ویلیڈیٹرز ہر ~2 سیکنڈ میں بلاکس پروپوز کرتے ہیں۔ فونز (جیسے آپ کا) لائٹ ویٹ چیکس سے تصدیق اور فائنلائز کرتے ہیں۔ بہت سے چھوٹے کنٹریبیوشنز مضبوط سیکیورٹی بناتے ہیں۔"
+    },
+    "noCompany": {
+      "title": "کوئی کمپنی نہیں، کوئی کسٹمرز نہیں",
+      "subtitle": "ماڈل کو سمجھیں",
+      "intro": "پروٹوکول کنٹرول کرنے والی 'Umotu, Inc.' نہیں۔ Umotu اوپن قوانین کا سیٹ ہے جو کوئی بھی استعمال کر سکتا ہے۔",
+      "notCompany": "Umotu کیا نہیں ہے",
+      "notCompany1": "کسٹمر اکاؤنٹس والی کمپنی نہیں",
+      "notCompany2": "بینک یا منی ٹرانسمیٹر نہیں",
+      "notCompany3": "کوئی سنگل انٹیٹی کنٹرول نہیں کرتی",
+      "notCompany4": "ٹرانزیکشنز ریورس نہیں کر سکتی",
+      "whatIs": "Umotu کیا ہے",
+      "whatIs1": "پروٹوکول: ای میل یا ویب کی طرح—اوپن، انٹرآپریبل قوانین",
+      "whatIs2": "فون فرسٹ: روزمرہ سمارٹ فونز کی مدد سے چلتا ہے",
+      "whatIs3": "کمیونٹی ڈریون: آپ شرکت کنندہ ہیں، کسٹمر نہیں",
+      "foundation": "Umotu فاؤنڈیشن",
+      "foundationIntro": "ایکو سسٹم سپورٹ کرنے والا نان پرافٹ (ریفریس ایپس، ڈاکس، کمیونٹی پروگرامز) لیکن پروٹوکول کنٹرول نہیں کرتی۔",
+      "foundationTask1": "موبائل ایپ اور ایکسپلورر ریفریس امپلیمنٹیشنز کے طور پر مینٹین کرتی ہے",
+      "foundationTask2": "کچھ پبلک انفراسٹرکچر چلاتی ہے (دوسرے اپنا چلا سکتے ہیں)",
+      "foundationTask3": "کمیونٹی گورننس کوآرڈینیٹ کرتی ہے (خبریں، ووٹس)",
+      "foundationTask4": "سپورٹڈ سٹیبل کوئن ریویو اور لسٹ کرتی ہے",
+      "foundationTask5": "ایجوکیشن اور سیفٹی گائیڈز پبلش کرتی ہے",
+      "foundationNote": "فونڈیشن آپ کے والٹ تک رسائی یا ٹرانزیکشنز ریورس نہیں کر سکتی۔"
+    },
+    "scamPrevention": {
+      "title": "سکیمز سے بچیں",
+      "subtitle": "اپنی حفاظت کریں",
+      "intro": "Umotu فاؤنڈیشن کبھی آپ کو DM نہیں کرے گی۔ 'سپورٹ' بننے والا کوئی بھی سکیمر ہے۔",
+      "redFlags": "ریڈ فلیگز",
+      "redFlag1": "کسٹمر سپورٹ بننے والا کوئی",
+      "redFlag2": "اکاؤنٹ 'ویریفائی' یا 'اپ گریڈ' کرنے کے لنکس",
+      "redFlag3": "12 الفاظ فریز یا پرائیویٹ کی کی درخواست",
+      "redFlag4": "فنڈز بھیجنے پر بونس ٹوکنز کا وعدہ",
+      "redFlag5": "انعامات 'ایکٹیویٹ' کرنے کے لیے ایپس یا سائٹس",
+      "truth": "حقیقت",
+      "truth1": "کوئی کسٹمر سپورٹ والٹ ری سیٹ نہیں کر سکتی",
+      "truth2": "تمام آفیشل اپ ڈیٹس اس ایپ میں آتے ہیں",
+      "truth3": "Umotu سے کوئی ریکوری فریز یا پرائیویٹ کی نہیں مانگے گا",
+      "truth4": "یہ ایپ صرف آفیشل ایپل سٹور یا گوگل پلے سے ڈاؤن لوڈ کریں",
+      "whatToDo": "اگر کوئی رابطہ کرے",
+      "action1": "جواب نہ دیں",
+      "action2": "لنکس پر کلک نہ کریں",
+      "action3": "معلومات شیئر نہ کریں",
+      "action4": "بلاک اور رپورٹ کریں"
+    },
+    "airdrop": {
+      "title": "ٹیسٹ نیٹ ایئر ڈراپ",
+      "subtitle": "ابتدائی صارفین کو تسلیم کیا جاتا ہے",
+      "intro": "آپ ابتدائی ہیں! Umotu ٹیسٹ نیٹ پر ہے۔ فعال ٹیسٹ نیٹ شرکت کنندگان کو مین نیٹ لانچ پر الوکیشن مل سکتی ہے۔",
+      "howToQualify": "کوالیفائی کیسے کریں",
+      "step1": "ایپ میں والٹ بنائیں",
+      "step2": "انسان کی تصدیق (Proof of Human) مکمل کریں",
+      "step3": "ٹیسٹ نیٹ کے دوران ایپ باقاعدگی سے استعمال کریں",
+      "whenAirdrop": "ایئر ڈراپ کب؟",
+      "whyTestnet": "ٹیسٹ نیٹ ضروری ہے: صارفین والٹ سیکیورٹی سیکھتے ہیں، اور سسٹم سیکیورٹی، مضبوطی، اور کارکردگی کے لیے ٹیسٹ ہوتا ہے مین نیٹ سے پہلے۔",
+      "timeline": "مین نیٹ Q1 یا Q2 2026 میں متوقع ہے۔ ایئر ڈراپ مین نیٹ لانچ کے آس پاس ہو گا۔",
+      "howMuch": "کتنے ملیں گے؟",
+      "totalPool": "کل ایئر ڈراپ پول: 1,000,000,000 UMT ٹوکنز۔ آپ کا حصہ کل شرکت کنندگان اور لانچ پر UMT قیمت پر منحصر ہے۔",
+      "scenario2": "1M صارفین: ~1,000 UMT فی صارف، متوقع قیمت ~$1، ایئر ڈراپ ویلیو ~$1,000",
+      "scenario3": "10M صارفین: ~100 UMT فی صارف، متوقع قیمت ~$20، ایئر ڈراپ ویلیو ~$2,000",
+      "scenario4": "100M صارفین: ~10 UMT فی صارف، متوقع قیمت ~$300، ایئر ڈراپ ویلیو ~$3,000",
+      "disclaimer": "یہ صرف پروجیکشنز ہیں، ضمانتیں نہیں۔ حقیقی ویلیوز مارکٹ حالات اور پروگرام قوانین پر منحصر ہیں۔",
+      "whatYouGet": "آپ کو کیا ملے گا",
+      "reward": "مین نیٹ پر، آپ کا ٹیسٹ نیٹ والٹ شرکت اور پروگرام قوانین کے مطابق حقیقی ٹوکنز حاصل کر سکتا ہے۔ ابتدائی اور زیادہ فعال صارفین کو ترجیح۔",
+      "note": "نوٹ: ٹیسٹ نیٹ ٹوکنز کی کوئی ویلیو نہیں۔ کوئی بھی مین نیٹ الوکیشن لانچ پر پروگرام پالیسی سے طے ہو گی۔ ایئر ڈراپ کی تمام خبریں صرف اس ایپ میں پبلش ہوں گی۔"
+    },
+    "gettingStarted": {
+      "title": "شروعات",
+      "subtitle": "آپ کے پہلے پانچ منٹ",
+      "intro": "یہاں آپ کا فوری سیٹ اپ ہے:",
+      "checklist": "سیٹ اپ چیک لسٹ",
+      "check1": "1) اپنی زبان منتخب کریں (ہو گیا!)",
+      "check2": "2) والٹ بنائیں یا امپورٹ کریں",
+      "check3": "3) اہم: 12 الفاظ کاغذ پر لکھیں",
+      "check4": "4) انسان کی تصدیق مکمل کریں (تیز اسکین)",
+      "check5": "5) روزانہ انعامات کمائی کے لیے ایپ چلنے دیں",
+      "tips": "پرو ٹپس",
+      "tip1": "بیک گراؤنڈ رسائی کی اجازت دیں تاکہ چیکس چل سکیں",
+      "tip2": "انعامات دیکھنے کے لیے روزانہ چیک کریں",
+      "tip3": "دوستوں کو مدعو کریں—زیادہ صارفین نیٹ ورک کو مضبوط بناتے ہیں"
+    }
+  },
+  "common": {
+    "loading": "لوڈ ہو رہا ہے...",
+    "error": "خرابی",
+    "retry": "دوبارہ کوشش",
+    "cancel": "منسوخ",
+    "save": "محفوظ کریں",
+    "done": "ہو گیا",
+    "continue": "جاری رکھیں",
+    "confirm": "تصدیق کریں",
+    "yes": "ہاں",
+    "no": "نہیں",
+    "ok": "ٹھیک ہے",
+    "success": "کامیابی",
+    "failed": "ناکام",
+    "copied": "کاپی ہو گیا!",
+    "pullToRefresh": "ریفریش کے لیے کھینچیں",
+    "notSet": "سیٹ نہیں"
+  },
+  "errors": {
+    "networkError": "نیٹ ورک خرابی۔ اپنا کنکشن چیک کریں۔",
+    "genericError": "کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔",
+    "walletNotFound": "والٹ نہیں ملا",
+    "transactionFailed": "ٹرانزیکشن ناکام",
+    "invalidInput": "غلط ان پٹ"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Umotu میں خوش آمدید",
+  "onboard_wallet_title": "اپنا والٹ سیٹ اپ کریں",
+  "onboard_wallet_explain": "انعامات وصول کرنے کے لیے والٹ بنائیں یا امپورٹ کریں۔",
+  "wallet_create": "نیا والٹ بنائیں",
+  "wallet_import": "والٹ امپورٹ کریں",
+  "wallet_import_explain": "اپنا 12 الفاظ ریکوری فریز درج کریں",
+  "wallet_created": "والٹ تیار",
+  "wallet_save": "ڈیوائس پر محفوظ کریں",
+  "wallet_backup_title": "اپنا ریکوری فریز بیک اپ کریں",
+  "wallet_backup_explain": "یہ 12 الفاظ ترتیب سے لکھیں۔ اگر ڈیوائس کھو جائے تو والٹ بحال کرنے کا یہ واحد طریقہ ہے۔",
+  "wallet_backup_warning": "اپنا ریکوری فریز کبھی شیئر نہ کریں۔ ان الفاظ والا کوئی آپ کے فنڈز تک رسائی حاصل کر سکتا ہے۔",
+  "wallet_backup_confirm": "میں نے اپنا ریکوری فریز لکھ لیا ہے",
+  "wallet_backup_done": "میں نے اپنا فریز محفوظ کر لیا",
+  "wallet_save_first": "براہ مہربانی پہلے اپنا ریکوری فریز محفوظ کریں",
+  "poh_title": "انسان کی تصدیق",
+  "continue": "جاری رکھیں",
+  "or": "یا",
+  "seedReveal": {
+    "title": "ریکوری فریز",
+    "intro": "ریکوری فریز ڈیوائس رسائی کھونے پر والٹ بحال کرنے کا واحد طریقہ ہے۔ لکھ کر آف لائن محفوظ رکھیں۔",
+    "displayLanguage": "{{language}} میں دکھایا جا رہا ہے",
+    "hiddenMsg": "سیکیورٹی کے لیے آپ کا فریز چھپا ہے۔ ظاہر کرنے کے لیے نیچے ٹیپ کریں۔",
+    "showButton": "فریز ظاہر کریں",
+    "noScreenshot": "ریکوری فریز کا سکرین شاٹ کبھی نہ لیں۔",
+    "checkTitle": "اپنے بیک اپ کی تصدیق کریں",
+    "checkPrompt": "درست لکھنے کی تصدیق کے لیے نیچے الفاظ درج کریں:",
+    "checkWordN": "لفظ #{{n}}",
+    "checkIncorrect": "ایک یا زیادہ الفاظ غلط ہیں۔ اپنا بیک اپ چیک کریں۔",
+    "ackWritten": "میں نے اپنا ریکوری فریز لکھ لیا ہے",
+    "ackCannotRecover": "میں سمجھتا ہوں کہ Umotu میرا والٹ بحال نہیں کر سکتا",
+    "cancel": "منسوخ",
+    "continue": "محفوظ کر لیا"
+  }
+}

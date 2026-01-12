@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "$10 kwa siku, kila mtu popote pale"
+  },
+  "navigation": {
+    "home": "Nyumbani",
+    "wallet": "Pochi",
+    "miniapps": "MiniApps",
+    "back": "Rudi Nyuma",
+    "scan": "Changanua",
+    "settings": "Mipangilio",
+    "close": "Funga"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Binadamu Walioidhinishwa",
+      "umtPrice": "Bei ya UMT"
+    },
+    "quickActions": {
+      "news": "Habari",
+      "vote": "Utawala",
+      "governance": "Utawala",
+      "learn": "Jifunze",
+      "network": "Mtandao"
+    },
+    "setupProgress": {
+      "title": "Maendeleo ya Usanidi",
+      "steps": {
+        "language": "Lugha",
+        "wallet": "Pochi",
+        "verifyHuman": "Thibitisha Binadamu",
+        "complete": "Kamilisha"
+      },
+      "continue": "Endelea",
+      "changeChoice": "Badilisha chaguo",
+      "requiresLanguage": "Chagua lugha kwanza",
+      "requiresWallet": "Unda pochi kwanza"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Zawadi za Kila Siku",
+      "totalEarned": "Jumla Iliyopatikana",
+      "lastClaimed": "Mara ya Mwisho Kudaiwa",
+      "never": "Kamwe",
+      "configure": "Sanidi",
+      "loading": "Inapakia mapato...",
+      "noWallet": "Hakuna pochi",
+      "autoClaim": {
+        "label": "Dai-otomatiki:",
+        "active": "Inafanya kazi",
+        "setupNow": "Sanidi sasa",
+        "expired": "Muda umeisha",
+        "tapToSetup": "Gusa ili kuwezesha zawadi za kila siku otomatiki"
+      }
+    },
+    "sentinel": {
+      "title": "Mapato ya Sentinel",
+      "manage": "Dhibiti",
+      "loading": "Inapakia...",
+      "status": "Hali",
+      "statuses": {
+        "notBonded": "Haijafungwa",
+        "bonded": "Imefungwa",
+        "unbonding": "Inafungua"
+      },
+      "claimable": "Inayoweza Kudaiwa",
+      "accruing": "Inakusanywa",
+      "bonded": "Imefungwa"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Zawadi za Kila Siku Otomatiki",
+      "description": "Wezesha <bold>dai-otomatiki</bold> ili kupokea zawadi yako ya $10 ya kila siku ya UBI kiotomatiki—hakuna kudai kwa mkono inayohitajika!",
+      "benefits": {
+        "midnight": "Hudai saa sita usiku wa manane katika eneo lako la saa",
+        "lowerFees": "Ada za gas chini kwa 80% (zinagawanywa na watumiaji wengine)",
+        "disable": "Unaweza kuizima wakati wowote katika Mipangilio"
+      },
+      "notice": "Utasaini ujumbe wa idhini ya mara moja ambao unaruhusu relay yetu kudai kwa niaba yako. Hakuna funguo za faragha zinazoshirikiwa.",
+      "maybeLater": "Labda Baadaye",
+      "enableNow": "Wezesha Sasa"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Mipangilio ya Dai-Otomatiki",
+      "description": "Dai zawadi zako za kila siku kiotomatiki.",
+      "checking": "Inachunguza hali...",
+      "status": "Hali",
+      "enabled": "Imewezeshwa",
+      "disabled": "Imezimwa",
+      "lastClaimed": "Mara ya Mwisho Kudaiwa",
+      "neverClaimed": "Kamwe",
+      "nextClaim": "Dai Inayofuata",
+      "expiresAt": "Muda Unaisha Wakati",
+      "timezone": "Eneo la Saa",
+      "preferredHour": "Saa Inayopendelewa",
+      "preferredHourHint": "Chagua wakati dai-otomatiki inapaswa kufanya kazi",
+      "enableButton": "Wezesha Dai-Otomatiki",
+      "disableButton": "Zima Dai-Otomatiki",
+      "enabling": "Inawezesha...",
+      "disabling": "Inazima...",
+      "enableSuccess": "Dai-otomatiki imewezeshwa!",
+      "enableError": "Imeshindwa kuwezesha",
+      "disableSuccess": "Dai-otomatiki imezimwa",
+      "disableError": "Imeshindwa kuzima",
+      "updateButton": "Sasisha Mipangilio",
+      "updating": "Inasasisha..."
+    },
+    "manual": {
+      "title": "Dai la Mkono",
+      "description": "Ikiwa unahitaji fedha mapema, dai zawadi inayofuata inayopatikana sasa. Madai ya mkono hutumia gesi ya pochi yako. Dai-otomatiki ni nafuu zaidi ukisubiri. Ikiwa pochi yako haina fedha, wezesha dai-otomatiki au ongeza gesi asili kabla ya kudai kwa mkono.",
+      "dayLabel": "Siku ya zawadi",
+      "claimButton": "Dai Sasa",
+      "claiming": "Inadai...",
+      "success": "Dai limetumwa",
+      "successWithId": "Dai limetumwa (id: {{id}})",
+      "error": "Imeshindwa kudai",
+      "noProof": "Uthibitisho wa zawadi haujachapishwa bado. Jaribu tena baada ya picha ya leo kuwa hai.",
+      "unauthorized": "Idhini ya relayer imeshindwa. Tafadhali jaribu tena au wasiliana na msaada.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "Siku za zawadi zinazopatikana: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "Upeo: {{start}} hadi {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} zaidi baada ya kundi hili",
+      "batchSuccess": "Siku {{count}} zimedaiwa kwa mafanikio",
+      "claimingProgress": "Inadai {{claimed}}/{{total}}...",
+      "claimAllButton": "Dai siku zote {{count}}"
+    },
+    "timezone": {
+      "title": "Chagua Eneo la Saa",
+      "search": "Tafuta eneo la saa...",
+      "current": "Chaguo la Sasa",
+      "searchResults": "Matokeo ya Utafutaji",
+      "noResults": "Hakuna matokeo yaliyopatikana",
+      "detected": "Imegunduliwa",
+      "popular": "Eneo za Saa Maarufu",
+      "regions": {
+        "Americas": "Amerika",
+        "Europe": "Ulaya",
+        "Asia": "Asia",
+        "Africa": "Afrika",
+        "Oceania": "Oceania"
+      }
+    },
+    "payout": {
+      "title": "Mapendeleo ya Malipo",
+      "description": "Chagua sarafu unayopendelea ya malipo.",
+      "current": "Ya Sasa",
+      "saved": "Imehifadhiwa",
+      "saveError": "Hitilafu ya kuhifadhi",
+      "showMore": "Onyesha Zaidi ({{count}})",
+      "showLess": "Onyesha Kidogo",
+      "native": "Tokeni Asilia",
+      "stablecoin": "Stablecoin",
+      "popular": "Maarufu",
+      "allCurrencies": "Sarafu Zote"
+    }
+  },
+  "wallet": {
+    "title": "Pochi",
+    "testnetNotice": "Tokeni za testnet hazina thamani halisi",
+    "totalBalance": "Salio Jumla",
+    "balance": "Salio",
+    "address": "Anwani",
+    "copyAddress": "Nakili Anwani",
+    "addressCopied": "Anwani imenakiliwa",
+    "receive": "Pokea",
+    "send": "Tuma",
+    "swap": "Badilisha",
+    "swapComingSoon": "Badilisha inakuja hivi karibuni",
+    "history": "Historia",
+    "tokens": "Tokeni",
+    "collectibles": "Vikolezo",
+    "noTokens": "Hakuna tokeni zilizosanidiwa",
+    "nativeToken": "Tokeni Asilia",
+    "loading": "Inapakia...",
+    "refreshing": "Inasasisha...",
+    "balancesUpdated": "Salio zimesasishwa",
+    "menu": {
+      "manageTokens": "Dhibiti Tokeni",
+      "addressBook": "Kitabu cha Anwani",
+      "walletSettings": "Mipangilio ya Pochi",
+      "showBalances": "Onyesha Salio",
+      "hideBalances": "Ficha Salio",
+      "showZeroTokens": "Onyesha Tokeni za Zero",
+      "hideZeroTokens": "Ficha Tokeni za Zero",
+      "refresh": "Sasisha"
+    },
+    "manageTokens": {
+      "title": "Dhibiti Tokeni",
+      "info": "Ongeza tokeni za ERC-20 maalum. Tokeni za mfumo zimejumuishwa kwa chaguo-msingi.",
+      "addToken": "Ongeza Tokeni",
+      "adding": "Inaongeza...",
+      "contractAddress": "Anwani ya mkataba wa tokeni (0x...)",
+      "autoFetch": "Alama na desimali hutolewa kiotomatiki",
+      "customTokens": "Tokeni Maalum",
+      "noCustomTokens": "Hakuna tokeni maalum zilizoongezwa bado.",
+      "addUsingForm": "Ongeza tokeni kwa kutumia fomu hapo juu.",
+      "systemToken": "Hii tokeni ni tokeni ya mfumo na tayari imejumuishwa.",
+      "fetchingMetadata": "Inatoa metadata ya tokeni...",
+      "addedSuccess": "Tokeni imeongezwa kwa ufanisi",
+      "enterValidAddress": "Ingiza anwani sahihi ya tokeni",
+      "save": "Hifadhi"
+    },
+    "addressBook": {
+      "title": "Kitabu cha Anwani",
+      "addContact": "Ongeza Anwani",
+      "nameLabel": "Jina au lebo",
+      "walletAddress": "Anwani ya pochi (0x...)",
+      "savedContacts": "Anwani Zilizohifadhiwa",
+      "noContacts": "Hakuna anwani zilizohifadhiwa bado.",
+      "addForQuickSending": "Ongeza anwani kwa kutuma haraka.",
+      "enterValidAddress": "Ingiza anwani sahihi",
+      "addLabel": "Ongeza lebo",
+      "save": "Hifadhi"
+    },
+    "settings": {
+      "title": "Mipangilio ya Pochi",
+      "export": {
+        "title": "Hamisha Pochi",
+        "description": "Kamwe usishiriki maneno yako ya kurejesha au funguo za faragha. Yaihifadhi salama nje ya mtandao.",
+        "recoveryPhrase": "Maneno ya Kurejesha",
+        "recoveryPhraseNotAvailable": "Maneno ya kurejesha hayapatikani (imeingizwa kupitia funguo za faragha)",
+        "privateKey": "Funguo za Faragha",
+        "privateKeyWarning": "Funguo za Faragha (iwe siri!)",
+        "showPhrase": "Onyesha Maneno ya Kurejesha",
+        "showKey": "Onyesha Funguo za Faragha",
+        "warning": "Kamwe usishiriki maneno yako ya kurejesha au funguo za faragha na mtu yeyote.",
+        "copy": "Nakili",
+        "copied": "Imenakiliwa!",
+        "hide": "Ficha",
+        "clipboardWarning": "Clipboard inaweza kusomwa na programu zingine. Itafutwa kiotomatiki baada ya sekunde 30.",
+        "verifyForKey": "Thibitisha ili Kuonyesha Funguo za Faragha",
+        "verifyForSeed": "Thibitisha ili Kuonyesha Maneno ya Kurejesha",
+        "verifyDescription": "Ingiza nenosiri lako au PIN ili kuonyesha maelezo nyeti ya pochi."
+      },
+      "import": {
+        "title": "Ingiza Pochi",
+        "description": "Kuingiza kunabadilisha pochi ya sasa. Hakikisha umehifadhi nakala ya ile iliyopo kwanza. Tafadhali kumbuka utahitaji kuthibitisha hali ya PoH baada ya kuingiza.",
+        "byPhrase": "Maneno ya Kurejesha",
+        "byPrivateKey": "Funguo za Faragha",
+        "phrasePlaceholder": "Ingiza maneno 12 au 24 ya kurejesha…",
+        "keyPlaceholder": "Ingiza funguo za faragha 0x…",
+        "importButton": "Ingiza Pochi",
+        "importing": "Inaingiza...",
+        "success": "Pochi imeagizwa kwa ufanisi!"
+      },
+      "dangerZone": {
+        "title": "Eneo Hatari",
+        "description": "Hatua hizi haziwezi kubatilishwa. Hakikisha umehifadhi nakala ya pochi yako.",
+        "forgetWallet": "Sahau Pochi",
+        "forgetDescription": "Ondoa pochi kutoka kifaa hiki. Hakikisha umehifadhi maneno yako ya kurejesha.",
+        "confirmTitle": "Sahau Pochi?",
+        "confirmMessage": "Hii itaondoa pochi yako kutoka kifaa hiki. Hakikisha umehifadhi maneno yako ya kurejesha kwanza.",
+        "cancel": "Ghairi",
+        "confirm": "Sahau Pochi",
+        "walletForgotten": "Pochi imesahaulika",
+        "unableToForget": "Haiwezi kusahau pochi",
+        "resetWallet": "Weka Upya Pochi",
+        "resetDescription": "Futa kabisa data zote za pochi na uanze upya."
+      },
+      "authPrompt": "Thibitisha ili kuonyesha funguo za faragha"
+    }
+  },
+  "reset": {
+    "title": "Weka Upya Pochi",
+    "dangerTitle": "Hatua hii haiwezi kubatilishwa!",
+    "warning1": "Kuweka upya pochi kutafuta kabisa:",
+    "bullet1": "Pochi yako na funguo za faragha",
+    "bullet2": "Maneno yako ya kurejesha",
+    "bullet3": "Mipangilio na mapendeleo yote ya programu",
+    "bullet4": "Historia ya miamala",
+    "recoveryNote": "Ikiwa una maneno yako 12 ya kurejesha, unaweza kurejesha pochi yako baada ya kuweka upya.",
+    "continueButton": "Nimeelewa, Endelea",
+    "confirmTitle": "Thibitisha Kuweka Upya",
+    "confirmDescription": "Andika \"RESET\" hapa chini ili kuthibitisha unataka kufuta data zote za pochi.",
+    "placeholder": "Andika RESET",
+    "typeMismatch": "Tafadhali andika RESET ili kuthibitisha",
+    "resetButton": "Weka Upya Pochi Milele",
+    "resettingTitle": "Inaweka upya...",
+    "resettingDescription": "Inafuta data zote za pochi. Tafadhali subiri...",
+    "completeTitle": "Kuweka Upya Kumekamilika",
+    "completeDescription": "Pochi yako imewekwa upya. Sasa unaweza kusanidi pochi mpya au kuingiza ile iliyopo.",
+    "startFresh": "Anza Mpya",
+    "error": "Imeshindwa kuweka upya pochi. Tafadhali jaribu tena."
+  },
+  "export": {
+    "verifyTitle": "Thibitisha Utambulisho",
+    "verifyDescription": "Ingiza nenosiri lako ili kuhamisha pochi yako.",
+    "verify": "Thibitisha",
+    "verificationFailed": "Uthibitishaji umeshindwa",
+    "passphraseTitle": "Weka Nenosiri la Kuhamisha",
+    "passphraseDescription": "Chagua nenosiri imara ili kusimba nakala rudufu yako. Utahitaji nenosiri hili ili kuingiza pochi baadaye.",
+    "enterPassphrase": "Ingiza nenosiri",
+    "passphraseTooWeak": "Nenosiri ni dhaifu sana. Tumia angalau herufi 8.",
+    "includeSeed": "Jumuisha Maneno ya Kurejesha",
+    "includeSeedDescription": "Inapendekezwa kwa nakala rudufu kamili",
+    "confirmTitle": "Thibitisha Nenosiri",
+    "confirmDescription": "Ingiza tena nenosiri lako ili kuthibitisha.",
+    "confirmPassphrase": "Thibitisha nenosiri",
+    "passphraseMismatch": "Manenosiri hayalingani",
+    "warning": "Hifadhi nakala rudufu hii salama. Yeyote aliye na ufikiaji wa faili hii na nenosiri anaweza kufikia pochi yako.",
+    "exportNow": "Hamisha Pochi",
+    "exportingTitle": "Inahamisha...",
+    "exportingDescription": "Inasimba na kuandaa nakala rudufu ya pochi yako...",
+    "successTitle": "Kuhamisha Kumekamilika",
+    "successDescription": "Nakala rudufu yako ya pochi iliyosimbwa imetengenezwa. Iweke salama.",
+    "rememberPassphrase": "Kumbuka nenosiri lako la kuhamisha - utahitaji ili kuingiza nakala rudufu hii.",
+    "errorTitle": "Kuhamisha Kumeshindwa",
+    "failed": "Kuhamisha kumeshindwa. Tafadhali jaribu tena.",
+    "tryAgain": "Jaribu Tena",
+    "exportKeystore": "Hamisha Nakala Rudufu Iliyosimbwa",
+    "exportKeystoreDesc": "Hifadhi faili ya keystore iliyosimbwa"
+  },
+  "security": {
+    "title": "Lindisha Pochi Yako",
+    "subtitle": "Sanidi nenosiri au PIN ili kulinda pochi yako",
+    "checkingDevice": "Inachunguza usalama wa kifaa...",
+    "passwordOption": "Nenosiri",
+    "passwordDesc": "Herufi 8+, herufi na nambari",
+    "pinOption": "PIN ya Tarafa 6",
+    "pinDesc": "Haraka na rahisi kukumbuka",
+    "enterPin": "Ingiza PIN ya tarafa 6",
+    "confirmPin": "Thibitisha PIN yako",
+    "enterPassword": "Ingiza nenosiri",
+    "confirmPassword": "Thibitisha nenosiri",
+    "enableBiometrics": "Wezesha {{type}}?",
+    "biometricsDesc": "Tumia {{type}} kwa kufungua haraka. Unaweza kubadilisha hii baadaye katika Mipangilio.",
+    "enableBiometricsButton": "Wezesha {{type}}",
+    "enableBiometricsPrompt": "Thibitisha ili kuwezesha kufungua kwa biometrics",
+    "skipBiometrics": "Ruka kwa sasa",
+    "setupComplete": "Usanidi Umekamilika!",
+    "walletSecured": "Pochi yako sasa imelindwa!",
+    "continue": "Endelea",
+    "passwordTooWeak": "Nenosiri ni dhaifu sana. Tafadhali fuata mapendekezo.",
+    "pinMismatch": "PIN hazilingani",
+    "passwordMismatch": "Manenosiri hayalingani",
+    "setupError": "Usanidi umeshindwa. Tafadhali jaribu tena.",
+    "passwordTitle": "Nenosiri",
+    "passwordDescription": "Herufi 8+, usalama mkali zaidi",
+    "pinTitle": "PIN ya Tarafa 6",
+    "pinDescription": "Ufikiaji wa haraka, rahisi kukumbuka"
+  },
+  "lock": {
+    "title": "Fungua Umotu",
+    "lockedOut": "Imefungwa Nje",
+    "tooManyAttempts": "Majaribio mengi sana. Jaribu tena baada ya {{time}}.",
+    "attemptsRemaining": "Majaribio {{count}} yaliyobaki",
+    "enterPassword": "Ingiza nenosiri",
+    "unlock": "Fungua",
+    "wrongPin": "PIN si sahihi",
+    "wrongPassword": "Nenosiri si sahihi",
+    "verificationError": "Uthibitishaji umeshindwa",
+    "biometricsPrompt": "Fungua pochi yako",
+    "unlockWithFaceId": "Fungua kwa Face ID?",
+    "unlockWithFingerprint": "Fungua kwa alama ya kidole?",
+    "forgotPassword": "Umesahau nenosiri?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Kifaa Kisichotumika",
+    "emulatorMessage": "Programu hii haiwezi kufanya kazi kwenye emulator kwa sababu za usalama.",
+    "rootedTitle": "Onyo la Usalama",
+    "exitApp": "Toka",
+    "continueAnyway": "Endelea Hata Hivyo"
+  },
+  "settingsSecurity": {
+    "title": "Usalama",
+    "autoLock": "Funga-Otomatiki",
+    "autoLockDesc": "Funga pochi baada ya kutokuwa na shughuli",
+    "faceId": "Face ID",
+    "fingerprint": "Alama ya Kidole",
+    "biometricsDesc": "Kufungua haraka kwa biometrics",
+    "changePin": "Badilisha PIN",
+    "changePassword": "Badilisha Nenosiri",
+    "changeDesc": "Sasisha hati zako za usalama",
+    "enableBiometrics": "Wezesha kufungua kwa biometrics",
+    "enterCurrent": "Ingiza {{type}} ya sasa",
+    "enterNew": "Ingiza {{type}} mpya",
+    "confirmNew": "Thibitisha {{type}} mpya",
+    "currentPassword": "Nenosiri la sasa",
+    "newPassword": "Nenosiri jipya",
+    "confirmNewPassword": "Thibitisha nenosiri jipya",
+    "changeNow": "Badilisha Sasa",
+    "success": "Ufanisi",
+    "pinChanged": "PIN imebadilishwa kwa ufanisi",
+    "passwordChanged": "Nenosiri limebadilishwa kwa ufanisi",
+    "changeFailed": "Imeshindwa kubadilisha hati",
+    "autoLockOptions": {
+      "immediately": "Mara Moja",
+      "after1min": "Baada ya dakika 1",
+      "after5min": "Baada ya dakika 5",
+      "after15min": "Baada ya dakika 15",
+      "after1hour": "Baada ya saa 1",
+      "never": "Kamwe"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Tafadhali Subiri",
+    "cooldownMessage": "Kwa usalama, unaweza kuonyesha funguo zako tena baada ya {{time}}.",
+    "cooldownReason": "Hii inazuia programu hasidi kufikia funguo zako haraka."
+  },
+  "passwordVerify": {
+    "title": "Thibitisha Utambulisho",
+    "description": "Ingiza nenosiri lako au PIN ili kuonyesha maelezo nyeti ya pochi",
+    "verify": "Thibitisha"
+  },
+  "passwordValidation": {
+    "veryWeak": "Dhaifu sana",
+    "weak": "Dhaifu",
+    "fair": "Wastani",
+    "good": "Nzuri",
+    "strong": "Imara",
+    "tooShort": "Nenosiri lazima liwe angalau herufi 8",
+    "commonPassword": "Hili ni nenosiri linalotumika sana",
+    "lengthSuggestion": "Tumia angalau herufi 12 kwa usalama bora",
+    "mixedCaseSuggestion": "Changanya herufi kubwa na ndogo",
+    "numberSuggestion": "Ongeza nambari kadhaa",
+    "specialCharSuggestion": "Ongeza herufi maalum (!@#$%)"
+  },
+  "forgot": {
+    "title": "Weka Upya Hati",
+    "warning": "Ili kuweka upya nenosiri lako au PIN, utahitaji kuingiza maneno ya kurejesha ya pochi. Hii inathibitisha unamiliki pochi.",
+    "warningText": "Kamwe usishiriki maneno yako ya kurejesha na mtu yeyote.",
+    "continue": "Nimeelewa, Endelea",
+    "enterSeed": "Ingiza Maneno ya Kurejesha",
+    "seedDescription": "Ingiza maneno yako 12 au 24 ya kurejesha. Yagawanye kila neno na nafasi.",
+    "seedPlaceholder": "Ingiza maneno ya kurejesha...",
+    "verifySeed": "Thibitisha Maneno ya Kurejesha",
+    "invalidSeed": "Tafadhali ingiza maneno sahihi 12 au 24 ya kurejesha",
+    "chooseMethod": "Chagua Njia ya Usalama",
+    "methodDescription": "Ungependelea kulinda pochi yako vipi?",
+    "newPassword": "Unda Nenosiri Jipya",
+    "newPin": "Unda PIN Mpya",
+    "newPasswordDesc": "Chagua nenosiri imara (herufi 8+)",
+    "newPinDesc": "Ingiza PIN ya tarafa 6",
+    "confirmPassword": "Thibitisha Nenosiri",
+    "confirmPin": "Thibitisha PIN",
+    "confirmPasswordDesc": "Ingiza tena nenosiri lako ili kuthibitisha",
+    "confirmPinDesc": "Ingiza tena PIN yako ili kuthibitisha",
+    "resetNow": "Weka Upya Sasa",
+    "complete": "Kuweka Upya Kumekamilika",
+    "completeDescription": "Hati zako zimewekwa upya. Sasa unaweza kufungua pochi yako kwa nenosiri au PIN mpya.",
+    "unlockNow": "Fungua Pochi Sasa",
+    "passwordTooWeak": "Nenosiri ni dhaifu sana. Tafadhali chagua nenosiri imara zaidi.",
+    "passwordMismatch": "Manenosiri hayalingani",
+    "pinMismatch": "PIN hazilingani",
+    "resetFailed": "Imeshindwa kuweka upya hati. Tafadhali thibitisha maneno yako ya kurejesha.",
+    "resetError": "Hitilafu imetokea. Tafadhali jaribu tena."
+  },
+  "send": {
+    "title": "Tuma",
+    "selectToken": "Chagua Tokeni",
+    "selectTokenInfo": "Chagua tokeni ya kutuma. Tokeni zenye salio pekee ndizo zinaonyeshwa.",
+    "noTokensWithBalance": "Hakuna tokeni zenye salio",
+    "addTokensFirst": "Ongeza tokeni kwenye pochi yako kwanza",
+    "enterAmount": "Ingiza Kiasi",
+    "enterRecipient": "Ingiza Mpokeaji",
+    "review": "Pitisha",
+    "amount": "Kiasi",
+    "recipient": "Mpokeaji",
+    "recipientPlaceholder": "Anwani ya pochi 0x...",
+    "networkFee": "Ada ya Mtandao",
+    "gasToken": "Lipa gas kwa",
+    "payingWith": "Inalipa Kwa",
+    "payGasWith": "Lipa Gas Kwa",
+    "nativeGas": "UMT (asilia)",
+    "stableGas": "Stable Gas",
+    "selectStable": "Chagua stable",
+    "max": "Max",
+    "next": "Inayofuata",
+    "continue": "Endelea",
+    "confirm": "Thibitisha Kutuma",
+    "confirmSend": "Thibitisha Kutuma",
+    "sending": "Inatuma...",
+    "failed": "Muamala Umeshindwa",
+    "viewInExplorer": "Angalia kwenye Explorer",
+    "done": "Imekamilika",
+    "cancel": "Ghairi",
+    "send": "Tuma",
+    "balance": "Salio",
+    "available": "Inayopatikana",
+    "to": "Kwa",
+    "network": "Mtandao",
+    "step": "Hatua",
+    "estimating": "Inakadiria…",
+    "umtNative": "UMT (asilia)",
+    "txSpeed": "Kasi ya Muamala",
+    "transactionSpeed": "Kasi ya Muamala",
+    "speed": {
+      "slow": "Polepole",
+      "normal": "Wastani",
+      "fast": "Haraka"
+    },
+    "gasNotice": {
+      "stablecoin": "Gas italipwa kwa stablecoin.",
+      "reserved": "Tumehifadhi {{amount}} {{symbol}} kwa gas; unaweza kutuma {{max}} zaidi."
+    },
+    "errors": {
+      "invalidAddress": "Anwani ya mpokeaji si sahihi",
+      "invalidAmount": "Ingiza kiasi sahihi",
+      "insufficientBalance": "Salio la kutosha",
+      "insufficientGas": "Salio la kutosha kwa gas",
+      "insufficientGasWithHint": "Salio la kutosha kwa gas. Ongeza UMT au stablecoin inayotumika.",
+      "notEnoughForGas": "Hakuna salio la kutosha kulipa gas",
+      "noStableGas": "Hakuna UMT ya kutosha kwa gas na hakuna stable inayoweza kulipa",
+      "permitFailed": "Idhini au uidhinishaji umeshindwa kwa tokeni ya gas",
+      "relayNotConfigured": "Relay ya stable gas haijasanidiwa",
+      "transactionReverted": "Muamala umerejelewa on-chain.",
+      "approvalNeeded": "Tokeni ya gas inahitaji uidhinishaji lakini hakuna UMT kwa uidhinishaji. Ongeza kiasi kidogo cha UMT au tumia tokeni inayotumia permit."
+    },
+    "addressBook": {
+      "title": "Kitabu cha Anwani",
+      "addNew": "Ongeza Mpya",
+      "noContacts": "Hakuna anwani zilizohifadhiwa",
+      "saveForQuickAccess": "Hifadhi anwani kwa ufikiaji wa haraka",
+      "editContact": "Hariri Anwani",
+      "deleteContact": "Futa Anwani",
+      "addressNotSaved": "Anwani haijahifadhiwa",
+      "addLabel": "Ongeza lebo",
+      "enterValidAddress": "Ingiza anwani halali kwanza",
+      "saved": "Imehifadhiwa",
+      "save": "Hifadhi"
+    },
+    "success": {
+      "title": "Muamala Umetumwa!",
+      "hash": "Hash",
+      "viewInExplorer": "Angalia kwenye Explorer",
+      "close": "Funga"
+    },
+    "batch": {
+      "mode": "Hali ya Kundi",
+      "singleMode": "Mpokeaji Mmoja",
+      "addRecipient": "Ongeza wapokeaji",
+      "noRecipients": "Bado hakuna wapokeaji walioongezwa",
+      "addFromTagOrBook": "Ongeza kutoka tag au kitabu",
+      "invalidAddress": "Anwani batili: {{address}}",
+      "invalidAmount": "Kiasi batili kwa {{recipient}}",
+      "totalExceedsBalance": "Jumla inazidi salio",
+      "sendingTo": "Inatuma kwa mpokeaji {{count}}",
+      "sendingTo_plural": "Inatuma kwa wapokeaji {{count}}",
+      "recipients": "Wapokeaji",
+      "addresses": "anwani {{count}}",
+      "addresses_plural": "anwani {{count}}",
+      "addByTag": "Ongeza kwa tag",
+      "noTags": "Bado hakuna tags",
+      "createFirstTag": "Unda tag yako ya kwanza kwenye kitabu",
+      "addFromTag": "Ongeza kutoka tag",
+      "selectTag": "Chagua tag",
+      "remove": "Ondoa",
+      "sendAll": "Tuma Zote ({{count}})",
+      "batchSend": "Tuma Kundi",
+      "badge": "KUNDI",
+      "successFail": "{{success}} zilifanikiwa, {{fail}} zilishindwa",
+      "successful": "Imefanikiwa",
+      "sentStatus": "Imetumwa",
+      "failedStatus": "Imeshindwa",
+      "details": "Maelezo ya Uhamishaji wa Kundi",
+      "total": "Jumla",
+      "tagPicker": {
+        "title": "Chagua Tag",
+        "noTags": "Hakuna tags zinazopatikana",
+        "createHint": "Ongeza tags kwa anwani kwenye kitabu kwanza"
+      },
+      "tags": {
+        "manage": "Dhibiti Tags",
+        "add": "Ongeza Tag",
+        "remove": "Ondoa Tag",
+        "create": "Unda Tag",
+        "newTag": "Jina la tag mpya",
+        "addToContact": "Ongeza tag kwa anwani"
+      }
+    }
+  },
+  "receive": {
+    "title": "Pokea",
+    "yourAddress": "Anwani Yako ya Pochi",
+    "scanQR": "Changanua msimbo wa QR ili kupokea",
+    "copyAddress": "Nakili Anwani",
+    "share": "Shiriki"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Lipa",
+      "myQr": "QR Yangu"
+    },
+    "pay": {
+      "title": "Lipa",
+      "description": "Changanua msimbo wa QR wa rafiki yako ili kulipa moja kwa moja kwenye pochi yake",
+      "allowCamera": "Ruhusu Kamera",
+      "requesting": "Inaomba…",
+      "openSettings": "Fungua Mipangilio",
+      "sendTo": "Tuma kwa",
+      "amount": "Kiasi",
+      "rescan": "Changanua Tena",
+      "continue": "Endelea"
+    },
+    "receive": {
+      "title": "Pokea",
+      "description": "Changanua msimbo huu wa QR ili kutuma malipo kwa anwani hii",
+      "tapToCopy": "Gusa ili kunakili anwani",
+      "copied": "Imenakiliwa kwenye clipboard!"
+    }
+  },
+  "history": {
+    "title": "Historia ya Miamala",
+    "sent": "Imetumwa",
+    "received": "Imepokelewa",
+    "token": "Tokeni",
+    "external": "Nje",
+    "to": "Kwa: ",
+    "from": "Kutoka: ",
+    "viewInExplorer": "Angalia kwenye Explorer",
+    "empty": {
+      "title": "Hakuna Miamala Bado",
+      "description": "Historia yako ya miamala itaonekana hapa ukisha tuma au kupokea tokeni."
+    },
+    "status": {
+      "confirmed": "Imethibitishwa",
+      "pending": "Inasubiri",
+      "failed": "Imeshindwa"
+    },
+    "details": {
+      "title": "Maelezo ya Muamala",
+      "status": "Hali",
+      "type": "Aina",
+      "to": "Kwa",
+      "from": "Kutoka",
+      "token": "Tokeni",
+      "block": "Bloku",
+      "gasCost": "Gharama ya Gas",
+      "hash": "Hash",
+      "source": "Chanzo",
+      "balanceDetected": "Salio limegunduliwa",
+      "inferredNote": "Muamala huu uligunduliwa kutoka mabadiliko ya salio. Maelezo halisi ya on-chain hayapatikani."
+    },
+    "time": {
+      "justNow": "Sasa hivi",
+      "minsAgo": "Dakika {{count}} zilizopita",
+      "hoursAgo": "Saa {{count}} zilizopita",
+      "daysAgo": "Siku {{count}} zilizopita"
+    }
+  },
+  "settings": {
+    "title": "Mipangilio",
+    "account": {
+      "title": "Akaunti na Muonekano",
+      "walletAddress": "Anwani ya Pochi",
+      "copy": "Nakili",
+      "copied": "Imenakiliwa"
+    },
+    "theme": {
+      "title": "Mandhari",
+      "light": "Mwanga",
+      "dark": "Giza",
+      "system": "Mfumo"
+    },
+    "language": {
+      "title": "Lugha",
+      "select": "Chagua Lugha",
+      "current": "Ya Sasa"
+    },
+    "display": {
+      "title": "Onyesho",
+      "description": "Geuza muonekano wa skrini yako ya nyumbani.",
+      "showSentinelCard": "Onyesha Kadi ya Mapato ya Sentinel",
+      "showSentinelCardDesc": "Onyesha mapato kwenye skrini ya nyumbani",
+      "showDailyRewardsCard": "Onyesha Kadi ya Zawadi za Kila Siku",
+      "on": "WASHA",
+      "off": "ZIMA",
+      "sentinelSettings": "Mipangilio ya Sentinel",
+      "sentinelSettingsDesc": "Dhibiti bond, zawadi na dai-otomatiki"
+    },
+    "sentinelDisplay": {
+      "title": "Onyesho la Sentinel",
+      "showSentinelCard": "Onyesha Kadi ya Sentinel",
+      "showSentinelCardDesc": "Onyesha kadi ya mapato ya sentinel kwenye skrini ya nyumbani",
+      "sentinelSettings": "Mipangilio ya Sentinel",
+      "sentinelSettingsDesc": "Sanidi nodi ya sentinel na zawadi"
+    },
+    "verification": {
+      "title": "Uthibitishaji",
+      "description": "Thibitisha ubinadamu wako kwa Inlyf ili kufungua zawadi za kila siku. Uchunguzi mfupi wa liveness; thibitisha tena mara kwa mara.",
+      "open": "Anza Uthibitishaji",
+      "refresh": "Sasisha Uthibitishaji",
+      "status": "Hali",
+      "verified": "Umethibitishwa",
+      "notVerified": "Haujathibitishwa",
+      "expiresOn": "Muda unaisha",
+      "daysRemaining": "Siku zilizobaki",
+      "upToDate": "Uthibitishaji umesasishwa",
+      "refreshAvailableIn": "Kusasisha kutapatikana katika siku {{days}}"
+    },
+    "network": {
+      "title": "Mtandao",
+      "description": "Sanidi muunganisho wa mtandao wa blockchain.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (inakuja hivi karibuni)",
+      "rpcEndpoint": "RPC Endpoint",
+      "pingRpc": "Ping RPC",
+      "testing": "Inajaribu...",
+      "rpcOk": "RPC SAWA",
+      "rpcError": "Hitilafu ya RPC",
+      "save": "Hifadhi",
+      "saved": "Mipangilio imehifadhiwa",
+      "connectionStatus": "Hali ya Muunganisho",
+      "connected": "Imeunganishwa",
+      "disconnected": "Imetenganishwa"
+    },
+    "cache": {
+      "title": "Cache",
+      "description": "Futa data iliyohifadhiwa ili kusasisha maelezo ya tokeni na mkataba.",
+      "clearCache": "Futa Cache",
+      "cacheCleared": "Cache imefutwa! Anza upya ili kutumia."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Saidia kulinda blockchain kwa kuweka simu yako mtandaoni. Kamilisha angalau kazi moja ya sampuli kwa siku ili kubaki na uwezo wa kupata zawadi.",
+      "wifiOnly": "WiFi Pekee",
+      "wifiOnlyHint": "Huhifadhi data ya simu",
+      "minBattery": "Betri ya Chini",
+      "minBatteryHint": "Haitafanya kazi chini ya kiwango hiki",
+      "background": "Fanya kwenye Background",
+      "backgroundHint": "Inafanya kazi hata programu imefungwa",
+      "lastSample": "Shughuli ya Mwisho",
+      "noSamples": "Hakuna shughuli bado. Weka programu wazi ili kuanza.",
+      "staleWarning": "Haijaonekana leo — fungua tena programu ili kuendelea.",
+      "androidBatteryWarning": "Uboreshaji wa betri unaweza kuzuia sampling",
+      "androidBatteryHint": "Nenda Mipangilio → Programu → Umotu → Betri → chagua \"Isiyozuiliwa\" ili kuruhusu sampling ya background.",
+      "openSettings": "Gusa ili kufungua mipangilio",
+      "tip": "Wezesha \"Fanya kwenye Background\" kwa uwezo bora wa kupata.",
+      "runNow": "Fanya sasa",
+      "running": "Inafanya kazi…",
+      "lastError": "Hitilafu ya mwisho",
+      "status": {
+        "active": "Inafanya kazi",
+        "inactive": "Haifanyi kazi",
+        "paused": "Imesitishwa"
+      }
+    },
+    "permissions": {
+      "title": "Ruhusa",
+      "description": "Dhibiti Mini Apps zilizounganishwa na ruhusa zake.",
+      "openMiniApps": "Fungua Mini Apps",
+      "manageConnections": "Dhibiti",
+      "noConnections": "Hakuna miunganisho",
+      "revokeAccess": "Batilisha Ufikiaji",
+      "lastUsed": "Mara ya mwisho kutumika"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Karibu Umotu",
+      "subtitle": "$10 kwa siku, kila mtu popote pale",
+      "getStarted": "Anza"
+    },
+    "language": {
+      "title": "Chagua Lugha Yako",
+      "continue": "Endelea"
+    },
+    "wallet": {
+      "title": "Pochi Yako",
+      "createNew": "Unda Pochi Mpya",
+      "importExisting": "Ingiza Iliyopo",
+      "creating": "Inaunda pochi..."
+    },
+    "verify": {
+      "title": "Thibitisha Wewe ni Binadamu",
+      "description": "Ili kupokea zawadi za kila siku, thibitisha wewe ni binadamu wa kipekee.",
+      "continue": "Endelea"
+    }
+  },
+  "poh": {
+    "subtitle": "Fungua zawadi za kila siku",
+    "description": "Thibitisha liveness kwa Inlyf ili kufungua zawadi. Hakuna biometrics zinazohifadhiwa on-chain; cheti cha muda mfupi pekee kinatolewa.",
+    "howItWorks": "Inafanyaje kazi",
+    "howItWorksDesc": "Uchunguzi mfupi wa liveness (skani ya uso) unathibitisha wewe ni binadamu. Cheti chako kinadumu siku 90 na kinaweza kusasishwa wakati wowote.",
+    "adultQuestion": "Je, wewe ni mtu mzima (18+)?",
+    "yesAdult": "Ndiyo, 18+",
+    "noMinor": "Hapana / Mtoto",
+    "selectAge": "Tafadhali chagua chaguo",
+    "verifying": "Inathibitisha...",
+    "startVerification": "Anza Uthibitishaji",
+    "skipForNow": "Ruka kwa sasa",
+    "status": {
+      "notVerified": "Bado haujathibitishwa.",
+      "notVerifiedDetail": "Anza uthibitishaji ili kufungua zawadi.",
+      "unavailable": "Hali haipatikani.",
+      "verified": "Umethibitishwa.",
+      "validFor": "Inatumika kwa ~{{days}} siku",
+      "validFor_plural": "Inatumika kwa ~{{days}} siku",
+      "expired": "Uthibitishaji umeisha muda wake au haupatikani.",
+      "expiredDetail": "Fanya tena liveness ili kusasisha cheti chako."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Jiunge na pool ya Sentinel ili kusaidia kukamilisha block. Funga angalau kiwango cha chini, weka kifaa chako mtandaoni, na upate zawadi.",
+    "loading": "Inapakia data ya sentinel...",
+    "unavailable": "Moduli ya Sentinel haipatikani",
+    "yourStatus": "Hali Yako",
+    "wallet": "Pochi",
+    "bondedAmount": "Kiasi Kilichofungwa",
+    "minimumBond": "Bond ya Chini",
+    "status": {
+      "notBonded": "Haijafungwa",
+      "bonded": "Imefungwa",
+      "unbonding": "Inafungua (itapatikana {{date}})"
+    },
+    "rewards": {
+      "title": "Zawadi",
+      "claimableNow": "Inayoweza Kudaiwa Sasa",
+      "accruing": "Inakusanywa",
+      "totalClaimed": "Jumla Iliyodaiwa",
+      "claiming": "Inadai...",
+      "claimRewards": "Dai Zawadi"
+    },
+    "bond": {
+      "createTitle": "Unda Bond",
+      "topUpTitle": "Ongeza Bond",
+      "createDescription": "Funga UMT ili kujiunga na kamati ya sentinel na kuanza kupata.",
+      "topUpDescription": "Ongeza stake yako ili kupata sehemu kubwa ya zawadi.",
+      "amountLabel": "Kiasi (UMT)",
+      "processing": "Inachakata...",
+      "bond": "Funga",
+      "topUp": "Ongeza",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Dai-Otomatiki",
+      "description": "Ruhusu relayer kudai zawadi zako za sentinel kiotomatiki zinapokusanywa.",
+      "checking": "Inachunguza...",
+      "enabled": "Imewezeshwa",
+      "disabled": "Imezimwa",
+      "expires": "Muda unaisha",
+      "processing": "Inachakata...",
+      "enable": "Wezesha Dai-Otomatiki",
+      "disable": "Zima Dai-Otomatiki"
+    },
+    "activity": {
+      "title": "Shughuli za Hivi Karibuni",
+      "claims": "Madai",
+      "slashes": "Adhabu",
+      "noClaims": "Hakuna madai katika block {{blocks}}k za hivi karibuni.",
+      "noSlashes": "Hakuna matukio ya adhabu katika dirisha la hivi karibuni.",
+      "unknown": "haijulikani"
+    },
+    "errors": {
+      "configureEnv": "Sanidi RPC + env vars za mkataba wa sentinel.",
+      "noWallet": "Unda au ingiza pochi ili kujiunga na kamati ya sentinel.",
+      "loadFailed": "Imeshindwa kupakia data ya sentinel."
+    },
+    "toast": {
+      "rewardsClaimed": "Zawadi za sentinel zimedaiwa.",
+      "noRewards": "Hakuna zawadi zinazosubiri kudaiwa.",
+      "claimFailed": "Dai limeshindwa.",
+      "autoClaimEnabled": "Dai-otomatiki ya sentinel imewezeshwa",
+      "autoClaimDisabled": "Dai-otomatiki ya sentinel imezimwa",
+      "autoClaimFailed": "Kubadilisha dai-otomatiki kumeshindwa",
+      "configureBondAddress": "Sanidi anwani ya bond ya sentinel",
+      "rpcNotSet": "RPC haijawekwa",
+      "minBondUnavailable": "Bond ya chini haipatikani",
+      "enterBondAmount": "Ingiza kiasi cha bond",
+      "minBondRequired": "Bond ya awali lazima iwe angalau {{amount}} UMT",
+      "topUpGreaterThanZero": "Kiasi cha kuongeza lazima kiwe zaidi ya 0",
+      "insufficientBalance": "Salio la kutosha kwa bond + gas",
+      "bondSubmitted": "Muamala wa bond umetumwa",
+      "topUpSubmitted": "Muamala wa kuongeza umetumwa",
+      "bondConfirmed": "Bond imethibitishwa",
+      "topUpConfirmed": "Kuongeza kumethibitishwa",
+      "bondReverted": "Bond imerejelewa on-chain",
+      "bondFailed": "Bond imeshindwa"
+    }
+  },
+  "miniapps": {
+    "title": "MiniApps",
+    "subtitle": "Gundua programu zilizojengwa kwenye Umotu",
+    "explore": "Gundua programu zilizojengwa kwenye Umotu",
+    "noApps": "Hakuna programu zinazopatikana bado",
+    "browseByCategory": "Vinjari kwa Kategoria",
+    "appsCount": "Programu {{count}}",
+    "featured": "ZILIZOANGALIWA",
+    "comingSoon": "Inakuja Hivi Karibuni",
+    "liveApps": "Programu Zilizopo",
+    "available": "ZINAZOPATIKANA",
+    "pohDescription": "Thibitisha ubinadamu wako kwa Inlyf ili kufungua zawadi za kila siku.",
+    "vision": {
+      "title": "Maono Yetu",
+      "taglineXXX": "$10 kwa siku, kila mtu popote pale",
+      "description": "Umotu inajenga miundombinu kwa ulimwengu ambapo kila mtu anaweza kushiriki katika uchumi wa kimataifa—bila kujali anapoishi au benki yake ni ipi.",
+      "readMore": "Soma Maono Kamili",
+      "pillars": {
+        "title": "Kanuni Tatu za Msingi",
+        "ubi": {
+          "title": "$10/Kila Siku, Kila Mtu Popote Pale",
+          "description": "Mapato ya msingi ya ulimwengu kama zawadi zinazopatikana kwa kulinda mtandao. Yeyote aliye na simu anaweza kushiriki na kupata."
+        },
+        "capital": {
+          "title": "Mtaji Unasonga Kwa Uhuru",
+          "description": "Karibu hakuna msuguano kwa malipo na uhamisho—mipakani au ndani. Biashara hulipa ~0.1% kugharamia gharama za jukwaa, watu binafsi hawalipi chochote."
+        },
+        "sovereignty": {
+          "title": "Heshimu Uhuru wa Fedha",
+          "description": "Hatubadilishi sarafu za fiat—tunazifanya zifanye kazi vizuri zaidi. Benki hutoa stablecoins zinazolingana na sarafu zao za ndani. Sera za fedha zinakuwa na ufanisi zaidi na ufikiaji mpana na msuguano mdogo."
+        }
+      },
+      "notReplacing": "Umotu haishindani na benki kuu. Tunajenga miundombinu bora kwa sarafu za fiat: msuguano mdogo, ufikiaji wa kimataifa, na ufanisi na uthabiti wa soko ulioboreshwa."
+    },
+    "building": {
+      "title": "Tunajenga Mfumo wa Ikolojia",
+      "description": "Programu hizi zinaonyesha kinachowezekana kwenye Umotu. Zingine ziko tayari sasa, zingine zinakuja hivi karibuni. Watengenezaji kutoka duniani kote wanaalikwa kujenga na kuzindua kwenye jukwaa letu.",
+      "developerDocs": "Hati za Watengenezaji"
+    },
+    "categories": {
+      "payments": {
+        "name": "Malipo na Fedha",
+        "apps": {
+          "sendMoney": {
+            "name": "Tuma Pesa",
+            "description": "Tuma UMT au stablecoins mara moja kwa yeyote, popote duniani—hakuna benki inayohitajika.",
+            "example": "Tuma $20 kwa familia yako nje ya nchi kwa sekunde, sio siku. Hakuna ada zilizofichwa."
+          },
+          "billPay": {
+            "name": "Lipa Bili",
+            "description": "Lipa huduma, simu, intaneti, na zaidi moja kwa moja kutoka pochi yako."
+          },
+          "savings": {
+            "name": "Miduara ya Akiba",
+            "description": "Akiba ya kimapokezo ya jadi (tontine, chit fund) iliyofanywa bila imani kwa mkataba mahiri."
+          },
+          "microLoans": {
+            "name": "Mikopo Midogo",
+            "description": "Mikopo ya rika-kwa-rika inayoungwa mkono na uthibitishaji wako wa ubinadamu na sifa."
+          }
+        }
+      },
+      "transport": {
+        "name": "Usafiri na Uwasilishaji",
+        "apps": {
+          "rideSharing": {
+            "name": "Kushiriki Safari",
+            "description": "Weka safari zinazolipwa kwa crypto. Madereva huhifadhi zaidi, wapanda hulipa chini—hakuna mpatanishi anayechukua 30%.",
+            "example": "Safari ya teksi Lagos inagharimu ₦800. Dereva anapata ₦799.2 badala ya ₦560."
+          },
+          "delivery": {
+            "name": "Uwasilishaji",
+            "description": "Agiza chakula, bidhaa, au vifurushi. Wafanyakazi wa uwasilishaji hupata mishahara ya haki kwa tokeni thabiti.",
+            "example": "Agiza chakula cha mchana, lipa kwa stablecoin ya ndani, mfanyakazi wa uwasilishaji analipwa mara moja."
+          },
+          "publicTransit": {
+            "name": "Usafiri wa Umma",
+            "description": "Lipa mabasi, metro, na treni kwa gusa. Hakuna haja ya kununua kadi za nauli."
+          }
+        }
+      },
+      "travel": {
+        "name": "Usafiri na Ukarimu",
+        "apps": {
+          "hotels": {
+            "name": "Hoteli na Makao",
+            "description": "Weka malazi duniani kote. Wenyeji hukubali stablecoins, wageni huhifadhi ada.",
+            "example": "Weka chumba Bali kwa $40/usiku. Mwenyeji anapokea $39.96."
+          },
+          "flights": {
+            "name": "Ndege",
+            "description": "Tafuta na weka ndege. Lipa kwa crypto, pata zawadi za UMT."
+          },
+          "tours": {
+            "name": "Ziara za Ndani",
+            "description": "Weka matukio na waelekezi wa ndani. Malipo yanaenda moja kwa moja kwao."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Ununuzi na Biashara",
+        "apps": {
+          "localMarket": {
+            "name": "Soko la Ndani",
+            "description": "Nunua na uuze ndani. Malipo ya QR yanafanya biashara ya mtaani iwe rahisi.",
+            "example": "Muuzaji Jakarta anakubali USDC. Mteja analipa, muuzaji anaona fedha mara moja."
+          },
+          "ecommerce": {
+            "name": "E-commerce",
+            "description": "Nunua mtandaoni kutoka wafanyabiashara duniani kote. Hakuna ada za kadi, hakuna marejesho.",
+            "example": "Nunua vifaa vya elektroniki kutoka Shenzhen. Lipa kwa stablecoins, hifadhi 3% ikilinganishwa na kadi ya mkopo."
+          },
+          "marketplace": {
+            "name": "Soko la Rika",
+            "description": "Orodhesha vitu vya kuuza, nunua kutoka wengine. Escrow inalinda pande zote."
+          }
+        }
+      },
+      "services": {
+        "name": "Huduma na Kazi",
+        "apps": {
+          "remittance": {
+            "name": "Uhamisho wa Pesa",
+            "description": "Tuma pesa nyumbani. Wapokeaji wanaweza kubadilisha kwa sarafu ya ndani au kuiweka kidijitali.",
+            "example": "Tuma $200 kutoka USA kwenda Philippines. Mpokeaji anapata ₱11,000+ badala ya ₱10,400."
+          },
+          "freelance": {
+            "name": "Kazi ya Freelance",
+            "description": "Lipwa kwa kazi ya gig mara moja. Hakuna kusubiri siku 30 kwa uhamisho wa benki."
+          },
+          "homeServices": {
+            "name": "Huduma za Nyumbani",
+            "description": "Ajiri mafundi bomba, umeme, wasafiri. Lipa tu kazi ikikamilika."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Jenga Biashara Yako kwenye Umotu",
+      "subtitle": "Zindua programu zenye malipo yaliyojengewa ndani",
+      "description": "Unda programu zinazogusa mfumo wa ikolojia wa Umotu—mamilioni ya binadamu walioidhinishwa wenye mapato ya kila siku, tayari kufanya miamala. Hakuna maumivu ya kujumuisha malipo.",
+      "benefits": {
+        "noFees": "Karibu hakuna ada za uchakataji wa malipo—hifadhi 99.9% ya mapato",
+        "verifiedUsers": "Watumiaji wote ni binadamu walioidhinishwa—hakuna bots au ulaghai",
+        "globalReach": "Fikia watumiaji katika nchi 190+ tangu siku ya kwanza",
+        "instantPayments": "Malipo ya papo hapo—hakuna kusubiri malipo ya siku 30"
+      },
+      "exampleTitle": "Mfano wa Matumizi",
+      "exampleText": "Programu ya kushiriki safari kwenye Umotu huhifadhi 99.9% ya nauli ikilinganishwa na 70% kwenye jukwaa za jadi. Madereva hupata zaidi, wapanda hulipa chini.",
+      "docsButton": "Soma Hati",
+      "buildButton": "Anza Kujenga"
+    },
+    "bank": {
+      "title": "Je, Wewe ni Benki?",
+      "subtitle": "Toa stablecoins kwenye Umotu",
+      "description": "Taasisi za fedha zenye leseni zinaweza kutoa stablecoins za sarafu za ndani kwenye Umotu na kugusa uchumi unaokua wa UBI wenye mamilioni ya watumiaji.",
+      "benefits": {
+        "reserves": "Pata mapato kutoka akiba: wekeza katika bond na mali za hatari ndogo",
+        "mintRedeem": "Toza ada za mint/redeem: kawaida 0.1% kwa mabadiliko ya fiat ↔ stablecoin",
+        "users": "Fikia mamilioni ya wapokeaji wa kila siku wa UBI",
+        "global": "Panua ufikiaji wako nje ya mipaka mara moja",
+        "custody": "Akiba yako, ulinzi wako: udhibiti kamili wa mali zinazounga mkono"
+      },
+      "revenueModel": "Jinsi Watoaji Wanavyopata",
+      "revenueNote": "Kama Tether na watoaji wengine wakubwa, mapato yanatoka kwa mapato ya akiba na ada za mabadiliko. Kwa mamilioni ya watumiaji wanaopokea UBI ya kila siku, kiasi cha mint/redeem kinaweza kuwa kikubwa.",
+      "futureNote": "Watoaji wanaweza pia kupokea sehemu ya ada za miamala katika siku zijazo kadri itakavyobadilika itifaki.",
+      "learnMore": "Jifunze Zaidi",
+      "applyButton": "Omba Sasa"
+    }
+  },
+  "news": {
+    "title": "Habari na Sasisho",
+    "description": "Kaa sasisho na matangazo ya hivi karibuni, vidokezo, na arifa za usalama kutoka timu ya Umotu.",
+    "empty": "Hakuna habari kwa sasa",
+    "unread": "Mpya",
+    "unreadCount": "Mpya {{count}}",
+    "markAsRead": "Weka kama Imesomwa",
+    "types": {
+      "announcement": "Tangazo",
+      "tip": "Kidokezo",
+      "security": "Usalama",
+      "airdrop": "Airdrop",
+      "update": "Sasisho"
+    }
+  },
+  "governance": {
+    "title": "Utawala",
+    "subtitle": "Unda mustakabali wa Umotu",
+    "description": {
+      "title": "Sauti Yako Inathamini",
+      "body": "Saidia kuunda mustakabali wa Umotu kwa kupiga kura kwenye mapendekezo ya jumuiya. Umotu Foundation huandaa kura hizi, lakini jumuiya inaamua."
+    },
+    "empty": "Hakuna mapendekezo yanayofanya kazi",
+    "emptyHint": "Angalia tena baadaye kwa maamuzi mapya ya jumuiya ya kupiga kura.",
+    "newPolls": "Mpya",
+    "newPollsCount": "Mpya {{count}}",
+    "vote": "kura",
+    "votes": "kura",
+    "endsIn": "Inaisha baada ya {{time}}",
+    "ended": "Imeisha",
+    "tapToVote": "Gusa chaguo hapo juu ili kupiga kura yako",
+    "submitting": "Inawasilisha kura...",
+    "alreadyVoted": {
+      "title": "Tayari Umepiga Kura",
+      "message": "Tayari umepiga kura katika pendekezo hili."
+    },
+    "confirm": {
+      "title": "Thibitisha Kura",
+      "message": "Piga kura kwa",
+      "note": "Hatua hii haiwezi kubatilishwa.",
+      "submit": "Wasilisha Kura"
+    },
+    "success": {
+      "title": "Kura Imetumwa!",
+      "message": "Asante kwa kushiriki katika utawala wa jumuiya."
+    },
+    "error": {
+      "title": "Kura Imeshindwa",
+      "message": "Imeshindwa kuwasilisha kura. Tafadhali jaribu tena."
+    }
+  },
+  "learn": {
+    "title": "Jifunze",
+    "subtitle": "Kila kitu unachohitaji kujua kuhusu Umotu",
+    "featured": "ZILIZOANGALIWA",
+    "whatIs": {
+      "title": "Umotu ni Nini?",
+      "subtitle": "$10 kwa siku, kila mtu popote pale",
+      "intro": "Umotu inalenga kuruhusu yeyote kupata karibu $10/kila siku kwa kutumia simu mahiri pekee. Hakuna vifaa vya gharama kubwa, hakuna ujuzi maalum, hakuna mipaka.",
+      "howDifferent": "Inatofautianaje?",
+      "noMiddleman": "Hakuna mpatanishi: Unashirikiana moja kwa moja na mtandao—hakuna akaunti ya benki inayohitajika",
+      "globalAccess": "Ufikiaji wa kimataifa: Inafanya kazi popote penye intaneti",
+      "youOwnIt": "Unamiliki: Pochi yako, funguo zako, udhibiti wako",
+      "vision": "Maono",
+      "visionText": "Mabilioni ya watu wanaweza kusaidia kuweka daftari la umma kuwa la uaminifu na kupata kwa hilo. Kwenye Umotu, simu hufanya uchunguzi mwepesi ambao hufanya mtandao uaminifu.",
+      "nameOrigin": "Asili ya Jina",
+      "nameOriginText": "Umotu imechochewa na Paʻumotu, lugha ya Polynesia. Tunatumia jina kwa heshima kama ukumbusho wa kujenga kwa watu wa kila siku."
+    },
+    "earn": {
+      "title": "Unavyopata",
+      "subtitle": "Simu yako inafanya kazi; unalipwa",
+      "intro": "Simu yako inafanya kazi ndogo zinazowasaidia wote—kisha unapewa zawadi.",
+      "steps": "Hatua Tatu Rahisi",
+      "step1": "1) Thibitisha wewe ni binadamu: uchunguzi mfupi wa liveness (na sasisho la mara kwa mara) unahakikisha kila mtu ana akaunti moja.",
+      "step2": "2) Saidia mtandao: simu yako inafanya Data Availability (DA) sampling na uchunguzi mwingine mwepesi kwenye background.",
+      "step3": "3) Pata zawadi za kila siku: unalipwa kwa kazi hii, kwa lengo la karibu $10/kila siku kulingana na sera ya mtandao.",
+      "localCurrency": "Kulipa kwa Sarafu Yako",
+      "localCurrencyText": "Chagua tokeni ya malipo: stablecoins za sarafu za ndani (zinapopatikana) au UMT. Kiasi kinalenga thamani ya ~$10 USD na kinaweza kurekebishwa na ushiriki na hali za soko."
+    },
+    "whereMoney": {
+      "title": "Pesa za $10 Zinatoka Wapi?",
+      "subtitle": "Unapata kwa sababu unafanya kazi",
+      "intro": "Ni swali la #1. Jibu fupi: kwa sababu unatoa huduma inayohitajika na mtandao.",
+      "realWork": "Simu Yako Inafanya Kazi Halisi",
+      "realWork1": "Data Availability Sampling: simu yako inachunguza kuwa data ya block inapatikana na sahihi",
+      "realWork2": "Ushiriki wa Binadamu: unathibitisha mtu-mmoja-akaunti-moja ili kuzuia bots na spam",
+      "realWork3": "Kazi hizi zinalinda wote; bila hizo mtandao unadhoofika",
+      "valueSource": "Vyanzo Viwili vya Thamani",
+      "utility": "Matumizi: malipo ya haraka, ada ndogo ambayo watu huchagua kutumia",
+      "consensus": "Makubaliano: thamani inayokua kadri watu zaidi wanaweza kuthibitisha na kukubaliana na sheria",
+      "distribution": "Jinsi Zawadi Zinavyogawanywa",
+      "newTokens": "Tokeni mpya za UMT zinaundwa na kugawanywa kwa washiriki wa simu walioidhinishwa (sio kwa wathibitishaji)",
+      "fees": "Sehemu ya ada na zabuni za wajenzi inagawanywa na sentinel za simu kwa kukamilisha block",
+      "treasury": "Sehemu ndogo inafadhili matengenezo na programu za uthabiti",
+      "whyDifferent": "Kwa Nini Tofauti",
+      "btcProblem": "Bitcoin inawapa wachimba madini maalum (gharamaz kubwa)",
+      "ethProblem": "Ethereum inawapa washika dau wakubwa (gharamaz kubwa)",
+      "umotuSolution": "Umotu inawapa simu za kila siku (gharama ndogo ya kushiriki)",
+      "conclusion": "Sio zawadi: unalipwa kwa kazi inayohifadhi miundombinu ya fedha ya pamoja kuwa ya uaminifu na muhimu."
+    },
+    "security": {
+      "title": "Usalama wa Pochi",
+      "subtitle": "Lindisha pesa zako",
+      "intro": "Pochi yako ni kama seifu ya kidijitali ambayo wewe pekee unadhibiti.",
+      "recovery": "Maneno Yako 12 na Funguo za Faragha",
+      "recoveryText": "Maneno yako 12 ya siri (maneno ya kurejesha) na funguo yako za faragha zote mbili zinafungua pochi yako. Yeyote aliye nayo yoyote anaweza kuhamisha fedha zako.",
+      "rules": "Kanuni za Dhahabu",
+      "rule1": "KAMWE usishiriki maneno yako 12 au funguo za faragha na mtu yeyote—hata wachangiaji wa Umotu.",
+      "rule2": "Andika maneno yako 12 kwenye karatasi na uhifadhi nje ya mtandao. Usihifadhi kwenye picha za skrini, picha, au maelezo ya wingu.",
+      "rule3": "Ukihamisha funguo yako za faragha, ziweke nje ya mtandao (karatasi, hardware, au meneja iliyosimbwa unayoiamini kabisa).",
+      "rule4": "Ukipoteza maneno yako 12 na funguo za faragha, hakuna anayeweza kurejesha pochi yako.",
+      "warning": "Muhimu",
+      "warningText": "Funguo yako za faragha inatoa ufikiaji kamili. Kuifunua au kuinakili kwenye programu zingine inaweza kufichua fedha zako. Hamisha tu ikiwa unaelewa hatari.",
+      "reveal": "Funua / Hamisha Funguo za Faragha",
+      "revealText": "Unaweza kufunua au kuhamisha funguo zako za faragha katika Mipangilio ya Pochi. Tunahitaji biometrics/PIN, tunaionyesha kwa sekunde chache pekee, na hatuipeani. Fikiria kutumia pochi ya hardware kwa salio kubwa.",
+      "bestPractices": "Mbinu Bora",
+      "best1": "Wezesha kufunga skrini na biometrics kwenye simu yako.",
+      "best2": "Weka programu sasisho ili kupata marekebisho ya hivi karibuni ya usalama.",
+      "best3": "Tumia pochi tofauti kwa akiba kubwa; weka kiasi kidogo kwenye simu kwa matumizi ya kila siku.",
+      "scamBannerTitle": "Hakuna Mtu Halali Atauliza",
+      "scamBannerText": "Ikiwa mtu yeyote ataomba maneno yako 12 au funguo za faragha, ni ulaghai."
+    },
+    "stablecoins": {
+      "title": "Kuelewa Stablecoins",
+      "subtitle": "Pesa za kidijitali zinazofuata sarafu ya ndani",
+      "intro": "Stablecoins ni tokeni za kidijitali zilizoundwa kufuata pesa za kawaida (kama USD, ZAR, NGN).",
+      "examples": "Mifano",
+      "example1": "1 ZAR1 ≈ 1 Rand ya Afrika Kusini",
+      "example2": "1 USD1 ≈ 1 Dola ya Marekani",
+      "example3": "1 NGN1 ≈ 1 Naira ya Nigeria",
+      "backed": "Zinatolewa na Washirika",
+      "backedText": "Stablecoins kwenye Umotu zinatolewa na washirika waliodhibitiwa na zimeundwa kushikilia thamani ya 1:1 na akiba. Watoaji huchapisha uthibitisho wa akiba na sheria za ukombozi.",
+      "convert": "Kubadilisha kwa Pesa Taslimu",
+      "convertText": "Badilisha kupitia benki/washirika wa kubadilisha, au tumia moja kwa moja zinapokubalika."
+    },
+    "economics": {
+      "title": "Uchumi wa UMT",
+      "subtitle": "Nani anapata nini na kwa nini",
+      "intro": "UMT ina ugavi uliowekwa wa tokeni bilioni 100. Zaidi yake inalipwa kwa watumiaji wa simu wa kila siku wanaosaidia kuweka mtandao uaminifu.",
+      "supply": "Ugavi na Ugawanyaji",
+      "supplyBullets": [
+        "Sehemu kubwa ya ugavi wa tokeni imehifadhiwa kwa washiriki wa simu kwa muda na inatolewa kupitia Emission Controller. Emission Controller inaweka kikomo cha utoaji wa kila siku kwa si zaidi ya 0.01% ya ugavi uliobaki, kuhakikisha uendelevu wa muda mrefu. Chini ya ratiba hii, takriban 68% ya jumla ya ugavi inabaki baada ya miaka 10, na takriban 15% inabaki baada ya miaka 50.",
+        "Sehemu ndogo ya ugavi inaundwa wakati wa uzinduzi kwa madhumuni maalum, ikiwa ni pamoja na airdrop ya watumiaji wa mapema, uuzaji wa jamii, ugawaji wa msingi, na akiba ya dharura n.k."
+      ],
+      "premine": "Ugawaji wa Uzinduzi (wa muda, unaweza kubadilika wakati wa uzinduzi wa mainnet)",
+      "premineTable": [
+        {
+          "label": "Airdrop ya Watumiaji",
+          "value": "1.0%"
+        },
+        {
+          "label": "Uuzaji wa Jumuiya",
+          "value": "0.6%"
+        },
+        {
+          "label": "Umotu Foundation (timelocked)",
+          "value": "0.2%"
+        },
+        {
+          "label": "Mfuko wa Dharura (unatawaliwa)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "Zawadi za Kila Siku kwa Simu",
+      "emissionsText": "Kila siku mtandao unaweza kutoa zaidi ya 0.01% ya pool iliyobaki ya utoaji. Tunapanga kiasi hicho ili simu walioidhinishwa walengwa karibu $10/kila siku, kurekebisha na idadi ya washiriki na hali za soko.",
+      "fees": "Ada na Sentinel",
+      "feesText": "Wasaidizi wa Sentinel (hiari, wa hali ya juu) hupata sehemu ya ada za miamala na zabuni za wajenzi. Hii ni tofauti na utoaji wa kila siku.",
+      "transparency": "Uwazi",
+      "transparencyText": "Ratiba za vesting na pochi ni za umma. Vikomo vya utoaji wa kila siku na malipo halisi yanachapishwa kwenye programu.",
+      "disclaimerTitle": "Ukumbusho wa Lugha Rahisi",
+      "disclaimerText": "Hii sio ushauri wa uwekezaji. Zawadi zinategemea sera ya mtandao na ushiriki. Programu haihakikishii mapato yaliyowekwa."
+    },
+    "contribute": {
+      "title": "Jinsi ya Kuchangia",
+      "subtitle": "Saidia kujenga Umotu",
+      "intro": "Umotu ni chanzo wazi na inaendeshwa na jumuiya. Kila mtu anaweza kusaidia—iwe unaprogramu, kutafsiri, au kutoa maoni tu.",
+      "waysTitle": "Njia za Kuchangia",
+      "code": {
+        "title": "Boresha Code",
+        "text": "Rekebisha hitilafu, ongeza vipengee, andika majaribio, au pitia pull requests. Angalia repo zetu za GitHub kwa programu, mkataba mahiri, na huduma za backend.",
+        "cta": "Angalia GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Saidia na Tafsiri",
+        "text": "Fanya programu ihisi asili katika lugha yako. Hariri faili za i18n locale na jaribu kila skrini. Marekebisho yako yanawasaidia mamilioni.",
+        "cta": "Mwongozo wa Tafsiri",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "Panua Orodha za Maneno za BIP-39",
+        "text": "Pendekeza orodha mpya au zilizoboreshwa ili watu zaidi waone maneno yao 12 ya kurejesha katika lugha yao ya asili.",
+        "cta": "Angalia BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Jiunge na Utawala",
+        "text": "Soma mapendekezo, jadili wazi, na piga kura kwenye programu. Sauti yako inasaidia kuongoza vigezo vya mtandao na ugawanyaji wa ruzuku.",
+        "cta": "Fungua Utawala",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Eneza Habari",
+        "text": "Waambie marafiki, andika mafunzo, chapisha shorts, jibu maswali. Jumuiya yenye nguvu inamaanisha mtandao wenye nguvu kwa wote.",
+        "cta": "Shiriki Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "Michango yote ni ya hiari. Hakuna ajira rasmi au fidia isipokuwa iliyoainishwa katika pendekezo la ruzuku."
+    },
+    "decentralization": {
+      "title": "Kwa Nini Decentralization",
+      "subtitle": "Hakuna sehemu moja ya udhibiti",
+      "intro": "Decentralization inamaanisha hakuna kampuni moja au serikali inayoweza kuzima mtandao au kunyang'anya fedha zako.",
+      "benefits": "Faida Kwako",
+      "benefit1": "Daima wazi: 24/7 upatikanaji",
+      "benefit2": "Ada ndogo: ada ndogo za mtandao badala ya ada za kadi 3–5%",
+      "benefit3": "Hakuna mipaka: tuma thamani kimataifa",
+      "benefit4": "Inayostahimili udukuzi: funguo zako, pesa zako",
+      "benefit5": "Uwazi: yeyote anaweza kuthibitisha jinsi mfumo unavyofanya kazi",
+      "howWorks": "Inafanyaje Kazi",
+      "howWorksText": "Wathibitishaji hupendekeza block kila ~sekunde 2. Simu (kama yako) zinathibitisha na kukamilisha kwa uchunguzi mwepesi. Michango mingi midogo inajumlisha usalama mkubwa."
+    },
+    "noCompany": {
+      "title": "Hakuna Kampuni, Hakuna Wateja",
+      "subtitle": "Elewa mfano",
+      "intro": "Hakuna 'Umotu, Inc.' inayodhibiti itifaki. Umotu ni seti wazi ya sheria ambazo yeyote anaweza kutumia.",
+      "notCompany": "Umotu SI Nini",
+      "notCompany1": "SI kampuni yenye akaunti za wateja",
+      "notCompany2": "SI benki au mtoaji wa pesa",
+      "notCompany3": "HAIDHIBITIWA na chombo kimoja",
+      "notCompany4": "HAIWEZI kurekebisha miamala",
+      "whatIs": "Umotu NI Nini",
+      "whatIs1": "Itifaki: kama barua pepe au wavuti—sheria wazi, zinazoweza kushirikiana",
+      "whatIs2": "Simu kwanza: inafanya kazi kwa msaada wa simu mahiri za kila siku",
+      "whatIs3": "Inayoendeshwa na jumuiya: wewe ni mshiriki, sio mteja",
+      "foundation": "Umotu Foundation",
+      "foundationIntro": "Shirika lisilo la faida linalosaidia mfumo wa ikolojia (programu za marejeleo, hati, programu za jumuiya) lakini halidhibiti itifaki.",
+      "foundationTask1": "Huhifadhi programu ya simu na explorer kama utekelezaji wa marejeleo",
+      "foundationTask2": "Inafanya kazi miundombinu ya umma (wengine wanaweza kufanya yao)",
+      "foundationTask3": "Inaratibu utawala wa jumuiya (habari, kura)",
+      "foundationTask4": "Inapitia na kuorodhesha stablecoins zinazotumika",
+      "foundationTask5": "Inachapisha miongozo ya elimu na usalama",
+      "foundationNote": "Foundation haiwezi kufikia pochi yako na haiwezi kurekebisha miamala."
+    },
+    "scamPrevention": {
+      "title": "Epuka Ulaghai",
+      "subtitle": "Jilinde",
+      "intro": "Umotu Foundation HATATAKUKUJIA DM. Yeyote anayejifanya 'msaidizi' ni mlaghai.",
+      "redFlags": "Ishara Nyekundu",
+      "redFlag1": "Mtu anayejidai kuwa msaada wa wateja",
+      "redFlag2": "Viungo vya 'kuthibitisha' au 'kuboresha' akaunti yako",
+      "redFlag3": "Maombi ya maneno yako 12 au funguo za faragha",
+      "redFlag4": "Ahadi za tokeni za ziada ukithubu utume fedha",
+      "redFlag5": "Programu au tovuti zinazokuomba 'kuwasha' zawadi",
+      "truth": "Ukweli",
+      "truth1": "Hakuna msaada wa wateja unaoweza kuweka upya pochi yako",
+      "truth2": "Sasisho zote rasmi zinaonekana kwenye programu hii",
+      "truth3": "Hakuna mtu kutoka Umotu ataomba maneno yako ya kurejesha au funguo za faragha",
+      "truth4": "Pakua programu hii kutoka Apple Store au Google Play rasmi pekee",
+      "whatToDo": "Ikiwa Mtu Anakuwasiliana",
+      "action1": "Usijibu",
+      "action2": "Usibofye viungo",
+      "action3": "Usishiriki maelezo",
+      "action4": "Zuia na ripoti"
+    },
+    "airdrop": {
+      "title": "Airdrop ya Testnet",
+      "subtitle": "Watumiaji wa mapema wanatambuliwa",
+      "intro": "Wewe ni mapema! Umotu iko kwenye testnet. Washiriki wa testnet wanaofanya kazi wanaweza kupokea ugawanyaji wakati mainnet inazinduliwa.",
+      "howToQualify": "Jinsi ya Kustahili",
+      "step1": "Unda pochi kwenye programu",
+      "step2": "Kamilisha uthibitishaji wa binadamu (Proof of Human)",
+      "step3": "Tumia programu mara kwa mara wakati wa testnet",
+      "whenAirdrop": "Airdrop ni Lini?",
+      "whyTestnet": "Testnet ni muhimu: watumiaji hujifunza usalama wa pochi, na mfumo unajaribiwa kwa usalama, uthabiti, na ufanisi kabla ya mainnet.",
+      "timeline": "Mainnet inatarajiwa Q1 au Q2 ya 2026. Airdrop itatokea karibu wakati huo huo mainnet inazinduliwa.",
+      "howMuch": "Nitapata Kiasi Gani?",
+      "totalPool": "Jumla ya pool ya airdrop: tokeni 1,000,000,000 UMT. Sehemu yako inategemea jumla ya washiriki na bei ya UMT wakati wa uzinduzi.",
+      "scenario2": "Watumiaji 1M: ~1,000 UMT kwa kila mtumiaji, bei inayotarajiwa ~$1, thamani ya airdrop ~$1,000",
+      "scenario3": "Watumiaji 10M: ~100 UMT kwa kila mtumiaji, bei inayotarajiwa ~$20, thamani ya airdrop ~$2,000",
+      "scenario4": "Watumiaji 100M: ~10 UMT kwa kila mtumiaji, bei inayotarajiwa ~$300, thamani ya airdrop ~$3,000",
+      "disclaimer": "Hizi ni makadirio pekee, sio dhamana. Thamani halisi inategemea hali za soko na sheria za programu.",
+      "whatYouGet": "Unachopata",
+      "reward": "Kwenye mainnet, pochi yako ya testnet inaweza kupokea tokeni halisi kulingana na ushiriki na sheria za programu. Watumiaji wa mapema na wanaofanya kazi zaidi wanapewa kipaumbele.",
+      "note": "Kumbuka: Tokeni za testnet hazina thamani. Ugawanyaji wowote wa mainnet unaamuliwa na sera ya programu wakati wa uzinduzi. Habari zote kuhusu airdrop zitachapishwa kwenye programu hii pekee."
+    },
+    "gettingStarted": {
+      "title": "Kuanza",
+      "subtitle": "Dakika tano zako za kwanza",
+      "intro": "Hapa ndipo usanidi wako wa haraka:",
+      "checklist": "Orodha ya Kuchunguza Usanidi",
+      "check1": "1) Chagua lugha yako (imemalizika!)",
+      "check2": "2) Unda au ingiza pochi",
+      "check3": "3) MUHIMU: Andika maneno yako 12 kwenye karatasi",
+      "check4": "4) Kamilisha uthibitishaji wa binadamu (skani ya haraka)",
+      "check5": "5) Weka programu ifanye kazi ili kupata zawadi za kila siku",
+      "tips": "Vidokezo vya Pro",
+      "tip1": "Ruhusu ufikiaji wa background ili uchunguzi uweze kufanya kazi",
+      "tip2": "Angalia kila siku ili kuona zawadi",
+      "tip3": "Alika marafiki—watumiaji zaidi hufanya mtandao uwe na nguvu"
+    }
+  },
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Hitilafu",
+    "retry": "Jaribu Tena",
+    "cancel": "Ghairi",
+    "save": "Hifadhi",
+    "done": "Imekamilika",
+    "continue": "Endelea",
+    "confirm": "Thibitisha",
+    "yes": "Ndiyo",
+    "no": "Hapana",
+    "ok": "Sawa",
+    "success": "Imefanikiwa",
+    "failed": "Imeshindwa",
+    "copied": "Imenakiliwa!",
+    "pullToRefresh": "Vuta ili kusasisha",
+    "notSet": "Haijawekwa"
+  },
+  "errors": {
+    "networkError": "Hitilafu ya mtandao. Tafadhali angalia muunganisho wako.",
+    "genericError": "Kuna kitu kimeenda vibaya. Tafadhali jaribu tena.",
+    "walletNotFound": "Pochi haipatikani",
+    "transactionFailed": "Muamala umeshindwa",
+    "invalidInput": "Pemjeo batili"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Karibu Umotu",
+  "onboard_wallet_title": "Sanidi pochi yako",
+  "onboard_wallet_explain": "Unda au ingiza pochi ili kupokea zawadi.",
+  "wallet_create": "Unda Pochi Mpya",
+  "wallet_import": "Ingiza Pochi",
+  "wallet_import_explain": "Ingiza maneno yako 12 ya kurejesha",
+  "wallet_created": "Pochi Tayari",
+  "wallet_save": "Hifadhi kwenye Kifaa",
+  "wallet_backup_title": "Hifadhi Nakala ya Maneno Yako ya Kurejesha",
+  "wallet_backup_explain": "Andika maneno haya 12 kwa mpangilio. Hii ndiyo NJIA PEKEE ya kurejesha pochi yako ukipoteza kifaa chako.",
+  "wallet_backup_warning": "Kamwe usishiriki maneno yako ya kurejesha. Yeyote aliye nayo anaweza kufikia fedha zako.",
+  "wallet_backup_confirm": "Nimeandika maneno yangu ya kurejesha",
+  "wallet_backup_done": "Nimehifadhi Maneno Yangu",
+  "wallet_save_first": "Tafadhali hifadhi maneno yako ya kurejesha kwanza",
+  "poh_title": "Thibitisha Binadamu",
+  "continue": "Endelea",
+  "or": "AU",
+  "seedReveal": {
+    "title": "Maneno ya Kurejesha",
+    "intro": "Maneno yako ya kurejesha ndiyo njia pekee ya kurejesha pochi yako ukipoteza ufikiaji wa kifaa hiki. Yaandike na uhifadhi salama nje ya mtandao.",
+    "displayLanguage": "Inaonyeshwa kwa {{language}}",
+    "hiddenMsg": "Maneno yako yamefichwa kwa usalama. Gusa hapa chini ili kufunua.",
+    "showButton": "Funua Maneno",
+    "noScreenshot": "Kamwe usichukue picha ya skrini ya maneno yako ya kurejesha.",
+    "checkTitle": "Thibitisha Nakala Yako",
+    "checkPrompt": "Ingiza maneno hapa chini ili kuthibitisha umeyaandika sahihi:",
+    "checkWordN": "Neno #{{n}}",
+    "checkIncorrect": "Moja au zaidi ya maneno sio sahihi. Tafadhali angalia nakala yako.",
+    "ackWritten": "Nimeandika maneno yangu ya kurejesha",
+    "ackCannotRecover": "Nimeelewa Umotu haiwezi kurejesha pochi yangu",
+    "cancel": "Ghairi",
+    "continue": "Nimeihifadhi"
+  }
+}

@@ -1,0 +1,1419 @@
+{
+  "app": {
+    "name": "Umotu",
+    "tagline": "$10 sehari, untuk semua orang di mana sahaja"
+  },
+  "navigation": {
+    "home": "Laman Utama",
+    "wallet": "Dompet",
+    "miniapps": "MiniApps",
+    "back": "Kembali",
+    "scan": "Imbas",
+    "settings": "Tetapan",
+    "close": "Tutup"
+  },
+  "home": {
+    "stats": {
+      "verifiedHumans": "Manusia Disahkan",
+      "umtPrice": "Harga UMT"
+    },
+    "quickActions": {
+      "news": "Berita",
+      "vote": "Tadbir Urus",
+      "governance": "Tadbir Urus",
+      "learn": "Belajar",
+      "network": "Rangkaian"
+    },
+    "setupProgress": {
+      "title": "Kemajuan Persediaan",
+      "steps": {
+        "language": "Bahasa",
+        "wallet": "Dompet",
+        "verifyHuman": "Sahkan Manusia",
+        "complete": "Selesai"
+      },
+      "continue": "Teruskan",
+      "changeChoice": "Tukar pilihan",
+      "requiresLanguage": "Pilih bahasa terlebih dahulu",
+      "requiresWallet": "Cipta dompet terlebih dahulu"
+    }
+  },
+  "earnings": {
+    "daily": {
+      "title": "Ganjaran Harian",
+      "totalEarned": "Jumlah Diperoleh",
+      "lastClaimed": "Terakhir Dituntut",
+      "never": "Belum pernah",
+      "configure": "Konfigurasi",
+      "loading": "Memuatkan ganjaran...",
+      "noWallet": "Tiada dompet",
+      "autoClaim": {
+        "label": "Tuntutan auto:",
+        "active": "Aktif",
+        "setupNow": "Sediakan sekarang",
+        "expired": "Tamat tempoh",
+        "tapToSetup": "Ketuk untuk mendayakan ganjaran harian automatik"
+      }
+    },
+    "sentinel": {
+      "title": "Pendapatan Sentinel",
+      "manage": "Urus",
+      "loading": "Memuatkan...",
+      "status": "Status",
+      "statuses": {
+        "notBonded": "Tidak diikat",
+        "bonded": "Diikat",
+        "unbonding": "Sedang dibuka ikatan"
+      },
+      "claimable": "Boleh Dituntut",
+      "accruing": "Sedang Dikumpul",
+      "bonded": "Diikat"
+    }
+  },
+  "autoClaim": {
+    "tooltip": {
+      "title": "Ganjaran Harian Automatik",
+      "description": "Dayakan <bold>tuntutan auto</bold> untuk menerima ganjaran UBI harian $10 anda secara automatik—tiada tuntutan manual diperlukan!",
+      "benefits": {
+        "midnight": "Dituntut pada tengah malam mengikut zon waktu anda",
+        "lowerFees": "Yuran gas 80% lebih rendah (dikumpul dengan pengguna lain)",
+        "disable": "Anda boleh nyahdayakan bila-bila masa dalam Tetapan"
+      },
+      "notice": "Anda akan menandatangani mesej kebenaran sekali sahaja yang membenarkan relay kami menuntut bagi pihak anda. Tiada kunci peribadi dikongsi.",
+      "maybeLater": "Mungkin Kemudian",
+      "enableNow": "Dayakan Sekarang"
+    },
+    "settings": {
+      "cadence": "Claim cadence",
+      "cadenceHint": "Auto-claim will run on this schedule",
+      "cadenceWeekly": "Weekly",
+      "cadenceBiweekly": "Biweekly",
+      "cadenceMonthly": "Monthly",
+      "title": "Tetapan Tuntutan Auto",
+      "description": "Tuntut ganjaran harian anda secara automatik.",
+      "checking": "Menyemak status...",
+      "status": "Status",
+      "enabled": "Didayakan",
+      "disabled": "Dinayahdayakan",
+      "lastClaimed": "Terakhir Dituntut",
+      "neverClaimed": "Belum Pernah",
+      "nextClaim": "Tuntutan Seterusnya",
+      "expiresAt": "Tamat Pada",
+      "timezone": "Zon Waktu",
+      "preferredHour": "Jam Pilihan",
+      "preferredHourHint": "Pilih bila tuntutan auto harus dijalankan",
+      "enableButton": "Dayakan Tuntutan Auto",
+      "disableButton": "Nyahdayakan Tuntutan Auto",
+      "enabling": "Mendayakan...",
+      "disabling": "Menyahdayakan...",
+      "enableSuccess": "Tuntutan auto didayakan!",
+      "enableError": "Gagal mendayakan",
+      "disableSuccess": "Tuntutan auto dinyahdayakan",
+      "disableError": "Gagal menyahdayakan",
+      "updateButton": "Kemas Kini Tetapan",
+      "updating": "Mengemas kini..."
+    },
+    "manual": {
+      "title": "Tuntutan Manual",
+      "description": "Jika anda memerlukan dana lebih awal, tuntut ganjaran seterusnya yang tersedia sekarang. Tuntutan manual menggunakan gas dompet anda. Tuntutan auto lebih murah jika anda menunggu. Jika dompet anda tidak mempunyai dana, aktifkan tuntutan auto atau tambah gas native sebelum tuntutan manual.",
+      "dayLabel": "Hari ganjaran",
+      "claimButton": "Tuntut sekarang",
+      "claiming": "Menuntut...",
+      "success": "Tuntutan dihantar",
+      "successWithId": "Tuntutan dihantar (id: {{id}})",
+      "error": "Gagal menuntut",
+      "noProof": "Bukti ganjaran belum diterbitkan. Cuba lagi selepas gambar hari ini aktif.",
+      "unauthorized": "Kebenaran relayer gagal. Sila cuba lagi atau hubungi sokongan.",
+      "invalidDay": "No rewards available to claim yet",
+      "gasEstimate": "Est. gas: {{gas}}",
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "availableDays": "Hari ganjaran tersedia: {{days}}",
+      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "availableRange": "Liputan: {{start}} hingga {{end}}",
+      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
+      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
+      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "remainingAfter": "+{{days}} lagi selepas batch ini",
+      "batchSuccess": "{{count}} hari berjaya dituntut",
+      "claimingProgress": "Menuntut {{claimed}}/{{total}}...",
+      "claimAllButton": "Tuntut semua {{count}} hari"
+    },
+    "timezone": {
+      "title": "Pilih Zon Waktu",
+      "search": "Cari zon waktu...",
+      "current": "Pilihan Semasa",
+      "searchResults": "Hasil Carian",
+      "noResults": "Tiada hasil ditemui",
+      "detected": "Dikesan",
+      "popular": "Zon Waktu Popular",
+      "regions": {
+        "Americas": "Amerika",
+        "Europe": "Eropah",
+        "Asia": "Asia",
+        "Africa": "Afrika",
+        "Oceania": "Oceania"
+      }
+    },
+    "payout": {
+      "title": "Keutamaan Pembayaran",
+      "description": "Pilih mata wang pembayaran pilihan anda.",
+      "current": "Semasa",
+      "saved": "Disimpan",
+      "saveError": "Ralat menyimpan",
+      "showMore": "Tunjukkan Lagi ({{count}})",
+      "showLess": "Tunjukkan Kurang",
+      "native": "Token Asli",
+      "stablecoin": "Stablecoin",
+      "popular": "Popular",
+      "allCurrencies": "Semua Mata Wang"
+    }
+  },
+  "wallet": {
+    "title": "Dompet",
+    "testnetNotice": "Token testnet tiada nilai sebenar",
+    "totalBalance": "Jumlah Baki",
+    "balance": "Baki",
+    "address": "Alamat",
+    "copyAddress": "Salin Alamat",
+    "addressCopied": "Alamat disalin",
+    "receive": "Terima",
+    "send": "Hantar",
+    "swap": "Tukar",
+    "swapComingSoon": "Tukar akan datang tidak lama lagi",
+    "history": "Sejarah",
+    "tokens": "Token",
+    "collectibles": "Koleksi",
+    "noTokens": "Tiada token dikonfigurasi",
+    "nativeToken": "Token Asli",
+    "loading": "Memuatkan...",
+    "refreshing": "Menyegarkan...",
+    "balancesUpdated": "Baki dikemas kini",
+    "menu": {
+      "manageTokens": "Urus Token",
+      "addressBook": "Buku Alamat",
+      "walletSettings": "Tetapan Dompet",
+      "showBalances": "Tunjuk Baki",
+      "hideBalances": "Sembunyikan Baki",
+      "showZeroTokens": "Tunjuk Token Sifar",
+      "hideZeroTokens": "Sembunyikan Token Sifar",
+      "refresh": "Segarkan"
+    },
+    "manageTokens": {
+      "title": "Urus Token",
+      "info": "Tambah token ERC-20 tersuai. Token sistem termasuk secara lalai.",
+      "addToken": "Tambah Token",
+      "adding": "Menambah...",
+      "contractAddress": "Alamat kontrak token (0x...)",
+      "autoFetch": "Simbol dan desimal diambil secara automatik",
+      "customTokens": "Token Tersuai",
+      "noCustomTokens": "Tiada token tersuai ditambah lagi.",
+      "addUsingForm": "Tambah token menggunakan borang di atas.",
+      "systemToken": "Token ini adalah token sistem dan sudah termasuk.",
+      "fetchingMetadata": "Mengambil metadata token...",
+      "addedSuccess": "Token berjaya ditambah",
+      "enterValidAddress": "Masukkan alamat token yang sah",
+      "save": "Simpan"
+    },
+    "addressBook": {
+      "title": "Buku Alamat",
+      "addContact": "Tambah Kenalan",
+      "nameLabel": "Nama atau label",
+      "walletAddress": "Alamat dompet (0x...)",
+      "savedContacts": "Kenalan Disimpan",
+      "noContacts": "Tiada kenalan disimpan lagi.",
+      "addForQuickSending": "Tambah kenalan untuk penghantaran cepat.",
+      "enterValidAddress": "Masukkan alamat yang sah",
+      "addLabel": "Tambah label",
+      "save": "Simpan"
+    },
+    "settings": {
+      "title": "Tetapan Dompet",
+      "export": {
+        "title": "Eksport Dompet",
+        "description": "Jangan sekali-kali kongsi frasa pemulihan atau kunci peribadi anda. Simpan secara selamat di luar talian.",
+        "recoveryPhrase": "Frasa Pemulihan",
+        "recoveryPhraseNotAvailable": "Frasa pemulihan tidak tersedia (diimport melalui kunci peribadi)",
+        "privateKey": "Kunci Peribadi",
+        "privateKeyWarning": "Kunci Peribadi (rahsia!)",
+        "showPhrase": "Tunjuk Frasa Pemulihan",
+        "showKey": "Tunjuk Kunci Peribadi",
+        "warning": "Jangan kongsi frasa pemulihan atau kunci peribadi anda dengan sesiapa.",
+        "copy": "Salin",
+        "copied": "Disalin!",
+        "hide": "Sembunyikan",
+        "clipboardWarning": "Papan klip boleh dibaca oleh aplikasi lain. Ia akan dibersihkan secara automatik dalam 30s.",
+        "verifyForKey": "Sahkan untuk Tunjuk Kunci Peribadi",
+        "verifyForSeed": "Sahkan untuk Tunjuk Frasa Pemulihan",
+        "verifyDescription": "Masukkan kata laluan atau PIN anda untuk mendedahkan maklumat dompet sensitif."
+      },
+      "import": {
+        "title": "Import Dompet",
+        "description": "Mengimport akan menggantikan dompet semasa. Pastikan anda telah menyandarkan yang sedia ada terlebih dahulu. Sila ambil perhatian anda perlu mengesahkan semula status PoH selepas mengimport.",
+        "byPhrase": "Frasa Pemulihan",
+        "byPrivateKey": "Kunci Peribadi",
+        "phrasePlaceholder": "Masukkan frasa 12 atau 24 perkataan…",
+        "keyPlaceholder": "Masukkan kunci peribadi 0x…",
+        "importButton": "Import Dompet",
+        "importing": "Mengimport...",
+        "success": "Dompet berjaya diimport!"
+      },
+      "dangerZone": {
+        "title": "Zon Bahaya",
+        "description": "Tindakan ini tidak boleh dibatalkan. Pastikan anda telah menyandarkan dompet anda.",
+        "forgetWallet": "Lupakan Dompet",
+        "forgetDescription": "Buang dompet dari peranti ini. Pastikan anda telah menyandarkan frasa pemulihan anda.",
+        "confirmTitle": "Lupakan Dompet?",
+        "confirmMessage": "Ini akan membuang dompet anda dari peranti ini. Pastikan anda telah menyandarkan frasa pemulihan anda terlebih dahulu.",
+        "cancel": "Batal",
+        "confirm": "Lupakan Dompet",
+        "walletForgotten": "Dompet dilupakan",
+        "unableToForget": "Tidak dapat melupakan dompet",
+        "resetWallet": "Set Semula Dompet",
+        "resetDescription": "Padam sepenuhnya semua data dompet dan mulakan semula."
+      },
+      "authPrompt": "Sahkan untuk mendedahkan kunci peribadi"
+    }
+  },
+  "reset": {
+    "title": "Set Semula Dompet",
+    "dangerTitle": "Tindakan ini tidak boleh dibatalkan!",
+    "warning1": "Menet semula dompet anda akan memadam secara kekal:",
+    "bullet1": "Dompet dan kunci peribadi anda",
+    "bullet2": "Frasa pemulihan anda",
+    "bullet3": "Semua tetapan dan keutamaan aplikasi",
+    "bullet4": "Sejarah transaksi",
+    "recoveryNote": "Jika anda mempunyai frasa pemulihan 12 perkataan, anda boleh memulihkan dompet anda selepas set semula.",
+    "continueButton": "Saya Faham, Teruskan",
+    "confirmTitle": "Sahkan Set Semula",
+    "confirmDescription": "Taip \"RESET\" di bawah untuk mengesahkan anda ingin memadam semua data dompet.",
+    "placeholder": "Taip RESET",
+    "typeMismatch": "Sila taip RESET untuk mengesahkan",
+    "resetButton": "Set Semula Dompet Selamanya",
+    "resettingTitle": "Menet semula...",
+    "resettingDescription": "Membersihkan semua data dompet. Sila tunggu...",
+    "completeTitle": "Set Semula Selesai",
+    "completeDescription": "Dompet anda telah diset semula. Anda boleh menyediakan dompet baru atau mengimport yang sedia ada.",
+    "startFresh": "Mulakan Semula",
+    "error": "Gagal menet semula dompet. Sila cuba lagi."
+  },
+  "export": {
+    "verifyTitle": "Sahkan Identiti",
+    "verifyDescription": "Masukkan kata laluan anda untuk mengeksport dompet anda.",
+    "verify": "Sahkan",
+    "verificationFailed": "Pengesahan gagal",
+    "passphraseTitle": "Tetapkan Frasa Laluan Eksport",
+    "passphraseDescription": "Pilih frasa laluan yang kuat untuk menyulitkan sandaran anda. Anda memerlukan frasa laluan ini untuk mengimport dompet kemudian.",
+    "enterPassphrase": "Masukkan frasa laluan",
+    "passphraseTooWeak": "Frasa laluan terlalu lemah. Gunakan sekurang-kurangnya 8 aksara.",
+    "includeSeed": "Sertakan Frasa Pemulihan",
+    "includeSeedDescription": "Disyorkan untuk sandaran lengkap",
+    "confirmTitle": "Sahkan Frasa Laluan",
+    "confirmDescription": "Masukkan semula frasa laluan anda untuk mengesahkan.",
+    "confirmPassphrase": "Sahkan frasa laluan",
+    "passphraseMismatch": "Frasa laluan tidak sepadan",
+    "warning": "Simpan sandaran ini dengan selamat. Sesiapa yang mempunyai akses kepada fail ini dan frasa laluan boleh mengakses dompet anda.",
+    "exportNow": "Eksport Dompet",
+    "exportingTitle": "Mengeksport...",
+    "exportingDescription": "Menyulitkan dan menyediakan sandaran dompet anda...",
+    "successTitle": "Eksport Selesai",
+    "successDescription": "Sandaran dompet tersulit anda telah dicipta. Simpan dengan selamat.",
+    "rememberPassphrase": "Ingat frasa laluan eksport anda - anda memerlukannya untuk mengimport sandaran ini.",
+    "errorTitle": "Eksport Gagal",
+    "failed": "Eksport gagal. Sila cuba lagi.",
+    "tryAgain": "Cuba Lagi",
+    "exportKeystore": "Eksport Sandaran Tersulit",
+    "exportKeystoreDesc": "Simpan fail keystore tersulit"
+  },
+  "security": {
+    "title": "Selamatkan Dompet Anda",
+    "subtitle": "Sediakan kata laluan atau PIN untuk melindungi dompet anda",
+    "checkingDevice": "Menyemak keselamatan peranti...",
+    "passwordOption": "Kata Laluan",
+    "passwordDesc": "8+ aksara, huruf dan nombor",
+    "pinOption": "PIN 6 Digit",
+    "pinDesc": "Cepat dan mudah diingat",
+    "enterPin": "Masukkan PIN 6 digit",
+    "confirmPin": "Sahkan PIN anda",
+    "enterPassword": "Masukkan kata laluan",
+    "confirmPassword": "Sahkan kata laluan",
+    "enableBiometrics": "Dayakan {{type}}?",
+    "biometricsDesc": "Gunakan {{type}} untuk buka kunci cepat. Anda boleh menukarnya kemudian dalam Tetapan.",
+    "enableBiometricsButton": "Dayakan {{type}}",
+    "enableBiometricsPrompt": "Sahkan untuk mendayakan buka kunci biometrik",
+    "skipBiometrics": "Langkau buat masa ini",
+    "setupComplete": "Persediaan Selesai!",
+    "walletSecured": "Dompet anda kini selamat!",
+    "continue": "Teruskan",
+    "passwordTooWeak": "Kata laluan terlalu lemah. Sila ikut cadangan.",
+    "pinMismatch": "PIN tidak sepadan",
+    "passwordMismatch": "Kata laluan tidak sepadan",
+    "setupError": "Persediaan gagal. Sila cuba lagi.",
+    "passwordTitle": "Kata Laluan",
+    "passwordDescription": "8+ aksara, keselamatan lebih kuat",
+    "pinTitle": "PIN 6 Digit",
+    "pinDescription": "Akses cepat, mudah diingat"
+  },
+  "lock": {
+    "title": "Buka Kunci Umotu",
+    "lockedOut": "Dikunci Keluar",
+    "tooManyAttempts": "Terlalu banyak percubaan. Cuba lagi dalam {{time}}.",
+    "attemptsRemaining": "{{count}} percubaan lagi",
+    "enterPassword": "Masukkan kata laluan",
+    "unlock": "Buka Kunci",
+    "wrongPin": "PIN salah",
+    "wrongPassword": "Kata laluan salah",
+    "verificationError": "Pengesahan gagal",
+    "biometricsPrompt": "Buka kunci dompet anda",
+    "unlockWithFaceId": "Buka kunci dengan Face ID?",
+    "unlockWithFingerprint": "Buka kunci dengan cap jari?",
+    "forgotPassword": "Lupa kata laluan?"
+  },
+  "deviceSecurity": {
+    "emulatorTitle": "Peranti Tidak Disokong",
+    "emulatorMessage": "Aplikasi ini tidak boleh dijalankan pada emulator atas sebab keselamatan.",
+    "rootedTitle": "Amaran Keselamatan",
+    "exitApp": "Keluar",
+    "continueAnyway": "Teruskan Jua"
+  },
+  "settingsSecurity": {
+    "title": "Keselamatan",
+    "autoLock": "Kunci Auto",
+    "autoLockDesc": "Kunci dompet selepas tidak aktif",
+    "faceId": "Face ID",
+    "fingerprint": "Cap Jari",
+    "biometricsDesc": "Buka kunci cepat dengan biometrik",
+    "changePin": "Tukar PIN",
+    "changePassword": "Tukar Kata Laluan",
+    "changeDesc": "Kemas kini kelayakan keselamatan anda",
+    "enableBiometrics": "Dayakan buka kunci biometrik",
+    "enterCurrent": "Masukkan {{type}} semasa",
+    "enterNew": "Masukkan {{type}} baru",
+    "confirmNew": "Sahkan {{type}} baru",
+    "currentPassword": "Kata laluan semasa",
+    "newPassword": "Kata laluan baru",
+    "confirmNewPassword": "Sahkan kata laluan baru",
+    "changeNow": "Tukar Sekarang",
+    "success": "Berjaya",
+    "pinChanged": "PIN berjaya ditukar",
+    "passwordChanged": "Kata laluan berjaya ditukar",
+    "changeFailed": "Gagal menukar kelayakan",
+    "autoLockOptions": {
+      "immediately": "Segera",
+      "after1min": "Selepas 1 minit",
+      "after5min": "Selepas 5 minit",
+      "after15min": "Selepas 15 minit",
+      "after1hour": "Selepas 1 jam",
+      "never": "Tidak pernah"
+    }
+  },
+  "keyReveal": {
+    "cooldownTitle": "Sila Tunggu",
+    "cooldownMessage": "Untuk keselamatan, anda boleh mendedahkan kunci anda lagi dalam {{time}}.",
+    "cooldownReason": "Ini menghalang aplikasi berniat jahat daripada mengakses kunci anda dengan cepat."
+  },
+  "passwordVerify": {
+    "title": "Sahkan Identiti",
+    "description": "Masukkan kata laluan atau PIN anda untuk mendedahkan maklumat dompet sensitif",
+    "verify": "Sahkan"
+  },
+  "passwordValidation": {
+    "veryWeak": "Sangat lemah",
+    "weak": "Lemah",
+    "fair": "Sederhana",
+    "good": "Baik",
+    "strong": "Kuat",
+    "tooShort": "Kata laluan mesti sekurang-kurangnya 8 aksara",
+    "commonPassword": "Ini adalah kata laluan yang biasa digunakan",
+    "lengthSuggestion": "Gunakan sekurang-kurangnya 12 aksara untuk keselamatan lebih baik",
+    "mixedCaseSuggestion": "Campur huruf besar dan kecil",
+    "numberSuggestion": "Tambah beberapa nombor",
+    "specialCharSuggestion": "Tambah aksara khas (!@#$%)"
+  },
+  "forgot": {
+    "title": "Set Semula Kelayakan",
+    "warning": "Untuk menet semula kata laluan atau PIN anda, anda perlu memasukkan frasa benih dompet anda. Ini membuktikan anda memiliki dompet tersebut.",
+    "warningText": "Jangan sekali-kali kongsi frasa benih anda dengan sesiapa.",
+    "continue": "Saya Faham, Teruskan",
+    "enterSeed": "Masukkan Frasa Benih",
+    "seedDescription": "Masukkan frasa benih 12 atau 24 perkataan anda. Pisahkan setiap perkataan dengan ruang.",
+    "seedPlaceholder": "Masukkan frasa benih...",
+    "verifySeed": "Sahkan Frasa Benih",
+    "invalidSeed": "Sila masukkan frasa benih 12 atau 24 perkataan yang sah",
+    "chooseMethod": "Pilih Kaedah Keselamatan",
+    "methodDescription": "Bagaimana anda ingin mengamankan dompet anda?",
+    "newPassword": "Cipta Kata Laluan Baru",
+    "newPin": "Cipta PIN Baru",
+    "newPasswordDesc": "Pilih kata laluan kuat (8+ aksara)",
+    "newPinDesc": "Masukkan PIN 6 digit",
+    "confirmPassword": "Sahkan Kata Laluan",
+    "confirmPin": "Sahkan PIN",
+    "confirmPasswordDesc": "Masukkan semula kata laluan anda untuk mengesahkan",
+    "confirmPinDesc": "Masukkan semula PIN anda untuk mengesahkan",
+    "resetNow": "Set Semula Sekarang",
+    "complete": "Set Semula Selesai",
+    "completeDescription": "Kelayakan anda telah diset semula. Anda kini boleh membuka kunci dompet dengan kata laluan atau PIN baru anda.",
+    "unlockNow": "Buka Kunci Dompet",
+    "passwordTooWeak": "Kata laluan terlalu lemah. Sila pilih kata laluan yang lebih kuat.",
+    "passwordMismatch": "Kata laluan tidak sepadan",
+    "pinMismatch": "PIN tidak sepadan",
+    "resetFailed": "Gagal menet semula kelayakan. Sila sahkan frasa benih anda.",
+    "resetError": "Ralat berlaku. Sila cuba lagi."
+  },
+  "send": {
+    "title": "Hantar",
+    "selectToken": "Pilih Token",
+    "selectTokenInfo": "Pilih token untuk dihantar. Hanya token dengan baki ditunjukkan.",
+    "noTokensWithBalance": "Tiada token dengan baki",
+    "addTokensFirst": "Tambah token ke dompet anda terlebih dahulu",
+    "enterAmount": "Masukkan Jumlah",
+    "enterRecipient": "Masukkan Penerima",
+    "review": "Semak",
+    "amount": "Jumlah",
+    "recipient": "Penerima",
+    "recipientPlaceholder": "Alamat dompet 0x...",
+    "networkFee": "Yuran Rangkaian",
+    "gasToken": "Bayar gas dengan",
+    "payingWith": "Membayar Dengan",
+    "payGasWith": "Bayar Gas Dengan",
+    "nativeGas": "UMT (asli)",
+    "stableGas": "Gas Stabil",
+    "selectStable": "Pilih stabil",
+    "max": "Maks",
+    "next": "Seterusnya",
+    "continue": "Teruskan",
+    "confirm": "Sahkan Hantaran",
+    "confirmSend": "Sahkan Hantar",
+    "sending": "Menghantar...",
+    "failed": "Transaksi Gagal",
+    "viewInExplorer": "Lihat dalam Explorer",
+    "done": "Selesai",
+    "cancel": "Batal",
+    "send": "Hantar",
+    "balance": "Baki",
+    "available": "Tersedia",
+    "to": "Kepada",
+    "network": "Rangkaian",
+    "step": "Langkah",
+    "estimating": "Menganggarkan…",
+    "umtNative": "UMT (asli)",
+    "txSpeed": "Kelajuan Transaksi",
+    "transactionSpeed": "Kelajuan Transaksi",
+    "speed": {
+      "slow": "Perlahan",
+      "normal": "Normal",
+      "fast": "Cepat"
+    },
+    "gasNotice": {
+      "stablecoin": "Gas akan dibayar dengan stablecoin.",
+      "reserved": "Kami telah menempah {{amount}} {{symbol}} untuk gas; anda boleh menghantar maksimum {{max}}."
+    },
+    "errors": {
+      "invalidAddress": "Alamat penerima tidak sah",
+      "invalidAmount": "Masukkan jumlah yang sah",
+      "insufficientBalance": "Baki tidak mencukupi",
+      "insufficientGas": "Baki tidak mencukupi untuk gas",
+      "insufficientGasWithHint": "Baki tidak mencukupi untuk gas. Tambah UMT atau stablecoin yang disokong.",
+      "notEnoughForGas": "Baki tidak cukup untuk menampung gas",
+      "noStableGas": "Baki UMT tidak cukup untuk gas dan tiada stable yang disokong boleh menampungnya.",
+      "permitFailed": "Kebenaran atau kelulusan gagal untuk token gas",
+      "relayNotConfigured": "Relay gas stabil tidak dikonfigurasi",
+      "transactionReverted": "Transaksi dibalikkan pada rantaian.",
+      "approvalNeeded": "Token gas memerlukan kelulusan tetapi tiada UMT tersedia untuk kelulusan. Tambah sedikit UMT atau gunakan token yang disokong permit."
+    },
+    "addressBook": {
+      "title": "Buku Alamat",
+      "addNew": "Tambah Baharu",
+      "noContacts": "Tiada alamat yang disimpan",
+      "saveForQuickAccess": "Simpan alamat untuk akses pantas",
+      "editContact": "Edit Kenalan",
+      "deleteContact": "Padam Kenalan",
+      "addressNotSaved": "Alamat tidak disimpan",
+      "addLabel": "Tambah label",
+      "enterValidAddress": "Masukkan alamat yang sah dahulu",
+      "saved": "Disimpan",
+      "save": "Simpan"
+    },
+    "success": {
+      "title": "Transaksi Dihantar!",
+      "hash": "Hash",
+      "viewInExplorer": "Lihat dalam Explorer",
+      "close": "Tutup"
+    },
+    "batch": {
+      "mode": "Mod Kelompok",
+      "singleMode": "Penerima Tunggal",
+      "addRecipient": "Tambah penerima",
+      "noRecipients": "Belum ada penerima ditambah",
+      "addFromTagOrBook": "Tambah dari tag atau buku",
+      "invalidAddress": "Alamat tidak sah: {{address}}",
+      "invalidAmount": "Jumlah tidak sah untuk {{recipient}}",
+      "totalExceedsBalance": "Jumlah melebihi baki",
+      "sendingTo": "Menghantar kepada {{count}} penerima",
+      "sendingTo_plural": "Menghantar kepada {{count}} penerima",
+      "recipients": "Penerima",
+      "addresses": "{{count}} alamat",
+      "addresses_plural": "{{count}} alamat",
+      "addByTag": "Tambah mengikut tag",
+      "noTags": "Belum ada tag",
+      "createFirstTag": "Cipta tag pertama anda dalam buku alamat",
+      "addFromTag": "Tambah dari tag",
+      "selectTag": "Pilih tag",
+      "remove": "Buang",
+      "sendAll": "Hantar Semua ({{count}})",
+      "batchSend": "Hantar Kelompok",
+      "badge": "KELOMPOK",
+      "successFail": "{{success}} berjaya, {{fail}} gagal",
+      "successful": "Berjaya",
+      "sentStatus": "Dihantar",
+      "failedStatus": "Gagal",
+      "details": "Butiran Pemindahan Kelompok",
+      "total": "Jumlah",
+      "tagPicker": {
+        "title": "Pilih Tag",
+        "noTags": "Tiada tag tersedia",
+        "createHint": "Tambah tag kepada kenalan dalam buku dahulu"
+      },
+      "tags": {
+        "manage": "Urus Tag",
+        "add": "Tambah Tag",
+        "remove": "Buang Tag",
+        "create": "Cipta Tag",
+        "newTag": "Nama tag baharu",
+        "addToContact": "Tambah tag kepada kenalan"
+      }
+    }
+  },
+  "receive": {
+    "title": "Terima",
+    "yourAddress": "Alamat Dompet Anda",
+    "scanQR": "Imbas kod QR untuk menerima",
+    "copyAddress": "Salin Alamat",
+    "share": "Kongsi"
+  },
+  "scan": {
+    "tabs": {
+      "pay": "Bayar",
+      "myQr": "QR Saya"
+    },
+    "pay": {
+      "title": "Bayar",
+      "description": "Imbas kod QR rakan anda untuk bayar terus ke dompet mereka",
+      "allowCamera": "Benarkan Kamera",
+      "requesting": "Meminta…",
+      "openSettings": "Buka Tetapan",
+      "sendTo": "Hantar kepada",
+      "amount": "Jumlah",
+      "rescan": "Imbas Semula",
+      "continue": "Teruskan"
+    },
+    "receive": {
+      "title": "Terima",
+      "description": "Imbas kod QR ini untuk menghantar bayaran ke alamat ini",
+      "tapToCopy": "Ketuk untuk salin alamat",
+      "copied": "Disalin ke papan klip!"
+    }
+  },
+  "history": {
+    "title": "Sejarah Transaksi",
+    "sent": "Dihantar",
+    "received": "Diterima",
+    "token": "Token",
+    "external": "Luaran",
+    "to": "Kepada: ",
+    "from": "Daripada: ",
+    "viewInExplorer": "Lihat dalam Explorer",
+    "empty": {
+      "title": "Tiada Transaksi Lagi",
+      "description": "Sejarah transaksi anda akan muncul di sini selepas anda menghantar atau menerima token."
+    },
+    "status": {
+      "confirmed": "Disahkan",
+      "pending": "Sedang Menunggu",
+      "failed": "Gagal"
+    },
+    "details": {
+      "title": "Butiran Transaksi",
+      "status": "Status",
+      "type": "Jenis",
+      "to": "Kepada",
+      "from": "Daripada",
+      "token": "Token",
+      "block": "Blok",
+      "gasCost": "Kos Gas",
+      "hash": "Hash",
+      "source": "Sumber",
+      "balanceDetected": "Baki dikesan",
+      "inferredNote": "Transaksi ini dikesan daripada perubahan baki. Butiran tepat pada rantaian tidak tersedia."
+    },
+    "time": {
+      "justNow": "Baru sahaja",
+      "minsAgo": "{{count}}m lalu",
+      "hoursAgo": "{{count}}j lalu",
+      "daysAgo": "{{count}}h lalu"
+    }
+  },
+  "settings": {
+    "title": "Tetapan",
+    "account": {
+      "title": "Akaun & Penampilan",
+      "walletAddress": "Alamat Dompet",
+      "copy": "Salin",
+      "copied": "Disalin"
+    },
+    "theme": {
+      "title": "Tema",
+      "light": "Cerah",
+      "dark": "Gelap",
+      "system": "Sistem"
+    },
+    "language": {
+      "title": "Bahasa",
+      "select": "Pilih Bahasa",
+      "current": "Semasa"
+    },
+    "display": {
+      "title": "Paparan",
+      "description": "Sesuaikan penampilan skrin utama anda.",
+      "showSentinelCard": "Tunjuk Kad Pendapatan Sentinel",
+      "showSentinelCardDesc": "Tunjuk pendapatan pada skrin utama",
+      "showDailyRewardsCard": "Tunjuk Kad Ganjaran Harian",
+      "on": "HIDUP",
+      "off": "MATI",
+      "sentinelSettings": "Tetapan Sentinel",
+      "sentinelSettingsDesc": "Urus ikatan, ganjaran & tuntutan auto"
+    },
+    "sentinelDisplay": {
+      "title": "Paparan Sentinel",
+      "showSentinelCard": "Tunjuk Kad Sentinel",
+      "showSentinelCardDesc": "Paparkan kad pendapatan sentinel pada skrin utama",
+      "sentinelSettings": "Tetapan Sentinel",
+      "sentinelSettingsDesc": "Konfigurasi nod sentinel dan ganjaran"
+    },
+    "verification": {
+      "title": "Pengesahan",
+      "description": "Sahkan kemanusiaan anda dengan Inlyf untuk membuka ganjaran harian. Semakan liveness cepat; sahkan semula secara berkala.",
+      "open": "Mulakan Pengesahan",
+      "refresh": "Segarkan Pengesahan",
+      "status": "Status",
+      "verified": "Disahkan",
+      "notVerified": "Belum Disahkan",
+      "expiresOn": "Tamat pada",
+      "daysRemaining": "Hari lagi",
+      "upToDate": "Pengesahan terkini",
+      "refreshAvailableIn": "Refresh tersedia dalam {{days}} hari"
+    },
+    "network": {
+      "title": "Rangkaian",
+      "description": "Konfigurasi sambungan rangkaian blockchain.",
+      "testnet": "Testnet",
+      "mainnet": "Mainnet (akan datang tidak lama lagi)",
+      "rpcEndpoint": "Hujung RPC",
+      "pingRpc": "Ping RPC",
+      "testing": "Menguji...",
+      "rpcOk": "RPC OK",
+      "rpcError": "Ralat RPC",
+      "save": "Simpan",
+      "saved": "Tetapan disimpan",
+      "connectionStatus": "Status Sambungan",
+      "connected": "Disambung",
+      "disconnected": "Terputus"
+    },
+    "cache": {
+      "title": "Cache",
+      "description": "Kosongkan data cache untuk menyegarkan maklumat token dan kontrak.",
+      "clearCache": "Kosongkan Cache",
+      "cacheCleared": "Cache dibersihkan! Mulakan semula untuk mengguna pakai."
+    },
+    "chainGuardian": {
+      "title": "Chain Guardian",
+      "description": "Bantu mengamankan blockchain dengan mengekalkan telefon anda dalam talian. Selesaikan sekurang-kurangnya satu kerja pensampelan sehari untuk kekal layak mendapat ganjaran.",
+      "wifiOnly": "WiFi Sahaja",
+      "wifiOnlyHint": "Menjimatkan data mudah alih",
+      "minBattery": "Bateri Minimum",
+      "minBatteryHint": "Tidak akan berjalan di bawah tahap ini",
+      "background": "Jalankan di Latar Belakang",
+      "backgroundHint": "Berfungsi walaupun aplikasi ditutup",
+      "lastSample": "Aktiviti Terakhir",
+      "noSamples": "Tiada aktiviti lagi. Kekalkan aplikasi dibuka untuk bermula.",
+      "staleWarning": "Tidak dilihat hari ini — buka semula aplikasi untuk menyambung semula.",
+      "androidBatteryWarning": "Pengoptimuman bateri mungkin menghalang pensampelan",
+      "androidBatteryHint": "Pergi ke Tetapan → Aplikasi → Umotu → Bateri → pilih \"Tidak Terhad\" untuk benarkan pensampelan latar belakang.",
+      "openSettings": "Ketuk untuk buka tetapan",
+      "tip": "Dayakan \"Jalankan di Latar Belakang\" untuk potensi pendapatan terbaik.",
+      "runNow": "Jalankan sekarang",
+      "running": "Sedang berjalan…",
+      "lastError": "Ralat terakhir",
+      "status": {
+        "active": "Aktif",
+        "inactive": "Tidak Aktif",
+        "paused": "Dijeda"
+      }
+    },
+    "permissions": {
+      "title": "Kebenaran",
+      "description": "Urus Mini Apps yang disambung dan kebenaran mereka.",
+      "openMiniApps": "Buka Mini Apps",
+      "manageConnections": "Urus",
+      "noConnections": "Tiada sambungan",
+      "revokeAccess": "Batalkan Akses",
+      "lastUsed": "Terakhir digunakan"
+    }
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Selamat Datang ke Umotu",
+      "subtitle": "$10 sehari, semua orang di mana sahaja",
+      "getStarted": "Mulakan"
+    },
+    "language": {
+      "title": "Pilih Bahasa Anda",
+      "continue": "Teruskan"
+    },
+    "wallet": {
+      "title": "Dompet Anda",
+      "createNew": "Cipta Dompet Baru",
+      "importExisting": "Import Sedia Ada",
+      "creating": "Mencipta dompet..."
+    },
+    "verify": {
+      "title": "Sahkan Anda Manusia",
+      "description": "Untuk menerima ganjaran harian, sahkan anda manusia unik.",
+      "continue": "Teruskan"
+    }
+  },
+  "poh": {
+    "subtitle": "Buka ganjaran harian",
+    "description": "Sahkan liveness dengan Inlyf untuk membuka ganjaran. Tiada biometrik disimpan pada rantaian; hanya credential berumur pendek dikeluarkan.",
+    "howItWorks": "Bagaimana ia berfungsi",
+    "howItWorksDesc": "Semakan liveness pendek (imbasan muka) mengesahkan anda manusia. Credential anda bertahan 90 hari dan boleh disegarkan bila-bila masa.",
+    "adultQuestion": "Adakah anda dewasa (18+)?",
+    "yesAdult": "Ya, 18+",
+    "noMinor": "Tidak / Kanak-kanak",
+    "selectAge": "Sila pilih satu pilihan",
+    "verifying": "Mengesahkan...",
+    "startVerification": "Mulakan Pengesahan",
+    "skipForNow": "Langkau buat masa ini",
+    "status": {
+      "notVerified": "Belum disahkan.",
+      "notVerifiedDetail": "Mulakan pengesahan untuk membuka ganjaran.",
+      "unavailable": "Status tidak tersedia.",
+      "verified": "Anda disahkan.",
+      "validFor": "Sah selama ~{{days}} hari",
+      "validFor_plural": "Sah selama ~{{days}} hari",
+      "expired": "Pengesahan tamat atau tidak ditemui.",
+      "expiredDetail": "Jalankan semula liveness untuk menyegarkan credential anda."
+    }
+  },
+  "sentinelSettings": {
+    "header": "Sertai kolam Sentinel untuk membantu memuktamadkan blok. Ikat sekurang-kurangnya jumlah minimum, kekalkan peranti anda dalam talian, dan dapatkan ganjaran.",
+    "loading": "Memuatkan data sentinel...",
+    "unavailable": "Modul sentinel tidak tersedia",
+    "yourStatus": "Status Anda",
+    "wallet": "Dompet",
+    "bondedAmount": "Jumlah Diikat",
+    "minimumBond": "Ikatan Minimum",
+    "status": {
+      "notBonded": "Tidak diikat",
+      "bonded": "Diikat",
+      "unbonding": "Sedang dibuka ikatan (tersedia {{date}})"
+    },
+    "rewards": {
+      "title": "Ganjaran",
+      "claimableNow": "Boleh Dituntut Sekarang",
+      "accruing": "Sedang Dikumpul",
+      "totalClaimed": "Jumlah Dituntut",
+      "claiming": "Menuntut...",
+      "claimRewards": "Tuntut Ganjaran"
+    },
+    "bond": {
+      "createTitle": "Cipta Ikatan",
+      "topUpTitle": "Tambah Ikatan",
+      "createDescription": "Ikat UMT untuk menyertai jawatankuasa sentinel dan mula mendapatkan ganjaran.",
+      "topUpDescription": "Tingkatkan pegangan anda untuk mendapatkan bahagian ganjaran yang lebih besar.",
+      "amountLabel": "Jumlah (UMT)",
+      "processing": "Memproses...",
+      "bond": "Ikat",
+      "topUp": "Tambah",
+      "tx": "Tx"
+    },
+    "autoClaim": {
+      "title": "Tuntutan Auto",
+      "description": "Biarkan relayer menuntut ganjaran sentinel anda secara automatik apabila ia terkumpul.",
+      "checking": "Menyemak...",
+      "enabled": "Didayakan",
+      "disabled": "Dinayahdayakan",
+      "expires": "Tamat",
+      "processing": "Memproses...",
+      "enable": "Dayakan Tuntutan Auto",
+      "disable": "Nyahdayakan Tuntutan Auto"
+    },
+    "activity": {
+      "title": "Aktiviti Terkini",
+      "claims": "Tuntutan",
+      "slashes": "Potongan",
+      "noClaims": "Tiada tuntutan dalam {{blocks}}k blok terakhir.",
+      "noSlashes": "Tiada peristiwa potongan dalam tetingkap terkini.",
+      "unknown": "tidak diketahui"
+    },
+    "errors": {
+      "configureEnv": "Konfigurasi pemboleh ubah env RPC + kontrak sentinel.",
+      "noWallet": "Cipta atau import dompet untuk menyertai jawatankuasa sentinel.",
+      "loadFailed": "Gagal memuatkan data sentinel."
+    },
+    "toast": {
+      "rewardsClaimed": "Ganjaran sentinel dituntut.",
+      "noRewards": "Tiada ganjaran tertunggak untuk dituntut.",
+      "claimFailed": "Tuntutan gagal.",
+      "autoClaimEnabled": "Tuntutan auto sentinel didayakan",
+      "autoClaimDisabled": "Tuntutan auto sentinel dinyahdayakan",
+      "autoClaimFailed": "Togol tuntutan auto gagal",
+      "configureBondAddress": "Konfigurasi alamat ikatan sentinel",
+      "rpcNotSet": "RPC tidak ditetapkan",
+      "minBondUnavailable": "Ikatan min tidak tersedia",
+      "enterBondAmount": "Masukkan jumlah ikatan",
+      "minBondRequired": "Ikatan awal mesti sekurang-kurangnya {{amount}} UMT",
+      "topUpGreaterThanZero": "Jumlah tambahan mesti lebih daripada 0",
+      "insufficientBalance": "Baki tidak mencukupi untuk ikatan + gas",
+      "bondSubmitted": "Transaksi ikatan dihantar",
+      "topUpSubmitted": "Transaksi tambahan dihantar",
+      "bondConfirmed": "Ikatan disahkan",
+      "topUpConfirmed": "Tambahan disahkan",
+      "bondReverted": "Ikatan dibalikkan pada rantaian",
+      "bondFailed": "Ikatan gagal"
+    }
+  },
+  "miniapps": {
+    "title": "MiniApps",
+    "subtitle": "Teroka aplikasi dibina pada Umotu",
+    "explore": "Teroka aplikasi dibina pada Umotu",
+    "noApps": "Tiada aplikasi tersedia lagi",
+    "browseByCategory": "Layari Mengikut Kategori",
+    "appsCount": "{{count}} aplikasi",
+    "featured": "DITONJOLKAN",
+    "comingSoon": "Akan Datang Tidak Lama Lagi",
+    "liveApps": "Aplikasi Langsung",
+    "available": "TERSEDIA",
+    "pohDescription": "Sahkan kemanusiaan anda dengan Inlyf untuk membuka ganjaran harian.",
+    "vision": {
+      "title": "Visi Kami",
+      "tagline": "$10 sehari, semua orang di mana sahaja",
+      "description": "Umotu sedang membina infrastruktur untuk dunia di mana semua orang boleh menyertai ekonomi global—tanpa mengira tempat tinggal atau bank yang digunakan.",
+      "readMore": "Baca Visi Penuh",
+      "pillars": {
+        "title": "Tiga Prinsip Teras",
+        "ubi": {
+          "title": "$10/Sehari, Semua Orang Di Mana Sahaja",
+          "description": "Pendapatan asas sejagat sebagai ganjaran diperoleh untuk mengamankan rangkaian. Sesiapa dengan telefon boleh menyertai dan memperoleh."
+        },
+        "capital": {
+          "title": "Modal Bergerak Bebas",
+          "description": "Hampir tiada geseran untuk bayaran dan pemindahan—merentas sempadan atau tempatan. Perniagaan bayar ~0.1% untuk menampung kos platform, individu bayar tiada."
+        },
+        "sovereignty": {
+          "title": "Hormat Kedaulatan Monetari",
+          "description": "Kami tidak menggantikan mata wang fiat—kami menjadikannya berfungsi lebih baik. Bank mengeluarkan stablecoin dipeg pada mata wang tempatan mereka. Dasar monetari menjadi lebih berkesan dengan jangkauan lebih luas dan geseran kurang."
+        }
+      },
+      "notReplacing": "Umotu bukan bersaing dengan bank pusat. Kami membina infrastruktur lebih baik untuk mata wang fiat: geseran kurang, akses global, dan kecekapan pasaran serta ketahanan yang lebih baik."
+    },
+    "building": {
+      "title": "Kami Sedang Membina Ekosistem",
+      "description": "Aplikasi ini menunjukkan apa yang mungkin pada Umotu. Ada yang sedia sekarang, yang lain akan datang tidak lama lagi. Pembangun di seluruh dunia dijemput untuk membina dan melancarkan pada platform kami.",
+      "developerDocs": "Dokumen Pembangun"
+    },
+    "categories": {
+      "payments": {
+        "name": "Bayaran & Kewangan",
+        "apps": {
+          "sendMoney": {
+            "name": "Hantar Wang",
+            "description": "Hantar UMT atau stablecoin secara serta-merta kepada sesiapa, di mana sahaja di dunia—tiada bank diperlukan.",
+            "example": "Hantar $20 kepada keluarga anda di luar negara dalam beberapa saat, bukan hari. Tiada yuran tersembunyi."
+          },
+          "billPay": {
+            "name": "Bayar Bil",
+            "description": "Bayar utiliti, telefon, internet, dan lain-lain terus dari dompet anda."
+          },
+          "savings": {
+            "name": "Bulatan Simpanan",
+            "description": "Simpanan berputar tradisional (tontine, chit fund) dibuat tanpa kepercayaan dengan kontrak pintar."
+          },
+          "microLoans": {
+            "name": "Pinjaman Mikro",
+            "description": "Pinjaman peer-to-peer disokong oleh kemanusiaan dan reputasi anda yang disahkan."
+          }
+        }
+      },
+      "transport": {
+        "name": "Pengangkutan & Penghantaran",
+        "apps": {
+          "rideSharing": {
+            "name": "Perkongsian Perjalanan",
+            "description": "Tempah perjalanan dibayar dalam kripto. Pemandu simpan lebih, penumpang bayar kurang—tiada orang tengah ambil 30%.",
+            "example": "Perjalanan teksi di Lagos berharga ₦800. Pemandu dapat ₦799.2 bukannya ₦560."
+          },
+          "delivery": {
+            "name": "Penghantaran",
+            "description": "Pesan makanan, barangan runcit, atau bungkusan. Kurier dapat gaji adil dalam token stabil.",
+            "example": "Pesan makan tengah hari, bayar dalam stablecoin tempatan anda, kurier dibayar serta-merta."
+          },
+          "publicTransit": {
+            "name": "Pengangkutan Awam",
+            "description": "Bayar bas, metro, dan kereta api dengan satu ketukan. Tiada perlu beli kad tambang."
+          }
+        }
+      },
+      "travel": {
+        "name": "Perjalanan & Hospitaliti",
+        "apps": {
+          "hotels": {
+            "name": "Hotel & Penginapan",
+            "description": "Tempah penginapan di seluruh dunia. Tuan rumah terima stablecoin, tetamu jimat yuran.",
+            "example": "Tempah bilik di Bali untuk $40/malam. Tuan rumah terima $39.96."
+          },
+          "flights": {
+            "name": "Penerbangan",
+            "description": "Cari dan tempah penerbangan. Bayar dalam kripto, dapat ganjaran UMT."
+          },
+          "tours": {
+            "name": "Lawatan Tempatan",
+            "description": "Tempah pengalaman dengan pemandu tempatan. Bayaran pergi terus kepada mereka."
+          }
+        }
+      },
+      "commerce": {
+        "name": "Perdagangan & Membeli-belah",
+        "apps": {
+          "localMarket": {
+            "name": "Pasaran Tempatan",
+            "description": "Beli dan jual secara tempatan. Bayaran berasaskan QR menjadikan perdagangan jalanan lancar.",
+            "example": "Penjual di Jakarta terima USDC. Pelanggan bayar, penjual lihat dana serta-merta."
+          },
+          "ecommerce": {
+            "name": "E-dagang",
+            "description": "Beli-belah dalam talian daripada pedagang di seluruh dunia. Tiada yuran kad, tiada caj balik.",
+            "example": "Beli elektronik dari Shenzhen. Bayar dalam stablecoin, jimat 3% berbanding kad kredit."
+          },
+          "marketplace": {
+            "name": "Pasaran Peer",
+            "description": "Senaraikan barang untuk dijual, beli daripada orang lain. Escrow lindungi kedua-dua pihak."
+          }
+        }
+      },
+      "services": {
+        "name": "Perkhidmatan & Kerja",
+        "apps": {
+          "remittance": {
+            "name": "Pengiriman Wang",
+            "description": "Hantar wang pulang. Penerima boleh keluarkan ke mata wang tempatan atau kekalkan digital.",
+            "example": "Hantar $200 dari USA ke Filipina. Penerima dapat ₱11,000+ bukannya ₱10,400."
+          },
+          "freelance": {
+            "name": "Kerja Bebas",
+            "description": "Dibayar untuk kerja gig serta-merta. Tiada tunggu 30 hari untuk pemindahan bank."
+          },
+          "homeServices": {
+            "name": "Perkhidmatan Rumah",
+            "description": "Upah tukang paip, elektrik, pembersih. Bayar hanya apabila kerja selesai."
+          }
+        }
+      }
+    },
+    "business": {
+      "title": "Bina Perniagaan Anda pada Umotu",
+      "subtitle": "Lancarkan aplikasi dengan bayaran terbina dalam",
+      "description": "Cipta aplikasi yang mengetuk ekosistem Umotu—jutaan manusia disahkan dengan pendapatan harian, sedia untuk bertransaksi. Tiada sakit kepala integrasi bayaran.",
+      "benefits": {
+        "noFees": "Yuran pemprosesan bayaran hampir sifar—simpan 99.9% hasil",
+        "verifiedUsers": "Semua pengguna adalah manusia disahkan—tiada bot atau penipuan",
+        "globalReach": "Jangkau pengguna di 190+ negara dari hari pertama",
+        "instantPayments": "Penyelesaian serta-merta—tiada kelewatan bayaran 30 hari"
+      },
+      "exampleTitle": "Contoh Penggunaan",
+      "exampleText": "Aplikasi perkongsian perjalanan pada Umotu simpan 99.9% tambang berbanding 70% pada platform tradisional. Pemandu dapat lebih, penumpang bayar kurang.",
+      "docsButton": "Baca Dokumen",
+      "buildButton": "Mula Membina"
+    },
+    "bank": {
+      "title": "Adakah Anda Sebuah Bank?",
+      "subtitle": "Keluarkan stablecoin pada Umotu",
+      "description": "Institusi kewangan berlesen boleh mengeluarkan stablecoin mata wang tempatan pada Umotu dan mengetuk ekonomi UBI yang semakin berkembang dengan jutaan pengguna.",
+      "benefits": {
+        "reserves": "Dapat hasil daripada simpanan: labur dalam bon dan aset berisiko rendah",
+        "mintRedeem": "Caj yuran mint/redeem: biasanya 0.1% pada penukaran fiat ↔ stablecoin",
+        "users": "Akses jutaan penerima UBI harian aktif",
+        "global": "Kembangkan jangkauan anda melampaui sempadan serta-merta",
+        "custody": "Simpanan anda, jagaan anda: kawalan penuh ke atas aset sandaran"
+      },
+      "revenueModel": "Bagaimana Pengeluar Mendapat",
+      "revenueNote": "Seperti Tether dan pengeluar utama lain, hasil datang daripada hasil simpanan dan yuran penukaran. Dengan jutaan pengguna menerima UBI harian, isipadu mint/redeem boleh besar.",
+      "futureNote": "Pengeluar mungkin juga menerima bahagian yuran transaksi pada masa depan apabila protokol berkembang.",
+      "learnMore": "Ketahui Lagi",
+      "applyButton": "Mohon Sekarang"
+    }
+  },
+  "news": {
+    "title": "Berita & Kemas Kini",
+    "description": "Kekal terkini dengan pengumuman terbaru, tip, dan amaran keselamatan daripada pasukan Umotu.",
+    "empty": "Tiada berita buat masa ini",
+    "unread": "Baru",
+    "unreadCount": "{{count}} baru",
+    "markAsRead": "Tandakan sebagai dibaca",
+    "types": {
+      "announcement": "Pengumuman",
+      "tip": "Tip",
+      "security": "Keselamatan",
+      "airdrop": "Airdrop",
+      "update": "Kemas Kini"
+    }
+  },
+  "governance": {
+    "title": "Tadbir Urus",
+    "subtitle": "Bentuk masa depan Umotu",
+    "description": {
+      "title": "Suara Anda Penting",
+      "body": "Bantu bentuk masa depan Umotu dengan mengundi cadangan komuniti. Yayasan Umotu mengatur undian ini, tetapi komuniti yang memutuskan."
+    },
+    "empty": "Tiada cadangan aktif",
+    "emptyHint": "Semak semula kemudian untuk keputusan komuniti baru untuk diundi.",
+    "newPolls": "Baru",
+    "newPollsCount": "{{count}} baru",
+    "vote": "undi",
+    "votes": "undi",
+    "endsIn": "Berakhir dalam {{time}}",
+    "ended": "Berakhir",
+    "tapToVote": "Ketuk pilihan di atas untuk mengundi",
+    "submitting": "Menghantar undian...",
+    "alreadyVoted": {
+      "title": "Sudah Mengundi",
+      "message": "Anda sudah mengundi dalam cadangan ini."
+    },
+    "confirm": {
+      "title": "Sahkan Undian",
+      "message": "Undi untuk",
+      "note": "Tindakan ini tidak boleh dibatalkan.",
+      "submit": "Hantar Undian"
+    },
+    "success": {
+      "title": "Undian Dihantar!",
+      "message": "Terima kasih kerana menyertai tadbir urus komuniti."
+    },
+    "error": {
+      "title": "Undian Gagal",
+      "message": "Gagal menghantar undian. Sila cuba lagi."
+    }
+  },
+  "learn": {
+    "title": "Belajar",
+    "subtitle": "Segala yang anda perlu tahu tentang Umotu",
+    "featured": "DITONJOLKAN",
+    "whatIs": {
+      "title": "Apakah Umotu?",
+      "subtitle": "$10 sehari, semua orang di mana sahaja",
+      "intro": "Umotu bertujuan membolehkan sesiapa memperoleh kira-kira $10/sehari menggunakan hanya telefon pintar. Tiada perkakasan mahal, tiada kemahiran khas, tiada sempadan.",
+      "howDifferent": "Bagaimana ia berbeza?",
+      "noMiddleman": "Tiada orang tengah: Anda berinteraksi terus dengan rangkaian—tiada akaun bank diperlukan",
+      "globalAccess": "Akses global: Berfungsi di mana sahaja dengan internet",
+      "youOwnIt": "Anda miliki: Dompet anda, kunci anda, kawalan anda",
+      "vision": "Visi",
+      "visionText": "Berbilion orang boleh membantu menjaga ledger awam jujur dan memperoleh untuk itu. Pada Umotu, telefon melakukan semakan ringan yang menjadikan rangkaian boleh dipercayai.",
+      "nameOrigin": "Asal Nama",
+      "nameOriginText": "Umotu diilhamkan daripada Paʻumotu, bahasa Polinesia. Kami menggunakan nama ini dengan hormat sebagai peringatan untuk membina untuk orang biasa."
+    },
+    "earn": {
+      "title": "Bagaimana Anda Memperoleh",
+      "subtitle": "Telefon anda bekerja; anda dibayar",
+      "intro": "Telefon anda melakukan tugas kecil yang membantu semua orang—kemudian anda mendapat ganjaran.",
+      "steps": "Tiga Langkah Mudah",
+      "step1": "1) Buktikan anda manusia: semakan liveness cepat (dan penyegaran berkala) memastikan setiap orang satu akaun.",
+      "step2": "2) Bantu rangkaian: telefon anda menjalankan pensampelan Ketersediaan Data (DA) dan semakan ringan lain di latar belakang.",
+      "step3": "3) Dapat ganjaran harian: anda dibayar untuk kerja ini, dengan sasaran kira-kira $10/sehari bergantung pada dasar rangkaian.",
+      "localCurrency": "Dibayar dalam Mata Wang Anda",
+      "localCurrencyText": "Pilih token pembayaran: stablecoin mata wang tempatan (jika tersedia) atau UMT. Jumlah sasarkan nilai ~$10 USD dan mungkin diselaraskan dengan penyertaan dan keadaan pasaran."
+    },
+    "whereMoney": {
+      "title": "Dari Mana $10 Datang?",
+      "subtitle": "Anda memperoleh kerana anda melakukan kerja",
+      "intro": "Ia soalan #1. Jawapan pendek: kerana anda menyediakan perkhidmatan yang rangkaian perlukan.",
+      "realWork": "Telefon Anda Melakukan Kerja Sebenar",
+      "realWork1": "Pensampelan Ketersediaan Data: telefon anda menyemak data blok tersedia dan betul",
+      "realWork2": "Penyertaan Manusia: anda membuktikan satu-orang-satu-akaun untuk menghalang bot dan spam",
+      "realWork3": "Tugas ini melindungi semua orang; tanpanya rangkaian lemah",
+      "valueSource": "Dua Sumber Nilai",
+      "utility": "Utiliti: bayaran cepat, yuran rendah yang orang pilih gunakan",
+      "consensus": "Konsensus: nilai yang berkembang apabila lebih ramai orang boleh mengesahkan dan bersetuju pada peraturan",
+      "distribution": "Bagaimana Ganjaran Diedarkan",
+      "newTokens": "Token UMT baru dicipta dan dikongsi dengan peserta telefon disahkan (bukan dengan pengesah)",
+      "fees": "Sebahagian yuran dan bida pembina dikongsi dengan sentinel telefon untuk memuktamadkan blok",
+      "treasury": "Sebahagian kecil membiayai penyelenggaraan berterusan dan program kestabilan",
+      "whyDifferent": "Mengapa Ini Berbeza",
+      "btcProblem": "Bitcoin memberi ganjaran kepada pelombong khas (intensif modal)",
+      "ethProblem": "Ethereum memberi ganjaran kepada staker besar (intensif modal)",
+      "umotuSolution": "Umotu memberi ganjaran kepada telefon biasa (kos praktikal rendah untuk menyertai)",
+      "conclusion": "Ia bukan pemberian: anda dibayar untuk kerja yang menjaga infrastruktur kewangan berkongsi jujur dan berguna."
+    },
+    "security": {
+      "title": "Keselamatan Dompet",
+      "subtitle": "Lindungi wang anda",
+      "intro": "Dompet anda seperti peti besi digital yang hanya anda kawal.",
+      "recovery": "12 Perkataan & Kunci Peribadi Anda",
+      "recoveryText": "12 perkataan rahsia anda (frasa pemulihan) dan kunci peribadi anda kedua-duanya membuka dompet anda. Sesiapa yang mempunyai salah satu boleh memindahkan dana anda.",
+      "rules": "Peraturan Emas",
+      "rule1": "JANGAN sekali-kali kongsi 12 perkataan atau kunci peribadi anda dengan sesiapa—bukan juga penyumbang Umotu.",
+      "rule2": "Tulis 12 perkataan anda pada kertas dan simpan di luar talian. Jangan simpan dalam tangkapan skrin, foto, atau nota awan.",
+      "rule3": "Jika anda mengeksport kunci peribadi anda, simpan di luar talian (kertas, perkakasan, atau pengurus tersulit yang anda percayai sepenuhnya).",
+      "rule4": "Jika anda hilang 12 perkataan dan kunci peribadi anda, tiada siapa boleh memulihkan dompet anda.",
+      "warning": "Penting",
+      "warningText": "Kunci peribadi anda memberikan akses penuh. Mendedahkan atau menyalinnya ke aplikasi lain boleh mendedahkan dana anda. Hanya eksport jika anda faham risikonya.",
+      "reveal": "Dedahkan / Eksport Kunci Peribadi",
+      "revealText": "Anda boleh mendedahkan atau mengeksport kunci peribadi anda dalam Tetapan Dompet. Kami memerlukan biometrik/PIN, tunjuk hanya untuk beberapa saat, dan tidak muat naiknya. Pertimbangkan menggunakan dompet perkakasan untuk baki besar.",
+      "bestPractices": "Amalan Terbaik",
+      "best1": "Dayakan kunci skrin & biometrik pada telefon anda.",
+      "best2": "Kekalkan aplikasi dikemas kini untuk mendapatkan pembaikan keselamatan terkini.",
+      "best3": "Gunakan dompet berasingan untuk simpanan besar; kekalkan jumlah kecil pada telefon anda untuk kegunaan harian.",
+      "scamBannerTitle": "Tiada Siapa Yang Sahih Akan Meminta",
+      "scamBannerText": "Jika sesiapa meminta 12 perkataan atau kunci peribadi anda, itu penipuan."
+    },
+    "stablecoins": {
+      "title": "Memahami Stablecoin",
+      "subtitle": "Wang digital yang mengikuti mata wang tempatan",
+      "intro": "Stablecoin adalah token digital direka untuk mengikuti wang biasa (seperti USD, ZAR, NGN).",
+      "examples": "Contoh",
+      "example1": "1 ZAR1 ≈ 1 Rand Afrika Selatan",
+      "example2": "1 USD1 ≈ 1 Dolar AS",
+      "example3": "1 NGN1 ≈ 1 Naira Nigeria",
+      "backed": "Dikeluarkan oleh Rakan Kongsi",
+      "backedText": "Stablecoin pada Umotu dikeluarkan oleh rakan kongsi terkawal dan direka untuk mengekalkan nilai 1:1 dengan simpanan. Pengeluar menerbitkan bukti simpanan dan terma penebusan.",
+      "convert": "Menukar kepada Tunai",
+      "convertText": "Tukar melalui bank/rakan pertukaran, atau belanja terus di mana diterima."
+    },
+    "economics": {
+      "title": "Ekonomi UMT",
+      "subtitle": "Siapa dapat apa dan mengapa",
+      "intro": "UMT mempunyai bekalan tetap 100 bilion token. Kebanyakannya dibayar kepada pengguna telefon biasa yang membantu menjaga rangkaian jujur.",
+      "supply": "Bekalan & Pengagihan",
+      "supplyBullets": [
+        "Sebahagian besar bekalan token dikhaskan untuk peserta telefon dari semasa ke semasa dan dikeluarkan melalui Pengawal Emisi. Pengawal Emisi mengehadkan penerbitan harian kepada tidak lebih daripada 0.01% bekalan yang tinggal, memastikan kelestarian jangka panjang. Di bawah jadual ini, kira-kira 68% daripada jumlah bekalan kekal selepas 10 tahun, dan kira-kira 15% kekal selepas 50 tahun.",
+        "Sebahagian kecil bekalan dicipta semasa pelancaran untuk tujuan tertentu, termasuk airdrop pengguna awal, jualan komuniti, peruntukan yayasan, dan rizab kecemasan, dll."
+      ],
+      "premine": "Peruntukan Pelancaran (sementara, tertakluk kepada perubahan semasa pelancaran mainnet)",
+      "premineTable": [
+        {
+          "label": "Airdrop Pengguna",
+          "value": "1.0%"
+        },
+        {
+          "label": "Jualan Komuniti",
+          "value": "0.6%"
+        },
+        {
+          "label": "Yayasan Umotu (timelocked)",
+          "value": "0.2%"
+        },
+        {
+          "label": "Dana Kecemasan (ditadbir)",
+          "value": "0.2%"
+        }
+      ],
+      "emissions": "Ganjaran Harian untuk Telefon",
+      "emissionsText": "Setiap hari rangkaian boleh membebaskan maksimum 0.01% daripada baki kolam pelepasan. Kami belanjakan jumlah itu supaya telefon disahkan sasarkan kira-kira $10/sehari, diselaraskan dengan bilangan penyertaan dan keadaan pasaran.",
+      "fees": "Yuran & Sentinel",
+      "feesText": "Pembantu sentinel (pilihan, lanjutan) dapat bahagian yuran transaksi dan bida pembina. Ini berasingan daripada pelepasan harian.",
+      "transparency": "Ketelusan",
+      "transparencyText": "Jadual vesting dan dompet adalah awam. Had pelepasan harian dan bayaran sebenar diterbitkan dalam aplikasi.",
+      "disclaimerTitle": "Peringatan Bahasa Biasa",
+      "disclaimerText": "Ini bukan nasihat pelaburan. Ganjaran bergantung pada dasar rangkaian dan penyertaan. Aplikasi tidak menjamin pendapatan tetap."
+    },
+    "contribute": {
+      "title": "Bagaimana Menyumbang",
+      "subtitle": "Bantu membina Umotu",
+      "intro": "Umotu adalah sumber terbuka dan didorong komuniti. Semua orang boleh membantu—sama ada anda mengkode, menterjemah, atau sekadar berkongsi maklum balas.",
+      "waysTitle": "Cara Menyumbang",
+      "code": {
+        "title": "Perbaiki Kod",
+        "text": "Baiki pepijat, tambah ciri, tulis ujian, atau semak permintaan tarik. Semak repo GitHub kami untuk aplikasi, kontrak pintar, dan perkhidmatan belakang.",
+        "cta": "Lihat GitHub",
+        "url": "https://github.com/dguang/umotu-network"
+      },
+      "translate": {
+        "title": "Bantu dengan Terjemahan",
+        "text": "Jadikan aplikasi terasa semula jadi dalam bahasa anda. Edit fail locale i18n dan uji setiap skrin. Suntingan anda membantu jutaan.",
+        "cta": "Panduan Terjemahan",
+        "url": "https://github.com/dguang/umotu-i18n"
+      },
+      "wordlists": {
+        "title": "Kembangkan Senarai Perkataan BIP-39",
+        "text": "Cadangkan senarai perkataan baru atau diperbaiki supaya lebih ramai orang boleh melihat frasa pemulihan 12 perkataan mereka dalam bahasa asli.",
+        "cta": "Lihat BIP-39",
+        "url": "https://github.com/bitcoin/bips/tree/master/bip-0039"
+      },
+      "governance": {
+        "title": "Sertai Tadbir Urus",
+        "text": "Baca cadangan, bincang secara terbuka, dan undi dalam aplikasi. Suara anda membantu membimbing parameter rangkaian dan peruntukan geran.",
+        "cta": "Buka Tadbir Urus",
+        "url": "umotu://vote"
+      },
+      "community": {
+        "title": "Sebarkan Berita",
+        "text": "Beritahu rakan, tulis tutorial, terbitkan video pendek, jawab soalan. Komuniti lebih kuat bermakna rangkaian lebih kuat untuk semua orang.",
+        "cta": "Kongsi Umotu",
+        "url": "https://umotu.com"
+      },
+      "note": "Semua sumbangan adalah sukarela. Tiada pekerjaan formal atau pampasan melainkan ditentukan dalam cadangan geran."
+    },
+    "decentralization": {
+      "title": "Mengapa Desentralisasi",
+      "subtitle": "Tiada satu titik kawalan",
+      "intro": "Desentralisasi bermakna tiada syarikat atau kerajaan tunggal boleh menutup rangkaian atau merampas dana anda.",
+      "benefits": "Faedah untuk Anda",
+      "benefit1": "Sentiasa hidup: tersedia 24/7",
+      "benefit2": "Yuran lebih rendah: yuran rangkaian kecil bukannya yuran kad 3–5%",
+      "benefit3": "Tiada sempadan: hantar nilai secara global",
+      "benefit4": "Tahan sensor: kunci anda, wang anda",
+      "benefit5": "Telus: sesiapa boleh mengesahkan bagaimana sistem berfungsi",
+      "howWorks": "Bagaimana Ia Berfungsi",
+      "howWorksText": "Pengesah mencadangkan blok setiap ~2 saat. Telefon (seperti anda) mengesahkan dan memuktamadkan dengan semakan ringan. Banyak sumbangan kecil bertambah kepada keselamatan kuat."
+    },
+    "noCompany": {
+      "title": "Tiada Syarikat, Tiada Pelanggan",
+      "subtitle": "Fahami model",
+      "intro": "Tiada 'Umotu, Inc.' mengawal protokol. Umotu adalah set peraturan terbuka yang sesiapa boleh gunakan.",
+      "notCompany": "Apakah Umotu BUKAN",
+      "notCompany1": "BUKAN syarikat dengan akaun pelanggan",
+      "notCompany2": "BUKAN bank atau pemindah wang",
+      "notCompany3": "BUKAN dikawal oleh entiti tunggal",
+      "notCompany4": "BUKAN boleh membalikkan transaksi",
+      "whatIs": "Apakah Umotu ADALAH",
+      "whatIs1": "Protokol: seperti e-mel atau web—peraturan terbuka, boleh beroperasi bersama",
+      "whatIs2": "Telefon dahulu: berjalan dengan bantuan telefon pintar biasa",
+      "whatIs3": "Didorong komuniti: anda adalah peserta, bukan pelanggan",
+      "foundation": "Yayasan Umotu",
+      "foundationIntro": "Organisasi bukan untung yang menyokong ekosistem (aplikasi rujukan, dokumen, program komuniti) tetapi tidak mengawal protokol.",
+      "foundationTask1": "Mengekalkan aplikasi mudah alih & explorer sebagai pelaksanaan rujukan",
+      "foundationTask2": "Mengendalikan beberapa infrastruktur awam (orang lain boleh mengendalikan milik mereka)",
+      "foundationTask3": "Menyelaraskan tadbir urus komuniti (berita, undian)",
+      "foundationTask4": "Menyemak dan menyenaraikan stablecoin disokong",
+      "foundationTask5": "Menerbitkan panduan pendidikan & keselamatan",
+      "foundationNote": "Yayasan tidak boleh mengakses dompet anda dan tidak boleh membalikkan transaksi."
+    },
+    "scamPrevention": {
+      "title": "Elak Penipuan",
+      "subtitle": "Lindungi diri anda",
+      "intro": "Yayasan Umotu TIDAK PERNAH akan DM anda. Sesiapa yang berpura-pura menjadi 'sokongan' adalah penipu.",
+      "redFlags": "Tanda Merah",
+      "redFlag1": "Seseorang mendakwa sebagai sokongan pelanggan",
+      "redFlag2": "Pautan untuk 'mengesahkan' atau 'menaik taraf' akaun anda",
+      "redFlag3": "Permintaan untuk frasa 12 perkataan atau kunci peribadi anda",
+      "redFlag4": "Janji token bonus jika anda hantar dana",
+      "redFlag5": "Aplikasi atau laman web meminta anda 'mengaktifkan' ganjaran",
+      "truth": "Kebenaran",
+      "truth1": "Tiada sokongan pelanggan yang boleh menet semula dompet anda",
+      "truth2": "Semua kemas kini rasmi muncul dalam aplikasi ini",
+      "truth3": "Tiada siapa daripada Umotu akan meminta frasa pemulihan atau kunci peribadi anda",
+      "truth4": "Muat turun aplikasi ini hanya dari Apple Store atau Google Play rasmi",
+      "whatToDo": "Jika Seseorang Menghubungi Anda",
+      "action1": "Jangan balas",
+      "action2": "Jangan klik pautan",
+      "action3": "Jangan kongsi maklumat",
+      "action4": "Sekat dan laporkan"
+    },
+    "airdrop": {
+      "title": "Airdrop Testnet",
+      "subtitle": "Pengguna awal diiktiraf",
+      "intro": "Anda awal! Umotu dalam testnet. Peserta testnet aktif mungkin menerima peruntukan apabila mainnet dilancarkan.",
+      "howToQualify": "Bagaimana Layak",
+      "step1": "Cipta dompet dalam aplikasi",
+      "step2": "Lengkapkan pengesahan manusia (Proof of Human)",
+      "step3": "Gunakan aplikasi secara kerap semasa testnet",
+      "whenAirdrop": "Bila Airdrop?",
+      "whyTestnet": "Testnet penting: pengguna belajar keselamatan dompet, dan sistem diuji untuk keselamatan, keteguhan, dan kecekapan sebelum mainnet.",
+      "timeline": "Mainnet dijangka dalam S1 atau S2 2026. Airdrop akan berlaku sekitar masa mainnet dilancarkan.",
+      "howMuch": "Berapa Banyak Yang Saya Dapat?",
+      "totalPool": "Jumlah kolam airdrop: 1,000,000,000 token UMT. Bahagian anda bergantung pada jumlah peserta dan harga UMT pada pelancaran.",
+      "scenario2": "1M pengguna: ~1,000 UMT setiap pengguna, harga dijangka ~$1, nilai airdrop ~$1,000",
+      "scenario3": "10M pengguna: ~100 UMT setiap pengguna, harga dijangka ~$20, nilai airdrop ~$2,000",
+      "scenario4": "100M pengguna: ~10 UMT setiap pengguna, harga dijangka ~$300, nilai airdrop ~$3,000",
+      "disclaimer": "Ini adalah unjuran sahaja, bukan jaminan. Nilai sebenar bergantung pada keadaan pasaran dan peraturan program.",
+      "whatYouGet": "Apa Yang Anda Dapat",
+      "reward": "Pada mainnet, dompet testnet anda mungkin menerima token sebenar berdasarkan penyertaan dan peraturan program. Pengguna lebih awal dan lebih aktif diutamakan.",
+      "note": "Nota: Token testnet tiada nilai. Sebarang peruntukan mainnet ditentukan oleh dasar program pada pelancaran. Semua berita tentang airdrop akan diterbitkan hanya dalam aplikasi ini."
+    },
+    "gettingStarted": {
+      "title": "Memulakan",
+      "subtitle": "Lima minit pertama anda",
+      "intro": "Berikut persediaan cepat anda:",
+      "checklist": "Senarai Semak Persediaan",
+      "check1": "1) Pilih bahasa anda (selesai!)",
+      "check2": "2) Cipta atau import dompet",
+      "check3": "3) PENTING: Tulis 12 perkataan anda pada kertas",
+      "check4": "4) Lengkapkan pengesahan manusia (imbasan cepat)",
+      "check5": "5) Kekalkan aplikasi berjalan untuk dapat ganjaran harian",
+      "tips": "Tip Pro",
+      "tip1": "Benarkan akses latar belakang supaya semakan boleh berjalan",
+      "tip2": "Semak setiap hari untuk lihat ganjaran",
+      "tip3": "Jemput rakan—lebih ramai pengguna menjadikan rangkaian lebih kuat"
+    }
+  },
+  "common": {
+    "loading": "Memuatkan...",
+    "error": "Ralat",
+    "retry": "Cuba Lagi",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "done": "Selesai",
+    "continue": "Teruskan",
+    "confirm": "Sahkan",
+    "yes": "Ya",
+    "no": "Tidak",
+    "ok": "OK",
+    "success": "Berjaya",
+    "failed": "Gagal",
+    "copied": "Disalin!",
+    "pullToRefresh": "Tarik untuk segarkan",
+    "notSet": "Tidak ditetapkan"
+  },
+  "errors": {
+    "networkError": "Ralat rangkaian. Sila semak sambungan anda.",
+    "genericError": "Sesuatu salah berlaku. Sila cuba lagi.",
+    "walletNotFound": "Dompet tidak ditemui",
+    "transactionFailed": "Transaksi gagal",
+    "invalidInput": "Input tidak sah"
+  },
+  "units": {
+    "umt": "UMT",
+    "usd": "USD"
+  },
+  "onboard_welcome": "Selamat Datang ke Umotu",
+  "onboard_wallet_title": "Sediakan dompet anda",
+  "onboard_wallet_explain": "Cipta atau import dompet untuk menerima ganjaran.",
+  "wallet_create": "Cipta Dompet Baru",
+  "wallet_import": "Import Dompet",
+  "wallet_import_explain": "Masukkan frasa pemulihan 12 perkataan anda",
+  "wallet_created": "Dompet Sedia",
+  "wallet_save": "Simpan ke Peranti",
+  "wallet_backup_title": "Sandarkan Frasa Pemulihan Anda",
+  "wallet_backup_explain": "Tulis 12 perkataan ini mengikut turutan. Ini adalah SATU-SATUNYA cara untuk memulihkan dompet anda jika anda hilang peranti.",
+  "wallet_backup_warning": "Jangan sekali-kali kongsi frasa pemulihan anda. Sesiapa yang mempunyai perkataan ini boleh mengakses dana anda.",
+  "wallet_backup_confirm": "Saya telah menulis frasa pemulihan saya",
+  "wallet_backup_done": "Saya Telah Simpan Frasa Saya",
+  "wallet_save_first": "Sila simpan frasa pemulihan anda terlebih dahulu",
+  "poh_title": "Sahkan Manusia",
+  "continue": "Teruskan",
+  "or": "ATAU",
+  "seedReveal": {
+    "title": "Frasa Pemulihan",
+    "intro": "Frasa pemulihan anda adalah satu-satunya cara untuk memulihkan dompet anda jika anda hilang akses ke peranti ini. Tulis dan simpan dengan selamat di luar talian.",
+    "displayLanguage": "Dipaparkan dalam {{language}}",
+    "hiddenMsg": "Frasa anda disembunyikan untuk keselamatan. Ketuk di bawah untuk mendedahkan.",
+    "showButton": "Dedahkan Frasa",
+    "noScreenshot": "Jangan sekali-kali tangkap skrin frasa pemulihan anda.",
+    "checkTitle": "Sahkan Sandaran Anda",
+    "checkPrompt": "Masukkan perkataan di bawah untuk mengesahkan anda telah menulisnya dengan betul:",
+    "checkWordN": "Perkataan #{{n}}",
+    "checkIncorrect": "Satu atau lebih perkataan salah. Sila semak sandaran anda.",
+    "ackWritten": "Saya telah menulis frasa pemulihan saya",
+    "ackCannotRecover": "Saya faham Umotu tidak boleh memulihkan dompet saya",
+    "cancel": "Batal",
+    "continue": "Saya Telah Simpannya"
+  }
+}
