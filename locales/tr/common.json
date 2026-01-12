@@ -1238,7 +1238,7 @@
         "title": "Çevirilere Yardım Et",
         "text": "Uygulamayı kendi dilinizde doğal hale getirin. i18n locale dosyalarını düzenleyin ve her ekranı test edin. Düzenlemeleriniz milyonlara yardım eder.",
         "cta": "Çeviri Rehberi",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39 Dilleri Genişlet",

@@ -1239,7 +1239,7 @@
         "title": "ဘာသာပြန်မှု ကူညီရနe",
         "text": "အက်ပe ကို သင်၏ ဘာသာစကားတွငe သဘာဝကျစေပါ။ i18n locale ဖိုင်များ တည်းဖြတ်ပြီး မျက်နှာပြငe အားလုံး စမ်းသပ်ပါ။ သင်၏ တည်းဖြတ်မှုများက သန်းပေါင်းများစွာ ကူညီသညe။",
         "cta": "ဘာသာပြန် လမ်းညွှနe",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39 ဘာသာစကား များ ချဲ့ထွင်ရနe",

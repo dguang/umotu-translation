@@ -1234,7 +1234,7 @@
         "title": "Tarjimalarda yordam berish",
         "text": "Ilovani o'z tilingizda tabiiy qiling. i18n locale fayllarini tahrirlang va har bir ekranni sinab ko'ring. Tahrirlaringiz millionlarga yordam beradi.",
         "cta": "Tarjima qo'llanmasi",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39 tillarini kengaytirish",

@@ -1239,7 +1239,7 @@
         "title": "翻訳支援",
         "text": "アプリをあなたの言語で自然に。i18nロケールファイルを編集し全画面テスト。あなたの編集は数百万を助けます。",
         "cta": "翻訳ガイド",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39言語拡張",

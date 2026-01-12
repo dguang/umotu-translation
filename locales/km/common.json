@@ -1239,7 +1239,7 @@
         "title": "ជួយបកប្រែ",
         "text": "ធ្វើឱ្យកម្មវិធីធម្មជាតិនៅភាសារបស់អ្នក។ កែ i18n locale files និងសាកល្បងគ្រប់អេក្រង់។ ការកែរបស់អ្នកជួយលាននាក់។",
         "cta": "មគ្គុទ្ទេសក៍បកប្រែ",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "ពង្រីក BIP-39 Languages",

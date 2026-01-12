@@ -1239,7 +1239,7 @@
         "title": "تراجم میں مدد کریں",
         "text": "ایپ کو اپنی زبان میں قدرتی بنائیں۔ i18n لوکیل فائلیں ایڈٹ کریں اور ہر اسکرین ٹیسٹ کریں۔ آپ کی ایڈٹس لاکھوں کی مدد کریں گی۔",
         "cta": "ترجمہ گائیڈ",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39 زبانوں کو توسیع دیں",

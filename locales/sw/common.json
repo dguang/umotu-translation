@@ -1239,7 +1239,7 @@
         "title": "Saidia na Tafsiri",
         "text": "Fanya programu ihisi asili katika lugha yako. Hariri faili za i18n locale na jaribu kila skrini. Marekebisho yako yanawasaidia mamilioni.",
         "cta": "Mwongozo wa Tafsiri",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Panua Orodha za Maneno za BIP-39",

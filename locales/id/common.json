@@ -1238,7 +1238,7 @@
         "title": "Bantu Terjemahan",
         "text": "Buat aplikasi terasa alami dalam bahasa Anda. Edit file locale i18n dan uji setiap layar. Edit Anda membantu jutaan orang.",
         "cta": "Panduan Terjemahan",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Perluas Daftar Kata BIP-39",

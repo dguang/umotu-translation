@@ -1239,7 +1239,7 @@
         "title": "Bantu dengan Terjemahan",
         "text": "Jadikan aplikasi terasa semula jadi dalam bahasa anda. Edit fail locale i18n dan uji setiap skrin. Suntingan anda membantu jutaan.",
         "cta": "Panduan Terjemahan",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Kembangkan Senarai Perkataan BIP-39",

@@ -1239,7 +1239,7 @@
         "title": "በትርጉም ይርዱ",
         "text": "አፕ በእርስዎ ቋንቋ ተፈጥሯዊ እንዲሆን ያድርጉ። i18n ሎኬል ፋይሎችን ያርሙ እና እያንዳንዱን ገጽ ይፈትሹ። እርስዎ ያረሙት ሚሊዮኖችን ይረዳል።",
         "cta": "የትርጉም መመሪያ",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39 ቋንቋዎችን ያስፋፉ",

@@ -1238,7 +1238,7 @@
         "title": "Giúp Dịch thuật",
         "text": "Làm ứng dụng tự nhiên bằng ngôn ngữ của bạn. Chỉnh sửa tệp locale i18n và kiểm tra mọi màn hình. Chỉnh sửa của bạn giúp hàng triệu người.",
         "cta": "Hướng dẫn Dịch",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Mở rộng Danh sách Từ BIP-39",

@@ -1239,7 +1239,7 @@
         "title": "Ajută cu traduceri",
         "text": "Fă aplicația să se simtă natural în limba ta. Editează fișierele i18n locale și testează fiecare ecran. Editele tale ajută milioane.",
         "cta": "Ghid traducere",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Extinde listele BIP-39",

@@ -1239,7 +1239,7 @@
         "title": "अनुवाद में मदद करें",
         "text": "ऐप को अपनी भाषा में प्राकृतिक बनाएं। i18n लोकल फ़ाइलें एडिट करें और हर स्क्रीन टेस्ट करें। आपके एडिट लाखों की मदद करेंगे।",
         "cta": "अनुवाद गाइड",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39 भाषाएं विस्तार करें",

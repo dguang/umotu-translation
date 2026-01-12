@@ -1239,7 +1239,7 @@
         "title": "Bei Übersetzungen helfen",
         "text": "Machen Sie die App in Ihrer Sprache natürlich. Bearbeiten Sie die i18n-Locale-Dateien und testen Sie jeden Bildschirm. Ihre Änderungen helfen Millionen.",
         "cta": "Übersetzungsanleitung",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39-Sprachen erweitern",

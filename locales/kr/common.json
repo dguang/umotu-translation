@@ -1238,7 +1238,7 @@
         "title": "번역 도움",
         "text": "앱을 사용자 언어로 자연스럽게. i18n 로케일 파일 편집 및 모든 화면 테스트. 수백만 도움.",
         "cta": "번역 가이드",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "BIP-39 언어 확장",

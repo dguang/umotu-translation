@@ -1234,7 +1234,7 @@
         "title": "Pomóż z tłumaczeniami",
         "text": "Spraw, aby aplikacja brzmiała naturalnie w Twoim języku. Edytuj pliki locale i18n i testuj każdy ekran. Twoje edycje pomogą milionom.",
         "cta": "Przewodnik po tłumaczeniach",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Rozszerz listy słów BIP-39",

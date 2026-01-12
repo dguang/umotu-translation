@@ -1235,7 +1235,7 @@
         "title": "Tumulong sa Pagsasalin",
         "text": "Gawing natural ang app sa iyong wika. I-edit ang i18n locale file at subukan ang bawat screen. Nakakatulong ang iyong edit sa milyon-milyon.",
         "cta": "Gabay sa Pagsasalin",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Palawakin ang BIP-39 Language",

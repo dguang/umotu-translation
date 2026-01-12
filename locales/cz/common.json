@@ -1238,7 +1238,7 @@
         "title": "Pomoci s překlady",
         "text": "Učiňte aplikaci přirozenou ve vašem jazyce. Editujte i18n locale soubory a testujte každou obrazovku. Vaše úpravy pomohou milionům.",
         "cta": "Průvodce překladem",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Rozšířit BIP-39 jazyky",

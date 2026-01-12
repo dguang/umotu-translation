@@ -1238,7 +1238,7 @@
         "title": "Aiuta con le Traduzioni",
         "text": "Rendi l'app naturale nella tua lingua. Modifica i file i18n locale e testa ogni schermata. Le tue modifiche aiutano milioni.",
         "cta": "Guida Traduzione",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Espandi Liste Parole BIP-39",

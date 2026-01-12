@@ -1262,7 +1262,7 @@
         "title": "Help with Translations",
         "text": "Make the app feel natural in your language. Edit the i18n locale files and test every screen. Your edits help millions.",
         "cta": "Translation Guide",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "Expand BIP-39 Languages",

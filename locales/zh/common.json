@@ -1202,7 +1202,7 @@
         "title": "帮助翻译",
         "text": "让应用在您的语言中感觉自然。编辑 i18n 语言文件并测试每个屏幕。您的编辑可以帮助数百万人。",
         "cta": "翻译指南",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "扩展 BIP-39 语言",

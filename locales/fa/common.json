@@ -1239,7 +1239,7 @@
         "title": "در ترجمه کمک کنید",
         "text": "اپ را در زبان خود طبیعی کنید. فایل‌های i18n را ویرایش و هر صفحه تست کنید. ویرایش شما به میلیون‌ها کمک می‌کند.",
         "cta": "راهنمای ترجمه",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "لیست کلمات BIP-39 گسترش دهید",

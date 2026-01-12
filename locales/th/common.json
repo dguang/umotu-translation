@@ -1239,7 +1239,7 @@
         "title": "ช่วยแปล",
         "text": "ทำให้แอปดูเป็นธรรมชาติในภาษาของคุณ แก้ไขไฟล์ i18n locale และ test ทุกหน้าจอ การแก้ไขของคุณช่วยคนหลายล้าน",
         "cta": "คู่มือการแปล",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "ขยาย wordlists BIP-39",

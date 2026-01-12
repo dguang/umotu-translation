@@ -1234,7 +1234,7 @@
         "title": "المساعدة في الترجمات",
         "text": "اجعل التطبيق طبيعيًا بلغتك. حرر ملفات i18n المحلية واختبر كل شاشة. تساعد تعديلاتك الملايين.",
         "cta": "دليل الترجمة",
-        "url": "https://github.com/dguang/umotu-i18n"
+        "url": "https://github.com/dguang/umotu-translation"
       },
       "wordlists": {
         "title": "توسيع قوائم كلمات BIP-39",
