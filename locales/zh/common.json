@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "天天十美金 人人皆有份"
+    "tagline": "天天十美金，人人皆有份"
   },
   "navigation": {
     "home": "首页",
@@ -30,7 +30,9 @@
         "language": "语言",
         "wallet": "钱包",
         "verifyHuman": "验证人类身份",
-        "complete": "完成"
+        "complete": "完成",
+        "dailySampling": "启用每日采样",
+        "dailySamplingHint": "需要：每天1次采样才能获得奖励"
       },
       "continue": "继续",
       "changeChoice": "更改选择",
@@ -182,7 +184,6 @@
     "swapComingSoon": "兑换功能即将推出",
     "history": "历史记录",
     "tokens": "代币",
-    "collectibles": "收藏品",
     "noTokens": "暂无代币",
     "nativeToken": "原生代币",
     "loading": "加载中…",
@@ -599,6 +600,13 @@
     "title": "交易历史",
     "sent": "转出",
     "received": "收到",
+    "filters": {
+      "all": "全部",
+      "clear": "清除"
+    },
+    "search": {
+      "placeholder": "按地址或联系人搜索"
+    },
     "token": "代币",
     "external": "外部",
     "to": "至：",
@@ -606,7 +614,9 @@
     "viewInExplorer": "在浏览器查看",
     "empty": {
       "title": "暂无交易",
-      "description": "发送或接收代币后，交易记录将显示在这里。"
+      "description": "发送或接收代币后，交易记录将显示在这里。",
+      "filteredTitle": "没有匹配的交易",
+      "filteredDescription": "请尝试其他地址或筛选条件。"
     },
     "status": {
       "confirmed": "已确认",
@@ -658,7 +668,7 @@
     },
     "verification": {
       "title": "身份验证",
-      "description": "通过 Inlyf 验证您的身份以解锁每日奖励。一次快速活体检测；需定期重新验证。",
+      "description": "通过 inLyf 验证您的身份以解锁每日奖励。一次快速真人检测；需定期重新验证。",
       "open": "开始验证",
       "refresh": "刷新验证",
       "status": "状态",
@@ -725,7 +735,7 @@
   "onboarding": {
     "welcome": {
       "title": "欢迎来到 Umotu",
-      "subtitle": "天天十美金 人人皆有份",
+      "subtitle": "天天十美金，人人皆有份",
       "getStarted": "开始使用"
     },
     "language": {
@@ -746,9 +756,9 @@
   },
   "poh": {
     "subtitle": "解锁每日奖励",
-    "description": "通过 Inlyf 进行活体验证来解锁奖励。链上不会存储任何生物特征，仅记录短期凭证。",
+    "description": "通过 inLyf 进行真人验证来解锁奖励。链上不会存储任何生物特征，仅记录短期凭证。",
     "howItWorks": "验证流程",
-    "howItWorksDesc": "简短的活体检测（人脸扫描）验证您是真人。凭证有效期为90天，可随时刷新。",
+    "howItWorksDesc": "简短的真人检测（人脸扫描）验证您是真人。凭证有效期为90天，可随时刷新。",
     "adultQuestion": "您是否已成年 (18+)?",
     "yesAdult": "是，18+",
     "noMinor": "否 / 未成年",
@@ -764,7 +774,7 @@
       "validFor": "有效期约 {{days}} 天",
       "validFor_plural": "有效期约 {{days}} 天",
       "expired": "验证已过期或未找到。",
-      "expiredDetail": "重新运行活体检测以刷新您的凭证。"
+      "expiredDetail": "重新运行真人检测以刷新您的凭证。"
     }
   },
   "sentinelSettings": {
@@ -856,10 +866,10 @@
     "comingSoon": "即将推出",
     "liveApps": "在线应用",
     "available": "可用",
-    "pohDescription": "通过Inlyf验证您的身份以解锁每日奖励。",
+    "pohDescription": "通过inLyf验证您的身份以解锁每日奖励。",
     "vision": {
       "title": "我们的愿景",
-      "tagline": "天天十美金 人人皆有份",
+      "tagline": "天天十美金，人人皆有份",
       "description": "Umotu 正在构建基础设施，让世界上每个人都能参与全球经济——无论他们住在哪里或使用哪家银行。",
       "readMore": "阅读完整愿景",
       "pillars": {
@@ -1093,7 +1103,7 @@
     },
     "whatIs": {
       "title": "什么是 Umotu？",
-      "subtitle": "天天十美金 人人皆有份",
+      "subtitle": "天天十美金，人人皆有份",
       "intro": "Umotu 旨在让任何人只需一部智能手机就能每天赚取约10美元。无需昂贵硬件，无需特殊技能，没有国界限制。",
       "howDifferent": "有什么不同？",
       "noMiddleman": "无中间商：您直接与网络交互 — 无需银行账户",
@@ -1109,7 +1119,7 @@
       "subtitle": "手机工作，您获报酬",
       "intro": "您的手机执行帮助所有人的小任务 — 然后您获得奖励。",
       "steps": "三个简单步骤",
-      "step1": "1) 证明您是人类：快速活体检测（并偶尔刷新）确保每人只有一个账户。",
+      "step1": "1) 人类证明：快速真人检测（并定期刷新）确保每人只有一个账户。",
       "step2": "2) 帮助网络：您的手机在后台运行数据可用性（DA）采样和其他轻量级检查。",
       "step3": "3) 获得每日奖励：您因这项工作获得报酬，目标约为每天10美元，具体取决于网络政策。",
       "localCurrency": "以您的货币支付",
@@ -1309,7 +1319,7 @@
       "truth1": "没有可以重置您钱包的客户支持",
       "truth2": "所有官方更新都在此应用中显示",
       "truth3": "Umotu 的任何人都不会索要您的助记词或私钥",
-      "truth4": "仅从官方 Apple Store 或 Google Play下载此应用，其它一切下载链接都是诈骗",
+      "truth4": "仅从官方网站 https://umotu.com/app, Apple App Store 或 Google Play 下载此应用，其它一切下载链接都不可信，谨防钓鱼。",
       "whatToDo": "如果有人联系您",
       "action1": "不要回复",
       "action2": "不要点击链接",

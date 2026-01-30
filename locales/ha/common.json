@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "Dala $10 a rana, kowa a ko'ina"
+    "tagline": "$10 a rana, ga kowa, ko'ina"
   },
   "navigation": {
     "home": "Gida",
@@ -30,7 +30,9 @@
         "language": "Harshe",
         "wallet": "Wallet",
         "verifyHuman": "Tabbatar da Mutum",
-        "complete": "Kammala"
+        "complete": "Kammala",
+        "dailySampling": "Kunna Samfurin Yau da Kullum",
+        "dailySamplingHint": "Ana bukata: 1 samfuri/rana don lada"
       },
       "continue": "Ci gaba",
       "changeChoice": "Canza zaɓi",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Musanya na zuwa nan ba da jimawa ba",
     "history": "Tarihi",
     "tokens": "Tokens",
-    "collectibles": "Abubuwan Taro",
     "noTokens": "Ba a saita tokens ba",
     "nativeToken": "Token na Asali",
     "loading": "Ana loda...",
@@ -617,6 +618,13 @@
     "title": "Tarihin Ma'amala",
     "sent": "An Aika",
     "received": "An Karɓa",
+    "filters": {
+      "all": "Duka",
+      "clear": "Share"
+    },
+    "search": {
+      "placeholder": "Nemo ta adireshi ko lamba"
+    },
     "token": "Token",
     "external": "Waje",
     "to": "Zuwa: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Duba a Explorer",
     "empty": {
       "title": "Babu Ma'amala Tukuna",
-      "description": "Tarihin ma'amalanku zai bayyana nan da zarar kun aika ko karɓi tokens."
+      "description": "Tarihin ma'amalanku zai bayyana nan da zarar kun aika ko karɓi tokens.",
+      "filteredTitle": "Babu mu'amala da ta dace",
+      "filteredDescription": "Gwada wani adireshi ko tacewa daban."
     },
     "status": {
       "confirmed": "An Tabbata",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Tabbatarwa",
-      "description": "Tabbatar da mutumcinku da Inlyf don buɗe lada ta yau da kullum. Duba liveness cikin sauri; sake tabbatarwa lokaci-lokaci.",
+      "description": "Tabbatar da mutumcinku da inLyf don buɗe lada ta yau da kullum. Duba liveness cikin sauri; sake tabbatarwa lokaci-lokaci.",
       "open": "Fara Tabbatarwa",
       "refresh": "Sabunta Tabbatarwa",
       "status": "Matsayi",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Barka da zuwa Umotu",
-      "subtitle": "Dala $10 a rana, kowa a ko'ina",
+      "subtitle": "$10 a rana, ga kowa, ko'ina",
       "getStarted": "Fara"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Buɗe lada ta yau da kullum",
-    "description": "Tabbatar da liveness da Inlyf don buɗe lada. Ba a ajiye biometrics a kan-chain; kawai takaddun ɗan gajeren lokaci ana bayarwa.",
+    "description": "Tabbatar da liveness da inLyf don buɗe lada. Ba a ajiye biometrics a kan-chain; kawai takaddun ɗan gajeren lokaci ana bayarwa.",
     "howItWorks": "Yadda ake aiki",
     "howItWorksDesc": "Duba liveness cikin gajarta (duba fuska) yana tabbatar da kuna mutum. Takaddar ku tana aiki na kwanaki 90 kuma ana iya sabuntawa kowane lokaci.",
     "adultQuestion": "Shin ku baligi ne (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "Na Zuwa Nan ba da Jimawa ba",
     "liveApps": "Apps Masu Aiki",
     "available": "ANA SAMU",
-    "pohDescription": "Tabbatar da mutumcinku da Inlyf don buɗe lada ta yau da kullum.",
+    "pohDescription": "Tabbatar da mutumcinku da inLyf don buɗe lada ta yau da kullum.",
     "vision": {
       "title": "Muhimmancin Mu",
-      "tagline": "Dala $10 a rana, kowa a ko'ina",
+      "tagline": "$10 a rana, ga kowa, ko'ina",
       "description": "Umotu yana gina ababen more rayuwa don duniyar da kowa zai iya shiga cikin tattalin arzikin duniya—ba tare da la'akari da inda suke rayuwa ko banki da suke amfani da shi ba.",
       "readMore": "Karanta Cikakken Muhimmanci",
       "pillars": {
@@ -1109,7 +1119,7 @@
     "featured": "MASU SHAHARA",
     "whatIs": {
       "title": "Menene Umotu?",
-      "subtitle": "Dala $10 a rana, kowa a ko'ina",
+      "subtitle": "$10 a rana, ga kowa, ko'ina",
       "intro": "Umotu yana nufin bari kowa ya samu kusan dala $10/rana ta amfani da wayar hannu kawai. Babu kayan aiki masu tsada, babu ƙwarewa na musamman, babu iyaka.",
       "howDifferent": "Yaya ya bambanta?",
       "noMiddleman": "Babu mai tsakiya: Kuna mu'amala kai tsaye da hanyar sadarwa—ba buƙatar asusun banki",
@@ -1310,7 +1320,7 @@
       "truth1": "Babu tallafi na abokin ciniki da zai iya sake saita wallet ku",
       "truth2": "Duk sabuntawa na hukuma suna bayyana a wannan app",
       "truth3": "Ba wani daga Umotu zai nemi jumlar dawowa ko maɓalli mai zaman kansa ba",
-      "truth4": "Saukar da wannan app kawai daga Apple Store ko Google Play na hukuma",
+      "truth4": "Saukar da wannan app kawai daga Apple App Store ko Google Play na hukuma",
       "whatToDo": "Idan Wani Ya Sadar Da Ku",
       "action1": "Kada ku amsa",
       "action2": "Kada ku danna hanyoyin haɗi",

@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 $ pro Tag, für alle überall"
+    "tagline": "10 $ täglich – für alle, überall"
   },
   "navigation": {
     "home": "Startseite",
@@ -30,7 +30,9 @@
         "language": "Sprache",
         "wallet": "Wallet",
         "verifyHuman": "Mensch verifizieren",
-        "complete": "Abgeschlossen"
+        "complete": "Abgeschlossen",
+        "dailySampling": "Tägliche Stichprobe aktivieren",
+        "dailySamplingHint": "Erforderlich: 1 Probe/Tag für Belohnungen"
       },
       "continue": "Fortfahren",
       "changeChoice": "Auswahl ändern",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Tauschen demnächst verfügbar",
     "history": "Verlauf",
     "tokens": "Token",
-    "collectibles": "Sammlerstücke",
     "noTokens": "Keine Token konfiguriert",
     "nativeToken": "Nativer Token",
     "loading": "Lade...",
@@ -617,6 +618,13 @@
     "title": "Transaktionsverlauf",
     "sent": "Gesendet",
     "received": "Empfangen",
+    "filters": {
+      "all": "Alle",
+      "clear": "Zurücksetzen"
+    },
+    "search": {
+      "placeholder": "Nach Adresse oder Kontakt suchen"
+    },
     "token": "Token",
     "external": "Extern",
     "to": "An: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Im Explorer anzeigen",
     "empty": {
       "title": "Noch keine Transaktionen",
-      "description": "Ihr Transaktionsverlauf wird hier erscheinen, sobald Sie Token senden oder empfangen."
+      "description": "Ihr Transaktionsverlauf wird hier erscheinen, sobald Sie Token senden oder empfangen.",
+      "filteredTitle": "Keine passenden Transaktionen",
+      "filteredDescription": "Versuche eine andere Adresse oder einen Filter."
     },
     "status": {
       "confirmed": "Bestätigt",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Verifizierung",
-      "description": "Verifizieren Sie Ihre Menschlichkeit mit Inlyf, um tägliche Belohnungen freizuschalten. Eine schnelle Liveness-Prüfung; regelmäßig erneuern.",
+      "description": "Verifizieren Sie Ihre Menschlichkeit mit inLyf, um tägliche Belohnungen freizuschalten. Eine schnelle Liveness-Prüfung; regelmäßig erneuern.",
       "open": "Verifizierung starten",
       "refresh": "Verifizierung erneuern",
       "status": "Status",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Willkommen bei Umotu",
-      "subtitle": "10 $ pro Tag, für alle überall",
+      "subtitle": "10 $ täglich – für alle, überall",
       "getStarted": "Loslegen"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Tägliche Belohnungen freischalten",
-    "description": "Verifizieren Sie Liveness mit Inlyf, um Belohnungen freizuschalten. Keine Biometrie wird on-chain gespeichert; nur ein kurzlebiges Credential wird ausgestellt.",
+    "description": "Verifizieren Sie Liveness mit inLyf, um Belohnungen freizuschalten. Keine Biometrie wird on-chain gespeichert; nur ein kurzlebiges Credential wird ausgestellt.",
     "howItWorks": "Wie es funktioniert",
     "howItWorksDesc": "Eine kurze Liveness-Prüfung (Gesichtsscan) verifiziert, dass Sie ein Mensch sind. Ihr Credential gilt 90 Tage und kann jederzeit erneuert werden.",
     "adultQuestion": "Sind Sie volljährig (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "Demnächst verfügbar",
     "liveApps": "Live Apps",
     "available": "VERFÜGBAR",
-    "pohDescription": "Verifizieren Sie Ihre Menschlichkeit mit Inlyf, um tägliche Belohnungen freizuschalten.",
+    "pohDescription": "Verifizieren Sie Ihre Menschlichkeit mit inLyf, um tägliche Belohnungen freizuschalten.",
     "vision": {
       "title": "Unsere Vision",
-      "tagline": "10 $ pro Tag, für alle überall",
+      "tagline": "10 $ täglich – für alle, überall",
       "description": "Umotu baut Infrastruktur für eine Welt, in der jeder an der globalen Wirtschaft teilnehmen kann – unabhängig vom Wohnort oder der Bank.",
       "readMore": "Gesamte Vision lesen",
       "pillars": {
@@ -1109,7 +1119,7 @@
     "featured": "EMPFOHLEN",
     "whatIs": {
       "title": "Was ist Umotu?",
-      "subtitle": "10 $ pro Tag, für alle überall",
+      "subtitle": "10 $ täglich – für alle, überall",
       "intro": "Umotu zielt darauf ab, jedem zu ermöglichen, etwa 10 $/Tag mit nur einem Smartphone zu verdienen. Keine teure Hardware, keine speziellen Fähigkeiten, keine Grenzen.",
       "howDifferent": "Worinn unterscheidet es sich?",
       "noMiddleman": "Kein Mittelsmann: Sie interagieren direkt mit dem Netzwerk – kein Bankkonto erforderlich",
@@ -1310,7 +1320,7 @@
       "truth1": "Es gibt keinen Kundensupport, der Ihr Wallet zurücksetzen kann",
       "truth2": "Alle offiziellen Updates erscheinen in dieser App",
       "truth3": "Niemand von Umotu wird nach Ihrer Wiederherstellungsphrase oder privaten Schlüssel fragen",
-      "truth4": "Laden Sie diese App nur aus dem offiziellen Apple Store oder Google Play herunter",
+      "truth4": "Laden Sie diese App nur aus dem offiziellen Apple App Store oder Google Play herunter",
       "whatToDo": "Wenn jemand Sie kontaktiert",
       "action1": "Nicht antworten",
       "action2": "Keine Links klicken",

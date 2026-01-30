@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 dolari pe zi, pentru toată lumea, oriunde"
+    "tagline": "10 $ pe zi, pentru toți, peste tot"
   },
   "navigation": {
     "home": "Acasă",
@@ -30,7 +30,9 @@
         "language": "Limbă",
         "wallet": "Portofel",
         "verifyHuman": "Verificare uman",
-        "complete": "Complet"
+        "complete": "Complet",
+        "dailySampling": "Activare eșantionare zilnică",
+        "dailySamplingHint": "Necesar: 1 eșantion/zi pentru recompense"
       },
       "continue": "Continuă",
       "changeChoice": "Schimbă alegerea",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Schimb în curând",
     "history": "Istoric",
     "tokens": "Tokeni",
-    "collectibles": "Colecționabile",
     "noTokens": "Niciun token configurat",
     "nativeToken": "Token nativ",
     "loading": "Se încarcă...",
@@ -617,6 +618,13 @@
     "title": "Istoric tranzacții",
     "sent": "Trimis",
     "received": "Primit",
+    "filters": {
+      "all": "Toate",
+      "clear": "Șterge"
+    },
+    "search": {
+      "placeholder": "Căutați după adresă sau contact"
+    },
     "token": "Token",
     "external": "Extern",
     "to": "Către: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Vezi în explorer",
     "empty": {
       "title": "Nicio tranzacție încă",
-      "description": "Istoricul tranzacțiilor va apărea aici odată ce trimiți sau primești tokeni."
+      "description": "Istoricul tranzacțiilor va apărea aici odată ce trimiți sau primești tokeni.",
+      "filteredTitle": "Nicio tranzacție potrivită",
+      "filteredDescription": "Încercați o altă adresă sau un filtru."
     },
     "status": {
       "confirmed": "Confirmată",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Verificare",
-      "description": "Verifică-ți umanitatea cu Inlyf pentru a debloca recompense zilnice. O verificare rapidă de liveness; reverifică periodic.",
+      "description": "Verifică-ți umanitatea cu inLyf pentru a debloca recompense zilnice. O verificare rapidă de liveness; reverifică periodic.",
       "open": "Începe verificarea",
       "refresh": "Reîmprospătează verificarea",
       "status": "Status",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Bine ai venit la Umotu",
-      "subtitle": "10 dolari pe zi, pentru toată lumea, oriunde",
+      "subtitle": "10 $ pe zi, pentru toți, peste tot",
       "getStarted": "Începe"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Deblochează recompense zilnice",
-    "description": "Verifică liveness cu Inlyf pentru a debloca recompense. Nicio biometrică nu este stocată on-chain; doar un credential temporar este emis.",
+    "description": "Verifică liveness cu inLyf pentru a debloca recompense. Nicio biometrică nu este stocată on-chain; doar un credential temporar este emis.",
     "howItWorks": "Cum funcționează",
     "howItWorksDesc": "O verificare scurtă de liveness (scan facial) confirmă că ești uman. Credentialul durează 90 de zile și poate fi reîmprospătat oricând.",
     "adultQuestion": "Ești adult (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "În curând",
     "liveApps": "Aplicații live",
     "available": "DISPONIBILE",
-    "pohDescription": "Verifică-ți umanitatea cu Inlyf pentru a debloca recompense zilnice.",
+    "pohDescription": "Verifică-ți umanitatea cu inLyf pentru a debloca recompense zilnice.",
     "vision": {
       "title": "Viziunea noastră",
-      "tagline": "10 dolari pe zi, pentru toată lumea, oriunde",
+      "tagline": "10 $ pe zi, pentru toți, peste tot",
       "description": "Umotu construiește infrastructură pentru o lume în care oricine poate participa la economia globală — indiferent unde locuiește sau ce bancă folosește.",
       "readMore": "Citește viziunea completă",
       "pillars": {
@@ -1109,7 +1119,7 @@
     "featured": "RECOMANDATE",
     "whatIs": {
       "title": "Ce este Umotu?",
-      "subtitle": "10 dolari pe zi, pentru toată lumea, oriunde",
+      "subtitle": "10 $ pe zi, pentru toți, peste tot",
       "intro": "Umotu își propune să permită oricui să câștige aproximativ 10 dolari/zi folosind doar un smartphone. Fără hardware scump, fără abilități speciale, fără granițe.",
       "howDifferent": "Cum este diferit?",
       "noMiddleman": "Fără intermediar: Interacționezi direct cu rețeaua — fără cont bancar necesar",

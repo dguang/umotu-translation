@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "$10 sa isang araw, lahat kahit saan"
+    "tagline": "$10 bawat araw, para sa lahat, saanman"
   },
   "navigation": {
     "home": "Home",
@@ -30,7 +30,9 @@
         "language": "Wika",
         "wallet": "Pitaka",
         "verifyHuman": "Beripikahin ang Tao",
-        "complete": "Kumpleto"
+        "complete": "Kumpleto",
+        "dailySampling": "I-enable ang Daily Sampling",
+        "dailySamplingHint": "Kinakailangan: 1 sample/araw para sa gantimpala"
       },
       "continue": "Magpatuloy",
       "changeChoice": "Baguhin ang pinili",
@@ -183,7 +185,6 @@
     "swapComingSoon": "Ang swap ay darating na",
     "history": "Kasaysayan",
     "tokens": "Mga Token",
-    "collectibles": "Mga Collectible",
     "noTokens": "Walang naka-configure na token",
     "nativeToken": "Native Token",
     "loading": "Naglo-load...",
@@ -618,6 +619,13 @@
     "title": "Kasaysayan ng Transaksyon",
     "sent": "Naipadala",
     "received": "Natanggap",
+    "filters": {
+      "all": "Lahat",
+      "clear": "Burahin"
+    },
+    "search": {
+      "placeholder": "Maghanap ayon sa address o contact"
+    },
     "token": "Token",
     "external": "Panlabas",
     "to": "Papunta: ",
@@ -625,7 +633,9 @@
     "viewInExplorer": "Tingnan sa Explorer",
     "empty": {
       "title": "Wala Pang Transaksyon",
-      "description": "Lilitaw dito ang kasaysayan ng transaksyon kapag nagpadala o tumanggap ka ng token."
+      "description": "Lilitaw dito ang kasaysayan ng transaksyon kapag nagpadala o tumanggap ka ng token.",
+      "filteredTitle": "Walang tugmang transaksyon",
+      "filteredDescription": "Subukan ang ibang address o filter."
     },
     "status": {
       "confirmed": "Nakumpirma",
@@ -692,7 +702,7 @@
     },
     "verification": {
       "title": "Pagberipika",
-      "description": "Beripikahin ang iyong pagiging tao gamit ang Inlyf upang i-unlock ang pang-araw-araw na gantimpala. Mabilis na liveness check; pana-panahong mag-re-verify.",
+      "description": "Beripikahin ang iyong pagiging tao gamit ang inLyf upang i-unlock ang pang-araw-araw na gantimpala. Mabilis na liveness check; pana-panahong mag-re-verify.",
       "open": "Simulan ang Pagberipika",
       "refresh": "I-refresh ang Pagberipika",
       "status": "Katayuan",
@@ -763,7 +773,7 @@
   "onboarding": {
     "welcome": {
       "title": "Maligayang Pagdating sa Umotu",
-      "subtitle": "$10 sa isang araw, lahat kahit saan",
+      "subtitle": "$10 bawat araw, para sa lahat, saanman",
       "getStarted": "Magsimula"
     },
     "language": {
@@ -784,7 +794,7 @@
   },
   "poh": {
     "subtitle": "I-unlock ang pang-araw-araw na gantimpala",
-    "description": "Beripikahin ang liveness gamit ang Inlyf upang i-unlock ang gantimpala. Walang biometrics na naka-store sa chain; maikling credential lamang ang ibinibigay.",
+    "description": "Beripikahin ang liveness gamit ang inLyf upang i-unlock ang gantimpala. Walang biometrics na naka-store sa chain; maikling credential lamang ang ibinibigay.",
     "howItWorks": "Paano Ito Gumagana",
     "howItWorksDesc": "Mabilis na liveness check (face scan) ang nagbeberipika na tao ka. Ang credential ay tumatagal ng 90 araw at maaaring i-refresh anumang oras.",
     "adultQuestion": "Adult ka ba (18+)?",
@@ -894,10 +904,10 @@
     "comingSoon": "Darating Na",
     "liveApps": "Mga Live App",
     "available": "AVAILABLE",
-    "pohDescription": "Beripikahin ang iyong pagiging tao gamit ang Inlyf upang i-unlock ang pang-araw-araw na gantimpala.",
+    "pohDescription": "Beripikahin ang iyong pagiging tao gamit ang inLyf upang i-unlock ang pang-araw-araw na gantimpala.",
     "vision": {
       "title": "Ating Pananaw",
-      "tagline": "$10 sa isang araw, lahat kahit saan",
+      "tagline": "$10 bawat araw, para sa lahat, saanman",
       "description": "Ginagawa ng Umotu ang infrastructure para sa mundo kung saan lahat ay maaaring makilahok sa global economy—kahit saan sila nakatira o anong bangko ang ginagamit nila.",
       "readMore": "Basahin ang Buong Pananaw",
       "pillars": {
@@ -1105,7 +1115,7 @@
     "featured": "TAMPOK",
     "whatIs": {
       "title": "Ano ang Umotu?",
-      "subtitle": "$10 sa isang araw, lahat kahit saan",
+      "subtitle": "$10 bawat araw, para sa lahat, saanman",
       "intro": "Layunin ng Umotu na payagan ang sinuman na kumita ng humigit-kumulang $10/araw gamit lamang ang smartphone. Walang mamahaling hardware, walang espesyal na kasanayan, walang border.",
       "howDifferent": "Paano Ito Iba?",
       "noMiddleman": "Walang middleman: Direktang nakikipag-ugnayan ka sa network—walang bank account na kailangan",
@@ -1306,7 +1316,7 @@
       "truth1": "Walang customer support na maaaring i-reset ang iyong pitaka",
       "truth2": "Lahat ng opisyal na update ay lilitaw sa app na ito",
       "truth3": "Walang mula sa Umotu ang magtatanong ng recovery phrase o private key",
-      "truth4": "I-download lamang ang app na ito mula sa opisyal na Apple Store o Google Play",
+      "truth4": "I-download lamang ang app na ito mula sa opisyal na Apple App Store o Google Play",
       "whatToDo": "Kung May Makipag-ugnayan Sa Iyo",
       "action1": "Huwag sumagot",
       "action2": "Huwag mag-click ng link",

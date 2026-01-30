@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "$10 kwa siku, kila mtu popote pale"
+    "tagline": "$10 kwa siku, kwa wote, popote"
   },
   "navigation": {
     "home": "Nyumbani",
@@ -30,7 +30,9 @@
         "language": "Lugha",
         "wallet": "Pochi",
         "verifyHuman": "Thibitisha Binadamu",
-        "complete": "Kamilisha"
+        "complete": "Kamilisha",
+        "dailySampling": "Washa Sampuli za Kila Siku",
+        "dailySamplingHint": "Inahitajika: sampuli 1/siku kwa zawadi"
       },
       "continue": "Endelea",
       "changeChoice": "Badilisha chaguo",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Badilisha inakuja hivi karibuni",
     "history": "Historia",
     "tokens": "Tokeni",
-    "collectibles": "Vikolezo",
     "noTokens": "Hakuna tokeni zilizosanidiwa",
     "nativeToken": "Tokeni Asilia",
     "loading": "Inapakia...",
@@ -617,6 +618,13 @@
     "title": "Historia ya Miamala",
     "sent": "Imetumwa",
     "received": "Imepokelewa",
+    "filters": {
+      "all": "Zote",
+      "clear": "Futa"
+    },
+    "search": {
+      "placeholder": "Tafuta kwa anwani au mwasiliani"
+    },
     "token": "Tokeni",
     "external": "Nje",
     "to": "Kwa: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Angalia kwenye Explorer",
     "empty": {
       "title": "Hakuna Miamala Bado",
-      "description": "Historia yako ya miamala itaonekana hapa ukisha tuma au kupokea tokeni."
+      "description": "Historia yako ya miamala itaonekana hapa ukisha tuma au kupokea tokeni.",
+      "filteredTitle": "Hakuna miamala inayolingana",
+      "filteredDescription": "Jaribu anwani au kichujio tofauti."
     },
     "status": {
       "confirmed": "Imethibitishwa",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Uthibitishaji",
-      "description": "Thibitisha ubinadamu wako kwa Inlyf ili kufungua zawadi za kila siku. Uchunguzi mfupi wa liveness; thibitisha tena mara kwa mara.",
+      "description": "Thibitisha ubinadamu wako kwa inLyf ili kufungua zawadi za kila siku. Uchunguzi mfupi wa liveness; thibitisha tena mara kwa mara.",
       "open": "Anza Uthibitishaji",
       "refresh": "Sasisha Uthibitishaji",
       "status": "Hali",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Karibu Umotu",
-      "subtitle": "$10 kwa siku, kila mtu popote pale",
+      "subtitle": "$10 kwa siku, kwa wote, popote",
       "getStarted": "Anza"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Fungua zawadi za kila siku",
-    "description": "Thibitisha liveness kwa Inlyf ili kufungua zawadi. Hakuna biometrics zinazohifadhiwa on-chain; cheti cha muda mfupi pekee kinatolewa.",
+    "description": "Thibitisha liveness kwa inLyf ili kufungua zawadi. Hakuna biometrics zinazohifadhiwa on-chain; cheti cha muda mfupi pekee kinatolewa.",
     "howItWorks": "Inafanyaje kazi",
     "howItWorksDesc": "Uchunguzi mfupi wa liveness (skani ya uso) unathibitisha wewe ni binadamu. Cheti chako kinadumu siku 90 na kinaweza kusasishwa wakati wowote.",
     "adultQuestion": "Je, wewe ni mtu mzima (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "Inakuja Hivi Karibuni",
     "liveApps": "Programu Zilizopo",
     "available": "ZINAZOPATIKANA",
-    "pohDescription": "Thibitisha ubinadamu wako kwa Inlyf ili kufungua zawadi za kila siku.",
+    "pohDescription": "Thibitisha ubinadamu wako kwa inLyf ili kufungua zawadi za kila siku.",
     "vision": {
       "title": "Maono Yetu",
-      "taglineXXX": "$10 kwa siku, kila mtu popote pale",
+      "tagline": "$10 kwa siku, kwa wote, popote",
       "description": "Umotu inajenga miundombinu kwa ulimwengu ambapo kila mtu anaweza kushiriki katika uchumi wa kimataifa—bila kujali anapoishi au benki yake ni ipi.",
       "readMore": "Soma Maono Kamili",
       "pillars": {
@@ -1109,7 +1119,7 @@
     "featured": "ZILIZOANGALIWA",
     "whatIs": {
       "title": "Umotu ni Nini?",
-      "subtitle": "$10 kwa siku, kila mtu popote pale",
+      "subtitle": "$10 kwa siku, kwa wote, popote",
       "intro": "Umotu inalenga kuruhusu yeyote kupata karibu $10/kila siku kwa kutumia simu mahiri pekee. Hakuna vifaa vya gharama kubwa, hakuna ujuzi maalum, hakuna mipaka.",
       "howDifferent": "Inatofautianaje?",
       "noMiddleman": "Hakuna mpatanishi: Unashirikiana moja kwa moja na mtandao—hakuna akaunti ya benki inayohitajika",
@@ -1310,7 +1320,7 @@
       "truth1": "Hakuna msaada wa wateja unaoweza kuweka upya pochi yako",
       "truth2": "Sasisho zote rasmi zinaonekana kwenye programu hii",
       "truth3": "Hakuna mtu kutoka Umotu ataomba maneno yako ya kurejesha au funguo za faragha",
-      "truth4": "Pakua programu hii kutoka Apple Store au Google Play rasmi pekee",
+      "truth4": "Pakua programu hii kutoka Apple App Store au Google Play rasmi pekee",
       "whatToDo": "Ikiwa Mtu Anakuwasiliana",
       "action1": "Usijibu",
       "action2": "Usibofye viungo",

@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "$10 sehari, untuk semua orang di mana saja"
+    "tagline": "$10 per hari, untuk semua orang, di mana saja"
   },
   "navigation": {
     "home": "Beranda",
@@ -30,7 +30,9 @@
         "language": "Bahasa",
         "wallet": "Dompet",
         "verifyHuman": "Verifikasi Manusia",
-        "complete": "Selesai"
+        "complete": "Selesai",
+        "dailySampling": "Aktifkan Sampling Harian",
+        "dailySamplingHint": "Diperlukan: 1 sampel/hari untuk hadiah"
       },
       "continue": "Lanjutkan",
       "changeChoice": "Ubah pilihan",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Tukar segera hadir",
     "history": "Riwayat",
     "tokens": "Token",
-    "collectibles": "Koleksi",
     "noTokens": "Tidak ada token yang dikonfigurasi",
     "nativeToken": "Token Asli",
     "loading": "Memuat...",
@@ -616,6 +617,13 @@
     "title": "Riwayat Transaksi",
     "sent": "Terkirim",
     "received": "Diterima",
+    "filters": {
+      "all": "Semua",
+      "clear": "Bersihkan"
+    },
+    "search": {
+      "placeholder": "Cari berdasarkan alamat atau kontak"
+    },
     "token": "Token",
     "external": "Eksternal",
     "to": "Ke: ",
@@ -623,7 +631,9 @@
     "viewInExplorer": "Lihat di Explorer",
     "empty": {
       "title": "Belum Ada Transaksi",
-      "description": "Riwayat transaksi Anda akan muncul di sini setelah Anda mengirim atau menerima token."
+      "description": "Riwayat transaksi Anda akan muncul di sini setelah Anda mengirim atau menerima token.",
+      "filteredTitle": "Tidak ada transaksi yang cocok",
+      "filteredDescription": "Coba alamat atau filter lain."
     },
     "status": {
       "confirmed": "Dikonfirmasi",
@@ -690,7 +700,7 @@
     },
     "verification": {
       "title": "Verifikasi",
-      "description": "Verifikasi kemanusiaan Anda dengan Inlyf untuk membuka hadiah harian. Pemeriksaan liveness singkat; verifikasi ulang secara berkala.",
+      "description": "Verifikasi kemanusiaan Anda dengan inLyf untuk membuka hadiah harian. Pemeriksaan liveness singkat; verifikasi ulang secara berkala.",
       "open": "Mulai Verifikasi",
       "refresh": "Segarkan Verifikasi",
       "status": "Status",
@@ -761,7 +771,7 @@
   "onboarding": {
     "welcome": {
       "title": "Selamat Datang di Umotu",
-      "subtitle": "$10 sehari, untuk semua orang di mana saja",
+      "subtitle": "$10 per hari, untuk semua orang, di mana saja",
       "getStarted": "Mulai"
     },
     "language": {
@@ -782,7 +792,7 @@
   },
   "poh": {
     "subtitle": "Buka hadiah harian",
-    "description": "Verifikasi liveness dengan Inlyf untuk membuka hadiah. Tidak ada biometrik yang disimpan di chain; hanya kredensial berumur pendek yang dikeluarkan.",
+    "description": "Verifikasi liveness dengan inLyf untuk membuka hadiah. Tidak ada biometrik yang disimpan di chain; hanya kredensial berumur pendek yang dikeluarkan.",
     "howItWorks": "Cara kerjanya",
     "howItWorksDesc": "Pemeriksaan liveness singkat (pemindaian wajah) memverifikasi Anda manusia. Kredensial Anda bertahan 90 hari dan dapat disegarkan kapan saja.",
     "adultQuestion": "Apakah Anda dewasa (18+)?",
@@ -892,10 +902,10 @@
     "comingSoon": "Segera Hadir",
     "liveApps": "Aplikasi Langsung",
     "available": "TERSEDIA",
-    "pohDescription": "Verifikasi kemanusiaan Anda dengan Inlyf untuk membuka hadiah harian.",
+    "pohDescription": "Verifikasi kemanusiaan Anda dengan inLyf untuk membuka hadiah harian.",
     "vision": {
       "title": "Visi Kami",
-      "tagline": "$10 sehari, untuk semua orang di mana saja",
+      "tagline": "$10 per hari, untuk semua orang, di mana saja",
       "description": "Umotu sedang membangun infrastruktur untuk dunia di mana setiap orang dapat berpartisipasi dalam ekonomi global—tanpa memandang tempat tinggal atau bank yang digunakan.",
       "readMore": "Baca Visi Lengkap",
       "pillars": {
@@ -1108,7 +1118,7 @@
     "featured": "UNGGULAN",
     "whatIs": {
       "title": "Apa Itu Umotu?",
-      "subtitle": "$10 sehari, untuk semua orang di mana saja",
+      "subtitle": "$10 per hari, untuk semua orang, di mana saja",
       "intro": "Umotu bertujuan agar siapa pun dapat memperoleh sekitar $10/hari hanya dengan smartphone. Tidak perlu hardware mahal, tidak perlu keterampilan khusus, tidak ada batas.",
       "howDifferent": "Apa bedanya?",
       "noMiddleman": "Tidak ada perantara: Anda berinteraksi langsung dengan jaringan—tidak perlu rekening bank",
@@ -1309,7 +1319,7 @@
       "truth1": "Tidak ada dukungan pelanggan yang dapat mereset dompet Anda",
       "truth2": "Semua pembaruan resmi muncul di aplikasi ini",
       "truth3": "Tidak ada dari Umotu yang akan meminta frasa pemulihan atau kunci pribadi Anda",
-      "truth4": "Unduh aplikasi ini hanya dari Apple Store atau Google Play resmi",
+      "truth4": "Unduh aplikasi ini hanya dari Apple App Store atau Google Play resmi",
       "whatToDo": "Jika Seseorang Menghubungi Anda",
       "action1": "Jangan balas",
       "action2": "Jangan klik tautan",

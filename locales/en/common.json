@@ -38,6 +38,9 @@
       "changeChoice": "Change choice",
       "requiresLanguage": "Select language first",
       "requiresWallet": "Create wallet first"
+    },
+    "daSampling": {
+      "staleHint": "Run sampling now to ensure your daily reward eligibility."
     }
   },
   "earnings": {
@@ -134,11 +137,16 @@
       "claimingDay": "Processing day {{day}}",
       "claimAllButton": "Claim all {{count}} days",
       "error": "Failed to claim",
-      "noProof": "Reward proof not published yet. Try again after today’s snapshot is live.",
+      "noProof": "Reward proof not published yet. Try again after today's snapshot is live.",
       "unauthorized": "Relayer authorization failed. Please try again or contact support.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
-      "gasEstimateFailed": "Gas estimate unavailable"
+      "gasEstimateFailed": "Gas estimate unavailable",
+      "stableNotConfigured": "Stablecoin payout is not available. Please select UMT or contact support.",
+      "insufficientGas": "Insufficient gas balance. Please top up your wallet with native tokens.",
+      "userRejected": "Transaction was cancelled.",
+      "networkError": "Network error. Please check your connection and try again.",
+      "alreadyClaimed": "These rewards have already been claimed."
     },
     "timezone": {
       "title": "Select Timezone",
@@ -184,7 +192,6 @@
     "swapComingSoon": "Swap coming soon",
     "history": "History",
     "tokens": "Tokens",
-    "collectibles": "Collectibles",
     "noTokens": "No tokens configured",
     "nativeToken": "Native Token",
     "loading": "Loading...",
@@ -626,6 +633,13 @@
     "title": "Transaction History",
     "sent": "Sent",
     "received": "Received",
+    "filters": {
+      "all": "All",
+      "clear": "Clear"
+    },
+    "search": {
+      "placeholder": "Search by address or contact"
+    },
     "token": "Token",
     "external": "External",
     "to": "To: ",
@@ -633,7 +647,9 @@
     "viewInExplorer": "View in Explorer",
     "empty": {
       "title": "No Transactions Yet",
-      "description": "Your transaction history will appear here once you send or receive tokens."
+      "description": "Your transaction history will appear here once you send or receive tokens.",
+      "filteredTitle": "No Matching Transactions",
+      "filteredDescription": "Try a different address or filter."
     },
     "status": {
       "confirmed": "Confirmed",
@@ -713,7 +729,7 @@
     },
     "verification": {
       "title": "Verification",
-      "description": "Verify your humanity with Inlyf to unlock daily rewards. A quick liveness check; re-verify periodically.",
+      "description": "Verify your humanity with inLyf to unlock daily rewards. A quick liveness check; re-verify periodically.",
       "open": "Start Verification",
       "refresh": "Refresh Verification",
       "status": "Status",
@@ -746,6 +762,36 @@
       "clearCache": "Clear Cache",
       "cacheCleared": "Cache cleared! Restart to apply."
     },
+    "integrityDebug": {
+      "title": "App Attestation (Debug)",
+      "description": "Fetch a device attestation token to confirm App Attest is active.",
+      "fetch": "Fetch Attestation",
+      "fetching": "Fetching...",
+      "copy": "Copy Payload",
+      "copyNonce": "Copy Nonce",
+      "toastFetchSuccess": "App attestation fetched",
+      "toastFetchError": "App attestation failed",
+      "toastCopy": "Attestation copied",
+      "toastCopyNonce": "Nonce copied",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "empty payload",
+      "summaryStub": "stub token (native module missing?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (unsupported)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "error: {{message}}",
+      "verify": "Verify on Server",
+      "verifying": "Verifying...",
+      "verifyMissing": "error: missing payload or nonce",
+      "verifyOk": "server verification: ok",
+      "verifyFail": "server verification failed: {{error}}",
+      "toastVerifyOk": "Server verification ok",
+      "toastVerifyFail": "Server verification failed"
+    },
     "chainGuardian": {
       "title": "Chain Guardian",
       "description": "Help secure the blockchain by keeping your phone online. Complete at least one sampling job per day to stay eligible for rewards.",
@@ -757,13 +803,15 @@
       "backgroundHint": "Works even when app is closed",
       "lastSample": "Last Activity",
       "noSamples": "No activity yet. Keep the app open to start.",
-      "staleWarning": "Not seen today — reopen the app to resume.",
+      "staleWarning": "Not seen recently — open the app to resume.",
       "androidBatteryWarning": "Battery optimization may prevent sampling",
       "androidBatteryHint": "Go to Settings → Apps → Umotu → Battery → select \"Unrestricted\" to allow background sampling.",
+      "iosBackgroundHint": "iOS may pause background sampling. Open the app occasionally or tap Run now to stay active.",
       "openSettings": "Tap to open settings",
       "tip": "Enable \"Run in Background\" for the best earning potential.",
       "runNow": "Run now",
       "running": "Running…",
+      "runNowNoData": "No data (battery/WiFi constraints or no assignments).",
       "lastError": "Last error",
       "status": {
         "active": "Active",
@@ -805,7 +853,7 @@
   },
   "poh": {
     "subtitle": "Unlock daily rewards",
-    "description": "Verify liveness with Inlyf to unlock rewards. No biometrics are stored on-chain; only a short-lived credential is issued.",
+    "description": "Verify liveness with inLyf to unlock rewards. No biometrics are stored on-chain; only a short-lived credential is issued.",
     "howItWorks": "How it works",
     "howItWorksDesc": "A short liveness check (face scan) verifies you are human. Your credential lasts 90 days and can be refreshed anytime.",
     "adultQuestion": "Are you an adult (18+)?",
@@ -915,7 +963,7 @@
     "comingSoon": "Coming Soon",
     "liveApps": "Live Apps",
     "available": "AVAILABLE",
-    "pohDescription": "Verify your humanity with Inlyf to unlock daily rewards.",
+    "pohDescription": "Verify your humanity with inLyf to unlock daily rewards.",
     "vision": {
       "title": "Our Vision",
       "tagline": "$10 a day, everyone everywhere",
@@ -1333,7 +1381,7 @@
       "truth1": "There is no customer support that can reset your wallet",
       "truth2": "All official updates appear in this app",
       "truth3": "No one from Umotu will ask for your recovery phrase or private key",
-      "truth4": "Download this app only from the official Apple Store or Google Play",
+      "truth4": "Download this app only from the official Apple App Store or Google Play",
       "whatToDo": "If Someone Contacts You",
       "action1": "Do not respond",
       "action2": "Do not click links",

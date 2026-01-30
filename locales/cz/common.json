@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 dolarů denně, všem a všude"
+    "tagline": "$10 denně, pro všechny, všude"
   },
   "navigation": {
     "home": "Domů",
@@ -30,7 +30,9 @@
         "language": "Jazyk",
         "wallet": "Peněženka",
         "verifyHuman": "Ověřit člověka",
-        "complete": "Dokončeno"
+        "complete": "Dokončeno",
+        "dailySampling": "Povolit denní vzorkování",
+        "dailySamplingHint": "Požadováno: 1 vzorek/den pro odměny"
       },
       "continue": "Pokračovat",
       "changeChoice": "Změnit volbu",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Výměna brzy přijde",
     "history": "Historie",
     "tokens": "Tokeny",
-    "collectibles": "Sběratelské předměty",
     "noTokens": "Žádné nakonfigurované tokeny",
     "nativeToken": "Nativní token",
     "loading": "Načítání...",
@@ -617,6 +618,13 @@
     "title": "Historie transakcí",
     "sent": "Odesláno",
     "received": "Přijato",
+    "filters": {
+      "all": "Vše",
+      "clear": "Vyčistit"
+    },
+    "search": {
+      "placeholder": "Hledat podle adresy nebo kontaktu"
+    },
     "token": "Token",
     "external": "Externí",
     "to": "Komu: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Zobrazit v průzkumníku",
     "empty": {
       "title": "Zatím žádné transakce",
-      "description": "Historie transakcí se zde objeví, jakmile odešlete nebo přijmete tokeny."
+      "description": "Historie transakcí se zde objeví, jakmile odešlete nebo přijmete tokeny.",
+      "filteredTitle": "Žádné odpovídající transakce",
+      "filteredDescription": "Zkuste jinou adresu nebo filtr."
     },
     "status": {
       "confirmed": "Potvrzeno",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Ověření",
-      "description": "Ověřte svou lidskost pomocí Inlyf pro odemknutí denních odměn. Rychlá kontrola živosti; pravidelně opakujte.",
+      "description": "Ověřte svou lidskost pomocí inLyf pro odemknutí denních odměn. Rychlá kontrola živosti; pravidelně opakujte.",
       "open": "Spustit ověření",
       "refresh": "Obnovit ověření",
       "status": "Stav",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Vítejte v Umotu",
-      "subtitle": "10 dolarů denně, všem a všude",
+      "subtitle": "$10 denně, pro všechny, všude",
       "getStarted": "Začít"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Odemknout denní odměny",
-    "description": "Ověřte živost pomocí Inlyf pro odemknutí odměn. Žádná biometrie není uložena on-chain; vydává se pouze krátkodobý certifikát.",
+    "description": "Ověřte živost pomocí inLyf pro odemknutí odměn. Žádná biometrie není uložena on-chain; vydává se pouze krátkodobý certifikát.",
     "howItWorks": "Jak to funguje",
     "howItWorksDesc": "Krátká kontrola živosti (sken obličeje) ověří, že jste člověk. Certifikát platí 90 dní a lze ho kdykoli obnovit.",
     "adultQuestion": "Jste dospělý (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "Brzy",
     "liveApps": "Živé aplikace",
     "available": "DOSTUPNÉ",
-    "pohDescription": "Ověřte svou lidskost pomocí Inlyf pro odemknutí denních odměn.",
+    "pohDescription": "Ověřte svou lidskost pomocí inLyf pro odemknutí denních odměn.",
     "vision": {
       "title": "Naše vize",
-      "tagline": "10 dolarů denně, všem a všude",
+      "tagline": "$10 denně, pro všechny, všude",
       "description": "Umotu buduje infrastrukturu pro svět, kde se každý může zapojit do globální ekonomiky – bez ohledu na to, kde žije nebo jakou banku používá.",
       "readMore": "Přečíst celou vizi",
       "pillars": {
@@ -1108,7 +1118,7 @@
     "featured": "DOPORUČENÉ",
     "whatIs": {
       "title": "Co je Umotu?",
-      "subtitle": "10 dolarů denně, všem a všude",
+      "subtitle": "$10 denně, pro všechny, všude",
       "intro": "Umotu si klade za cíl umožnit komukoli vydělat přibližně 10 dolarů/den pouze pomocí smartphonu. Žádné drahé hardware, žádné speciální dovednosti, žádné hranice.",
       "howDifferent": "Čím je jiný?",
       "noMiddleman": "Žádný prostředník: Komunikujete přímo se sítí – není potřeba bankovní účet",
@@ -1309,7 +1319,7 @@
       "truth1": "Neexistuje zákaznická podpora, která by mohla resetovat peněženku",
       "truth2": "Všechny oficiální aktualizace se objevují v této aplikaci",
       "truth3": "Nikdo z Umotu nebude žádat vaši obnovovací frázi nebo soukromý klíč",
-      "truth4": "Stahujte tuto aplikaci pouze z oficiálního Apple Store nebo Google Play",
+      "truth4": "Stahujte tuto aplikaci pouze z oficiálního Apple App Store nebo Google Play",
       "whatToDo": "Pokud vás někdo kontaktuje",
       "action1": "Neodpovídejte",
       "action2": "Neklikejte na odkazy",

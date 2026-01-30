@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "$10 al día, para todos en todas partes"
+    "tagline": "10 $ al día, para todos, en todas partes"
   },
   "navigation": {
     "home": "Inicio",
@@ -30,7 +30,9 @@
         "language": "Idioma",
         "wallet": "Billetera",
         "verifyHuman": "Verificar Humano",
-        "complete": "Completo"
+        "complete": "Completo",
+        "dailySampling": "Activar muestreo diario",
+        "dailySamplingHint": "Requerido: 1 muestra/día para recompensas"
       },
       "continue": "Continuar",
       "changeChoice": "Cambiar elección",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Intercambio próximamente",
     "history": "Historial",
     "tokens": "Tokens",
-    "collectibles": "Coleccionables",
     "noTokens": "No hay tokens configurados",
     "nativeToken": "Token Nativo",
     "loading": "Cargando...",
@@ -617,6 +618,13 @@
     "title": "Historial de Transacciones",
     "sent": "Enviado",
     "received": "Recibido",
+    "filters": {
+      "all": "Todas",
+      "clear": "Limpiar"
+    },
+    "search": {
+      "placeholder": "Buscar por dirección o contacto"
+    },
     "token": "Token",
     "external": "Externo",
     "to": "A: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Ver en Explorador",
     "empty": {
       "title": "Aún No Hay Transacciones",
-      "description": "Tu historial de transacciones aparecerá aquí una vez que envíes o recibas tokens."
+      "description": "Tu historial de transacciones aparecerá aquí una vez que envíes o recibas tokens.",
+      "filteredTitle": "No hay transacciones coincidentes",
+      "filteredDescription": "Prueba con otra dirección o filtro."
     },
     "status": {
       "confirmed": "Confirmada",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Verificación",
-      "description": "Verifica tu humanidad con Inlyf para desbloquear recompensas diarias. Una comprobación rápida de liveness; reverifica periódicamente.",
+      "description": "Verifica tu humanidad con inLyf para desbloquear recompensas diarias. Una comprobación rápida de liveness; reverifica periódicamente.",
       "open": "Iniciar Verificación",
       "refresh": "Actualizar Verificación",
       "status": "Estado",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Bienvenido a Umotu",
-      "subtitle": "$10 al día, para todos en todas partes",
+      "subtitle": "10 $ al día, para todos, en todas partes",
       "getStarted": "Comenzar"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Desbloquea recompensas diarias",
-    "description": "Verifica liveness con Inlyf para desbloquear recompensas. No se almacenan biometría en cadena; solo se emite una credencial de corta duración.",
+    "description": "Verifica liveness con inLyf para desbloquear recompensas. No se almacenan biometría en cadena; solo se emite una credencial de corta duración.",
     "howItWorks": "Cómo funciona",
     "howItWorksDesc": "Una comprobación corta de liveness (escaneo facial) verifica que eres humano. Tu credencial dura 90 días y se puede actualizar en cualquier momento.",
     "adultQuestion": "¿Eres adulto (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "Próximamente",
     "liveApps": "Apps en Vivo",
     "available": "DISPONIBLES",
-    "pohDescription": "Verifica tu humanidad con Inlyf para desbloquear recompensas diarias.",
+    "pohDescription": "Verifica tu humanidad con inLyf para desbloquear recompensas diarias.",
     "vision": {
       "title": "Nuestra Visión",
-      "tagline": "$10 al día, para todos en todas partes",
+      "tagline": "10 $ al día, para todos, en todas partes",
       "description": "Umotu está construyendo infraestructura para un mundo donde todos puedan participar en la economía global, independientemente de dónde vivan o qué banco usen.",
       "readMore": "Leer Visión Completa",
       "pillars": {
@@ -1109,7 +1119,7 @@
     "featured": "DESTACADO",
     "whatIs": {
       "title": "¿Qué es Umotu?",
-      "subtitle": "$10 al día, para todos en todas partes",
+      "subtitle": "10 $ al día, para todos, en todas partes",
       "intro": "Umotu busca permitir que cualquiera gane alrededor de $10/día usando solo un smartphone. Sin hardware caro, sin habilidades especiales, sin fronteras.",
       "howDifferent": "¿Cómo es diferente?",
       "noMiddleman": "Sin intermediario: Interactúas directamente con la red—sin necesidad de cuenta bancaria",

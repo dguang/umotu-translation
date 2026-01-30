@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "Günde 10 dolar, herkes için her yerde"
+    "tagline": "Günde 10 $, herkes için, her yerde"
   },
   "navigation": {
     "home": "Ana Sayfa",
@@ -30,7 +30,9 @@
         "language": "Dil",
         "wallet": "Cüzdan",
         "verifyHuman": "İnsan Doğrula",
-        "complete": "Tamamlandı"
+        "complete": "Tamamlandı",
+        "dailySampling": "Günlük Örneklemeyi Etkinleştir",
+        "dailySamplingHint": "Gerekli: Ödüller için günde 1 örnek"
       },
       "continue": "Devam Et",
       "changeChoice": "Seçimi değiştir",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Takas yakında geliyor",
     "history": "Geçmiş",
     "tokens": "Token'lar",
-    "collectibles": "Koleksiyonlar",
     "noTokens": "Yapılandırılmış token yok",
     "nativeToken": "Yerel Token",
     "loading": "Yükleniyor...",
@@ -616,6 +617,13 @@
     "title": "İşlem Geçmişi",
     "sent": "Gönderildi",
     "received": "Alındı",
+    "filters": {
+      "all": "Tümü",
+      "clear": "Temizle"
+    },
+    "search": {
+      "placeholder": "Adres veya kişiyle ara"
+    },
     "token": "Token",
     "external": "Dış",
     "to": "Kime: ",
@@ -623,7 +631,9 @@
     "viewInExplorer": "Keşifçide Görüntüle",
     "empty": {
       "title": "Henüz İşlem Yok",
-      "description": "Token gönderdiğiniz veya aldığınızda işlem geçmişiniz burada görünecek."
+      "description": "Token gönderdiğiniz veya aldığınızda işlem geçmişiniz burada görünecek.",
+      "filteredTitle": "Eşleşen işlem yok",
+      "filteredDescription": "Farklı bir adres veya filtre deneyin."
     },
     "status": {
       "confirmed": "Onaylandı",
@@ -690,7 +700,7 @@
     },
     "verification": {
       "title": "Doğrulama",
-      "description": "Günlük ödülleri açmak için Inlyf ile insanlığınızı doğrulayın. Kısa bir canlılık kontrolü; periyodik olarak yenileyin.",
+      "description": "Günlük ödülleri açmak için inLyf ile insanlığınızı doğrulayın. Kısa bir canlılık kontrolü; periyodik olarak yenileyin.",
       "open": "Doğrulamayı Başlat",
       "refresh": "Doğrulamayı Yenile",
       "status": "Durum",
@@ -761,7 +771,7 @@
   "onboarding": {
     "welcome": {
       "title": "Umotu'ya Hoş Geldiniz",
-      "subtitle": "Günde 10 dolar, herkes için her yerde",
+      "subtitle": "Günde 10 $, herkes için, her yerde",
       "getStarted": "Başla"
     },
     "language": {
@@ -782,7 +792,7 @@
   },
   "poh": {
     "subtitle": "Günlük ödülleri aç",
-    "description": "Ödülleri açmak için Inlyf ile canlılık doğrulayın. Biyometrik veriler zincire kaydedilmez; sadece kısa süreli kimlik verilir.",
+    "description": "Ödülleri açmak için inLyf ile canlılık doğrulayın. Biyometrik veriler zincire kaydedilmez; sadece kısa süreli kimlik verilir.",
     "howItWorks": "Nasıl çalışır",
     "howItWorksDesc": "Kısa bir canlılık kontrolü (yüz taraması) insan olduğunuzu doğrular. Kimliğiniz 90 gün geçerlidir ve istediğiniz zaman yenilenebilir.",
     "adultQuestion": "Yetişkin misiniz (18+)?",
@@ -892,10 +902,10 @@
     "comingSoon": "Yakında",
     "liveApps": "Canlı Uygulamalar",
     "available": "MEVCUT",
-    "pohDescription": "Günlük ödülleri açmak için Inlyf ile insanlığınızı doğrulayın.",
+    "pohDescription": "Günlük ödülleri açmak için inLyf ile insanlığınızı doğrulayın.",
     "vision": {
       "title": "Vizyonumuz",
-      "tagline": "Günde 10 dolar, herkes için her yerde",
+      "tagline": "Günde 10 $, herkes için, her yerde",
       "description": "Umotu, herkesin küresel ekonomiye katılabileceği bir altyapı inşa ediyor—nerede yaşadığı veya hangi bankayı kullandığı fark etmeksizin.",
       "readMore": "Tam Vizyonu Oku",
       "pillars": {
@@ -1108,7 +1118,7 @@
     "featured": "ÖNE ÇIKAN",
     "whatIs": {
       "title": "Umotu Nedir?",
-      "subtitle": "Günde 10 dolar, herkes için her yerde",
+      "subtitle": "Günde 10 $, herkes için, her yerde",
       "intro": "Umotu, sadece bir akıllı telefon kullanarak herkesin günde yaklaşık 10 dolar kazanmasını hedefler. Pahalı donanım, özel beceri veya sınır yok.",
       "howDifferent": "Nasıl farklı?",
       "noMiddleman": "Aracı yok: Doğrudan ağ ile etkileşim—banka hesabı gerekmez",
@@ -1309,7 +1319,7 @@
       "truth1": "Cüzdanınızı sıfırlayabilecek müşteri desteği yok",
       "truth2": "Tüm resmi güncellemeler bu uygulamada görünür",
       "truth3": "Umotu'dan kimse kurtarma ifadenizi veya özel anahtarınızı istemez",
-      "truth4": "Bu uygulamayı sadece resmi Apple Store veya Google Play'den indirin",
+      "truth4": "Bu uygulamayı sadece resmi Apple App Store veya Google Play'den indirin",
       "whatToDo": "Biri Size Ulaşırsa",
       "action1": "Cevap vermeyin",
       "action2": "Bağlantılara tıklamayın",

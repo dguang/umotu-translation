@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 dolarów dziennie, dla wszystkich na całym świecie"
+    "tagline": "10 $ dziennie — dla wszystkich, wszędzie"
   },
   "navigation": {
     "home": "Strona główna",
@@ -30,7 +30,9 @@
         "language": "Język",
         "wallet": "Portfel",
         "verifyHuman": "Zweryfikuj człowieka",
-        "complete": "Zakończono"
+        "complete": "Zakończono",
+        "dailySampling": "Włącz codzienne próbkowanie",
+        "dailySamplingHint": "Wymagane: 1 próbka/dzień dla nagród"
       },
       "continue": "Kontynuuj",
       "changeChoice": "Zmień wybór",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Wymiana wkrótce dostępna",
     "history": "Historia",
     "tokens": "Tokeny",
-    "collectibles": "Kolekcjonerskie",
     "noTokens": "Brak skonfigurowanych tokenów",
     "nativeToken": "Natywny token",
     "loading": "Ładowanie...",
@@ -617,6 +618,13 @@
     "title": "Historia transakcji",
     "sent": "Wysłane",
     "received": "Otrzymane",
+    "filters": {
+      "all": "Wszystkie",
+      "clear": "Wyczyść"
+    },
+    "search": {
+      "placeholder": "Szukaj po adresie lub kontakcie"
+    },
     "token": "Token",
     "external": "Zewnętrzne",
     "to": "Do: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Zobacz w eksploratorze",
     "empty": {
       "title": "Brak transakcji",
-      "description": "Twoja historia transakcji pojawi się tutaj po wysłaniu lub otrzymaniu tokenów."
+      "description": "Twoja historia transakcji pojawi się tutaj po wysłaniu lub otrzymaniu tokenów.",
+      "filteredTitle": "Brak pasujących transakcji",
+      "filteredDescription": "Spróbuj innego adresu lub filtra."
     },
     "status": {
       "confirmed": "Potwierdzona",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Weryfikacja",
-      "description": "Zweryfikuj swoją człowieczeństwo za pomocą Inlyf, aby odblokować codzienne nagrody. Szybkie sprawdzenie liveness; weryfikuj okresowo.",
+      "description": "Zweryfikuj swoją człowieczeństwo za pomocą inLyf, aby odblokować codzienne nagrody. Szybkie sprawdzenie liveness; weryfikuj okresowo.",
       "open": "Rozpocznij weryfikację",
       "refresh": "Odśwież weryfikację",
       "status": "Status",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Witaj w Umotu",
-      "subtitle": "10 dolarów dziennie, dla wszystkich na całym świecie",
+      "subtitle": "10 $ dziennie — dla wszystkich, wszędzie",
       "getStarted": "Zacznij"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Odblokuj codzienne nagrody",
-    "description": "Zweryfikuj liveness za pomocą Inlyf, aby odblokować nagrody. Żadne dane biometryczne nie są przechowywane on-chain; wydawany jest tylko krótkotrwały credential.",
+    "description": "Zweryfikuj liveness za pomocą inLyf, aby odblokować nagrody. Żadne dane biometryczne nie są przechowywane on-chain; wydawany jest tylko krótkotrwały credential.",
     "howItWorks": "Jak to działa",
     "howItWorksDesc": "Krótkie sprawdzenie liveness (skan twarzy) weryfikuje, że jesteś człowiekiem. Twój credential trwa 90 dni i można go odświeżyć w dowolnym momencie.",
     "adultQuestion": "Czy jesteś dorosły (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "Wkrótce",
     "liveApps": "Aplikacje na żywo",
     "available": "DOSTĘPNE",
-    "pohDescription": "Zweryfikuj swoją człowieczeństwo za pomocą Inlyf, aby odblokować codzienne nagrody.",
+    "pohDescription": "Zweryfikuj swoją człowieczeństwo za pomocą inLyf, aby odblokować codzienne nagrody.",
     "vision": {
       "title": "Nasza wizja",
-      "tagline": "10 dolarów dziennie, dla wszystkich na całym świecie",
+      "tagline": "10 $ dziennie — dla wszystkich, wszędzie",
       "description": "Umotu buduje infrastrukturę dla świata, w którym każdy może uczestniczyć w globalnej gospodarce — niezależnie od miejsca zamieszkania czy banku.",
       "readMore": "Przeczytaj pełną wizję",
       "pillars": {
@@ -1104,7 +1114,7 @@
     "featured": "WYRÓŻNIONE",
     "whatIs": {
       "title": "Czym jest Umotu?",
-      "subtitle": "10 dolarów dziennie, dla wszystkich na całym świecie",
+      "subtitle": "10 $ dziennie — dla wszystkich, wszędzie",
       "intro": "Umotu dąży do tego, aby każdy mógł zarabiać około 10 dolarów/dzień używając tylko smartfona. Bez drogiego sprzętu, bez specjalnych umiejętności, bez granic.",
       "howDifferent": "Czym się różni?",
       "noMiddleman": "Bez pośrednika: Interakcjonujesz bezpośrednio z siecią — bez konta bankowego",
@@ -1305,7 +1315,7 @@
       "truth1": "Nie ma wsparcia klienta, które może zresetować Twój portfel",
       "truth2": "Wszystkie oficjalne aktualizacje pojawiają się w tej aplikacji",
       "truth3": "Nikt z Umotu nie poprosi o frazę odzyskiwania lub klucz prywatny",
-      "truth4": "Pobieraj tę aplikację tylko z oficjalnego Apple Store lub Google Play",
+      "truth4": "Pobieraj tę aplikację tylko z oficjalnego Apple App Store lub Google Play",
       "whatToDo": "Jeśli ktoś Cię skontaktuje",
       "action1": "Nie odpowiadaj",
       "action2": "Nie klikaj linków",

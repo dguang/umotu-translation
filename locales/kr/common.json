@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "하루 $10, 모두에게 어디서나"
+    "tagline": "하루 10달러, 모두에게, 어디서나"
   },
   "navigation": {
     "home": "홈",
@@ -30,7 +30,9 @@
         "language": "언어",
         "wallet": "지갑",
         "verifyHuman": "인간 인증",
-        "complete": "완료"
+        "complete": "완료",
+        "dailySampling": "일일 샘플링 활성화",
+        "dailySamplingHint": "필수: 보상을 위해 1일 1샘플"
       },
       "continue": "계속",
       "changeChoice": "선택 변경",
@@ -182,7 +184,6 @@
     "swapComingSoon": "스왑 곧 출시",
     "history": "거래 내역",
     "tokens": "토큰",
-    "collectibles": "수집품",
     "noTokens": "설정된 토큰 없음",
     "nativeToken": "네이티브 토큰",
     "loading": "로딩 중...",
@@ -616,6 +617,13 @@
     "title": "거래 내역",
     "sent": "보냄",
     "received": "받음",
+    "filters": {
+      "all": "전체",
+      "clear": "초기화"
+    },
+    "search": {
+      "placeholder": "주소 또는 연락처로 검색"
+    },
     "token": "토큰",
     "external": "외부",
     "to": "수신: ",
@@ -623,7 +631,9 @@
     "viewInExplorer": "탐색기에서 보기",
     "empty": {
       "title": "아직 거래 없음",
-      "description": "토큰을 보내거나 받으면 거래 내역이 여기에 표시됩니다."
+      "description": "토큰을 보내거나 받으면 거래 내역이 여기에 표시됩니다.",
+      "filteredTitle": "일치하는 거래가 없습니다",
+      "filteredDescription": "다른 주소 또는 필터를 시도하세요."
     },
     "status": {
       "confirmed": "확인됨",
@@ -690,7 +700,7 @@
     },
     "verification": {
       "title": "인증",
-      "description": "Inlyf로 인간성을 인증하여 일일 보상을 잠금 해제. 빠른 생체 확인; 주기적으로 재인증.",
+      "description": "inLyf로 인간성을 인증하여 일일 보상을 잠금 해제. 빠른 생체 확인; 주기적으로 재인증.",
       "open": "인증 시작",
       "refresh": "인증 새로고침",
       "status": "상태",
@@ -761,7 +771,7 @@
   "onboarding": {
     "welcome": {
       "title": "Umotu에 오신 것을 환영합니다",
-      "subtitle": "하루 $10, 모두에게 어디서나",
+      "subtitle": "하루 10달러, 모두에게, 어디서나",
       "getStarted": "시작하기"
     },
     "language": {
@@ -782,7 +792,7 @@
   },
   "poh": {
     "subtitle": "일일 보상 잠금 해제",
-    "description": "Inlyf로 생체 확인하여 보상 잠금 해제. 생체 정보는 온체인에 저장되지 않으며, 단기 자격 증명만 발급됩니다.",
+    "description": "inLyf로 생체 확인하여 보상 잠금 해제. 생체 정보는 온체인에 저장되지 않으며, 단기 자격 증명만 발급됩니다.",
     "howItWorks": "작동 방식",
     "howItWorksDesc": "짧은 생체 확인(얼굴 스캔)으로 인간임을 증명. 자격 증명은 90일 유효하며 언제든 새로고침 가능.",
     "adultQuestion": "성인(18세 이상)입니까?",
@@ -892,10 +902,10 @@
     "comingSoon": "곧 출시",
     "liveApps": "라이브 앱",
     "available": "사용 가능",
-    "pohDescription": "Inlyf로 인간성 인증하여 일일 보상 잠금 해제.",
+    "pohDescription": "inLyf로 인간성 인증하여 일일 보상 잠금 해제.",
     "vision": {
       "title": "우리 비전",
-      "tagline": "하루 $10, 모두에게 어디서나",
+      "tagline": "하루 10달러, 모두에게, 어디서나",
       "description": "Umotu는 누구나 거주지나 은행에 관계없이 글로벌 경제에 참여할 수 있는 인프라를 구축합니다.",
       "readMore": "전체 비전 읽기",
       "pillars": {
@@ -1108,7 +1118,7 @@
     "featured": "추천",
     "whatIs": {
       "title": "Umotu란?",
-      "subtitle": "하루 $10, 모두에게 어디서나",
+      "subtitle": "하루 10달러, 모두에게, 어디서나",
       "intro": "Umotu는 스마트폰만으로 누구나 하루 약 $10을 벌 수 있게 합니다. 고가 하드웨어, 특수 기술, 국경 없음.",
       "howDifferent": "어떻게 다를까?",
       "noMiddleman": "중개인 없음: 네트워크와 직접 상호작용—은행 계좌 불필요",
@@ -1309,7 +1319,7 @@
       "truth1": "지갑 초기화 가능한 고객 지원 없음",
       "truth2": "모든 공식 업데이트 이 앱에 표시",
       "truth3": "Umotu 누구도 복구 구문 또는 개인 키 요청 안 함",
-      "truth4": "공식 Apple Store 또는 Google Play에서만 앱 다운로드",
+      "truth4": "공식 Apple App Store 또는 Google Play에서만 앱 다운로드",
       "whatToDo": "연락 시",
       "action1": "응답 안 함",
       "action2": "링크 클릭 안 함",

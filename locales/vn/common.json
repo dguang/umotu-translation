@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 đô la mỗi ngày, cho mọi người ở mọi nơi"
+    "tagline": "10 $ mỗi ngày, cho mọi người, ở khắp nơi"
   },
   "navigation": {
     "home": "Trang chủ",
@@ -30,7 +30,9 @@
         "language": "Ngôn ngữ",
         "wallet": "Ví",
         "verifyHuman": "Xác minh con người",
-        "complete": "Hoàn thành"
+        "complete": "Hoàn thành",
+        "dailySampling": "Bật lấy mẫu hàng ngày",
+        "dailySamplingHint": "Bắt buộc: 1 mẫu/ngày để nhận thưởng"
       },
       "continue": "Tiếp tục",
       "changeChoice": "Thay đổi lựa chọn",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Hoán đổi sắp có",
     "history": "Lịch sử",
     "tokens": "Token",
-    "collectibles": "Bộ sưu tập",
     "noTokens": "Chưa cấu hình token nào",
     "nativeToken": "Token Gốc",
     "loading": "Đang tải...",
@@ -616,6 +617,13 @@
     "title": "Lịch sử Giao dịch",
     "sent": "Đã gửi",
     "received": "Đã nhận",
+    "filters": {
+      "all": "Tất cả",
+      "clear": "Xóa"
+    },
+    "search": {
+      "placeholder": "Tìm theo địa chỉ hoặc liên hệ"
+    },
     "token": "Token",
     "external": "Bên ngoài",
     "to": "Đến: ",
@@ -623,7 +631,9 @@
     "viewInExplorer": "Xem trên Explorer",
     "empty": {
       "title": "Chưa Có Giao dịch",
-      "description": "Lịch sử giao dịch sẽ xuất hiện ở đây khi bạn gửi hoặc nhận token."
+      "description": "Lịch sử giao dịch sẽ xuất hiện ở đây khi bạn gửi hoặc nhận token.",
+      "filteredTitle": "Không có giao dịch phù hợp",
+      "filteredDescription": "Hãy thử địa chỉ hoặc bộ lọc khác."
     },
     "status": {
       "confirmed": "Đã xác nhận",
@@ -690,7 +700,7 @@
     },
     "verification": {
       "title": "Xác minh",
-      "description": "Xác minh bạn là con người thực với Inlyf để mở khóa phần thưởng hàng ngày. Kiểm tra liveness nhanh; xác minh định kỳ.",
+      "description": "Xác minh bạn là con người thực với inLyf để mở khóa phần thưởng hàng ngày. Kiểm tra liveness nhanh; xác minh định kỳ.",
       "open": "Bắt đầu Xác minh",
       "refresh": "Làm mới Xác minh",
       "status": "Trạng thái",
@@ -761,7 +771,7 @@
   "onboarding": {
     "welcome": {
       "title": "Chào mừng đến với Umotu",
-      "subtitle": "10 đô la mỗi ngày, cho mọi người ở mọi nơi",
+      "subtitle": "10 $ mỗi ngày, cho mọi người, ở khắp nơi",
       "getStarted": "Bắt đầu"
     },
     "language": {
@@ -782,7 +792,7 @@
   },
   "poh": {
     "subtitle": "Mở khóa phần thưởng hàng ngày",
-    "description": "Xác minh liveness với Inlyf để mở khóa phần thưởng. Không lưu trữ sinh trắc học trên chain; chỉ cấp credential ngắn hạn.",
+    "description": "Xác minh liveness với inLyf để mở khóa phần thưởng. Không lưu trữ sinh trắc học trên chain; chỉ cấp credential ngắn hạn.",
     "howItWorks": "Cách hoạt động",
     "howItWorksDesc": "Kiểm tra liveness ngắn (quét khuôn mặt) xác minh bạn là con người. Credential kéo dài 90 ngày và có thể làm mới bất kỳ lúc nào.",
     "adultQuestion": "Bạn có phải người lớn (18+)?",
@@ -892,10 +902,10 @@
     "comingSoon": "Sắp Ra mắt",
     "liveApps": "Ứng dụng Đang hoạt động",
     "available": "KHẢ DỤNG",
-    "pohDescription": "Xác minh bạn là con người với Inlyf để mở khóa phần thưởng hàng ngày.",
+    "pohDescription": "Xác minh bạn là con người với inLyf để mở khóa phần thưởng hàng ngày.",
     "vision": {
       "title": "Tầm nhìn của Chúng tôi",
-      "tagline": "10 đô la mỗi ngày, cho mọi người ở mọi nơi",
+      "tagline": "10 $ mỗi ngày, cho mọi người, ở khắp nơi",
       "description": "Umotu đang xây dựng cơ sở hạ tầng cho một thế giới mà mọi người đều có thể tham gia vào nền kinh tế toàn cầu—bất kể họ sống ở đâu hay sử dụng ngân hàng nào.",
       "readMore": "Đọc Toàn bộ Tầm nhìn",
       "pillars": {
@@ -1108,7 +1118,7 @@
     "featured": "NỔI BẬT",
     "whatIs": {
       "title": "Umotu là gì?",
-      "subtitle": "10 đô la mỗi ngày, cho mọi người ở mọi nơi",
+      "subtitle": "10 $ mỗi ngày, cho mọi người, ở khắp nơi",
       "intro": "Umotu hướng đến việc cho phép bất kỳ ai kiếm khoảng 10 đô la/ngày chỉ bằng smartphone. Không cần phần cứng đắt tiền, không kỹ năng đặc biệt, không biên giới.",
       "howDifferent": "Khác biệt như thế nào?",
       "noMiddleman": "Không trung gian: Bạn tương tác trực tiếp với mạng—không cần tài khoản ngân hàng",
@@ -1309,7 +1319,7 @@
       "truth1": "Không có hỗ trợ khách hàng có thể reset ví",
       "truth2": "Tất cả cập nhật chính thức xuất hiện trong ứng dụng này",
       "truth3": "Không ai từ Umotu sẽ hỏi cụm từ khôi phục hoặc khóa riêng tư",
-      "truth4": "Chỉ tải ứng dụng này từ Apple Store hoặc Google Play chính thức",
+      "truth4": "Chỉ tải ứng dụng này từ Apple App Store hoặc Google Play chính thức",
       "whatToDo": "Nếu Ai đó Liên hệ Bạn",
       "action1": "Không trả lời",
       "action2": "Không click liên kết",

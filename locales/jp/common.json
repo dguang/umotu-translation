@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "1日10ドル、誰もがどこでも"
+    "tagline": "毎日10ドル、だれにでも、どこでも"
   },
   "navigation": {
     "home": "ホーム",
@@ -30,7 +30,9 @@
         "language": "言語",
         "wallet": "ウォレット",
         "verifyHuman": "人間検証",
-        "complete": "完了"
+        "complete": "完了",
+        "dailySampling": "デイリーサンプリングを有効化",
+        "dailySamplingHint": "必須: 報酬を得るには1日1サンプル"
       },
       "continue": "続ける",
       "changeChoice": "選択を変更",
@@ -182,7 +184,6 @@
     "swapComingSoon": "スワップはまもなく利用可能",
     "history": "取引履歴",
     "tokens": "トークン",
-    "collectibles": "コレクティブル",
     "noTokens": "設定されたトークンなし",
     "nativeToken": "ネイティブトークン",
     "loading": "読み込み中...",
@@ -617,6 +618,13 @@
     "title": "取引履歴",
     "sent": "送信済み",
     "received": "受信済み",
+    "filters": {
+      "all": "すべて",
+      "clear": "クリア"
+    },
+    "search": {
+      "placeholder": "アドレスまたは連絡先で検索"
+    },
     "token": "トークン",
     "external": "外部",
     "to": "宛先: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "エクスプローラーで表示",
     "empty": {
       "title": "取引履歴なし",
-      "description": "トークンの送信または受信を行うと取引履歴がここに表示されます。"
+      "description": "トークンの送信または受信を行うと取引履歴がここに表示されます。",
+      "filteredTitle": "一致する取引はありません",
+      "filteredDescription": "別のアドレスまたはフィルターを試してください。"
     },
     "status": {
       "confirmed": "確認済み",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "検証",
-      "description": "Inlyfで人間性を検証して毎日報酬をアンロック。短いライブネスチェックで、定期的に再検証。",
+      "description": "inLyfで人間性を検証して毎日報酬をアンロック。短いライブネスチェックで、定期的に再検証。",
       "open": "検証を開始",
       "refresh": "検証を更新",
       "status": "ステータス",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Umotuへようこそ",
-      "subtitle": "1日10ドル、誰もがどこでも",
+      "subtitle": "毎日10ドル、だれにでも、どこでも",
       "getStarted": "開始する"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "毎日報酬をアンロック",
-    "description": "Inlyfでライブネスを検証して報酬をアンロック。生体情報はオンチェーンに保存されず、短期間のクレデンシャルのみ発行されます。",
+    "description": "inLyfでライブネスを検証して報酬をアンロック。生体情報はオンチェーンに保存されず、短期間のクレデンシャルのみ発行されます。",
     "howItWorks": "仕組み",
     "howItWorksDesc": "短いライブネスチェック（顔スキャン）で人間であることを検証。クレデンシャルは90日有効で、いつでも更新可能です。",
     "adultQuestion": "18歳以上ですか？",
@@ -893,10 +903,10 @@
     "comingSoon": "まもなく",
     "liveApps": "ライブアプリ",
     "available": "利用可能",
-    "pohDescription": "Inlyfで人間性を検証して毎日報酬をアンロック。",
+    "pohDescription": "inLyfで人間性を検証して毎日報酬をアンロック。",
     "vision": {
       "title": "私たちのビジョン",
-      "tagline": "1日10ドル、誰もがどこでも",
+      "tagline": "毎日10ドル、だれにでも、どこでも",
       "description": "Umotuは、居住地や銀行に関係なく誰でもグローバル経済に参加できるインフラを構築しています。",
       "readMore": "ビジョン全文を読む",
       "pillars": {
@@ -1109,7 +1119,7 @@
     "featured": "特集",
     "whatIs": {
       "title": "Umotuとは？",
-      "subtitle": "1日10ドル、誰もがどこでも",
+      "subtitle": "毎日10ドル、だれにでも、どこでも",
       "intro": "Umotuはスマートフォンだけで誰でも約1日10ドル稼げることを目指しています。高価なハードウェア、特別スキル、国境不要。",
       "howDifferent": "何が違うか？",
       "noMiddleman": "中間業者なし：ネットワークと直接やり取り—銀行口座不要",
@@ -1310,7 +1320,7 @@
       "truth1": "ウォレットをリセットできるカスタマーサポートなし",
       "truth2": "すべての公式更新はこのアプリに表示",
       "truth3": "Umotu関係者はリカバリーフレーズやプライベートキーを求めません",
-      "truth4": "このアプリは公式Apple StoreまたはGoogle Playからのみダウンロード",
+      "truth4": "このアプリは公式Apple App StoreまたはGoogle Playからのみダウンロード",
       "whatToDo": "連絡された場合",
       "action1": "応答しない",
       "action2": "リンクをクリックしない",

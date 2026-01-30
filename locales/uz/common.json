@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "Kuniga 10 dollar, hamma uchun hamma joyda"
+    "tagline": "Kuniga 10 $, hamma uchun, hamma yerda"
   },
   "navigation": {
     "home": "Bosh sahifa",
@@ -30,7 +30,9 @@
         "language": "Til",
         "wallet": "Hamyon",
         "verifyHuman": "Insonni tasdiqlash",
-        "complete": "Tugallangan"
+        "complete": "Tugallangan",
+        "dailySampling": "Kunlik namuna olishni yoqish",
+        "dailySamplingHint": "Talab qilinadi: mukofotlar uchun 1 namuna/kun"
       },
       "continue": "Davom etish",
       "changeChoice": "Tanlovni o'zgartirish",
@@ -182,7 +184,6 @@
     "swapComingSoon": "Almashtirish tez orada",
     "history": "Tarix",
     "tokens": "Tokenlar",
-    "collectibles": "Kollektsiyalar",
     "noTokens": "Hech qanday token sozlanmagan",
     "nativeToken": "Asosiy token",
     "loading": "Yuklanmoqda...",
@@ -617,6 +618,13 @@
     "title": "Tranzaksiya tarixi",
     "sent": "Yuborilgan",
     "received": "Qabul qilingan",
+    "filters": {
+      "all": "Barchasi",
+      "clear": "Tozalash"
+    },
+    "search": {
+      "placeholder": "Manzil yoki kontakt bo‘yicha qidiring"
+    },
     "token": "Token",
     "external": "Tashqi",
     "to": "Ga: ",
@@ -624,7 +632,9 @@
     "viewInExplorer": "Explorerda ko'rish",
     "empty": {
       "title": "Hozircha tranzaksiya yo'q",
-      "description": "Token yuborish yoki qabul qilganda tranzaksiya tarixi shu yerda paydo bo'ladi."
+      "description": "Token yuborish yoki qabul qilganda tranzaksiya tarixi shu yerda paydo bo'ladi.",
+      "filteredTitle": "Mos tranzaksiyalar topilmadi",
+      "filteredDescription": "Boshqa manzil yoki filtrni sinab ko‘ring."
     },
     "status": {
       "confirmed": "Tasdiqlangan",
@@ -691,7 +701,7 @@
     },
     "verification": {
       "title": "Tasdiqlash",
-      "description": "Inlyf bilan insonligingizni tasdiqlang va kunlik mukofotlarni oching. Tez liveness tekshiruvi; vaqti-vaqti bilan yangilang.",
+      "description": "inLyf bilan insonligingizni tasdiqlang va kunlik mukofotlarni oching. Tez liveness tekshiruvi; vaqti-vaqti bilan yangilang.",
       "open": "Tasdiqlashni boshlash",
       "refresh": "Tasdiqlashni yangilash",
       "status": "Holati",
@@ -762,7 +772,7 @@
   "onboarding": {
     "welcome": {
       "title": "Umotu ga xush kelibsiz",
-      "subtitle": "Kuniga 10 dollar, hamma uchun hamma joyda",
+      "subtitle": "Kuniga 10 $, hamma uchun, hamma yerda",
       "getStarted": "Boshlash"
     },
     "language": {
@@ -783,7 +793,7 @@
   },
   "poh": {
     "subtitle": "Kunlik mukofotlarni oching",
-    "description": "Inlyf bilan livenessni tasdiqlang va mukofotlarni oching. Biometrika zanjirga saqlanmaydi; faqat qisqa muddatli hisob ma'lumoti beriladi.",
+    "description": "inLyf bilan livenessni tasdiqlang va mukofotlarni oching. Biometrika zanjirga saqlanmaydi; faqat qisqa muddatli hisob ma'lumoti beriladi.",
     "howItWorks": "Qanday ishlaydi",
     "howItWorksDesc": "Qisqa liveness tekshiruvi (yuz skaneri) inson ekanligingizni tasdiqlaydi. Hisob ma'lumoti 90 kun davom etadi va istagan vaqtingizda yangilanishi mumkin.",
     "adultQuestion": "Kattamisiz (18+)?",
@@ -893,10 +903,10 @@
     "comingSoon": "Tez orada",
     "liveApps": "Jonli ilovalar",
     "available": "MAVJUD",
-    "pohDescription": "Inlyf bilan insonligingizni tasdiqlang va kunlik mukofotlarni oching.",
+    "pohDescription": "inLyf bilan insonligingizni tasdiqlang va kunlik mukofotlarni oching.",
     "vision": {
       "title": "Bizning vizyonimiz",
-      "tagline": "Kuniga 10 dollar, hamma uchun hamma joyda",
+      "tagline": "Kuniga 10 $, hamma uchun, hamma yerda",
       "description": "Umotu har kim global iqtisodiyotda ishtirok eta olishi uchun infratuzilma qurmoqda — yashash joyi yoki bankidan qat'i nazar.",
       "readMore": "To'liq vizyonni o'qish",
       "pillars": {
@@ -1104,7 +1114,7 @@
     "featured": "TAVSIYA ETILGAN",
     "whatIs": {
       "title": "Umotu nima?",
-      "subtitle": "Kuniga 10 dollar, hamma uchun hamma joyda",
+      "subtitle": "Kuniga 10 $, hamma uchun, hamma yerda",
       "intro": "Umotu faqat smartfon bilan kuniga taxminan 10 dollar topishga imkon beradi. Qimmat uskunalar, maxsus ko'nikmalar yoki chegaralar yo'q.",
       "howDifferent": "Qanday farq qiladi?",
       "noMiddleman": "O'rta odam yo'q: Tarmoq bilan to'g'ridan-to'g'ri aloqa — bank hisobi shart emas",
@@ -1305,7 +1315,7 @@
       "truth1": "Hamyonni reset qila oladigan mijoz qo'llab-quvvatlash yo'q",
       "truth2": "Barcha rasmiy yangilanishlar shu ilovada paydo bo'ladi",
       "truth3": "Umotu dan hech kim tiklash iborasi yoki shaxsiy kalitni so'ramaydi",
-      "truth4": "Bu ilovani faqat rasmiy Apple Store yoki Google Play dan yuklang",
+      "truth4": "Bu ilovani faqat rasmiy Apple App Store yoki Google Play dan yuklang",
       "whatToDo": "Kimdir sizga murojaat qilsa",
       "action1": "Javob bermang",
       "action2": "Havolalarni bosmang",
