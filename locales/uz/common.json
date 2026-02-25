@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "Kuniga 10 $, hamma uchun, hamma yerda"
+    "tagline": "Ochiq ishtirok, kunlik mukofotlar"
   },
   "navigation": {
     "home": "Bosh sahifa",
@@ -38,6 +38,9 @@
       "changeChoice": "Tanlovni o'zgartirish",
       "requiresLanguage": "Avval tilni tanlang",
       "requiresWallet": "Avval hamyon yarating"
+    },
+    "daSampling": {
+      "staleHint": "Kunlik mukofotga layiqligingizni ta'minlash uchun hozir namuna olishni ishga tushiring."
     }
   },
   "earnings": {
@@ -118,13 +121,15 @@
     "manual": {
       "title": "Qo'lda talab qilish",
       "description": "Agar pul tezroq kerak bo'lsa, keyingi mavjud mukofotni hozir talab qiling. Qo'lda talablar hamyoningizning gazidan foydalanadi. Kutib tursangiz, avto-talab arzonroq qoladi. Hamyoningizda mablag' bo'lmasa, qo'lda talabdan oldin avto-talabni yoqing yoki native gaz qo'shing.",
-      "dayLabel": "Mukofot kuni",
       "claimButton": "Hozir talab qilish",
       "claiming": "Talab qilinmoqda...",
+      "cancelling": "Talab bekor qilinmoqda...",
+      "cancelled": "Talab bekor qilindi.",
+      "cancelButton": "Talabni bekor qilish",
       "success": "Talab yuborildi",
       "successWithId": "Talab yuborildi (id: {{id}})",
       "error": "Talab qilish muvaffaqiyatsiz",
-      "noProof": "Mukofot isboti hali chop etilmagan. Bugungi snapshot jonli bo'lgandan keyin qayta urinib ko'ring.",
+      "noProof": "Bu hamyon/kun uchun mukofot isboti hali topilmadi (yoki u kuni munosib emas edi). Bugungi snapshot jonli bo'lgandan keyin qayta urinib ko'ring.",
       "unauthorized": "Relayer avtorizatsiyasi muvaffaqiyatsiz. Iltimos, qayta urinib ko'ring yoki qo'llab-quvvatlash bilan bog'laning.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -136,9 +141,22 @@
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "remainingAfter": "+{{days}} bu to'plamdan keyin yana",
+      "calendarVsEligible": "{{calendar}} taqvim kunidan {{eligible}} tasi mos",
+      "showMissingDays": "Yetishmayotgan kunlarni ko'rsatish ({{count}})",
+      "hideMissingDays": "Yetishmayotgan kunlarni yashirish",
+      "noMissingDaysLoaded": "Siyosat tomonidan hali yetishmayotgan kunlar tafsiloti qaytarilmagan.",
+      "moreMissingDays": "va yana {{count}} kun",
+      "missingDaysHint": "Yetishmayotgan kun degani o UTC kuni uchun DA namuna/dalil yo'q.",
       "batchSuccess": "{{count}} kun muvaffaqiyatli talab qilindi",
+      "fallbackPaidInNative": "UMT da to'langan: stablecoin vaqtincha mavjud emas",
       "claimingProgress": "{{claimed}}/{{total}} talab qilinmoqda...",
-      "claimAllButton": "Barcha {{count}} kunni talab qilish"
+      "claimAllButton": "Barcha {{count}} kunni talab qilish",
+      "claimingDay": "{{day}}-kun qayta ishlanmoqda",
+      "stableNotConfigured": "Stablecoin to'lovi mavjud emas. Iltimos, UMT ni tanlang yoki qo'llab-quvvatlash xizmatiga murojaat qiling.",
+      "insufficientGas": "Gas balansi yetarli emas. Iltimos, hamyoningizga mahalliy tokenlar qo'shing.",
+      "userRejected": "Tranzaksiya bekor qilindi.",
+      "networkError": "Tarmoq xatosi. Iltimos, ulanishingizni tekshiring va qayta urinib ko'ring.",
+      "alreadyClaimed": "Bu mukofotlar allaqachon olingan."
     },
     "timezone": {
       "title": "Vaqt mintaqasini tanlash",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "Manzillar kitobi",
       "addContact": "Kontakt qo'shish",
-      "nameLabel": "Ism yoki yorliq",
+      "nameLabel": "Ism",
       "walletAddress": "Hamyon manzili (0x...)",
       "savedContacts": "Saqlangan kontaktlar",
       "noContacts": "Hozircha kontakt saqlanmagan.",
       "addForQuickSending": "Tez yuborish uchun kontaktlar qo'shing.",
       "enterValidAddress": "To'g'ri manzil kiriting",
       "addLabel": "Yorliq qo'shish",
-      "save": "Saqlash"
+      "labelAlreadyExists": "Bu yorliq allaqachon mavjud",
+      "tagOptional": "Teg (ixtiyoriy)",
+      "save": "Saqlash",
+      "editContact": "Kontaktni tahrirlash",
+      "tags": "Teglar",
+      "noTagsYet": "Hali teglar qo'shilmagan",
+      "newTagPlaceholder": "Teg nomini kiriting...",
+      "addTag": "Qo'shish",
+      "existingTags": "Yoki mavjud tegni qo'shing:",
+      "deleteContact": "Kontaktni o'chirish",
+      "confirmDeleteTitle": "Kontaktni o'chirasizmi?",
+      "confirmDeleteMessage": "Bu {{label}} ni manzil kitobingizdan olib tashlaydi."
     },
     "settings": {
       "title": "Hamyon sozlamalari",
@@ -245,7 +274,8 @@
         "clipboardWarning": "Boshqa ilovalar buferni o'qishi mumkin. 30 soniyadan keyin avtomatik tozalanadi.",
         "verifyForKey": "Shaxsiy kalitni ko'rsatish uchun tasdiqlang",
         "verifyForSeed": "Tiklash iborasini ko'rsatish uchun tasdiqlang",
-        "verifyDescription": "Maxfiy hamyon ma'lumotlarini ko'rsatish uchun parol yoki PIN kiriting."
+        "verifyDescription": "Maxfiy hamyon ma'lumotlarini ko'rsatish uchun parol yoki PIN kiriting.",
+        "walletNotLoaded": "Hamyon yuklanmagan. Avval hamyon import qiling yoki yarating."
       },
       "import": {
         "title": "Hamyonni import qilish",
@@ -256,7 +286,8 @@
         "keyPlaceholder": "0x… shaxsiy kalitni kiriting",
         "importButton": "Hamyonni import qilish",
         "importing": "Import qilinmoqda...",
-        "success": "Hamyon muvaffaqiyatli import qilindi!"
+        "success": "Hamyon muvaffaqiyatli import qilindi!",
+        "saveFailed": "Hamyon muvaffaqiyatli import qilindi, lekin bu qurilmaga saqlanmadi."
       },
       "dangerZone": {
         "title": "Xavfli zona",
@@ -530,6 +561,7 @@
       "deleteContact": "Kontaktni O'chirish",
       "addressNotSaved": "Manzil saqlanmagan",
       "addLabel": "Yorliq qo'shish",
+      "labelAlreadyExists": "Bu yorliq allaqachon mavjud",
       "enterValidAddress": "Avval to'g'ri manzil kiriting",
       "saved": "Saqlandi",
       "save": "Saqlash"
@@ -548,6 +580,7 @@
       "addFromTagOrBook": "Tegdan yoki kitobdan qo'shish",
       "invalidAddress": "Noto'g'ri manzil: {{address}}",
       "invalidAmount": "{{recipient}} uchun noto'g'ri miqdor",
+      "tooManyRecipients": "Ommaviy yuborish {{max}} qabul qiluvchigacha qo'llab-quvvatlaydi.",
       "totalExceedsBalance": "Jami balansdan oshib ketdi",
       "sendingTo": "{{count}} qabul qiluvchiga yuborilmoqda",
       "sendingTo_plural": "{{count}} qabul qiluvchilarga yuborilmoqda",
@@ -569,6 +602,18 @@
       "failedStatus": "Muvaffaqiyatsiz",
       "details": "To'plam O'tkazma Tafsilotlari",
       "total": "Jami",
+      "hongbao": {
+        "short": "Hongbao",
+        "total": "Jami Hongbao",
+        "helper": "Belgilangan jamini o'rnating va biz keyingi qadamda har bir qabul qiluvchiga tasodifiy miqdor taqsimlaymiz.",
+        "random": "Tasodifiy",
+        "autoSplit": "Avtomatik bo'lish",
+        "generated": "Tasodifiy bo'linish yaratildi",
+        "needTwoRecipients": "Hongbao uchun kamida 2 ta qabul qiluvchi kerak.",
+        "amountTooSmall": "{{count}} qabul qiluvchi uchun jami juda kichik. Minimal {{min}} {{symbol}}.",
+        "generateFailed": "Tasodifiy miqdorlarni yaratib bo'lmadi.",
+        "disabled": "Hongbao rejimi hozirda o'chirilgan."
+      },
       "tagPicker": {
         "title": "Tegni Tanlang",
         "noTags": "Mavjud teglar yo'q",
@@ -647,19 +692,48 @@
       "type": "Turi",
       "to": "Ga",
       "from": "Dan",
+      "address": "Manzil",
       "token": "Token",
       "block": "Blok",
       "gasCost": "Gaz narxi",
+      "balanceAfter": "tx dan keyingi balans",
+      "balanceSource": "Balans manbai",
+      "balanceSourceVerified": "Zanjirda tasdiqlangan",
+      "balanceSourceVerifying": "Taxminiy (zanjirda tekshirilmoqda...)",
+      "balanceSourceEstimatedRecent": "So'nggi balans suratidan taxmin",
+      "balanceSourceEstimatedStale": "Eskirgan balans suratidan taxmin",
+      "balanceSourceEstimatedDelayed": "Taxminiy (zanjirda tekshirish kechikdi)",
+      "balanceSnapshotAge": "Surat yoshi",
+      "balanceReconciledDiff": "Muvofiqlashtirgan farq",
+      "balanceVerifyNote": "Tekshirish eslatmasi",
+      "balanceVerifyUnexpected": "Tekshirish kechikdi. Taxminiy balans ko'rsatildi.",
+      "unavailable": "Mavjud emas",
       "hash": "Hash",
       "source": "Manba",
       "balanceDetected": "Balans aniqlangan",
       "inferredNote": "Bu tranzaksiya balans o'zgarishidan aniqlangan. To'liq zanjir tafsilotlari mavjud emas."
     },
+    "batch": {
+      "title": "To'plam O'tkazma Tafsilotlari",
+      "badge": "TO'PLAM",
+      "send": "To'plam Yuborish",
+      "recipients": "Qabul qiluvchilar",
+      "recipientCount": "{{count}} qabul qiluvchi",
+      "recipientCount_plural": "{{count}} qabul qiluvchi",
+      "successful": "Muvaffaqiyatli",
+      "successOf": "{{success}} / {{total}}",
+      "sentStatus": "Yuborildi",
+      "failedStatus": "Muvaffaqiyatsiz",
+      "successFail": "{{success}} muvaffaqiyatli, {{fail}} muvaffaqiyatsiz",
+      "toRecipients": "{{count}} qabul qiluvchiga",
+      "toRecipients_plural": "{{count}} qabul qiluvchiga"
+    },
     "time": {
       "justNow": "Hozirgina",
       "minsAgo": "{{count}} daqiqa oldin",
       "hoursAgo": "{{count}} soat oldin",
-      "daysAgo": "{{count}} kun oldin"
+      "daysAgo": "{{count}} kun oldin",
+      "suffixAgo": "oldin"
     }
   },
   "settings": {
@@ -734,6 +808,13 @@
       "clearCache": "Keshni tozalash",
       "cacheCleared": "Kesh tozalandi! Qo'llash uchun qayta ishga tushiring."
     },
+    "hongbaoDebug": {
+      "title": "Hongbao Sozlamalari (Nosozliklarni tuzatish)",
+      "description": "Mahalliy Hongbao mavsum keshini tozalang va keyingi ilova ishga tushirilganda yangilanishni majburlang.",
+      "clearConfigCache": "Hongbao Keshini Tozalash",
+      "cacheCleared": "Hongbao sozlamalari keshi tozalandi",
+      "cacheClearFailed": "Hongbao sozlamalari keshini tozalab bo'lmadi"
+    },
     "chainGuardian": {
       "title": "Chain Guardian",
       "description": "Blokcheynni himoyalashga yordam berish uchun telefoningizni onlayn saqlang. Mukofotlarga loyiq bo'lib qolish uchun kuniga kamida bitta namuna olish ishini bajaring.",
@@ -757,7 +838,9 @@
         "active": "Faol",
         "inactive": "Faol emas",
         "paused": "Pauza"
-      }
+      },
+      "iosBackgroundHint": "iOS fonda namuna olishni to'xtatishi mumkin. Faol qolish uchun ilovani vaqti-vaqti bilan oching yoki Hozir ishga tushirish tugmasini bosing.",
+      "runNowNoData": "Ma'lumot yo'q (batareya/WiFi cheklovlari yoki topshiriqlar yo'q)."
     },
     "permissions": {
       "title": "Ruxsatlar",
@@ -767,12 +850,87 @@
       "noConnections": "Ulangan ilova yo'q",
       "revokeAccess": "Kirishni bekor qilish",
       "lastUsed": "Oxirgi foydalanilgan"
+    },
+    "transfer": {
+      "title": "Qurilma ma'lumotlarini o'tkazish",
+      "description": "O'tkazish QR kodini skanerlash orqali ilova sozlamalari va kontaktlarni yangi telefoningizga ko'chiring.",
+      "warning": "Bu faqat ilova ma'lumotlarini o'tkazadi. Hamyon tiklanish iborasi/maxfiy kalit KIRITILMAGAN. Hamyonni yangi telefonda alohida import qiling.",
+      "preparing": "Tayyorlanmoqda...",
+      "showQr": "O'tkazish QR kodini ko'rsatish",
+      "scanQr": "O'tkazish QR kodini skanerlash",
+      "exportTitle": "O'tkazish QR",
+      "exportHint": "Yangi telefoningizda, Sozlamalar -> Qurilma ma'lumotlarini o'tkazish -> O'tkazish QR kodini skanerlash ni oching, so'ng bu kodni skanerlang.",
+      "exportHintParts": "Yangi telefoningizda, har bir sahifani tartib bilan skanerlang (1 dan {{total}} gacha), so'ng 6 raqamli kodni kiriting.",
+      "exportReady": "O'tkazish QR kodi tayyor ({{count}} element)",
+      "exportReadyParts": "O'tkazish QR kodi tayyor ({{count}} element, {{parts}} QR sahifa). Sahifalarni tartib bilan skanerlang.",
+      "exportFailed": "O'tkazmani tayyorlab bo'lmadi: {{message}}",
+      "prevPage": "Oldingi",
+      "nextPage": "Keyingi",
+      "confirmCodeLabel": "6 raqamli tasdiqlash kodi",
+      "copyCode": "O'tkazish kodini nusxalash",
+      "importTitle": "O'tkazish QR kodini skanerlash",
+      "importHint": "Kamerani eski telefoningizda ko'rsatilgan o'tkazish QR kodiga qarating.",
+      "importing": "Import qilinmoqda...",
+      "importNow": "Ma'lumotlarni import qilish",
+      "imported": "{{count}} element import qilindi. Hamyon tiklanish iborasi/maxfiy kalit O'TKAZILMADI.",
+      "importFailed": "O'tkazmani import qilish muvaffaqiyatsiz: {{message}}",
+      "confirmPrompt": "QR skanerlandi. Eski telefoningizda ko'rsatilgan 6 raqamli tasdiqlash kodini kiriting.",
+      "confirmCodeRequired": "Eski telefoningizdan 6 raqamli tasdiqlash kodini kiriting.",
+      "confirmCodeMismatch": "Tasdiqlash kodi mos kelmadi. Qaytadan urinib ko'ring.",
+      "rescan": "Qayta skanerlash",
+      "scanProgress": "QR {{current}}/{{total}} skanerlandi",
+      "scanContinue": "Tugallangunga qadar qolgan sahifalarni tartib bilan skanerlashda davom eting.",
+      "restartScan": "Skanerlashni qayta boshlash",
+      "chunkMismatch": "O'tkazish QR sahifalari mos kelmaydi. Iltimos, 1-sahifadan skanerlashni qayta boshlang.",
+      "cameraNeeded": "Kamera kirishga ruxsat kerak",
+      "cameraDescription": "O'tkazish QR kodingizni skanerlash uchun kamera ruxsatini yoqing.",
+      "allowCamera": "Kameraga ruxsat berish",
+      "openSettings": "Sozlamalarni ochish",
+      "pasteCode": "O'tkazish kodini joylashtirish",
+      "pasteTitle": "O'tkazish kodini joylashtirish",
+      "pasteHint": "Agar kamera skanerlash qiyin bo'lsa, eski telefondan nusxalangan o'tkazish kodini joylang.",
+      "pastePlaceholder": "UMOTU_TRANSFER:...",
+      "exportHintRelay": "Yangi telefoningizda, ko'chirish paketini yuklab olish uchun bu kodni skanerlang, so'ngra 6 raqamli tasdiqlash kodini kiriting.",
+      "relayReady": "Katta ko'chirish optimallashtirildi: {{count}} ta elementni yuklab olish uchun bitta QR skanerlang, so'ngra 6 raqamli kodni kiriting.",
+      "relayFallback": "Bulutli ko'chirish mavjud emas ({{message}}). Ko'p sahifali QR kodga qaytilmoqda.",
+      "relayFetching": "Ko'chirish ma'lumotlari yuklanmoqda...",
+      "relayFetched": "Ko'chirish ma'lumotlari yuklandi. Qayta ishlanmoqda..."
+    },
+    "integrityDebug": {
+      "title": "Ilova tasdiqlash (Nosozlik tuzatish)",
+      "description": "App Attest faolligini tasdiqlash uchun qurilma tasdiqlash tokenini oling.",
+      "fetch": "Tasdiqlash olish",
+      "fetching": "Olinmoqda...",
+      "copy": "Ma'lumotni nusxalash",
+      "copyNonce": "Nonce nusxalash",
+      "toastFetchSuccess": "Ilova tasdiqlash olindi",
+      "toastFetchError": "Ilova tasdiqlash muvaffaqiyatsiz",
+      "toastCopy": "Tasdiqlash nusxalandi",
+      "toastCopyNonce": "Nonce nusxalandi",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "bo'sh ma'lumot",
+      "summaryStub": "vaqtinchalik token (mahalliy modul yo'qmi?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (qo'llab-quvvatlanmaydi)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "xato: {{message}}",
+      "verify": "Serverda tasdiqlash",
+      "verifying": "Tasdiqlanmoqda...",
+      "verifyMissing": "xato: ma'lumot yoki nonce topilmadi",
+      "verifyOk": "server tasdiqlash: muvaffaqiyatli",
+      "verifyFail": "server tasdiqlash muvaffaqiyatsiz: {{error}}",
+      "toastVerifyOk": "Server tasdiqlash muvaffaqiyatli",
+      "toastVerifyFail": "Server tasdiqlash muvaffaqiyatsiz"
     }
   },
   "onboarding": {
     "welcome": {
       "title": "Umotu ga xush kelibsiz",
-      "subtitle": "Kuniga 10 $, hamma uchun, hamma yerda",
+      "subtitle": "Ochiq ishtirok, kunlik mukofotlar",
       "getStarted": "Boshlash"
     },
     "language": {
@@ -812,6 +970,40 @@
       "validFor_plural": "~{{days}} kun amal qiladi",
       "expired": "Tasdiqlash muddati tugagan yoki topilmadi.",
       "expiredDetail": "Hisob ma'lumotini yangilash uchun livenessni qayta o'tkazing."
+    },
+    "capture": {
+      "title": "Yuz Suratga Olish",
+      "hint": "Yuzingizni markazga qo'ying va jim turing.",
+      "tipsTitle": "Suratga olish maslahatlari",
+      "tipFace": "Yuzingizni markazda ushlab turing va ramkani to'ldiring (≥ {{pct}}%).",
+      "tipLight": "Bir xil yoritishdan foydalaning va kuchli orqa yorug'likdan saqlaning.",
+      "tipHold": "Jim turing va kameraga {{seconds}}s qarang.",
+      "tipRemove": "Shapka, niqob yoki og'ir soyalarni olib tashlang.",
+      "errorShort": "Suratga olish juda qisqa. {{seconds}}s jim turing.",
+      "errorTooSmall": "Suratga olish muvaffaqiyatsiz. Iltimos, qayta urinib ko'ring.",
+      "errorFileTooSmall": "Video fayl juda kichik. Butun suratga olish davomida jim turing va yoritishni yaxshilang.",
+      "errorBitrate": "Video sifati juda past. Yoritishni yaxshilang va telefonni barqaror ushlang.",
+      "errorLowQuality": "Suratga olish sifati juda past. Iltimos, yaxshiroq yoritish yoki yuqori sifatli kameradan foydalaning.",
+      "errorCameraPermission": "Kamera ruxsati talab qilinadi. Sozlamalarda yoqing va qayta urinib ko'ring.",
+      "errorCameraUnavailable": "Bu qurilmada kamera mavjud emas. Boshqa kamera ilovalarini yoping va qayta urinib ko'ring.",
+      "errorRecordingFailed": "Video yozish muvaffaqiyatsiz. Iltimos, yaxshiroq yoritish bilan qayta urinib ko'ring.",
+      "errorStorage": "Video yozish uchun yetarli xotira yo'q. Joy bo'shating va qayta urinib ko'ring.",
+      "errorFileAccess": "Yozilgan videoni o'qib bo'lmadi. Iltimos, qayta oling.",
+      "errorDeviceAttest": "Qurilma xavfsizlik tekshiruvi muvaffaqiyatsiz. Google Play xizmatlarini yangilang va qayta urinib ko'ring.",
+      "errorCooldown": "Juda ko'p urinish. Iltimos, qayta urinishdan oldin kuting.",
+      "errorChallenge": "Faol vazifa bajarilmadi. Iltimos, qayta oling va ko'rsatmalarga amal qiling.",
+      "errorUpload": "Yuklash muvaffaqiyatsiz. Ulanishingizni tekshiring va qayta urinib ko'ring.",
+      "errorUploadForbidden": "Yuklash URL rad etildi (muddati tugagan yoki imzo mos kelmaydi). Iltimos, qayta oling va urinib ko'ring.",
+      "errorUploadTimeout": "Yuklash vaqti tugadi. Ulanishni tekshiring va qayta urinib ko'ring.",
+      "errorUploadServer": "Yuklash xizmati vaqtinchalik mavjud emas. Iltimos, tez orada qayta urinib ko'ring.",
+      "errorSessionExpired": "Sessiya muddati tugadi. Iltimos, qayta oling.",
+      "errorUnexpected": "Suratga olish muvaffaqiyatsiz. Iltimos, qayta urinib ko'ring.",
+      "retryUpload": "Yuklashni Qayta Urinish",
+      "retake": "Qayta Olish",
+      "recording": "Yozilmoqda...",
+      "uploading": "Yuklanmoqda...",
+      "processing": "Qayta ishlanmoqda...",
+      "start": "Suratga Olishni Boshlash"
     }
   },
   "sentinelSettings": {
@@ -906,25 +1098,25 @@
     "pohDescription": "inLyf bilan insonligingizni tasdiqlang va kunlik mukofotlarni oching.",
     "vision": {
       "title": "Bizning vizyonimiz",
-      "tagline": "Kuniga 10 $, hamma uchun, hamma yerda",
-      "description": "Umotu har kim global iqtisodiyotda ishtirok eta olishi uchun infratuzilma qurmoqda — yashash joyi yoki bankidan qat'i nazar.",
+      "tagline": "Ochiq ishtirok, kunlik mukofotlar",
+      "description": "Umotu global raqamli iqtisodiyotda ishtirokni soddalashtirish uchun mo'ljallangan ochiq protokol: ochiq kirish, tez hisob-kitob va kundalik tranzaktsiyalar uchun ixtiyoriy stablecoinlar.",
       "readMore": "To'liq vizyonni o'qish",
       "pillars": {
-        "title": "Uch asosiy tamoyil",
+        "title": "Asosiy tamoyillar",
         "ubi": {
-          "title": "Kuniga 10 dollar, hamma uchun hamma joyda",
-          "description": "Tarmoqni himoyalash uchun universal asosiy daromad sifatida mukofotlar. Har qanday telefon egasi ishtirok etib topishi mumkin."
+          "title": "Ochiq ishtirok, kunlik mukofotlar",
+          "description": "Kunlik mukofotlar tarmoq xavfsizligida ishtirok orqali topiladi. Mukofotlar o'zgaruvchan va kafolatlanmagan."
         },
         "capital": {
-          "title": "Kapital erkin harakatlanadi",
-          "description": "To'lov va o'tkazmalar uchun deyarli nol ishqalanish — chegaradosh yoki mahalliy. Bizneslar platforma xarajatlarini qoplash uchun ~0.1% to'laydi, shaxslar hech nima to'lamaydi."
+          "title": "Kam ishqalanishli o'tkazmalar",
+          "description": "To'lovlar va o'tkazmalar tez va kam ishqalanishli bo'lishi uchun mo'ljallangan. To'lovlar va ishlash tarmoq sharoitlari va siz foydalanadigan ilovalarga qarab o'zgaradi."
         },
         "sovereignty": {
-          "title": "Pul suverenitetiga hurmat",
-          "description": "Biz fiat valyutalarni almashtirmaymiz — ularni yaxshiroq ishlatamiz. Banklar mahalliy valyutaga bog'langan stablecoinlar chiqaradi. Pul siyosati kengroq yetib borish va kamroq ishqalanish bilan samaraliroq bo'ladi."
+          "title": "Mahalliy pul bilan mos",
+          "description": "Umotu pul siyosatini nazorat qilmaydi va fiat valyutalarni almashtirmaydi. Umotu dagi stablecoinlar uchinchi tomonlar tomonidan chiqariladi va o'z qoidalari va xavflari mavjud."
         }
       },
-      "notReplacing": "Umotu markaziy banklar bilan raqobatlashmaydi. Biz fiat valyutalar uchun yaxshi infratuzilma qurmoqdamiz: kamroq ishqalanish, global kirish va bozor samaradorligi va chidamliligini oshirish."
+      "notReplacing": "Umotu infratuzilma. U pul siyosatini belgilamaydi, stablecoin xavfsizligini kafolatlamaydi va muayyan natijalar hosil qilish uchun aralashmaydi."
     },
     "building": {
       "title": "Ekosistemani qurmoqdamiz",
@@ -964,7 +1156,8 @@
           },
           "delivery": {
             "name": "Yetkazib berish",
-            "description": "Ovqat, oziq-ovqat yoki posilkalarni buyurtma qiling. Kuryerlar adolatli maosh oladi stable tokenlarda."
+            "description": "Ovqat, oziq-ovqat yoki posilkalarni buyurtma qiling. Kuryerlar adolatli maosh oladi stable tokenlarda.",
+            "example": "Tushlik buyurtma bering, mahalliy stablecoin bilan to'lang, kuryer darhol haq oladi."
           },
           "publicTransit": {
             "name": "Jamoat transporti",
@@ -977,7 +1170,8 @@
         "apps": {
           "hotels": {
             "name": "Mehmonxonalar va turar joy",
-            "description": "Dunyo bo'ylab turar joylarni bron qiling. Mezbonlar stablecoin qabul qiladi, mehmonlar to'lovlardan tejaydi."
+            "description": "Dunyo bo'ylab turar joylarni bron qiling. Mezbonlar stablecoin qabul qiladi, mehmonlar to'lovlardan tejaydi.",
+            "example": "Balida bir kecha uchun 40$ ga xona band qiling. Mezbon 39.96$ oladi."
           },
           "flights": {
             "name": "Parvozlar",
@@ -994,11 +1188,13 @@
         "apps": {
           "localMarket": {
             "name": "Mahalliy bozor",
-            "description": "Mahalliy sotib oling va soting. QR to'lovlar ko'cha savdosini soddalashtiradi."
+            "description": "Mahalliy sotib oling va soting. QR to'lovlar ko'cha savdosini soddalashtiradi.",
+            "example": "Jakartadagi sotuvchi USDC qabul qiladi. Xaridor to'laydi, sotuvchi mablag'ni darhol ko'radi."
           },
           "ecommerce": {
             "name": "Elektron tijorat",
-            "description": "Dunyo bo'ylab sotuvchilardan onlayn xarid qiling. Karta to'lovlari yo'q, qaytarish yo'q."
+            "description": "Dunyo bo'ylab sotuvchilardan onlayn xarid qiling. Karta to'lovlari yo'q, qaytarish yo'q.",
+            "example": "Shenzhendan elektronika sotib oling. Stablecoin bilan to'lang, kredit kartaga nisbatan 3% tejang."
           },
           "marketplace": {
             "name": "Tengdosh bozori",
@@ -1011,7 +1207,8 @@
         "apps": {
           "remittance": {
             "name": "Pul o'tkazmalari",
-            "description": "Uyga pul yuboring. Qabul qiluvchilar mahalliy valyutaga aylantirishi yoki raqamli saqlashi mumkin."
+            "description": "Uyga pul yuboring. Qabul qiluvchilar mahalliy valyutaga aylantirishi yoki raqamli saqlashi mumkin.",
+            "example": "AQShdan Filippinga 200$ yuboring. Qabul qiluvchi 10,400 o'rniga 11,000+ peso oladi."
           },
           "freelance": {
             "name": "Frilans ish",
@@ -1027,34 +1224,50 @@
     "business": {
       "title": "Biznesingizni Umotu da quring",
       "subtitle": "O'rnatilgan to'lovlar bilan ilovalarni ishga tushiring",
-      "description": "Umotu ekosistemasiga ulangan ilovalar yarating — kunlik daromadli millionlab tasdiqlangan odamlar tranzaksiya qilishga tayyor. To'lov integratsiyasi muammolari yo'q.",
+      "description": "Zanjir ustida to'lovlar va ixtiyoriy stablecoinlar bilan ilovalar yarating. Ishtirokchilar kunlik mukofotlar (o'zgaruvchan) topishi mumkin va qo'llab-quvvatlanadigan aktivlar bilan tranzaktsiya qilishlari mumkin.",
       "benefits": {
-        "noFees": "Deyarli nol to'lov ishlov berish to'lovlari — daromadning 99.9% ni saqlang",
-        "verifiedUsers": "Barcha foydalanuvchilar tasdiqlangan odamlar — bot yoki firibgarlik yo'q",
-        "globalReach": "Birinchi kundan 190+ mamlakatdagi foydalanuvchilarga yetib boring",
-        "instantPayments": "Tez hisob-kitob — 30 kunlik to'lov kutish yo'q"
+        "noFees": "Arzon, shaffof to'lovlar — aniq xarajatlar tarmoq sharoitlariga qarab o'zgaradi",
+        "verifiedUsers": "Tasdiqlangan ishtirokchilar — Proof of Human orqali bot va Sybil faoliyati kamaytirilgan",
+        "globalReach": "Ishtirokchilarga global miqyosda yetib boring (mavjudligiga qarab)",
+        "instantPayments": "Tez zanjir ustida hisob-kitob — vaqt tarmoq sharoitlariga bog'liq"
       },
       "exampleTitle": "Foydalanish misoli",
-      "exampleText": "Umotu dagi takshi ulashish ilovasi an'anaviy platformalardagi 70% o'rniga tariflarning 99.9% ni saqlaydi. Haydovchilar ko'proq topadi, yo'lovchilar kamroq to'laydi.",
+      "exampleText": "Takshi ulashish ilovasi to'lovlarni yo'lovchilar va haydovchilar o'rtasida to'g'ridan-to'g'ri yo'naltirishi mumkin, shaffof to'lovlar va zanjir ustida deyarli real vaqt hisob-kitob bilan.",
       "docsButton": "Hujjatlarni o'qish",
       "buildButton": "Qurishni boshlash"
     },
     "bank": {
       "title": "Bankmisiz?",
       "subtitle": "Umotu da stablecoinlar chiqaring",
-      "description": "Litsenziyalangan moliya institutlari Umotu da mahalliy valyuta stablecoinlarini chiqarib, millionlab foydalanuvchili o'sib borayotgan UBI iqtisodiyotiga kirishi mumkin.",
+      "description": "Moliya institutlari va to'lov kompaniyalari kundalik tranzaktsiyalar uchun barqaror hisob birligi aktivlarini afzal ko'radigan foydalanuvchilarga xizmat qilish uchun Umotu da stablecoinlar chiqarishi mumkin.",
       "benefits": {
-        "reserves": "Rezervlardan daromad oling: obligatsiyalar va past xavfli aktivlarga invest qiling",
-        "mintRedeem": "Chiqarish/ayirboshlash to'lovlarini oling: odatda fiat ↔ stablecoin konvertatsiyasida 0.1%",
-        "users": "Kunlik faol UBI qabul qiluvchi millionlab foydalanuvchilarga kirish",
-        "global": "Chegaralardan tashqariga bir zumda kengayish",
-        "custody": "Rezervlar sizniki, nazorat sizda: orqa aktivlar ustidan to'liq nazorat"
+        "reserves": "Rezerv boshqaruvi chiqaruvchi tomonidan nazorat qilinadi va tegishli qoidalarga bo'ysunadi",
+        "mintRedeem": "Chiqaruvchilar chiqarish/ayirboshlash to'lovlarini o'z ixtiyoriga ko'ra belgilashi mumkin",
+        "users": "Faol ishtirokchilarning o'sib borayotgan bazasiga kirish",
+        "global": "Chegaralar ortidagi foydalanuvchilarga yetib boring (muvofiqlik va taqsimotga bog'liq)",
+        "custody": "Chiqaruvchi nazoratidagi rezervlar va siyosatlar"
       },
       "revenueModel": "Chiqaruvchilar qanday topadi",
-      "revenueNote": "Tether va boshqa yirik chiqaruvchilar kabi, daromad rezerv daromadi va konvertatsiya to'lovlaridan keladi. Millionlab foydalanuvchi kunlik UBI olganda chiqarish/ayirboshlash hajmi katta bo'lishi mumkin.",
-      "futureNote": "Kelajakda protokol rivojlanganda chiqaruvchilar tranzaksiya to'lovlari ulushini olishi mumkin.",
+      "revenueNote": "Chiqaruvchi iqtisodiyoti turlicha. Ba'zi chiqaruvchilar modeli va majburiyatlariga qarab rezerv daromadi va/yoki chiqarish/ayirboshlash to'lovlaridan daromad oladi.",
+      "futureNote": "Protokolda chiqaruvchi daromadini kafolatlaydigan hech narsa yo'q. Kelajakdagi o'zgarishlar, agar mavjud bo'lsa, protokol boshqaruv jarayoniga amal qilishi kerak.",
       "learnMore": "Ko'proq bilish",
       "applyButton": "Ariza berish"
+    },
+    "stablesDocs": {
+      "title": "Stablecoin standartlari",
+      "subtitle": "Umotu Foundation ilovalari uchun standartlar (protokol ruxsati emas)",
+      "description": "Umotu Foundation Foundation tomonidan boshqariladigan ilovalar va xizmatlarda standart stablecoin qo'llab-quvvatlash uchun ishlatiladigan standartlarni nashr etadi. Ular protokol darajasidagi o'tkazmalarni yoki uchinchi tomon hamyonlarini cheklamaydi. Standartlar stablecoin xavfini bartaraf etmaydi.",
+      "uss": {
+        "title": "Umotu Stablecoin Standarti (USS)",
+        "description": "Umotu Foundation ilovalarida standart to'lov opsiyalari sifatida ko'rsatiladigan va barqaror gas xizmatlarida (paymaster orqali) qo'llab-quvvatlanadigan stablecoinlar uchun minimal oshkorlik, zaxira va qaytarish mezonlari.",
+        "button": "USS o'qish"
+      },
+      "rdp": {
+        "title": "Xavf oshkorlik siyosati (RDP)",
+        "description": "Umotu Foundation ilovalarida ko'rsatiladigan qoidalarga asoslangan xavf ko'rsatkichlari (masalan, valyuta o'zgaruvchanligi, peg og'ishlari, qaytarish cheklovlari va texnik xavf).",
+        "button": "RDP o'qish"
+      },
+      "learnMore": "Stablecoin standartlarini ko'rish"
     }
   },
   "news": {
@@ -1110,36 +1323,36 @@
   },
   "learn": {
     "title": "O'rganish",
-    "subtitle": "Umotu haqida bilishingiz kerak bo'lgan hamma narsa",
+    "subtitle": "Ochiq ishtirok, kunlik mukofotlar",
     "featured": "TAVSIYA ETILGAN",
     "whatIs": {
       "title": "Umotu nima?",
-      "subtitle": "Kuniga 10 $, hamma uchun, hamma yerda",
-      "intro": "Umotu faqat smartfon bilan kuniga taxminan 10 dollar topishga imkon beradi. Qimmat uskunalar, maxsus ko'nikmalar yoki chegaralar yo'q.",
+      "subtitle": "Ochiq ishtirok, kunlik mukofotlar",
+      "intro": "Umotu — smartfon yordamida har kim ishtirok eta oladigan va tarmoq xavfsizligiga yordam berib kunlik mukofotlar topa oladigan ochiq protokol. Mukofotlar o'zgaruvchan va kafolatlanmagan. Faqat yo'naltirish uchun, protokol ishga tushirilayotganda har bir faol ishtirokchi uchun kuniga taxminan 10 dollar mos yozuv maqsadi atrofida mo'ljallangan, ammo haqiqiy mukofotlar ishtirok va bozor sharoitlariga qarab ancha past (kuniga tiyinlar darajasida) yoki yuqori bo'lishi mumkin.",
       "howDifferent": "Qanday farq qiladi?",
-      "noMiddleman": "O'rta odam yo'q: Tarmoq bilan to'g'ridan-to'g'ri aloqa — bank hisobi shart emas",
-      "globalAccess": "Global kirish: Internet bo'lsa ishlaydi",
-      "youOwnIt": "Siz egasisiz: Hamyon, kalitlar, nazorat sizda",
+      "noMiddleman": "O'rta odam yo'q: tarmoq bilan to'g'ridan-to'g'ri aloqa — hisob tasdiqlash shart emas",
+      "globalAccess": "Global kirish: internet bo'lgan joyda ishlaydi",
+      "youOwnIt": "O'z-o'zini saqlash: hamyoningiz, kalitlaringiz, nazorat sizda",
       "vision": "Vizyon",
-      "visionText": "Milliardlab odamlar umumiy daftarni halol saqlashga yordam berib topishi mumkin. Umotu da telefonlar tarmoqni ishonchli qiladigan engil tekshiruvlarni bajaradi.",
+      "visionText": "Millionlab telefonlar umumiy daftarni halol saqlashga yordam berishi mumkin. Telefonlar tarmoqni ishonchli qiladigan engil tekshiruvlar (masalan, ma'lumotlar mavjudligi namunalari) bajaradi.",
       "nameOrigin": "Nomi kelib chiqishi",
       "nameOriginText": "Umotu Paʻumotu polineziya tilidan ilhomlangan. Bu nomni oddiy odamlar uchun qurishni eslatish uchun hurmat bilan ishlatamiz."
     },
     "earn": {
       "title": "Qanday topasiz",
-      "subtitle": "Telefoningiz ishlaydi; siz topasiz",
-      "intro": "Telefoningiz hammaga yordam beradigan kichik vazifalarni bajaradi — keyin mukofot olasiz.",
+      "subtitle": "Telefoningiz ishtirok etadi; siz mukofot olasiz",
+      "intro": "Telefoningiz tarmoqqa yordam beradigan kichik xavfsizlik tekshiruvlarini bajaradi — keyin siz mukofot olasiz.",
       "steps": "Uch oddiy qadam",
       "step1": "1) Inson ekanligingizni isbotlang: tez liveness tekshiruvi (va vaqti-vaqti bilan yangilash) har bir odam bitta hisobga ega ekanligini ta'minlaydi.",
       "step2": "2) Tarmoqqa yordam bering: telefoningiz orqa fonda Data Availability (DA) sampling va boshqa engil tekshiruvlarni bajaradi.",
-      "step3": "3) Kunlik mukofot oling: bu ish uchun to'laysiz, tarmoq siyosatiga ko'ra taxminan kuniga 10 dollar.",
+      "step3": "3) Kunlik mukofotlar oling: mukofotlar muvaffaqiyatli ishtirokga asosan avtomatik taqsimlanadi. Miqdorlar o'zgaradi.",
       "localCurrency": "Mahalliy valyutada to'lov",
-      "localCurrencyText": "To'lov tokenini tanlang: mavjud bo'lsa mahalliy valyuta stablecoinlari yoki UMT. Miqdorlar ~10 USD qiymatiga mo'ljallangan va ishtirok va bozor sharoitlariga qarab o'zgarishi mumkin."
+      "localCurrencyText": "To'lov aktivini tanlang: UMT yoki stablecoinlar (mavjud bo'lsa). Stablecoinlar uchinchi tomonlar tomonidan chiqariladi va o'z xavflari mavjud."
     },
     "whereMoney": {
-      "title": "10 dollar qayerdan keladi?",
+      "title": "Mukofotlar qayerdan keladi?",
       "subtitle": "Siz ish qilganingiz uchun topasiz",
-      "intro": "#1 savol. Qisqa javob: chunki siz tarmoqqa kerakli xizmat ko'rsatasiz.",
+      "intro": "Tez-tez beriladigan savol. Qisqa javob: mukofotlar mavjud chunki ishtirokchilar xavfsizlikni ta'minlaydi va protokol qoidalarga ko'ra token chiqaradi.",
       "realWork": "Telefoningiz haqiqiy ish qiladi",
       "realWork1": "Data Availability Sampling: telefoningiz blok ma'lumotlari mavjud va to'g'ri ekanligini tekshiradi",
       "realWork2": "Inson ishtiroki: bot va spam oldini olish uchun bir odam-bitta hisobni isbotlaysiz",
@@ -1150,7 +1363,7 @@
       "distribution": "Mukofotlar qanday taqsimlanadi",
       "newTokens": "Yangi UMT tokenlari yaratilib, tasdiqlangan telefon ishtirokchilariga taqsimlanadi (validatorlarga emas)",
       "fees": "Tranzaksiya to'lovlari va builder takliflari ulushi telefon sentineliga bloklarni yakunlash uchun beriladi",
-      "treasury": "Kichik qismi doimiy texnik xizmat va barqarorlik dasturlari uchun",
+      "treasury": "Ba'zi to'lovlar ekotizim xizmatini (masalan, auditlar va mos yozuv dasturlari) shaffof boshqaruv orqali, yoqilgan joyda qo'llab-quvvatlashi mumkin.",
       "whyDifferent": "Nega bu boshqacha",
       "btcProblem": "Bitcoin maxsus minerlarga (kapital talab qiladi) mukofot beradi",
       "ethProblem": "Ethereum katta stakerlarga (kapital talab qiladi) mukofot beradi",
@@ -1187,19 +1400,23 @@
       "example1": "1 ZAR1 ≈ 1 Janubiy Afrika randi",
       "example2": "1 USD1 ≈ 1 AQSh dollari",
       "example3": "1 NGN1 ≈ 1 Nigeriya nayrasi",
-      "backed": "Hamkorlar tomonidan chiqarilgan",
-      "backedText": "Umotu dagi stablecoinlar tartibga solingan hamkorlar tomonidan chiqariladi va rezervlar bilan 1:1 qiymatga ega bo'lishga mo'ljallangan. Chiqaruvchilar rezerv isbotlari va ayirboshlash shartlarini e'lon qiladi.",
+      "backed": "Uchinchi tomonlar tomonidan chiqarilgan",
+      "backedText": "Stablecoinlar mustaqil provayderlar tomonidan chiqariladi va valyutani (masalan USD yoki CAD) kuzatish uchun mo'ljallangan. Har bir stablecoin o'z rezervlari, ayirboshlash shartlari, yangilash nazorati va xavf siyosatlari (muzlatish imkoniyati ham) mavjud. Chiqaruvchining oshkoraligini o'qing.",
       "convert": "Naqdga aylantirish",
-      "convertText": "Hamkor banklar/almashinuvlar orqali aylantiring yoki qabul qilinadigan joylarda to'g'ridan-to'g'ri sarflang."
+      "convertText": "Stablecoinlarni zanjirda almashtirish yoki mavjud bo'lganda uchinchi tomon xizmatlari orqali aylantirish mumkin.",
+      "gas": "To'lovlar uchun stablecoinlardan foydalanish",
+      "gasText": "Ba'zi hamyonlar tarmoq to'lovlarini stablecoin orqali mahalliy tokenga aylantiruvchi xizmat yordamida to'lash imkonini beradi. Tasdiqlovchilar hali ham mahalliy tokenni oladi; barqaror gas qulaylik qatlamidir.",
+      "preferredList": "Hamyon standartlari",
+      "preferredListText": "Umotu hamyoni Umotu Stablecoin Standartiga (USS) asoslangan to'lovlar va to'lov xizmatlari uchun konservativ standart stablecoin ro'yxatini ko'rsatishi mumkin. Boshqa hamyonlar boshqa stablecoinlarni qo'llab-quvvatlashi mumkin."
     },
     "economics": {
       "title": "UMT iqtisodiyoti",
       "subtitle": "Kim nima oladi va nega",
-      "intro": "UMT ning umumiy ta'minoti 100 milliard token. Ko'p qismi tarmoqni halol saqlaydigan oddiy telefon foydalanuvchilariga to'lanadi.",
+      "intro": "UMT ning umumiy ta'minoti 100 milliard token. Ko'p qismi vaqt o'tishi bilan telefon ishtirokchilariga ajratilgan va qoidalarga asoslangan emissiya nazoratchi tomonidan taqsimlanadi.",
       "supply": "Ta'minot va taqsimot",
       "supplyBullets": [
-        "Token ta'minotining katta qismi vaqt o'tishi bilan telefon ishtirokchilari uchun ajratilgan va Emission Controller orqali chiqariladi. Emission Controller kunlik chiqarishni qolgan ta'minotning 0,01% dan ko'p bo'lmagan miqdorda cheklaydi, bu uzoq muddatli barqarorlikni ta'minlaydi. Ushbu jadvalga ko'ra, 10 yildan keyin umumiy ta'minotning taxminan 68% qoladi va 50 yildan keyin taxminan 15% qoladi.",
-        "Ta'minotning kichik qismi ishga tushirishda maxsus maqsadlar uchun yaratiladi, jumladan dastlabki foydalanuvchi airdrop, jamiyat sotuvlari, jamg'arma ajratmalari va favqulodda zahira va boshqalar."
+        "Ta'minotning katta qismi telefon ishtirokchilari uchun ajratilgan va Emissiya nazoratchi orqali vaqt o'tishi bilan chiqariladi. Nazoratchi kunlik chiqarishni raqiqlikni cheklash uchun qolgan ta'minotning eng ko'pi 0.01% bilan chegaralaydi.",
+        "Maksimal chegarada (kuniga qolgan ta'minotning 0.01%), 10 yildan keyin ta'minotning taxminan 69% va 50 yildan keyin taxminan 16% qoladi. Haqiqiy emissiya protokol qoidalariga qarab past bo'lishi mumkin."
       ],
       "premine": "Ishga tushirish taqsimoti (vaqtinchalik, mainnet ishga tushirilganda o'zgarishi mumkin)",
       "premineTable": [
@@ -1221,13 +1438,13 @@
         }
       ],
       "emissions": "Telefonlar uchun kunlik mukofotlar",
-      "emissionsText": "Har kuni tarmoq qolgan emissiya hovuzining eng ko'pi 0.01% ini chiqarishi mumkin. Tasdiqlangan telefonlar kuniga taxminan 10 dollar olishi uchun bu miqdorni byudjetlaymiz, ishtirok va bozor sharoitlariga qarab sozlaymiz.",
+      "emissionsText": "Kunlik emissiyalar cheklangan. Mukofotlaringiz ishtirok, muvaffaqiyatli telefon tekshiruvlari va bozor sharoitlariga bog'liq. Protokol qat'iy miqdor va'da qilmaydi.",
       "fees": "To'lovlar va Sentinelar",
       "feesText": "Sentinel yordamchilari (ixtiyoriy, ilg'or) tranzaksiya to'lovlari va builder takliflari ulushini oladi. Bu kunlik emissiyalardan alohida.",
       "transparency": "Shaffoflik",
       "transparencyText": "Vesting jadvallari va hamyonlar ommaviy. Kunlik emissiya cheklari va haqiqiy to'lovlar ilovada e'lon qilinadi.",
       "disclaimerTitle": "Oddiy til eslatmasi",
-      "disclaimerText": "Bu investitsiya maslahati emas. Mukofotlar tarmoq siyosati va ishtirokka bog'liq. Ilova qat'iy daromadni kafolatlamaydi."
+      "disclaimerText": "Bu moliyaviy maslahat emas. Mukofotlar o'zgaruvchan va kafolatlanmagan."
     },
     "contribute": {
       "title": "Qanday hissa qo'shish mumkin",
@@ -1254,7 +1471,7 @@
       },
       "governance": {
         "title": "Boshqaruvga qo'shilish",
-        "text": "Takliflarni o'qing, ochiq muhokama qiling va ilovada ovoz bering. Ovozingiz tarmoq parametrlarini va grant taqsimotini yo'naltiradi.",
+        "text": "Takliflarni o'qing, ochiq muhokama qiling va ilovada ovoz bering. Ovozlar hamyon standartlarini va ekotizim grantlarini yo'naltirishi mumkin. Ba'zi protokol qoidalari qat'iy va ovoz berishga bo'ysinmaydi.",
         "cta": "Boshqaruvni ochish",
         "url": "umotu://vote"
       },
@@ -1269,37 +1486,38 @@
     "decentralization": {
       "title": "Nega desentralizatsiya",
       "subtitle": "Yagona nazorat nuqtasi yo'q",
-      "intro": "Desentralizatsiya bitta kompaniya yoki hukumat tarmoqni yopishi yoki pulingizni musodara qilishi mumkin emasligini bildiradi.",
+      "intro": "Desentralizatsiya tarmoq ko'plab mustaqil ishtirokchilar tomonidan boshqarilishini bildiradi. Hamyoningiz o'z-o'zini saqlash — faqat kalitlaringiz mablag'laringizni ko'chirishi mumkin.",
       "benefits": "Siz uchun foydalari",
       "benefit1": "Doimiy ish: 24/7 mavjud",
-      "benefit2": "Arzon to'lovlar: karta to'lovlari o'rniga kichik tarmoq to'lovlari",
+      "benefit2": "Ko'pincha arzonroq to'lovlar: oddiy karta to'lovlari o'rniga kichik tarmoq to'lovlari",
       "benefit3": "Chegarasiz: qiymatni global yuborish",
-      "benefit4": "Tsenzuraga chidamli: kalitlar sizda, pul sizniki",
+      "benefit4": "Tsenzuraga chidamliroq: bitta kompaniya hamyoningizni nazorat qilmaydi",
       "benefit5": "Shaffof: har kim tizim qanday ishlashini tekshirishi mumkin",
       "howWorks": "Qanday ishlaydi",
-      "howWorksText": "Validatorlar har ~2 soniyada blok taklif qiladi. Telefonlar (sizniki kabi) engil tekshiruvlar bilan yakunlaydi. Ko'p kichik hissalar kuchli xavfsizlikka olib keladi."
+      "howWorksText": "Validatorlar har ~2 soniyada blok taklif qiladi. Telefonlar (sizniki kabi) ma'lumotlar mavjudligini tekshiradi va engil tekshiruvlar bilan bloklarni yakunlashga yordam beradi. Ko'p kichik hissalar kuchli xavfsizlikka olib keladi."
     },
     "noCompany": {
-      "title": "Kompaniya yo'q, mijoz yo'q",
-      "subtitle": "Modelni tushuning",
-      "intro": "Protokolni nazorat qiluvchi 'Umotu, Inc.' yo'q. Umotu har kim ishlatishi mumkin bo'lgan ochiq qoida to'plami.",
+      "title": "Ochiq protokol, o'z-o'zini saqlash",
+      "subtitle": "Umotu nima ekanligini (va nima emasligini) tushuning",
+      "intro": "Protokolni nazorat qiladigan bitta kompaniya yo'q. Umotu har kim foydalana oladigan ochiq qoidalar to'plami va ko'plab mustaqil jamoalar hamyon va xizmatlar qurishi mumkin.",
       "notCompany": "Umotu NIMA EMAS",
-      "notCompany1": "Mijoz hisoblari bo'lgan kompaniya EMAS",
-      "notCompany2": "Bank yoki pul o'tkazuvchi EMAS",
+      "notCompany1": "Mijoz mablag'larini saqlaydigan saqlash banki EMAS",
+      "notCompany2": "Hamyoningizni qayta o'rnatish yoki tranzaktsiyalarni qaytarish imkoniyati YO'Q",
       "notCompany3": "Yagona sub'ekt tomonidan nazorat qilinmaydi",
-      "notCompany4": "Tranzaksiyalarni qaytara olmaydi",
+      "notCompany4": "Kafolatlangan daromad dasturi EMAS",
       "whatIs": "Umotu NIMA",
-      "whatIs1": "Protokol: email yoki web kabi — ochiq, bir-biriga mos qoidalar",
-      "whatIs2": "Telefon birinchi: oddiy smartfonlar yordamida ishlaydi",
+      "whatIs1": "Protokol: ochiq, bir-biriga mos qoidalar (email yoki web kabi)",
+      "whatIs2": "Telefon birinchi ishtirok: smartfonlar tarmoq xavfsizligiga yordam berishi mumkin",
       "whatIs3": "Jamoa boshqaruvida: siz mijoz emas, ishtirokchisiz",
+      "whatIs4": "Ruxsatsiz: har kim protokolda qurish yoki foydalanishi mumkin",
       "foundation": "Umotu jamg'armasi",
-      "foundationIntro": "Ekosistemani qo'llab-quvvatlovchi notijorat tashkilot (mos yozuv ilovalari, hujjatlar, jamoa dasturlari) lekin protokolni nazorat qilmaydi.",
+      "foundationIntro": "Ekosistemani qo'llab-quvvatlovchi notijorat tashkilot (mos yozuv ilovalari, ta'lim va muvofiqlashtirish) lekin protokolni nazorat qilmaydi.",
       "foundationTask1": "Mobil ilova va explorerni mos yozuv sifatida saqlaydi",
       "foundationTask2": "Ba'zi ommaviy infratuzilmani boshqaradi (boshqalar o'zlarinikini ishlatishi mumkin)",
-      "foundationTask3": "Jamoa boshqaruvini muvofiqlashtiradi (yangiliklar, ovozlar)",
-      "foundationTask4": "Qo'llab-quvvatlanadigan stablecoinlarni ko'rib chiqadi va ro'yxatga oladi",
+      "foundationTask3": "Ilovada jamoa ovozlari va muhokamalarni muvofiqlashtiradi (tegishli joylarda)",
+      "foundationTask4": "Umotu Stabil Kelishuvini va Umotu hamyoni uchun konservativ standart ro'yxatlarni nashr etadi (boshqalar boshqa stablecoinlarni qo'llab-quvvatlashi mumkin)",
       "foundationTask5": "Ta'lim va xavfsizlik qo'llanmalarini e'lon qiladi",
-      "foundationNote": "Jamg'arma hamyoningizga kira olmaydi va tranzaksiyalarni qaytara olmaydi."
+      "foundationNote": "Jamg'arma hamyoningizga kira olmaydi va tranzaktsiyalarni qaytara olmaydi. Hamyon standartlari protokolda nima mumkin ekanligini cheklamaydi."
     },
     "scamPrevention": {
       "title": "Firibgarlikdan saqlaning",
@@ -1323,22 +1541,22 @@
       "action4": "Bloklang va shikoyat qiling"
     },
     "airdrop": {
-      "title": "Testnet airdrop",
-      "subtitle": "Dastlabki foydalanuvchilar e'tirof etiladi",
-      "intro": "Siz ertasiz! Umotu testnetda. Faol testnet ishtirokchilari mainnet ishga tushganda ulush olishi mumkin.",
+      "title": "Testnet e'tirofi",
+      "subtitle": "Erta testnet ishtiroki e'tirof etilishi mumkin",
+      "intro": "Umotu testnetda. Faol testnet ishtirokchilari mainnet ishga tushganda e'tirof taqsimoti olishi mumkin. Bu kafolatlanmagan va nolga teng bo'lishi mumkin.",
       "howToQualify": "Qanday saralanasiz",
       "step1": "Ilovada hamyon yarating",
       "step2": "Inson tasdiqlashini (Proof of Human) tugallang",
       "step3": "Testnet davomida ilovani muntazam ishlating",
       "whenAirdrop": "Airdrop qachon?",
       "whyTestnet": "Testnet muhim: foydalanuvchilar hamyon xavfsizligini o'rganadi, tizim xavfsizlik, mustahkamlik va samaradorlik uchun sinovdan o'tkaziladi mainnetdan oldin.",
-      "timeline": "Mainnet 2026 yil 1 yoki 2 choragida kutilmoqda. Airdrop shu vaqt atrofida bo'ladi.",
+      "timeline": "Mainnet vaqti va har qanday e'tirof tafsilotlari ilovada e'lon qilinadi.",
       "howMuch": "Qancha olasiz?",
-      "totalPool": "Umumiy airdrop hovuzi: 1,000,000,000 UMT token. UMT narxiga va ishtirokchilar soniga bog'liq ulushingiz.",
-      "scenario2": "1 million foydalanuvchi: har biriga ~1,000 UMT, kutilgan narx ~$1, airdrop qiymati ~$1,000",
-      "scenario3": "10 million foydalanuvchi: har biriga ~100 UMT, kutilgan narx ~$20, airdrop qiymati ~$2,000",
-      "scenario4": "100 million foydalanuvchi: har biriga ~10 UMT, kutilgan narx ~$300, airdrop qiymati ~$3,000",
-      "disclaimer": "Bu faqat taxminlar, kafolat emas. Haqiqiy qiymatlar bozor sharoitlari va dastur qoidalariga bog'liq.",
+      "totalPool": "Faqat misol: agar 1,000,000,000 UMT e'tirof hovuzi yaratilsa, ulushingiz saralangan ishtirokchilarga va dastur qoidalariga bog'liq. Qanchalik erta ishtirok qilsangiz, ulushingiz shunchalik yuqori.",
+      "scenario2": "Faqat misol: 1 million saralangan foydalanuvchi → har biriga o'rtacha ~1,000 UMT (vaznlashdan oldin)",
+      "scenario3": "Faqat misol: 10 million saralangan foydalanuvchi → har biriga o'rtacha ~100 UMT (vaznlashdan oldin)",
+      "scenario4": "Faqat misol: 100 million saralangan foydalanuvchi → har biriga o'rtacha ~10 UMT (vaznlashdan oldin)",
+      "disclaimer": "Faqat misollar — kafolat emas. Har qanday e'tirof taqsimoti dastur qoidalari va bozor sharoitlariga bog'liq va nolga teng bo'lishi mumkin.",
       "whatYouGet": "Nima olasiz",
       "reward": "Mainnetda testnet hamyoningiz ishtirok va dastur qoidalariga ko'ra haqiqiy token olishi mumkin. Ertaroq va faolroq foydalanuvchilar ustunlikka ega.",
       "note": "Eslatma: Testnet tokenlari qiymatsiz. Mainnetdagi har qanday taqsimot ishga tushirishdagi dastur siyosatiga bog'liq. Airdrop haqidagi barcha yangiliklar faqat shu ilovada e'lon qilinadi."
@@ -1356,7 +1574,21 @@
       "tips": "Pro maslahatlar",
       "tip1": "Tekshiruvlar orqa fonda ishlashi uchun ruxsat bering",
       "tip2": "Mukofotlarni ko'rish uchun har kuni tekshiring",
-      "tip3": "Do'stlarni taklif qiling — ko'proq foydalanuvchi tarmoqni kuchliroq qiladi"
+      "tip3": "Do'stlarni taklif qiling — ko'proq ishtirokchilar tarmoqni kuchliroq qilishi mumkin"
+    },
+    "governance": {
+      "title": "Boshqaruv va ovoz berish",
+      "subtitle": "Ilova ichidagi ovoz berish qanday ishlaydi",
+      "intro": "Umotu ishtirokchilar ekotizim qarorlarini yo'naltirishga yordam berishi uchun ilova ichidagi so'rovnomalar va ovoz berishni qo'llab-quvvatlaydi.",
+      "whatVotesDo": "Ovozlar nima qila oladi",
+      "whatVotesDo1": "Hamyon standartlarini tavsiya qilish (masalan, qaysi stablecoinlar afzal to'lov yoki barqaror gas opsiyasi sifatida ko'rinishi)",
+      "whatVotesDo2": "Takliflar va ustuvorliklar bo'yicha jamoa xohishini bildirish",
+      "whatVotesDo3": "Faollashtirilganda ma'lum grantlar yoki byudjetlarni tasdiqlash",
+      "whatVotesCannotDo": "Ovozlar nima qila olmaydi",
+      "whatVotesCannotDo1": "Hamyoningizga kirish, mablag'laringizni ko'chirish yoki tiklash iborasini qayta o'rnatish",
+      "whatVotesCannotDo2": "Tranzaksiyalarni bekor qilish yoki o'z-o'zini saqlash hamyoningizni muzlatish",
+      "whatVotesCannotDo3": "Protokol qoidalaridan tashqari belgilangan pul siyosatini o'zgartirish",
+      "note": "Ba'zi so'rovnomalar tarmoq bosqichiga qarab sinov yoki maslahat xarakterida bo'lishi mumkin. Har doim taklif tafsilotlari va faollashtirish shartlarini o'qing."
     }
   },
   "common": {
@@ -1405,6 +1637,7 @@
   "poh_title": "Insonni tasdiqlash",
   "continue": "Davom etish",
   "or": "YOKI",
+  "version": "Versiya",
   "seedReveal": {
     "title": "Tiklash iborasi",
     "intro": "Tiklash iborasi qurilmaga kirishni yo'qotsangiz hamyonni tiklashning yagona usuli. Uni yozib, xavfsiz oflayn saqlang.",

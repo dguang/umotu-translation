@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "$10 a day, everyone everywhere"
+    "tagline": "Open Participation, Daily Rewards"
   },
   "navigation": {
     "home": "Home",
@@ -124,20 +124,30 @@
       "availableDays": "Available reward days: {{days}}",
       "availableRange": "Coverage: {{start}} to {{end}}",
       "remainingAfter": "+{{days}} more after this batch",
+      "calendarVsEligible": "{{eligible}} eligible out of {{calendar}} calendar days",
+      "showMissingDays": "Show missing days ({{count}})",
+      "hideMissingDays": "Hide missing days",
+      "noMissingDaysLoaded": "No missing-day details returned by policy yet.",
+      "moreMissingDays": "and {{count}} more days",
+      "missingDaysHint": "Missing day means no DA sampling/proof for that UTC day.",
       "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
       "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "claimButton": "Claim now",
       "claiming": "Claiming...",
+      "cancelling": "Cancelling claim...",
+      "cancelled": "Claim cancelled.",
+      "cancelButton": "Cancel claim",
       "success": "Claim submitted",
       "successWithId": "Claim submitted (id: {{id}})",
       "batchSuccess": "{{count}} days claimed successfully",
+      "fallbackPaidInNative": "paid in UMT: stable temporarily unavailable",
       "claimingProgress": "Claiming {{claimed}}/{{total}}...",
       "claimingDay": "Processing day {{day}}",
       "claimAllButton": "Claim all {{count}} days",
       "error": "Failed to claim",
-      "noProof": "Reward proof not published yet. Try again after today's snapshot is live.",
+      "noProof": "No reward proof found for this wallet/day yet (or it was not eligible that day). Try again after today's snapshot is live.",
       "unauthorized": "Relayer authorization failed. Please try again or contact support.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -188,8 +198,8 @@
     "addressCopied": "Address copied",
     "receive": "Receive",
     "send": "Send",
-    "swap": "Swap",
-    "swapComingSoon": "Swap coming soon",
+    "swap": "DEX Swap",
+    "swapComingSoon": "Decentralized exchange swap coming soon. This feature will connect directly to on-chain DEX protocols - Umotu does not operate an exchange.",
     "history": "History",
     "tokens": "Tokens",
     "noTokens": "No tokens configured",
@@ -226,13 +236,15 @@
     "addressBook": {
       "title": "Address Book",
       "addContact": "Add Contact",
-      "nameLabel": "Name or label",
+      "nameLabel": "Name",
       "walletAddress": "Wallet address (0x...)",
       "savedContacts": "Saved Contacts",
       "noContacts": "No contacts saved yet.",
       "addForQuickSending": "Add contacts for quick sending.",
       "enterValidAddress": "Enter a valid address",
       "addLabel": "Add a label",
+      "labelAlreadyExists": "This label already exists",
+      "tagOptional": "Tag (optional)",
       "save": "Save",
       "editContact": "Edit Contact",
       "tags": "Tags",
@@ -240,7 +252,9 @@
       "newTagPlaceholder": "Enter tag name...",
       "addTag": "Add",
       "existingTags": "Or add existing tag:",
-      "deleteContact": "Delete Contact"
+      "deleteContact": "Delete Contact",
+      "confirmDeleteTitle": "Delete contact?",
+      "confirmDeleteMessage": "This will remove {{label}} from your address book."
     },
     "settings": {
       "title": "Wallet Settings",
@@ -249,6 +263,7 @@
         "description": "Never share your recovery phrase or private key. Store them securely offline.",
         "recoveryPhrase": "Recovery Phrase",
         "recoveryPhraseNotAvailable": "Recovery phrase not available (imported via private key)",
+        "walletNotLoaded": "No wallet loaded. Import or create a wallet first.",
         "privateKey": "Private Key",
         "privateKeyWarning": "Private Key (keep secret!)",
         "showPhrase": "Show Recovery Phrase",
@@ -271,7 +286,8 @@
         "keyPlaceholder": "Enter 0x… private key",
         "importButton": "Import Wallet",
         "importing": "Importing...",
-        "success": "Wallet imported successfully!"
+        "success": "Wallet imported successfully!",
+        "saveFailed": "Wallet import succeeded but failed to save on this device."
       },
       "dangerZone": {
         "title": "Danger Zone",
@@ -545,6 +561,7 @@
       "deleteContact": "Delete Contact",
       "addressNotSaved": "Address not saved",
       "addLabel": "Add a label",
+      "labelAlreadyExists": "This label already exists",
       "enterValidAddress": "Enter a valid address first",
       "saved": "Saved",
       "save": "Save"
@@ -557,6 +574,7 @@
       "addFromTagOrBook": "Add from tag or address book",
       "invalidAddress": "Invalid address: {{address}}",
       "invalidAmount": "Invalid amount for {{recipient}}",
+      "tooManyRecipients": "Batch send supports up to {{max}} recipients.",
       "totalExceedsBalance": "Total amount exceeds balance",
       "sendingTo": "Sending to {{count}} recipient",
       "sendingTo_plural": "Sending to {{count}} recipients",
@@ -578,6 +596,18 @@
       "failedStatus": "Failed",
       "details": "Batch Transfer Details",
       "total": "Total",
+      "hongbao": {
+        "short": "Hongbao",
+        "total": "Total Hongbao",
+        "helper": "Set a fixed total and we will randomize each recipient amount on the next step.",
+        "random": "Random",
+        "autoSplit": "Auto split",
+        "generated": "Random split generated",
+        "needTwoRecipients": "Hongbao needs at least 2 recipients.",
+        "amountTooSmall": "Total is too small for {{count}} recipients. Minimum is {{min}} {{symbol}}.",
+        "generateFailed": "Failed to generate random amounts.",
+        "disabled": "Hongbao mode is disabled right now."
+      },
       "tagPicker": {
         "title": "Select Tag",
         "noTags": "No tags available",
@@ -666,6 +696,18 @@
       "token": "Token",
       "block": "Block",
       "gasCost": "Gas Cost",
+      "balanceAfter": "Balance after tx",
+      "balanceSource": "Balance source",
+      "balanceSourceVerified": "On-chain verified",
+      "balanceSourceVerifying": "Estimated (verifying on-chain...)",
+      "balanceSourceEstimatedRecent": "Estimated from recent balance snapshot",
+      "balanceSourceEstimatedStale": "Estimated from stale balance snapshot",
+      "balanceSourceEstimatedDelayed": "Estimated (on-chain verification delayed)",
+      "balanceSnapshotAge": "Snapshot age",
+      "balanceReconciledDiff": "Reconciled difference",
+      "balanceVerifyNote": "Verification note",
+      "balanceVerifyUnexpected": "Verification delayed. Estimated balance shown.",
+      "unavailable": "Unavailable",
       "hash": "Hash",
       "source": "Source",
       "balanceDetected": "Balance detected",
@@ -681,20 +723,24 @@
       "successful": "Successful",
       "successOf": "{{success}} of {{total}}",
       "sentStatus": "Sent",
-      "failedStatus": "Failed"
+      "failedStatus": "Failed",
+      "successFail": "{{success}} succeeded, {{fail}} failed",
+      "toRecipients": "to {{count}} recipient",
+      "toRecipients_plural": "to {{count}} recipients"
     },
     "time": {
       "justNow": "Just now",
       "minsAgo": "{{count}}m ago",
       "hoursAgo": "{{count}}h ago",
-      "daysAgo": "{{count}}d ago"
+      "daysAgo": "{{count}}d ago",
+      "suffixAgo": "ago"
     }
   },
   "settings": {
     "title": "Settings",
     "account": {
       "title": "Account & Appearance",
-      "walletAddress": "Wallet Address",
+      "walletAddress": "Account address",
       "copy": "Copy",
       "copied": "Copied"
     },
@@ -762,6 +808,13 @@
       "clearCache": "Clear Cache",
       "cacheCleared": "Cache cleared! Restart to apply."
     },
+    "hongbaoDebug": {
+      "title": "Hongbao Config (Debug)",
+      "description": "Clear local Hongbao season cache and force refresh on next app launch.",
+      "clearConfigCache": "Clear Hongbao Cache",
+      "cacheCleared": "Hongbao config cache cleared",
+      "cacheClearFailed": "Failed to clear Hongbao config cache"
+    },
     "integrityDebug": {
       "title": "App Attestation (Debug)",
       "description": "Fetch a device attestation token to confirm App Attest is active.",
@@ -827,12 +880,57 @@
       "noConnections": "No connected apps",
       "revokeAccess": "Revoke Access",
       "lastUsed": "Last used"
+    },
+    "transfer": {
+      "title": "Device Data Transfer",
+      "description": "Move app settings and contacts to your new phone by scanning a transfer QR code.",
+      "warning": "This transfers app data only. Wallet recovery phrase/private key are NOT included. Import wallet separately on the new phone.",
+      "preparing": "Preparing...",
+      "showQr": "Show Transfer QR",
+      "scanQr": "Scan Transfer QR",
+      "exportTitle": "Transfer QR",
+      "exportHint": "On your new phone, open Settings -> Device Data Transfer -> Scan Transfer QR, then scan this code.",
+      "exportHintParts": "On your new phone, scan every page in order (1 to {{total}}), then enter the 6-digit code.",
+      "exportHintRelay": "On your new phone, scan this one code to download the transfer package, then enter the 6-digit confirmation code.",
+      "exportReady": "Transfer QR ready ({{count}} items)",
+      "exportReadyParts": "Transfer QR ready ({{count}} items, {{parts}} QR pages). Scan pages in order.",
+      "relayReady": "Large transfer optimized: scan one QR to download {{count}} items, then enter the 6-digit code.",
+      "relayFallback": "Cloud transfer unavailable ({{message}}). Falling back to multi-page QR.",
+      "relayFetching": "Downloading transfer data...",
+      "relayFetched": "Transfer data downloaded. Processing...",
+      "exportFailed": "Failed to prepare transfer: {{message}}",
+      "prevPage": "Previous",
+      "nextPage": "Next",
+      "confirmCodeLabel": "6-digit confirmation code",
+      "copyCode": "Copy transfer code",
+      "importTitle": "Scan Transfer QR",
+      "importHint": "Point the camera at the transfer QR shown on your old phone.",
+      "importing": "Importing...",
+      "importNow": "Import Data",
+      "imported": "Imported {{count}} items. Wallet recovery phrase/private key are NOT transferred.",
+      "importFailed": "Transfer import failed: {{message}}",
+      "confirmPrompt": "QR scanned. Enter the 6-digit confirmation code shown on your old phone.",
+      "confirmCodeRequired": "Enter the 6-digit confirmation code from your old phone.",
+      "confirmCodeMismatch": "Confirmation code does not match. Please try again.",
+      "rescan": "Rescan",
+      "scanProgress": "Scanned QR {{current}}/{{total}}",
+      "scanContinue": "Keep scanning remaining pages in order until complete.",
+      "restartScan": "Restart Scan",
+      "chunkMismatch": "Transfer QR pages do not match. Please restart scan from page 1.",
+      "cameraNeeded": "Camera access needed",
+      "cameraDescription": "Enable camera permission to scan your transfer QR code.",
+      "allowCamera": "Allow Camera",
+      "openSettings": "Open Settings",
+      "pasteCode": "Paste Transfer Code",
+      "pasteTitle": "Paste Transfer Code",
+      "pasteHint": "If camera scan is difficult, paste the transfer code copied from the old phone.",
+      "pastePlaceholder": "UMOTU_TRANSFER:..."
     }
   },
   "onboarding": {
     "welcome": {
       "title": "Welcome to Umotu",
-      "subtitle": "$10 a day, everyone everywhere",
+      "subtitle": "Open Participation, Daily Rewards",
       "getStarted": "Get Started"
     },
     "language": {
@@ -872,6 +970,40 @@
       "validFor_plural": "Valid for ~{{days}} days",
       "expired": "Verification expired or not found.",
       "expiredDetail": "Re-run liveness to refresh your credential."
+    },
+    "capture": {
+      "title": "Face Capture",
+      "hint": "Center your face and hold steady.",
+      "tipsTitle": "Capture tips",
+      "tipFace": "Keep your face centered and fill the frame (≥ {{pct}}%).",
+      "tipLight": "Use even lighting and avoid strong backlight.",
+      "tipHold": "Hold still and look at the camera for {{seconds}}s.",
+      "tipRemove": "Remove hats, masks, or heavy shadows.",
+      "errorShort": "Capture too short. Hold still for {{seconds}}s.",
+      "errorTooSmall": "Capture failed. Please try again.",
+      "errorFileTooSmall": "Video file is too small. Hold still for the full capture and improve lighting.",
+      "errorBitrate": "Video quality is too low. Improve lighting and keep the phone steady.",
+      "errorLowQuality": "Capture quality too low. Please use better lighting or a higher quality camera.",
+      "errorCameraPermission": "Camera permission is required. Enable it in Settings and try again.",
+      "errorCameraUnavailable": "Camera unavailable on this device. Close other camera apps and try again.",
+      "errorRecordingFailed": "Video recording failed. Please try again with better lighting.",
+      "errorStorage": "Not enough free storage to record video. Free up space and retry.",
+      "errorFileAccess": "Could not read the recorded video. Please retake.",
+      "errorDeviceAttest": "Device security check failed. Update Google Play services and retry.",
+      "errorCooldown": "Too many attempts. Please wait before trying again.",
+      "errorChallenge": "Active challenge not completed. Please retake and follow instructions.",
+      "errorUpload": "Upload failed. Check your connection and retry.",
+      "errorUploadForbidden": "Upload URL was rejected (expired or signature mismatch). Please retake and retry.",
+      "errorUploadTimeout": "Upload timed out. Check connection and retry.",
+      "errorUploadServer": "Upload service is temporarily unavailable. Please retry shortly.",
+      "errorSessionExpired": "Session expired. Please retake.",
+      "errorUnexpected": "Capture failed. Please try again.",
+      "retryUpload": "Retry Upload",
+      "retake": "Retake",
+      "recording": "Recording...",
+      "uploading": "Uploading...",
+      "processing": "Processing...",
+      "start": "Start Capture"
     }
   },
   "sentinelSettings": {
@@ -952,7 +1084,7 @@
       "bondFailed": "Bond failed"
     }
   },
-  "miniapps": {
+   "miniapps": {
     "title": "MiniApps",
     "subtitle": "Explore apps built on Umotu",
     "explore": "Explore apps built on Umotu",
@@ -966,25 +1098,25 @@
     "pohDescription": "Verify your humanity with inLyf to unlock daily rewards.",
     "vision": {
       "title": "Our Vision",
-      "tagline": "$10 a day, everyone everywhere",
-      "description": "Umotu is building infrastructure for a world where everyone can participate in the global economy—regardless of where they live or which bank they use.",
+      "tagline": "Open participation, daily rewards",
+      "description": "Umotu is an open protocol designed to make participation in a global digital economy simpler: open access, fast settlement, and optional stablecoins for everyday transactions.",
       "readMore": "Read Full Vision",
       "pillars": {
-        "title": "Three Core Principles",
+        "title": "Core Principles",
         "ubi": {
-          "title": "$10/Day, Everyone Everywhere",
-          "description": "Universal basic income as earned rewards for securing the network. Anyone with a phone can participate and earn."
+          "title": "Open participation, daily rewards",
+          "description": "Daily rewards are earned through participation in network security. Rewards are variable and not guaranteed."
         },
         "capital": {
-          "title": "Capital Moves Freely",
-          "description": "Near-zero friction for payments and transfers—cross-border or local. Businesses pay ~0.1% to cover platform costs, individuals pay nothing."
+          "title": "Low-friction transfers",
+          "description": "Payments and transfers are designed to be fast and low-friction. Fees and performance vary with network conditions and the apps you use."
         },
         "sovereignty": {
-          "title": "Respect Monetary Sovereignty",
-          "description": "We don't replace fiat currencies—we make them work better. Banks issue stablecoins pegged to their local currency. Monetary policy becomes more effective with broader reach and less friction."
+          "title": "Compatible with local money",
+          "description": "Umotu does not control monetary policy and does not replace fiat currencies. Stablecoins on Umotu are issued by third parties and have their own rules and risks."
         }
       },
-      "notReplacing": "Umotu isn't competing with central banks. We're building better infrastructure for fiat currencies: less friction, global access, and improved market efficiency and resilience."
+      "notReplacing": "Umotu is infrastructure. It does not set monetary policy, does not guarantee stablecoin safety, and does not intervene to produce specific outcomes."
     },
     "building": {
       "title": "We're Building the Ecosystem",
@@ -1092,34 +1224,50 @@
     "business": {
       "title": "Build Your Business on Umotu",
       "subtitle": "Launch apps with built-in payments",
-      "description": "Create apps that tap into the Umotu ecosystem—millions of verified humans with daily income, ready to transact. No payment integration headaches.",
+      "description": "Build apps with on-chain payments and optional stablecoins. Participants may earn daily rewards (variable) and can transact using supported assets.",
       "benefits": {
-        "noFees": "Almost Zero payment processing fees—keep 99.9% of revenue",
-        "verifiedUsers": "All users are verified humans—no bots or fraud",
-        "globalReach": "Reach users in 190+ countries from day one",
-        "instantPayments": "Instant settlements—no 30-day payment delays"
+        "noFees": "Low, transparent fees — exact costs vary with network conditions",
+        "verifiedUsers": "Verified participants — reduced bot and Sybil activity via Proof of Human",
+        "globalReach": "Reach participants globally (subject to availability)",
+        "instantPayments": "Fast on-chain settlement — timing depends on network conditions"
       },
       "exampleTitle": "Use Case",
-      "exampleText": "A ride-sharing app on Umotu keeps 99.9% of fares vs 70% on traditional platforms. Drivers earn more, riders pay less.",
+      "exampleText": "A ride-sharing app can route payments directly between riders and drivers, with transparent fees and near-real-time settlement on-chain.",
       "docsButton": "Read Docs",
       "buildButton": "Start Building"
     },
     "bank": {
       "title": "Are You a Bank?",
       "subtitle": "Issue stablecoins on Umotu",
-      "description": "Licensed financial institutions can issue local currency stablecoins on Umotu and tap into a growing UBI economy with millions of users.",
+      "description": "Financial institutions and payment companies can issue stablecoins on Umotu to serve users who prefer stable unit-of-account assets for everyday transactions.",
       "benefits": {
-        "reserves": "Earn yield on reserves: invest in bonds and low-risk assets",
-        "mintRedeem": "Charge mint/redeem fees: typically 0.1% on fiat ↔ stablecoin conversions",
-        "users": "Access millions of daily active UBI recipients",
-        "global": "Expand your reach beyond borders instantly",
-        "custody": "Your reserves, your custody: full control over backing assets"
+        "reserves": "Reserve management is controlled by the issuer and subject to applicable rules",
+        "mintRedeem": "Issuers may set mint/redeem fees at their discretion",
+        "users": "Access a growing base of active participants",
+        "global": "Reach users across borders (subject to compliance and distribution)",
+        "custody": "Issuer-controlled reserves and policies"
       },
       "revenueModel": "How Issuers Earn",
-      "revenueNote": "Like Tether and other major issuers, revenue comes from reserve yield and conversion fees. With millions of users receiving daily UBI, mint/redeem volume can be substantial.",
-      "futureNote": "Issuers may also receive a share of transaction fees in the future as the protocol evolves.",
+      "revenueNote": "Issuer economics vary. Some issuers generate revenue from reserve yield and/or mint/redeem fees, depending on their model and obligations.",
+      "futureNote": "Nothing in the protocol guarantees issuer revenue. Future changes, if any, must follow the protocol's governance process.",
       "learnMore": "Learn More",
       "applyButton": "Apply Now"
+    },
+    "stablesDocs": {
+      "title": "Stablecoin Standards",
+      "subtitle": "Defaults for Umotu Foundation apps (not protocol permission)",
+      "description": "Umotu Foundation publishes standards used for default stablecoin support in Foundation-maintained apps and services. They do not restrict protocol-level transfers or third-party wallets. Standards do not eliminate stablecoin risk.",
+      "uss": {
+        "title": "Umotu Stablecoin Standard (USS)",
+        "description": "Minimum disclosure, reserve, and redemption criteria for stablecoins shown as default payout options and supported in stable-gas services (via paymasters) in Umotu Foundation apps.",
+        "button": "Read USS"
+      },
+      "rdp": {
+        "title": "Risk Disclosure Policy (RDP)",
+        "description": "Rule-based risk indicators (e.g., FX volatility, peg deviations, redemption restrictions, and technical risk) shown in Umotu Foundation apps.",
+        "button": "Read RDP"
+      },
+      "learnMore": "View stablecoin standards"
     }
   },
   "news": {
@@ -1173,38 +1321,38 @@
       "message": "Failed to submit vote. Please try again."
     }
   },
-  "learn": {
+ "learn": {
     "title": "Learn",
-    "subtitle": "Everything you need to know about Umotu",
+    "subtitle": "Open Participation, Daily Rewards",
     "featured": "FEATURED",
     "whatIs": {
       "title": "What is Umotu?",
-      "subtitle": "$10 a day, everyone everywhere",
-      "intro": "Umotu aims to let anyone earn about $10/day using just a smartphone. No expensive hardware, no special skills, no borders.",
+      "subtitle": "Open Participation, Daily Rewards",
+      "intro": "Umotu is an open protocol where anyone can participate using a smartphone and earn daily rewards for helping secure the network. Rewards are variable and not guaranteed. For orientation only, the protocol is designed around a reference target of about $10/day per active participant at launch, but actual rewards can be much lower (including pennies per day) or higher depending on participation and market conditions.",
       "howDifferent": "How is it different?",
-      "noMiddleman": "No middleman: You interact directly with the network—no bank account required",
-      "globalAccess": "Global access: Works anywhere with internet",
-      "youOwnIt": "You own it: Your wallet, your keys, your control",
+      "noMiddleman": "No middleman: you interact with the network directly—no account approval required",
+      "globalAccess": "Global access: works wherever you have internet",
+      "youOwnIt": "Self-custody: your wallet, your keys, your control",
       "vision": "The Vision",
-      "visionText": "Billions of people can help keep a public ledger honest and earn for it. On Umotu, phones do lightweight checks that make the network trustworthy.",
+      "visionText": "Millions of phones can help keep a public ledger honest. Phones do lightweight checks (like data availability sampling) that make the network more trustworthy.",
       "nameOrigin": "The Name",
       "nameOriginText": "Umotu takes inspiration from Paʻumotu, a Polynesian language. We use the name respectfully as a reminder to build for everyday people."
     },
     "earn": {
       "title": "How You Earn",
-      "subtitle": "Your phone works; you get paid",
-      "intro": "Your phone performs tiny tasks that help everyone—then you get rewarded.",
+      "subtitle": "Your phone participates; you earn rewards",
+      "intro": "Your phone performs small security checks that help the network—then you earn rewards.",
       "steps": "Three Simple Steps",
       "step1": "1) Prove you're human: a quick liveness check (and occasional refresh) ensures each person has one account.",
       "step2": "2) Help the network: your phone runs Data Availability (DA) sampling and other lightweight checks in the background.",
-      "step3": "3) Earn daily rewards: you’re paid for this work, with a target around $10/day depending on network policy.",
+      "step3": "3) Earn daily rewards: rewards are distributed automatically based on successful participation. Amounts vary.",
       "localCurrency": "Paid in Your Currency",
-      "localCurrencyText": "Choose a payout token: local-currency stablecoins (where available) or UMT. Amounts target ~$10 USD value and may adjust with participation and market conditions."
+      "localCurrencyText": "Choose a payout asset: UMT or stablecoins (where available). Stablecoins are issued by third parties and have their own risks."
     },
     "whereMoney": {
-      "title": "Where Does $10 Come From?",
+      "title": "Where Do Rewards Come From?",
       "subtitle": "You earn because you do work",
-      "intro": "It’s the #1 question. The short answer: because you provide a service the network needs.",
+      "intro": "It’s a common question. The short answer: rewards exist because participants provide security, and the protocol issues tokens by rule.",
       "realWork": "Your Phone Does Real Work",
       "realWork1": "Data Availability Sampling: your phone checks that block data is available and correct",
       "realWork2": "Human Participation: you prove one-person-one-account to stop bots and spam",
@@ -1215,7 +1363,7 @@
       "distribution": "How Rewards Are Distributed",
       "newTokens": "New UMT tokens are created and shared with verified phone participants (not with validators)",
       "fees": "A portion of fees and builder bids is shared with phone sentinels for finalizing blocks",
-      "treasury": "A small portion funds ongoing maintenance and stability programs",
+      "treasury": "Some fees may support ecosystem maintenance (e.g., audits and reference software) through transparent governance, where enabled.",
       "whyDifferent": "Why This Is Different",
       "btcProblem": "Bitcoin rewards specialized miners (capital-intensive)",
       "ethProblem": "Ethereum rewards large stakers (capital-intensive)",
@@ -1252,19 +1400,23 @@
       "example1": "1 ZAR1 ≈ 1 South African Rand",
       "example2": "1 USD1 ≈ 1 US Dollar",
       "example3": "1 NGN1 ≈ 1 Nigerian Naira",
-      "backed": "Issued by Partners",
-      "backedText": "Stablecoins on Umotu are issued by regulated partners and designed to hold a 1:1 value with reserves. Issuers publish proof-of-reserves and redemption terms.",
+      "backed": "Issued by third parties",
+      "backedText": "Stablecoins are issued by independent providers and are designed to track a currency (like USD or CAD). Each stablecoin has its own reserves, redemption terms, upgrade controls, and risk policies (including possible freezing). Read the issuer’s disclosures.",
       "convert": "Converting to Cash",
-      "convertText": "Convert through partner banks/exchanges, or spend directly where accepted."
+      "convertText": "You can swap stablecoins on-chain, or convert through third-party services where available.",
+      "gas": "Using stablecoins for fees",
+      "gasText": "Some wallets can let you pay network fees using stablecoins through a service that swaps to the native token. Validators still receive the native token; stable-gas is a convenience layer.",
+      "preferredList": "Wallet defaults",
+      "preferredListText": "The Umotu wallet may show a conservative default list of stablecoins for payouts and fee services based on the Umotu Stablecoin Standard (USS). Other wallets can support other stablecoins."
     },
     "economics": {
       "title": "UMT Economics",
       "subtitle": "Who gets what and why",
-      "intro": "UMT has a fixed supply of 100 billion tokens. Most of it is paid to everyday phone users who help keep the network honest.",
+      "intro": "UMT has a fixed supply of 100 billion tokens. Most of it is reserved for phone participants over time, distributed by a rule-based emission controller.",
       "supply": "Supply & Distribution",
       "supplyBullets": [
-        "The vast majority of the token supply is reserved for phone participants over time and is released through the Emission Controller. The Emission Controller caps daily issuance at no more than 0.01% of the remaining supply, ensuring long-term sustainability. Under this schedule, approximately 68% of the total supply remains after 10 years, and about 15% remains after 50 years.",
-         "A small portion of the supply is created at launch for specific purposes, including an early user airdrop, a community sale, the foundation allocation, and an emergency reserve etc."
+        "The vast majority of the supply is reserved for phone participants and released over time through an Emission Controller. The controller caps daily issuance at no more than 0.01% of the remaining supply to limit dilution.",
+        "At the maximum cap (0.01% of remaining supply per day), about 69% of the supply remains after 10 years and about 16% remains after 50 years. Actual emission can be lower depending on protocol rules."
       ],
       "premine": "Launch Allocation (tentative, subject to change at mainnet launch)",
       "premineTable": [
@@ -1286,16 +1438,15 @@
         }
       ],
       "emissions": "Daily Rewards for Phones",
-      "emissionsText": "Each day the network can emit at most 0.01% of the remaining emissions pool. We budget that amount so verified phones target about $10/day, adjusting with how many people participate and market conditions.",
+      "emissionsText": "Daily emissions are capped. Your rewards depend on participation, successful phone checks, and market conditions. The protocol does not promise a fixed amount.",
       "fees": "Fees & Sentinels",
       "feesText": "Sentinel helpers (optional, advanced) earn a share of transaction fees and builder bids. This is separate from daily emissions.",
       "transparency": "Transparency",
       "transparencyText": "Vesting schedules and wallets are public. Daily emission caps and realized payouts are posted in the app.",
       "disclaimerTitle": "Plain-Language Reminder",
-      "disclaimerText": "This is not investment advice. Rewards depend on network policy and participation. The app does not guarantee a fixed income."
+      "disclaimerText": "This is not financial advice. Rewards are variable and not guaranteed."
     },
     "contribute": {
-      
       "title": "How to Contribute",
       "subtitle": "Help build Umotu",
       "intro": "Umotu is open source and community-driven. Everyone can help—whether you code, translate, or simply share feedback.",
@@ -1320,7 +1471,7 @@
       },
       "governance": {
         "title": "Join Governance",
-        "text": "Read proposals, discuss openly, and vote in the app. Your voice helps guide network parameters and grant allocations.",
+        "text": "Read proposals, discuss openly, and vote in the app. Votes can guide wallet defaults and ecosystem grants. Some protocol rules are fixed and not up for vote.",
         "cta": "Open Governance",
         "url": "umotu://vote"
       },
@@ -1335,37 +1486,38 @@
     "decentralization": {
       "title": "Why Decentralization",
       "subtitle": "No single point of control",
-      "intro": "Decentralization means no single company or government can shut the network down or confiscate your funds.",
+      "intro": "Decentralization means the network is run by many independent participants. Your wallet is self-custodial—only your keys can move your funds.",
       "benefits": "Benefits for You",
       "benefit1": "Always on: 24/7 availability",
-      "benefit2": "Lower fees: small network fees instead of 3–5% card fees",
+      "benefit2": "Often lower fees: small network fees instead of typical card fees",
       "benefit3": "No borders: send value globally",
-      "benefit4": "Censorship-resistant: your keys, your money",
+      "benefit4": "More censorship-resistant: no single company controls your wallet",
       "benefit5": "Transparent: anyone can verify how the system works",
       "howWorks": "How It Works",
-      "howWorksText": "Validators propose blocks every ~2 seconds. Phones (like yours) verify and finalize with lightweight checks. Many small contributions add up to strong security."
+      "howWorksText": "Validators propose blocks every ~2 seconds. Phones (like yours) verify data availability and help finalize blocks with lightweight checks. Many small contributions add up to strong security."
     },
     "noCompany": {
-      "title": "No Company, No Customers",
-      "subtitle": "Understand the model",
-      "intro": "There is no 'Umotu, Inc.' controlling the protocol. Umotu is an open set of rules anyone can use.",
+      "title": "Open Protocol, Self-Custody",
+      "subtitle": "Understand what Umotu is (and isn’t)",
+      "intro": "There is no single company controlling the protocol. Umotu is an open set of rules anyone can use, and many independent teams can build wallets and services.",
       "notCompany": "What Umotu is NOT",
-      "notCompany1": "NOT a company with customer accounts",
-      "notCompany2": "NOT a bank or money transmitter",
+      "notCompany1": "NOT a custodial bank holding customer funds",
+      "notCompany2": "NOT able to reset your wallet or reverse transactions",
       "notCompany3": "NOT controlled by any single entity",
-      "notCompany4": "NOT able to reverse transactions",
+      "notCompany4": "NOT a guaranteed income program",
       "whatIs": "What Umotu IS",
-      "whatIs1": "A protocol: like email or the web—open, interoperable rules",
-      "whatIs2": "Phone-first: runs with help from everyday smartphones",
+      "whatIs1": "A protocol: open, interoperable rules (like email or the web)",
+      "whatIs2": "Phone-first participation: smartphones can help secure the network",
       "whatIs3": "Community-driven: you are a participant, not a customer",
+      "whatIs4": "Permissionless: anyone can build on or use the protocol",
       "foundation": "The Umotu Foundation",
-      "foundationIntro": "A nonprofit that supports the ecosystem (reference apps, docs, community programs) but does not control the protocol.",
+      "foundationIntro": "A nonprofit that supports the ecosystem (reference apps, education, and coordination) but does not control the protocol.",
       "foundationTask1": "Maintains the mobile app & explorer as reference implementations",
       "foundationTask2": "Operates some public infrastructure (others can run theirs)",
-      "foundationTask3": "Coordinates community governance (news, votes)",
-      "foundationTask4": "Reviews and lists supported stablecoins",
+      "foundationTask3": "Coordinates community votes and discussions in the app (where applicable)",
+      "foundationTask4": "Publishes the Umotu Stable Accord and conservative default lists for the Umotu wallet (others can support other stables)",
       "foundationTask5": "Publishes education & safety guides",
-      "foundationNote": "The Foundation cannot access your wallet and cannot reverse transactions."
+      "foundationNote": "The Foundation cannot access your wallet and cannot reverse transactions. Wallet defaults do not restrict what is possible on the protocol."
     },
     "scamPrevention": {
       "title": "Avoid Scams",
@@ -1389,22 +1541,22 @@
       "action4": "Block and report"
     },
     "airdrop": {
-      "title": "Testnet Airdrop",
-      "subtitle": "Early users get recognized",
-      "intro": "You're early! Umotu is in testnet. Active testnet participants may receive an allocation when mainnet launches.",
+      "title": "Testnet Recognition",
+      "subtitle": "Early testnet participation may be recognized",
+      "intro": "Umotu is in testnet. Active testnet participants may receive a recognition allocation when mainnet launches. This is not guaranteed and may be zero.",
       "howToQualify": "How to Qualify",
       "step1": "Create a wallet in the app",
       "step2": "Complete human verification (Proof of Human)",
       "step3": "Use the app regularly during testnet",
       "whenAirdrop": "When is the Airdrop?",
       "whyTestnet": "Testnet is essential: users learn wallet security, and the system is tested for security, robustness, and efficiency before mainnet.",
-      "timeline": "Mainnet is expected in Q1 or Q2 of 2026. The airdrop will happen around the same time mainnet launches.",
+      "timeline": "Mainnet timing and any recognition details will be announced in the app.",
       "howMuch": "How Much Will I Get?",
-      "totalPool": "Total airdrop pool: 1,000,000,000 UMT tokens. Your share depends on total participants and UMT price at launch.",
-      "scenario2": "1M users: ~1,000 UMT per user, expected price ~$1, airdrop value ~$1,000",
-      "scenario3": "10M users: ~100 UMT per user, expected price ~$20, airdrop value ~$2,000",
-      "scenario4": "100M users: ~10 UMT per user, expected price ~$300, airdrop value ~$3,000",
-      "disclaimer": "These are projections only, not guarantees. Actual values depend on market conditions and program rules.",
+      "totalPool": "Example only: if a 1,000,000,000 UMT recognition pool is created, your share depends on eligible participants and program rules. The earlier you participate, the higher your share.",
+      "scenario2": "Example only: 1M eligible users → ~1,000 UMT average each (before weighting)",
+      "scenario3": "Example only: 10M eligible users → ~100 UMT average each (before weighting)",
+      "scenario4": "Example only: 100M eligible users → ~10 UMT average each (before weighting)",
+      "disclaimer": "Examples only—not guarantees. Any recognition allocation depends on program rules and market conditions, and may be zero.",
       "whatYouGet": "What You Get",
       "reward": "At mainnet, your testnet wallet may receive real tokens based on participation and program rules. Earlier and more active users are prioritized.",
       "note": "Note: Testnet tokens have no value. Any mainnet allocation is determined by program policy at launch. All news about airdrop will be published only in this app."
@@ -1422,7 +1574,21 @@
       "tips": "Pro Tips",
       "tip1": "Allow background access so checks can run",
       "tip2": "Check back daily to see rewards",
-      "tip3": "Invite friends—more users make the network stronger"
+      "tip3": "Invite friends—more participants can make the network stronger"
+    },
+    "governance": {
+      "title": "Governance & Votes",
+      "subtitle": "How in-app voting works",
+      "intro": "Umotu supports in-app polls and votes so participants can help guide certain ecosystem decisions.",
+      "whatVotesDo": "What votes can do",
+      "whatVotesDo1": "Recommend wallet defaults (for example, which stablecoins appear as preferred payout or stable-gas options)",
+      "whatVotesDo2": "Signal community preference on proposals and priorities",
+      "whatVotesDo3": "Approve certain grants or budgets where enabled",
+      "whatVotesCannotDo": "What votes cannot do",
+      "whatVotesCannotDo1": "Access your wallet, move your funds, or reset your recovery phrase",
+      "whatVotesCannotDo2": "Reverse transactions or freeze your self-custody wallet",
+      "whatVotesCannotDo3": "Change fixed monetary policy outside the protocol rules",
+      "note": "Some polls may be mock or advisory depending on the network stage. Always read the proposal details and activation conditions."
     }
   },
   "common": {
@@ -1471,6 +1637,7 @@
   "poh_title": "Verify Human",
   "continue": "Continue",
   "or": "OR",
+  "version": "Version",
   "seedReveal": {
     "title": "Recovery Phrase",
     "intro": "Your recovery phrase is the only way to restore your wallet if you lose access to this device. Write it down and store it securely offline.",

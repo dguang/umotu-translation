@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "天天十美金，人人皆有份"
+    "tagline": "人人可参与，天天有奖励"
   },
   "navigation": {
     "home": "首页",
@@ -38,6 +38,9 @@
       "changeChoice": "更改选择",
       "requiresLanguage": "请先选择语言",
       "requiresWallet": "请先创建钱包"
+    },
+    "daSampling": {
+      "staleHint": "请立即运行采样以确保您有资格领取每日奖励。"
     }
   },
   "earnings": {
@@ -118,27 +121,42 @@
     "manual": {
       "title": "手动领取",
       "description": "如果您需要更快获得资金，请立即领取下一个可用奖励。手动领取使用您钱包的gas。如果您愿意等待，自动领取更便宜。如果您的钱包没有资金，请在手动领取前启用自动领取或充值原生gas。",
-      "dayLabel": "奖励天数",
       "claimButton": "立即领取",
       "claiming": "正在领取…",
+      "cancelling": "正在取消领取…",
+      "cancelled": "领取已取消。",
+      "cancelButton": "取消领取",
       "success": "领取已提交",
       "successWithId": "领取已提交（编号：{{id}}）",
       "error": "领取失败",
-      "noProof": "奖励证明尚未发布。请在今日快照上线后重试。",
+      "noProof": "未找到该钱包/日期的奖励证明（或该日不符合资格）。请在今日快照上线后重试。",
       "unauthorized": "中继器授权失败。请重试或联系支持。",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "预估 Gas：{{gas}}",
       "gasEstimateFailed": "无法获取 Gas 预估",
       "availableDays": "可领取奖励天数：{{days}}",
-      "gasNotice": "Manual claims use your wallet's gas. Auto-claim stays cheaper if you wait.",
+      "gasNotice": "手动领取使用您钱包的 Gas。如果您愿意等待，自动领取更便宜。",
       "availableRange": "覆盖范围：{{start}} 至 {{end}}",
-      "gasBreakdown": "Est. gas: native ~{{native}}, stable ~{{stable}}.",
-      "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
-      "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
+      "gasBreakdown": "预估 Gas：原生 ~{{native}}，稳定币 ~{{stable}}。",
+      "preferAuto": "使用自动领取（如 {{cadence}}）来分摊手续费。",
+      "newWalletHint": "如果钱包尚未充值，请在手动领取前开启自动领取或充值原生 Gas。",
       "remainingAfter": "+{{days}} 天在此批次之后",
+      "calendarVsEligible": "{{calendar}} 个日历日中 {{eligible}} 个符合资格",
+      "showMissingDays": "显示缺失天数 ({{count}})",
+      "hideMissingDays": "隐藏缺失天数",
+      "noMissingDaysLoaded": "策略尚未返回缺失天数详情。",
+      "moreMissingDays": "还有 {{count}} 天",
+      "missingDaysHint": "缺失日意味着该 UTC 日期没有 DA 采样/证明。",
       "batchSuccess": "{{count}} 天已成功领取",
+      "fallbackPaidInNative": "以 UMT 支付：稳定币暂时不可用",
       "claimingProgress": "正在领取 {{claimed}}/{{total}}...",
-      "claimAllButton": "领取全部 {{count}} 天"
+      "claimingDay": "正在处理第 {{day}} 天",
+      "claimAllButton": "领取全部 {{count}} 天",
+      "stableNotConfigured": "稳定币支付不可用。请选择 UMT 或联系支持。",
+      "insufficientGas": "Gas 余额不足。请为钱包充值原生代币。",
+      "userRejected": "交易已取消。",
+      "networkError": "网络错误。请检查网络连接后重试。",
+      "alreadyClaimed": "这些奖励已经被领取过了。"
     },
     "timezone": {
       "title": "选择时区",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "通讯录",
       "addContact": "添加联系人",
-      "nameLabel": "名称或标签",
+      "nameLabel": "名称",
       "walletAddress": "钱包地址 (0x...)",
       "savedContacts": "已保存联系人",
       "noContacts": "暂无保存的联系人。",
       "addForQuickSending": "添加联系人以便快速转账。",
       "enterValidAddress": "请输入有效的地址",
       "addLabel": "请添加标签",
-      "save": "保存"
+      "labelAlreadyExists": "该标签名称已存在",
+      "tagOptional": "标签（可选）",
+      "save": "保存",
+      "editContact": "编辑联系人",
+      "tags": "标签",
+      "noTagsYet": "尚未添加标签",
+      "newTagPlaceholder": "输入标签名称...",
+      "addTag": "添加",
+      "existingTags": "或添加现有标签：",
+      "deleteContact": "删除联系人",
+      "confirmDeleteTitle": "删除联系人？",
+      "confirmDeleteMessage": "这将从您的地址簿中移除 {{label}}。"
     },
     "settings": {
       "title": "钱包设置",
@@ -234,6 +263,7 @@
         "description": "请勿向任何人透露您的助记词或私钥。请安全地离线保存。",
         "recoveryPhrase": "助记词",
         "recoveryPhraseNotAvailable": "助记词不可用（通过私钥导入）",
+        "walletNotLoaded": "未加载钱包。请先导入或创建钱包。",
         "privateKey": "私钥",
         "privateKeyWarning": "私钥（请妥善保管！）",
         "showPhrase": "显示助记词",
@@ -242,7 +272,10 @@
         "copy": "复制",
         "copied": "已复制！",
         "hide": "隐藏",
-        "clipboardWarning": "剪贴板可被其他应用读取。将在30秒后自动清除。"
+        "clipboardWarning": "剪贴板可被其他应用读取。将在30秒后自动清除。",
+        "verifyForKey": "验证身份以显示私钥",
+        "verifyForSeed": "验证身份以显示助记词",
+        "verifyDescription": "输入密码或 PIN 码以查看钱包敏感信息。"
       },
       "import": {
         "title": "导入钱包",
@@ -253,7 +286,8 @@
         "keyPlaceholder": "输入 0x… 私钥",
         "importButton": "导入钱包",
         "importing": "导入中…",
-        "success": "钱包导入成功！"
+        "success": "钱包导入成功！",
+        "saveFailed": "钱包导入成功，但未能保存到本设备。"
       },
       "dangerZone": {
         "title": "危险区域",
@@ -265,7 +299,9 @@
         "cancel": "取消",
         "confirm": "删除钱包",
         "walletForgotten": "钱包已删除",
-        "unableToForget": "无法删除钱包"
+        "unableToForget": "无法删除钱包",
+        "resetWallet": "重置钱包",
+        "resetDescription": "彻底清除所有钱包数据并重新开始。"
       },
       "authPrompt": "验证身份以显示私钥"
     }
@@ -477,12 +513,16 @@
     "selectStable": "选择稳定币",
     "max": "全部",
     "next": "下一步",
+    "continue": "继续",
     "confirm": "确认转账",
     "confirmSend": "确认转账",
     "cancel": "取消",
     "sending": "发送中…",
     "failed": "交易失败",
+    "viewInExplorer": "在浏览器中查看",
     "done": "完成",
+    "send": "发送",
+    "balance": "余额",
     "available": "可用",
     "to": "收款人",
     "network": "网络",
@@ -495,13 +535,22 @@
       "normal": "正常",
       "fast": "快速"
     },
+    "gasNotice": {
+      "stablecoin": "将使用稳定币支付 Gas 费用。",
+      "reserved": "已预留 {{amount}} {{symbol}} 用于 Gas；您最多可发送 {{max}}。"
+    },
     "errors": {
       "invalidAddress": "收款地址无效",
       "invalidAmount": "请输入有效金额",
       "insufficientBalance": "余额不足",
       "insufficientGas": "Gas 余额不足",
+      "insufficientGasWithHint": "Gas 余额不足。请充值 UMT 或支持的稳定币。",
       "notEnoughForGas": "余额不足以支付 Gas 费用",
-      "noStableGas": "UMT 不足支付 Gas，且没有可用的稳定币。"
+      "noStableGas": "UMT 不足支付 Gas，且没有可用的稳定币。",
+      "permitFailed": "Gas 代币的授权许可失败",
+      "relayNotConfigured": "稳定币 Gas 中继未配置",
+      "transactionReverted": "交易在链上被回滚。",
+      "approvalNeeded": "Gas 代币需要授权，但没有可用的 UMT 来完成授权。请充值少量 UMT 或使用支持 permit 的代币。"
     },
     "addressBook": {
       "title": "通讯录",
@@ -512,6 +561,7 @@
       "deleteContact": "删除联系人",
       "addressNotSaved": "地址未保存",
       "addLabel": "添加标签",
+      "labelAlreadyExists": "该标签名称已存在",
       "enterValidAddress": "请先输入有效地址",
       "saved": "已保存",
       "save": "保存"
@@ -530,6 +580,7 @@
       "addFromTagOrBook": "从标签或通讯录添加",
       "invalidAddress": "无效地址：{{address}}",
       "invalidAmount": "{{recipient}} 的金额无效",
+      "tooManyRecipients": "批量发送最多支持 {{max}} 位收款人。",
       "totalExceedsBalance": "总金额超出余额",
       "sendingTo": "发送给 {{count}} 个收款人",
       "sendingTo_plural": "发送给 {{count}} 个收款人",
@@ -551,6 +602,18 @@
       "failedStatus": "失败",
       "details": "批量转账详情",
       "total": "总计",
+      "hongbao": {
+        "short": "红包",
+        "total": "红包总额",
+        "helper": "设定固定总额，我们将在下一步随机分配每位收款人的金额。",
+        "random": "随机",
+        "autoSplit": "自动分配",
+        "generated": "随机分配已生成",
+        "needTwoRecipients": "红包至少需要2位收款人。",
+        "amountTooSmall": "总额对于{{count}}位收款人来说太少了。最低需要{{min}} {{symbol}}。",
+        "generateFailed": "随机金额生成失败。",
+        "disabled": "红包模式目前已禁用。"
+      },
       "tagPicker": {
         "title": "选择标签",
         "noTags": "暂无可用标签",
@@ -629,35 +692,79 @@
       "type": "类型",
       "to": "至",
       "from": "来自",
+      "address": "地址",
       "token": "代币",
       "block": "区块",
       "gasCost": "Gas 费用",
+      "balanceAfter": "交易后余额",
+      "balanceSource": "余额来源",
+      "balanceSourceVerified": "链上已验证",
+      "balanceSourceVerifying": "估算（链上验证中...）",
+      "balanceSourceEstimatedRecent": "从最近余额快照估算",
+      "balanceSourceEstimatedStale": "从过时余额快照估算",
+      "balanceSourceEstimatedDelayed": "估算（链上验证延迟）",
+      "balanceSnapshotAge": "快照时间",
+      "balanceReconciledDiff": "对账差异",
+      "balanceVerifyNote": "验证说明",
+      "balanceVerifyUnexpected": "验证延迟。显示估算余额。",
+      "unavailable": "不可用",
       "hash": "交易哈希",
       "source": "来源",
       "balanceDetected": "通过余额变化检测到",
       "inferredNote": "此交易通过余额变化检测到，暂无完整的链上详情。"
     },
+    "batch": {
+      "title": "批量转账详情",
+      "badge": "批量",
+      "send": "批量发送",
+      "recipients": "收款人",
+      "recipientCount": "{{count}} 位收款人",
+      "recipientCount_plural": "{{count}} 位收款人",
+      "successful": "成功",
+      "successOf": "{{success}} / {{total}}",
+      "sentStatus": "已发送",
+      "failedStatus": "失败",
+      "successFail": "{{success}} 成功，{{fail}} 失败",
+      "toRecipients": "发送给 {{count}} 位收款人",
+      "toRecipients_plural": "发送给 {{count}} 位收款人"
+    },
     "time": {
       "justNow": "刚刚",
       "minsAgo": "{{count}}分钟前",
       "hoursAgo": "{{count}}小时前",
-      "daysAgo": "{{count}}天前"
+      "daysAgo": "{{count}}天前",
+      "suffixAgo": "前"
     }
   },
   "settings": {
     "title": "设置",
     "account": {
-      "title": "账户与外观"
+      "title": "账户与外观",
+      "walletAddress": "钱包地址",
+      "copy": "复制",
+      "copied": "已复制"
     },
     "theme": {
       "title": "主题",
       "light": "浅色",
-      "dark": "深色"
+      "dark": "深色",
+      "system": "跟随系统"
     },
     "language": {
       "title": "语言",
       "select": "选择语言",
       "current": "当前"
+    },
+    "display": {
+      "title": "显示",
+      "description": "自定义主屏幕外观。",
+      "showSentinelCard": "显示 Sentinel 收益卡片",
+      "showSentinelCardDesc": "在主屏幕显示收益信息",
+      "showDailyRewardsCard": "显示每日奖励卡片",
+      "on": "开启",
+      "off": "关闭",
+      "sentinelSettings": "Sentinel 设置",
+      "sentinelSettingsDesc": "管理质押、奖励和自动领取"
     },
     "sentinelDisplay": {
       "title": "显示 Sentinel",
@@ -679,6 +786,65 @@
       "upToDate": "验证已是最新",
       "refreshAvailableIn": "{{days}} 天后可刷新"
     },
+    "network": {
+      "title": "网络",
+      "description": "配置区块链网络连接。",
+      "testnet": "测试网",
+      "mainnet": "主网（即将上线）",
+      "rpcEndpoint": "RPC 节点",
+      "pingRpc": "测试 RPC",
+      "testing": "测试中…",
+      "rpcOk": "RPC 正常",
+      "rpcError": "RPC 错误",
+      "save": "保存",
+      "saved": "已保存",
+      "connectionStatus": "连接状态",
+      "connected": "已连接",
+      "disconnected": "未连接"
+    },
+    "cache": {
+      "title": "缓存管理",
+      "description": "清除缓存数据以刷新代币和合约信息。",
+      "clearCache": "清除缓存并重建应用",
+      "cacheCleared": "缓存已清除！请重新构建应用以加载最新合约地址。"
+    },
+    "hongbaoDebug": {
+      "title": "红包配置（调试）",
+      "description": "清除本地红包季节缓存，并在下次启动应用时强制刷新。",
+      "clearConfigCache": "清除红包缓存",
+      "cacheCleared": "红包配置缓存已清除",
+      "cacheClearFailed": "红包配置缓存清除失败"
+    },
+    "integrityDebug": {
+      "title": "应用证明（调试）",
+      "description": "获取设备证明令牌以确认 App Attest 已启用。",
+      "fetch": "获取证明",
+      "fetching": "获取中…",
+      "copy": "复制数据",
+      "copyNonce": "复制 Nonce",
+      "toastFetchSuccess": "应用证明已获取",
+      "toastFetchError": "应用证明失败",
+      "toastCopy": "证明数据已复制",
+      "toastCopyNonce": "Nonce 已复制",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "数据为空",
+      "summaryStub": "stub 令牌（原生模块缺失？）",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}}（不支持）",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "错误：{{message}}",
+      "verify": "服务端验证",
+      "verifying": "验证中…",
+      "verifyMissing": "错误：缺少数据或 nonce",
+      "verifyOk": "服务端验证：通过",
+      "verifyFail": "服务端验证失败：{{error}}",
+      "toastVerifyOk": "服务端验证通过",
+      "toastVerifyFail": "服务端验证失败"
+    },
     "chainGuardian": {
       "title": "链守护者",
       "description": "保持手机在线，帮助保护区块链安全。每天至少完成一项采样任务，以保持获得奖励的资格。",
@@ -698,44 +864,73 @@
       "staleWarning": "超过12小时未采样",
       "androidBatteryWarning": "电池优化可能阻止后台采样",
       "androidBatteryHint": "前往 设置 → 应用 → Umotu → 电池 → 选择「不限制」以允许后台采样。",
+      "iosBackgroundHint": "iOS 可能会暂停后台采样。请偶尔打开应用或点击「立即运行」以保持活跃。",
       "openSettings": "点击打开设置",
       "tip": "开启后台运行可赚取更多奖励",
       "runNow": "立即运行",
       "running": "正在运行…",
+      "runNowNoData": "无数据（受电量/WiFi 限制或无可用任务）。",
       "lastError": "上次错误"
     },
     "permissions": {
       "title": "权限管理",
       "description": "管理小程序权限和已连接的应用。",
       "openMiniApps": "小程序",
-      "manageConnections": "管理连接"
+      "manageConnections": "管理连接",
+      "noConnections": "暂无已连接的应用",
+      "revokeAccess": "撤销访问权限",
+      "lastUsed": "上次使用"
     },
-    "network": {
-      "title": "网络",
-      "testnet": "测试网",
-      "mainnet": "主网（即将上线）",
-      "rpcEndpoint": "RPC 节点",
-      "pingRpc": "测试 RPC",
-      "testing": "测试中…",
-      "rpcOk": "RPC 正常",
-      "rpcError": "RPC 错误",
-      "save": "保存",
-      "saved": "已保存",
-      "connectionStatus": "连接状态",
-      "connected": "已连接",
-      "disconnected": "未连接"
-    },
-    "cache": {
-      "title": "缓存管理",
-      "description": "清除缓存数据以刷新代币和合约信息。",
-      "clearCache": "清除缓存并重建应用",
-      "cacheCleared": "缓存已清除！请重新构建应用以加载最新合约地址。"
+    "transfer": {
+      "title": "设备数据传输",
+      "description": "通过扫描传输二维码，将应用设置和联系人移至新手机。",
+      "warning": "仅传输应用数据。钱包恢复短语/私钥不包含在内。请在新手机上单独导入钱包。",
+      "preparing": "准备中...",
+      "showQr": "显示传输二维码",
+      "scanQr": "扫描传输二维码",
+      "exportTitle": "传输二维码",
+      "exportHint": "在新手机上打开设置 -> 设备数据传输 -> 扫描传输二维码，然后扫描此码。",
+      "exportHintParts": "在新手机上按顺序扫描每一页（1 到 {{total}}），然后输入 6 位数字代码。",
+      "exportHintRelay": "在新手机上扫描此二维码即可下载传输数据包，然后输入 6 位确认码。",
+      "exportReady": "传输二维码已就绪（{{count}} 项）",
+      "exportReadyParts": "传输二维码已就绪（{{count}} 项，{{parts}} 个二维码页）。按顺序扫描各页。",
+      "relayReady": "大数据传输已优化：扫描一个二维码即可下载 {{count}} 项，然后输入 6 位确认码。",
+      "relayFallback": "云端传输不可用（{{message}}）。已回退为多页二维码模式。",
+      "relayFetching": "正在下载传输数据…",
+      "relayFetched": "传输数据下载完成。正在处理…",
+      "exportFailed": "准备传输失败：{{message}}",
+      "prevPage": "上一页",
+      "nextPage": "下一页",
+      "confirmCodeLabel": "6 位确认码",
+      "copyCode": "复制传输码",
+      "importTitle": "扫描传输二维码",
+      "importHint": "将相机对准旧手机上显示的传输二维码。",
+      "importing": "导入中...",
+      "importNow": "导入数据",
+      "imported": "已导入 {{count}} 项。钱包恢复短语/私钥未传输。",
+      "importFailed": "传输导入失败：{{message}}",
+      "confirmPrompt": "二维码已扫描。输入旧手机上显示的 6 位确认码。",
+      "confirmCodeRequired": "输入旧手机上的 6 位确认码。",
+      "confirmCodeMismatch": "确认码不匹配。请重试。",
+      "rescan": "重新扫描",
+      "scanProgress": "已扫描二维码 {{current}}/{{total}}",
+      "scanContinue": "继续按顺序扫描剩余页面，直到完成。",
+      "restartScan": "重新开始扫描",
+      "chunkMismatch": "传输二维码页不匹配。请从第 1 页重新开始扫描。",
+      "cameraNeeded": "需要相机访问权限",
+      "cameraDescription": "启用相机权限以扫描传输二维码。",
+      "allowCamera": "允许相机",
+      "openSettings": "打开设置",
+      "pasteCode": "粘贴传输码",
+      "pasteTitle": "粘贴传输码",
+      "pasteHint": "如果相机扫描困难，请粘贴从旧手机复制的传输码。",
+      "pastePlaceholder": "UMOTU_TRANSFER:..."
     }
   },
   "onboarding": {
     "welcome": {
       "title": "欢迎来到 Umotu",
-      "subtitle": "天天十美金，人人皆有份",
+      "subtitle": "人人可参与，天天有奖励",
       "getStarted": "开始使用"
     },
     "language": {
@@ -775,6 +970,40 @@
       "validFor_plural": "有效期约 {{days}} 天",
       "expired": "验证已过期或未找到。",
       "expiredDetail": "重新运行真人检测以刷新您的凭证。"
+    },
+    "capture": {
+      "title": "面部采集",
+      "hint": "将面部居中并保持不动。",
+      "tipsTitle": "采集提示",
+      "tipFace": "保持面部居中并填满画面 (≥ {{pct}}%)。",
+      "tipLight": "使用均匀的光线，避免强烈的逆光。",
+      "tipHold": "保持不动，看着摄像头 {{seconds}} 秒。",
+      "tipRemove": "摘除帽子、口罩或避免强烈阴影。",
+      "errorShort": "采集时间太短。请保持不动 {{seconds}} 秒。",
+      "errorTooSmall": "采集失败。请重试。",
+      "errorFileTooSmall": "视频文件太小。请在整个采集过程中保持不动并改善光线。",
+      "errorBitrate": "视频质量太低。请改善光线并保持手机稳定。",
+      "errorLowQuality": "采集质量太低。请使用更好的光线或更高质量的摄像头。",
+      "errorCameraPermission": "需要摄像头权限。请在设置中启用并重试。",
+      "errorCameraUnavailable": "此设备上摄像头不可用。请关闭其他摄像头应用并重试。",
+      "errorRecordingFailed": "视频录制失败。请在更好的光线下重试。",
+      "errorStorage": "存储空间不足，无法录制视频。请释放空间并重试。",
+      "errorFileAccess": "无法读取录制的视频。请重新录制。",
+      "errorDeviceAttest": "设备安全检查失败。请更新 Google Play 服务并重试。",
+      "errorCooldown": "尝试次数过多。请稍后再试。",
+      "errorChallenge": "活跃挑战未完成。请重新录制并按照说明操作。",
+      "errorUpload": "上传失败。请检查网络连接并重试。",
+      "errorUploadForbidden": "上传链接被拒绝（已过期或签名不匹配）。请重新录制并重试。",
+      "errorUploadTimeout": "上传超时。请检查网络连接并重试。",
+      "errorUploadServer": "上传服务暂时不可用。请稍后重试。",
+      "errorSessionExpired": "会话已过期。请重新录制。",
+      "errorUnexpected": "采集失败。请重试。",
+      "retryUpload": "重试上传",
+      "retake": "重新录制",
+      "recording": "录制中...",
+      "uploading": "上传中...",
+      "processing": "处理中...",
+      "start": "开始采集"
     }
   },
   "sentinelSettings": {
@@ -869,25 +1098,25 @@
     "pohDescription": "通过inLyf验证您的身份以解锁每日奖励。",
     "vision": {
       "title": "我们的愿景",
-      "tagline": "天天十美金，人人皆有份",
-      "description": "Umotu 正在构建基础设施，让世界上每个人都能参与全球经济——无论他们住在哪里或使用哪家银行。",
+      "tagline": "人人可参与，天天有奖励",
+      "description": "Umotu 是一个开放协议，旨在让参与全球数字经济变得更简单：开放准入、快速结算，以及可选的稳定币用于日常交易。",
       "readMore": "阅读完整愿景",
       "pillars": {
-        "title": "三大核心原则",
+        "title": "核心原则",
         "ubi": {
-          "title": "天天十美金 人人皆有份",
-          "description": "通用基本收入作为保护网络的奖励。任何拥有手机的人都可以参与并赚取收入。"
+          "title": "人人可参与，天天有奖励",
+          "description": "每日奖励通过参与网络安全获得。奖励金额不固定，且不保证。"
         },
         "capital": {
-          "title": "资本自由流动",
-          "description": "支付和转账几乎零摩擦——无论是跨境还是本地。企业只需支付约0.1%来覆盖平台成本，个人完全免费。"
+          "title": "低摩擦转账",
+          "description": "支付和转账设计为快速且低摩擦。费用和性能会随网络状况和您使用的应用而变化。"
         },
         "sovereignty": {
-          "title": "尊重货币主权",
-          "description": "我们不取代法定货币——我们让它们运作得更好。银行发行与当地货币挂钩的稳定币。货币政策因更广泛的覆盖和更低的摩擦而更加有效。"
+          "title": "兼容本地货币",
+          "description": "Umotu 不控制货币政策，也不取代法定货币。Umotu 上的稳定币由第三方发行，有各自的规则和风险。"
         }
       },
-      "notReplacing": "Umotu 不是在与中央银行竞争。我们正在为法定货币构建更好的基础设施：更低的摩擦、更广泛的全球市场和更高的市场效率。"
+      "notReplacing": "Umotu 是基础设施。它不制定货币政策，不保证稳定币安全，也不干预以产生特定结果。"
     },
     "building": {
       "title": "我们正在构建生态系统",
@@ -995,34 +1224,50 @@
     "business": {
       "title": "在 Umotu 上构建您的业务",
       "subtitle": "启动内置支付功能的应用",
-      "description": "创建接入 Umotu 生态系统的应用——数百万经过验证的用户拥有每日收入，随时准备交易。无需为支付集成烦恼。",
+      "description": "构建支持链上支付和可选稳定币的应用。参与者可获得每日奖励（金额不固定），并可使用支持的资产进行交易。",
       "benefits": {
-        "noFees": "近零支付处理费——保留99.9%的收入",
-        "verifiedUsers": "所有用户都是经过验证的真人——没有机器人或欺诈",
-        "globalReach": "从第一天起就能触达190多个国家的用户",
-        "instantPayments": "即时结算——无需30天的付款延迟"
+        "noFees": "低且透明的费用 — 具体成本随网络状况变化",
+        "verifiedUsers": "经过验证的参与者 — 通过人类证明减少机器人和女巫攻击",
+        "globalReach": "面向全球参与者（视可用性而定）",
+        "instantPayments": "快速链上结算 — 具体时间取决于网络状况"
       },
       "exampleTitle": "使用案例",
-      "exampleText": "Umotu 上的网约车应用保留99.9%的车费，而传统平台只有70%。司机赚得更多，乘客花得更少。",
+      "exampleText": "网约车应用可以在乘客和司机之间直接路由支付，费用透明，链上近实时结算。",
       "docsButton": "阅读文档",
       "buildButton": "开始构建"
     },
     "bank": {
       "title": "您是银行吗？",
       "subtitle": "在 Umotu 上发行稳定币",
-      "description": "持牌金融机构可以在 Umotu 上发行当地货币稳定币，接入拥有数百万用户的 UBI 经济体系。",
+      "description": "金融机构和支付公司可以在 Umotu 上发行稳定币，为偏好使用稳定记账单位资产进行日常交易的用户提供服务。",
       "benefits": {
-        "reserves": "储备金收益：投资债券和低风险资产获得收益",
-        "mintRedeem": "铸造/赎回费用：法币 ↔ 稳定币兑换通常收取0.1%",
-        "users": "接触数百万日活跃 UBI 接收者",
-        "global": "即时将您的业务扩展到全球",
-        "custody": "您的储备，您托管：资产完全在你控制之下"
+        "reserves": "储备金管理由发行方控制，并受适用规则约束",
+        "mintRedeem": "发行方可自行决定铸造/赎回费率",
+        "users": "接触不断增长的活跃参与者群体",
+        "global": "跨境触达用户（须遵守合规和分发要求）",
+        "custody": "发行方控制的储备和政策"
       },
       "revenueModel": "发行方如何盈利",
-      "revenueNote": "与 Tether 等主要发行方一样，收入来自储备金收益和兑换费用。随着数百万用户每日领取 UBI，铸造/赎回交易量可观。",
-      "futureNote": "随着协议发展，发行方未来可能还会获得部分交易费用分成。",
+      "revenueNote": "发行方的经济模式各不相同。部分发行方通过储备金收益和/或铸造/赎回费用获取收入，具体取决于其模式和义务。",
+      "futureNote": "协议不保证发行方收入。未来如有变更，须遵循协议的治理流程。",
       "learnMore": "了解更多",
       "applyButton": "立即申请"
+    },
+    "stablesDocs": {
+      "title": "稳定币标准",
+      "subtitle": "Umotu 基金会应用的默认设置（非协议许可）",
+      "description": "Umotu 基金会发布的标准用于基金会维护的应用和服务中的默认稳定币支持。这些标准不限制协议层面的转账或第三方钱包。标准不能消除稳定币风险。",
+      "uss": {
+        "title": "Umotu 稳定币标准 (USS)",
+        "description": "在 Umotu 基金会应用中作为默认支付选项和稳定币 Gas 服务（通过 paymaster）所支持的稳定币的最低披露、储备和赎回标准。",
+        "button": "查看 USS"
+      },
+      "rdp": {
+        "title": "风险披露政策 (RDP)",
+        "description": "在 Umotu 基金会应用中显示的基于规则的风险指标（如汇率波动、锚定偏差、赎回限制和技术风险）。",
+        "button": "查看 RDP"
+      },
+      "learnMore": "查看稳定币标准"
     }
   },
   "news": {
@@ -1078,52 +1323,52 @@
   },
   "learn": {
     "title": "学习",
-    "subtitle": "了解 Umotu 的一切",
+    "subtitle": "人人可参与，天天有奖励",
     "featured": "精选",
     "airdrop": {
-      "title": "测试网空投",
-      "subtitle": "早期用户获得认可",
-      "intro": "您来得正好！Umotu 目前处于测试网阶段。活跃的测试网参与者在主网上线时可能获得代币空投分配。",
+      "title": "测试网认可",
+      "subtitle": "早期测试网参与可能获得认可",
+      "intro": "Umotu 目前处于测试网阶段。活跃的测试网参与者在主网上线时可能获得认可分配。这不是保证，可能为零。",
       "howToQualify": "如何获得资格",
       "step1": "在应用中创建钱包",
       "step2": "完成人类验证（人类证明）",
       "step3": "在测试网期间经常使用应用",
       "whenAirdrop": "空投什么时候进行？",
       "whyTestnet": "测试网至关重要：用户可以学习钱包安全知识，系统在主网上线前进行安全性、稳定性和效率测试。",
-      "timeline": "主网预计将于2026年第一或第二季度上线。空投将在主网上线的同一时间进行。",
+      "timeline": "主网时间和任何认可详情将在应用中公布。",
       "howMuch": "我能获得多少？",
-      "totalPool": "空投总量：1,000,000,000 UMT代币。您的份额取决于总参与人数和上线时的UMT价格。",
-      "scenario2": "100万用户：每位用户约1,000 UMT，预期价格约$1，空投价值约$1,000",
-      "scenario3": "1000万用户：每位用户约100 UMT，预期价格约$20，空投价值约$2,000",
-      "scenario4": "1亿用户：每位用户约10 UMT，预期价格约$300，空投价值约$3,000",
-      "disclaimer": "以上仅为预测，非保证承诺。实际价值取决于市场状况和计划规则。",
+      "totalPool": "仅供举例：如果创建了10亿 UMT 的认可池，您的份额取决于符合资格的参与者数量和计划规则。越早参与，份额越高。",
+      "scenario2": "仅供举例：100万符合资格的用户 → 平均每人约1,000 UMT（加权前）",
+      "scenario3": "仅供举例：1000万符合资格的用户 → 平均每人约100 UMT（加权前）",
+      "scenario4": "仅供举例：1亿符合资格的用户 → 平均每人约10 UMT（加权前）",
+      "disclaimer": "仅为示例，非保证。任何认可分配取决于计划规则和市场条件，可能为零。",
       "whatYouGet": "您将获得什么",
       "reward": "主网上线时，您的测试网钱包可能根据参与度和计划规则获得真实代币。越早加入且越活跃的用户将获得优先考虑。",
       "note": "注意：测试网代币没有价值。任何主网分配将在上线时根据计划政策确定。关于空投的所有信息都仅在该App内发布，其它一切信息来源都不可靠，谨防诈骗。"
     },
     "whatIs": {
       "title": "什么是 Umotu？",
-      "subtitle": "天天十美金，人人皆有份",
-      "intro": "Umotu 旨在让任何人只需一部智能手机就能每天赚取约10美元。无需昂贵硬件，无需特殊技能，没有国界限制。",
+      "subtitle": "人人可参与，天天有奖励",
+      "intro": "Umotu 是一个开放协议，任何人都可以使用智能手机参与，并通过帮助保护网络安全来获得每日奖励。奖励金额不固定，且不保证。仅供参考，协议在启动时围绕每位活跃参与者约10美元/天的参考目标设计，但实际奖励可能远低于此（包括每天仅几美分）或更高，取决于参与情况和市场条件。",
       "howDifferent": "有什么不同？",
-      "noMiddleman": "无中间商：您直接与网络交互 — 无需银行账户",
-      "globalAccess": "全球通用：只要有网络就能使用",
-      "youOwnIt": "您掌控一切：您的钱包，您的密钥，您做主",
+      "noMiddleman": "无中间商：您直接与网络交互 — 无需账户审批",
+      "globalAccess": "全球通用：只要有网络连接即可使用",
+      "youOwnIt": "自托管：您的钱包，您的密钥，您的控制权",
       "vision": "我们的愿景",
-      "visionText": "数十亿人可以帮助维护公共账本的诚实性并从中获得收益。在 Umotu 上，手机执行轻量级检查，使网络值得信赖。",
+      "visionText": "数百万部手机可以帮助维护公共账本的诚实性。手机执行轻量级检查（如数据可用性采样），使网络更加可信。",
       "nameOrigin": "名字的由来",
       "nameOriginText": "Umotu 的名字源自 Paʻumotu，一种波利尼西亚语言。我们怀着敬意使用这个名字，以此提醒 Umotu 要为普通人而建设。"
     },
     "earn": {
       "title": "如何赚钱",
-      "subtitle": "手机工作，您获报酬",
-      "intro": "您的手机执行帮助所有人的小任务 — 然后您获得奖励。",
+      "subtitle": "您的手机参与运算，您获得奖励",
+      "intro": "您的手机执行帮助网络的小型安全检查 — 然后您获得奖励。",
       "steps": "三个简单步骤",
       "step1": "1) 人类证明：快速真人检测（并定期刷新）确保每人只有一个账户。",
       "step2": "2) 帮助网络：您的手机在后台运行数据可用性（DA）采样和其他轻量级检查。",
-      "step3": "3) 获得每日奖励：您因这项工作获得报酬，目标约为每天10美元，具体取决于网络政策。",
+      "step3": "3) 获得每日奖励：奖励根据成功参与自动发放。金额不固定。",
       "localCurrency": "以您的货币支付",
-      "localCurrencyText": "选择支付代币：本地货币稳定币（如有）或 UMT。金额目标约为10美元价值，可能随参与度和市场情况调整。"
+      "localCurrencyText": "选择支付资产：UMT 或稳定币（如有）。稳定币由第三方发行，有各自的风险。"
     },
     "security": {
       "title": "钱包安全",
@@ -1155,19 +1400,23 @@
       "example1": "1 ZAR1 ≈ 1 南非兰特",
       "example2": "1 USD1 ≈ 1 美元",
       "example3": "1 NGN1 ≈ 1 尼日利亚奈拉",
-      "backed": "由合作伙伴发行",
-      "backedText": "Umotu 上的稳定币由受监管的合作伙伴发行，设计为与储备金保持1:1的价值。发行方发布储备证明和赎回条款。",
+      "backed": "由第三方发行",
+      "backedText": "稳定币由独立提供方发行，设计为追踪某种货币（如美元或加元）。每种稳定币有各自的储备、赎回条款、升级控制和风险政策（包括可能的冻结）。请阅读发行方的披露信息。",
       "convert": "转换为现金",
-      "convertText": "通过合作银行/交易所转换，或在接受的地方直接消费。"
+      "convertText": "您可以在链上兑换稳定币，或通过可用的第三方服务进行转换。",
+      "gas": "使用稳定币支付手续费",
+      "gasText": "部分钱包支持使用稳定币支付网络手续费，通过将稳定币兑换为原生代币的服务实现。验证者仍收到原生代币；稳定币 Gas 只是一个便捷功能。",
+      "preferredList": "钱包默认设置",
+      "preferredListText": "Umotu 钱包可能会根据 Umotu 稳定币标准 (USS) 显示一组保守的默认稳定币列表，用于支付和手续费服务。其他钱包可以支持其他稳定币。"
     },
     "economics": {
       "title": "UMT 经济模型",
       "subtitle": "谁获得什么，为什么",
-      "intro": "UMT 总供应量固定为1000亿枚代币。大部分将奖励给帮助保持网络诚实的普通手机用户。",
+      "intro": "UMT 总供应量固定为1000亿枚代币。大部分供应保留给手机参与者，通过基于规则的发行控制器随时间分发。",
       "supply": "供应与分配",
       "supplyBullets": [
-        "绝大部分代币供应将随时间分配给手机参与者，通过发行控制器释放。发行控制器将每日发行量限制在剩余供应量的0.01%以内，确保长期可持续性。按照这个时间表，10年后约有68%的总供应量保留，50年后约有15%保留。",
-        "一小部分供应在启动时创建，用于特定目的，包括早期用户空投、社区销售、基金会分配和应急储备等。"
+        "绝大部分代币供应保留给手机参与者，通过发行控制器随时间释放。控制器将每日发行量上限设为剩余供应量的0.01%以限制稀释。",
+        "在最大上限（每日剩余供应量的0.01%）下，10年后约69%的供应量仍保留，50年后约16%仍保留。实际发行量可能因协议规则而更低。"
       ],
       "premine": "启动分配（暂定，可能在主网启动时更改）",
       "premineTable": [
@@ -1189,13 +1438,13 @@
         }
       ],
       "emissions": "手机每日奖励",
-      "emissionsText": "奖励每天有上限，预算目标是每部经过验证的手机每天约10美元，根据参与情况和政策调整。您获得报酬是因为您的手机在进行真实的网络检查。",
+      "emissionsText": "每日发行有上限。您的奖励取决于参与情况、手机检查的成功率和市场条件。协议不承诺固定金额。",
       "fees": "费用与哨兵",
       "feesText": "哨兵帮助者（可选，高级功能）可获得交易费用和构建者出价的一部分。这与每日发行分开。",
       "transparency": "透明度",
       "transparencyText": "锁仓释放时间表和钱包地址都是公开的。每日发行上限和实际支付金额在应用中公布。",
       "disclaimerTitle": "简明提醒",
-      "disclaimerText": "这不是投资建议。奖励取决于网络政策和参与情况。该应用不保证固定收入。"
+      "disclaimerText": "这不是财务建议。奖励金额不固定，且不保证。"
     },
     "contribute": {
       "title": "如何贡献",
@@ -1222,7 +1471,7 @@
       },
       "governance": {
         "title": "参与治理",
-        "text": "阅读提案、公开讨论并在应用中投票。您的声音有助于指导网络参数和资助分配。",
+        "text": "阅读提案、公开讨论并在应用中投票。投票可以指导钱包默认设置和生态系统拨款。部分协议规则是固定的，不接受投票表决。",
         "cta": "打开治理",
         "url": "umotu://vote"
       },
@@ -1237,15 +1486,15 @@
     "decentralization": {
       "title": "为何去中心化",
       "subtitle": "没有单点控制",
-      "intro": "去中心化意味着没有任何公司或政府可以关闭网络或没收您的资金。",
+      "intro": "去中心化意味着网络由众多独立参与者运行。您的钱包是自托管的 — 只有您的密钥可以转移您的资金。",
       "benefits": "对您的好处",
       "benefit1": "始终在线：24/7全天候可用",
-      "benefit2": "更低费用：小额网络费用而非3-5%的刷卡费",
+      "benefit2": "通常更低的费用：小额网络费用而非典型的银行卡费用",
       "benefit3": "无国界：全球转账价值",
-      "benefit4": "抗审查：您的密钥，您的资金",
+      "benefit4": "更强的抗审查性：没有任何一家公司控制您的钱包",
       "benefit5": "透明：任何人都可以验证系统如何运作",
       "howWorks": "工作原理",
-      "howWorksText": "验证者大约每2秒提议一个区块。手机（像您的）通过轻量级检查进行验证和最终确认。许多小贡献汇聚成强大的安全性。"
+      "howWorksText": "验证者大约每2秒提议一个区块。手机（像您的）验证数据可用性并通过轻量级检查帮助最终确认区块。许多小贡献汇聚成强大的安全性。"
     },
     "gettingStarted": {
       "title": "开始使用",
@@ -1260,34 +1509,35 @@
       "tips": "专业提示",
       "tip1": "允许后台访问以便检查可以运行",
       "tip2": "每天查看奖励",
-      "tip3": "邀请朋友 — 更多用户使网络更强大"
+      "tip3": "邀请朋友 — 更多参与者可以使网络更强大"
     },
     "noCompany": {
-      "title": "没有公司，没有客户",
-      "subtitle": "理解这个模式",
-      "intro": "没有'Umotu公司'控制协议。Umotu 是任何人都可以使用的开放规则集。",
+      "title": "开放协议，自托管",
+      "subtitle": "了解 Umotu 是什么（以及不是什么）",
+      "intro": "没有任何一家公司控制该协议。Umotu 是一套任何人都可以使用的开放规则，许多独立团队可以构建钱包和服务。",
       "notCompany": "Umotu 不是什么",
-      "notCompany1": "不是一家有客户账户的公司",
-      "notCompany2": "不是银行或货币传输机构",
+      "notCompany1": "不是持有客户资金的托管银行",
+      "notCompany2": "无法重置您的钱包或撤销交易",
       "notCompany3": "不受任何单一实体控制",
-      "notCompany4": "无法撤销交易",
+      "notCompany4": "不是保障收入计划",
       "whatIs": "Umotu 是什么",
-      "whatIs1": "一个协议：就像电子邮件或网络 — 开放、可互操作的规则",
-      "whatIs2": "以手机为先：在日常智能手机的帮助下运行",
+      "whatIs1": "一个协议：开放、可互操作的规则（如电子邮件或网络）",
+      "whatIs2": "以手机为先的参与：智能手机可以帮助保护网络",
       "whatIs3": "社区驱动：您是参与者，不是客户",
+      "whatIs4": "无需许可：任何人都可以在此协议上构建或使用",
       "foundation": "Umotu 基金会",
-      "foundationIntro": "一个支持生态系统（参考应用、文档、社区项目）但不控制协议的非营利组织。",
+      "foundationIntro": "一个支持生态系统（参考应用、教育和协调）但不控制协议的非营利组织。",
       "foundationTask1": "维护移动应用和区块浏览器作为参考实现",
       "foundationTask2": "运营部分公共基础设施（其他人可以运营自己的）",
-      "foundationTask3": "协调社区治理（新闻、投票）",
-      "foundationTask4": "审核和列出支持的稳定币",
+      "foundationTask3": "在应用中协调社区投票和讨论（如适用）",
+      "foundationTask4": "发布 Umotu 稳定币协议和 Umotu 钱包的保守默认列表（其他钱包可以支持其他稳定币）",
       "foundationTask5": "发布教育和安全指南",
-      "foundationNote": "基金会无法访问您的钱包，也无法撤销交易。"
+      "foundationNote": "基金会无法访问您的钱包，也无法撤销交易。钱包默认设置不限制协议上的可能操作。"
     },
     "whereMoney": {
-      "title": "$10美元从哪里来？",
+      "title": "奖励从哪里来？",
       "subtitle": "您因工作而获得报酬",
-      "intro": "这是最常被问到的问题。简短回答：因为您提供了网络需要的服务。",
+      "intro": "这是一个常见问题。简短回答：奖励之所以存在，是因为参与者提供了安全保障，协议按规则发行代币。",
       "realWork": "您的手机在做真实的工作",
       "realWork1": "数据可用性采样：您的手机检查区块数据是否可用且正确",
       "realWork2": "人类参与：您证明一人一账户以阻止机器人和垃圾信息",
@@ -1298,7 +1548,7 @@
       "distribution": "奖励如何分配",
       "newTokens": "新的 UMT 代币被创建并分享给经过验证的手机参与者（而不是验证者）",
       "fees": "部分费用和构建者出价分享给手机哨兵以最终确认区块",
-      "treasury": "小部分资金用于持续维护和稳定计划",
+      "treasury": "部分费用可能通过透明治理支持生态系统维护（如审计和参考软件），在启用的情况下。",
       "whyDifferent": "为什么这与众不同",
       "btcProblem": "比特币奖励专业矿工（资本密集型）",
       "ethProblem": "以太坊奖励大额质押者（资本密集型）",
@@ -1325,6 +1575,20 @@
       "action2": "不要点击链接",
       "action3": "不要分享信息",
       "action4": "拉黑并举报"
+    },
+    "governance": {
+      "title": "治理与投票",
+      "subtitle": "应用内投票如何运作",
+      "intro": "Umotu 支持应用内投票和民意调查，参与者可以帮助引导某些生态系统决策。",
+      "whatVotesDo": "投票可以做什么",
+      "whatVotesDo1": "推荐钱包默认设置（例如，哪些稳定币作为首选支付或稳定币 Gas 选项）",
+      "whatVotesDo2": "表达社区对提案和优先事项的偏好",
+      "whatVotesDo3": "在启用的情况下批准某些拨款或预算",
+      "whatVotesCannotDo": "投票不能做什么",
+      "whatVotesCannotDo1": "访问您的钱包、转移您的资金或重置您的助记词",
+      "whatVotesCannotDo2": "撤销交易或冻结您的自托管钱包",
+      "whatVotesCannotDo3": "在协议规则之外更改固定的货币政策",
+      "note": "部分投票可能是模拟或咨询性质的，取决于网络阶段。请务必阅读提案详情和生效条件。"
     }
   },
   "common": {
@@ -1373,6 +1637,7 @@
   "poh_title": "人类验证",
   "continue": "继续",
   "or": "或",
+  "version": "版本",
   "seedReveal": {
     "title": "助记词",
     "intro": "助记词是您恢复钱包的唯一方式。请将其写下并安全地离线保存。",

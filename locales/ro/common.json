@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 $ pe zi, pentru toți, peste tot"
+    "tagline": "Participare deschisă, recompense zilnice"
   },
   "navigation": {
     "home": "Acasă",
@@ -38,6 +38,9 @@
       "changeChoice": "Schimbă alegerea",
       "requiresLanguage": "Selectează limba întâi",
       "requiresWallet": "Creează portofelul întâi"
+    },
+    "daSampling": {
+      "staleHint": "Rulați eșantionarea acum pentru a vă asigura eligibilitatea la recompensele zilnice."
     }
   },
   "earnings": {
@@ -118,13 +121,15 @@
     "manual": {
       "title": "Revendicare manuală",
       "description": "Dacă ai nevoie de fonduri mai devreme, revendică următoarea recompensă disponibilă acum. Revendicările manuale folosesc gazul portofelului tău. Revendicarea automată rămâne mai ieftină dacă aștepți. Dacă portofelul tău nu are fonduri, activează revendicarea automată sau adaugă gaz nativ înainte de a revendica manual.",
-      "dayLabel": "Ziua recompensei",
       "claimButton": "Revendică acum",
       "claiming": "Se revendică...",
+      "cancelling": "Se anulează revendicarea...",
+      "cancelled": "Revendicare anulată.",
+      "cancelButton": "Anulează revendicarea",
       "success": "Revendicare trimisă",
       "successWithId": "Revendicare trimisă (id: {{id}})",
       "error": "Eroare la revendicare",
-      "noProof": "Dovada recompensei nu a fost încă publicată. Încercați din nou după ce instantaneul de azi este activ.",
+      "noProof": "Nu s-a găsit dovada recompensei pentru acest portofel/zi (sau nu era eligibil în acea zi). Încercați din nou după ce instantaneul de azi este activ.",
       "unauthorized": "Autorizarea relayer a eșuat. Vă rugăm să încercați din nou sau să contactați asistența.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -136,9 +141,22 @@
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "remainingAfter": "+{{days}} în plus după această serie",
+      "calendarVsEligible": "{{eligible}} eligibile din {{calendar}} zile calendaristice",
+      "showMissingDays": "Afișează zilele lipsă ({{count}})",
+      "hideMissingDays": "Ascunde zilele lipsă",
+      "noMissingDaysLoaded": "Niciun detaliu despre zilele lipsă returnat de politică încă.",
+      "moreMissingDays": "și încă {{count}} zile",
+      "missingDaysHint": "Zi lipsă înseamnă că nu există eșantionare/dovadă DA pentru acea zi UTC.",
       "batchSuccess": "{{count}} zile revendicate cu succes",
+      "fallbackPaidInNative": "plătit în UMT: stablecoin temporar indisponibil",
       "claimingProgress": "Se revendică {{claimed}}/{{total}}...",
-      "claimAllButton": "Revendică toate {{count}} zilele"
+      "claimAllButton": "Revendică toate {{count}} zilele",
+      "claimingDay": "Se procesează ziua {{day}}",
+      "stableNotConfigured": "Plata în stablecoin nu este disponibilă. Vă rugăm să selectați UMT sau să contactați asistența.",
+      "insufficientGas": "Sold insuficient de gas. Vă rugăm să alimentați portofelul cu tokeni nativi.",
+      "userRejected": "Tranzacția a fost anulată.",
+      "networkError": "Eroare de rețea. Vă rugăm să verificați conexiunea și să încercați din nou.",
+      "alreadyClaimed": "Aceste recompense au fost deja revendicate."
     },
     "timezone": {
       "title": "Selectează fusul orar",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "Agendă adrese",
       "addContact": "Adaugă contact",
-      "nameLabel": "Nume sau etichetă",
+      "nameLabel": "Nume",
       "walletAddress": "Adresă portofel (0x...)",
       "savedContacts": "Contacte salvate",
       "noContacts": "Niciun contact salvat încă.",
       "addForQuickSending": "Adaugă contacte pentru trimitere rapidă.",
       "enterValidAddress": "Introdu o adresă validă",
       "addLabel": "Adaugă etichetă",
-      "save": "Salvează"
+      "labelAlreadyExists": "Această etichetă există deja",
+      "tagOptional": "Etichetă (opțional)",
+      "save": "Salvează",
+      "editContact": "Editează contact",
+      "tags": "Etichete",
+      "noTagsYet": "Nicio etichetă adăugată încă",
+      "newTagPlaceholder": "Introdu numele etichetei...",
+      "addTag": "Adaugă",
+      "existingTags": "Sau adaugă o etichetă existentă:",
+      "deleteContact": "Șterge contact",
+      "confirmDeleteTitle": "Ștergi contactul?",
+      "confirmDeleteMessage": "Aceasta va elimina pe {{label}} din agenda ta."
     },
     "settings": {
       "title": "Setări portofel",
@@ -245,7 +274,8 @@
         "clipboardWarning": "Clipboard-ul poate fi citit de alte aplicații. Va fi șters automat în 30 de secunde.",
         "verifyForKey": "Verifică pentru a arăta cheia privată",
         "verifyForSeed": "Verifică pentru a arăta fraza de recuperare",
-        "verifyDescription": "Introdu parola sau PIN-ul pentru a dezvălui informații sensibile despre portofel."
+        "verifyDescription": "Introdu parola sau PIN-ul pentru a dezvălui informații sensibile despre portofel.",
+        "walletNotLoaded": "Niciun portofel încărcat. Importați sau creați mai întâi un portofel."
       },
       "import": {
         "title": "Importă portofel",
@@ -256,7 +286,8 @@
         "keyPlaceholder": "Introdu cheia privată 0x…",
         "importButton": "Importă portofel",
         "importing": "Se importă...",
-        "success": "Portofel importat cu succes!"
+        "success": "Portofel importat cu succes!",
+        "saveFailed": "Importul portofelului a reușit, dar salvarea pe acest dispozitiv a eșuat."
       },
       "dangerZone": {
         "title": "Zonă periculoasă",
@@ -530,6 +561,7 @@
       "deleteContact": "Șterge Contact",
       "addressNotSaved": "Adresa nu este salvată",
       "addLabel": "Adaugă etichetă",
+      "labelAlreadyExists": "Această etichetă există deja",
       "enterValidAddress": "Introduceți mai întâi o adresă validă",
       "saved": "Salvat",
       "save": "Salvează"
@@ -547,6 +579,7 @@
       "noRecipients": "Niciun destinatar adăugat încă",
       "addFromTagOrBook": "Adaugă din tag sau agendă",
       "invalidAddress": "Adresă invalidă: {{address}}",
+      "tooManyRecipients": "Trimiterea în lot acceptă până la {{max}} destinatari.",
       "invalidAmount": "Sumă invalidă pentru {{recipient}}",
       "totalExceedsBalance": "Totalul depășește soldul",
       "sendingTo": "Trimitere către {{count}} destinatar",
@@ -569,6 +602,18 @@
       "failedStatus": "Eșuat",
       "details": "Detalii Transfer în Lot",
       "total": "Total",
+      "hongbao": {
+        "short": "Hongbao",
+        "total": "Total Hongbao",
+        "helper": "Setează un total fix și vom randomiza suma fiecărui destinatar în pasul următor.",
+        "random": "Aleatoriu",
+        "autoSplit": "Împărțire automată",
+        "generated": "Împărțire aleatorie generată",
+        "needTwoRecipients": "Hongbao are nevoie de cel puțin 2 destinatari.",
+        "amountTooSmall": "Totalul este prea mic pentru {{count}} destinatari. Minimul este {{min}} {{symbol}}.",
+        "generateFailed": "Eroare la generarea sumelor aleatorii.",
+        "disabled": "Modul Hongbao este dezactivat acum."
+      },
       "tagPicker": {
         "title": "Selectează Tag",
         "noTags": "Niciun tag disponibil",
@@ -647,19 +692,48 @@
       "type": "Tip",
       "to": "Către",
       "from": "De la",
+      "address": "Adresă",
       "token": "Token",
       "block": "Bloc",
       "gasCost": "Cost gaz",
+      "balanceAfter": "Sold după tx",
+      "balanceSource": "Sursa soldului",
+      "balanceSourceVerified": "Verificat on-chain",
+      "balanceSourceVerifying": "Estimat (verificare on-chain...)",
+      "balanceSourceEstimatedRecent": "Estimat din snapshot recent al soldului",
+      "balanceSourceEstimatedStale": "Estimat din snapshot vechi al soldului",
+      "balanceSourceEstimatedDelayed": "Estimat (verificare on-chain întârziată)",
+      "balanceSnapshotAge": "Vârsta snapshot-ului",
+      "balanceReconciledDiff": "Diferență reconciliată",
+      "balanceVerifyNote": "Notă de verificare",
+      "balanceVerifyUnexpected": "Verificare întârziată. Sold estimat afișat.",
+      "unavailable": "Indisponibil",
       "hash": "Hash",
       "source": "Sursă",
       "balanceDetected": "Sold detectat",
       "inferredNote": "Această tranzacție a fost detectată dintr-o schimbare de sold. Detaliile exacte on-chain nu sunt disponibile."
     },
+    "batch": {
+      "title": "Detalii Transfer în Lot",
+      "badge": "LOT",
+      "send": "Trimitere în Lot",
+      "recipients": "Destinatari",
+      "recipientCount": "{{count}} destinatar",
+      "recipientCount_plural": "{{count}} destinatari",
+      "successful": "Reușit",
+      "successOf": "{{success}} din {{total}}",
+      "sentStatus": "Trimis",
+      "failedStatus": "Eșuat",
+      "successFail": "{{success}} reușite, {{fail}} eșuate",
+      "toRecipients": "către {{count}} destinatar",
+      "toRecipients_plural": "către {{count}} destinatari"
+    },
     "time": {
       "justNow": "Chiar acum",
       "minsAgo": "{{count}}m în urmă",
       "hoursAgo": "{{count}}h în urmă",
-      "daysAgo": "{{count}}z în urmă"
+      "daysAgo": "{{count}}z în urmă",
+      "suffixAgo": "în urmă"
     }
   },
   "settings": {
@@ -734,6 +808,13 @@
       "clearCache": "Șterge cache",
       "cacheCleared": "Cache șters! Repornește pentru a aplica."
     },
+    "hongbaoDebug": {
+      "title": "Config Hongbao (Debug)",
+      "description": "Șterge cache-ul local al sezonului Hongbao și forțează reîmprospătarea la următoarea lansare a aplicației.",
+      "clearConfigCache": "Șterge cache Hongbao",
+      "cacheCleared": "Cache config Hongbao șters",
+      "cacheClearFailed": "Eroare la ștergerea cache-ului config Hongbao"
+    },
     "chainGuardian": {
       "title": "Gardian lanț",
       "description": "Ajută la securizarea blockchain-ului ținând telefonul online. Completează cel puțin o sarcină de sampling pe zi pentru a rămâne eligibil pentru recompense.",
@@ -757,7 +838,9 @@
         "active": "Activ",
         "inactive": "Inactiv",
         "paused": "Pauzat"
-      }
+      },
+      "iosBackgroundHint": "iOS poate pune în pauză eșantionarea din fundal. Deschideți aplicația ocazional sau apăsați Rulați acum pentru a rămâne activ.",
+      "runNowNoData": "Fără date (constrângeri de baterie/WiFi sau fără atribuiri)."
     },
     "permissions": {
       "title": "Permisiuni",
@@ -767,12 +850,87 @@
       "noConnections": "Nicio conexiune",
       "revokeAccess": "Revocă acces",
       "lastUsed": "Ultima utilizare"
+    },
+    "transfer": {
+      "title": "Transfer date dispozitiv",
+      "description": "Mutați setările aplicației și contactele pe noul telefon scanând un cod QR de transfer.",
+      "warning": "Acesta transferă doar datele aplicației. Fraza de recuperare/cheia privată a portofelului NU sunt incluse. Importați portofelul separat pe noul telefon.",
+      "preparing": "Se pregătește...",
+      "showQr": "Afișează QR transfer",
+      "scanQr": "Scanează QR transfer",
+      "exportTitle": "QR transfer",
+      "exportHint": "Pe noul telefon, deschideți Setări -> Transfer date dispozitiv -> Scanează QR transfer, apoi scanați acest cod.",
+      "exportHintParts": "Pe noul telefon, scanați fiecare pagină în ordine (de la 1 la {{total}}), apoi introduceți codul de 6 cifre.",
+      "exportReady": "QR transfer gata ({{count}} elemente)",
+      "exportReadyParts": "QR transfer gata ({{count}} elemente, {{parts}} pagini QR). Scanați paginile în ordine.",
+      "exportFailed": "Pregătirea transferului a eșuat: {{message}}",
+      "prevPage": "Anterior",
+      "nextPage": "Următor",
+      "confirmCodeLabel": "Cod de confirmare cu 6 cifre",
+      "copyCode": "Copiază codul de transfer",
+      "importTitle": "Scanează QR transfer",
+      "importHint": "Îndreptați camera către QR-ul de transfer afișat pe telefonul vechi.",
+      "importing": "Se importă...",
+      "importNow": "Importă date",
+      "imported": "{{count}} elemente importate. Fraza de recuperare/cheia privată a portofelului NU sunt transferate.",
+      "importFailed": "Importul transferului a eșuat: {{message}}",
+      "confirmPrompt": "QR scanat. Introduceți codul de confirmare cu 6 cifre afișat pe telefonul vechi.",
+      "confirmCodeRequired": "Introduceți codul de confirmare cu 6 cifre de pe telefonul vechi.",
+      "confirmCodeMismatch": "Codul de confirmare nu se potrivește. Vă rugăm să încercați din nou.",
+      "rescan": "Rescanează",
+      "scanProgress": "QR {{current}}/{{total}} scanat",
+      "scanContinue": "Continuați să scanați paginile rămase în ordine până la finalizare.",
+      "restartScan": "Repornește scanarea",
+      "chunkMismatch": "Paginile QR de transfer nu se potrivesc. Vă rugăm să reporniți scanarea de la pagina 1.",
+      "cameraNeeded": "Este necesar acces la cameră",
+      "cameraDescription": "Activați permisiunea camerei pentru a scana codul QR de transfer.",
+      "allowCamera": "Permite camera",
+      "openSettings": "Deschide setările",
+      "pasteCode": "Lipește codul de transfer",
+      "pasteTitle": "Lipește codul de transfer",
+      "pasteHint": "Dacă scanarea cu camera este dificilă, lipiți codul de transfer copiat de pe telefonul vechi.",
+      "pastePlaceholder": "UMOTU_TRANSFER:...",
+      "exportHintRelay": "Pe noul telefon, scanați acest cod unic pentru a descărca pachetul de transfer, apoi introduceți codul de confirmare cu 6 cifre.",
+      "relayReady": "Transfer mare optimizat: scanați un singur QR pentru a descărca {{count}} elemente, apoi introduceți codul cu 6 cifre.",
+      "relayFallback": "Transfer cloud indisponibil ({{message}}). Revenire la QR multi-pagină.",
+      "relayFetching": "Se descarcă datele de transfer...",
+      "relayFetched": "Date de transfer descărcate. Se procesează..."
+    },
+    "integrityDebug": {
+      "title": "Atestarea aplicației (Depanare)",
+      "description": "Obțineți un token de atestare a dispozitivului pentru a confirma că App Attest este activ.",
+      "fetch": "Obțineți atestarea",
+      "fetching": "Se obține...",
+      "copy": "Copiați payload-ul",
+      "copyNonce": "Copiați nonce-ul",
+      "toastFetchSuccess": "Atestarea aplicației obținută",
+      "toastFetchError": "Atestarea aplicației a eșuat",
+      "toastCopy": "Atestare copiată",
+      "toastCopyNonce": "Nonce copiat",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "payload gol",
+      "summaryStub": "token stub (modul nativ lipsă?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (nesuportat)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "eroare: {{message}}",
+      "verify": "Verificați pe server",
+      "verifying": "Se verifică...",
+      "verifyMissing": "eroare: payload sau nonce lipsă",
+      "verifyOk": "verificare server: ok",
+      "verifyFail": "verificare server eșuată: {{error}}",
+      "toastVerifyOk": "Verificare server ok",
+      "toastVerifyFail": "Verificare server eșuată"
     }
   },
   "onboarding": {
     "welcome": {
       "title": "Bine ai venit la Umotu",
-      "subtitle": "10 $ pe zi, pentru toți, peste tot",
+      "subtitle": "Participare deschisă, recompense zilnice",
       "getStarted": "Începe"
     },
     "language": {
@@ -812,6 +970,40 @@
       "validFor_plural": "Valabil pentru ~{{days}} zile",
       "expired": "Verificare expirată sau negăsită.",
       "expiredDetail": "Rulează din nou liveness pentru a reîmprospăta credentialul."
+    },
+    "capture": {
+      "title": "Captură Facială",
+      "hint": "Centrează-ți fața și stai nemișcat.",
+      "tipsTitle": "Sfaturi pentru captură",
+      "tipFace": "Păstrează fața centrată și umple cadrul (≥ {{pct}}%).",
+      "tipLight": "Folosește iluminare uniformă și evită lumina puternică din spate.",
+      "tipHold": "Stai nemișcat și privește camera {{seconds}}s.",
+      "tipRemove": "Îndepărtează pălării, măști sau umbre grele.",
+      "errorShort": "Captură prea scurtă. Stai nemișcat {{seconds}}s.",
+      "errorTooSmall": "Captura a eșuat. Te rugăm să încerci din nou.",
+      "errorFileTooSmall": "Fișierul video este prea mic. Stai nemișcat pe toată durata capturii și îmbunătățește iluminarea.",
+      "errorBitrate": "Calitatea video este prea scăzută. Îmbunătățește iluminarea și ține telefonul stabil.",
+      "errorLowQuality": "Calitatea capturii prea scăzută. Te rugăm să folosești iluminare mai bună sau o cameră de calitate mai înaltă.",
+      "errorCameraPermission": "Este necesară permisiunea pentru cameră. Activează în Setări și încearcă din nou.",
+      "errorCameraUnavailable": "Camera nu este disponibilă pe acest dispozitiv. Închide alte aplicații de cameră și încearcă din nou.",
+      "errorRecordingFailed": "Înregistrarea video a eșuat. Te rugăm să încerci din nou cu iluminare mai bună.",
+      "errorStorage": "Spațiu de stocare insuficient pentru înregistrare video. Eliberează spațiu și încearcă din nou.",
+      "errorFileAccess": "Nu s-a putut citi videoclipul înregistrat. Te rugăm să recaptezi.",
+      "errorDeviceAttest": "Verificarea securității dispozitivului a eșuat. Actualizează serviciile Google Play și încearcă din nou.",
+      "errorCooldown": "Prea multe încercări. Te rugăm să aștepți înainte de a încerca din nou.",
+      "errorChallenge": "Provocarea activă nu a fost finalizată. Te rugăm să recaptezi și să urmezi instrucțiunile.",
+      "errorUpload": "Încărcarea a eșuat. Verifică conexiunea și încearcă din nou.",
+      "errorUploadForbidden": "URL-ul de încărcare a fost respins (expirat sau semnătură nepotrivită). Te rugăm să recaptezi și să încerci din nou.",
+      "errorUploadTimeout": "Încărcarea a expirat. Verifică conexiunea și încearcă din nou.",
+      "errorUploadServer": "Serviciul de încărcare temporar indisponibil. Te rugăm să încerci din nou în curând.",
+      "errorSessionExpired": "Sesiunea a expirat. Te rugăm să recaptezi.",
+      "errorUnexpected": "Captura a eșuat. Te rugăm să încerci din nou.",
+      "retryUpload": "Reîncearcă Încărcarea",
+      "retake": "Recaptează",
+      "recording": "Se înregistrează...",
+      "uploading": "Se încarcă...",
+      "processing": "Se procesează...",
+      "start": "Începe Captura"
     }
   },
   "sentinelSettings": {
@@ -906,25 +1098,25 @@
     "pohDescription": "Verifică-ți umanitatea cu inLyf pentru a debloca recompense zilnice.",
     "vision": {
       "title": "Viziunea noastră",
-      "tagline": "10 $ pe zi, pentru toți, peste tot",
-      "description": "Umotu construiește infrastructură pentru o lume în care oricine poate participa la economia globală — indiferent unde locuiește sau ce bancă folosește.",
+      "tagline": "Participare deschisă, recompense zilnice",
+      "description": "Umotu este un protocol deschis conceput pentru a simplifica participarea la o economie digitală globală: acces deschis, decontare rapidă și stablecoini opționali pentru tranzacții zilnice.",
       "readMore": "Citește viziunea completă",
       "pillars": {
-        "title": "Trei principii de bază",
+        "title": "Principii fundamentale",
         "ubi": {
-          "title": "10 dolari/zi, pentru toată lumea, oriunde",
-          "description": "Venit universal de bază ca recompense câștigate pentru securizarea rețelei. Oricine cu un telefon poate participa și câștiga."
+          "title": "Participare deschisă, recompense zilnice",
+          "description": "Recompensele zilnice sunt câștigate prin participare la securitatea rețelei. Recompensele sunt variabile și nu sunt garantate."
         },
         "capital": {
-          "title": "Capitalul se mișcă liber",
-          "description": "Fricțiune aproape zero pentru plăți și transferuri — transfrontaliere sau locale. Afacerile plătesc ~0.1% pentru costuri platformă, indivizii nu plătesc nimic."
+          "title": "Transferuri cu fricțiune redusă",
+          "description": "Plățile și transferurile sunt proiectate să fie rapide și cu fricțiune redusă. Comisioanele și performanța variază în funcție de condițiile rețelei și aplicațiile folosite."
         },
         "sovereignty": {
-          "title": "Respectă suveranitatea monetară",
-          "description": "Nu înlocuim monedele fiat — le facem să funcționeze mai bine. Băncile emit stablecoini pegged la moneda locală. Politica monetară devine mai eficientă cu reach mai larg și fricțiune mai mică."
+          "title": "Compatibil cu moneda locală",
+          "description": "Umotu nu controlează politica monetară și nu înlocuiește monedele fiat. Stablecoinii de pe Umotu sunt emiși de terți și au propriile reguli și riscuri."
         }
       },
-      "notReplacing": "Umotu nu concurează cu băncile centrale. Construim infrastructură mai bună pentru monedele fiat: fricțiune mai mică, acces global și eficiență și reziliență mai bună a pieței."
+      "notReplacing": "Umotu este infrastructură. Nu stabilește politica monetară, nu garantează siguranța stablecoinilor și nu intervine pentru a produce rezultate specifice."
     },
     "building": {
       "title": "Construim ecosistemul",
@@ -1032,34 +1224,50 @@
     "business": {
       "title": "Construieste-ți afacerea pe Umotu",
       "subtitle": "Lansează aplicații cu plăți integrate",
-      "description": "Creează aplicații care accesează ecosistemul Umotu — milioane de oameni verificați cu venit zilnic, gata să tranzacționeze. Fără probleme de integrare plăți.",
+      "description": "Construiește aplicații cu plăți on-chain și stablecoini opționali. Participanții pot câștiga recompense zilnice (variabile) și pot tranzacționa folosind active suportate.",
       "benefits": {
-        "noFees": "Comisioane de procesare aproape zero — păstrezi 99.9% din venit",
-        "verifiedUsers": "Toți utilizatorii sunt oameni verificați — fără boți sau fraudă",
-        "globalReach": "Ajunge la utilizatori în 190+ țări din prima zi",
-        "instantPayments": "Plăți instant — fără întârzieri de 30 de zile"
+        "noFees": "Comisioane reduse și transparente — costurile exacte variază în funcție de condițiile rețelei",
+        "verifiedUsers": "Participanți verificați — activitate redusă de boți și Sybil prin Proof of Human",
+        "globalReach": "Ajunge la participanți global (în funcție de disponibilitate)",
+        "instantPayments": "Decontare rapidă on-chain — timpii depind de condițiile rețelei"
       },
       "exampleTitle": "Caz de utilizare",
-      "exampleText": "O aplicație de partajare curse pe Umotu păstrează 99.9% din tarife vs 70% pe platformele tradiționale. Șoferii câștigă mai mult, pasagerii plătesc mai puțin.",
+      "exampleText": "O aplicație de partajare curse poate direcționa plățile direct între pasageri și șoferi, cu comisioane transparente și decontare aproape în timp real on-chain.",
       "docsButton": "Citește documentația",
       "buildButton": "Începe să construiești"
     },
     "bank": {
       "title": "Ești o bancă?",
       "subtitle": "Emite stablecoini pe Umotu",
-      "description": "Instituțiile financiare licențiate pot emite stablecoini în moneda locală pe Umotu și accesa o economie UBI în creștere cu milioane de utilizatori.",
+      "description": "Instituțiile financiare și companiile de plăți pot emite stablecoini pe Umotu pentru a servi utilizatorii care preferă active cu unitate de cont stabilă pentru tranzacții zilnice.",
       "benefits": {
-        "reserves": "Câștigă yield pe rezerve: investește în obligațiuni și active low-risk",
-        "mintRedeem": "Încarcă comisioane mint/redeem: de obicei 0.1% pe conversii fiat ↔ stablecoin",
-        "users": "Acces la milioane de utilizatori UBI zilnici activi",
-        "global": "Extinde reach-ul dincolo de granițe instant",
-        "custody": "Rezervele tale, custodia ta: control complet asupra activelor de backing"
+        "reserves": "Gestionarea rezervelor este controlată de emitent și supusă regulilor aplicabile",
+        "mintRedeem": "Emitenții pot stabili comisioane mint/redeem la discreția lor",
+        "users": "Acces la o bază în creștere de participanți activi",
+        "global": "Ajunge la utilizatori dincolo de granițe (în funcție de conformitate și distribuție)",
+        "custody": "Rezerve și politici controlate de emitent"
       },
       "revenueModel": "Cum câștigă emitenții",
-      "revenueNote": "Ca Tether și alți emitenți majori, venitul vine din yield pe rezerve și comisioane conversie. Cu milioane de utilizatori primind UBI zilnic, volumul mint/redeem poate fi substanțial.",
-      "futureNote": "Emintenții pot primi și o parte din comisioanele de tranzacție în viitor pe măsură ce protocolul evoluează.",
+      "revenueNote": "Economia emitenților variază. Unii emitenți generează venituri din yield pe rezerve și/sau comisioane mint/redeem, în funcție de modelul și obligațiile lor.",
+      "futureNote": "Nimic în protocol nu garantează veniturile emitentului. Modificările viitoare, dacă există, trebuie să urmeze procesul de guvernanță al protocolului.",
       "learnMore": "Află mai multe",
       "applyButton": "Aplică acum"
+    },
+    "stablesDocs": {
+      "title": "Standarde pentru stablecoini",
+      "subtitle": "Setări implicite pentru aplicațiile Fundației Umotu (nu permisiune de protocol)",
+      "description": "Fundația Umotu publică standarde utilizate pentru suportul implicit al stablecoinilor în aplicațiile și serviciile întreținute de Fundație. Acestea nu restricționează transferurile la nivel de protocol sau portofelele terțe. Standardele nu elimină riscul stablecoinilor.",
+      "uss": {
+        "title": "Umotu Stablecoin Standard (USS)",
+        "description": "Criterii minime de divulgare, rezerve și răscumpărare pentru stablecoinii afișați ca opțiuni implicite de plată și acceptați în serviciile de gas stabil (prin paymasters) în aplicațiile Fundației Umotu.",
+        "button": "Citiți USS"
+      },
+      "rdp": {
+        "title": "Politica de divulgare a riscurilor (RDP)",
+        "description": "Indicatori de risc bazați pe reguli (de ex., volatilitate FX, abateri de peg, restricții de răscumpărare și risc tehnic) afișați în aplicațiile Fundației Umotu.",
+        "button": "Citiți RDP"
+      },
+      "learnMore": "Vedeți standardele pentru stablecoini"
     }
   },
   "news": {
@@ -1115,36 +1323,36 @@
   },
   "learn": {
     "title": "Învață",
-    "subtitle": "Tot ce trebuie să știi despre Umotu",
+    "subtitle": "Participare deschisă, recompense zilnice",
     "featured": "RECOMANDATE",
     "whatIs": {
       "title": "Ce este Umotu?",
-      "subtitle": "10 $ pe zi, pentru toți, peste tot",
-      "intro": "Umotu își propune să permită oricui să câștige aproximativ 10 dolari/zi folosind doar un smartphone. Fără hardware scump, fără abilități speciale, fără granițe.",
+      "subtitle": "Participare deschisă, recompense zilnice",
+      "intro": "Umotu este un protocol deschis unde oricine poate participa folosind un smartphone și poate câștiga recompense zilnice pentru a ajuta la securizarea rețelei. Recompensele sunt variabile și nu sunt garantate. Doar ca orientare, protocolul este proiectat în jurul unei ținte de referință de aproximativ 10 $/zi per participant activ la lansare, dar recompensele reale pot fi mult mai mici (inclusiv câțiva bani pe zi) sau mai mari în funcție de participare și condițiile pieței.",
       "howDifferent": "Cum este diferit?",
-      "noMiddleman": "Fără intermediar: Interacționezi direct cu rețeaua — fără cont bancar necesar",
-      "globalAccess": "Acces global: Funcționează oriunde cu internet",
-      "youOwnIt": "Îl deții tu: Portofelul tău, cheile tale, controlul tău",
+      "noMiddleman": "Fără intermediar: interacționezi direct cu rețeaua — fără aprobare cont necesară",
+      "globalAccess": "Acces global: funcționează oriunde ai internet",
+      "youOwnIt": "Auto-custodie: portofelul tău, cheile tale, controlul tău",
       "vision": "Viziunea",
-      "visionText": "Miliarde de oameni pot ajuta la menținerea onestă a unui registru public și să câștige pentru asta. Pe Umotu, telefoanele fac verificări lightweight care fac rețeaua de încredere.",
+      "visionText": "Milioane de telefoane pot ajuta la menținerea onestă a unui registru public. Telefoanele fac verificări lightweight (ca sampling-ul de disponibilitate date) care fac rețeaua mai de încredere.",
       "nameOrigin": "Originea numelui",
       "nameOriginText": "Umotu se inspiră din Paʻumotu, o limbă polineziană. Folosim numele cu respect ca reminder să construim pentru oamenii obișnuiți."
     },
     "earn": {
       "title": "Cum câștigi",
-      "subtitle": "Telefonul tău lucrează; tu ești plătit",
-      "intro": "Telefonul tău efectuează sarcini mici care ajută pe toată lumea — apoi primești recompense.",
+      "subtitle": "Telefonul tău participă; tu câștigi recompense",
+      "intro": "Telefonul tău efectuează mici verificări de securitate care ajută rețeaua — apoi câștigi recompense.",
       "steps": "Trei pași simpli",
       "step1": "1) Dovedește că ești uman: o verificare rapidă de liveness (și refresh ocazional) asigură un cont per persoană.",
       "step2": "2) Ajută rețeaua: telefonul tău rulează sampling Data Availability (DA) și alte verificări lightweight în fundal.",
-      "step3": "3) Câștigă recompense zilnice: ești plătit pentru această muncă, cu un target de aproximativ 10 dolari/zi în funcție de politica rețelei.",
+      "step3": "3) Câștigă recompense zilnice: recompensele sunt distribuite automat pe baza participării cu succes. Sumele variază.",
       "localCurrency": "Plătit în moneda ta",
-      "localCurrencyText": "Alege token de plată: stablecoini în moneda locală (unde disponibil) sau UMT. Sumele țintesc ~10 USD valoare și se pot ajusta cu participarea și condițiile pieței."
+      "localCurrencyText": "Alege un activ de plată: UMT sau stablecoini (unde disponibil). Stablecoinii sunt emiși de terți și au propriile riscuri."
     },
     "whereMoney": {
-      "title": "De unde vin cei 10 dolari?",
+      "title": "De unde vin recompensele?",
       "subtitle": "Câștigi pentru că faci muncă",
-      "intro": "Întrebarea nr.1. Răspuns scurt: pentru că oferi un serviciu de care rețeaua are nevoie.",
+      "intro": "Este o întrebare frecventă. Răspunsul scurt: recompensele există pentru că participanții oferă securitate, iar protocolul emite tokeni pe baza regulilor.",
       "realWork": "Telefonul tău face muncă reală",
       "realWork1": "Sampling Data Availability: telefonul tău verifică că datele blocului sunt disponibile și corecte",
       "realWork2": "Participare umană: dovedești un-cont-per-persoană pentru a opri boții și spam-ul",
@@ -1155,7 +1363,7 @@
       "distribution": "Cum sunt distribuite recompensele",
       "newTokens": "Tokeni UMT noi sunt creați și împărțiți cu participanții verificați de telefon (nu cu validatorii)",
       "fees": "O parte din comisioane și bid-uri builder este împărțită cu sentinelii de telefon pentru finalizarea blocurilor",
-      "treasury": "O parte mică finanțează mentenanță și programe de stabilitate",
+      "treasury": "Unele comisioane pot susține mentenanța ecosistemului (de ex., audituri și software de referință) prin guvernanță transparentă, acolo unde este activat.",
       "whyDifferent": "De ce este diferit",
       "btcProblem": "Bitcoin recompensează mineri specializați (capital-intensiv)",
       "ethProblem": "Ethereum recompensează stakeri mari (capital-intensiv)",
@@ -1192,19 +1400,23 @@
       "example1": "1 ZAR1 ≈ 1 Rand sud-african",
       "example2": "1 USD1 ≈ 1 Dolar american",
       "example3": "1 NGN1 ≈ 1 Naira nigeriană",
-      "backed": "Emiși de parteneri",
-      "backedText": "Stablecoin-urile pe Umotu sunt emise de parteneri reglementați și proiectate să mențină valoare 1:1 cu rezerve. Emintenții publică proof-of-reserves și termeni de răscumpărare.",
+      "backed": "Emiși de terți",
+      "backedText": "Stablecoinii sunt emiși de furnizori independenți și sunt proiectați să urmărească o monedă (ca USD sau CAD). Fiecare stablecoin are propriile rezerve, termeni de răscumpărare, controale de actualizare și politici de risc (inclusiv posibilă înghețare). Citește divulgările emitentului.",
       "convert": "Convertire în cash",
-      "convertText": "Convertește prin bănci/exchange-uri partenere sau cheltuie direct unde este acceptat."
+      "convertText": "Poți schimba stablecoini on-chain, sau converti prin servicii terțe acolo unde este disponibil.",
+      "gas": "Folosirea stablecoinilor pentru taxe",
+      "gasText": "Unele portofele permit plata taxelor de rețea folosind stablecoini printr-un serviciu care convertește în tokenul nativ. Validatorii primesc în continuare tokenul nativ; gas-ul stabil este un nivel de comoditate.",
+      "preferredList": "Setări implicite ale portofelului",
+      "preferredListText": "Portofelul Umotu poate afișa o listă conservatoare implicită de stablecoini pentru plăți și servicii de taxe conform Umotu Stablecoin Standard (USS). Alte portofele pot suporta alți stablecoini."
     },
     "economics": {
       "title": "Economia UMT",
       "subtitle": "Cine primește ce și de ce",
-      "intro": "UMT are o ofertă fixă de 100 miliarde tokeni. Majoritatea este plătită utilizatorilor obișnuiți de telefon care ajută la menținerea onestă a rețelei.",
+      "intro": "UMT are o ofertă fixă de 100 miliarde tokeni. Cea mai mare parte este rezervată participanților de telefon în timp, distribuită de un controler de emisii bazat pe reguli.",
       "supply": "Ofertă & Distribuție",
       "supplyBullets": [
-        "Marea majoritate a ofertei de token-uri este rezervată pentru participanții prin telefon în timp și este eliberată prin Controlerul de Emisie. Controlerul de Emisie limitează emiterea zilnică la cel mult 0,01% din oferta rămasă, asigurând sustenabilitatea pe termen lung. Conform acestui program, aproximativ 68% din oferta totală rămâne după 10 ani, iar aproximativ 15% rămâne după 50 de ani.",
-        "O mică parte din ofertă este creată la lansare pentru scopuri specifice, inclusiv un airdrop pentru utilizatorii timpurii, o vânzare comunitară, alocarea fundației și o rezervă de urgență etc."
+        "Marea majoritate a ofertei este rezervată participanților de telefon și eliberată în timp prin intermediul unui Controler de Emisii. Controlerul limitează emiterea zilnică la cel mult 0,01% din oferta rămasă pentru a limita diluția.",
+        "La limita maximă (0,01% din oferta rămasă pe zi), aproximativ 69% din ofertă rămâne după 10 ani și aproximativ 16% rămâne după 50 de ani. Emiterea reală poate fi mai mică în funcție de regulile protocolului."
       ],
       "premine": "Alocare la Lansare (provizorie, supusă modificărilor la lansarea mainnet)",
       "premineTable": [
@@ -1226,13 +1438,13 @@
         }
       ],
       "emissions": "Recompense zilnice pentru telefoane",
-      "emissionsText": "În fiecare zi rețeaua poate emite maxim 0.01% din pool-ul rămas de emisii. Bugetăm acea sumă așa încât telefoanele verificate să țintească aproximativ 10 dolari/zi, ajustând cu numărul de participanți și condițiile pieței.",
+      "emissionsText": "Emisiile zilnice sunt limitate. Recompensele tale depind de participare, verificări de telefon reușite și condițiile pieței. Protocolul nu promite o sumă fixă.",
       "fees": "Comisioane & Sentineli",
       "feesText": "Ajutoarele Sentinel (opțional, avansat) câștigă o parte din comisioanele de tranzacție și bid-uri builder. Acesta este separat de emisiile zilnice.",
       "transparency": "Transparență",
       "transparencyText": "Programele de vesting și portofelele sunt publice. Cap-urile zilnice de emisie și plățile realizate sunt postate în aplicație.",
       "disclaimerTitle": "Reminder în limbaj simplu",
-      "disclaimerText": "Acesta nu este sfat de investiții. Recompensele depind de politica rețelei și participare. Aplicația nu garantează un venit fix."
+      "disclaimerText": "Acesta nu este sfat financiar. Recompensele sunt variabile și nu sunt garantate."
     },
     "contribute": {
       "title": "Cum să contribui",
@@ -1259,7 +1471,7 @@
       },
       "governance": {
         "title": "Alătură-te guvernanței",
-        "text": "Citește propuneri, discută deschis și votează în aplicație. Vocea ta ajută la ghidarea parametrilor rețelei și alocărilor de grant-uri.",
+        "text": "Citește propuneri, discută deschis și votează în aplicație. Voturile pot ghida setările implicite ale portofelului și grant-urile ecosistemului. Unele reguli ale protocolului sunt fixe și nu sunt supuse votului.",
         "cta": "Deschide guvernanță",
         "url": "umotu://vote"
       },
@@ -1274,37 +1486,38 @@
     "decentralization": {
       "title": "De ce descentralizare",
       "subtitle": "Fără punct unic de control",
-      "intro": "Descentralizarea înseamnă că nicio companie sau guvern nu poate închide rețeaua sau confisca fondurile tale.",
+      "intro": "Descentralizarea înseamnă că rețeaua este operată de mulți participanți independenți. Portofelul tău este în auto-custodie — doar cheile tale pot muta fondurile.",
       "benefits": "Beneficii pentru tine",
       "benefit1": "Întotdeauna pornită: disponibilitate 24/7",
-      "benefit2": "Comisioane mai mici: comisioane mici de rețea în loc de 3–5% card",
+      "benefit2": "Comisioane adesea mai mici: comisioane mici de rețea în loc de comisioane tipice de card",
       "benefit3": "Fără granițe: trimite valoare global",
-      "benefit4": "Rezistent la cenzură: cheile tale, banii tăi",
+      "benefit4": "Mai rezistent la cenzură: nicio companie singură nu controlează portofelul tău",
       "benefit5": "Transparent: oricine poate verifica cum funcționează sistemul",
       "howWorks": "Cum funcționează",
-      "howWorksText": "Validatorii propun blocuri la fiecare ~2 secunde. Telefoanele (ca al tău) verifică și finalizează cu verificări lightweight. Multe contribuții mici se adună la securitate puternică."
+      "howWorksText": "Validatorii propun blocuri la fiecare ~2 secunde. Telefoanele (ca al tău) verifică disponibilitatea datelor și ajută la finalizarea blocurilor cu verificări lightweight. Multe contribuții mici se adună la securitate puternică."
     },
     "noCompany": {
-      "title": "Fără companie, fără clienți",
-      "subtitle": "Înțelege modelul",
-      "intro": "Nu există 'Umotu, Inc.' care controlează protocolul. Umotu este un set deschis de reguli pe care oricine le poate folosi.",
+      "title": "Protocol deschis, auto-custodie",
+      "subtitle": "Înțelege ce este Umotu (și ce nu este)",
+      "intro": "Nu există o singură companie care controlează protocolul. Umotu este un set deschis de reguli pe care oricine îl poate folosi, iar multe echipe independente pot construi portofele și servicii.",
       "notCompany": "Ce NU este Umotu",
-      "notCompany1": "NU o companie cu conturi de clienți",
-      "notCompany2": "NU o bancă sau transmitător de bani",
+      "notCompany1": "NU o bancă custodială care deține fondurile clienților",
+      "notCompany2": "NU poate reseta portofelul sau reversa tranzacții",
       "notCompany3": "NU controlat de o singură entitate",
-      "notCompany4": "NU poate reversa tranzacții",
+      "notCompany4": "NU un program de venit garantat",
       "whatIs": "Ce ESTE Umotu",
-      "whatIs1": "Un protocol: ca email-ul sau web-ul — reguli deschise, interoperabile",
-      "whatIs2": "Prioritate telefon: rulează cu ajutor de la smartphone-uri obișnuite",
+      "whatIs1": "Un protocol: reguli deschise și interoperabile (ca email-ul sau web-ul)",
+      "whatIs2": "Participare phone-first: smartphone-urile pot ajuta la securizarea rețelei",
       "whatIs3": "Comunitar: ești participant, nu client",
+      "whatIs4": "Fără permisiuni: oricine poate construi pe sau folosi protocolul",
       "foundation": "Fundația Umotu",
-      "foundationIntro": "O nonprofit care susține ecosistemul (aplicații de referință, docs, programe comunitare) dar nu controlează protocolul.",
+      "foundationIntro": "O organizație nonprofit care susține ecosistemul (aplicații de referință, educație și coordonare) dar nu controlează protocolul.",
       "foundationTask1": "Menține aplicația mobilă & explorer ca implementări de referință",
       "foundationTask2": "Operă unele infrastructuri publice (alții pot rula ale lor)",
-      "foundationTask3": "Coordonează guvernanța comunitară (știri, voturi)",
-      "foundationTask4": "Revizuiește și listează stablecoini suportate",
+      "foundationTask3": "Coordonează voturi și discuții comunitare în aplicație (acolo unde este cazul)",
+      "foundationTask4": "Publică Umotu Stable Accord și liste conservative implicite pentru portofelul Umotu (alții pot suporta alți stablecoini)",
       "foundationTask5": "Publică ghiduri de educație & siguranță",
-      "foundationNote": "Fundația nu poate accesa portofelul tău și nu poate reversa tranzacții."
+      "foundationNote": "Fundația nu poate accesa portofelul tău și nu poate reversa tranzacții. Setările implicite ale portofelului nu restricționează ce este posibil pe protocol."
     },
     "scamPrevention": {
       "title": "Evită înșelătoriile",
@@ -1328,22 +1541,22 @@
       "action4": "Blochează și raportează"
     },
     "airdrop": {
-      "title": "Airdrop Testnet",
-      "subtitle": "Utilizatorii timpurii sunt recunoscuți",
-      "intro": "Ești timpuriu! Umotu este în testnet. Participanții activi la testnet pot primi o alocare la lansarea mainnet.",
+      "title": "Recunoaștere Testnet",
+      "subtitle": "Participarea timpurie la testnet poate fi recunoscută",
+      "intro": "Umotu este în testnet. Participanții activi la testnet pot primi o alocare de recunoaștere la lansarea mainnet. Aceasta nu este garantată și poate fi zero.",
       "howToQualify": "Cum să te califici",
       "step1": "Creează un portofel în aplicație",
       "step2": "Completează verificarea umană (Proof of Human)",
       "step3": "Folosește aplicația regulat în timpul testnet",
       "whenAirdrop": "Când este airdrop-ul?",
       "whyTestnet": "Testnet este esențial: utilizatorii învață securitatea portofelului, și sistemul este testat pentru securitate, robustețe și eficiență înainte de mainnet.",
-      "timeline": "Mainnet este așteptat în Q1 sau Q2 2026. Airdrop-ul va avea loc în jurul lansării mainnet.",
+      "timeline": "Calendarul mainnet și orice detalii de recunoaștere vor fi anunțate în aplicație.",
       "howMuch": "Cât vei primi?",
-      "totalPool": "Pool total airdrop: 1,000,000,000 UMT tokeni. Partea ta depinde de total participanți și prețul UMT la lansare.",
-      "scenario2": "1M utilizatori: ~1,000 UMT per utilizator, preț așteptat ~$1, valoare airdrop ~$1,000",
-      "scenario3": "10M utilizatori: ~100 UMT per utilizator, preț așteptat ~$20, valoare airdrop ~$2,000",
-      "scenario4": "100M utilizatori: ~10 UMT per utilizator, preț așteptat ~$300, valoare airdrop ~$3,000",
-      "disclaimer": "Acestea sunt proiecții doar, nu garanții. Valorile reale depind de condițiile pieței și regulile programului.",
+      "totalPool": "Doar exemplu: dacă se creează un pool de recunoaștere de 1.000.000.000 UMT, partea ta depinde de participanții eligibili și regulile programului. Cu cât participi mai devreme, cu atât partea ta e mai mare.",
+      "scenario2": "Doar exemplu: 1M utilizatori eligibili → ~1.000 UMT în medie fiecare (înainte de ponderare)",
+      "scenario3": "Doar exemplu: 10M utilizatori eligibili → ~100 UMT în medie fiecare (înainte de ponderare)",
+      "scenario4": "Doar exemplu: 100M utilizatori eligibili → ~10 UMT în medie fiecare (înainte de ponderare)",
+      "disclaimer": "Doar exemple — nu garanții. Orice alocare de recunoaștere depinde de regulile programului și condițiile pieței, și poate fi zero.",
       "whatYouGet": "Ce primești",
       "reward": "La mainnet, portofelul tău de testnet poate primi tokeni reali bazat pe participare și reguli program.",
       "note": "Notă: Tokenii testnet nu au valoare. Orice alocare mainnet este determinată de politica programului la lansare. Toate știrile despre airdrop vor fi publicate doar în această aplicație."
@@ -1361,7 +1574,21 @@
       "tips": "Sfaturi pro",
       "tip1": "Permite acces în fundal așa încât verificările să ruleze",
       "tip2": "Verifică zilnic pentru a vedea recompensele",
-      "tip3": "Invită prieteni — mai mulți utilizatori fac rețeaua mai puternică"
+      "tip3": "Invită prieteni — mai mulți participanți pot face rețeaua mai puternică"
+    },
+    "governance": {
+      "title": "Guvernanță și voturi",
+      "subtitle": "Cum funcționează votarea în aplicație",
+      "intro": "Umotu suportă sondaje și voturi în aplicație pentru ca participanții să poată ajuta la orientarea anumitor decizii ale ecosistemului.",
+      "whatVotesDo": "Ce pot face voturile",
+      "whatVotesDo1": "Recomandarea setărilor implicite ale portofelului (de exemplu, ce stablecoini apar ca opțiuni preferate de plată sau gas stabil)",
+      "whatVotesDo2": "Semnalarea preferinței comunității privind propunerile și prioritățile",
+      "whatVotesDo3": "Aprobarea anumitor granturi sau bugete, acolo unde este posibil",
+      "whatVotesCannotDo": "Ce nu pot face voturile",
+      "whatVotesCannotDo1": "Accesarea portofelului dvs., mutarea fondurilor sau resetarea frazei de recuperare",
+      "whatVotesCannotDo2": "Inversarea tranzacțiilor sau înghețarea portofelului cu auto-custodie",
+      "whatVotesCannotDo3": "Modificarea politicii monetare fixe în afara regulilor protocolului",
+      "note": "Unele sondaje pot fi simulate sau consultative în funcție de etapa rețelei. Citiți întotdeauna detaliile propunerii și condițiile de activare."
     }
   },
   "common": {
@@ -1410,6 +1637,7 @@
   "poh_title": "Verificare uman",
   "continue": "Continuă",
   "or": "SAU",
+  "version": "Versiune",
   "seedReveal": {
     "title": "Frază de recuperare",
     "intro": "Fraza de recuperare este singurul mod de a restaura portofelul dacă pierzi accesul la acest dispozitiv. Scrie-o și păstreaz-o securizat offline.",

@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 $ dziennie — dla wszystkich, wszędzie"
+    "tagline": "Otwarte uczestnictwo, codzienne nagrody"
   },
   "navigation": {
     "home": "Strona główna",
@@ -38,6 +38,9 @@
       "changeChoice": "Zmień wybór",
       "requiresLanguage": "Najpierw wybierz język",
       "requiresWallet": "Najpierw utwórz portfel"
+    },
+    "daSampling": {
+      "staleHint": "Uruchom próbkowanie teraz, aby zapewnić sobie uprawnienie do codziennych nagród."
     }
   },
   "earnings": {
@@ -118,13 +121,15 @@
     "manual": {
       "title": "Ręczne odbieranie",
       "description": "Jeśli potrzebujesz środków wcześniej, odbierz następną dostępną nagrodę teraz. Ręczne odbieranie używa gazu z twojego portfela. Automatyczne odbieranie jest tańsze, jeśli poczekasz. Jeśli twój portfel nie ma środków, włącz automatyczne odbieranie lub doładuj natywny gaz przed ręcznym odbieraniem.",
-      "dayLabel": "Dzień nagrody",
       "claimButton": "Odbierz teraz",
       "claiming": "Odbieranie...",
+      "cancelling": "Anulowanie odbierania...",
+      "cancelled": "Odbieranie anulowane.",
+      "cancelButton": "Anuluj odbieranie",
       "success": "Odbieranie zgłoszone",
       "successWithId": "Odbieranie zgłoszone (id: {{id}})",
       "error": "Nie udało się odebrać",
-      "noProof": "Dowód nagrody nie został jeszcze opublikowany. Spróbuj ponownie po udostępnieniu dzisiejszego snapshot'a.",
+      "noProof": "Nie znaleziono dowodu nagrody dla tego portfela/dnia (lub nie był uprawniony w tym dniu). Spróbuj ponownie po udostępnieniu dzisiejszego snapshot'a.",
       "unauthorized": "Autoryzacja relayera nie powiodła się. Spróbuj ponownie lub skontaktuj się z pomocą techniczną.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -136,9 +141,22 @@
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "remainingAfter": "+{{days}} więcej po tej partii",
+      "calendarVsEligible": "{{eligible}} kwalifikujących się z {{calendar}} dni kalendarzowych",
+      "showMissingDays": "Pokaż brakujące dni ({{count}})",
+      "hideMissingDays": "Ukryj brakujące dni",
+      "noMissingDaysLoaded": "Polityka nie zwróciła jeszcze szczegółów brakujących dni.",
+      "moreMissingDays": "i jeszcze {{count}} dni",
+      "missingDaysHint": "Brakujący dzień oznacza brak próbkowania/dowodu DA dla tego dnia UTC.",
       "batchSuccess": "{{count}} dni odebrano pomyślnie",
+      "fallbackPaidInNative": "zapłacono w UMT: stablecoin tymczasowo niedostępny",
       "claimingProgress": "Odbieranie {{claimed}}/{{total}}...",
-      "claimAllButton": "Odbierz wszystkie {{count}} dni"
+      "claimAllButton": "Odbierz wszystkie {{count}} dni",
+      "claimingDay": "Przetwarzanie dnia {{day}}",
+      "stableNotConfigured": "Wypłata w stablecoinie nie jest dostępna. Proszę wybrać UMT lub skontaktować się z pomocą techniczną.",
+      "insufficientGas": "Niewystarczające saldo na gas. Proszę doładować portfel natywnymi tokenami.",
+      "userRejected": "Transakcja została anulowana.",
+      "networkError": "Błąd sieci. Sprawdź połączenie i spróbuj ponownie.",
+      "alreadyClaimed": "Te nagrody zostały już odebrane."
     },
     "timezone": {
       "title": "Wybierz strefę czasową",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "Książka adresowa",
       "addContact": "Dodaj kontakt",
-      "nameLabel": "Nazwa lub etykieta",
+      "nameLabel": "Nazwa",
       "walletAddress": "Adres portfela (0x...)",
       "savedContacts": "Zapisane kontakty",
       "noContacts": "Nie zapisano jeszcze kontaktów.",
       "addForQuickSending": "Dodaj kontakty dla szybkiego wysyłania.",
       "enterValidAddress": "Wprowadź prawidłowy adres",
       "addLabel": "Dodaj etykietę",
-      "save": "Zapisz"
+      "labelAlreadyExists": "Ta etykieta już istnieje",
+      "tagOptional": "Tag (opcjonalnie)",
+      "save": "Zapisz",
+      "editContact": "Edytuj kontakt",
+      "tags": "Tagi",
+      "noTagsYet": "Nie dodano jeszcze tagów",
+      "newTagPlaceholder": "Wprowadź nazwę tagu...",
+      "addTag": "Dodaj",
+      "existingTags": "Lub dodaj istniejący tag:",
+      "deleteContact": "Usuń kontakt",
+      "confirmDeleteTitle": "Usunąć kontakt?",
+      "confirmDeleteMessage": "To usunie {{label}} z Twojej książki adresowej."
     },
     "settings": {
       "title": "Ustawienia portfela",
@@ -245,7 +274,8 @@
         "clipboardWarning": "Schowek może być odczytywany przez inne aplikacje. Zostanie automatycznie wyczyszczony po 30 s.",
         "verifyForKey": "Zweryfikuj, aby pokazać klucz prywatny",
         "verifyForSeed": "Zweryfikuj, aby pokazać frazę odzyskiwania",
-        "verifyDescription": "Wprowadź hasło lub PIN, aby ujawnić wrażliwe informacje portfela."
+        "verifyDescription": "Wprowadź hasło lub PIN, aby ujawnić wrażliwe informacje portfela.",
+        "walletNotLoaded": "Nie załadowano portfela. Najpierw zaimportuj lub utwórz portfel."
       },
       "import": {
         "title": "Importuj portfel",
@@ -256,7 +286,8 @@
         "keyPlaceholder": "Wprowadź klucz prywatny 0x…",
         "importButton": "Importuj portfel",
         "importing": "Importowanie...",
-        "success": "Portfel zaimportowany pomyślnie!"
+        "success": "Portfel zaimportowany pomyślnie!",
+        "saveFailed": "Import portfela powiódł się, ale zapisanie na tym urządzeniu nie powiodło się."
       },
       "dangerZone": {
         "title": "Strefa niebezpieczna",
@@ -530,6 +561,7 @@
       "deleteContact": "Usuń Kontakt",
       "addressNotSaved": "Adres nie zapisany",
       "addLabel": "Dodaj etykietę",
+      "labelAlreadyExists": "Ta etykieta już istnieje",
       "enterValidAddress": "Najpierw wprowadź prawidłowy adres",
       "saved": "Zapisano",
       "save": "Zapisz"
@@ -547,6 +579,7 @@
       "noRecipients": "Nie dodano jeszcze odbiorców",
       "addFromTagOrBook": "Dodaj z tagu lub książki",
       "invalidAddress": "Nieprawidłowy adres: {{address}}",
+      "tooManyRecipients": "Wysyłka grupowa obsługuje do {{max}} odbiorców.",
       "invalidAmount": "Nieprawidłowa kwota dla {{recipient}}",
       "totalExceedsBalance": "Suma przekracza saldo",
       "sendingTo": "Wysyłanie do {{count}} odbiorcy",
@@ -569,6 +602,18 @@
       "failedStatus": "Nieudane",
       "details": "Szczegóły Transferu Wsadowego",
       "total": "Suma",
+      "hongbao": {
+        "short": "Hongbao",
+        "total": "Suma Hongbao",
+        "helper": "Ustaw stałą sumę, a losowo rozdzielimy kwoty dla każdego odbiorcy w następnym kroku.",
+        "random": "Losowy",
+        "autoSplit": "Automatyczny podział",
+        "generated": "Wygenerowano losowy podział",
+        "needTwoRecipients": "Hongbao wymaga co najmniej 2 odbiorców.",
+        "amountTooSmall": "Suma jest za mała dla {{count}} odbiorców. Minimum to {{min}} {{symbol}}.",
+        "generateFailed": "Nie udało się wygenerować losowych kwot.",
+        "disabled": "Tryb Hongbao jest teraz wyłączony."
+      },
       "tagPicker": {
         "title": "Wybierz Tag",
         "noTags": "Brak dostępnych tagów",
@@ -647,19 +692,48 @@
       "type": "Typ",
       "to": "Do",
       "from": "Od",
+      "address": "Adres",
       "token": "Token",
       "block": "Blok",
       "gasCost": "Koszt gazu",
+      "balanceAfter": "Saldo po tx",
+      "balanceSource": "Źródło salda",
+      "balanceSourceVerified": "Zweryfikowane on-chain",
+      "balanceSourceVerifying": "Szacunkowe (weryfikacja on-chain...)",
+      "balanceSourceEstimatedRecent": "Szacunkowe z najnowszego snapshotu salda",
+      "balanceSourceEstimatedStale": "Szacunkowe z przestarzałego snapshotu salda",
+      "balanceSourceEstimatedDelayed": "Szacunkowe (weryfikacja on-chain opóźniona)",
+      "balanceSnapshotAge": "Wiek snapshotu",
+      "balanceReconciledDiff": "Uzgodniona różnica",
+      "balanceVerifyNote": "Notatka weryfikacji",
+      "balanceVerifyUnexpected": "Weryfikacja opóźniona. Pokazano szacunkowe saldo.",
+      "unavailable": "Niedostępne",
       "hash": "Hash",
       "source": "Źródło",
       "balanceDetected": "Wykryto saldo",
       "inferredNote": "Ta transakcja została wykryta na podstawie zmiany salda. Szczegóły on-chain nie są dostępne."
     },
+    "batch": {
+      "title": "Szczegóły Transferu Wsadowego",
+      "badge": "WSAD",
+      "send": "Wyślij Wsadowo",
+      "recipients": "Odbiorcy",
+      "recipientCount": "{{count}} odbiorca",
+      "recipientCount_plural": "{{count}} odbiorców",
+      "successful": "Pomyślnie",
+      "successOf": "{{success}} z {{total}}",
+      "sentStatus": "Wysłano",
+      "failedStatus": "Nieudane",
+      "successFail": "{{success}} pomyślnie, {{fail}} nieudanych",
+      "toRecipients": "do {{count}} odbiorcy",
+      "toRecipients_plural": "do {{count}} odbiorców"
+    },
     "time": {
       "justNow": "Przed chwilą",
       "minsAgo": "{{count}} min temu",
       "hoursAgo": "{{count}} godz. temu",
-      "daysAgo": "{{count}} dni temu"
+      "daysAgo": "{{count}} dni temu",
+      "suffixAgo": "temu"
     }
   },
   "settings": {
@@ -734,6 +808,13 @@
       "clearCache": "Wyczyść pamięć podręczną",
       "cacheCleared": "Pamięć podręczna wyczyszczona! Uruchom ponownie, aby zastosować."
     },
+    "hongbaoDebug": {
+      "title": "Konfiguracja Hongbao (Debug)",
+      "description": "Wyczyść lokalną pamięć podręczną sezonu Hongbao i wymuś odświeżenie przy następnym uruchomieniu aplikacji.",
+      "clearConfigCache": "Wyczyść pamięć podręczną Hongbao",
+      "cacheCleared": "Pamięć podręczna Hongbao wyczyszczona",
+      "cacheClearFailed": "Nie udało się wyczyścić pamięci podręcznej Hongbao"
+    },
     "chainGuardian": {
       "title": "Chain Guardian",
       "description": "Pomóż zabezpieczyć blockchain, utrzymując telefon online. Wykonaj co najmniej jedno zadanie samplingu dziennie, aby zachować prawo do nagród.",
@@ -757,7 +838,9 @@
         "active": "Aktywne",
         "inactive": "Nieaktywne",
         "paused": "Wstrzymane"
-      }
+      },
+      "iosBackgroundHint": "iOS może wstrzymać próbkowanie w tle. Otwieraj aplikację od czasu do czasu lub dotknij Uruchom teraz, aby pozostać aktywnym.",
+      "runNowNoData": "Brak danych (ograniczenia baterii/WiFi lub brak przypisań)."
     },
     "permissions": {
       "title": "Uprawnienia",
@@ -767,12 +850,87 @@
       "noConnections": "Brak podłączonych aplikacji",
       "revokeAccess": "Cofnij dostęp",
       "lastUsed": "Ostatnio używane"
+    },
+    "transfer": {
+      "title": "Transfer danych urządzenia",
+      "description": "Przenieś ustawienia aplikacji i kontakty na nowy telefon, skanując kod QR transferu.",
+      "warning": "Przesyła to tylko dane aplikacji. Fraza odzyskiwania/klucz prywatny portfela NIE są uwzględnione. Zaimportuj portfel osobno na nowym telefonie.",
+      "preparing": "Przygotowywanie...",
+      "showQr": "Pokaż QR transferu",
+      "scanQr": "Skanuj QR transferu",
+      "exportTitle": "QR transferu",
+      "exportHint": "Na nowym telefonie otwórz Ustawienia -> Transfer danych urządzenia -> Skanuj QR transferu, następnie zeskanuj ten kod.",
+      "exportHintParts": "Na nowym telefonie zeskanuj każdą stronę po kolei (od 1 do {{total}}), następnie wprowadź 6-cyfrowy kod.",
+      "exportReady": "QR transferu gotowy ({{count}} elementów)",
+      "exportReadyParts": "QR transferu gotowy ({{count}} elementów, {{parts}} stron QR). Skanuj strony po kolei.",
+      "exportFailed": "Nie udało się przygotować transferu: {{message}}",
+      "prevPage": "Poprzednia",
+      "nextPage": "Następna",
+      "confirmCodeLabel": "6-cyfrowy kod potwierdzenia",
+      "copyCode": "Kopiuj kod transferu",
+      "importTitle": "Skanuj QR transferu",
+      "importHint": "Skieruj kamerę na QR transferu wyświetlany na starym telefonie.",
+      "importing": "Importowanie...",
+      "importNow": "Importuj dane",
+      "imported": "Zaimportowano {{count}} elementów. Fraza odzyskiwania/klucz prywatny portfela NIE są przesyłane.",
+      "importFailed": "Import transferu nie powiódł się: {{message}}",
+      "confirmPrompt": "QR zeskanowany. Wprowadź 6-cyfrowy kod potwierdzenia wyświetlany na starym telefonie.",
+      "confirmCodeRequired": "Wprowadź 6-cyfrowy kod potwierdzenia ze starego telefonu.",
+      "confirmCodeMismatch": "Kod potwierdzenia nie pasuje. Spróbuj ponownie.",
+      "rescan": "Skanuj ponownie",
+      "scanProgress": "Zeskanowano QR {{current}}/{{total}}",
+      "scanContinue": "Kontynuuj skanowanie pozostałych stron po kolei do zakończenia.",
+      "restartScan": "Uruchom ponownie skanowanie",
+      "chunkMismatch": "Strony QR transferu nie pasują. Uruchom ponownie skanowanie od strony 1.",
+      "cameraNeeded": "Wymagany dostęp do kamery",
+      "cameraDescription": "Włącz uprawnienie kamery, aby zeskanować kod QR transferu.",
+      "allowCamera": "Zezwól na kamerę",
+      "openSettings": "Otwórz ustawienia",
+      "pasteCode": "Wklej kod transferu",
+      "pasteTitle": "Wklej kod transferu",
+      "pasteHint": "Jeśli skanowanie kamerą jest trudne, wklej kod transferu skopiowany ze starego telefonu.",
+      "pastePlaceholder": "UMOTU_TRANSFER:...",
+      "exportHintRelay": "Na nowym telefonie zeskanuj ten jeden kod, aby pobrać pakiet transferu, a następnie wprowadź 6-cyfrowy kod potwierdzenia.",
+      "relayReady": "Duży transfer zoptymalizowany: zeskanuj jeden QR, aby pobrać {{count}} elementów, a następnie wprowadź 6-cyfrowy kod.",
+      "relayFallback": "Transfer w chmurze niedostępny ({{message}}). Powrót do wielostronicowego QR.",
+      "relayFetching": "Pobieranie danych transferu...",
+      "relayFetched": "Dane transferu pobrane. Przetwarzanie..."
+    },
+    "integrityDebug": {
+      "title": "Atestacja aplikacji (Debugowanie)",
+      "description": "Pobierz token atestacji urządzenia, aby potwierdzić, że App Attest jest aktywny.",
+      "fetch": "Pobierz atestację",
+      "fetching": "Pobieranie...",
+      "copy": "Kopiuj payload",
+      "copyNonce": "Kopiuj nonce",
+      "toastFetchSuccess": "Atestacja aplikacji pobrana",
+      "toastFetchError": "Atestacja aplikacji nie powiodła się",
+      "toastCopy": "Atestacja skopiowana",
+      "toastCopyNonce": "Nonce skopiowany",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "pusty payload",
+      "summaryStub": "token stub (brak modułu natywnego?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (nieobsługiwany)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "błąd: {{message}}",
+      "verify": "Zweryfikuj na serwerze",
+      "verifying": "Weryfikacja...",
+      "verifyMissing": "błąd: brak payload lub nonce",
+      "verifyOk": "weryfikacja serwera: ok",
+      "verifyFail": "weryfikacja serwera nie powiodła się: {{error}}",
+      "toastVerifyOk": "Weryfikacja serwera ok",
+      "toastVerifyFail": "Weryfikacja serwera nie powiodła się"
     }
   },
   "onboarding": {
     "welcome": {
       "title": "Witaj w Umotu",
-      "subtitle": "10 $ dziennie — dla wszystkich, wszędzie",
+      "subtitle": "Otwarte uczestnictwo, codzienne nagrody",
       "getStarted": "Zacznij"
     },
     "language": {
@@ -812,6 +970,40 @@
       "validFor_plural": "Ważny przez ~{{days}} dni",
       "expired": "Weryfikacja wygasła lub nie znaleziona.",
       "expiredDetail": "Uruchom ponownie liveness, aby odświeżyć credential."
+    },
+    "capture": {
+      "title": "Przechwytywanie Twarzy",
+      "hint": "Wycentruj twarz i nie ruszaj się.",
+      "tipsTitle": "Wskazówki przechwytywania",
+      "tipFace": "Trzymaj twarz w centrum i wypełnij kadr (≥ {{pct}}%).",
+      "tipLight": "Używaj równomiernego oświetlenia i unikaj silnego światła z tyłu.",
+      "tipHold": "Nie ruszaj się i patrz w kamerę przez {{seconds}}s.",
+      "tipRemove": "Zdejmij czapki, maski lub unikaj silnych cieni.",
+      "errorShort": "Przechwytywanie zbyt krótkie. Nie ruszaj się przez {{seconds}}s.",
+      "errorTooSmall": "Przechwytywanie nie powiodło się. Spróbuj ponownie.",
+      "errorFileTooSmall": "Plik wideo jest za mały. Nie ruszaj się przez całe przechwytywanie i popraw oświetlenie.",
+      "errorBitrate": "Jakość wideo jest za niska. Popraw oświetlenie i trzymaj telefon stabilnie.",
+      "errorLowQuality": "Jakość przechwytywania za niska. Użyj lepszego oświetlenia lub kamery wyższej jakości.",
+      "errorCameraPermission": "Wymagane uprawnienia kamery. Włącz w Ustawieniach i spróbuj ponownie.",
+      "errorCameraUnavailable": "Kamera niedostępna na tym urządzeniu. Zamknij inne aplikacje kamery i spróbuj ponownie.",
+      "errorRecordingFailed": "Nagrywanie wideo nie powiodło się. Spróbuj ponownie z lepszym oświetleniem.",
+      "errorStorage": "Za mało miejsca na nagranie wideo. Zwolnij miejsce i spróbuj ponownie.",
+      "errorFileAccess": "Nie można odczytać nagranego wideo. Nagraj ponownie.",
+      "errorDeviceAttest": "Sprawdzenie bezpieczeństwa urządzenia nie powiodło się. Zaktualizuj usługi Google Play i spróbuj ponownie.",
+      "errorCooldown": "Za dużo prób. Poczekaj przed kolejną próbą.",
+      "errorChallenge": "Aktywne wyzwanie nie zostało ukończone. Nagraj ponownie i postępuj zgodnie z instrukcjami.",
+      "errorUpload": "Przesyłanie nie powiodło się. Sprawdź połączenie i spróbuj ponownie.",
+      "errorUploadForbidden": "URL przesyłania odrzucony (wygasł lub niezgodność podpisu). Nagraj ponownie i spróbuj ponownie.",
+      "errorUploadTimeout": "Przekroczono czas przesyłania. Sprawdź połączenie i spróbuj ponownie.",
+      "errorUploadServer": "Usługa przesyłania tymczasowo niedostępna. Spróbuj wkrótce ponownie.",
+      "errorSessionExpired": "Sesja wygasła. Nagraj ponownie.",
+      "errorUnexpected": "Przechwytywanie nie powiodło się. Spróbuj ponownie.",
+      "retryUpload": "Ponów Przesyłanie",
+      "retake": "Nagraj Ponownie",
+      "recording": "Nagrywanie...",
+      "uploading": "Przesyłanie...",
+      "processing": "Przetwarzanie...",
+      "start": "Rozpocznij Przechwytywanie"
     }
   },
   "sentinelSettings": {
@@ -906,25 +1098,25 @@
     "pohDescription": "Zweryfikuj swoją człowieczeństwo za pomocą inLyf, aby odblokować codzienne nagrody.",
     "vision": {
       "title": "Nasza wizja",
-      "tagline": "10 $ dziennie — dla wszystkich, wszędzie",
-      "description": "Umotu buduje infrastrukturę dla świata, w którym każdy może uczestniczyć w globalnej gospodarce — niezależnie od miejsca zamieszkania czy banku.",
+      "tagline": "Otwarte uczestnictwo, codzienne nagrody",
+      "description": "Umotu to otwarty protokół zaprojektowany, aby ułatwić uczestnictwo w globalnej gospodarce cyfrowej: otwarty dostęp, szybkie rozliczenia i opcjonalne stablecoiny do codziennych transakcji.",
       "readMore": "Przeczytaj pełną wizję",
       "pillars": {
-        "title": "Trzy główne zasady",
+        "title": "Główne zasady",
         "ubi": {
-          "title": "10 dolarów/dzień, dla wszystkich na całym świecie",
-          "description": "Uniwersalny dochód podstawowy jako zarobione nagrody za zabezpieczanie sieci. Każdy z telefonem może uczestniczyć i zarabiać."
+          "title": "Otwarte uczestnictwo, codzienne nagrody",
+          "description": "Codzienne nagrody są uzyskiwane przez uczestnictwo w bezpieczeństwie sieci. Nagrody są zmienne i nie gwarantowane."
         },
         "capital": {
-          "title": "Kapitał porusza się swobodnie",
-          "description": "Prawie zerowe tarcie dla płatności i transferów — transgranicznych lub lokalnych. Firmy płacą ~0,1% na pokrycie kosztów platformy, osoby fizyczne nic."
+          "title": "Przelewy z niskim tarciem",
+          "description": "Płatności i przelewy są zaprojektowane tak, aby były szybkie i niskotarciowe. Opłaty i wydajność zależą od warunków sieciowych i używanych aplikacji."
         },
         "sovereignty": {
-          "title": "Szanuj suwerenność monetarną",
-          "description": "Nie zastępujemy walut fiat — sprawiamy, że działają lepiej. Banki emitują stablecoiny powiązane z lokalną walutą. Polityka monetarna staje się skuteczniejsza dzięki szerszemu zasięgowi i mniejszemu tarciu."
+          "title": "Kompatybilny z lokalnym pieniądzem",
+          "description": "Umotu nie kontroluje polityki pieniężnej i nie zastępuje walut fiat. Stablecoiny na Umotu są emitowane przez podmioty trzecie i mają własne reguły i ryzyka."
         }
       },
-      "notReplacing": "Umotu nie konkuruje z bankami centralnymi. Budujemy lepszą infrastrukturę dla walut fiat: mniej tarcia, globalny dostęp oraz lepszą efektywność i odporność rynku."
+      "notReplacing": "Umotu to infrastruktura. Nie ustala polityki pieniężnej, nie gwarantuje bezpieczeństwa stablecoinów i nie interweniuje w celu osiągnięcia określonych rezultatów."
     },
     "building": {
       "title": "Budujemy ekosystem",
@@ -964,7 +1156,8 @@
           },
           "delivery": {
             "name": "Dostawy",
-            "description": "Zamawiaj jedzenie, zakupy lub paczki. Kurierzy zarabiają godziwe wynagrodzenie w stable tokenach."
+            "description": "Zamawiaj jedzenie, zakupy lub paczki. Kurierzy zarabiają godziwe wynagrodzenie w stable tokenach.",
+            "example": "Zamów lunch, zapłać lokalnym stablecoinem, kurier dostaje zapłatę natychmiast."
           },
           "publicTransit": {
             "name": "Transport publiczny",
@@ -977,7 +1170,8 @@
         "apps": {
           "hotels": {
             "name": "Hotele i pobyty",
-            "description": "Rezerwuj zakwaterowanie na całym świecie. Gospodarze akceptują stablecoiny, goście oszczędzają na opłatach."
+            "description": "Rezerwuj zakwaterowanie na całym świecie. Gospodarze akceptują stablecoiny, goście oszczędzają na opłatach.",
+            "example": "Zarezerwuj pokój na Bali za 40 $/noc. Gospodarz otrzymuje 39,96 $."
           },
           "flights": {
             "name": "Lot",
@@ -994,11 +1188,13 @@
         "apps": {
           "localMarket": {
             "name": "Lokalny rynek",
-            "description": "Kupuj i sprzedawaj lokalnie. Płatności QR czynią handel uliczny bezproblemowym."
+            "description": "Kupuj i sprzedawaj lokalnie. Płatności QR czynią handel uliczny bezproblemowym.",
+            "example": "Sprzedawca w Dżakarcie akceptuje USDC. Klient płaci, sprzedawca widzi środki natychmiast."
           },
           "ecommerce": {
             "name": "E-commerce",
-            "description": "Kupuj online od merchantów na całym świecie. Bez opłat kartowych, bez chargebacków."
+            "description": "Kupuj online od merchantów na całym świecie. Bez opłat kartowych, bez chargebacków.",
+            "example": "Kup elektronikę z Shenzhen. Zapłać stablecoinami, zaoszczędź 3% w porównaniu z kartą kredytową."
           },
           "marketplace": {
             "name": "Rynek peer-to-peer",
@@ -1011,7 +1207,8 @@
         "apps": {
           "remittance": {
             "name": "Przekazy pieniężne",
-            "description": "Wyślij pieniądze do domu. Odbiorcy mogą wypłacić na lokalną walutę lub trzymać cyfrowo."
+            "description": "Wyślij pieniądze do domu. Odbiorcy mogą wypłacić na lokalną walutę lub trzymać cyfrowo.",
+            "example": "Wyślij 200 $ z USA na Filipiny. Odbiorca otrzymuje ₱11 000+ zamiast ₱10 400."
           },
           "freelance": {
             "name": "Praca freelance",
@@ -1027,34 +1224,50 @@
     "business": {
       "title": "Buduj swój biznes na Umotu",
       "subtitle": "Uruchamiaj aplikacje z wbudowanymi płatnościami",
-      "description": "Twórz aplikacje, które wykorzystują ekosystem Umotu — miliony zweryfikowanych ludzi z codziennym dochodem, gotowych do transakcji. Bez problemów z integracją płatności.",
+      "description": "Buduj aplikacje z płatnościami on-chain i opcjonalnymi stablecoinami. Uczestnicy mogą zarabiać codzienne nagrody (zmienne) i dokonywać transakcji przy użyciu obsługiwanych aktywów.",
       "benefits": {
-        "noFees": "Prawie zerowe opłaty przetwarzania płatności — zatrzymuj 99,9% przychodu",
-        "verifiedUsers": "Wszyscy użytkownicy to zweryfikowani ludzie — zero botów czy oszustw",
-        "globalReach": "Dotrzyj do użytkowników w 190+ krajach od pierwszego dnia",
-        "instantPayments": "Natychmiastowe rozliczenia — bez 30-dniowych opóźnień płatności"
+        "noFees": "Niskie, przejrzyste opłaty — dokładne koszty zależą od warunków sieciowych",
+        "verifiedUsers": "Zweryfikowani uczestnicy — mniej aktywności botów i Sybil dzięki Proof of Human",
+        "globalReach": "Docieraj do uczestników globalnie (w zależności od dostępności)",
+        "instantPayments": "Szybkie rozliczenie on-chain — czas zależy od warunków sieciowych"
       },
       "exampleTitle": "Przykład użycia",
-      "exampleText": "Aplikacja ride-sharing na Umotu zatrzymuje 99,9% opłat vs 70% na tradycyjnych platformach. Kierowcy zarabiają więcej, pasażerowie płacą mniej.",
+      "exampleText": "Aplikacja ride-sharing może kierować płatności bezpośrednio między pasażerami a kierowcami, z przejrzystymi opłatami i niemal natychmiastowym rozliczeniem on-chain.",
       "docsButton": "Przeczytaj dokumentację",
       "buildButton": "Zacznij budować"
     },
     "bank": {
       "title": "Jesteś bankiem?",
       "subtitle": "Emituj stablecoiny na Umotu",
-      "description": "Licencjonowane instytucje finansowe mogą emitować stablecoiny lokalnej waluty na Umotu i wykorzystać rosnącą gospodarkę UBI z milionami użytkowników.",
+      "description": "Instytucje finansowe i firmy płatnicze mogą emitować stablecoiny na Umotu, aby obsługiwać użytkowników preferujących stabilne jednostki rozliczeniowe do codziennych transakcji.",
       "benefits": {
-        "reserves": "Zarabiaj yield na rezerwach: inwestuj w obligacje i niskiego ryzyka aktywa",
-        "mintRedeem": "Pobieraj opłaty za mint/redeem: zazwyczaj 0,1% za konwersje fiat ↔ stablecoin",
-        "users": "Dostęp do milionów codziennie aktywnych odbiorców UBI",
-        "global": "Rozszerz zasięg poza granice natychmiast",
-        "custody": "Twoje rezerwy, Twoja opieka: pełna kontrola nad aktywami backingowymi"
+        "reserves": "Zarządzanie rezerwami jest kontrolowane przez emitenta i podlega obowiązującym przepisom",
+        "mintRedeem": "Emitenci mogą ustalać opłaty mint/redeem według własnego uznania",
+        "users": "Dostęp do rosnącej bazy aktywnych uczestników",
+        "global": "Docieraj do użytkowników za granicą (w zależności od zgodności i dystrybucji)",
+        "custody": "Rezerwy i polityki kontrolowane przez emitenta"
       },
       "revenueModel": "Jak emitenci zarabiają",
-      "revenueNote": "Podobnie jak Tether i inni główni emitenci, przychód pochodzi z yield rezerw i opłat konwersyjnych. Z milionami użytkowników otrzymującymi codzienne UBI, wolumen mint/redeem może być znaczny.",
-      "futureNote": "Emitenci mogą również otrzymywać udział w opłatach transakcyjnych w przyszłości wraz z ewolucją protokołu.",
+      "revenueNote": "Ekonomia emitentów jest różna. Niektórzy emitenci generują przychody z yield rezerw i/lub opłat mint/redeem, w zależności od modelu i zobowiązań.",
+      "futureNote": "Nic w protokole nie gwarantuje przychodów emitenta. Przyszłe zmiany, jeśli takie nastąpią, muszą przejść proces zarządzania protokołem.",
       "learnMore": "Dowiedz się więcej",
       "applyButton": "Aplikuj teraz"
+    },
+    "stablesDocs": {
+      "title": "Standardy stablecoinów",
+      "subtitle": "Ustawienia domyślne dla aplikacji Fundacji Umotu (nie uprawnienie protokołu)",
+      "description": "Fundacja Umotu publikuje standardy używane do domyślnej obsługi stablecoinów w aplikacjach i usługach utrzymywanych przez Fundację. Nie ograniczają one transferów na poziomie protokołu ani portfeli zewnętrznych. Standardy nie eliminują ryzyka stablecoinów.",
+      "uss": {
+        "title": "Umotu Stablecoin Standard (USS)",
+        "description": "Minimalne kryteria ujawnień, rezerw i wykupu dla stablecoinów wyświetlanych jako domyślne opcje wypłaty i obsługiwanych w usługach stabilnego gasu (przez paymastery) w aplikacjach Fundacji Umotu.",
+        "button": "Czytaj USS"
+      },
+      "rdp": {
+        "title": "Polityka ujawniania ryzyk (RDP)",
+        "description": "Wskaźniki ryzyka oparte na regułach (np. zmienność FX, odchylenia pegu, ograniczenia wykupu i ryzyko techniczne) wyświetlane w aplikacjach Fundacji Umotu.",
+        "button": "Czytaj RDP"
+      },
+      "learnMore": "Zobacz standardy stablecoinów"
     }
   },
   "news": {
@@ -1110,36 +1323,36 @@
   },
   "learn": {
     "title": "Dowiedz się więcej",
-    "subtitle": "Wszystko, co musisz wiedzieć o Umotu",
+    "subtitle": "Otwarte uczestnictwo, codzienne nagrody",
     "featured": "WYRÓŻNIONE",
     "whatIs": {
       "title": "Czym jest Umotu?",
-      "subtitle": "10 $ dziennie — dla wszystkich, wszędzie",
-      "intro": "Umotu dąży do tego, aby każdy mógł zarabiać około 10 dolarów/dzień używając tylko smartfona. Bez drogiego sprzętu, bez specjalnych umiejętności, bez granic.",
+      "subtitle": "Otwarte uczestnictwo, codzienne nagrody",
+      "intro": "Umotu to otwarty protokół, w którym każdy może uczestniczyć za pomocą smartfona i zarabiać codzienne nagrody za pomoc w zabezpieczaniu sieci. Nagrody są zmienne i nie gwarantowane. Orientacyjnie protokół jest zaprojektowany wokół referencyjnego celu około 10 $/dzień na aktywnego uczestnika przy uruchomieniu, ale rzeczywiste nagrody mogą być znacznie niższe (w tym grosze dziennie) lub wyższe w zależności od uczestnictwa i warunków rynkowych.",
       "howDifferent": "Czym się różni?",
-      "noMiddleman": "Bez pośrednika: Interakcjonujesz bezpośrednio z siecią — bez konta bankowego",
-      "globalAccess": "Globalny dostęp: Działa wszędzie z internetem",
-      "youOwnIt": "Należy do Ciebie: Twój portfel, Twoje klucze, Twoja kontrola",
+      "noMiddleman": "Bez pośrednika: interagujesz z siecią bezpośrednio — bez wymaganej akceptacji konta",
+      "globalAccess": "Globalny dostęp: działa wszędzie, gdzie masz internet",
+      "youOwnIt": "Samodzielne przechowywanie: Twój portfel, Twoje klucze, Twoja kontrola",
       "vision": "Wizja",
-      "visionText": "Miliardy ludzi mogą pomagać utrzymywać publiczną księgę uczciwą i zarabiać na tym. Na Umotu telefony wykonują lekkie sprawdzenia, które czynią sieć godną zaufania.",
+      "visionText": "Miliony telefonów mogą pomagać utrzymywać publiczną księgę uczciwą. Telefony wykonują lekkie sprawdzenia (jak próbkowanie dostępności danych), które czynią sieć bardziej godną zaufania.",
       "nameOrigin": "Pochodzenie nazwy",
       "nameOriginText": "Umotu czerpie inspirację z języka Paʻumotu, polinezyjskiego. Używamy nazwy z szacunkiem jako przypomnienie, aby budować dla zwykłych ludzi."
     },
     "earn": {
       "title": "Jak zarabiasz",
-      "subtitle": "Twój telefon pracuje; Ty dostajesz płatność",
-      "intro": "Twój telefon wykonuje małe zadania, które pomagają wszystkim — potem dostajesz nagrodę.",
+      "subtitle": "Twój telefon uczestniczy; Ty zarabiasz nagrody",
+      "intro": "Twój telefon wykonuje małe sprawdzenia bezpieczeństwa, które pomagają sieci — a Ty zarabiasz nagrody.",
       "steps": "Trzy proste kroki",
       "step1": "1) Udowodnij, że jesteś człowiekiem: szybkie sprawdzenie liveness (i okazjonalne odświeżanie) zapewnia jedną konto na osobę.",
       "step2": "2) Pomagaj sieci: Twój telefon uruchamia próbkowane Data Availability (DA) i inne lekkie sprawdzenia w tle.",
-      "step3": "3) Zarabiaj codzienne nagrody: Jesteś płatny za tę pracę, z celem około 10 dolarów/dzień w zależności od polityki sieci.",
+      "step3": "3) Zarabiaj codzienne nagrody: nagrody są dystrybuowane automatycznie na podstawie udanego uczestnictwa. Kwoty są zmienne.",
       "localCurrency": "Płatne w Twojej walucie",
-      "localCurrencyText": "Wybierz token wypłaty: stablecoiny lokalnej waluty (gdzie dostępne) lub UMT. Kwoty celują w ~10 USD wartości i mogą się dostosowywać z udziałem i warunkami rynkowymi."
+      "localCurrencyText": "Wybierz aktywo wypłaty: UMT lub stablecoiny (gdzie dostępne). Stablecoiny są emitowane przez podmioty trzecie i mają własne ryzyka."
     },
     "whereMoney": {
-      "title": "Skąd biorą się te 10 dolarów?",
+      "title": "Skąd pochodzą nagrody?",
       "subtitle": "Zarabiasz, bo wykonujesz pracę",
-      "intro": "To pytanie nr 1. Krótka odpowiedź: bo dostarczasz usługę, której sieć potrzebuje.",
+      "intro": "To częste pytanie. Krótka odpowiedź: nagrody istnieją, ponieważ uczestnicy zapewniają bezpieczeństwo, a protokół emituje tokeny według reguł.",
       "realWork": "Twój telefon wykonuje realną pracę",
       "realWork1": "Próbkowanie Data Availability: Twój telefon sprawdza, że dane bloków są dostępne i poprawne",
       "realWork2": "Uczestnictwo ludzkie: Udowadniasz jedną-osobę-jedno-konto, aby zatrzymać boty i spam",
@@ -1150,7 +1363,7 @@
       "distribution": "Jak nagrody są dystrybuowane",
       "newTokens": "Nowe tokeny UMT są tworzone i dzielone z zweryfikowanymi uczestnikami telefonów (nie z walidatorami)",
       "fees": "Część opłat i bidów budowniczych jest dzielona z sentinelami telefonów za finalizowanie bloków",
-      "treasury": "Mała część finansuje bieżącą konserwację i programy stabilności",
+      "treasury": "Niektóre opłaty mogą wspierać utrzymanie ekosystemu (np. audyty i oprogramowanie referencyjne) poprzez przejrzyste zarządzanie, gdzie jest to włączone.",
       "whyDifferent": "Dlaczego to inne",
       "btcProblem": "Bitcoin nagradza specjalistycznych minerów (kapitałochłonne)",
       "ethProblem": "Ethereum nagradza dużych stakerów (kapitałochłonne)",
@@ -1187,19 +1400,23 @@
       "example1": "1 ZAR1 ≈ 1 rand południowoafrykański",
       "example2": "1 USD1 ≈ 1 dolar amerykański",
       "example3": "1 NGN1 ≈ 1 naira nigeryjska",
-      "backed": "Emitowane przez partnerów",
-      "backedText": "Stablecoiny na Umotu są emitowane przez regulowanych partnerów i zaprojektowane do utrzymywania wartości 1:1 z rezerwami. Emitenci publikują proof-of-reserves i warunki redemption.",
+      "backed": "Emitowane przez podmioty trzecie",
+      "backedText": "Stablecoiny są emitowane przez niezależnych dostawców i zaprojektowane do śledzenia waluty (jak USD lub CAD). Każdy stablecoin ma własne rezerwy, warunki wykupu, kontrole aktualizacji i polityki ryzyka (w tym możliwe zamrożenie). Przeczytaj ujawnienia emitenta.",
       "convert": "Konwersja na gotówkę",
-      "convertText": "Konwertuj przez partnerów banki/wymiany lub wydawaj bezpośrednio gdzie akceptowane."
+      "convertText": "Możesz wymieniać stablecoiny on-chain lub konwertować przez usługi podmiotów trzecich, gdzie dostępne.",
+      "gas": "Używanie stablecoinów na opłaty",
+      "gasText": "Niektóre portfele pozwalają płacić opłaty sieciowe stablecoinami za pośrednictwem usługi, która wymienia je na natywny token. Walidatorzy nadal otrzymują natywny token; stabilny gas to warstwa wygody.",
+      "preferredList": "Ustawienia domyślne portfela",
+      "preferredListText": "Portfel Umotu może wyświetlać konserwatywną domyślną listę stablecoinów do wypłat i usług opłat zgodnie z Umotu Stablecoin Standard (USS). Inne portfele mogą obsługiwać inne stablecoiny."
     },
     "economics": {
       "title": "Ekonomia UMT",
       "subtitle": "Kto co dostaje i dlaczego",
-      "intro": "UMT ma stałą podaż 100 miliardów tokenów. Większość jest płatna zwykłym użytkownikom telefonów, którzy pomagają utrzymywać sieć uczciwą.",
+      "intro": "UMT ma stałą podaż 100 miliardów tokenów. Większość jest zarezerwowana dla uczestników telefonicznych w czasie, dystrybuowana przez oparty na regułach kontroler emisji.",
       "supply": "Podaż i dystrybucja",
       "supplyBullets": [
-        "Zdecydowana większość podaży tokenów jest zarezerwowana dla uczestników telefonicznych w czasie i jest uwalniana poprzez Kontroler Emisji. Kontroler Emisji ogranicza dzienną emisję do nie więcej niż 0,01% pozostałej podaży, zapewniając długoterminową zrównoważoność. Zgodnie z tym harmonogramem, około 68% całkowitej podaży pozostaje po 10 latach, a około 15% pozostaje po 50 latach.",
-        "Niewielka część podaży jest tworzona przy uruchomieniu dla określonych celów, w tym airdrop dla wczesnych użytkowników, sprzedaż społecznościowa, alokacja fundacji i rezerwa awaryjna itp."
+        "Zdecydowana większość podaży jest zarezerwowana dla uczestników telefonicznych i uwalniana w czasie przez Kontroler Emisji. Kontroler ogranicza dzienną emisję do nie więcej niż 0,01% pozostałej podaży, aby ograniczyć rozwodnienie.",
+        "Przy maksymalnym limicie (0,01% pozostałej podaży dziennie), po 10 latach pozostaje około 69% podaży, a po 50 latach około 16%. Rzeczywista emisja może być niższa w zależności od reguł protokołu."
       ],
       "premine": "Alokacja Startowa (wstępna, może ulec zmianie przy uruchomieniu mainnet)",
       "premineTable": [
@@ -1221,13 +1438,13 @@
         }
       ],
       "emissions": "Codzienne nagrody dla telefonów",
-      "emissionsText": "Każdego dnia sieć może emitować maksymalnie 0,01% pozostałej puli emisji. Budżetujemy tę kwotę, aby zweryfikowane telefony celowały w około 10 dolarów/dzień, dostosowując do liczby uczestników i warunków rynkowych.",
+      "emissionsText": "Dzienne emisje są ograniczone. Twoje nagrody zależą od uczestnictwa, udanych sprawdzeń telefonicznych i warunków rynkowych. Protokół nie obiecuje stałej kwoty.",
       "fees": "Opłaty i Sentinel",
       "feesText": "Sentinel helpers (opcjonalne, zaawansowane) zarabiają udział w opłatach transakcyjnych i bidach budowniczych. To oddzielne od codziennych emisji.",
       "transparency": "Przejrzystość",
       "transparencyText": "Harmonogramy vesting i portfele są publiczne. Limity dziennych emisji i zrealizowane wypłaty są publikowane w aplikacji.",
       "disclaimerTitle": "Przypomnienie w prostym języku",
-      "disclaimerText": "To nie rada inwestycyjna. Nagrody zależą od polityki sieci i uczestnictwa. Aplikacja nie gwarantuje stałego dochodu."
+      "disclaimerText": "To nie jest porada finansowa. Nagrody są zmienne i nie gwarantowane."
     },
     "contribute": {
       "title": "Jak przyczynić się",
@@ -1254,7 +1471,7 @@
       },
       "governance": {
         "title": "Dołącz do zarządzania",
-        "text": "Czytaj propozycje, dyskutuj otwarcie i głosuj w aplikacji. Twój głos pomaga kierować parametrami sieci i alokacjami grantów.",
+        "text": "Czytaj propozycje, dyskutuj otwarcie i głosuj w aplikacji. Głosy mogą kierować ustawieniami domyślnymi portfela i grantami ekosystemu. Niektóre reguły protokołu są stałe i nie podlegają głosowaniu.",
         "cta": "Otwórz zarządzanie",
         "url": "umotu://vote"
       },
@@ -1269,37 +1486,38 @@
     "decentralization": {
       "title": "Dlaczego decentralizacja",
       "subtitle": "Brak pojedynczego punktu kontroli",
-      "intro": "Decentralizacja oznacza, że żadna pojedyncza firma czy rząd nie może wyłączyć sieci lub skonfiskować Twoich środków.",
+      "intro": "Decentralizacja oznacza, że sieć jest prowadzona przez wielu niezależnych uczestników. Twój portfel jest samodzielnie przechowywany — tylko Twoje klucze mogą przenosić Twoje środki.",
       "benefits": "Korzyści dla Ciebie",
       "benefit1": "Zawsze włączona: dostępność 24/7",
-      "benefit2": "Niższe opłaty: małe opłaty sieciowe zamiast 3–5% opłat kartowych",
+      "benefit2": "Często niższe opłaty: małe opłaty sieciowe zamiast typowych opłat kartowych",
       "benefit3": "Bez granic: wysyłaj wartość globalnie",
-      "benefit4": "Odporna na cenzurę: Twoje klucze, Twoje pieniądze",
+      "benefit4": "Bardziej odporna na cenzurę: żadna pojedyncza firma nie kontroluje Twojego portfela",
       "benefit5": "Przejrzysta: każdy może zweryfikować jak działa system",
       "howWorks": "Jak to działa",
-      "howWorksText": "Walidatorzy proponują bloki co ~2 sekundy. Telefony (jak Twój) weryfikują i finalizują lekkimi sprawdzeniami. Wiele małych wkładów sumuje się do silnego bezpieczeństwa."
+      "howWorksText": "Walidatorzy proponują bloki co ~2 sekundy. Telefony (jak Twój) weryfikują dostępność danych i pomagają finalizować bloki lekkimi sprawdzeniami. Wiele małych wkładów sumuje się do silnego bezpieczeństwa."
     },
     "noCompany": {
-      "title": "Bez firmy, bez klientów",
-      "subtitle": "Zrozum model",
-      "intro": "Nie ma 'Umotu, Inc.' kontrolującej protokół. Umotu to otwarty zestaw reguł, którego każdy może używać.",
+      "title": "Otwarty protokół, samodzielne przechowywanie",
+      "subtitle": "Zrozum, czym Umotu jest (a czym nie jest)",
+      "intro": "Nie ma jednej firmy kontrolującej protokół. Umotu to otwarty zbiór reguł, których każdy może używać, a wiele niezależnych zespołów może budować portfele i usługi.",
       "notCompany": "Czym Umotu NIE jest",
-      "notCompany1": "NIE firmą z kontami klientów",
-      "notCompany2": "NIE bankiem ani nadawcą pieniędzy",
+      "notCompany1": "NIE jest bankiem powierniczym trzymającym środki klientów",
+      "notCompany2": "NIE jest w stanie zresetować Twojego portfela ani cofnąć transakcji",
       "notCompany3": "NIE kontrolowane przez jedną jednostkę",
-      "notCompany4": "NIE może cofać transakcji",
+      "notCompany4": "NIE jest programem gwarantowanego dochodu",
       "whatIs": "Czym Umotu JEST",
-      "whatIs1": "Protokół: jak email czy web — otwarte, interoperacyjne reguły",
-      "whatIs2": "Phone-first: działa z pomocą zwykłych smartfonów",
+      "whatIs1": "Protokół: otwarte, interoperacyjne reguły (jak email czy web)",
+      "whatIs2": "Uczestnictwo phone-first: smartfony mogą pomagać zabezpieczać sieć",
       "whatIs3": "Napędzane społecznością: Jesteś uczestnikiem, nie klientem",
+      "whatIs4": "Bez pozwolenia: każdy może budować na protokole lub go używać",
       "foundation": "Fundacja Umotu",
-      "foundationIntro": "Non-profit wspierający ekosystem (aplikacje referencyjne, docs, programy społecznościowe), ale nie kontrolujący protokołu.",
+      "foundationIntro": "Non-profit wspierający ekosystem (aplikacje referencyjne, edukację i koordynację), ale nie kontrolujący protokołu.",
       "foundationTask1": "Utrzymuje mobilną aplikację i explorer jako implementacje referencyjne",
       "foundationTask2": "Operuje część publicznej infrastruktury (inni mogą uruchamiać swoją)",
-      "foundationTask3": "Koordynuje zarządzanie społeczności (aktualności, głosowania)",
-      "foundationTask4": "Przegląda i listuje obsługiwane stablecoiny",
+      "foundationTask3": "Koordynuje głosowania i dyskusje społeczności w aplikacji (gdzie ma to zastosowanie)",
+      "foundationTask4": "Publikuje Umotu Stable Accord i konserwatywne listy domyślne dla portfela Umotu (inni mogą obsługiwać inne stablecoiny)",
       "foundationTask5": "Publikuje przewodniki edukacyjne i bezpieczeństwa",
-      "foundationNote": "Fundacja nie może uzyskać dostępu do Twojego portfela i nie może cofać transakcji."
+      "foundationNote": "Fundacja nie może uzyskać dostępu do Twojego portfela ani cofnąć transakcji. Ustawienia domyślne portfela nie ograniczają tego, co jest możliwe w protokole."
     },
     "scamPrevention": {
       "title": "Unikaj oszustw",
@@ -1323,22 +1541,22 @@
       "action4": "Zablokuj i zgłoś"
     },
     "airdrop": {
-      "title": "Airdrop testnet",
-      "subtitle": "Wczesni użytkownicy są nagradzani",
-      "intro": "Jesteś wczesny! Umotu jest w testnecie. Aktywni uczestnicy testnet mogą otrzymać alokację przy launchu mainnet.",
+      "title": "Uznanie za testnet",
+      "subtitle": "Wczesne uczestnictwo w testnecie może zostać uznane",
+      "intro": "Umotu jest w testnecie. Aktywni uczestnicy testnet mogą otrzymać alokację uznaniową przy uruchomieniu mainnet. Nie jest to gwarantowane i może wynosić zero.",
       "howToQualify": "Jak się zakwalifikować",
       "step1": "Utwórz portfel w aplikacji",
       "step2": "Ukończ weryfikację człowieka (Proof of Human)",
       "step3": "Używaj aplikacji regularnie podczas testnet",
       "whenAirdrop": "Kiedy airdrop?",
       "whyTestnet": "Testnet jest niezbędny: użytkownicy uczą się bezpieczeństwa portfela, a system jest testowany pod kątem bezpieczeństwa, robustności i efektywności przed mainnet.",
-      "timeline": "Mainnet oczekiwany w Q1 lub Q2 2026. Airdrop odbędzie się około launchu mainnet.",
+      "timeline": "Termin mainnet i szczegóły uznania zostaną ogłoszone w aplikacji.",
       "howMuch": "Ile dostanę?",
-      "totalPool": "Całkowita pula airdrop: 1 000 000 000 UMT tokenów. Twój udział zależy od całkowitej liczby uczestników i ceny UMT przy launchu.",
-      "scenario2": "1M użytkowników: ~1 000 UMT na użytkownika, oczekiwana cena ~$1, wartość airdrop ~$1,000",
-      "scenario3": "10M użytkowników: ~100 UMT na użytkownika, oczekiwana cena ~$20, wartość airdrop ~$2,000",
-      "scenario4": "100M użytkowników: ~10 UMT na użytkownika, oczekiwana cena ~$300, wartość airdrop ~$3,000",
-      "disclaimer": "To tylko projekcje, nie gwarancje. Rzeczywiste wartości zależą od warunków rynkowych i reguł programu.",
+      "totalPool": "Tylko jako przykład: jeśli pula uznaniowa 1 000 000 000 UMT zostanie utworzona, Twój udział zależy od kwalifikujących się uczestników i reguł programu. Im wcześniej uczestniczysz, tym wyższy Twój udział.",
+      "scenario2": "Tylko jako przykład: 1M kwalifikujących się użytkowników → ~1 000 UMT średnio na osobę (przed ważeniem)",
+      "scenario3": "Tylko jako przykład: 10M kwalifikujących się użytkowników → ~100 UMT średnio na osobę (przed ważeniem)",
+      "scenario4": "Tylko jako przykład: 100M kwalifikujących się użytkowników → ~10 UMT średnio na osobę (przed ważeniem)",
+      "disclaimer": "Tylko przykłady — nie gwarancje. Każda alokacja uznaniowa zależy od reguł programu i warunków rynkowych i może wynosić zero.",
       "whatYouGet": "Co dostajesz",
       "reward": "Przy mainnet, Twój portfel testnet może otrzymać realne tokeny na podstawie uczestnictwa i reguł programu. Wcześniejsi i bardziej aktywni użytkownicy są priorytetowi.",
       "note": "Uwaga: Tokeny testnet nie mają wartości. Każda alokacja mainnet jest określona przez politykę programu przy launchu. Wszystkie newsy o airdrop będą publikowane tylko w tej aplikacji."
@@ -1356,7 +1574,21 @@
       "tips": "Pro tipy",
       "tip1": "Zezwól na dostęp w tle, aby sprawdzenia mogły działać",
       "tip2": "Sprawdzaj codziennie, aby zobaczyć nagrody",
-      "tip3": "Zapraszaj znajomych — więcej użytkowników czyni sieć silniejszą"
+      "tip3": "Zapraszaj znajomych — więcej uczestników może uczynić sieć silniejszą"
+    },
+    "governance": {
+      "title": "Zarządzanie i głosowania",
+      "subtitle": "Jak działa głosowanie w aplikacji",
+      "intro": "Umotu obsługuje ankiety i głosowania w aplikacji, aby uczestnicy mogli pomagać w kształtowaniu określonych decyzji ekosystemu.",
+      "whatVotesDo": "Co mogą zrobić głosy",
+      "whatVotesDo1": "Rekomendować domyślne ustawienia portfela (na przykład, które stablecoiny pojawiają się jako preferowane opcje wypłaty lub stabilnego gasu)",
+      "whatVotesDo2": "Sygnalizować preferencje społeczności dotyczące propozycji i priorytetów",
+      "whatVotesDo3": "Zatwierdzać określone granty lub budżety, gdy jest to możliwe",
+      "whatVotesCannotDo": "Czego głosy nie mogą zrobić",
+      "whatVotesCannotDo1": "Uzyskać dostęp do twojego portfela, przenosić twoich środków lub resetować twojej frazy odzyskiwania",
+      "whatVotesCannotDo2": "Cofnąć transakcji lub zamrozić twojego portfela z samodzielną opieką",
+      "whatVotesCannotDo3": "Zmieniać stałej polityki pieniężnej poza zasadami protokołu",
+      "note": "Niektóre ankiety mogą być testowe lub doradcze w zależności od etapu sieci. Zawsze czytaj szczegóły propozycji i warunki aktywacji."
     }
   },
   "common": {
@@ -1405,6 +1637,7 @@
   "poh_title": "Zweryfikuj człowieka",
   "continue": "Kontynuuj",
   "or": "LUB",
+  "version": "Wersja",
   "seedReveal": {
     "title": "Fraza odzyskiwania",
     "intro": "Fraza odzyskiwania jest jedynym sposobem na przywrócenie portfela jeśli stracisz dostęp do tego urządzenia. Zapisz ją i przechowuj bezpiecznie offline.",

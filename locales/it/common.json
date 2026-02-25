@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "10 $ al giorno, per tutti, ovunque"
+    "tagline": "Partecipazione Aperta, Ricompense Giornaliere"
   },
   "navigation": {
     "home": "Home",
@@ -38,6 +38,9 @@
       "changeChoice": "Cambia scelta",
       "requiresLanguage": "Seleziona prima la lingua",
       "requiresWallet": "Crea prima il portafoglio"
+    },
+    "daSampling": {
+      "staleHint": "Esegui il campionamento ora per assicurare la tua idoneità alla ricompensa giornaliera."
     }
   },
   "earnings": {
@@ -118,13 +121,15 @@
     "manual": {
       "title": "Reclamo manuale",
       "description": "Se hai bisogno di fondi prima, reclama la prossima ricompensa disponibile ora. I reclami manuali usano il gas del tuo portafoglio. Il reclamo automatico resta più economico se aspetti. Se il tuo portafoglio non ha fondi, attiva il reclamo automatico o ricarica il gas nativo prima di reclamare manualmente.",
-      "dayLabel": "Giorno della ricompensa",
       "claimButton": "Reclama ora",
       "claiming": "Reclamo in corso...",
+      "cancelling": "Annullamento reclamo...",
+      "cancelled": "Reclamo annullato.",
+      "cancelButton": "Annulla reclamo",
       "success": "Reclamo inviato",
       "successWithId": "Reclamo inviato (id: {{id}})",
       "error": "Reclamo fallito",
-      "noProof": "Prova di ricompensa non ancora pubblicata. Riprova dopo che lo snapshot di oggi è attivo.",
+      "noProof": "Nessuna prova di ricompensa trovata per questo portafoglio/giorno (o non era idoneo quel giorno). Riprova dopo che lo snapshot di oggi è attivo.",
       "unauthorized": "Autorizzazione relayer fallita. Per favore riprova o contatta il supporto.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -136,9 +141,22 @@
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "remainingAfter": "+{{days}} altri dopo questo lotto",
+      "calendarVsEligible": "{{eligible}} idonei su {{calendar}} giorni di calendario",
+      "showMissingDays": "Mostra giorni mancanti ({{count}})",
+      "hideMissingDays": "Nascondi giorni mancanti",
+      "noMissingDaysLoaded": "Nessun dettaglio sui giorni mancanti restituito dalla policy.",
+      "moreMissingDays": "e altri {{count}} giorni",
+      "missingDaysHint": "Giorno mancante significa nessun campionamento/prova DA per quel giorno UTC.",
       "batchSuccess": "{{count}} giorni reclamati con successo",
+      "fallbackPaidInNative": "pagato in UMT: stablecoin temporaneamente non disponibile",
       "claimingProgress": "Reclamo {{claimed}}/{{total}}...",
-      "claimAllButton": "Reclama tutti i {{count}} giorni"
+      "claimingDay": "Elaborazione giorno {{day}}",
+      "claimAllButton": "Reclama tutti i {{count}} giorni",
+      "stableNotConfigured": "Il pagamento in stablecoin non è disponibile. Seleziona UMT o contatta il supporto.",
+      "insufficientGas": "Saldo gas insufficiente. Ricarica il tuo portafoglio con token nativi.",
+      "userRejected": "La transazione è stata annullata.",
+      "networkError": "Errore di rete. Controlla la tua connessione e riprova.",
+      "alreadyClaimed": "Queste ricompense sono già state reclamate."
     },
     "timezone": {
       "title": "Seleziona Fuso Orario",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "Rubrica",
       "addContact": "Aggiungi Contatto",
-      "nameLabel": "Nome o etichetta",
+      "nameLabel": "Nome",
       "walletAddress": "Indirizzo portafoglio (0x...)",
       "savedContacts": "Contatti Salvati",
       "noContacts": "Nessun contatto salvato ancora.",
       "addForQuickSending": "Aggiungi contatti per invii rapidi.",
       "enterValidAddress": "Inserisci un indirizzo valido",
       "addLabel": "Aggiungi etichetta",
-      "save": "Salva"
+      "labelAlreadyExists": "Questa etichetta esiste già",
+      "tagOptional": "Tag (facoltativo)",
+      "save": "Salva",
+      "editContact": "Modifica Contatto",
+      "tags": "Tag",
+      "noTagsYet": "Nessun tag aggiunto ancora",
+      "newTagPlaceholder": "Inserisci nome tag...",
+      "addTag": "Aggiungi",
+      "existingTags": "Oppure aggiungi tag esistente:",
+      "deleteContact": "Elimina contatto",
+      "confirmDeleteTitle": "Eliminare il contatto?",
+      "confirmDeleteMessage": "Questo rimuoverà {{label}} dalla tua rubrica."
     },
     "settings": {
       "title": "Impostazioni Portafoglio",
@@ -245,7 +274,8 @@
         "clipboardWarning": "La clipboard può essere letta da altre app. Verrà cancellata automaticamente in 30 secondi.",
         "verifyForKey": "Verifica per Mostrare Chiave Privata",
         "verifyForSeed": "Verifica per Mostrare Frase di Recupero",
-        "verifyDescription": "Inserisci la tua password o PIN per rivelare informazioni sensibili del portafoglio."
+        "verifyDescription": "Inserisci la tua password o PIN per rivelare informazioni sensibili del portafoglio.",
+        "walletNotLoaded": "Nessun portafoglio caricato. Importa o crea un portafoglio prima."
       },
       "import": {
         "title": "Importa Portafoglio",
@@ -256,7 +286,8 @@
         "keyPlaceholder": "Inserisci chiave privata 0x…",
         "importButton": "Importa Portafoglio",
         "importing": "Importazione in corso...",
-        "success": "Portafoglio importato con successo!"
+        "success": "Portafoglio importato con successo!",
+        "saveFailed": "Importazione portafoglio riuscita ma salvataggio su questo dispositivo fallito."
       },
       "dangerZone": {
         "title": "Zona Pericolo",
@@ -529,6 +560,7 @@
       "deleteContact": "Elimina Contatto",
       "addressNotSaved": "Indirizzo non salvato",
       "addLabel": "Aggiungi etichetta",
+      "labelAlreadyExists": "Questa etichetta esiste già",
       "enterValidAddress": "Inserisci prima un indirizzo valido",
       "saved": "Salvato",
       "save": "Salva"
@@ -547,6 +579,7 @@
       "addFromTagOrBook": "Aggiungi da tag o rubrica",
       "invalidAddress": "Indirizzo non valido: {{address}}",
       "invalidAmount": "Importo non valido per {{recipient}}",
+      "tooManyRecipients": "L'invio batch supporta fino a {{max}} destinatari.",
       "totalExceedsBalance": "Il totale supera il saldo",
       "sendingTo": "Invio a {{count}} destinatario",
       "sendingTo_plural": "Invio a {{count}} destinatari",
@@ -568,6 +601,18 @@
       "failedStatus": "Fallito",
       "details": "Dettagli Trasferimento Batch",
       "total": "Totale",
+      "hongbao": {
+        "short": "Hongbao",
+        "total": "Totale Hongbao",
+        "helper": "Imposta un totale fisso e randomizzeremo l'importo di ogni destinatario nel prossimo passaggio.",
+        "random": "Casuale",
+        "autoSplit": "Divisione automatica",
+        "generated": "Divisione casuale generata",
+        "needTwoRecipients": "Hongbao richiede almeno 2 destinatari.",
+        "amountTooSmall": "Il totale è troppo piccolo per {{count}} destinatari. Il minimo è {{min}} {{symbol}}.",
+        "generateFailed": "Impossibile generare importi casuali.",
+        "disabled": "La modalità Hongbao è disattivata al momento."
+      },
       "tagPicker": {
         "title": "Seleziona Tag",
         "noTags": "Nessun tag disponibile",
@@ -646,19 +691,48 @@
       "type": "Tipo",
       "to": "A",
       "from": "Da",
+      "address": "Indirizzo",
       "token": "Token",
       "block": "Blocco",
       "gasCost": "Costo Gas",
+      "balanceAfter": "Saldo dopo tx",
+      "balanceSource": "Fonte del saldo",
+      "balanceSourceVerified": "Verificato on-chain",
+      "balanceSourceVerifying": "Stimato (verifica on-chain...)",
+      "balanceSourceEstimatedRecent": "Stimato da snapshot recente del saldo",
+      "balanceSourceEstimatedStale": "Stimato da snapshot obsoleto del saldo",
+      "balanceSourceEstimatedDelayed": "Stimato (verifica on-chain ritardata)",
+      "balanceSnapshotAge": "Età snapshot",
+      "balanceReconciledDiff": "Differenza riconciliata",
+      "balanceVerifyNote": "Nota di verifica",
+      "balanceVerifyUnexpected": "Verifica ritardata. Saldo stimato visualizzato.",
+      "unavailable": "Non disponibile",
       "hash": "Hash",
       "source": "Fonte",
       "balanceDetected": "Saldo rilevato",
       "inferredNote": "Questa transazione è stata rilevata da un cambiamento di saldo. I dettagli esatti on-chain non sono disponibili."
     },
+    "batch": {
+      "title": "Dettagli Trasferimento Batch",
+      "badge": "BATCH",
+      "send": "Invio Batch",
+      "recipients": "Destinatari",
+      "recipientCount": "{{count}} destinatario",
+      "recipientCount_plural": "{{count}} destinatari",
+      "successful": "Riuscito",
+      "successOf": "{{success}} di {{total}}",
+      "sentStatus": "Inviato",
+      "failedStatus": "Fallito",
+      "successFail": "{{success}} riusciti, {{fail}} falliti",
+      "toRecipients": "a {{count}} destinatario",
+      "toRecipients_plural": "a {{count}} destinatari"
+    },
     "time": {
       "justNow": "Proprio ora",
       "minsAgo": "{{count}} min fa",
       "hoursAgo": "{{count}} ore fa",
-      "daysAgo": "{{count}} giorni fa"
+      "daysAgo": "{{count}} giorni fa",
+      "suffixAgo": "fa"
     }
   },
   "settings": {
@@ -733,6 +807,43 @@
       "clearCache": "Cancella Cache",
       "cacheCleared": "Cache cancellata! Riavvia per applicare."
     },
+    "hongbaoDebug": {
+      "title": "Configurazione Hongbao (Debug)",
+      "description": "Cancella la cache locale della stagione Hongbao e forza l'aggiornamento al prossimo avvio dell'app.",
+      "clearConfigCache": "Cancella Cache Hongbao",
+      "cacheCleared": "Cache configurazione Hongbao cancellata",
+      "cacheClearFailed": "Impossibile cancellare la cache di configurazione Hongbao"
+    },
+    "integrityDebug": {
+      "title": "Attestazione App (Debug)",
+      "description": "Ottieni un token di attestazione del dispositivo per confermare che App Attest è attivo.",
+      "fetch": "Ottieni Attestazione",
+      "fetching": "Recupero in corso...",
+      "copy": "Copia Payload",
+      "copyNonce": "Copia Nonce",
+      "toastFetchSuccess": "Attestazione app ottenuta",
+      "toastFetchError": "Attestazione app fallita",
+      "toastCopy": "Attestazione copiata",
+      "toastCopyNonce": "Nonce copiato",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "payload vuoto",
+      "summaryStub": "token stub (modulo nativo mancante?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (non supportato)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "errore: {{message}}",
+      "verify": "Verifica sul Server",
+      "verifying": "Verifica in corso...",
+      "verifyMissing": "errore: payload o nonce mancante",
+      "verifyOk": "verifica del server: ok",
+      "verifyFail": "verifica del server fallita: {{error}}",
+      "toastVerifyOk": "Verifica del server ok",
+      "toastVerifyFail": "Verifica del server fallita"
+    },
     "chainGuardian": {
       "title": "Chain Guardian",
       "description": "Aiuta a proteggere la blockchain mantenendo il telefono online. Completa almeno un lavoro di campionamento al giorno per rimanere idoneo alle ricompense.",
@@ -747,10 +858,12 @@
       "staleWarning": "Non visto oggi — riapri l'app per riprendere.",
       "androidBatteryWarning": "L'ottimizzazione batteria potrebbe impedire il campionamento",
       "androidBatteryHint": "Vai su Impostazioni → App → Umotu → Batteria → seleziona \"Non limitata\" per consentire campionamento in background.",
+      "iosBackgroundHint": "iOS potrebbe mettere in pausa il campionamento in background. Apri l'app di tanto in tanto o tocca Esegui ora per rimanere attivo.",
       "openSettings": "Tocca per aprire impostazioni",
       "tip": "Abilita \"Esegui in Background\" per il massimo potenziale di guadagno.",
       "runNow": "Esegui ora",
       "running": "In esecuzione…",
+      "runNowNoData": "Nessun dato (vincoli batteria/WiFi o nessuna assegnazione).",
       "lastError": "Ultimo errore",
       "status": {
         "active": "Attivo",
@@ -766,12 +879,57 @@
       "noConnections": "Nessuna app connessa",
       "revokeAccess": "Revoca Accesso",
       "lastUsed": "Ultimo utilizzo"
+    },
+    "transfer": {
+      "title": "Trasferimento Dati Dispositivo",
+      "description": "Sposta le impostazioni dell'app e i contatti sul tuo nuovo telefono scansionando un codice QR di trasferimento.",
+      "warning": "Questo trasferisce solo i dati dell'app. La frase di recupero/chiave privata del portafoglio NON è inclusa. Importa il portafoglio separatamente sul nuovo telefono.",
+      "preparing": "Preparazione...",
+      "showQr": "Mostra QR Trasferimento",
+      "scanQr": "Scansiona QR Trasferimento",
+      "exportTitle": "QR Trasferimento",
+      "exportHint": "Sul tuo nuovo telefono, apri Impostazioni -> Trasferimento Dati Dispositivo -> Scansiona QR Trasferimento, quindi scansiona questo codice.",
+      "exportHintParts": "Sul tuo nuovo telefono, scansiona ogni pagina in ordine (da 1 a {{total}}), quindi inserisci il codice a 6 cifre.",
+      "exportHintRelay": "Sul tuo nuovo telefono, scansiona questo unico codice per scaricare il pacchetto di trasferimento, quindi inserisci il codice di conferma a 6 cifre.",
+      "exportReady": "QR Trasferimento pronto ({{count}} elementi)",
+      "exportReadyParts": "QR Trasferimento pronto ({{count}} elementi, {{parts}} pagine QR). Scansiona le pagine in ordine.",
+      "relayReady": "Trasferimento grande ottimizzato: scansiona un QR per scaricare {{count}} elementi, quindi inserisci il codice a 6 cifre.",
+      "relayFallback": "Trasferimento cloud non disponibile ({{message}}). Utilizzo del QR a più pagine.",
+      "relayFetching": "Download dati di trasferimento in corso...",
+      "relayFetched": "Dati di trasferimento scaricati. Elaborazione in corso...",
+      "exportFailed": "Impossibile preparare il trasferimento: {{message}}",
+      "prevPage": "Precedente",
+      "nextPage": "Successivo",
+      "confirmCodeLabel": "Codice di conferma a 6 cifre",
+      "copyCode": "Copia codice trasferimento",
+      "importTitle": "Scansiona QR Trasferimento",
+      "importHint": "Punta la fotocamera sul QR di trasferimento mostrato sul tuo vecchio telefono.",
+      "importing": "Importazione...",
+      "importNow": "Importa Dati",
+      "imported": "{{count}} elementi importati. La frase di recupero/chiave privata del portafoglio NON è trasferita.",
+      "importFailed": "Importazione trasferimento fallita: {{message}}",
+      "confirmPrompt": "QR scansionato. Inserisci il codice di conferma a 6 cifre mostrato sul tuo vecchio telefono.",
+      "confirmCodeRequired": "Inserisci il codice di conferma a 6 cifre dal tuo vecchio telefono.",
+      "confirmCodeMismatch": "Il codice di conferma non corrisponde. Riprova.",
+      "rescan": "Riscansiona",
+      "scanProgress": "QR {{current}}/{{total}} scansionato",
+      "scanContinue": "Continua a scansionare le pagine rimanenti in ordine fino al completamento.",
+      "restartScan": "Riavvia Scansione",
+      "chunkMismatch": "Le pagine QR di trasferimento non corrispondono. Riavvia la scansione dalla pagina 1.",
+      "cameraNeeded": "Accesso fotocamera necessario",
+      "cameraDescription": "Abilita il permesso fotocamera per scansionare il tuo codice QR di trasferimento.",
+      "allowCamera": "Consenti Fotocamera",
+      "openSettings": "Apri Impostazioni",
+      "pasteCode": "Incolla Codice Trasferimento",
+      "pasteTitle": "Incolla Codice Trasferimento",
+      "pasteHint": "Se la scansione con la fotocamera è difficile, incolla il codice di trasferimento copiato dal vecchio telefono.",
+      "pastePlaceholder": "UMOTU_TRANSFER:..."
     }
   },
   "onboarding": {
     "welcome": {
       "title": "Benvenuto in Umotu",
-      "subtitle": "10 $ al giorno, per tutti, ovunque",
+      "subtitle": "Partecipazione Aperta, Ricompense Giornaliere",
       "getStarted": "Inizia"
     },
     "language": {
@@ -811,6 +969,40 @@
       "validFor_plural": "Valido per ~{{days}} giorni",
       "expired": "Verifica scaduta o non trovata.",
       "expiredDetail": "Esegui di nuovo il controllo liveness per aggiornare la credenziale."
+    },
+    "capture": {
+      "title": "Cattura Volto",
+      "hint": "Centra il volto e resta fermo.",
+      "tipsTitle": "Suggerimenti per la cattura",
+      "tipFace": "Mantieni il volto centrato e riempi l'inquadratura (≥ {{pct}}%).",
+      "tipLight": "Usa un'illuminazione uniforme ed evita forti controluce.",
+      "tipHold": "Resta fermo e guarda la fotocamera per {{seconds}}s.",
+      "tipRemove": "Rimuovi cappelli, maschere o ombre pesanti.",
+      "errorShort": "Cattura troppo breve. Resta fermo per {{seconds}}s.",
+      "errorTooSmall": "Cattura fallita. Riprova.",
+      "errorFileTooSmall": "Il file video è troppo piccolo. Resta fermo per tutta la cattura e migliora l'illuminazione.",
+      "errorBitrate": "La qualità video è troppo bassa. Migliora l'illuminazione e tieni fermo il telefono.",
+      "errorLowQuality": "Qualità di cattura troppo bassa. Usa un'illuminazione migliore o una fotocamera di qualità superiore.",
+      "errorCameraPermission": "Permesso fotocamera richiesto. Abilitalo nelle Impostazioni e riprova.",
+      "errorCameraUnavailable": "Fotocamera non disponibile su questo dispositivo. Chiudi altre app fotocamera e riprova.",
+      "errorRecordingFailed": "Registrazione video fallita. Riprova con un'illuminazione migliore.",
+      "errorStorage": "Spazio di archiviazione insufficiente per registrare video. Libera spazio e riprova.",
+      "errorFileAccess": "Impossibile leggere il video registrato. Ripeti la cattura.",
+      "errorDeviceAttest": "Controllo sicurezza dispositivo fallito. Aggiorna Google Play Services e riprova.",
+      "errorCooldown": "Troppi tentativi. Attendi prima di riprovare.",
+      "errorChallenge": "Sfida attiva non completata. Ripeti la cattura e segui le istruzioni.",
+      "errorUpload": "Caricamento fallito. Controlla la connessione e riprova.",
+      "errorUploadForbidden": "URL di caricamento rifiutato (scaduto o firma non corrispondente). Ripeti la cattura e riprova.",
+      "errorUploadTimeout": "Caricamento scaduto. Controlla la connessione e riprova.",
+      "errorUploadServer": "Servizio di caricamento temporaneamente non disponibile. Riprova tra poco.",
+      "errorSessionExpired": "Sessione scaduta. Ripeti la cattura.",
+      "errorUnexpected": "Cattura fallita. Riprova.",
+      "retryUpload": "Riprova Caricamento",
+      "retake": "Ripeti Cattura",
+      "recording": "Registrazione...",
+      "uploading": "Caricamento...",
+      "processing": "Elaborazione...",
+      "start": "Inizia Cattura"
     }
   },
   "sentinelSettings": {
@@ -905,25 +1097,25 @@
     "pohDescription": "Verifica la tua umanità con inLyf per sbloccare le ricompense giornaliere.",
     "vision": {
       "title": "La Nostra Visione",
-      "tagline": "10 $ al giorno, per tutti, ovunque",
-      "description": "Umotu sta costruendo infrastrutture per un mondo in cui tutti possono partecipare all'economia globale—indipendentemente da dove vivono o da quale banca usano.",
+      "tagline": "Partecipazione aperta, ricompense giornaliere",
+      "description": "Umotu è un protocollo aperto progettato per semplificare la partecipazione a un'economia digitale globale: accesso aperto, regolamento rapido e stablecoin opzionali per transazioni quotidiane.",
       "readMore": "Leggi la Visione Completa",
       "pillars": {
-        "title": "Tre Principi Fondamentali",
+        "title": "Principi Fondamentali",
         "ubi": {
-          "title": "10 $/Giorno, per Tutti Ovunque",
-          "description": "Reddito di base universale come ricompense guadagnate per proteggere la rete. Chiunque con un telefono può partecipare e guadagnare."
+          "title": "Partecipazione aperta, ricompense giornaliere",
+          "description": "Le ricompense giornaliere vengono guadagnate attraverso la partecipazione alla sicurezza della rete. Le ricompense sono variabili e non garantite."
         },
         "capital": {
-          "title": "Il Capitale Si Muove Liberamente",
-          "description": "Attrito quasi zero per pagamenti e trasferimenti—transfrontalieri o locali. Le aziende pagano ~0.1% per coprire i costi della piattaforma, gli individui niente."
+          "title": "Trasferimenti a basso attrito",
+          "description": "Pagamenti e trasferimenti sono progettati per essere veloci e a basso attrito. Commissioni e prestazioni variano con le condizioni della rete e le app che usi."
         },
         "sovereignty": {
-          "title": "Rispetto della Sovranità Monetaria",
-          "description": "Non sostituiamo le valute fiat—le facciamo funzionare meglio. Le banche emettono stablecoin ancorati alla loro valuta locale. La politica monetaria diventa più efficace con maggiore portata e minor attrito."
+          "title": "Compatibile con la valuta locale",
+          "description": "Umotu non controlla la politica monetaria e non sostituisce le valute fiat. Le stablecoin su Umotu sono emesse da terze parti e hanno le loro regole e rischi."
         }
       },
-      "notReplacing": "Umotu non compete con le banche centrali. Stiamo costruendo infrastrutture migliori per le valute fiat: meno attrito, accesso globale, maggiore efficienza e resilienza di mercato."
+      "notReplacing": "Umotu è infrastruttura. Non stabilisce politica monetaria, non garantisce la sicurezza delle stablecoin e non interviene per produrre risultati specifici."
     },
     "building": {
       "title": "Stiamo Costruendo l'Ecosistema",
@@ -1031,34 +1223,50 @@
     "business": {
       "title": "Costruisci la Tua Attività su Umotu",
       "subtitle": "Lancia app con pagamenti integrati",
-      "description": "Crea app che accedono all'ecosistema Umotu—milioni di umani verificati con reddito giornaliero, pronti a transare. Niente problemi di integrazione pagamenti.",
+      "description": "Costruisci app con pagamenti on-chain e stablecoin opzionali. I partecipanti possono guadagnare ricompense giornaliere (variabili) e transare usando asset supportati.",
       "benefits": {
-        "noFees": "Commissioni di elaborazione pagamenti quasi zero—tieni il 99,9% dei ricavi",
-        "verifiedUsers": "Tutti gli utenti sono umani verificati—nessun bot o frode",
-        "globalReach": "Raggiungi utenti in oltre 190 paesi dal primo giorno",
-        "instantPayments": "Pagamenti istantanei—nessun ritardo di 30 giorni"
+        "noFees": "Commissioni basse e trasparenti — i costi esatti variano con le condizioni della rete",
+        "verifiedUsers": "Partecipanti verificati — ridotta attività di bot e Sybil tramite Proof of Human",
+        "globalReach": "Raggiungi partecipanti globalmente (soggetto a disponibilità)",
+        "instantPayments": "Regolamento rapido on-chain — i tempi dipendono dalle condizioni della rete"
       },
       "exampleTitle": "Caso d'Uso",
-      "exampleText": "Un'app di ride-sharing su Umotu tiene il 99,9% delle tariffe vs 70% sulle piattaforme tradizionali. Autisti guadagnano di più, passeggeri pagano meno.",
+      "exampleText": "Un'app di ride-sharing può instradare pagamenti direttamente tra passeggeri e autisti, con commissioni trasparenti e regolamento quasi in tempo reale on-chain.",
       "docsButton": "Leggi Documentazione",
       "buildButton": "Inizia a Costruire"
     },
     "bank": {
       "title": "Sei una Banca?",
       "subtitle": "Emetti stablecoin su Umotu",
-      "description": "Istituzioni finanziarie licenziate possono emettere stablecoin in valuta locale su Umotu e accedere a un'economia UBI in crescita con milioni di utenti.",
+      "description": "Istituzioni finanziarie e società di pagamento possono emettere stablecoin su Umotu per servire utenti che preferiscono asset con unità di conto stabile per transazioni quotidiane.",
       "benefits": {
-        "reserves": "Guadagna rendimento sulle riserve: investi in bond e asset a basso rischio",
-        "mintRedeem": "Addebita commissioni mint/redeem: tipicamente 0,1% su conversioni fiat ↔ stablecoin",
-        "users": "Accedi a milioni di destinatari UBI giornalieri attivi",
-        "global": "Espandi la tua portata oltre i confini istantaneamente",
-        "custody": "Le tue riserve, la tua custodia: controllo completo sugli asset di backing"
+        "reserves": "La gestione delle riserve è controllata dall'emittente ed è soggetta alle regole applicabili",
+        "mintRedeem": "Gli emittenti possono fissare commissioni mint/redeem a propria discrezione",
+        "users": "Accedi a una base crescente di partecipanti attivi",
+        "global": "Raggiungi utenti oltre i confini (soggetto a conformità e distribuzione)",
+        "custody": "Riserve e politiche controllate dall'emittente"
       },
       "revenueModel": "Come Guadagnano gli Emittenti",
-      "revenueNote": "Come Tether e altri grandi emittenti, i ricavi provengono dal rendimento sulle riserve e commissioni di conversione. Con milioni di utenti che ricevono UBI giornaliero, il volume mint/redeem può essere sostanzioso.",
-      "futureNote": "Gli emittenti potrebbero ricevere anche una quota di commissioni di transazione in futuro con l'evoluzione del protocollo.",
+      "revenueNote": "L'economia degli emittenti varia. Alcuni emittenti generano ricavi dal rendimento delle riserve e/o commissioni mint/redeem, a seconda del loro modello e obblighi.",
+      "futureNote": "Niente nel protocollo garantisce ricavi all'emittente. Eventuali cambiamenti futuri devono seguire il processo di governance del protocollo.",
       "learnMore": "Scopri di Più",
       "applyButton": "Candidati Ora"
+    },
+    "stablesDocs": {
+      "title": "Standard delle Stablecoin",
+      "subtitle": "Impostazioni predefinite per le app della Fondazione Umotu (non permessi del protocollo)",
+      "description": "La Fondazione Umotu pubblica standard utilizzati per il supporto predefinito delle stablecoin nelle app e servizi gestiti dalla Fondazione. Non limitano i trasferimenti a livello di protocollo né portafogli di terze parti. Gli standard non eliminano il rischio delle stablecoin.",
+      "uss": {
+        "title": "Umotu Stablecoin Standard (USS)",
+        "description": "Criteri minimi di divulgazione, riserve e riscatto per stablecoin mostrate come opzioni di pagamento predefinite e supportate nei servizi di gas stabile (tramite paymaster) nelle app della Fondazione Umotu.",
+        "button": "Leggi USS"
+      },
+      "rdp": {
+        "title": "Risk Disclosure Policy (RDP)",
+        "description": "Indicatori di rischio basati su regole (es. volatilità FX, deviazioni di peg, restrizioni di riscatto e rischio tecnico) mostrati nelle app della Fondazione Umotu.",
+        "button": "Leggi RDP"
+      },
+      "learnMore": "Visualizza standard delle stablecoin"
     }
   },
   "news": {
@@ -1114,36 +1322,36 @@
   },
   "learn": {
     "title": "Impara",
-    "subtitle": "Tutto quello che devi sapere su Umotu",
+    "subtitle": "Partecipazione Aperta, Ricompense Giornaliere",
     "featured": "IN EVIDENZA",
     "whatIs": {
       "title": "Cos'è Umotu?",
-      "subtitle": "10 $ al giorno, per tutti, ovunque",
-      "intro": "Umotu mira a permettere a chiunque di guadagnare circa 10 $/giorno usando solo uno smartphone. Nessun hardware costoso, nessuna competenza speciale, nessun confine.",
+      "subtitle": "Partecipazione Aperta, Ricompense Giornaliere",
+      "intro": "Umotu è un protocollo aperto dove chiunque può partecipare usando uno smartphone e guadagnare ricompense giornaliere per aver aiutato a proteggere la rete. Le ricompense sono variabili e non garantite. Solo a scopo orientativo, il protocollo è progettato attorno a un obiettivo di riferimento di circa 10 $/giorno per partecipante attivo al lancio, ma le ricompense effettive possono essere molto inferiori (inclusi centesimi al giorno) o superiori a seconda della partecipazione e delle condizioni di mercato.",
       "howDifferent": "In cosa è diverso?",
-      "noMiddleman": "Nessun intermediario: interagisci direttamente con la rete—nessun conto bancario richiesto",
-      "globalAccess": "Accesso globale: funziona ovunque con internet",
-      "youOwnIt": "È tuo: il tuo portafoglio, le tue chiavi, il tuo controllo",
+      "noMiddleman": "Nessun intermediario: interagisci direttamente con la rete — nessuna approvazione account richiesta",
+      "globalAccess": "Accesso globale: funziona ovunque tu abbia internet",
+      "youOwnIt": "Auto-custodia: il tuo portafoglio, le tue chiavi, il tuo controllo",
       "vision": "La Visione",
-      "visionText": "Miliardi di persone possono aiutare a mantenere onesto un registro pubblico e guadagnare per questo. Su Umotu, i telefoni eseguono controlli leggeri che rendono la rete affidabile.",
+      "visionText": "Milioni di telefoni possono aiutare a mantenere onesto un registro pubblico. I telefoni eseguono controlli leggeri (come campionamento di disponibilità dati) che rendono la rete più affidabile.",
       "nameOrigin": "L'Origine del Nome",
       "nameOriginText": "Umotu trae ispirazione da Paʻumotu, una lingua polinesiana. Usiamo il nome con rispetto come promemoria per costruire per le persone comuni."
     },
     "earn": {
       "title": "Come Guadagni",
-      "subtitle": "Il tuo telefono lavora; tu vieni pagato",
-      "intro": "Il tuo telefono esegue piccoli compiti che aiutano tutti—poi vieni ricompensato.",
+      "subtitle": "Il tuo telefono partecipa; tu guadagni ricompense",
+      "intro": "Il tuo telefono esegue piccoli controlli di sicurezza che aiutano la rete — poi guadagni ricompense.",
       "steps": "Tre Semplici Passi",
       "step1": "1) Dimostra di essere umano: un rapido controllo di liveness (e refresh occasionale) assicura una persona-un account.",
       "step2": "2) Aiuta la rete: il tuo telefono esegue campionamento Data Availability (DA) e altri controlli leggeri in background.",
-      "step3": "3) Guadagna ricompense giornaliere: vieni pagato per questo lavoro, con un obiettivo intorno ai 10 $/giorno a seconda della politica di rete.",
+      "step3": "3) Guadagna ricompense giornaliere: le ricompense vengono distribuite automaticamente in base alla partecipazione riuscita. Gli importi variano.",
       "localCurrency": "Pagato nella Tua Valuta",
-      "localCurrencyText": "Scegli un token di pagamento: stablecoin in valuta locale (dove disponibile) o UMT. Gli importi mirano a un valore di ~10 USD e possono variare con partecipazione e condizioni di mercato."
+      "localCurrencyText": "Scegli un asset di pagamento: UMT o stablecoin (dove disponibile). Le stablecoin sono emesse da terze parti e hanno i propri rischi."
     },
     "whereMoney": {
-      "title": "Da Dove Vengono i 10 $?",
+      "title": "Da Dove Vengono le Ricompense?",
       "subtitle": "Guadagni perché fai un lavoro",
-      "intro": "È la domanda numero 1. Risposta breve: perché fornisci un servizio di cui la rete ha bisogno.",
+      "intro": "È una domanda frequente. La risposta breve: le ricompense esistono perché i partecipanti forniscono sicurezza, e il protocollo emette token per regola.",
       "realWork": "Il Tuo Telefono Fa Lavoro Reale",
       "realWork1": "Campionamento Data Availability: il tuo telefono verifica che i dati dei blocchi siano disponibili e corretti",
       "realWork2": "Partecipazione Umana: dimostri una persona-un account per fermare bot e spam",
@@ -1154,7 +1362,7 @@
       "distribution": "Come Vengono Distribuite le Ricompense",
       "newTokens": "Nuovi token UMT vengono creati e condivisi con partecipanti telefono verificati (non con validator)",
       "fees": "Una porzione di commissioni e bid builder viene condivisa con sentinel telefono per finalizzare blocchi",
-      "treasury": "Una piccola porzione finanzia manutenzione e programmi di stabilità",
+      "treasury": "Alcune commissioni possono supportare la manutenzione dell'ecosistema (es. audit e software di riferimento) attraverso governance trasparente, dove abilitato.",
       "whyDifferent": "Perché È Diverso",
       "btcProblem": "Bitcoin premia miner specializzati (capital-intensive)",
       "ethProblem": "Ethereum premia grandi staker (capital-intensive)",
@@ -1191,19 +1399,23 @@
       "example1": "1 ZAR1 ≈ 1 Rand Sudafricano",
       "example2": "1 USD1 ≈ 1 Dollaro USA",
       "example3": "1 NGN1 ≈ 1 Naira Nigeriana",
-      "backed": "Emesse da Partner",
-      "backedText": "Le stablecoin su Umotu sono emesse da partner regolati e progettate per mantenere valore 1:1 con riserve. Gli emittenti pubblicano proof-of-reserves e termini di redemption.",
+      "backed": "Emesse da terze parti",
+      "backedText": "Le stablecoin sono emesse da fornitori indipendenti e sono progettate per seguire una valuta (come USD o CAD). Ogni stablecoin ha le proprie riserve, termini di riscatto, controlli di aggiornamento e politiche di rischio (incluso possibile congelamento). Leggi le divulgazioni dell'emittente.",
       "convert": "Conversione in Contanti",
-      "convertText": "Converti tramite banche/exchange partner, o spendi direttamente dove accettate."
+      "convertText": "Puoi scambiare stablecoin on-chain, o convertire tramite servizi di terze parti dove disponibile.",
+      "gas": "Usare stablecoin per le commissioni",
+      "gasText": "Alcuni portafogli possono consentire di pagare le commissioni di rete usando stablecoin tramite un servizio che le scambia con il token nativo. I validatori ricevono comunque il token nativo; il gas stabile è un livello di comodità.",
+      "preferredList": "Impostazioni predefinite del portafoglio",
+      "preferredListText": "Il portafoglio Umotu può mostrare una lista conservativa predefinita di stablecoin per pagamenti e servizi di commissioni basata sull'Umotu Stablecoin Standard (USS). Altri portafogli possono supportare altre stablecoin."
     },
     "economics": {
       "title": "Economia UMT",
       "subtitle": "Chi ottiene cosa e perché",
-      "intro": "UMT ha una fornitura fissa di 100 miliardi di token. La maggior parte è pagata a utenti telefono quotidiani che aiutano a mantenere onesta la rete.",
+      "intro": "UMT ha una fornitura fissa di 100 miliardi di token. La maggior parte è riservata ai partecipanti telefono nel tempo, distribuita da un controllore di emissioni basato su regole.",
       "supply": "Fornitura e Distribuzione",
       "supplyBullets": [
-        "La stragrande maggioranza della fornitura di token è riservata ai partecipanti telefonici nel tempo e viene rilasciata attraverso il Controller delle Emissioni. Il Controller delle Emissioni limita l'emissione giornaliera a non più dello 0,01% della fornitura rimanente, garantendo sostenibilità a lungo termine. Con questo programma, circa il 68% della fornitura totale rimane dopo 10 anni e circa il 15% rimane dopo 50 anni.",
-        "Una piccola parte della fornitura viene creata al lancio per scopi specifici, tra cui un airdrop per i primi utenti, una vendita comunitaria, l'allocazione della fondazione e una riserva di emergenza, ecc."
+        "La stragrande maggioranza della fornitura è riservata ai partecipanti telefono e rilasciata nel tempo attraverso un Controllore di Emissioni. Il controllore limita l'emissione giornaliera a non più dello 0,01% della fornitura rimanente per limitare la diluizione.",
+        "Al limite massimo (0,01% della fornitura rimanente al giorno), circa il 69% della fornitura rimane dopo 10 anni e circa il 16% rimane dopo 50 anni. L'emissione effettiva può essere inferiore a seconda delle regole del protocollo."
       ],
       "premine": "Allocazione di Lancio (provvisoria, soggetta a modifiche al lancio della mainnet)",
       "premineTable": [
@@ -1225,13 +1437,13 @@
         }
       ],
       "emissions": "Ricompense Giornaliere per Telefoni",
-      "emissionsText": "Ogni giorno la rete può emettere al massimo lo 0,01% del pool emissioni rimanente. Budgettiamo quell'importo affinché i telefoni verificati mirino a circa 10 $/giorno, adattandosi al numero di partecipanti e condizioni di mercato.",
+      "emissionsText": "Le emissioni giornaliere sono limitate. Le tue ricompense dipendono dalla partecipazione, dai controlli telefono riusciti e dalle condizioni di mercato. Il protocollo non promette un importo fisso.",
       "fees": "Commissioni e Sentinel",
       "feesText": "Aiutanti Sentinel (opzionale, avanzato) guadagnano una quota di commissioni transazioni e bid builder. Separato dalle emissioni giornaliere.",
       "transparency": "Trasparenza",
       "transparencyText": "Programmi vesting e portafogli sono pubblici. Limiti emissioni giornaliere e pagamenti realizzati sono pubblicati nell'app.",
       "disclaimerTitle": "Promemoria in Linguaggio Semplice",
-      "disclaimerText": "Questo non è consiglio di investimento. Le ricompense dipendono da politica di rete e partecipazione. L'app non garantisce reddito fisso."
+      "disclaimerText": "Questo non è consulenza finanziaria. Le ricompense sono variabili e non garantite."
     },
     "contribute": {
       "title": "Come Contribuire",
@@ -1258,7 +1470,7 @@
       },
       "governance": {
         "title": "Unisciti alla Governance",
-        "text": "Leggi proposte, discuti apertamente e vota nell'app. La tua voce aiuta a guidare parametri di rete e allocazioni grant.",
+        "text": "Leggi proposte, discuti apertamente e vota nell'app. I voti possono guidare le impostazioni predefinite del portafoglio e i grant dell'ecosistema. Alcune regole del protocollo sono fisse e non soggette a votazione.",
         "cta": "Apri Governance",
         "url": "umotu://vote"
       },
@@ -1273,37 +1485,38 @@
     "decentralization": {
       "title": "Perché la Decentralizzazione",
       "subtitle": "Nessun punto singolo di controllo",
-      "intro": "Decentralizzazione significa che nessuna singola azienda o governo può spegnere la rete o confiscare i tuoi fondi.",
+      "intro": "Decentralizzazione significa che la rete è gestita da molti partecipanti indipendenti. Il tuo portafoglio è in auto-custodia — solo le tue chiavi possono spostare i tuoi fondi.",
       "benefits": "Benefici per Te",
       "benefit1": "Sempre attiva: disponibilità 24/7",
-      "benefit2": "Commissioni più basse: piccole commissioni di rete invece di 3–5% carte",
+      "benefit2": "Spesso commissioni più basse: piccole commissioni di rete invece delle tipiche commissioni carta",
       "benefit3": "Senza confini: invia valore globalmente",
-      "benefit4": "Resistente alla censura: le tue chiavi, i tuoi soldi",
+      "benefit4": "Più resistente alla censura: nessuna singola azienda controlla il tuo portafoglio",
       "benefit5": "Trasparente: chiunque può verificare come funziona il sistema",
       "howWorks": "Come Funziona",
-      "howWorksText": "Validator propongono blocchi ogni ~2 secondi. Telefoni (come il tuo) verificano e finalizzano con controlli leggeri. Molti piccoli contributi sommano a sicurezza forte."
+      "howWorksText": "Validator propongono blocchi ogni ~2 secondi. Telefoni (come il tuo) verificano la disponibilità dei dati e aiutano a finalizzare blocchi con controlli leggeri. Molti piccoli contributi sommano a sicurezza forte."
     },
     "noCompany": {
-      "title": "Nessuna Azienda, Nessun Cliente",
-      "subtitle": "Capire il Modello",
-      "intro": "Non esiste 'Umotu, Inc.' che controlla il protocollo. Umotu è un set aperto di regole che chiunque può usare.",
+      "title": "Protocollo Aperto, Auto-Custodia",
+      "subtitle": "Comprendi cos'è Umotu (e cosa non è)",
+      "intro": "Non c'è una singola azienda a controllare il protocollo. Umotu è un insieme aperto di regole che chiunque può usare, e molti team indipendenti possono costruire portafogli e servizi.",
       "notCompany": "Cosa Umotu NON È",
-      "notCompany1": "NON un'azienda con account clienti",
-      "notCompany2": "NON una banca o trasmettitore di denaro",
+      "notCompany1": "NON una banca custodiale che detiene fondi clienti",
+      "notCompany2": "NON in grado di reimpostare il tuo portafoglio o invertire transazioni",
       "notCompany3": "NON controllato da singola entità",
-      "notCompany4": "NON può invertire transazioni",
+      "notCompany4": "NON un programma di reddito garantito",
       "whatIs": "Cosa Umotu È",
-      "whatIs1": "Un protocollo: come email o web—regole aperte e interoperabili",
-      "whatIs2": "Phone-first: eseguito con aiuto da smartphone quotidiani",
+      "whatIs1": "Un protocollo: regole aperte e interoperabili (come email o il web)",
+      "whatIs2": "Partecipazione phone-first: gli smartphone possono aiutare a proteggere la rete",
       "whatIs3": "Guidato dalla community: sei un partecipante, non un cliente",
+      "whatIs4": "Senza permessi: chiunque può costruire su o utilizzare il protocollo",
       "foundation": "La Umotu Foundation",
-      "foundationIntro": "Una nonprofit che supporta l'ecosistema (app di riferimento, docs, programmi community) ma non controlla il protocollo.",
+      "foundationIntro": "Una nonprofit che supporta l'ecosistema (app di riferimento, educazione e coordinamento) ma non controlla il protocollo.",
       "foundationTask1": "Mantiene app mobile ed explorer come implementazioni di riferimento",
       "foundationTask2": "Gestisce alcune infrastrutture pubbliche (altri possono gestirne)",
-      "foundationTask3": "Coordina governance community (notizie, voti)",
-      "foundationTask4": "Rivede e lista stablecoin supportate",
+      "foundationTask3": "Coordina voti e discussioni community nell'app (dove applicabile)",
+      "foundationTask4": "Pubblica l'Umotu Stable Accord e liste conservative predefinite per il portafoglio Umotu (altri possono supportare altre stablecoin)",
       "foundationTask5": "Pubblica guide educative e di sicurezza",
-      "foundationNote": "La Foundation non può accedere al tuo portafoglio e non può invertire transazioni."
+      "foundationNote": "La Foundation non può accedere al tuo portafoglio e non può invertire transazioni. Le impostazioni predefinite del portafoglio non limitano ciò che è possibile sul protocollo."
     },
     "scamPrevention": {
       "title": "Evita Truffe",
@@ -1327,22 +1540,22 @@
       "action4": "Blocca e segnala"
     },
     "airdrop": {
-      "title": "Airdrop Testnet",
-      "subtitle": "Utenti precoci vengono riconosciuti",
-      "intro": "Sei precoce! Umotu è in testnet. Partecipanti attivi testnet potrebbero ricevere un'allocazione al lancio mainnet.",
+      "title": "Riconoscimento Testnet",
+      "subtitle": "La partecipazione precoce al testnet potrebbe essere riconosciuta",
+      "intro": "Umotu è in testnet. I partecipanti attivi al testnet possono ricevere un'allocazione di riconoscimento al lancio della mainnet. Questo non è garantito e potrebbe essere zero.",
       "howToQualify": "Come Qualificarsi",
       "step1": "Crea un portafoglio nell'app",
       "step2": "Completa verifica umana (Proof of Human)",
       "step3": "Usa l'app regolarmente durante testnet",
       "whenAirdrop": "Quando l'Airdrop?",
       "whyTestnet": "Testnet è essenziale: utenti imparano sicurezza portafoglio, e il sistema viene testato per sicurezza, robustezza ed efficienza prima di mainnet.",
-      "timeline": "Mainnet previsto in Q1 o Q2 2026. L'airdrop avverrà intorno al lancio mainnet.",
+      "timeline": "I tempi della mainnet e eventuali dettagli di riconoscimento saranno annunciati nell'app.",
       "howMuch": "Quanto Riceverò?",
-      "totalPool": "Pool airdrop totale: 1.000.000.000 token UMT. La tua quota dipende dai partecipanti totali e prezzo UMT al lancio.",
-      "scenario2": "1M utenti: ~1.000 UMT per utente, prezzo atteso ~$1, valore airdrop ~$1.000",
-      "scenario3": "10M utenti: ~100 UMT per utente, prezzo atteso ~$20, valore airdrop ~$2.000",
-      "scenario4": "100M utenti: ~10 UMT per utente, prezzo atteso ~$300, valore airdrop ~$3.000",
-      "disclaimer": "Queste sono proiezioni, non garanzie. Valori reali dipendono da condizioni di mercato e regole programma.",
+      "totalPool": "Solo esempio: se viene creato un pool di riconoscimento di 1.000.000.000 UMT, la tua quota dipende dai partecipanti idonei e dalle regole del programma. Prima partecipi, maggiore sarà la tua quota.",
+      "scenario2": "Solo esempio: 1M utenti idonei → ~1.000 UMT in media ciascuno (prima della ponderazione)",
+      "scenario3": "Solo esempio: 10M utenti idonei → ~100 UMT in media ciascuno (prima della ponderazione)",
+      "scenario4": "Solo esempio: 100M utenti idonei → ~10 UMT in media ciascuno (prima della ponderazione)",
+      "disclaimer": "Solo esempi — non garanzie. Qualsiasi allocazione di riconoscimento dipende dalle regole del programma e dalle condizioni di mercato, e potrebbe essere zero.",
       "whatYouGet": "Cosa Ottieni",
       "reward": "Al mainnet, il tuo portafoglio testnet potrebbe ricevere token reali basati su partecipazione e regole programma. Utenti precedenti e più attivi prioritizzati.",
       "note": "Nota: Token testnet non hanno valore. Qualsiasi allocazione mainnet determinata da politica programma al lancio. Tutte le notizie su airdrop pubblicate solo in questa app."
@@ -1360,7 +1573,21 @@
       "tips": "Consigli Pro",
       "tip1": "Consenti accesso background affinché i controlli possano eseguire",
       "tip2": "Controlla quotidianamente per vedere ricompense",
-      "tip3": "Invita amici—più utenti rendono la rete più forte"
+      "tip3": "Invita amici — più partecipanti possono rendere la rete più forte"
+    },
+    "governance": {
+      "title": "Governance e Votazioni",
+      "subtitle": "Come funzionano le votazioni nell'app",
+      "intro": "Umotu supporta sondaggi e votazioni nell'app affinché i partecipanti possano contribuire a orientare certe decisioni dell'ecosistema.",
+      "whatVotesDo": "Cosa possono fare le votazioni",
+      "whatVotesDo1": "Raccomandare le impostazioni predefinite del portafoglio (ad esempio, quali stablecoin appaiono come opzioni preferite di pagamento o gas stabile)",
+      "whatVotesDo2": "Segnalare la preferenza della community su proposte e priorità",
+      "whatVotesDo3": "Approvare determinati grant o budget dove abilitato",
+      "whatVotesCannotDo": "Cosa le votazioni non possono fare",
+      "whatVotesCannotDo1": "Accedere al tuo portafoglio, spostare i tuoi fondi o reimpostare la tua frase di recupero",
+      "whatVotesCannotDo2": "Invertire transazioni o congelare il tuo portafoglio in auto-custodia",
+      "whatVotesCannotDo3": "Modificare la politica monetaria fissa al di fuori delle regole del protocollo",
+      "note": "Alcuni sondaggi possono essere simulati o consultivi a seconda della fase della rete. Leggi sempre i dettagli della proposta e le condizioni di attivazione."
     }
   },
   "common": {
@@ -1409,6 +1636,7 @@
   "poh_title": "Verifica Umano",
   "continue": "Continua",
   "or": "O",
+  "version": "Versione",
   "seedReveal": {
     "title": "Frase di Recupero",
     "intro": "La tua frase di recupero è l'unico modo per ripristinare il portafoglio se perdi accesso a questo dispositivo. Scrivila e conservala in modo sicuro offline.",

@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "하루 10달러, 모두에게, 어디서나"
+    "tagline": "누구나 참여, 매일 보상"
   },
   "navigation": {
     "home": "홈",
@@ -38,6 +38,9 @@
       "changeChoice": "선택 변경",
       "requiresLanguage": "먼저 언어를 선택하세요",
       "requiresWallet": "먼저 지갑을 생성하세요"
+    },
+    "daSampling": {
+      "staleHint": "일일 보상 수급 자격을 확보하려면 지금 샘플링을 실행하세요."
     }
   },
   "earnings": {
@@ -118,13 +121,15 @@
     "manual": {
       "title": "수동 청구",
       "description": "자금이 더 빨리 필요하면 지금 다음 이용 가능한 보상을 청구하세요. 수동 청구는 지갑의 가스를 사용합니다. 기다리면 자동 청구가 더 저렴합니다. 지갑에 자금이 없으면 수동 청구 전에 자동 청구를 활성화하거나 네이티브 가스를 충전하세요.",
-      "dayLabel": "보상 일",
       "claimButton": "지금 청구",
       "claiming": "청구 중...",
+      "cancelling": "청구 취소 중...",
+      "cancelled": "청구가 취소되었습니다.",
+      "cancelButton": "청구 취소",
       "success": "청구 제출됨",
       "successWithId": "청구 제출됨 (id: {{id}})",
       "error": "청구 실패",
-      "noProof": "보상 증명이 아직 게시되지 않았습니다. 오늘의 스냅샷이 게시된 후 다시 시도해 주세요.",
+      "noProof": "이 지갑/날짜에 대한 보상 증명을 아직 찾을 수 없습니다 (또는 해당 날짜에 자격이 없었습니다). 오늘의 스냅샷이 게시된 후 다시 시도해 주세요.",
       "unauthorized": "릴레이어 인증에 실패했습니다. 다시 시도하거나 지원팀에 문의해 주세요.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -136,9 +141,22 @@
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "remainingAfter": "이 배치 후 +{{days}}일 더",
+      "calendarVsEligible": "{{calendar}} 달력일 중 {{eligible}} 일 자격",
+      "showMissingDays": "누락된 날 표시 ({{count}})",
+      "hideMissingDays": "누락된 날 숨기기",
+      "noMissingDaysLoaded": "정책에서 아직 누락된 날 세부 정보가 반환되지 않았습니다.",
+      "moreMissingDays": "그리고 {{count}} 일 더",
+      "missingDaysHint": "누락된 날은 해당 UTC 날짜에 DA 샘플링/증명이 없음을 의미합니다.",
       "batchSuccess": "{{count}}일 청구 완료",
+      "fallbackPaidInNative": "UMT로 지급됨: 스테이블코인 일시적으로 사용 불가",
       "claimingProgress": "청구 중 {{claimed}}/{{total}}...",
-      "claimAllButton": "{{count}}일 모두 청구"
+      "claimingDay": "{{day}}일차 처리 중",
+      "claimAllButton": "{{count}}일 모두 청구",
+      "stableNotConfigured": "스테이블코인 지급을 사용할 수 없습니다. UMT를 선택하거나 지원팀에 문의하세요.",
+      "insufficientGas": "가스 잔액이 부족합니다. 지갑에 네이티브 토큰을 충전하세요.",
+      "userRejected": "트랜잭션이 취소되었습니다.",
+      "networkError": "네트워크 오류입니다. 연결을 확인하고 다시 시도하세요.",
+      "alreadyClaimed": "이 보상은 이미 청구되었습니다."
     },
     "timezone": {
       "title": "시간대 선택",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "주소록",
       "addContact": "연락처 추가",
-      "nameLabel": "이름 또는 라벨",
+      "nameLabel": "이름",
       "walletAddress": "지갑 주소 (0x...)",
       "savedContacts": "저장된 연락처",
       "noContacts": "저장된 연락처가 아직 없습니다.",
       "addForQuickSending": "빠른 송금을 위해 연락처를 추가하세요.",
       "enterValidAddress": "유효한 주소를 입력하세요",
       "addLabel": "라벨 추가",
-      "save": "저장"
+      "labelAlreadyExists": "이 라벨은 이미 존재합니다",
+      "tagOptional": "태그 (선택사항)",
+      "save": "저장",
+      "editContact": "연락처 편집",
+      "tags": "태그",
+      "noTagsYet": "아직 태그가 추가되지 않았습니다",
+      "newTagPlaceholder": "태그 이름 입력...",
+      "addTag": "추가",
+      "existingTags": "또는 기존 태그 추가:",
+      "deleteContact": "연락처 삭제",
+      "confirmDeleteTitle": "연락처를 삭제하시겠습니까?",
+      "confirmDeleteMessage": "주소록에서 {{label}}을(를) 삭제합니다."
     },
     "settings": {
       "title": "지갑 설정",
@@ -234,6 +263,7 @@
         "description": "복구 구문이나 개인 키를 절대 공유하지 마세요. 오프라인에 안전하게 보관하세요.",
         "recoveryPhrase": "복구 구문",
         "recoveryPhraseNotAvailable": "복구 구문 없음 (개인 키로 가져옴)",
+        "walletNotLoaded": "로드된 지갑이 없습니다. 먼저 지갑을 가져오거나 생성하세요.",
         "privateKey": "개인 키",
         "privateKeyWarning": "개인 키 (비밀 유지!)",
         "showPhrase": "복구 구문 표시",
@@ -256,7 +286,8 @@
         "keyPlaceholder": "0x… 개인 키 입력",
         "importButton": "지갑 가져오기",
         "importing": "가져오는 중...",
-        "success": "지갑이 성공적으로 가져와졌습니다!"
+        "success": "지갑이 성공적으로 가져와졌습니다!",
+        "saveFailed": "지갑 가져오기는 성공했지만 이 기기에 저장하지 못했습니다."
       },
       "dangerZone": {
         "title": "위험 영역",
@@ -529,6 +560,7 @@
       "deleteContact": "연락처 삭제",
       "addressNotSaved": "주소가 저장되지 않음",
       "addLabel": "라벨 추가",
+      "labelAlreadyExists": "이 라벨은 이미 존재합니다",
       "enterValidAddress": "먼저 유효한 주소를 입력하세요",
       "saved": "저장됨",
       "save": "저장"
@@ -547,6 +579,7 @@
       "addFromTagOrBook": "태그 또는 주소록에서 추가",
       "invalidAddress": "잘못된 주소: {{address}}",
       "invalidAmount": "{{recipient}}의 금액이 잘못됨",
+      "tooManyRecipients": "일괄 송금은 최대 {{max}}명의 수신자를 지원합니다.",
       "totalExceedsBalance": "총액이 잔액을 초과함",
       "sendingTo": "{{count}}명의 수신자에게 전송",
       "sendingTo_plural": "{{count}}명의 수신자에게 전송",
@@ -568,6 +601,18 @@
       "failedStatus": "실패",
       "details": "일괄 전송 상세",
       "total": "총계",
+      "hongbao": {
+        "short": "홍바오",
+        "total": "총 홍바오",
+        "helper": "고정 총액을 설정하면 다음 단계에서 각 수신자에게 무작위로 금액을 분배합니다.",
+        "random": "랜덤",
+        "autoSplit": "자동 분할",
+        "generated": "무작위 분할 생성됨",
+        "needTwoRecipients": "홍바오는 최소 2명의 수신자가 필요합니다.",
+        "amountTooSmall": "{{count}}명의 수신자에 비해 총액이 너무 적습니다. 최소 {{min}} {{symbol}}입니다.",
+        "generateFailed": "무작위 금액 생성에 실패했습니다.",
+        "disabled": "홍바오 모드가 현재 비활성화되어 있습니다."
+      },
       "tagPicker": {
         "title": "태그 선택",
         "noTags": "사용 가능한 태그 없음",
@@ -646,19 +691,48 @@
       "type": "유형",
       "to": "수신",
       "from": "발신",
+      "address": "주소",
       "token": "토큰",
       "block": "블록",
       "gasCost": "가스 비용",
+      "balanceAfter": "tx 후 잔액",
+      "balanceSource": "잔액 출처",
+      "balanceSourceVerified": "온체인 검증됨",
+      "balanceSourceVerifying": "추정 (온체인 검증 중...)",
+      "balanceSourceEstimatedRecent": "최근 잔액 스냅샷에서 추정",
+      "balanceSourceEstimatedStale": "오래된 잔액 스냅샷에서 추정",
+      "balanceSourceEstimatedDelayed": "추정 (온체인 검증 지연됨)",
+      "balanceSnapshotAge": "스냅샷 나이",
+      "balanceReconciledDiff": "조정된 차이",
+      "balanceVerifyNote": "검증 메모",
+      "balanceVerifyUnexpected": "검증 지연됨. 추정 잔액 표시됨.",
+      "unavailable": "사용 불가",
       "hash": "해시",
       "source": "출처",
       "balanceDetected": "잔액 감지됨",
       "inferredNote": "이 거래는 잔액 변화로 감지되었습니다. 정확한 온체인 상세 정보는 사용할 수 없습니다."
     },
+    "batch": {
+      "title": "일괄 전송 상세",
+      "badge": "일괄",
+      "send": "일괄 전송",
+      "recipients": "수신자",
+      "recipientCount": "{{count}}명의 수신자",
+      "recipientCount_plural": "{{count}}명의 수신자",
+      "successful": "성공",
+      "successOf": "{{success}} / {{total}}",
+      "sentStatus": "전송됨",
+      "failedStatus": "실패",
+      "successFail": "{{success}}건 성공, {{fail}}건 실패",
+      "toRecipients": "{{count}}명의 수신자에게",
+      "toRecipients_plural": "{{count}}명의 수신자에게"
+    },
     "time": {
       "justNow": "방금",
       "minsAgo": "{{count}}분 전",
       "hoursAgo": "{{count}}시간 전",
-      "daysAgo": "{{count}}일 전"
+      "daysAgo": "{{count}}일 전",
+      "suffixAgo": "전"
     }
   },
   "settings": {
@@ -733,6 +807,43 @@
       "clearCache": "캐시 삭제",
       "cacheCleared": "캐시 삭제됨! 적용하려면 재시작하세요."
     },
+    "hongbaoDebug": {
+      "title": "홍바오 설정 (디버그)",
+      "description": "로컬 홍바오 시즌 캐시를 삭제하고 다음 앱 실행 시 새로고침을 강제합니다.",
+      "clearConfigCache": "홍바오 캐시 삭제",
+      "cacheCleared": "홍바오 설정 캐시 삭제됨",
+      "cacheClearFailed": "홍바오 설정 캐시 삭제 실패"
+    },
+    "integrityDebug": {
+      "title": "앱 증명 (디버그)",
+      "description": "App Attest가 활성 상태인지 확인하기 위해 기기 증명 토큰을 가져옵니다.",
+      "fetch": "증명 가져오기",
+      "fetching": "가져오는 중...",
+      "copy": "페이로드 복사",
+      "copyNonce": "Nonce 복사",
+      "toastFetchSuccess": "앱 증명을 가져왔습니다",
+      "toastFetchError": "앱 증명에 실패했습니다",
+      "toastCopy": "증명이 복사되었습니다",
+      "toastCopyNonce": "Nonce가 복사되었습니다",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "빈 페이로드",
+      "summaryStub": "스텁 토큰 (네이티브 모듈 없음?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (미지원)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "오류: {{message}}",
+      "verify": "서버에서 검증",
+      "verifying": "검증 중...",
+      "verifyMissing": "오류: 페이로드 또는 nonce가 없습니다",
+      "verifyOk": "서버 검증: 성공",
+      "verifyFail": "서버 검증 실패: {{error}}",
+      "toastVerifyOk": "서버 검증 성공",
+      "toastVerifyFail": "서버 검증 실패"
+    },
     "chainGuardian": {
       "title": "Chain Guardian",
       "description": "휴대폰을 온라인으로 유지하여 블록체인 보안에 도움을 주세요. 보상 자격을 유지하려면 하루에 최소 한 개의 샘플링 작업을 완료하세요.",
@@ -747,10 +858,12 @@
       "staleWarning": "오늘 활동 없음 — 앱을 다시 열어 재개하세요.",
       "androidBatteryWarning": "배터리 최적화가 샘플링을 방해할 수 있음",
       "androidBatteryHint": "설정 → 앱 → Umotu → 배터리 → \"무제한\" 선택하여 백그라운드 샘플링 허용.",
+      "iosBackgroundHint": "iOS가 백그라운드 샘플링을 일시 중지할 수 있습니다. 앱을 가끔 열거나 지금 실행을 탭하여 활성 상태를 유지하세요.",
       "openSettings": "탭하여 설정 열기",
       "tip": "최대 수익을 위해 \"백그라운드 실행\" 활성화.",
       "runNow": "지금 실행",
       "running": "실행 중…",
+      "runNowNoData": "데이터 없음 (배터리/WiFi 제약 또는 할당 없음).",
       "lastError": "마지막 오류",
       "status": {
         "active": "활성",
@@ -766,12 +879,57 @@
       "noConnections": "연결된 앱 없음",
       "revokeAccess": "접근 취소",
       "lastUsed": "마지막 사용"
+    },
+    "transfer": {
+      "title": "기기 데이터 전송",
+      "description": "전송 QR 코드를 스캔하여 앱 설정 및 연락처를 새 전화로 이동합니다.",
+      "warning": "앱 데이터만 전송됩니다. 지갑 복구 문구/개인 키는 포함되지 않습니다. 새 전화에서 별도로 지갑을 가져오세요.",
+      "preparing": "준비 중...",
+      "showQr": "전송 QR 표시",
+      "scanQr": "전송 QR 스캔",
+      "exportTitle": "전송 QR",
+      "exportHint": "새 전화에서 설정 -> 기기 데이터 전송 -> 전송 QR 스캔을 열고 이 코드를 스캔하세요.",
+      "exportHintParts": "새 전화에서 각 페이지를 순서대로 스캔하고(1부터 {{total}}까지) 6자리 코드를 입력하세요.",
+      "exportHintRelay": "새 전화에서 이 QR 코드를 스캔하여 전송 패키지를 다운로드한 후 6자리 확인 코드를 입력하세요.",
+      "exportReady": "전송 QR 준비 완료({{count}}개 항목)",
+      "exportReadyParts": "전송 QR 준비 완료({{count}}개 항목, {{parts}}개 QR 페이지). 페이지를 순서대로 스캔하세요.",
+      "relayReady": "대용량 전송 최적화: 하나의 QR을 스캔하여 {{count}}개 항목을 다운로드한 후 6자리 코드를 입력하세요.",
+      "relayFallback": "클라우드 전송을 사용할 수 없습니다 ({{message}}). 멀티 페이지 QR로 전환합니다.",
+      "relayFetching": "전송 데이터 다운로드 중...",
+      "relayFetched": "전송 데이터 다운로드 완료. 처리 중...",
+      "exportFailed": "전송 준비 실패: {{message}}",
+      "prevPage": "이전",
+      "nextPage": "다음",
+      "confirmCodeLabel": "6자리 확인 코드",
+      "copyCode": "전송 코드 복사",
+      "importTitle": "전송 QR 스캔",
+      "importHint": "이전 전화에 표시된 전송 QR에 카메라를 향하세요.",
+      "importing": "가져오는 중...",
+      "importNow": "데이터 가져오기",
+      "imported": "{{count}}개 항목을 가져왔습니다. 지갑 복구 문구/개인 키는 전송되지 않습니다.",
+      "importFailed": "전송 가져오기 실패: {{message}}",
+      "confirmPrompt": "QR 스캔 완료. 이전 전화에 표시된 6자리 확인 코드를 입력하세요.",
+      "confirmCodeRequired": "이전 전화에서 6자리 확인 코드를 입력하세요.",
+      "confirmCodeMismatch": "확인 코드가 일치하지 않습니다. 다시 시도해 주세요.",
+      "rescan": "다시 스캔",
+      "scanProgress": "QR {{current}}/{{total}} 스캔됨",
+      "scanContinue": "완료될 때까지 남은 페이지를 순서대로 계속 스캔하세요.",
+      "restartScan": "스캔 다시 시작",
+      "chunkMismatch": "전송 QR 페이지가 일치하지 않습니다. 페이지 1부터 스캔을 다시 시작하세요.",
+      "cameraNeeded": "카메라 접근 필요",
+      "cameraDescription": "전송 QR 코드를 스캔하려면 카메라 권한을 활성화하세요.",
+      "allowCamera": "카메라 허용",
+      "openSettings": "설정 열기",
+      "pasteCode": "전송 코드 붙여넣기",
+      "pasteTitle": "전송 코드 붙여넣기",
+      "pasteHint": "카메라 스캔이 어려운 경우 이전 전화에서 복사한 전송 코드를 붙여넣으세요.",
+      "pastePlaceholder": "UMOTU_TRANSFER:..."
     }
   },
   "onboarding": {
     "welcome": {
       "title": "Umotu에 오신 것을 환영합니다",
-      "subtitle": "하루 10달러, 모두에게, 어디서나",
+      "subtitle": "누구나 참여, 매일 보상",
       "getStarted": "시작하기"
     },
     "language": {
@@ -811,6 +969,40 @@
       "validFor_plural": "~{{days}}일 유효",
       "expired": "인증 만료 또는 찾을 수 없음.",
       "expiredDetail": "자격 증명을 새로고침하려면 생체 확인을 다시 실행하세요."
+    },
+    "capture": {
+      "title": "얼굴 캡처",
+      "hint": "얼굴을 중앙에 두고 가만히 있으세요.",
+      "tipsTitle": "캡처 팁",
+      "tipFace": "얼굴을 중앙에 유지하고 프레임을 채우세요 (≥ {{pct}}%).",
+      "tipLight": "균일한 조명을 사용하고 강한 역광을 피하세요.",
+      "tipHold": "가만히 있고 {{seconds}}초 동안 카메라를 보세요.",
+      "tipRemove": "모자, 마스크 또는 짙은 그림자를 제거하세요.",
+      "errorShort": "캡처가 너무 짧습니다. {{seconds}}초 동안 가만히 있으세요.",
+      "errorTooSmall": "캡처 실패. 다시 시도해 주세요.",
+      "errorFileTooSmall": "비디오 파일이 너무 작습니다. 전체 캡처 동안 가만히 있고 조명을 개선하세요.",
+      "errorBitrate": "비디오 품질이 너무 낮습니다. 조명을 개선하고 휴대폰을 안정적으로 유지하세요.",
+      "errorLowQuality": "캡처 품질이 너무 낮습니다. 더 좋은 조명이나 고화질 카메라를 사용하세요.",
+      "errorCameraPermission": "카메라 권한이 필요합니다. 설정에서 활성화하고 다시 시도하세요.",
+      "errorCameraUnavailable": "이 기기에서 카메라를 사용할 수 없습니다. 다른 카메라 앱을 닫고 다시 시도하세요.",
+      "errorRecordingFailed": "비디오 녹화 실패. 더 좋은 조명에서 다시 시도하세요.",
+      "errorStorage": "비디오를 녹화할 저장 공간이 부족합니다. 공간을 확보하고 다시 시도하세요.",
+      "errorFileAccess": "녹화된 비디오를 읽을 수 없습니다. 다시 촬영해 주세요.",
+      "errorDeviceAttest": "기기 보안 검사 실패. Google Play 서비스를 업데이트하고 다시 시도하세요.",
+      "errorCooldown": "시도 횟수가 너무 많습니다. 잠시 후 다시 시도하세요.",
+      "errorChallenge": "활성 챌린지가 완료되지 않았습니다. 다시 촬영하고 지시를 따르세요.",
+      "errorUpload": "업로드 실패. 연결을 확인하고 다시 시도하세요.",
+      "errorUploadForbidden": "업로드 URL이 거부되었습니다 (만료되었거나 서명 불일치). 다시 촬영하고 시도하세요.",
+      "errorUploadTimeout": "업로드 시간 초과. 연결을 확인하고 다시 시도하세요.",
+      "errorUploadServer": "업로드 서비스가 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도하세요.",
+      "errorSessionExpired": "세션 만료. 다시 촬영해 주세요.",
+      "errorUnexpected": "캡처 실패. 다시 시도해 주세요.",
+      "retryUpload": "업로드 재시도",
+      "retake": "다시 촬영",
+      "recording": "녹화 중...",
+      "uploading": "업로드 중...",
+      "processing": "처리 중...",
+      "start": "캡처 시작"
     }
   },
   "sentinelSettings": {
@@ -905,25 +1097,25 @@
     "pohDescription": "inLyf로 인간성 인증하여 일일 보상 잠금 해제.",
     "vision": {
       "title": "우리 비전",
-      "tagline": "하루 10달러, 모두에게, 어디서나",
-      "description": "Umotu는 누구나 거주지나 은행에 관계없이 글로벌 경제에 참여할 수 있는 인프라를 구축합니다.",
+      "tagline": "누구나 참여, 매일 보상",
+      "description": "Umotu는 글로벌 디지털 경제 참여를 더 간편하게 만들기 위해 설계된 개방형 프로토콜입니다: 개방형 접근, 빠른 정산, 일상 거래를 위한 선택적 스테이블코인.",
       "readMore": "전체 비전 읽기",
       "pillars": {
-        "title": "세 가지 핵심 원칙",
+        "title": "핵심 원칙",
         "ubi": {
-          "title": "하루 $10, 모두에게 어디서나",
-          "description": "네트워크 보안에 대한 보상으로 보편적 기본 소득. 스마트폰만 있으면 누구나 참여하고 수익 가능."
+          "title": "누구나 참여, 매일 보상",
+          "description": "일일 보상은 네트워크 보안 참여를 통해 획득됩니다. 보상은 변동적이며 보장되지 않습니다."
         },
         "capital": {
-          "title": "자본 자유 이동",
-          "description": "국경 내외 결제 및 송금 마찰 거의 없음. 사업체는 플랫폼 비용 ~0.1% 지불, 개인은 무료."
+          "title": "낮은 마찰 송금",
+          "description": "결제와 송금은 빠르고 마찰이 낮도록 설계되었습니다. 수수료와 성능은 네트워크 상태와 사용하는 앱에 따라 다릅니다."
         },
         "sovereignty": {
-          "title": "통화 주권 존중",
-          "description": "법정 화폐를 대체하지 않고 더 잘 작동하게 함. 은행이 현지 통화 연동 스테이블코인 발행. 더 넓은 도달과 낮은 마찰로 통화 정책 효과 향상."
+          "title": "현지 화폐와 호환",
+          "description": "Umotu는 통화 정책을 통제하지 않으며 법정 화폐를 대체하지 않습니다. Umotu의 스테이블코인은 제3자가 발행하며 고유한 규칙과 위험이 있습니다."
         }
       },
-      "notReplacing": "Umotu는 중앙은행과 경쟁하지 않습니다. 법정 화폐를 위한 더 나은 인프라 구축: 마찰 감소, 글로벌 접근, 시장 효율성 및 복원력 향상."
+      "notReplacing": "Umotu는 인프라입니다. 통화 정책을 설정하지 않으며, 스테이블코인 안전을 보장하지 않고, 특정 결과를 위한 개입을 하지 않습니다."
     },
     "building": {
       "title": "생태계 구축 중",
@@ -1031,34 +1223,50 @@
     "business": {
       "title": "Umotu에서 비즈니스 구축",
       "subtitle": "내장 결제 앱 출시",
-      "description": "Umotu 생태계에 접근하는 앱 생성—일일 소득 있는 수백만 인증 인간, 거래 준비 완료. 결제 통합 문제 없음.",
+      "description": "온체인 결제와 선택적 스테이블코인이 포함된 앱을 구축하세요. 참여자는 일일 보상(변동)을 획득하고 지원되는 자산으로 거래할 수 있습니다.",
       "benefits": {
-        "noFees": "거의 0 결제 처리 수수료—수익 99.9% 유지",
-        "verifiedUsers": "모든 사용자 인증 인간—봇 또는 사기 없음",
-        "globalReach": "첫날부터 190+ 국가 사용자 도달",
-        "instantPayments": "즉시 정산—30일 결제 지연 없음"
+        "noFees": "낮고 투명한 수수료 — 정확한 비용은 네트워크 상태에 따라 변동",
+        "verifiedUsers": "인증된 참여자 — Proof of Human으로 봇 및 시빌 활동 감소",
+        "globalReach": "글로벌 참여자에게 도달 (가용성에 따름)",
+        "instantPayments": "빠른 온체인 정산 — 타이밍은 네트워크 상태에 따라 다름"
       },
       "exampleTitle": "사용 사례",
-      "exampleText": "Umotu 라이드 쉐어링 앱은 전통 플랫폼 70% 대비 요금 99.9% 유지. 운전자 더 벌고, 승객 더 적게 지불.",
+      "exampleText": "라이드 셰어링 앱은 승객과 운전자 간 결제를 직접 라우팅하여 투명한 수수료와 온체인 거의 실시간 정산이 가능합니다.",
       "docsButton": "문서 읽기",
       "buildButton": "빌드 시작"
     },
     "bank": {
       "title": "은행이신가요?",
       "subtitle": "Umotu에서 스테이블코인 발행",
-      "description": "면허 금융 기관은 현지 통화 스테이블코인을 Umotu에서 발행하고 수백만 사용자 UBI 경제에 접근할 수 있습니다.",
+      "description": "금융 기관과 결제 회사는 Umotu에서 스테이블코인을 발행하여 일상 거래에 안정적인 계정 단위 자산을 선호하는 사용자에게 서비스를 제공할 수 있습니다.",
       "benefits": {
-        "reserves": "예비금 수익: 채권 및 저위험 자산 투자",
-        "mintRedeem": "발행/환전 수수료 부과: 일반적으로 법정화폐 ↔ 스테이블코인 변환 0.1%",
-        "users": "일일 활성 UBI 수취인 수백만 접근",
-        "global": "국경 넘어 즉시 도달 확대",
-        "custody": "예비금 본인 보관: 백업 자산 완전 통제"
+        "reserves": "준비금 관리는 발행자가 통제하며 적용 규칙에 따릅니다",
+        "mintRedeem": "발행자는 자체 재량으로 발행/환전 수수료를 설정할 수 있습니다",
+        "users": "증가하는 활성 참여자 기반에 접근",
+        "global": "국경을 넘어 사용자에게 도달 (규정 준수 및 배포에 따름)",
+        "custody": "발행자가 통제하는 준비금 및 정책"
       },
       "revenueModel": "발행자 수익 방식",
-      "revenueNote": "Tether 등 주요 발행자와 같이 예비금 수익 및 변환 수수료. 일일 UBI 수취인 수백만으로 발행/환전 볼륨 상당.",
-      "futureNote": "프로토콜 발전에 따라 미래에 거래 수수료 일부 수령 가능.",
+      "revenueNote": "발행자 경제학은 다양합니다. 일부 발행자는 준비금 수익 및/또는 발행/환전 수수료에서 수익을 창출하며, 모델과 의무에 따라 다릅니다.",
+      "futureNote": "프로토콜은 발행자 수익을 보장하지 않습니다. 향후 변경이 있을 경우 프로토콜의 거버넌스 프로세스를 따라야 합니다.",
       "learnMore": "자세히 알아보기",
       "applyButton": "지금 신청"
+    },
+    "stablesDocs": {
+      "title": "스테이블코인 기준",
+      "subtitle": "Umotu Foundation 앱의 기본값 (프로토콜 허가 아님)",
+      "description": "Umotu Foundation은 Foundation이 관리하는 앱과 서비스에서 기본 스테이블코인 지원에 사용되는 기준을 게시합니다. 프로토콜 수준의 전송이나 서드파티 지갑을 제한하지 않습니다. 기준은 스테이블코인 리스크를 제거하지 않습니다.",
+      "uss": {
+        "title": "Umotu Stablecoin Standard (USS)",
+        "description": "Umotu Foundation 앱에서 기본 지급 옵션 및 stable-gas 서비스(페이마스터 경유)로 표시되는 스테이블코인의 최소 공시, 준비금, 상환 기준.",
+        "button": "USS 읽기"
+      },
+      "rdp": {
+        "title": "Risk Disclosure Policy (RDP)",
+        "description": "Umotu Foundation 앱에 표시되는 규칙 기반 리스크 지표 (예: 환율 변동, 페그 이탈, 상환 제한, 기술 리스크).",
+        "button": "RDP 읽기"
+      },
+      "learnMore": "스테이블코인 기준 보기"
     }
   },
   "news": {
@@ -1114,36 +1322,36 @@
   },
   "learn": {
     "title": "학습",
-    "subtitle": "Umotu에 대해 알아야 할 모든 것",
+    "subtitle": "누구나 참여, 매일 보상",
     "featured": "추천",
     "whatIs": {
       "title": "Umotu란?",
-      "subtitle": "하루 10달러, 모두에게, 어디서나",
-      "intro": "Umotu는 스마트폰만으로 누구나 하루 약 $10을 벌 수 있게 합니다. 고가 하드웨어, 특수 기술, 국경 없음.",
+      "subtitle": "누구나 참여, 매일 보상",
+      "intro": "Umotu는 스마트폰을 사용하여 누구나 참여할 수 있고, 네트워크 보안 유지에 기여하여 일일 보상을 받을 수 있는 개방형 프로토콜입니다. 보상은 변동적이며 보장되지 않습니다. 참고로, 프로토콜은 출시 시 활성 참여자 1인당 약 $10/일의 참조 목표를 기준으로 설계되었지만, 실제 보상은 참여 상황과 시장 조건에 따라 훨씬 낮거나(하루 몇 센트 포함) 높을 수 있습니다.",
       "howDifferent": "어떻게 다를까?",
-      "noMiddleman": "중개인 없음: 네트워크와 직접 상호작용—은행 계좌 불필요",
-      "globalAccess": "글로벌 접근: 인터넷만 있으면 어디서나 작동",
-      "youOwnIt": "본인 소유: 지갑, 키, 통제권 본인",
+      "noMiddleman": "중개인 없음: 네트워크와 직접 상호작용 — 계정 승인 불필요",
+      "globalAccess": "글로벌 접근: 인터넷이 있는 곳이면 어디서나 이용 가능",
+      "youOwnIt": "셀프 커스터디: 본인 지갑, 본인 키, 본인 통제",
       "vision": "비전",
-      "visionText": "수십억 사람이 공공 장부 정직성 유지에 도움하고 보상 받음. Umotu에서 휴대폰이 네트워크 신뢰성을 위한 가벼운 확인 수행.",
+      "visionText": "수백만 대의 휴대폰이 공공 원장의 정직성 유지를 도울 수 있습니다. 휴대폰은 데이터 가용성 샘플링과 같은 경량 확인을 수행하여 네트워크를 더 신뢰할 수 있게 합니다.",
       "nameOrigin": "이름 유래",
       "nameOriginText": "Umotu는 폴리네시아어 Paʻumotu에서 영감. 일상 사람들을 위해 구축하라는 상기로 존중하여 사용."
     },
     "earn": {
       "title": "수익 방법",
-      "subtitle": "휴대폰이 작동하면 보상",
-      "intro": "휴대폰이 모두에게 도움이 되는 작은 작업 수행—보상 받음.",
+      "subtitle": "휴대폰이 참여하고, 보상을 받습니다",
+      "intro": "휴대폰이 네트워크를 돕는 소규모 보안 검사를 수행하고 보상을 받습니다.",
       "steps": "세 가지 간단 단계",
       "step1": "1) 인간 증명: 빠른 생체 확인(주기적 새로고침)으로 한 사람 한 계정 보장.",
       "step2": "2) 네트워크 도움: 휴대폰이 백그라운드에서 데이터 가용성(DA) 샘플링 등 가벼운 확인 실행.",
-      "step3": "3) 일일 보상 획득: 네트워크 정책에 따라 하루 약 $10 목표로 이 작업에 대한 보상.",
+      "step3": "3) 일일 보상 획득: 성공적인 참여를 기반으로 보상이 자동 분배됩니다. 금액은 변동됩니다.",
       "localCurrency": "현지 통화 지급",
-      "localCurrencyText": "지급 토큰 선택: 현지 통화 스테이블코인(가능 시) 또는 UMT. 금액은 ~$10 USD 가치 목표이며 참여 및 시장 상황에 따라 조정."
+      "localCurrencyText": "지급 자산 선택: UMT 또는 스테이블코인(가능 시). 스테이블코인은 제3자가 발행하며 고유한 위험이 있습니다."
     },
     "whereMoney": {
-      "title": "$10은 어디서 오는가?",
+      "title": "보상은 어디서 오는가?",
       "subtitle": "작업으로 수익",
-      "intro": "가장 많이 묻는 질문. 간단 답변: 네트워크가 필요로 하는 서비스 제공 때문.",
+      "intro": "자주 묻는 질문입니다. 짧은 답: 참여자가 보안을 제공하고 프로토콜이 규칙에 따라 토큰을 발행하기 때문에 보상이 존재합니다.",
       "realWork": "휴대폰 실제 작업 수행",
       "realWork1": "데이터 가용성 샘플링: 휴대폰이 블록 데이터 가용성 및 정확성 확인",
       "realWork2": "인간 참여: 봇 및 스팸 방지를 위해 한 사람 한 계정 증명",
@@ -1154,7 +1362,7 @@
       "distribution": "보상 분배 방식",
       "newTokens": "새 UMT 토큰 생성 및 인증 휴대폰 참여자에게 공유 (검증자 아님)",
       "fees": "거래 수수료 및 빌더 입찰 일부가 블록 최종화 휴대폰 Sentinel과 공유",
-      "treasury": "소량이 지속 유지 및 안정 프로그램 자금",
+      "treasury": "일부 수수료는 활성화된 경우 투명한 거버넌스를 통해 생태계 유지(예: 감사 및 참조 소프트웨어)를 지원할 수 있습니다.",
       "whyDifferent": "왜 다른가",
       "btcProblem": "비트코인 특화 채굴자 보상 (자본 집약)",
       "ethProblem": "이더리움 대형 스테이커 보상 (자본 집약)",
@@ -1191,19 +1399,23 @@
       "example1": "1 ZAR1 ≈ 1 남아프리카 랜드",
       "example2": "1 USD1 ≈ 1 미국 달러",
       "example3": "1 NGN1 ≈ 1 나이지리아 나이라",
-      "backed": "파트너 발행",
-      "backedText": "Umotu 스테이블코인은 규제 파트너 발행, 예비금 1:1 가치 유지 설계. 발행자 예비금 증명 및 환전 조건 공개.",
+      "backed": "제3자 발행",
+      "backedText": "스테이블코인은 독립 제공자가 발행하며 통화(USD 또는 CAD 등)를 추적하도록 설계되었습니다. 각 스테이블코인은 고유한 준비금, 환전 조건, 업그레이드 통제, 위험 정책(동결 가능성 포함)이 있습니다. 발행자의 공시를 읽으세요.",
       "convert": "현금 변환",
-      "convertText": "파트너 은행/거래소 통해 변환 또는 수락처 직접 사용."
+      "convertText": "온체인에서 스테이블코인을 스왑하거나 가능한 경우 제3자 서비스를 통해 변환할 수 있습니다.",
+      "gas": "스테이블코인으로 수수료 결제",
+      "gasText": "일부 지갑에서 네이티브 토큰으로 교환하는 서비스를 통해 스테이블코인으로 네트워크 수수료를 결제할 수 있습니다. 검증자는 네이티브 토큰을 받으며, stable-gas는 편의 기능입니다.",
+      "preferredList": "지갑 기본값",
+      "preferredListText": "Umotu 지갑은 Umotu Stablecoin Standard (USS) 기반으로 지급 및 수수료 서비스에 대한 보수적 기본 스테이블코인 목록을 표시할 수 있습니다. 다른 지갑은 다른 스테이블코인을 지원할 수 있습니다."
     },
     "economics": {
       "title": "UMT 경제학",
       "subtitle": "누가 무엇을 왜 받는가",
-      "intro": "UMT 총 공급 1000억 토큰 고정. 대부분 네트워크 정직성 유지 일상 휴대폰 사용자 지급.",
+      "intro": "UMT의 총 공급량은 1,000억 토큰으로 고정됩니다. 대부분은 시간이 지남에 따라 휴대폰 참여자를 위해 예약되며 규칙 기반 발행 컨트롤러로 분배됩니다.",
       "supply": "공급 및 분배",
       "supplyBullets": [
-        "토큰 공급의 대부분은 시간이 지남에 따라 휴대폰 참여자를 위해 예약되며, 발행 컨트롤러를 통해 출시됩니다. 발행 컨트롤러는 일일 발행량을 남은 공급량의 0.01% 이하로 제한하여 장기적인 지속 가능성을 보장합니다. 이 일정에 따르면 10년 후 총 공급량의 약 68%가 남고, 50년 후에는 약 15%가 남습니다.",
-        "공급의 일부는 초기 사용자 에어드롭, 커뮤니티 판매, 재단 할당 및 비상 예비금 등 특정 목적을 위해 출시 시 생성됩니다."
+        "공급의 대부분은 휴대폰 참여자를 위해 예약되며 발행 컨트롤러를 통해 시간에 걸쳐 출시됩니다. 컨트롤러는 일일 발행량을 남은 공급량의 0.01% 이하로 제한하여 희석을 억제합니다.",
+        "최대 상한(일일 남은 공급량의 0.01%)에서 10년 후 약 69%의 공급이 남고 50년 후 약 16%가 남습니다. 실제 발행은 프로토콜 규칙에 따라 더 낮을 수 있습니다."
       ],
       "premine": "출시 할당 (잠정적, 메인넷 출시 시 변경될 수 있음)",
       "premineTable": [
@@ -1225,13 +1437,13 @@
         }
       ],
       "emissions": "휴대폰 일일 보상",
-      "emissionsText": "매일 네트워크는 남은 배출 풀 0.01% 최대 배출 가능. 인증 휴대폰 하루 약 $10 목표로 예산 조정, 참여 및 시장 상황 반영.",
+      "emissionsText": "일일 발행에는 상한이 있습니다. 보상은 참여, 성공적인 휴대폰 확인 및 시장 상황에 따라 달라집니다. 프로토콜은 고정 금액을 약속하지 않습니다.",
       "fees": "수수료 및 Sentinel",
       "feesText": "Sentinel 도우미 (선택, 고급) 거래 수수료 및 빌더 입찰 일부 획득. 일일 배출과 별도.",
       "transparency": "투명성",
       "transparencyText": "베스팅 일정 및 지갑 공개. 일일 배출 상한 및 실제 지급 앱에 게시.",
       "disclaimerTitle": "일반 언어 상기",
-      "disclaimerText": "투자 조언 아님. 보상은 네트워크 정책 및 참여에 의존. 앱은 고정 소득 보장 안 함."
+      "disclaimerText": "이것은 금융 조언이 아닙니다. 보상은 변동적이며 보장되지 않습니다."
     },
     "contribute": {
       "title": "기여 방법",
@@ -1258,7 +1470,7 @@
       },
       "governance": {
         "title": "거버넌스 참여",
-        "text": "제안 읽기, 공개 토론, 앱 투표. 네트워크 매개변수 및 보조금 할당 안내.",
+        "text": "제안을 읽고, 공개 토론하고, 앱에서 투표하세요. 투표는 지갑 기본값과 생태계 보조금을 안내할 수 있습니다. 일부 프로토콜 규칙은 고정되어 있으며 투표 대상이 아닙니다.",
         "cta": "거버넌스 열기",
         "url": "umotu://vote"
       },
@@ -1273,37 +1485,38 @@
     "decentralization": {
       "title": "왜 탈중앙화인가",
       "subtitle": "단일 통제 지점 없음",
-      "intro": "탈중앙화는 단일 회사나 정부가 네트워크 종료 또는 자금 압류 불가능.",
+      "intro": "탈중앙화는 네트워크가 많은 독립적인 참여자에 의해 운영됨을 의미합니다. 지갑은 셀프 커스터디이며 본인의 키만 자금을 이동할 수 있습니다.",
       "benefits": "본인 혜택",
       "benefit1": "항상 작동: 24/7 가용",
-      "benefit2": "낮은 수수료: 3–5% 카드 수수료 대신 소량 네트워크 수수료",
+      "benefit2": "일반적으로 낮은 수수료: 일반 카드 수수료 대신 소액 네트워크 수수료",
       "benefit3": "국경 없음: 글로벌 가치 송금",
-      "benefit4": "검열 저항: 본인 키, 본인 자금",
+      "benefit4": "더 강한 검열 저항: 단일 회사가 지갑을 통제하지 않음",
       "benefit5": "투명: 누구나 시스템 작동 확인 가능",
       "howWorks": "작동 방식",
-      "howWorksText": "검증자가 ~2초마다 블록 제안. 휴대폰(본인 것)이 가벼운 확인으로 검증 및 최종화. 많은 작은 기여가 강한 보안으로 합쳐짐."
+      "howWorksText": "검증자가 약 2초마다 블록을 제안합니다. 휴대폰(본인 것)이 데이터 가용성을 검증하고 경량 확인으로 블록 최종화를 돕습니다. 많은 작은 기여가 강한 보안으로 합쳐집니다."
     },
     "noCompany": {
-      "title": "회사 없음, 고객 없음",
-      "subtitle": "모델 이해",
-      "intro": "프로토콜 통제 'Umotu, Inc.' 없음. Umotu는 누구나 사용 가능한 오픈 규칙 세트.",
+      "title": "개방형 프로토콜, 셀프 커스터디",
+      "subtitle": "Umotu가 무엇인지(무엇이 아닌지) 이해하기",
+      "intro": "프로토콜을 통제하는 단일 회사는 없습니다. Umotu는 누구나 사용할 수 있는 개방형 규칙 세트이며, 많은 독립 팀이 지갑과 서비스를 구축할 수 있습니다.",
       "notCompany": "Umotu가 아닌 것",
-      "notCompany1": "고객 계정 있는 회사 아님",
-      "notCompany2": "은행 또는 송금업자 아님",
+      "notCompany1": "고객 자금을 보관하는 수탁 은행이 아님",
+      "notCompany2": "지갑 초기화 또는 거래 되돌리기 불가",
       "notCompany3": "단일 주체 통제 아님",
-      "notCompany4": "거래 되돌리기 불가능",
+      "notCompany4": "보장된 소득 프로그램이 아님",
       "whatIs": "Umotu인 것",
-      "whatIs1": "프로토콜: 이메일 또는 웹처럼 오픈, 상호운용 규칙",
-      "whatIs2": "휴대폰 우선: 일상 스마트폰 도움으로 실행",
+      "whatIs1": "프로토콜: 개방형, 상호운용 가능한 규칙 (이메일이나 웹처럼)",
+      "whatIs2": "휴대폰 우선 참여: 스마트폰이 네트워크 보안을 도울 수 있음",
       "whatIs3": "커뮤니티 주도: 참여자, 고객 아님",
+      "whatIs4": "무허가: 누구나 프로토콜을 구축하거나 사용할 수 있습니다",
       "foundation": "Umotu 재단",
-      "foundationIntro": "생태계 지원 비영리 (참조 앱, 문서, 커뮤니티 프로그램) 그러나 프로토콜 통제 안 함.",
+      "foundationIntro": "생태계를 지원하는 비영리 (참조 앱, 교육 및 조정) 그러나 프로토콜을 통제하지 않음.",
       "foundationTask1": "모바일 앱 및 탐색기 참조 구현 유지",
       "foundationTask2": "일부 공공 인프라 운영 (다른 사람도 운영 가능)",
-      "foundationTask3": "커뮤니티 거버넌스 조정 (뉴스, 투표)",
-      "foundationTask4": "지원 스테이블코인 검토 및 목록",
+      "foundationTask3": "앱에서 커뮤니티 투표 및 토론 조정 (해당 시)",
+      "foundationTask4": "Umotu Stable Accord 및 Umotu 지갑의 보수적 기본 목록 게시 (다른 지갑은 다른 스테이블코인 지원 가능)",
       "foundationTask5": "교육 및 안전 가이드 게시",
-      "foundationNote": "재단은 지갑 접근 또는 거래 되돌리기 불가능."
+      "foundationNote": "재단은 지갑에 접근하거나 거래를 되돌릴 수 없습니다. 지갑 기본값은 프로토콜에서 가능한 것을 제한하지 않습니다."
     },
     "scamPrevention": {
       "title": "사기 방지",
@@ -1327,22 +1540,22 @@
       "action4": "차단 및 신고"
     },
     "airdrop": {
-      "title": "테스트넷 에어드랍",
-      "subtitle": "초기 사용자 인정",
-      "intro": "초기입니다! Umotu 테스트넷. 활성 테스트넷 참여자 메인넷 출시 시 할당 가능.",
+      "title": "테스트넷 인정",
+      "subtitle": "초기 테스트넷 참여가 인정될 수 있음",
+      "intro": "Umotu는 테스트넷 중입니다. 활성 테스트넷 참여자는 메인넷 출시 시 인정 할당을 받을 수 있습니다. 이는 보장되지 않으며 0일 수 있습니다.",
       "howToQualify": "자격 방법",
       "step1": "앱에서 지갑 생성",
       "step2": "인간 인증 (Proof of Human) 완료",
       "step3": "테스트넷 기간 앱 정기 사용",
       "whenAirdrop": "에어드랍 언제?",
       "whyTestnet": "테스트넷 필수: 사용자 지갑 보안 학습, 메인넷 전 보안, 견고성, 효율성 테스트.",
-      "timeline": "메인넷 2026년 1분기 또는 2분기 예상. 에어드랍 메인넷 출시 무렵.",
+      "timeline": "메인넷 시기 및 인정 세부 사항은 앱에서 공지됩니다.",
       "howMuch": "얼마 받을까?",
-      "totalPool": "총 에어드랍 풀: 10억 UMT 토큰. 참여자 수 및 출시 UMT 가격에 따라 본인 몫 결정.",
-      "scenario2": "100만 사용자: 사용자당 ~1천 UMT, 예상 가격 ~$1, 에어드랍 가치 ~$1,000",
-      "scenario3": "1000만 사용자: 사용자당 ~100 UMT, 예상 가격 ~$20, 에어드랍 가치 ~$2,000",
-      "scenario4": "1억 사용자: 사용자당 ~10 UMT, 예상 가격 ~$300, 에어드랍 가치 ~$3,000",
-      "disclaimer": "예측일 뿐, 보장 아님. 실제 가치는 시장 상황 및 프로그램 규칙에 의존.",
+      "totalPool": "예시 전용: 10억 UMT 인정 풀이 생성될 경우, 본인 몫은 자격 참여자 수와 프로그램 규칙에 따릅니다. 일찍 참여할수록 몫이 높습니다.",
+      "scenario2": "예시 전용: 자격 100만 사용자 → 평균 각 ~1,000 UMT (가중 전)",
+      "scenario3": "예시 전용: 자격 1,000만 사용자 → 평균 각 ~100 UMT (가중 전)",
+      "scenario4": "예시 전용: 자격 1억 사용자 → 평균 각 ~10 UMT (가중 전)",
+      "disclaimer": "예시일 뿐이며 보장이 아닙니다. 인정 할당은 프로그램 규칙 및 시장 상황에 따라 달라지며 0일 수 있습니다.",
       "whatYouGet": "받는 것",
       "reward": "메인넷 시 테스트넷 지갑 참여 및 프로그램 규칙에 따라 실제 토큰 수령 가능. 초기 및 활성 사용자 우선.",
       "note": "주의: 테스트넷 토큰 가치 없음. 메인넷 할당은 출시 프로그램 정책 결정. 에어드랍 뉴스는 이 앱에서만 게시."
@@ -1360,7 +1573,21 @@
       "tips": "프로 팁",
       "tip1": "백그라운드 접근 허용으로 확인 실행",
       "tip2": "매일 확인하여 보상 보기",
-      "tip3": "친구 초대—더 많은 사용자 강한 네트워크"
+      "tip3": "친구 초대 — 더 많은 참여자가 네트워크를 강화할 수 있습니다"
+    },
+    "governance": {
+      "title": "거버넌스 및 투표",
+      "subtitle": "앱 내 투표 작동 방식",
+      "intro": "Umotu는 참여자가 특정 생태계 결정을 안내할 수 있도록 앱 내 설문 및 투표를 지원합니다.",
+      "whatVotesDo": "투표로 할 수 있는 것",
+      "whatVotesDo1": "지갑 기본값 추천 (예: 선호 지급 또는 stable-gas 옵션으로 표시되는 스테이블코인)",
+      "whatVotesDo2": "제안 및 우선순위에 대한 커뮤니티 선호도 표시",
+      "whatVotesDo3": "활성화된 경우 특정 보조금 또는 예산 승인",
+      "whatVotesCannotDo": "투표로 할 수 없는 것",
+      "whatVotesCannotDo1": "지갑 접근, 자금 이동 또는 복구 구문 초기화",
+      "whatVotesCannotDo2": "거래 되돌리기 또는 자기 보관 지갑 동결",
+      "whatVotesCannotDo3": "프로토콜 규칙 외 고정 통화 정책 변경",
+      "note": "일부 설문은 네트워크 단계에 따라 모의 또는 자문용일 수 있습니다. 항상 제안 세부 사항 및 활성화 조건을 읽으세요."
     }
   },
   "common": {
@@ -1409,6 +1636,7 @@
   "poh_title": "인간 인증",
   "continue": "계속",
   "or": "또는",
+  "version": "버전",
   "seedReveal": {
     "title": "복구 구문",
     "intro": "복구 구문은 기기 접근 분실 시 지갑 복원 유일한 방법입니다. 안전하게 오프라인 보관하세요.",

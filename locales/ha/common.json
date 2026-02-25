@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "$10 a rana, ga kowa, ko'ina"
+    "tagline": "Shiga Bude, Lada ta Yau da Kullum"
   },
   "navigation": {
     "home": "Gida",
@@ -38,6 +38,9 @@
       "changeChoice": "Canza zaɓi",
       "requiresLanguage": "Zaɓi harshe da farko",
       "requiresWallet": "Ƙirƙiri wallet da farko"
+    },
+    "daSampling": {
+      "staleHint": "Gudanar da sampling yanzu don tabbatar da cancantar ladar yau da kullum."
     }
   },
   "earnings": {
@@ -118,13 +121,15 @@
     "manual": {
       "title": "Karɓa da Hannu",
       "description": "Idan kana buƙatar kuɗi da wuri, karɓi lada na gaba da ke akwai yanzu. Karɓa da hannu tana amfani da gas ɗin walat ɗinka. Karɓa ta atomatik ta fi arha idan ka jira. Idan walat ɗinka ba shi da kuɗi, kunna karɓa ta atomatik ko ƙara gas na asali kafin karɓa da hannu.",
-      "dayLabel": "Ranar lada",
       "claimButton": "Karɓa yanzu",
       "claiming": "Ana karɓa...",
+      "cancelling": "Ana soke karɓa...",
+      "cancelled": "An soke karɓa.",
+      "cancelButton": "Soke karɓa",
       "success": "An ƙaddamar da karɓa",
       "successWithId": "An ƙaddamar da karɓa (id: {{id}})",
       "error": "Ba a iya karɓa ba",
-      "noProof": "Ba a buga tabbacin lada ba tukuna. Gwada sake bayan hoton yau ya zama samuwa.",
+      "noProof": "Ba a sami tabbacin lada ga wannan walat/rana ba tukuna (ko ba ta cancanta a wannan ranar ba). Gwada sake bayan hoton yau ya zama samuwa.",
       "unauthorized": "Izinin relayer ya gaza. Da fatan za a gwada sake ko tuntuɓar goyon baya.",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -136,9 +141,22 @@
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "remainingAfter": "+{{days}} ƙari bayan wannan rukuni",
+      "calendarVsEligible": "{{eligible}} masu cancanta daga cikin kwanaki {{calendar}} na kalanda",
+      "showMissingDays": "Nuna kwanakin da suka ɓace ({{count}})",
+      "hideMissingDays": "Ɓoye kwanakin da suka ɓace",
+      "noMissingDaysLoaded": "Babu bayanan kwanakin da suka ɓace daga manufa har yanzu.",
+      "moreMissingDays": "da kuma kwanaki {{count}} ƙari",
+      "missingDaysHint": "Kwanan da ya ɓace yana nufin babu samfurin DA/tabbaci don wannan ranar UTC.",
       "batchSuccess": "An karɓi ranaku {{count}} cikin nasara",
+      "fallbackPaidInNative": "an biya da UMT: stablecoin ba ya samuwa na ɗan lokaci",
       "claimingProgress": "Ana karɓa {{claimed}}/{{total}}...",
-      "claimAllButton": "Karɓi duk ranaku {{count}}"
+      "claimingDay": "Ana sarrafa ranar {{day}}",
+      "claimAllButton": "Karɓi duk ranaku {{count}}",
+      "stableNotConfigured": "Biyan stablecoin ba shi da samuwa. Da fatan za a zaɓi UMT ko tuntuɓar tallafi.",
+      "insufficientGas": "Ma'aunin gas bai isa ba. Da fatan za a ƙara tokens na asali a cikin wallet ɗinku.",
+      "userRejected": "An soke mu'amala.",
+      "networkError": "Kuskuren hanyar sadarwa. Da fatan za a duba haɗin ku kuma ku sake gwadawa.",
+      "alreadyClaimed": "An riga an karɓi waɗannan ladaddaki."
     },
     "timezone": {
       "title": "Zaɓi Yankin Lokaci",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "Litattafan Adireshi",
       "addContact": "Ƙara Mai Sadarwa",
-      "nameLabel": "Suna ko lakabi",
+      "nameLabel": "Suna",
       "walletAddress": "Adireshin wallet (0x...)",
       "savedContacts": "Masu Sadarwa da Aka Ajiye",
       "noContacts": "Ba a ajiye masu sadarwa ba.",
       "addForQuickSending": "Ƙara masu sadarwa don aikawa cikin sauri.",
       "enterValidAddress": "Shigar da adireshi mai inganci",
       "addLabel": "Ƙara lakabi",
-      "save": "Ajiye"
+      "labelAlreadyExists": "Wannan lakabi ya riga ya kasance",
+      "tagOptional": "Alama (na zaɓi)",
+      "save": "Ajiye",
+      "editContact": "Gyara Mai Sadarwa",
+      "tags": "Alamomi",
+      "noTagsYet": "Ba a ƙara alama ba tukuna",
+      "newTagPlaceholder": "Shigar da sunan alama...",
+      "addTag": "Ƙara",
+      "existingTags": "Ko ƙara alamar da ke akwai:",
+      "deleteContact": "Goge Lambar Sadarwa",
+      "confirmDeleteTitle": "Goge lambar sadarwa?",
+      "confirmDeleteMessage": "Wannan zai cire {{label}} daga littafin adireshi naka."
     },
     "settings": {
       "title": "Saitunan Wallet",
@@ -234,6 +263,7 @@
         "description": "Kada ku raba jumlar dawowa ko maɓalli mai zaman kansa. Ajiye su cikin aminci a waje.",
         "recoveryPhrase": "Jumlar Dawowa",
         "recoveryPhraseNotAvailable": "Jumlar dawowa ba ta samuwa ba (an shigo da ita ta maɓalli mai zaman kansa)",
+        "walletNotLoaded": "Ba a loda wallet ba. Da fatan za a shigo da ko ƙirƙiri wallet da farko.",
         "privateKey": "Maɓalli Mai Zaman Kansa",
         "privateKeyWarning": "Maɓalli Mai Zaman Kansa (ajiye a asirce!)",
         "showPhrase": "Nuna Jumlar Dawowa",
@@ -256,7 +286,8 @@
         "keyPlaceholder": "Shigar da maɓalli mai zaman kansa 0x…",
         "importButton": "Shigo da Wallet",
         "importing": "Ana shigo da...",
-        "success": "An shigo da wallet cikin nasara!"
+        "success": "An shigo da wallet cikin nasara!",
+        "saveFailed": "Shigar da wallet ya yi nasara amma ba a iya adana shi a wannan na'urar ba."
       },
       "dangerZone": {
         "title": "Yankin Haɗari",
@@ -530,6 +561,7 @@
       "deleteContact": "Goge Lambar",
       "addressNotSaved": "Ba a ajiye adireshin ba",
       "addLabel": "Ƙara lakabi",
+      "labelAlreadyExists": "Wannan lakabi ya riga ya kasance",
       "enterValidAddress": "Shigar da adireshi mai inganci da farko",
       "saved": "An ajiye",
       "save": "Ajiye"
@@ -547,6 +579,7 @@
       "noRecipients": "Ba a ƙara mai karɓa ba tukuna",
       "addFromTagOrBook": "Ƙara daga tag ko littafi",
       "invalidAddress": "Adireshi marar inganci: {{address}}",
+      "tooManyRecipients": "Aikawa da tari yana goyan bayan har zuwa {{max}} masu karɓa.",
       "invalidAmount": "Adadin da ba daidai ba ga {{recipient}}",
       "totalExceedsBalance": "Jimlar ta wuce ma'auni",
       "sendingTo": "Ana aikawa ga mai karɓa {{count}}",
@@ -569,6 +602,18 @@
       "failedStatus": "Ya gaza",
       "details": "Bayanin Canja Wurin Tari",
       "total": "Jimla",
+      "hongbao": {
+        "short": "Hongbao",
+        "total": "Jimlar Hongbao",
+        "helper": "Saita jimla a gyara kuma za mu rarraba adadin kowane mai karɓa a matakin gaba.",
+        "random": "Bazuwar",
+        "autoSplit": "Rarraba ta atomatik",
+        "generated": "An ƙirƙiri rarraba bazuwar",
+        "needTwoRecipients": "Hongbao yana buƙatar masu karɓa 2 aƙalla.",
+        "amountTooSmall": "Jimla ba ta isa ga masu karɓa {{count}} ba. Mafi ƙaranci shine {{min}} {{symbol}}.",
+        "generateFailed": "Ba a iya ƙirƙirar adadin bazuwar ba.",
+        "disabled": "An kashe yanayin Hongbao a yanzu."
+      },
       "tagPicker": {
         "title": "Zaɓi Tag",
         "noTags": "Babu tags da ake samu",
@@ -647,19 +692,48 @@
       "type": "Nau'i",
       "to": "Zuwa",
       "from": "Daga",
+      "address": "Adireshi",
       "token": "Token",
       "block": "Block",
       "gasCost": "Kudin Gas",
+      "balanceAfter": "Ma'auni bayan tx",
+      "balanceSource": "Tushen ma'auni",
+      "balanceSourceVerified": "An tabbatar akan sarkar",
+      "balanceSourceVerifying": "Kiyasin (ana tabbatarwa akan sarkar...)",
+      "balanceSourceEstimatedRecent": "Kiyasin daga hoton ma'auni na baya-bayan nan",
+      "balanceSourceEstimatedStale": "Kiyasin daga tsohuwar hoton ma'auni",
+      "balanceSourceEstimatedDelayed": "Kiyasin (tabbatarwa akan sarkar ya jinkirta)",
+      "balanceSnapshotAge": "Shekarun hoto",
+      "balanceReconciledDiff": "Bambancin da aka daidaita",
+      "balanceVerifyNote": "Bayanin tabbatarwa",
+      "balanceVerifyUnexpected": "Tabbatarwa ta jinkirta. An nuna kiyasin ma'auni.",
+      "unavailable": "Ba ya samuwa",
       "hash": "Hash",
       "source": "Tushen",
       "balanceDetected": "An gano ma'auni",
       "inferredNote": "An gano wannan ma'amala daga canjin ma'auni. Ba a samun cikakkun bayanan kan-chain ba."
     },
+    "batch": {
+      "title": "Bayanin Canja Wurin Tari",
+      "badge": "TARI",
+      "send": "Aika Tari",
+      "recipients": "Masu karɓa",
+      "recipientCount": "mai karɓa {{count}}",
+      "recipientCount_plural": "masu karɓa {{count}}",
+      "successful": "An yi nasara",
+      "successOf": "{{success}} daga {{total}}",
+      "sentStatus": "An aika",
+      "failedStatus": "Ya gaza",
+      "successFail": "{{success}} sun yi nasara, {{fail}} sun gaza",
+      "toRecipients": "zuwa ga mai karɓa {{count}}",
+      "toRecipients_plural": "zuwa ga masu karɓa {{count}}"
+    },
     "time": {
       "justNow": "Yanzu",
       "minsAgo": "{{count}}m da suka wuce",
       "hoursAgo": "{{count}}h da suka wuce",
-      "daysAgo": "{{count}}d da suka wuce"
+      "daysAgo": "{{count}}d da suka wuce",
+      "suffixAgo": "da suka wuce"
     }
   },
   "settings": {
@@ -734,6 +808,43 @@
       "clearCache": "Share Cache",
       "cacheCleared": "An share cache! Sake farawa don amfani."
     },
+    "hongbaoDebug": {
+      "title": "Saitunan Hongbao (Debug)",
+      "description": "Share cache na Hongbao na gida kuma tilasta sabuntawa a lokacin farawa na gaba.",
+      "clearConfigCache": "Share Cache na Hongbao",
+      "cacheCleared": "An share cache na Hongbao",
+      "cacheClearFailed": "Ba a iya share cache na Hongbao ba"
+    },
+    "integrityDebug": {
+      "title": "Tabbatarwar App (Debug)",
+      "description": "Samu alamar tabbatarwar na'ura don tabbatar App Attest yana aiki.",
+      "fetch": "Samu Tabbatarwa",
+      "fetching": "Ana samawa...",
+      "copy": "Kwafi Payload",
+      "copyNonce": "Kwafi Nonce",
+      "toastFetchSuccess": "An samu tabbatarwar app",
+      "toastFetchError": "Tabbatarwar app ta gaza",
+      "toastCopy": "An kwafi tabbatarwa",
+      "toastCopyNonce": "An kwafi Nonce",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "payload marar komai",
+      "summaryStub": "alamar stub (ba a samu native module ba?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (ba a tallafawa ba)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "kuskure: {{message}}",
+      "verify": "Tabbatar a Server",
+      "verifying": "Ana tabbatarwa...",
+      "verifyMissing": "kuskure: ba a samu payload ko nonce ba",
+      "verifyOk": "tabbatarwar server: lafiya",
+      "verifyFail": "tabbatarwar server ta gaza: {{error}}",
+      "toastVerifyOk": "Tabbatarwar server ta yi nasara",
+      "toastVerifyFail": "Tabbatarwar server ta gaza"
+    },
     "chainGuardian": {
       "title": "Mai Tsaron Chain",
       "description": "Taimaka tsare blockchain ta barin wayar ku a kan layi. Kammala aƙalla aikin samfura ɗaya a kowace rana don ci gaba da cancanta lada.",
@@ -748,10 +859,12 @@
       "staleWarning": "Ba a gani a yau ba — sake buɗe app don ci gaba.",
       "androidBatteryWarning": "Tsarin battery na iya hana sampling",
       "androidBatteryHint": "Je zuwa Saituna → Apps → Umotu → Battery → zaɓi \"Ba a Takura ba\" don ba da izinin sampling a baya.",
+      "iosBackgroundHint": "iOS na iya dakatar da sampling a baya. Buɗe app lokaci-lokaci ko taɓa Gudana yanzu don ci gaba da aiki.",
       "openSettings": "Taɓa don buɗe saituna",
       "tip": "Kunna \"Gudana a Baya\" don mafi kyawun samun lada.",
       "runNow": "Gudana yanzu",
       "running": "Ana gudana…",
+      "runNowNoData": "Babu bayanan (ƙuntatawan battery/WiFi ko babu ayyukan da aka ba).",
       "lastError": "Kuskure na Ƙarshe",
       "status": {
         "active": "Aiki",
@@ -767,12 +880,57 @@
       "noConnections": "Babu haɗi",
       "revokeAccess": "Soke Samun Dama",
       "lastUsed": "Na Ƙarshe da Aka Yi Amfani"
+    },
+    "transfer": {
+      "title": "Canja Bayanai Na'ura",
+      "description": "Matsar da saitunan app da lambobin tuntuɓa zuwa sabon wayarku ta hanyar duba lambar QR na canjawa.",
+      "warning": "Wannan yana canja bayanai na app kawai. Jimlar maido da walat/maɓallin sirri BA A HAƊA. Shigar da walat daban akan sabon waya.",
+      "preparing": "Ana Shirya...",
+      "showQr": "Nuna QR Canjawa",
+      "scanQr": "Duba QR Canjawa",
+      "exportTitle": "QR Canjawa",
+      "exportHint": "A kan sabon wayarku, buɗe Saitunan -> Canja Bayanai Na'ura -> Duba QR Canjawa, sannan ku duba wannan lambar.",
+      "exportHintParts": "A kan sabon wayarku, duba kowane shafi a tsari (1 zuwa {{total}}), sannan shigar da lambar lamba 6.",
+      "exportHintRelay": "A kan sabon wayarku, duba wannan lambar QR ɗaya don saukar da kunshin canjawa, sannan shigar da lambar tabbatarwa ta lamba 6.",
+      "exportReady": "QR Canjawa shirye ({{count}} abubuwa)",
+      "exportReadyParts": "QR Canjawa shirye ({{count}} abubuwa, {{parts}} shafukan QR). Duba shafukan a tsari.",
+      "relayReady": "An inganta babban canjawa: duba QR ɗaya don saukar da abubuwa {{count}}, sannan shigar da lambar lamba 6.",
+      "relayFallback": "Canjawa ta girgije ba ta samuwa ({{message}}). Ana komawa zuwa QR mai shafuka da yawa.",
+      "relayFetching": "Ana saukar da bayanan canjawa...",
+      "relayFetched": "An saukar da bayanan canjawa. Ana sarrafa...",
+      "exportFailed": "An kasa shirya canjawa: {{message}}",
+      "prevPage": "Na Baya",
+      "nextPage": "Na Gaba",
+      "confirmCodeLabel": "Lambar tabbatarwa ta lamba 6",
+      "copyCode": "Kwafi lambar canjawa",
+      "importTitle": "Duba QR Canjawa",
+      "importHint": "Nuna kyamara zuwa QR canjawa da aka nuna akan tsohuwar wayarku.",
+      "importing": "Ana Shigowa...",
+      "importNow": "Shigar da Bayanai",
+      "imported": "An shigar da abubuwa {{count}}. Jimlar maido da walat/maɓallin sirri BA A CANJA.",
+      "importFailed": "Shigar da canjawa ya kasa: {{message}}",
+      "confirmPrompt": "An duba QR. Shigar da lambar tabbatarwa ta lamba 6 da aka nuna akan tsohuwar wayarku.",
+      "confirmCodeRequired": "Shigar da lambar tabbatarwa ta lamba 6 daga tsohuwar wayarku.",
+      "confirmCodeMismatch": "Lambar tabbatarwa bata dace ba. Da fatan za a sake gwadawa.",
+      "rescan": "Sake Dubawa",
+      "scanProgress": "An duba QR {{current}}/{{total}}",
+      "scanContinue": "Ci gaba da duba sauran shafukan a tsari har zuwa ƙarshe.",
+      "restartScan": "Sake Farawa Dubawa",
+      "chunkMismatch": "Shafukan QR canjawa ba su dace ba. Da fatan za a sake farawa dubawa daga shafi na 1.",
+      "cameraNeeded": "Ana buƙatar samun damar kyamara",
+      "cameraDescription": "Kunna izinin kyamara don duba lambar QR na canjawa.",
+      "allowCamera": "Yarda da Kyamara",
+      "openSettings": "Buɗe Saitunan",
+      "pasteCode": "Manna Lambar Canjawa",
+      "pasteTitle": "Manna Lambar Canjawa",
+      "pasteHint": "Idan dubawa ta kyamara yana da wahala, manna lambar canjawa da aka kwafi daga tsohuwar waya.",
+      "pastePlaceholder": "UMOTU_TRANSFER:..."
     }
   },
   "onboarding": {
     "welcome": {
       "title": "Barka da zuwa Umotu",
-      "subtitle": "$10 a rana, ga kowa, ko'ina",
+      "subtitle": "Shiga Bude, Lada ta Yau da Kullum",
       "getStarted": "Fara"
     },
     "language": {
@@ -812,6 +970,40 @@
       "validFor_plural": "Ingantacce na ~{{days}} ranaku",
       "expired": "Tabbatarwa ta ƙare ko ba a samu ba.",
       "expiredDetail": "Sake gudana liveness don sabunta takaddar ku."
+    },
+    "capture": {
+      "title": "Ɗaukar Fuska",
+      "hint": "Sanya fuskarku a tsakiya kuma ku tsaya cak.",
+      "tipsTitle": "Shawarwarin ɗaukar hoto",
+      "tipFace": "Riƙe fuskarku a tsakiya kuma cika firam ɗin (≥ {{pct}}%).",
+      "tipLight": "Yi amfani da haske daidai kuma guje wa haske mai ƙarfi daga baya.",
+      "tipHold": "Tsaya cak kuma duba kyamara na {{seconds}}s.",
+      "tipRemove": "Cire hula, abin rufe fuska ko inuwa mai nauyi.",
+      "errorShort": "Ɗaukar hoto ya yi gajerta. Tsaya cak na {{seconds}}s.",
+      "errorTooSmall": "Ɗaukar hoto ya kasa. Da fatan za a sake gwadawa.",
+      "errorFileTooSmall": "Fayil ɗin bidiyo ya yi ƙanƙanta. Tsaya cak a duk lokacin ɗaukar hoto kuma inganta haske.",
+      "errorBitrate": "Ingancin bidiyo ya yi ƙasa. Inganta haske kuma riƙe wayar a tsaye.",
+      "errorLowQuality": "Ingancin ɗaukar hoto ya yi ƙasa. Da fatan za a yi amfani da haske mafi kyau ko kyamara mai inganci.",
+      "errorCameraPermission": "Ana buƙatar izinin kyamara. Kunna shi a Saituna kuma sake gwadawa.",
+      "errorCameraUnavailable": "Kyamara ba ta samuwa a wannan na'urar. Rufe sauran aikace-aikacen kyamara kuma sake gwadawa.",
+      "errorRecordingFailed": "Rikodin bidiyo ya kasa. Da fatan za a sake gwadawa da haske mafi kyau.",
+      "errorStorage": "Babu isasshen wurin ajiya don ɗaukar bidiyo. 'Yantar da sarari kuma sake gwadawa.",
+      "errorFileAccess": "Ba a iya karanta bidiyon da aka ɗauka. Da fatan za a sake ɗauka.",
+      "errorDeviceAttest": "Binciken tsaro na na'ura ya kasa. Sabunta sabis ɗin Google Play kuma sake gwadawa.",
+      "errorCooldown": "Yawan yunƙuri. Da fatan za a jira kafin sake gwadawa.",
+      "errorChallenge": "Ƙalubalen da ke aiki bai cika ba. Da fatan za a sake ɗauka kuma bi umarnin.",
+      "errorUpload": "Lodawa ya kasa. Duba haɗin ku kuma sake gwadawa.",
+      "errorUploadForbidden": "An ƙi URL ɗin lodawa (ya ƙare ko sa hannu bai dace ba). Da fatan za a sake ɗauka kuma sake gwadawa.",
+      "errorUploadTimeout": "Lokacin lodawa ya ƙare. Duba haɗin kuma sake gwadawa.",
+      "errorUploadServer": "Sabis ɗin lodawa ba ya samuwa na ɗan lokaci. Da fatan za a sake gwadawa nan ba da jimawa ba.",
+      "errorSessionExpired": "Zaman ya ƙare. Da fatan za a sake ɗauka.",
+      "errorUnexpected": "Ɗaukar hoto ya kasa. Da fatan za a sake gwadawa.",
+      "retryUpload": "Sake Gwada Lodawa",
+      "retake": "Sake Ɗauka",
+      "recording": "Ana Ɗaukawa...",
+      "uploading": "Ana Lodawa...",
+      "processing": "Ana Sarrafa...",
+      "start": "Fara Ɗaukar Hoto"
     }
   },
   "sentinelSettings": {
@@ -906,25 +1098,25 @@
     "pohDescription": "Tabbatar da mutumcinku da inLyf don buɗe lada ta yau da kullum.",
     "vision": {
       "title": "Muhimmancin Mu",
-      "tagline": "$10 a rana, ga kowa, ko'ina",
-      "description": "Umotu yana gina ababen more rayuwa don duniyar da kowa zai iya shiga cikin tattalin arzikin duniya—ba tare da la'akari da inda suke rayuwa ko banki da suke amfani da shi ba.",
+      "tagline": "Shiga bude, lada ta yau da kullum",
+      "description": "Umotu yarjejeniya ce budaddiya da aka tsara don saukaka shiga cikin tattalin arzikin dijital na duniya: samun damar bude, sauri wajen biyan bashi, da stablecoins na zabi don ma'amaloli na yau da kullum.",
       "readMore": "Karanta Cikakken Muhimmanci",
       "pillars": {
-        "title": "Ginshikai Uku Masu Mahimmanci",
+        "title": "Ginshikai Masu Mahimmanci",
         "ubi": {
-          "title": "Dala $10/Rana, Kowa a Ko'ina",
-          "description": "Kudin shiga na asali na duniya a matsayin lada da aka samu don tsare hanyar sadarwa. Duk wanda ke da waya zai iya shiga kuma samu."
+          "title": "Shiga bude, lada ta yau da kullum",
+          "description": "Ana samun lada ta yau da kullum ta hanyar shiga cikin tsaron hanyar sadarwa. Lada tana canzawa kuma ba a tabbatar ba."
         },
         "capital": {
-          "title": "Babban Jari Yana Motsi Kyauta",
-          "description": "Kusa da sifili don biya da canja wuri—ko'ina ko na gida. Kasuwanci suna biyan ~0.1% don rufe farashin dandamali, mutane ba su biya komai."
+          "title": "Canja wuri mai saukaki",
+          "description": "An tsara biya da canja wurin su zama masu sauri da saukaki. Kudi da kwarewa suna canzawa tare da yanayin hanyar sadarwa da apps da kuke amfani da su."
         },
         "sovereignty": {
-          "title": "Mutunta Sarautar Kuɗi",
-          "description": "Ba mu maye gurbin kuɗaɗen fiat ba—muna inganta su. Bankuna suna bayarwa stablecoins masu alaƙa da kuɗin gida. Manufofin kuɗi sun zama mafi inganci tare da isarwa mai faɗi da ƙarancin jayayya."
+          "title": "Ya dace da kudin gida",
+          "description": "Umotu ba ya sarrafa manufofin kudi kuma ba ya maye gurbin kudin fiat. Stablecoins a Umotu ana bayarwa ta bangare na uku kuma suna da dokokin su da hadarin su."
         }
       },
-      "notReplacing": "Umotu ba ya gasa da bankunan tsakiya. Muna gina ababen more rayuwa mafi kyau don kuɗaɗen fiat: ƙarancin jayayya, samun damar duniya, da ingantaccen kasuwa da juriya."
+      "notReplacing": "Umotu ababen more rayuwa ne. Ba ya sanya manufofin kudi, ba ya tabbatar da amincin stablecoin, kuma ba ya shiga tsakani don samar da sakamako na musamman."
     },
     "building": {
       "title": "Muna Gina Tsarin",
@@ -1032,34 +1224,50 @@
     "business": {
       "title": "Gina Kasuwancin Ku a Umotu",
       "subtitle": "Ƙaddamar da apps tare da biya da aka gina",
-      "description": "Ƙirƙiri apps da ke amfani da tsarin Umotu—miliyoyin mutane tabbatattu masu samun kuɗi na yau da kullum, shirye don ma'amala. Babu matsalar haɗa biya.",
+      "description": "Gina apps tare da biya na on-chain da stablecoins na zabi. Mahalarta za su iya samun lada ta yau da kullum (mai canzawa) kuma za su iya yin ma'amala da kadarorin da ake tallafawa.",
       "benefits": {
-        "noFees": "Kusa da sifili kuɗin sarrafa biya—riƙe 99.9% na kudaden shiga",
-        "verifiedUsers": "Duk masu amfani mutane ne tabbatattu—babu bots ko zamba",
-        "globalReach": "Isa masu amfani a ƙasashe 190+ daga rana ɗaya",
-        "instantPayments": "Biya nan take—babu jira biyan kwanaki 30"
+        "noFees": "Kananan kudi, a bayyane — farashi na gaske ya bambanta da yanayin hanyar sadarwa",
+        "verifiedUsers": "Mahalarta tabbatattu — raguwar ayyukan bots da Sybil ta hanyar Proof of Human",
+        "globalReach": "Isa mahalarta a duniya (bisa ga samuwa)",
+        "instantPayments": "Saurin biyan bashi na on-chain — lokaci ya dogara da yanayin hanyar sadarwa"
       },
       "exampleTitle": "Misali na Amfani",
-      "exampleText": "App na raba tafiya a Umotu yana riƙe 99.9% na kuɗin fare maimakon 70% a dandamali na gargajiya. Direbobi suna samun ƙari, masu tafiya suna biyan ƙasa.",
+      "exampleText": "App na raba tafiya na iya shiryar da biya kai tsaye tsakanin masu tafiya da direbobi, tare da kudi a bayyane da biyan kudin kusan a lokaci na gaske a on-chain.",
       "docsButton": "Karanta Takardu",
       "buildButton": "Fara Gina"
     },
     "bank": {
       "title": "Shin Ku Banki Ne?",
       "subtitle": "Bayar da stablecoins a Umotu",
-      "description": "Cibiyoyin kuɗi masu lasisi za su iya bayar da stablecoins na kuɗin gida a Umotu kuma su shiga tattalin arziƙin UBI mai girma tare da miliyoyin masu amfani.",
+      "description": "Cibiyoyin kudi da kamfanonin biya za su iya bayar da stablecoins a Umotu don hidima ga masu amfani da suka fi son kadarorin mataki na kima mai daidaituwa don ma'amaloli na yau da kullum.",
       "benefits": {
-        "reserves": "Samu riba a ajiya: saka hannun jari a cikin bonds da abubuwa masu ƙarancin haɗari",
-        "mintRedeem": "Caji kuɗin mint/redeem: yawanci 0.1% a canja fiat ↔ stablecoin",
-        "users": "Samun damar miliyoyin masu amfani da UBI na yau da kullum",
-        "global": "Faɗaɗa isarku zuwa waje nan take",
-        "custody": "Ajiyar ku, kula da ku: cikakken iko akan abubuwan goyan baya"
+        "reserves": "Sarrafa ajiya mai bayarwa ke sarrafawa kuma ya bi dokokin da suka dace",
+        "mintRedeem": "Masu bayarwa za su iya saita kudin mint/redeem bisa zabin su",
+        "users": "Samu tushe mai girma na mahalarta masu aiki",
+        "global": "Isa masu amfani a ketare iyaka (bisa ga bin doka da rarrabawa)",
+        "custody": "Ajiya da manufofi da mai bayarwa ke sarrafawa"
       },
       "revenueModel": "Yadda Masu Bayarwa Suna Samun Kuɗi",
-      "revenueNote": "Kamar Tether da sauran manyan masu bayarwa, kudaden shiga suna zuwa daga ribar ajiya da kuɗin canja. Tare da miliyoyin masu amfani da ke karɓar UBI na yau da kullum, adadin mint/redeem zai iya zama mai yawa.",
-      "futureNote": "Masu bayarwa za su iya samun rabo na kuɗin ma'amala a nan gaba yayin da yarjejeniya ta ci gaba.",
+      "revenueNote": "Tattalin arzikin masu bayarwa ya bambanta. Wasu masu bayarwa suna samun kudaden shiga daga ribar ajiya da/ko kudin mint/redeem, dangane da tsarin su da wajibcinsu.",
+      "futureNote": "Babu wani abu a cikin yarjejeniya da ke tabbatar da kudaden shiga na mai bayarwa. Canje-canje na gaba, idan akwai, dole ne su bi tsarin mulkin yarjejeniya.",
       "learnMore": "ƙara Koyi",
       "applyButton": "Nema Yanzu"
+    },
+    "stablesDocs": {
+      "title": "Ma'auni na Stablecoin",
+      "subtitle": "Tsohuwar ga apps na Gidauniyar Umotu (ba izinin yarjejeniya ba)",
+      "description": "Gidauniyar Umotu tana buga ma'auni da ake amfani da su don tsohuwar tallafin stablecoin a cikin apps da ayyukan da Gidauniya ke kulawa. Ba su ƙuntata canja wurin matakin yarjejeniya ko walat na ɓangare na uku ba. Ma'auni ba sa kawar da haɗarin stablecoin.",
+      "uss": {
+        "title": "Ma'aunin Stablecoin na Umotu (USS)",
+        "description": "Ƙananan buƙatun bayyanawa, ajiya, da fansa don stablecoins da aka nuna a matsayin zaɓin biya na tsohuwa da ayyukan stable-gas (ta paymasters) a cikin apps na Gidauniyar Umotu.",
+        "button": "Karanta USS"
+      },
+      "rdp": {
+        "title": "Manufar Bayyanar Haɗari (RDP)",
+        "description": "Alamomin haɗari da suka dogara da ƙa'ida (misali, juyin halitta na FX, karkatawar peg, ƙuntatawan fansa, da haɗarin fasaha) da ake nuna su a cikin apps na Gidauniyar Umotu.",
+        "button": "Karanta RDP"
+      },
+      "learnMore": "Duba ma'aunin stablecoin"
     }
   },
   "news": {
@@ -1115,36 +1323,36 @@
   },
   "learn": {
     "title": "Koyi",
-    "subtitle": "Duk abin da kuke buƙata don sanin Umotu",
+    "subtitle": "Shiga Bude, Lada ta Yau da Kullum",
     "featured": "MASU SHAHARA",
     "whatIs": {
       "title": "Menene Umotu?",
-      "subtitle": "$10 a rana, ga kowa, ko'ina",
-      "intro": "Umotu yana nufin bari kowa ya samu kusan dala $10/rana ta amfani da wayar hannu kawai. Babu kayan aiki masu tsada, babu ƙwarewa na musamman, babu iyaka.",
+      "subtitle": "Shiga Bude, Lada ta Yau da Kullum",
+      "intro": "Umotu yarjejeniya ce budaddiya inda kowa zai iya shiga ta amfani da wayar hannu kuma ya samu lada ta yau da kullum don taimakawa tsaron hanyar sadarwa. Lada tana canzawa kuma ba a tabbatar ba. Don jagoranci kawai, an tsara yarjejeniya kewaye da manufar misali kusan $10/rana a kowane mai shiga mai aiki a farawa, amma lada ta gaske na iya zama kasa da yawa (ciki har da dala kalilan a rana) ko sama da yawa dangane da shiga da yanayin kasuwa.",
       "howDifferent": "Yaya ya bambanta?",
-      "noMiddleman": "Babu mai tsakiya: Kuna mu'amala kai tsaye da hanyar sadarwa—ba buƙatar asusun banki",
-      "globalAccess": "Samun damar duniya: Yana aiki a ko'ina da intanet",
-      "youOwnIt": "Ku ne mallaki: Wallet ku, maɓallanku, ikon ku",
+      "noMiddleman": "Babu mai tsakiya: kuna mu'amala da hanyar sadarwa kai tsaye—ba buƙatar amincewar asusu",
+      "globalAccess": "Samun damar duniya: yana aiki a ko'ina da kuke da intanet",
+      "youOwnIt": "Kula da kai: wallet ku, maballan ku, ikon ku",
       "vision": "Muhimmanci",
-      "visionText": "Biliyoyin mutane za su iya taimakawa riƙe babban littafi na jama'a da gaskiya kuma samu don shi. A Umotu, wayoyi suna yin ƙananan duba waɗanda ke sa hanyar sadarwa ta zama abin dogaro.",
+      "visionText": "Miliyoyin wayoyi za su iya taimakawa riƙe babban littafi na jama'a da gaskiya. Wayoyi suna yin dubawa masu sauƙi (kamar data availability sampling) waɗanda ke sa hanyar sadarwa ta zama abin dogaro.",
       "nameOrigin": "Asalin Suna",
       "nameOriginText": "Umotu ya ɗauki wahayi daga Paʻumotu, harshe na Polynesian. Muna amfani da sunan cikin mutunci a matsayin tunatarwa don gina wa mutanen yau da kullum."
     },
     "earn": {
       "title": "Yadda Kuke Samu",
-      "subtitle": "Wayar ku tana aiki; ana biyan ku",
-      "intro": "Wayar ku tana yin ƙananan ayyuka waɗanda ke taimakawa kowa—sai ana ba ku lada.",
+      "subtitle": "Wayar ku tana shiga; kuna samun lada",
+      "intro": "Wayar ku tana yin kananan binciken tsaro da ke taimakawa hanyar sadarwa—sai ku samu lada.",
       "steps": "Matakai Uku Masu Sauƙi",
       "step1": "1) Tabbatar da kuna mutum: duba liveness cikin sauri (da sabuntawa lokaci-lokaci) yana tabbatar da kowane mutum yana da asusu ɗaya.",
       "step2": "2) Taimaka hanyar sadarwa: wayar ku tana gudana DA sampling da sauran duba masu sauƙi a baya.",
-      "step3": "3) Samu lada ta yau da kullum: ana biyan ku don wannan aiki, tare da manufa kusan dala $10/rana dangane da manufofin hanyar sadarwa.",
+      "step3": "3) Samu lada ta yau da kullum: ana rarraba lada ta atomatik bisa nasarar shiga. Adadi ya bambanta.",
       "localCurrency": "Ana Biya da Kuɗin Ku",
-      "localCurrencyText": "Zaɓi token na biya: stablecoins na kuɗin gida (inda ake samu) ko UMT. Adadi yana nufin ~dala $10 na Amurka kuma yana iya canzawa tare da shiga da yanayin kasuwa."
+      "localCurrencyText": "Zabi kadarorin biya: UMT ko stablecoins (inda ake samu). Stablecoins ana bayarwa ta bangare na uku kuma suna da hadarin su."
     },
     "whereMoney": {
-      "title": "Daga Ina Dala $10 Take?",
+      "title": "Daga Ina Lada Take?",
       "subtitle": "Kuna samu saboda kuna yin aiki",
-      "intro": "Tambaya ce ta #1. Amsa gajarta: saboda kuna bayar da sabis da hanyar sadarwa ke buƙata.",
+      "intro": "Tambaya ce da aka saba. Amsa gajarta: lada tana nan saboda mahalarta suna bayar da tsaro, kuma yarjejeniya tana bayar da tokens bisa doka.",
       "realWork": "Wayar Ku Tana Yin Aiki na Gaske",
       "realWork1": "DA Sampling: wayar ku tana duba cewa bayanan block ana samu kuma daidai",
       "realWork2": "Shigar Mutane: kuna tabbatar da mutum-ɗaya-asusu don hana bots da spam",
@@ -1155,7 +1363,7 @@
       "distribution": "Yadda Aka Rarraba Lada",
       "newTokens": "Ana ƙirƙiro sabbin tokens na UMT kuma ana raba su da wayoyi tabbatattu (ba da validators ba)",
       "fees": "Rabo na kuɗi da ginshikin gini ana raba su da sentinel na waya don kammala blocks",
-      "treasury": "Ƙaramin rabo yana tallafawa ci gaba da shirye-shiryen kwanciyar hankali",
+      "treasury": "Wasu kudade na iya tallafawa kula da muhalli (misali, bincike da software na misali) ta hanyar mulki a bayyane, inda aka ba da damar.",
       "whyDifferent": "Me Yasa Ya Bambanta",
       "btcProblem": "Bitcoin yana ba da lada ga masu hakar ma'adinai na musamman (mai tsadar jari)",
       "ethProblem": "Ethereum yana ba da lada ga manyan masu staking (mai tsadar jari)",
@@ -1192,19 +1400,23 @@
       "example1": "1 ZAR1 ≈ 1 Rand na Afirka ta Kudu",
       "example2": "1 USD1 ≈ 1 Dalar Amurka",
       "example3": "1 NGN1 ≈ 1 Naira na Nigeria",
-      "backed": "Ana Bayarwa da Abokan Hulɗa",
-      "backedText": "Stablecoins a Umotu ana bayarwa da abokan hulɗa masu tsari kuma aka tsara don riƙe daraja 1:1 tare da ajiya. Masu bayarwa suna buga tabbacin ajiya da sharuɗɗan fansa.",
+      "backed": "Ana bayarwa ta bangare na uku",
+      "backedText": "Ana bayar da stablecoins ta masu samarwa masu zaman kansu kuma an tsara su don bin diddigin kudin (kamar USD ko CAD). Kowace stablecoin tana da ajiya, sharuɗɗan fansa, ikon sabuntawa, da manufofin haɗari nata (ciki har da yuwuwar daskarewa). Karanta bayyanar mai bayarwa.",
       "convert": "Canza zuwa Kuɗi",
-      "convertText": "Canja ta bankunan abokan hulɗa/musanya, ko yi amfani kai tsaye inda aka karɓa."
+      "convertText": "Za ku iya musanya stablecoins a on-chain, ko canza ta hanyar ayyukan bangare na uku inda ake samu.",
+      "gas": "Amfani da stablecoins don kuɗin aiki",
+      "gasText": "Wasu walat na iya ba ku damar biyan kuɗin hanyar sadarwa ta amfani da stablecoins ta hanyar sabis da ke canzawa zuwa token na asali. Masu tabbatarwa har yanzu suna karɓar token na asali; stable-gas mataki ne na sauƙaƙawa.",
+      "preferredList": "Tsohuwar walat",
+      "preferredListText": "Walat na Umotu na iya nuna tsohuwar jerin stablecoins don biya da ayyukan kuɗi bisa Ma'aunin Stablecoin na Umotu (USS). Sauran walat na iya tallafawa wasu stablecoins."
     },
     "economics": {
       "title": "Tattalin Arzikin UMT",
       "subtitle": "Wane ya samu me da me yasa",
-      "intro": "UMT yana da isasshen adadi na tokens biliyan 100. Yawancinsa ana biya wa masu amfani da waya na yau da kullum waɗanda ke taimakawa riƙe hanyar sadarwa da gaskiya.",
+      "intro": "UMT yana da isasshen adadi na tokens biliyan 100. Yawancinsa ana tanada shi don mahalarta na waya a tsawon lokaci, ana rarraba shi ta kididdigan fitar da tokens mai bin doka.",
       "supply": "Bayarwa & Rarraba",
       "supplyBullets": [
-        "Mafi yawan samar da alamomin ana tanada su ga mahalarta wayar tarho a tsawon lokaci kuma ana sakin su ta hanyar Emission Controller. Emission Controller yana iyakance fitowar yau da kullun zuwa bai fi 0.01% na sauran tanadin ba, yana tabbatar da dorewa na dogon lokaci. A karkashin wannan jadawalin, kusan kashi 68% na jimlar tanadin ya rage bayan shekaru 10, kuma kusan kashi 15% ya rage bayan shekaru 50.",
-        "An kirkiro karamin bangare na tanadin a lokacin kaddamar don takamaiman dalilai, ciki har da airdrop na farkon masu amfani, sayarwa na al'umma, rabon gidauniya, da ajiyar gaggawa da sauransu."
+        "Mafi yawan adadin an tanada shi don mahalarta na waya kuma ana sake shi a tsawon lokaci ta hanyar Kididdigan Fitarwa. Kididdigan yana iyakance fitowar kowace rana zuwa ba fiye da 0.01% na sauran adadin ba don rage raguwa.",
+        "A iyakar mafi girma (0.01% na sauran adadin a rana), kusan 69% na adadin ya rage bayan shekaru 10 kuma kusan 16% ya rage bayan shekaru 50. Fitarwa na gaske na iya zama kasa dangane da dokokin yarjejeniya."
       ],
       "premine": "Rabon Kaddamarwa (na wucin gadi, na iya canzawa a lokacin kaddamar da mainnet)",
       "premineTable": [
@@ -1226,13 +1438,13 @@
         }
       ],
       "emissions": "Lada ta Yau da Kullum don Wayoyi",
-      "emissionsText": "Kowace rana hanyar sadarwa za ta iya fitar da aƙalla 0.01% na sauran tafkin fitarwa. Muna kasafi wannan adadi don wayoyi tabbatattu su nufa kusan dala $10/rana, daidaitawa tare da yawan mutane da ke shiga da yanayin kasuwa.",
+      "emissionsText": "Fitarwa ta yau da kullum tana da iyaka. Ladar ku ta dogara da shiga, nasarar binciken waya, da yanayin kasuwa. Yarjejeniya ba ta yi alkawalin adadi tsayayye ba.",
       "fees": "Kuɗi & Sentinel",
       "feesText": "Masu taimakon Sentinel (zaɓi, na ci gaba) suna samun rabo na kuɗin ma'amala da tayin gini. Wannan daban da fitarwa ta yau da kullum.",
       "transparency": "Bayyane",
       "transparencyText": "Jadawalin vesting da wallet na jama'a ne. Iyakar fitarwa ta yau da kullum da biyan da aka samu ana bugawa a app.",
       "disclaimerTitle": "Tunatarwa a Harshe Mai Sauƙi",
-      "disclaimerText": "Wannan ba shawara ce ta saka hannun jari ba. Lada ta dogara da manufofin hanyar sadarwa da shiga. App ba ya tabbatar da samun kuɗi tsayayye."
+      "disclaimerText": "Wannan ba shawara ce ta kudi ba. Lada tana canzawa kuma ba a tabbatar ba."
     },
     "contribute": {
       "title": "Yadda Ake Ba da Gudummawa",
@@ -1259,7 +1471,7 @@
       },
       "governance": {
         "title": "Shiga Mulki",
-        "text": "Karanta shawarwari, tattauna a fili, kuma jefa ƙuri'a a app. Muryar ku tana taimakawa jagorantar sigogin hanyar sadarwa da rarraba tallafi.",
+        "text": "Karanta shawarwari, tattauna a fili, kuma jefa kuri'a a app. Kuri'u na iya jagorantar tsohuwar walat da tallafin muhalli. Wasu dokokin yarjejeniya sun daidaitu kuma ba a jefa kuri'a ba.",
         "cta": "Buɗe Mulki",
         "url": "umotu://vote"
       },
@@ -1274,37 +1486,38 @@
     "decentralization": {
       "title": "Me Yasa Rarraba Ikon",
       "subtitle": "Babu wani wuri guda na sarrafawa",
-      "intro": "Rarraba iko yana nufin babu kamfani ko gwamnati guda da zai iya rufe hanyar sadarwa ko ƙwace kuɗin ku.",
+      "intro": "Rarraba iko yana nufin mahalarta masu zaman kansu da yawa ke gudanar da hanyar sadarwa. Walat ku na kula da kai ne—maballan ku kadai ne za su iya motsa kudin ku.",
       "benefits": "Amfanin Gare Ku",
       "benefit1": "Kullum a kan: samun dama 24/7",
-      "benefit2": "Ƙananan kuɗi: ƙananan kuɗin hanyar sadarwa maimakon kuɗin kati 3–5%",
+      "benefit2": "Sau da yawa kananan kudi: kananan kudin hanyar sadarwa maimakon kudin kati na yau da kullum",
       "benefit3": "Babu iyaka: aikawa daraja a duniya",
-      "benefit4": "Juriya ga hana: maɓallanku, kuɗin ku",
+      "benefit4": "Juriya ga hanawa: babu kamfani guda daya da ke sarrafa walat ku",
       "benefit5": "Bayyane: kowa zai iya tabbatar da yadda tsarin yake aiki",
       "howWorks": "Yadda Ake Aiki",
-      "howWorksText": "Validators suna ba da shawara blocks kowane ~sakan 2. Wayoyi (kamar naku) suna tabbatarwa kuma kammala da duba masu sauƙi. Ƙananan gudummawa da yawa suna haɗuwa zuwa tsaro mai ƙarfi."
+      "howWorksText": "Validators suna ba da shawara blocks kowane ~sakan 2. Wayoyi (kamar naku) suna tabbatar da samuwar bayanan kuma suna taimakawa kammala blocks da duba masu sauƙi. Kananan gudummawa da yawa suna haduwa zuwa tsaro mai karfi."
     },
     "noCompany": {
-      "title": "Babu Kamfani, Babu Abokan Ciniki",
-      "subtitle": "Fahimci Tsarin",
-      "intro": "Babu 'Umotu, Inc.' da ke sarrafa yarjejeniya. Umotu saitin dokoki ne buɗaɗɗe da kowa zai iya amfani da shi.",
+      "title": "Yarjejeniya Budaddiya, Kula da Kai",
+      "subtitle": "Fahimci abin da Umotu ke (da abin da ba shi ba)",
+      "intro": "Babu kamfani guda daya da ke sarrafa yarjejeniya. Umotu saitin dokoki ne budadde da kowa zai iya amfani da shi, kuma kungiyoyi masu zaman kansu da yawa za su iya gina walat da ayyuka.",
       "notCompany": "Abin da Umotu BA YA BA",
-      "notCompany1": "BA kamfani tare da asusun abokan ciniki ba",
-      "notCompany2": "BA banki ko mai aikawa kuɗi ba",
+      "notCompany1": "BA banki mai kula da kudi na abokan ciniki ba",
+      "notCompany2": "BA zai iya sake saita walat ku ko juyar da ma'amala ba",
       "notCompany3": "BA wani abu guda ke sarrafawa ba",
-      "notCompany4": "BA zai iya juyar da ma'amala ba",
+      "notCompany4": "BA shirin samun kudade tabbatacce ba",
       "whatIs": "Abin da Umotu KE",
-      "whatIs1": "Yarjejeniya: kamar email ko yanar gizo—buɗaɗɗe, dokoki masu mu'amala",
-      "whatIs2": "Na farko waya: yana gudana tare da taimakon wayoyi masu wayo na yau da kullum",
+      "whatIs1": "Yarjejeniya: dokoki budadde, masu mu'amala (kamar email ko yanar gizo)",
+      "whatIs2": "Shiga na farko-waya: wayoyi masu wayo za su iya taimakawa tsaron hanyar sadarwa",
       "whatIs3": "Al'umma ke tuƙa: ku mai shiga ne, ba abokin ciniki ba",
+      "whatIs4": "Ba tare da izini ba: kowa zai iya ginawa ko amfani da tsarin",
       "foundation": "Gidauniyar Umotu",
-      "foundationIntro": "Ƙungiya mai zaman kanta da ke tallafawa tsarin (apps na misali, takardu, shirye-shiryen al'umma) amma ba ta sarrafa yarjejeniya ba.",
+      "foundationIntro": "Kungiya mai zaman kanta da ke tallafawa muhalli (apps na misali, ilimi, da daidaitawa) amma ba ta sarrafa yarjejeniya ba.",
       "foundationTask1": "Riƙe app na waya & explorer a matsayin misalai na misali",
       "foundationTask2": "Sarrafa wasu ababen more rayuwa na jama'a (wasu za su iya gudana nasu)",
-      "foundationTask3": "Daidaita mulkin al'umma (labarai, ƙuri'u)",
-      "foundationTask4": "Duba kuma jera stablecoins masu goyan baya",
+      "foundationTask3": "Daidaita kuri'u da tattaunawa na al'umma a cikin app (inda ya dace)",
+      "foundationTask4": "Tana buga Yarjejeniyar Umotu Stable da jerin tsohuwa masu taka tsantsan ga walat na Umotu (wasu za su iya tallafawa wasu stables)",
       "foundationTask5": "Bugawa ilimi & jagororin aminci",
-      "foundationNote": "Gidauniya ba za ta iya samun damar wallet ku ba kuma ba za ta iya juyar da ma'amala ba."
+      "foundationNote": "Gidauniya ba za ta iya samun damar walat ku ba kuma ba za ta iya juyar da ma'amala ba. Tsohuwar walat ba ta iyakance abin da za a iya yi a yarjejeniya ba."
     },
     "scamPrevention": {
       "title": "Gujewa Zamba",
@@ -1328,22 +1541,22 @@
       "action4": "Toshe kuma ba da rahoto"
     },
     "airdrop": {
-      "title": "Airdrop na Testnet",
-      "subtitle": "Masu amfani da farko ana san su",
-      "intro": "Kun zo da wuri! Umotu yana cikin testnet. Masu amfani da testnet masu aiki za su iya samun rabo lokacin da mainnet ya ƙaddamar.",
+      "title": "Sanin Testnet",
+      "subtitle": "Shigar testnet da wuri na iya a gane ta",
+      "intro": "Umotu yana cikin testnet. Mahalarta na testnet masu aiki za su iya samun rabon sanin lokacin da mainnet ya kaddamar. Ba a tabbatar ba kuma na iya zama sifili.",
       "howToQualify": "Yadda Ake Cancantar",
       "step1": "Ƙirƙiri wallet a app",
       "step2": "Kammala tabbatarwa na mutum (Proof of Human)",
       "step3": "Yi amfani da app akai-akai a lokacin testnet",
       "whenAirdrop": "Yaushe Airdrop?",
       "whyTestnet": "Testnet yana da mahimmanci: masu amfani suna koyon tsaro na wallet, kuma ana gwada tsarin don tsaro, ƙarfi, da inganci kafin mainnet.",
-      "timeline": "Ana sa ran mainnet a Q1 ko Q2 na 2026. Airdrop zai faru a kusa da lokacin da mainnet ya ƙaddamar.",
+      "timeline": "Lokacin mainnet da cikakkun bayanin sanin za a sanar a cikin app.",
       "howMuch": "Nawa Zan Samu?",
-      "totalPool": "Jimlar tafkin airdrop: 1,000,000,000 tokens na UMT. Rabon ku ya dogara da jimlar masu shiga da farashin UMT a farawa.",
-      "scenario2": "Masu amfani 1M: ~1,000 UMT a kowane, farashi ana sa ran ~$1, darajar airdrop ~$1,000",
-      "scenario3": "Masu amfani 10M: ~100 UMT a kowane, farashi ana sa ran ~$20, darajar airdrop ~$2,000",
-      "scenario4": "Masu amfani 100M: ~10 UMT a kowane, farashi ana sa ran ~$300, darajar airdrop ~$3,000",
-      "disclaimer": "Waɗannan tsinkaye ne kawai, ba tabbaci ba. Darajoji na gaske ya dogara da yanayin kasuwa da dokokin shirin.",
+      "totalPool": "Misali kawai: idan an kirkiri tafkin sanin na 1,000,000,000 UMT tokens, rabon ku ya dogara da mahalarta masu cancanta da dokokin shirin. Da wuri kun shiga, da girma rabon ku.",
+      "scenario2": "Misali kawai: masu amfani 1M masu cancanta → matsakaicin ~1,000 UMT kowanne (kafin nauyi)",
+      "scenario3": "Misali kawai: masu amfani 10M masu cancanta → matsakaicin ~100 UMT kowanne (kafin nauyi)",
+      "scenario4": "Misali kawai: masu amfani 100M masu cancanta → matsakaicin ~10 UMT kowanne (kafin nauyi)",
+      "disclaimer": "Misalai kawai—ba tabbaci ba. Duk wani rabon sanin ya dogara da dokokin shirin da yanayin kasuwa, kuma na iya zama sifili.",
       "whatYouGet": "Abin da Kuke Samu",
       "reward": "A mainnet, wallet na testnet zai iya karɓar tokens na gaske dangane da shiga da dokokin shirin. Masu amfani da farko da masu aiki ana fifita su.",
       "note": "Lura: Tokens na testnet ba su da daraja. Duk wani rabo na mainnet ana ƙaddara ta manufofin shirin a farawa. Duk labarai game da airdrop za a buga kawai a wannan app."
@@ -1361,7 +1574,21 @@
       "tips": "Shawarwari Masu Kyau",
       "tip1": "Ba da izinin gudana a baya don duba za su iya gudana",
       "tip2": "Duba kowace rana don ganin lada",
-      "tip3": "Gayyaci abokai—ƙarin masu amfani yana ƙarfafa hanyar sadarwa"
+      "tip3": "Gayyaci abokai—karin mahalarta za su iya karfafa hanyar sadarwa"
+    },
+    "governance": {
+      "title": "Mulki & Ƙuri'a",
+      "subtitle": "Yadda ƙuri'a a cikin app ke aiki",
+      "intro": "Umotu yana tallafawa bincike da ƙuri'a a cikin app don mahalarta su iya taimakawa jagora wasu shawarwarin muhalli.",
+      "whatVotesDo": "Abin da ƙuri'a za su iya yi",
+      "whatVotesDo1": "Ba da shawarar tsohuwar walat (misali, waɗanne stablecoins suka bayyana a matsayin zaɓin biya ko stable-gas da aka fi so)",
+      "whatVotesDo2": "Nuna fifikon al'umma a shawarwari da abubuwan da suka fi muhimmanci",
+      "whatVotesDo3": "Amincewa da wasu tallafin kuɗi ko kasafin kuɗi inda aka ba da damar",
+      "whatVotesCannotDo": "Abin da ƙuri'a ba za su iya yi ba",
+      "whatVotesCannotDo1": "Samun damar walat ku, motsa kuɗin ku, ko sake saita jumlar dawowa ku",
+      "whatVotesCannotDo2": "Juyar da ma'amala ko daskare walat ku na kula da kai",
+      "whatVotesCannotDo3": "Canza manufar kuɗi na dindindin a wajen dokokin yarjejeniya",
+      "note": "Wasu binciken na iya zama na gwaji ko na ba da shawara kawai dangane da matakin hanyar sadarwa. Koyaushe ku karanta cikakkun bayanin shawara da yanayin kunna su."
     }
   },
   "common": {
@@ -1410,6 +1637,7 @@
   "poh_title": "Tabbatar da Mutum",
   "continue": "Ci gaba",
   "or": "KO",
+  "version": "Sigar",
   "seedReveal": {
     "title": "Jumlar Dawowa",
     "intro": "Jumlar dawowa ita ce hanyar kawai don maidowa da wallet idan kun rasa damar wannan na'ura. Rubuta ta kuma ajiye ta cikin aminci a waje.",

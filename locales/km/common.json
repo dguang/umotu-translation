@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "Umotu",
-    "tagline": "១០ ដុល្លារ​ក្នុងមួយថ្ងៃ សម្រាប់គ្រប់គ្នា គ្រប់ទីកន្លែង"
+    "tagline": "Open Participation, Daily Rewards"
   },
   "navigation": {
     "home": "ទំព័រដើម",
@@ -38,6 +38,9 @@
       "changeChoice": "ផ្លាស់ប្តូរជម្រើស",
       "requiresLanguage": "ជ្រើសរើសភាសាជាមុនសិន",
       "requiresWallet": "បង្កើតកាបូបជាមុនសិន"
+    },
+    "daSampling": {
+      "staleHint": "ដំណើរការយកគំរូឥឡូវនេះដើម្បីធានាសិទ្ធិទទួលរង្វាន់ប្រចាំថ្ងៃរបស់អ្នក។"
     }
   },
   "earnings": {
@@ -118,13 +121,15 @@
     "manual": {
       "title": "ទាមទារដោយដៃ",
       "description": "ប្រសិនបើអ្នកត្រូវការប្រាក់លឿន សូមទាមទាររង្វាន់បន្ទាប់ដែលមានឥឡូវនេះ។ ការទាមទារដោយដៃប្រើហ្គាស់នៃកាបូបរបស់អ្នក។ ទាមទារដោយស្វ័យប្រវត្តិថោកជាងប្រសិនបើអ្នករង់ចាំ។ ប្រសិនបើកាបូបរបស់អ្នកគ្មានប្រាក់ សូមបើកទាមទារដោយស្វ័យប្រវត្តិ ឬបន្ថែមហ្គាស់ដើមមុនពេលទាមទារដោយដៃ។",
-      "dayLabel": "ថ្ងៃរង្វាន់",
       "claimButton": "ទាមទារឥឡូវនេះ",
       "claiming": "កំពុងទាមទារ...",
+      "cancelling": "កំពុងលុបចោលការទាមទារ...",
+      "cancelled": "ការទាមទារត្រូវបានលុបចោល។",
+      "cancelButton": "លុបចោលការទាមទារ",
       "success": "ការទាមទារបានដាក់ស្នើ",
       "successWithId": "ការទាមទារបានដាក់ស្នើ (id: {{id}})",
       "error": "បរាជ័យក្នុងការទាមទារ",
-      "noProof": "ភ័ស្តុតាងរង្វាន់មិនទាន់បានផ្សាយទេ។ សាកល្បងម្តងទៀតបន្ទាប់ពី snapshot ថ្ងៃនេះផ្សាយ។",
+      "noProof": "មិនទាន់រកឃើញភ័ស្តុតាងរង្វាន់សម្រាប់កាបូប/ថ្ងៃនេះទេ (ឬមិនមានសិទ្ធិនៅថ្ងៃនោះ)។ សាកល្បងម្តងទៀតបន្ទាប់ពី snapshot ថ្ងៃនេះផ្សាយ។",
       "unauthorized": "ការអនុញ្ញាត relayer បានបរាជ័យ។ សូមសាកល្បងម្តងទៀត ឬទាក់ទងផ្នែកគាំទ្រ។",
       "invalidDay": "No rewards available to claim yet",
       "gasEstimate": "Est. gas: {{gas}}",
@@ -136,9 +141,22 @@
       "preferAuto": "Use auto-claim (e.g., {{cadence}}) to amortize fees.",
       "newWalletHint": "If your wallet is unfunded, enable auto-claim or top up native gas before manual claim.",
       "remainingAfter": "+{{days}} បន្ថែមទៀតបន្ទាប់ពីបាច់នេះ",
+      "calendarVsEligible": "{{eligible}} មានសិទ្ធិក្នុង {{calendar}} ថ្ងៃប្រតិទិន",
+      "showMissingDays": "បង្ហាញថ្ងៃដែលខ្វះ ({{count}})",
+      "hideMissingDays": "លាក់ថ្ងៃដែលខ្វះ",
+      "noMissingDaysLoaded": "គោលនយោបាយមិនទាន់បានផ្ដល់ព័ត៌មានលម្អិតអំពីថ្ងៃដែលខ្វះទេ។",
+      "moreMissingDays": "និង {{count}} ថ្ងៃទៀត",
+      "missingDaysHint": "ថ្ងៃដែលខ្វះ មានន័យថាមិនមានការដកគំរូ/ភស្តុតាង DA សម្រាប់ថ្ងៃ UTC នោះទេ។",
       "batchSuccess": "{{count}} ថ្ងៃបានទាមទារដោយជោគជ័យ",
+      "fallbackPaidInNative": "បង់ជា UMT: stablecoin មិនអាចប្រើបានជាបណ្ដោះអាសន្ន",
       "claimingProgress": "កំពុងទាមទារ {{claimed}}/{{total}}...",
-      "claimAllButton": "ទាមទារទាំងអស់ {{count}} ថ្ងៃ"
+      "claimAllButton": "ទាមទារទាំងអស់ {{count}} ថ្ងៃ",
+      "claimingDay": "កំពុងដំណើរការថ្ងៃ {{day}}",
+      "stableNotConfigured": "ការទូទាត់ Stablecoin មិនមាន។ សូមជ្រើសរើស UMT ឬទាក់ទងផ្នែកគាំទ្រ។",
+      "insufficientGas": "សមតុល្យ gas មិនគ្រប់គ្រាន់។ សូមបន្ថែម native tokens ទៅកាបូបរបស់អ្នក។",
+      "userRejected": "ប្រតិបត្តិការត្រូវបានបោះបង់។",
+      "networkError": "កំហុសបណ្តាញ។ សូមពិនិត្យការភ្ជាប់របស់អ្នក ហើយព្យាយាមម្តងទៀត។",
+      "alreadyClaimed": "រង្វាន់ទាំងនេះត្រូវបានទាមទាររួចហើយ។"
     },
     "timezone": {
       "title": "ជ្រើសរើសតំបន់ម៉ោង",
@@ -218,14 +236,25 @@
     "addressBook": {
       "title": "សៀវភៅអាសយដ្ឋាន",
       "addContact": "បន្ថែមទំនាក់ទំនង",
-      "nameLabel": "ឈ្មោះ ឬស្លាក",
+      "nameLabel": "ឈ្មោះ",
       "walletAddress": "អាសយដ្ឋានកាបូប (0x...)",
       "savedContacts": "ទំនាក់ទំនងដែលបានរក្សាទុក",
       "noContacts": "មិនទាន់មានទំនាក់ទំនងរក្សាទុកនៅឡើយ។",
       "addForQuickSending": "បន្ថែមទំនាក់ទំនងសម្រាប់ការផ្ញើរហ័ស។",
       "enterValidAddress": "បញ្ចូលអាសយដ្ឋានត្រឹមត្រូវ",
       "addLabel": "បន្ថែមស្លាក",
-      "save": "រក្សាទុក"
+      "labelAlreadyExists": "ស្លាកនេះមានរួចហើយ",
+      "tagOptional": "ស្លាក (ស្រេចចិត្ត)",
+      "save": "រក្សាទុក",
+      "editContact": "កែប្រែទំនាក់ទំនង",
+      "tags": "ស្លាក",
+      "noTagsYet": "មិនទាន់មានស្លាកបន្ថែមនៅឡើយ",
+      "newTagPlaceholder": "បញ្ចូលឈ្មោះស្លាក...",
+      "addTag": "បន្ថែម",
+      "existingTags": "ឬបន្ថែមស្លាកដែលមានស្រាប់:",
+      "deleteContact": "Delete Contact",
+      "confirmDeleteTitle": "Delete contact?",
+      "confirmDeleteMessage": "This will remove {{label}} from your address book."
     },
     "settings": {
       "title": "ការកំណត់កាបូប",
@@ -245,7 +274,8 @@
         "clipboardWarning": "Clipboard អាចត្រូវបានអានដោយកម្មវិធីផ្សេងទៀត។ វានឹងត្រូវបានលុបដោយស្វ័យប្រវត្តិក្នុង ៣០វិនាទី។",
         "verifyForKey": "ផ្ទៀងផ្ទាត់ដើម្បីបង្ហាញកូនសោឯកជន",
         "verifyForSeed": "ផ្ទៀងផ្ទាត់ដើម្បីបង្ហាញវាក់សម្ងាត់សង្គ្រោះ",
-        "verifyDescription": "បញ្ចូលពាក្យសម្ងាត់ ឬ PIN របស់អ្នកដើម្បីបង្ហាញព័ត៌មានកាបូបសំខាន់ៗ។"
+        "verifyDescription": "បញ្ចូលពាក្យសម្ងាត់ ឬ PIN របស់អ្នកដើម្បីបង្ហាញព័ត៌មានកាបូបសំខាន់ៗ។",
+        "walletNotLoaded": "គ្មានកាបូបបានផ្ទុក។ នាំចូល ឬបង្កើតកាបូបជាមុនសិន។"
       },
       "import": {
         "title": "នាំចូលកាបូប",
@@ -256,7 +286,8 @@
         "keyPlaceholder": "បញ្ចូលកូនសោឯកជន 0x…",
         "importButton": "នាំចូលកាបូប",
         "importing": "កំពុងនាំចូល...",
-        "success": "បាននាំចូលកាបូបជោគជ័យ!"
+        "success": "បាននាំចូលកាបូបជោគជ័យ!",
+        "saveFailed": "ការនាំចូលកាបូបជោគជ័យ ប៉ុន្តែបរាជ័យក្នុងការរក្សាទុកនៅលើឧបករណ៍នេះ។"
       },
       "dangerZone": {
         "title": "តំបន់គ្រោះថ្នាក់",
@@ -530,6 +561,7 @@
       "deleteContact": "លុបទំនាក់ទំនង",
       "addressNotSaved": "អាសយដ្ឋានមិនទាន់បានរក្សាទុក",
       "addLabel": "បន្ថែមស្លាក",
+      "labelAlreadyExists": "ស្លាកនេះមានរួចហើយ",
       "enterValidAddress": "បញ្ចូលអាសយដ្ឋានត្រឹមត្រូវមុនសិន",
       "saved": "បានរក្សាទុក",
       "save": "រក្សាទុក"
@@ -547,6 +579,7 @@
       "noRecipients": "មិនទាន់មានអ្នកទទួលបានបន្ថែម",
       "addFromTagOrBook": "បន្ថែមពីស្លាក ឬសៀវភៅ",
       "invalidAddress": "អាសយដ្ឋានមិនត្រឹមត្រូវ: {{address}}",
+      "tooManyRecipients": "ការផ្ញើជាក្រុមគាំទ្រអ្នកទទួលរហូតដល់ {{max}} នាក់។",
       "invalidAmount": "ចំនួនមិនត្រឹមត្រូវសម្រាប់ {{recipient}}",
       "totalExceedsBalance": "សរុបលើសពីសមតុល្យ",
       "sendingTo": "កំពុងផ្ញើទៅអ្នកទទួល {{count}} នាក់",
@@ -569,6 +602,18 @@
       "failedStatus": "បរាជ័យ",
       "details": "ព័ត៌មានលម្អិតនៃការផ្ទេរបាច់",
       "total": "សរុប",
+      "hongbao": {
+        "short": "Hongbao",
+        "total": "Hongbao សរុប",
+        "helper": "កំណត់សរុបថេរ ហើយយើងនឹងបែងចែកចំនួនទទួលនីមួយៗដោយចៃដន្យនៅជំហានបន្ទាប់។",
+        "random": "ចៃដន្យ",
+        "autoSplit": "បែងចែកស្វ័យប្រវត្តិ",
+        "generated": "បានបង្កើតការបែងចែកចៃដន្យ",
+        "needTwoRecipients": "Hongbao ត្រូវការអ្នកទទួលយ៉ាងហោចណាស់ 2 នាក់។",
+        "amountTooSmall": "សរុបតូចពេកសម្រាប់អ្នកទទួល {{count}} នាក់។ អប្បបរមាគឺ {{min}} {{symbol}}។",
+        "generateFailed": "បរាជ័យក្នុងការបង្កើតចំនួនចៃដន្យ។",
+        "disabled": "របៀប Hongbao ត្រូវបានបិទនៅពេលនេះ។"
+      },
       "tagPicker": {
         "title": "ជ្រើសរើសស្លាក",
         "noTags": "គ្មានស្លាកដែលមាន",
@@ -647,19 +692,48 @@
       "type": "ប្រភេទ",
       "to": "ទៅ",
       "from": "ពី",
+      "address": "អាសយដ្ឋាន",
       "token": "ថូខឹន",
       "block": "Block",
       "gasCost": "តម្លៃ Gas",
+      "balanceAfter": "សមតុល្យបន្ទាប់ពី tx",
+      "balanceSource": "ប្រភពសមតុល្យ",
+      "balanceSourceVerified": "បានផ្ទៀងផ្ទាត់លើសង្វាក់",
+      "balanceSourceVerifying": "ប៉ាន់ស្មាន (កំពុងផ្ទៀងផ្ទាត់លើសង្វាក់...)",
+      "balanceSourceEstimatedRecent": "ប៉ាន់ស្មានពីស្នាប់សត សមតុល្យថ្មីៗ",
+      "balanceSourceEstimatedStale": "ប៉ាន់ស្មានពីស្នាប់សត សមតុល្យចាស់",
+      "balanceSourceEstimatedDelayed": "ប៉ាន់ស្មាន (ការផ្ទៀងផ្ទាត់លើសង្វាក់យឺត)",
+      "balanceSnapshotAge": "អាយុស្នាប់សត",
+      "balanceReconciledDiff": "ភាពខុសគ្នាដែលបានផ្សះផ្សា",
+      "balanceVerifyNote": "កំណត់ចំណាំផ្ទៀងផ្ទាត់",
+      "balanceVerifyUnexpected": "ការផ្ទៀងផ្ទាត់យឺត។ សមតុល្យប៉ាន់ស្មានត្រូវបានបង្ហាញ។",
+      "unavailable": "មិនអាចប្រើបាន",
       "hash": "Hash",
       "source": "ប្រភព",
       "balanceDetected": "បានរកឃើញសមតុល្យ",
       "inferredNote": "ប្រតិបត្តិការនេះត្រូវបានរកឃើញពីការផ្លាស់ប្តូរសមតុល្យ។ ព័ត៌មានលម្អិត on-chain ពិតប្រាកដមិនមាន។"
     },
+    "batch": {
+      "title": "ព័ត៌មានលម្អិតនៃការផ្ទេរបាច់",
+      "badge": "បាច់",
+      "send": "ផ្ញើបាច់",
+      "recipients": "អ្នកទទួល",
+      "recipientCount": "អ្នកទទួល {{count}} នាក់",
+      "recipientCount_plural": "អ្នកទទួល {{count}} នាក់",
+      "successful": "ជោគជ័យ",
+      "successOf": "{{success}} នៃ {{total}}",
+      "sentStatus": "បានផ្ញើ",
+      "failedStatus": "បរាជ័យ",
+      "successFail": "{{success}} ជោគជ័យ, {{fail}} បរាជ័យ",
+      "toRecipients": "ទៅកាន់អ្នកទទួល {{count}} នាក់",
+      "toRecipients_plural": "ទៅកាន់អ្នកទទួល {{count}} នាក់"
+    },
     "time": {
       "justNow": "ទើបនឹង",
       "minsAgo": "{{count}} នាទីមុន",
       "hoursAgo": "{{count}} ម៉ោងមុន",
-      "daysAgo": "{{count}} ថ្ងៃមុន"
+      "daysAgo": "{{count}} ថ្ងៃមុន",
+      "suffixAgo": "មុន"
     }
   },
   "settings": {
@@ -734,6 +808,43 @@
       "clearCache": "លុប Cache",
       "cacheCleared": "បានលុប cache! ចាប់ផ្តើរឡើងវិញដើម្បីអនុវត្ត។"
     },
+    "hongbaoDebug": {
+      "title": "ការកំណត់ Hongbao (Debug)",
+      "description": "លុប cache Hongbao មូលដ្ឋាន និងបង្ខំឱ្យធ្វើស្រស់នៅពេលចាប់ផ្តើមកម្មវិធីបន្ទាប់។",
+      "clearConfigCache": "លុប Cache Hongbao",
+      "cacheCleared": "បានលុប cache Hongbao",
+      "cacheClearFailed": "បរាជ័យក្នុងការលុប cache Hongbao"
+    },
+    "integrityDebug": {
+      "title": "App Attestation (Debug)",
+      "description": "ទាញយក attestation token ឧបករណ៍ដើម្បីបញ្ជាក់ថា App Attest កំពុងដំណើរការ។",
+      "fetch": "ទាញយក Attestation",
+      "fetching": "កំពុងទាញយក...",
+      "copy": "ចម្លង Payload",
+      "copyNonce": "ចម្លង Nonce",
+      "toastFetchSuccess": "បានទាញយក app attestation",
+      "toastFetchError": "App attestation បរាជ័យ",
+      "toastCopy": "បានចម្លង attestation",
+      "toastCopyNonce": "បានចម្លង nonce",
+      "nonceLabel": "nonce={{nonce}}",
+      "summaryEmpty": "payload ទទេ",
+      "summaryStub": "stub token (native module បាត់?)",
+      "summaryAppAttest": "appattest keyId={{keyId}} assertionLen={{len}}",
+      "summaryDeviceCheckUnsupported": "devicecheck tokenLen={{len}} (មិនគាំទ្រ)",
+      "summaryIosMode": "ios:{{mode}}",
+      "summaryAndroidJws": "android jws parts={{parts}} len={{len}}",
+      "summaryAndroidJwe": "android jwe parts={{parts}} len={{len}}",
+      "summaryAndroidParts": "android token parts={{parts}} len={{len}}",
+      "summaryPayloadLen": "payload len={{len}}",
+      "summaryError": "កំហុស: {{message}}",
+      "verify": "ផ្ទៀងផ្ទាត់នៅម៉ាស៊ីនបម្រើ",
+      "verifying": "កំពុងផ្ទៀងផ្ទាត់...",
+      "verifyMissing": "កំហុស: payload ឬ nonce បាត់",
+      "verifyOk": "ការផ្ទៀងផ្ទាត់ម៉ាស៊ីនបម្រើ: ជោគជ័យ",
+      "verifyFail": "ការផ្ទៀងផ្ទាត់ម៉ាស៊ីនបម្រើបរាជ័យ: {{error}}",
+      "toastVerifyOk": "ការផ្ទៀងផ្ទាត់ម៉ាស៊ីនបម្រើជោគជ័យ",
+      "toastVerifyFail": "ការផ្ទៀងផ្ទាត់ម៉ាស៊ីនបម្រើបរាជ័យ"
+    },
     "chainGuardian": {
       "title": "Chain Guardian",
       "description": "ជួយធានាសុវត្ថិភាព blockchain ដោយរក្សាទូរស័ព្ទអនឡាញ។ បំពេញការងារសំណាកយ៉ាងតិចមួយក្នុងមួយថ្ងៃដើម្បីរក្សាសិទ្ធិទទួលរង្វាន់។",
@@ -748,10 +859,12 @@
       "staleWarning": "មិនបានឃើញថ្ងៃនេះ — បើកកម្មវិធីឡើងវិញដើម្បីបន្ត។",
       "androidBatteryWarning": "ការបង្កើនប្រសិទ្ធភាពថ្មអាចការពារការ sampling",
       "androidBatteryHint": "ចូល Settings → Apps → Umotu → Battery → ជ្រើស \"Unrestricted\" ដើម្បីអនុញ្ញាត sampling ផ្ទៃខាងក្រោយ។",
+      "iosBackgroundHint": "iOS អាចផ្អាកការយកគំរូផ្ទៃខាងក្រោយ។ បើកកម្មវិធីម្តងម្កាល ឬចុចដំណើរការឥឡូវដើម្បីរក្សាសកម្មភាព។",
       "openSettings": "ចុចដើម្បីបើកការកំណត់",
       "tip": "បើក \"ដំណើរការនៅផ្ទៃខាងក្រោយ\" សម្រាប់សក្តានុពលរកបានខ្ពស់បំផុត។",
       "runNow": "ដំណើរការឥឡូវ",
       "running": "កំពុងដំណើរការ…",
+      "runNowNoData": "គ្មានទិន្នន័យ (កម្រិតថ្ម/WiFi ឬគ្មានកិច្ចការ)។",
       "lastError": "កំហុសចុងក្រោយ",
       "status": {
         "active": "សកម្ម",
@@ -767,12 +880,57 @@
       "noConnections": "គ្មានការតភ្ជាប់",
       "revokeAccess": "ដកការចូលប្រើ",
       "lastUsed": "ប្រើចុងក្រោយ"
+    },
+    "transfer": {
+      "title": "ការផ្ទេរទិន្នន័យឧបករណ៍",
+      "description": "ផ្លាស់ទីការកំណត់កម្មវិធី និងទំនាក់ទំនងទៅទូរស័ព្ទថ្មីរបស់អ្នកដោយស្កេនកូដ QR ផ្ទេរ។",
+      "warning": "នេះផ្ទេរតែទិន្នន័យកម្មវិធីប៉ុណ្ណោះ។ ឃ្លាស្ដារឡើងវិញ/កូនសោសម្ងាត់កាបូបប្រាក់មិនត្រូវបានរួមបញ្ចូលទេ។ នាំចូលកាបូបប្រាក់ដាច់ដោយឡែកនៅលើទូរស័ព្ទថ្មី។",
+      "preparing": "កំពុងរៀបចំ...",
+      "showQr": "បង្ហាញ QR ផ្ទេរ",
+      "scanQr": "ស្កេន QR ផ្ទេរ",
+      "exportTitle": "QR ផ្ទេរ",
+      "exportHint": "នៅលើទូរស័ព្ទថ្មីរបស់អ្នក បើកការកំណត់ -> ការផ្ទេរទិន្នន័យឧបករណ៍ -> ស្កេន QR ផ្ទេរ បន្ទាប់មកស្កេនកូដនេះ។",
+      "exportHintRelay": "នៅលើទូរស័ព្ទថ្មីរបស់អ្នក ស្កេន QR កូដមួយនេះដើម្បីទាញយកកញ្ចប់ផ្ទេរ បន្ទាប់មកបញ្ចូលកូដបញ្ជាក់ ៦ ខ្ទង់។",
+      "exportHintParts": "នៅលើទូរស័ព្ទថ្មីរបស់អ្នក ស្កេនគ្រប់ទំព័រតាមលំដាប់ (១ ដល់ {{total}}) បន្ទាប់មកបញ្ចូលកូដ ៦ ខ្ទង់។",
+      "exportReady": "QR ផ្ទេររួចរាល់ ({{count}} ធាតុ)",
+      "exportReadyParts": "QR ផ្ទេររួចរាល់ ({{count}} ធាតុ, {{parts}} ទំព័រ QR)។ ស្កេនទំព័រតាមលំដាប់។",
+      "relayReady": "ការផ្ទេរធំបានបង្កើនប្រសិទ្ធភាព: ស្កេន QR មួយដើម្បីទាញយក {{count}} ធាតុ បន្ទាប់មកបញ្ចូលកូដ ៦ ខ្ទង់។",
+      "relayFallback": "ការផ្ទេរ cloud មិនមាន ({{message}})។ ប្តូរទៅ QR ច្រើនទំព័រ។",
+      "relayFetching": "កំពុងទាញយកទិន្នន័យផ្ទេរ...",
+      "relayFetched": "បានទាញយកទិន្នន័យផ្ទេរ។ កំពុងដំណើរការ...",
+      "exportFailed": "បរាជ័យក្នុងការរៀបចំផ្ទេរ៖ {{message}}",
+      "prevPage": "មុន",
+      "nextPage": "បន្ទាប់",
+      "confirmCodeLabel": "កូដបញ្ជាក់ ៦ ខ្ទង់",
+      "copyCode": "ចម្លងកូដផ្ទេរ",
+      "importTitle": "ស្កេន QR ផ្ទេរ",
+      "importHint": "ចង្អុលម៉ាស៊ីនថតទៅ QR ផ្ទេរដែលបានបង្ហាញនៅលើទូរស័ព្ទចាស់របស់អ្នក។",
+      "importing": "កំពុងនាំចូល...",
+      "importNow": "នាំចូលទិន្នន័យ",
+      "imported": "បាននាំចូល {{count}} ធាតុ។ ឃ្លាស្ដារឡើងវិញ/កូនសោសម្ងាត់កាបូបប្រាក់មិនត្រូវបានផ្ទេរទេ។",
+      "importFailed": "ការនាំចូលផ្ទេរបានបរាជ័យ៖ {{message}}",
+      "confirmPrompt": "QR ត្រូវបានស្កេន។ បញ្ចូលកូដបញ្ជាក់ ៦ ខ្ទង់ដែលបានបង្ហាញនៅលើទូរស័ព្ទចាស់របស់អ្នក។",
+      "confirmCodeRequired": "បញ្ចូលកូដបញ្ជាក់ ៦ ខ្ទង់ពីទូរស័ព្ទចាស់របស់អ្នក។",
+      "confirmCodeMismatch": "កូដបញ្ជាក់មិនផ្គូផ្គងទេ។ សូមព្យាយាមម្តងទៀត។",
+      "rescan": "ស្កេនឡើងវិញ",
+      "scanProgress": "បានស្កេន QR {{current}}/{{total}}",
+      "scanContinue": "បន្តស្កេនទំព័រដែលនៅសល់តាមលំដាប់រហូតដល់ពេញលេញ។",
+      "restartScan": "ចាប់ផ្តើមស្កេនឡើងវិញ",
+      "chunkMismatch": "ទំព័រ QR ផ្ទេរមិនផ្គូផ្គងទេ។ សូមចាប់ផ្តើមស្កេនឡើងវិញពីទំព័រ ១។",
+      "cameraNeeded": "ត្រូវការការចូលប្រើម៉ាស៊ីនថត",
+      "cameraDescription": "បើកការអនុញ្ញាតម៉ាស៊ីនថតដើម្បីស្កេនកូដ QR ផ្ទេររបស់អ្នក។",
+      "allowCamera": "អនុញ្ញាតម៉ាស៊ីនថត",
+      "openSettings": "បើកការកំណត់",
+      "pasteCode": "បិទភ្ជាប់កូដផ្ទេរ",
+      "pasteTitle": "បិទភ្ជាប់កូដផ្ទេរ",
+      "pasteHint": "ប្រសិនបើការស្កេនម៉ាស៊ីនថតពិបាក សូមបិទភ្ជាប់កូដផ្ទេរដែលបានចម្លងពីទូរស័ព្ទចាស់។",
+      "pastePlaceholder": "UMOTU_TRANSFER:..."
     }
   },
   "onboarding": {
     "welcome": {
       "title": "ស្វាគមន៍មកកាន់ Umotu",
-      "subtitle": "១០ ដុល្លារ​ក្នុងមួយថ្ងៃ សម្រាប់គ្រប់គ្នា គ្រប់ទីកន្លែង",
+      "subtitle": "Open Participation, Daily Rewards",
       "getStarted": "ចាប់ផ្តើម"
     },
     "language": {
@@ -812,6 +970,40 @@
       "validFor_plural": "មានសុពលភាព ~{{days}} ថ្ងៃ",
       "expired": "ការផ្ទៀងផ្ទាត់ផុតកំណត់ ឬមិនរកឃើញ។",
       "expiredDetail": "ដំណើរការ liveness ម្តងទៀតដើម្បីធ្វើស្រស់ credential។"
+    },
+    "capture": {
+      "title": "ថតមុខ",
+      "hint": "ដាក់មុខអ្នកនៅកណ្តាល ហើយឈរស្ងៀម។",
+      "tipsTitle": "គន្លឹះក្នុងការថត",
+      "tipFace": "រក្សាមុខអ្នកនៅកណ្តាល ហើយបំពេញស៊ុម (≥ {{pct}}%)។",
+      "tipLight": "ប្រើពន្លឺស្មើគ្នា ហើយជៀសវាងពន្លឺខ្លាំងពីក្រោយ។",
+      "tipHold": "ឈរស្ងៀម ហើយមើលកាមេរ៉ា {{seconds}} វិនាទី។",
+      "tipRemove": "ដកមួក ម៉ាស់ ឬស្រមោលធ្ងន់។",
+      "errorShort": "ការថតខ្លីពេក។ ឈរស្ងៀម {{seconds}} វិនាទី។",
+      "errorTooSmall": "ការថតបរាជ័យ។ សូមព្យាយាមម្តងទៀត។",
+      "errorFileTooSmall": "ឯកសារវីដេអូតូចពេក។ ឈរស្ងៀមពេញមួយការថត ហើយកែលម្អពន្លឺ។",
+      "errorBitrate": "គុណភាពវីដេអូទាបពេក។ កែលម្អពន្លឺ ហើយកាន់ទូរស័ព្ទឱ្យមាំ។",
+      "errorLowQuality": "គុណភាពថតទាបពេក។ សូមប្រើពន្លឺល្អជាង ឬកាមេរ៉ាគុណភាពខ្ពស់។",
+      "errorCameraPermission": "ត្រូវការការអនុញ្ញាតកាមេរ៉ា។ បើកនៅក្នុងការកំណត់ ហើយព្យាយាមម្តងទៀត។",
+      "errorCameraUnavailable": "កាមេរ៉មិនមាននៅលើឧបករណ៍នេះ។ បិទកម្មវិធីកាមេរ៉ផ្សេងទៀត ហើយព្យាយាមម្តងទៀត។",
+      "errorRecordingFailed": "ការថតវីដេអូបរាជ័យ។ សូមព្យាយាមម្តងទៀតជាមួយពន្លឺល្អ។",
+      "errorStorage": "គ្មានទំហំផ្ទុកគ្រប់គ្រាន់ដើម្បីថតវីដេអូ។ សម្អាតទំហំ ហើយព្យាយាមម្តងទៀត។",
+      "errorFileAccess": "មិនអាចអានវីដេអូដែលបានថត។ សូមថតម្តងទៀត។",
+      "errorDeviceAttest": "ការត្រួតពិនិត្យសុវត្ថិភាពឧបករណ៍បរាជ័យ។ ធ្វើបច្ចុប្បន្នភាពសេវា Google Play ហើយព្យាយាមម្តងទៀត។",
+      "errorCooldown": "ព្យាយាមច្រើនពេក។ សូមរង់ចាំមុនពេលព្យាយាមម្តងទៀត។",
+      "errorChallenge": "បញ្ហាប្រឈមសកម្មមិនបានបញ្ចប់។ សូមថតម្តងទៀត ហើយធ្វើតាមការណែនាំ។",
+      "errorUpload": "ការផ្ទុកឡើងបរាជ័យ។ ពិនិត្យការភ្ជាប់ ហើយព្យាយាមម្តងទៀត។",
+      "errorUploadForbidden": "URL ផ្ទុកឡើងត្រូវបានបដិសេធ (ផុតកំណត់ ឬហត្ថលេខាមិនត្រូវគ្នា)។ សូមថតម្តងទៀត ហើយព្យាយាមម្តងទៀត។",
+      "errorUploadTimeout": "ការផ្ទុកឡើងអស់ពេល។ ពិនិត្យការភ្ជាប់ ហើយព្យាយាមម្តងទៀត។",
+      "errorUploadServer": "សេវាផ្ទុកឡើងមិនមានជាបណ្តោះអាសន្ន។ សូមព្យាយាមម្តងទៀតឆាប់ៗ។",
+      "errorSessionExpired": "វគ្គផុតកំណត់។ សូមថតម្តងទៀត។",
+      "errorUnexpected": "ការថតបរាជ័យ។ សូមព្យាយាមម្តងទៀត។",
+      "retryUpload": "ព្យាយាមផ្ទុកឡើងម្តងទៀត",
+      "retake": "ថតម្តងទៀត",
+      "recording": "កំពុងថត...",
+      "uploading": "កំពុងផ្ទុកឡើង...",
+      "processing": "កំពុងដំណើរការ...",
+      "start": "ចាប់ផ្តើមថត"
     }
   },
   "sentinelSettings": {
@@ -906,25 +1098,25 @@
     "pohDescription": "ផ្ទៀងផ្ទាត់មនុស្សជាមួយ inLyf ដើម្បីដោះសោរង្វាន់ប្រចាំថ្ងៃ។",
     "vision": {
       "title": "ចក្ខុវិស័យរបស់យើង",
-      "tagline": "១០ ដុល្លារ​ក្នុងមួយថ្ងៃ សម្រាប់គ្រប់គ្នា គ្រប់ទីកន្លែង",
-      "description": "Umotu កំពុងបង្កើតហេដ្ឋារចនាសម្ព័ន្ធសម្រាប់ពិភពលោកដែលគ្រប់គ្នាអាចចូលរួមក្នុងសេដ្ឋកិច្ចសកល—មិនគិតពីទីកន្លែងរស់នៅ ឬធនាគារដែលប្រើ។",
+      "tagline": "Open participation, daily rewards",
+      "description": "Umotu is an open protocol designed to make participation in a global digital economy simpler: open access, fast settlement, and optional stablecoins for everyday transactions.",
       "readMore": "អានចក្ខុវិស័យពេញលេញ",
       "pillars": {
-        "title": "គោលការណ៍ស្នូលបី",
+        "title": "Core Principles",
         "ubi": {
-          "title": "១០ដុល្លារ/ថ្ងៃ សម្រាប់គ្រប់គ្នា នៅគ្រប់ទីកន្លែង",
-          "description": "ចំណូលមូលដ្ឋានសកលជារង្វាន់សម្រាប់ការធានាសុវត្ថិភាពបណ្តាញ។ នរណាម្នាក់ដែលមានទូរស័ព្ទអាចចូលរួម និងរកបាន។"
+          "title": "Open participation, daily rewards",
+          "description": "Daily rewards are earned through participation in network security. Rewards are variable and not guaranteed."
         },
         "capital": {
-          "title": "ដើមទុនផ្លាស់ប្តូរដោយសេរី",
-          "description": "ការទូទាត់ និងផ្ទេរប្រាក់ស្ទើរគ្មានកកិបកក — ឆ្លងព្រំដែន ឬក្នុងស្រុក។ អាជីវកម្មបង់ ~០.១% ដើម្បីគ្របដណ្តប់តម្លៃវេទិកា បុគ្គលមិនបង់អ្វី។"
+          "title": "Low-friction transfers",
+          "description": "Payments and transfers are designed to be fast and low-friction. Fees and performance vary with network conditions and the apps you use."
         },
         "sovereignty": {
-          "title": "គោរពអធិបតេយ្យភាពរូបិយវត្ថុ",
-          "description": "យើងមិនជំនួសរូបិយវត្ថុ fiat — យើងធ្វើឱ្យវាដំណើរការប្រសើរ។ ធនាគារចេញ stablecoins pegged ទៅរូបិយវត្ថុក្នុងស្រុក។ គោលនយោបាយរូបិយវត្ថុកាន់តែមានប្រសិទ្ធភាពជាមួយការឈានដល់ធំទូលាយ និងកកិបកកតិច។"
+          "title": "Compatible with local money",
+          "description": "Umotu does not control monetary policy and does not replace fiat currencies. Stablecoins on Umotu are issued by third parties and have their own rules and risks."
         }
       },
-      "notReplacing": "Umotu មិនប្រកួតប្រជែងជាមួយធនាគារកណ្តាលទេ។ យើងកំពុងបង្កើតហេដ្ឋារចនាសម្ព័ន្ធប្រសើរសម្រាប់រូបិយវត្ថុ fiat៖ កកិបកកតិច ចូលប្រើសកល និងប្រសិទ្ធភាពទីផ្សារ និងភាពធន់ប្រសើរ។"
+      "notReplacing": "Umotu is infrastructure. It does not set monetary policy, does not guarantee stablecoin safety, and does not intervene to produce specific outcomes."
     },
     "building": {
       "title": "យើងកំពុងបង្កើតប្រព័ន្ធអេកូឡូស៊ី",
@@ -1032,34 +1224,50 @@
     "business": {
       "title": "បង្កើតអាជីវកម្មរបស់អ្នកនៅលើ Umotu",
       "subtitle": "ចេញផ្សាយកម្មវិធីជាមួយការទូទាត់បង្កើតរួច",
-      "description": "បង្កើតកម្មវិធីដែលចូលប្រើប្រព័ន្ធអេកូឡូស៊ី Umotu—លានមនុស្សផ្ទៀងផ្ទាត់ជាមួយចំណូលប្រចាំថ្ងៃ រួចរាល់សម្រាប់ប្រតិបត្តិការ។ គ្មានបញ្ហាបញ្ចូលការទូទាត់។",
+      "description": "Build apps with on-chain payments and optional stablecoins. Participants may earn daily rewards (variable) and can transact using supported assets.",
       "benefits": {
-        "noFees": "ថ្លៃដំណើរការទូទាត់ស្ទើរសូន្យ—រក្សា ៩៩.៩% នៃចំណូល",
-        "verifiedUsers": "អ្នកប្រើទាំងអស់ជាមនុស្សផ្ទៀងផ្ទាត់—គ្មាន bot ឬការបោកប្រាស់",
-        "globalReach": "ឈានដល់អ្នកប្រើនៅ ១៩០+ ប្រទេសពីថ្ងៃដំបូង",
-        "instantPayments": "ការទូទាត់ភ្លាមៗ—គ្មានការពន្យារ ៣០ ថ្ងៃ"
+        "noFees": "Low, transparent fees — exact costs vary with network conditions",
+        "verifiedUsers": "Verified participants — reduced bot and Sybil activity via Proof of Human",
+        "globalReach": "Reach participants globally (subject to availability)",
+        "instantPayments": "Fast on-chain settlement — timing depends on network conditions"
       },
       "exampleTitle": "ករណីប្រើប្រាស់",
-      "exampleText": "កម្មវិធីចែករំលែកជិះនៅ Umotu រក្សា ៩៩.៩% នៃតម្លៃជិះ បើប្រៀបនឹង ៧០% នៅវេទិកាប្រពៃណី។ អ្នកបើករកច្រើនជាង អ្នកជិះបង់តិចជាង។",
+      "exampleText": "A ride-sharing app can route payments directly between riders and drivers, with transparent fees and near-real-time settlement on-chain.",
       "docsButton": "អានឯកសារ",
       "buildButton": "ចាប់ផ្តើមបង្កើត"
     },
     "bank": {
       "title": "តើអ្នកជាធនាគារ?",
       "subtitle": "ចេញ stablecoins នៅលើ Umotu",
-      "description": "ស្ថាប័នហិរញ្ញវត្ថុដែលមានអាជ្ញាប័ណ្ណអាចចេញ stablecoins រូបិយវត្ថុក្នុងស្រុកនៅ Umotu និងចូលប្រើសេដ្ឋកិច្ច UBI កំពុងរីកចម្រើនជាមួយអ្នកប្រើលាននាក់។",
+      "description": "Financial institutions and payment companies can issue stablecoins on Umotu to serve users who prefer stable unit-of-account assets for everyday transactions.",
       "benefits": {
-        "reserves": "រកបាន yield លើ reserves៖ វិនិយោគនៅ bonds និងទ្រព្យតិចហានិភ័យ",
-        "mintRedeem": "យកថ្លៃ mint/redeem៖ ជាធម្មតា ០.១% លើ fiat ↔ stablecoin conversions",
-        "users": "ចូលប្រើអ្នកទទួល UBI ប្រចាំថ្ងៃលាននាក់",
-        "global": "ពង្រីកការឈានដល់ឆ្លងព្រំដែនភ្លាមៗ",
-        "custody": "Reserves របស់អ្នក ការគ្រប់គ្រងរបស់អ្នក៖ គ្រប់គ្រងទ្រព្យ backing ពេញលេញ"
+        "reserves": "Reserve management is controlled by the issuer and subject to applicable rules",
+        "mintRedeem": "Issuers may set mint/redeem fees at their discretion",
+        "users": "Access a growing base of active participants",
+        "global": "Reach users across borders (subject to compliance and distribution)",
+        "custody": "Issuer-controlled reserves and policies"
       },
       "revenueModel": "របៀបដែលអ្នកចេញរកបាន",
-      "revenueNote": "ដូច Tether និងអ្នកចេញធំៗផ្សេងទៀត ចំណូលមកពី yield reserves និងថ្លៃ conversion។ ជាមួយអ្នកប្រើលាននាក់ទទួល UBI ប្រចាំថ្ងៃ mint/redeem volume អាចច្រើន។",
-      "futureNote": "អ្នកចេញអាចទទួលចំណែកថ្លៃប្រតិបត្តិការនៅអនាគតនៅពេល protocol វិវឌ្ឍ។",
+      "revenueNote": "Issuer economics vary. Some issuers generate revenue from reserve yield and/or mint/redeem fees, depending on their model and obligations.",
+      "futureNote": "Nothing in the protocol guarantees issuer revenue. Future changes, if any, must follow the protocol's governance process.",
       "learnMore": "សិក្សាបន្ថែម",
       "applyButton": "ដាក់ពាក្យឥឡូវ"
+    },
+    "stablesDocs": {
+      "title": "ស្តង់ដារ Stablecoin",
+      "subtitle": "លំនាំដើមសម្រាប់កម្មវិធី Umotu Foundation (មិនមែនការអនុញ្ញាតពីប្រូតូកូល)",
+      "description": "Umotu Foundation ផ្សព្វផ្សាយស្តង់ដារដែលប្រើសម្រាប់ការគាំទ្រ stablecoin លំនាំដើមក្នុងកម្មវិធី និងសេវាកម្មដែល Foundation ថែរក្សា។ ពួកគេមិនបិទការផ្ទេរកម្រិត protocol ឬកាបូបភាគីទីបីទេ។ ស្តង់ដារមិនលុបបំបាត់ហានិភ័យ stablecoin ទេ។",
+      "uss": {
+        "title": "Umotu Stablecoin Standard (USS)",
+        "description": "លក្ខណៈវិនិច្ឆ័យអប្បបរមានៃការបង្ហាញ ទុន និងការប្រគល់វិញសម្រាប់ stablecoins ដែលបង្ហាញជាជម្រើសទូទាត់លំនាំដើម និងគាំទ្រក្នុងសេវា stable-gas (តាមរយៈ paymasters) ក្នុងកម្មវិធី Umotu Foundation។",
+        "button": "អាន USS"
+      },
+      "rdp": {
+        "title": "Risk Disclosure Policy (RDP)",
+        "description": "សូចនាករហានិភ័យផ្អែកលើច្បាប់ (ឧ. ការប្រែប្រួល FX, ការផ្គៀងផ្គង peg, ការកម្រិតនៃការប្រគល់វិញ និងហានិភ័យបច្ចេកទេស) ដែលបង្ហាញក្នុងកម្មវិធី Umotu Foundation។",
+        "button": "អាន RDP"
+      },
+      "learnMore": "មើលស្តង់ដារ stablecoin"
     }
   },
   "news": {
@@ -1115,36 +1323,36 @@
   },
   "learn": {
     "title": "សិក្សា",
-    "subtitle": "អ្វីគ្រប់យ៉ាងដែលអ្នកត្រូវដឹងអំពី Umotu",
+    "subtitle": "Open Participation, Daily Rewards",
     "featured": "ពិសេស",
     "whatIs": {
       "title": "Umotu ជាអ្វី?",
-      "subtitle": "១០ ដុល្លារ​ក្នុងមួយថ្ងៃ សម្រាប់គ្រប់គ្នា គ្រប់ទីកន្លែង",
-      "intro": "Umotu មានគោលដៅឱ្យនរណាម្នាក់រកបានប្រហែល ១០ដុល្លារ/ថ្ងៃ ដោយប្រើតែទូរស័ព្ទ។ គ្មានផ្នែករឹងថ្លៃ គ្មានជំនាញពិសេស គ្មានព្រំដែន។",
+      "subtitle": "Open Participation, Daily Rewards",
+      "intro": "Umotu is an open protocol where anyone can participate using a smartphone and earn daily rewards for helping secure the network. Rewards are variable and not guaranteed. For orientation only, the protocol is designed around a reference target of about $10/day per active participant at launch, but actual rewards can be much lower (including pennies per day) or higher depending on participation and market conditions.",
       "howDifferent": "វាខុសគ្នាយ៉ាងដូចម្តេច?",
-      "noMiddleman": "គ្មានកណ្តាល៖ អ្នកធ្វើអន្តរកម្មផ្ទាល់ជាមួយបណ្តាញ—គ្មានគណនីធនាគារចាំបាច់",
-      "globalAccess": "ចូលប្រើសកល៖ ដំណើរការគ្រប់ទីកន្លែងដែលមានអ៊ីនធឺណិត",
-      "youOwnIt": "អ្នកជាម្ចាស់៖ កាបូប កូនសោ ការគ្រប់គ្រងរបស់អ្នក",
+      "noMiddleman": "No middleman: you interact with the network directly—no account approval required",
+      "globalAccess": "Global access: works wherever you have internet",
+      "youOwnIt": "Self-custody: your wallet, your keys, your control",
       "vision": "ចក្ខុវិស័យ",
-      "visionText": "មនុស្សពាន់លានអាចជួយរក្សាសៀវភៅគណនីសាធារណៈឱ្យស្មោះត្រង់ និងរកបានសម្រាប់វា។ នៅ Umotu ទូរស័ព្ទធ្វើការពិនិត្យស្រាលៗដែលធ្វើឱ្យបណ្តាញគួរឱ្យទុកចិត្ត។",
+      "visionText": "Millions of phones can help keep a public ledger honest. Phones do lightweight checks (like data availability sampling) that make the network more trustworthy.",
       "nameOrigin": "ប្រភពឈ្មោះ",
       "nameOriginText": "Umotu បំផុសគំនិតពី Paʻumotu ភាសា Polynesian។ យើងប្រើឈ្មោះនេះដោយការគោរពជាការរំលឹកឱ្យបង្កើតសម្រាប់មនុស្សធម្មតា។"
     },
     "earn": {
       "title": "របៀបដែលអ្នករកបាន",
-      "subtitle": "ទូរស័ព្ទរបស់អ្នកធ្វើការ; អ្នកបានប្រាក់",
-      "intro": "ទូរស័ព្ទរបស់អ្នកធ្វើកិច្ចការតូចៗដែលជួយគ្រប់គ្នា—បន្ទាប់មកអ្នកបានរង្វាន់។",
+      "subtitle": "Your phone participates; you earn rewards",
+      "intro": "Your phone performs small security checks that help the network—then you earn rewards.",
       "steps": "ជំហានសាមញ្ញបី",
       "step1": "១) បញ្ជាក់ថាអ្នកជាមនុស្ស៖ ការពិនិត្យ liveness ខ្លី (និងធ្វើស្រស់ជាប្រចាំ) ធានាថាម្នាក់មានគណនីមួយ។",
       "step2": "២) ជួយបណ្តាញ៖ ទូរស័ព្ទរបស់អ្នកដំណើរការ Data Availability (DA) sampling និងការពិនិត្យស្រាលៗផ្សេងៗនៅផ្ទៃខាងក្រោយ។",
-      "step3": "៣) រកបានរង្វាន់ប្រចាំថ្ងៃ៖ អ្នកបានប្រាក់សម្រាប់ការងារនេះ ជាមួយគោលដៅប្រហែល ១០ដុល្លារ/ថ្ងៃ អាស្រ័យលើគោលនយោបាយបណ្តាញ។",
+      "step3": "3) Earn daily rewards: rewards are distributed automatically based on successful participation. Amounts vary.",
       "localCurrency": "បង់ជារូបិយវត្ថុក្នុងស្រុក",
-      "localCurrencyText": "ជ្រើសរើសថូខឹនទូទាត់៖ stablecoins រូបិយវត្ថុក្នុងស្រុក (បើមាន) ឬ UMT។ ចំនួនគោលដៅ ~១០ដុល្លារ USD និងអាចកែតម្រូវជាមួយការចូលរួម និងលក្ខខណ្ឌទីផ្សារ។"
+      "localCurrencyText": "Choose a payout asset: UMT or stablecoins (where available). Stablecoins are issued by third parties and have their own risks."
     },
     "whereMoney": {
-      "title": "១០ដុល្លារមកពីណា?",
+      "title": "Where Do Rewards Come From?",
       "subtitle": "អ្នករកបានព្រោះអ្នកធ្វើការងារ",
-      "intro": "នេះជាសំណួរលេខ១។ ចម្លើយខ្លី៖ ព្រោះអ្នកផ្តល់សេវាដែលបណ្តាញត្រូវការ។",
+      "intro": "It’s a common question. The short answer: rewards exist because participants provide security, and the protocol issues tokens by rule.",
       "realWork": "ទូរស័ព្ទរបស់អ្នកធ្វើការងារពិតប្រាកដ",
       "realWork1": "Data Availability Sampling៖ ទូរស័ព្ទរបស់អ្នកពិនិត្យថាទិន្នន័យ block មាន និងត្រឹមត្រូវ",
       "realWork2": "ការចូលរួមមនុស្ស៖ អ្នកបញ្ជាក់ម្នាក់-គណនីមួយ ដើម្បីបញ្ឈប់ bot និង spam",
@@ -1155,7 +1363,7 @@
       "distribution": "របៀបចែកចាយរង្វាន់",
       "newTokens": "ថូខឹន UMT ថ្មីត្រូវបានបង្កើត និងចែកឱ្យអ្នកចូលរួមទូរស័ព្ទផ្ទៀងផ្ទាត់ (មិនមែន validators)",
       "fees": "ចំណែកនៃថ្លៃ និង builder bids ត្រូវបានចែកឱ្យ phone sentinels សម្រាប់ finalize blocks",
-      "treasury": "ចំណែកតូចផ្តល់ថវិកាការថែទាំបន្ត និងកម្មវិធីស្ថិរភាព",
+      "treasury": "Some fees may support ecosystem maintenance (e.g., audits and reference software) through transparent governance, where enabled.",
       "whyDifferent": "ហេតុអ្វីខុសគ្នា",
       "btcProblem": "Bitcoin រង្វាន់ miners ឯកទេស (capital-intensive)",
       "ethProblem": "Ethereum រង្វាន់ stakers ធំ (capital-intensive)",
@@ -1192,19 +1400,23 @@
       "example1": "១ ZAR1 ≈ ១ South African Rand",
       "example2": "១ USD1 ≈ ១ US Dollar",
       "example3": "១ NGN1 ≈ ១ Nigerian Naira",
-      "backed": "ចេញដោយដៃគូ",
-      "backedText": "Stablecoins នៅ Umotu ចេញដោយដៃគូគ្រប់គ្រង និងរចនាឱ្យរក្សា ១:១ ជាមួយ reserves។ អ្នកចេញបោះផ្សាយ proof-of-reserves និងលក្ខខណ្ឌ redemption។",
+      "backed": "Issued by third parties",
+      "backedText": "Stablecoins are issued by independent providers and are designed to track a currency (like USD or CAD). Each stablecoin has its own reserves, redemption terms, upgrade controls, and risk policies (including possible freezing). Read the issuer’s disclosures.",
       "convert": "បម្លែងជាសាច់ប្រាក់",
-      "convertText": "បម្លែងតាមធនាគារ/ exchange ដៃគូ ឬចំណាយផ្ទាល់នៅកន្លែងទទួលយក។"
+      "convertText": "You can swap stablecoins on-chain, or convert through third-party services where available.",
+      "gas": "ការប្រើ stablecoins សម្រាប់ថ្លៃសេវា",
+      "gasText": "កាបូបមួយចំនួនអនុញ្ញាតឱ្យអ្នកបង់ថ្លៃសេវាបណ្តាញដោយប្រើ stablecoins តាមរយៈសេវាកម្មដែលប្តូរទៅ native token។ Validators នៅតែទទួល native token; stable-gas ជាស្រទាប់ងាយស្រួល។",
+      "preferredList": "លំនាំដើមកាបូប",
+      "preferredListText": "កាបូប Umotu អាចបង្ហាញបញ្ជី stablecoins លំនាំដើមប្រុងប្រយ័ត្នសម្រាប់ការទូទាត់ និងសេវាថ្លៃសេវាផ្អែកលើ Umotu Stablecoin Standard (USS)។ កាបូបផ្សេងទៀតអាចគាំទ្រ stablecoins ផ្សេងទៀត។"
     },
     "economics": {
       "title": "សេដ្ឋកិច្ច UMT",
       "subtitle": "នរណាបានអ្វី និងហេតុអ្វី",
-      "intro": "UMT មាន supply ថេរ ១០០ ពាន់លានថូខឹន។ ភាគច្រើនបង់ឱ្យអ្នកប្រើទូរស័ព្ទធម្មតាដែលជួយរក្សាបណ្តាញឱ្យស្មោះត្រង់។",
+      "intro": "UMT has a fixed supply of 100 billion tokens. Most of it is reserved for phone participants over time, distributed by a rule-based emission controller.",
       "supply": "Supply និងការចែកចាយ",
       "supplyBullets": [
-        "ភាគធំនៃការផ្គត់ផ្គង់ថូខឹនត្រូវបានបម្រុងទុកសម្រាប់អ្នកចូលរួមតាមទូរស័ព្ទតាមពេលវេលា ហើយត្រូវបានបញ្ចេញតាមរយៈ Emission Controller។ Emission Controller កំណត់ការចេញប្រចាំថ្ងៃមិនឱ្យលើសពី 0.01% នៃការផ្គត់ផ្គង់ដែលនៅសល់ ដោយធានានូវនិរន្តរភាពរយៈពេលវែង។ នៅក្រោមកាលវិភាគនេះ ប្រហែល 68% នៃការផ្គត់ផ្គង់សរុបនៅសល់បន្ទាប់ពី 10 ឆ្នាំ ហើយប្រហែល 15% នៅសល់បន្ទាប់ពី 50 ឆ្នាំ។",
-        "ផ្នែកតូចមួយនៃការផ្គត់ផ្គង់ត្រូវបានបង្កើតនៅពេលចាប់ផ្តើមសម្រាប់គោលបំណងជាក់លាក់ រួមទាំង airdrop អ្នកប្រើប្រាស់ដំបូង ការលក់សហគមន៍ ការបែងចែកមូលនិធិ និងទុនបម្រុងសង្គ្រោះបន្ទាន់ ជាដើម។"
+        "The vast majority of the supply is reserved for phone participants and released over time through an Emission Controller. The controller caps daily issuance at no more than 0.01% of the remaining supply to limit dilution.",
+        "At the maximum cap (0.01% of remaining supply per day), about 69% of the supply remains after 10 years and about 16% remains after 50 years. Actual emission can be lower depending on protocol rules."
       ],
       "premine": "ការបែងចែកនៅពេលចាប់ផ្តើម (បណ្ដោះអាសន្ន អាចផ្លាស់ប្តូរនៅពេលចាប់ផ្តើម mainnet)",
       "premineTable": [
@@ -1226,13 +1438,13 @@
         }
       ],
       "emissions": "រង្វាន់ប្រចាំថ្ងៃសម្រាប់ទូរស័ព្ទ",
-      "emissionsText": "ជារៀងរាល់ថ្ងៃ បណ្តាញអាច emit អតិបរមា ០.០១% នៃ pool emissions នៅសល់។ យើងថវិកាចំនួននោះដើម្បីឱ្យទូរស័ព្ទផ្ទៀងផ្ទាត់គោលដៅប្រហែល ១០ដុល្លារ/ថ្ងៃ កែតម្រូវជាមួយចំនួនអ្នកចូលរួម និងលក្ខខណ្ឌទីផ្សារ។",
+      "emissionsText": "Daily emissions are capped. Your rewards depend on participation, successful phone checks, and market conditions. The protocol does not promise a fixed amount.",
       "fees": "ថ្លៃ និង Sentinels",
       "feesText": "Sentinel helpers (ជម្រើស កម្រិតខ្ពស់) រកបានចំណែកថ្លៃប្រតិបត្តិការ និង builder bids។ នេះដាច់ដោយឡែកពី emissions ប្រចាំថ្ងៃ។",
       "transparency": "តម្លាភាព",
       "transparencyText": "តារាង vesting និងកាបូបជាសាធារណៈ។ ដែន emission ប្រចាំថ្ងៃ និងការបង់ពិតប្រាកដបោះផ្សាយនៅកម្មវិធី។",
       "disclaimerTitle": "ការរំលឹកភាសាធម្មតា",
-      "disclaimerText": "នេះមិនមែនជាដំបូន្មានវិនិយោគទេ។ រង្វាន់អាស្រ័យលើគោលនយោបាយបណ្តាញ និងការចូលរួម។ កម្មវិធីមិនធានាចំណូលថេរ។"
+      "disclaimerText": "This is not financial advice. Rewards are variable and not guaranteed."
     },
     "contribute": {
       "title": "របៀបរួមចំណែក",
@@ -1259,7 +1471,7 @@
       },
       "governance": {
         "title": "ចូលរួមការគ្រប់គ្រង",
-        "text": "អានសំណើ ពិភាក្សាដោយបើកចំហ និងបោះឆ្នោតនៅកម្មវិធី។ សំឡេងរបស់អ្នកជួយណែនាំប៉ារ៉ាម៉ែត្របណ្តាញ និងការផ្តល់ grant។",
+        "text": "Read proposals, discuss openly, and vote in the app. Votes can guide wallet defaults and ecosystem grants. Some protocol rules are fixed and not up for vote.",
         "cta": "បើកការគ្រប់គ្រង",
         "url": "umotu://vote"
       },
@@ -1274,37 +1486,38 @@
     "decentralization": {
       "title": "ហេតុអ្វី Decentralization",
       "subtitle": "គ្មានចំណុចគ្រប់គ្រងតែមួយ",
-      "intro": "Decentralization មានន័យថាគ្មានក្រុមហ៊ុន ឬរដ្ឋាភិបាលណាអាចបិទបណ្តាញ ឬដកប្រាក់របស់អ្នក។",
+      "intro": "Decentralization means the network is run by many independent participants. Your wallet is self-custodial—only your keys can move your funds.",
       "benefits": "ប្រយោជន៍សម្រាប់អ្នក",
       "benefit1": "តែងតែបើក៖ ២៤/៧",
-      "benefit2": "ថ្លៃទាប៖ ថ្លៃបណ្តាញតូចជំនួសថ្លៃកាត ៣–៥%",
+      "benefit2": "Often lower fees: small network fees instead of typical card fees",
       "benefit3": "គ្មានព្រំដែន៖ ផ្ញើតម្លៃសកល",
-      "benefit4": "ធន់នឹង censorship៖ កូនសោរបស់អ្នក ប្រាក់របស់អ្នក",
+      "benefit4": "More censorship-resistant: no single company controls your wallet",
       "benefit5": "តម្លាភាព៖ នរណាក៏អាចផ្ទៀងផ្ទាត់របៀបដំណើរការប្រព័ន្ធ",
       "howWorks": "វាដំណើរការយ៉ាងដូចម្តេច",
-      "howWorksText": "Validators ស្នើ blocks រៀងរាល់ ~២ វិនាទី។ ទូរស័ព្ទ (ដូចរបស់អ្នក) ផ្ទៀងផ្ទាត់ និង finalize ជាមួយការពិនិត្យស្រាលៗ។ ការរួមចំណែកតូចៗច្រើនបន្ថែមទៅជាសុវត្ថិភាពរឹងមាំ។"
+      "howWorksText": "Validators propose blocks every ~2 seconds. Phones (like yours) verify data availability and help finalize blocks with lightweight checks. Many small contributions add up to strong security."
     },
     "noCompany": {
-      "title": "គ្មានក្រុមហ៊ុន គ្មានអតិថិជន",
-      "subtitle": "យល់គំរូ",
-      "intro": "គ្មាន 'Umotu, Inc.' គ្រប់គ្រង protocol។ Umotu ជាសំណុំច្បាប់បើកចំហដែលនរណាក៏ប្រើបាន។",
+      "title": "Open Protocol, Self-Custody",
+      "subtitle": "Understand what Umotu is (and isn’t)",
+      "intro": "There is no single company controlling the protocol. Umotu is an open set of rules anyone can use, and many independent teams can build wallets and services.",
       "notCompany": "អ្វីដែល Umotu មិនមែន",
-      "notCompany1": "មិនមែនក្រុមហ៊ុនជាមួយគណនីអតិថិជន",
-      "notCompany2": "មិនមែនធនាគារ ឬ money transmitter",
+      "notCompany1": "NOT a custodial bank holding customer funds",
+      "notCompany2": "NOT able to reset your wallet or reverse transactions",
       "notCompany3": "មិនគ្រប់គ្រងដោយអង្គភាពតែមួយ",
-      "notCompany4": "មិនអាចត្រឡប់ប្រតិបត្តិការ",
+      "notCompany4": "NOT a guaranteed income program",
       "whatIs": "អ្វីដែល Umotu ជា",
-      "whatIs1": "Protocol៖ ដូច email ឬ web—ច្បាប់បើកចំហ អន្តរប្រតិបត្តិការ",
-      "whatIs2": "ទូរស័ព្ទជាចម្បង៖ ដំណើរការជាមួយជំនួយពីទូរស័ព្ទឆ្លាតធម្មតា",
+      "whatIs1": "A protocol: open, interoperable rules (like email or the web)",
+      "whatIs2": "Phone-first participation: smartphones can help secure the network",
       "whatIs3": "សហគមន៍ជំរុញ៖ អ្នកជាអ្នកចូលរួម មិនមែនអតិថិជន",
+      "whatIs4": "គ្មានការអនុញ្ញាត៖ នរណាម្នាក់អាចបង្កើត ឬប្រើប្រាស់ពិធីការ",
       "foundation": "Umotu Foundation",
-      "foundationIntro": "មូលនិធិមិនរកប្រាក់ចំណេញដែលគាំទ្រប្រព័ន្ធអេកូឡូស៊ី (reference apps docs កម្មវិធីសហគមន៍) ប៉ុន្តែមិនគ្រប់គ្រង protocol។",
+      "foundationIntro": "A nonprofit that supports the ecosystem (reference apps, education, and coordination) but does not control the protocol.",
       "foundationTask1": "ថែទាំកម្មវិធីទូរស័ព្ទ & explorer ជា reference implementations",
       "foundationTask2": "ដំណើរការហេដ្ឋារចនាសម្ព័ន្ធសាធារណៈខ្លះ (អ្នកផ្សេងអាចដំណើរការរបស់ពួកគេ)",
-      "foundationTask3": "សម្របសម្រួលការគ្រប់គ្រងសហគមន៍ (ព័ត៌មាន ការបោះឆ្នោត)",
-      "foundationTask4": "ពិនិត្យ និងចុះបញ្ជី stablecoins គាំទ្រ",
+      "foundationTask3": "Coordinates community votes and discussions in the app (where applicable)",
+      "foundationTask4": "Publishes the Umotu Stable Accord and conservative default lists for the Umotu wallet (others can support other stables)",
       "foundationTask5": "បោះផ្សាយការអប់រំ និងមគ្គុទ្ទេសក៍សុវត្ថិភាព",
-      "foundationNote": "Foundation មិនអាចចូលកាបូបរបស់អ្នក និងមិនអាចត្រឡប់ប្រតិបត្តិការ។"
+      "foundationNote": "The Foundation cannot access your wallet and cannot reverse transactions. Wallet defaults do not restrict what is possible on the protocol."
     },
     "scamPrevention": {
       "title": "ជៀសវាងការបោក",
@@ -1328,22 +1541,22 @@
       "action4": "Block និង report"
     },
     "airdrop": {
-      "title": "Testnet Airdrop",
-      "subtitle": "អ្នកប្រើដំបូងត្រូវបានទទួលស្គាល់",
-      "intro": "អ្នកជាដំបូង! Umotu នៅ testnet។ អ្នកចូលរួម testnet សកម្មអាចទទួល allocation នៅពេល mainnet launch។",
+      "title": "Testnet Recognition",
+      "subtitle": "Early testnet participation may be recognized",
+      "intro": "Umotu is in testnet. Active testnet participants may receive a recognition allocation when mainnet launches. This is not guaranteed and may be zero.",
       "howToQualify": "របៀបមានលក្ខណៈសម្បត្តិ",
       "step1": "បង្កើតកាបូបនៅកម្មវិធី",
       "step2": "បញ្ចប់ការផ្ទៀងផ្ទាត់មនុស្ស (Proof of Human)",
       "step3": "ប្រើកម្មវិធីជាប្រចាំក្នុង testnet",
       "whenAirdrop": "នៅពេលណា Airdrop?",
       "whyTestnet": "Testnet សំខាន់៖ អ្នកប្រើរៀនសុវត្ថិភាពកាបូប និងប្រព័ន្ធត្រូវបានសាកល្បងសម្រាប់សុវត្ថិភាព ភាពរឹងមាំ និងប្រសិទ្ធភាពមុន mainnet។",
-      "timeline": "Mainnet រំពឹងនៅ Q1 ឬ Q2 ឆ្នាំ ២០២៦។ Airdrop នឹងកើតឡើងជុំវិញពេល mainnet launch។",
+      "timeline": "Mainnet timing and any recognition details will be announced in the app.",
       "howMuch": "បានប៉ុន្មាន?",
-      "totalPool": "Pool airdrop សរុប៖ ១,០០០,០០០,០០០ UMT tokens។ ចំណែករបស់អ្នកអាស្រ័យលើអ្នកចូលរួមសរុប និងតម្លៃ UMT នៅ launch។",
-      "scenario2": "១M អ្នកប្រើ៖ ~១,០០០ UMT ក្នុងម្នាក់ តម្លៃរំពឹង ~១ដុល្លារ តម្លៃ airdrop ~១,០០០ដុល្លារ",
-      "scenario3": "១០M អ្នកប្រើ៖ ~១០០ UMT ក្នុងម្នាក់ តម្លៃរំពឹង ~២០ដុល្លារ តម្លៃ airdrop ~២,០០០ដុល្លារ",
-      "scenario4": "១០០M អ្នកប្រើ៖ ~១០ UMT ក្នុងម្នាក់ តម្លៃរំពឹង ~៣០០ដុល្លារ តម្លៃ airdrop ~៣,០០០ដុល្លារ",
-      "disclaimer": "ទាំងនេះជាការព្យាករណ៍តែប៉ុណ្ណោះ មិនមែនការធានា។ តម្លៃពិតប្រាកដអាស្រ័យលើលក្ខខណ្ឌទីផ្សារ និងច្បាប់កម្មវិធី។",
+      "totalPool": "Example only: if a 1,000,000,000 UMT recognition pool is created, your share depends on eligible participants and program rules. The earlier you participate, the higher your share.",
+      "scenario2": "Example only: 1M eligible users → ~1,000 UMT average each (before weighting)",
+      "scenario3": "Example only: 10M eligible users → ~100 UMT average each (before weighting)",
+      "scenario4": "Example only: 100M eligible users → ~10 UMT average each (before weighting)",
+      "disclaimer": "Examples only—not guarantees. Any recognition allocation depends on program rules and market conditions, and may be zero.",
       "whatYouGet": "អ្វីដែលអ្នកបាន",
       "reward": "នៅ mainnet កាបូប testnet របស់អ្នកអាចទទួលថូខឹនពិតប្រាកដផ្អែកលើការចូលរួម និងច្បាប់កម្មវិធី។ អ្នកដំបូង និងសកម្មជាងត្រូវបានអាទិភាព។",
       "note": "ចំណាំ៖ ថូខឹន Testnet គ្មានតម្លៃ។ ការ allocation mainnet ណាមួយត្រូវបានកំណត់ដោយគោលនយោបាយកម្មវិធីនៅ launch។ ព័ត៌មាន airdrop ទាំងអស់នឹងបោះផ្សាយតែនៅកម្មវិធីនេះ។"
@@ -1361,7 +1574,21 @@
       "tips": "គន្លឹះ Pro",
       "tip1": "អនុញ្ញាតចូលប្រើផ្ទៃខាងក្រោយដើម្បីឱ្យការពិនិត្យដំណើរការ",
       "tip2": "ត្រឡប់មកពិនិត្យជារៀងរាល់ថ្ងៃដើម្បីឃើញរង្វាន់",
-      "tip3": "អញ្ជើញមិត្តភក្តិ—អ្នកប្រើកាន់តែច្រើនធ្វើឱ្យបណ្តាញរឹងមាំជាង"
+      "tip3": "Invite friends—more participants can make the network stronger"
+    },
+    "governance": {
+      "title": "ការគ្រប់គ្រង និងការបោះឆ្នោត",
+      "subtitle": "របៀបដែលការបោះឆ្នោតក្នុងកម្មវិធីដំណើរការ",
+      "intro": "Umotu គាំទ្រការស្ទង់មតិ និងការបោះឆ្នោតក្នុងកម្មវិធីដើម្បីឱ្យអ្នកចូលរួមជួយដឹកនាំការសម្រេចចិត្តប្រព័ន្ធអេកូឡូស៊ីមួយចំនួន។",
+      "whatVotesDo": "អ្វីដែលការបោះឆ្នោតអាចធ្វើ",
+      "whatVotesDo1": "ណែនាំលំនាំដើមកាបូប (ឧ. stablecoins មួយណាបង្ហាញជាជម្រើសទូទាត់ ឬ stable-gas)",
+      "whatVotesDo2": "បង្ហាញចំណូលចិត្តសហគមន៍លើសំណើ និងអាទិភាព",
+      "whatVotesDo3": "អនុម័តជំនួយ ឬថវិកាមួយចំនួនដែលបានបើក",
+      "whatVotesCannotDo": "អ្វីដែលការបោះឆ្នោតមិនអាចធ្វើ",
+      "whatVotesCannotDo1": "ចូលប្រើកាបូបរបស់អ្នក ផ្លាស់ប្តូរប្រាក់របស់អ្នក ឬកំណត់វាក់សម្ងាត់សង្គ្រោះឡើងវិញ",
+      "whatVotesCannotDo2": "ត្រឡប់ប្រតិបត្តិការ ឬបង្កកកាបូប self-custody របស់អ្នក",
+      "whatVotesCannotDo3": "ផ្លាស់ប្តូរគោលនយោបាយរូបិយវត្ថុថេរក្រៅច្បាប់ protocol",
+      "note": "ការស្ទង់មតិមួយចំនួនអាចជា mock ឬប្រឹក្សាអាស្រ័យលើដំណាក់កាលបណ្តាញ។ សូមអានព័ត៌មានលម្អិតសំណើ និងលក្ខខណ្ឌសកម្មភាពជានិច្ច។"
     }
   },
   "common": {
@@ -1410,6 +1637,7 @@
   "poh_title": "ផ្ទៀងផ្ទាត់មនុស្ស",
   "continue": "បន្ត",
   "or": "ឬ",
+  "version": "កំណែ",
   "seedReveal": {
     "title": "វាក់សម្ងាត់សង្គ្រោះ",
     "intro": "វាក់សម្ងាត់សង្គ្រោះជាវិធីតែមួយគត់ដើម្បីស្តារកាបូបបើបាត់ចូលប្រើឧបករណ៍នេះ។ សរសេរ និងរក្សាដោយសុវត្ថិភាពក្រៅបណ្តាញ។",
